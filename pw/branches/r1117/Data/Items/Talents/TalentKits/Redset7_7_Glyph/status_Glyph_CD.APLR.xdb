@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StatusApplicator>
+	<BackLink DBID="/Items/Talents/TalentKits/Redset7_7_Glyph/Summon_Glyph.APLR" Count="1" />
+	<applicators />
+	<applyTarget>AbilityOwner</applyTarget>
+	<behaviorFlags>153</behaviorFlags>
+	<caption>Статус, что глиф был создан и сет на кд</caption>
+	<customCounter>
+		<compiledString></compiledString>
+		<returnType>int</returnType>
+		<sString>0</sString>
+	</customCounter>
+	<customProgress>
+		<compiledString>FQAAAAAAAAAAVYvsUYtFEIsQi00Qi0Ic/9DZ6N7h2V382UX8i+VdwwAAAAAAAPA/</compiledString>
+		<returnType>float</returnType>
+		<sString>1 - mPreparedness</sString>
+	</customProgress>
+	<description textref="/Items/Talents/TalentKits/Redset7_7_Glyph/status_Glyph_CD.APLR_description.txt" />
+	<dispellPriority>NonDispellable</dispellPriority>
+	<effect>
+		<Item href="" />
+		<Item href="" />
+	</effect>
+	<enabled>
+		<compiledString>FQAAAAABAAAAEwAAAFWL7FGLRRCLEItNEItCHP/Q3B01AAAA3+D2xAV6CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAA8D8=</compiledString>
+		<returnType>bool</returnType>
+		<sString>mPreparedness &lt; 1</sString>
+	</enabled>
+	<flags>2</flags>
+	<formulaName></formulaName>
+	<image href="/UI/Styles/Icons/Talents/_740.ITEX" />
+	<lifeTime>
+		<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLQjz/0F3D</compiledString>
+		<returnType>float</returnType>
+		<sString>mCooldown</sString>
+	</lifeTime>
+	<LoggingEvent>-1</LoggingEvent>
+	<name textref="/Items/Talents/TalentKits/Redset7_7_Glyph/status_Glyph_CD.APLR_name.txt" />
+	<power>0</power>
+	<providerName></providerName>
+	<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+	<stackCount>0</stackCount>
+	<startCondition>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</startCondition>
+	<statusPosition>-88</statusPosition>
+	<stopBehaviour>StopByTime</stopBehaviour>
+	<unstackableWith href="" />
+</StatusApplicator>

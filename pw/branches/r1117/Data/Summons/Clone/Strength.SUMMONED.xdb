@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Summoned parent="/Summons/Clone/_Parent.SUMMONED">
+	<BackLink DBID="/Heroes/Alchemist/_.HROB" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Alchemist/_summon_Clone.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Alchemist/Ability_A4.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Alchemist/Ability_A4_2.TALENT" Count="1" />
+	<abilities>
+		<Item skip="1" />
+		<Item href="/Items/Talents/Class/Alchemist/_summonAbility_RedClone.ABLT" />
+		<Item skip="1" />
+		<Item skip="1" />
+		<Item skip="1" />
+	</abilities>
+	<attackAbility href="/Summons/Clone/Strength.SUMMONED" id="531ADDE9-D72C-4EE5-8EE6-242117B8660E">
+		<BaseAttack parent="/Heroes/Alchemist/_.ATCK">
+			<applicators>
+				<Item skip="1" />
+				<Item href="/Summons/Clone/Strength.SUMMONED" id="08BB5EA1-803A-42CB-8CFD-F824482BCD07">
+					<DamageApplicator parent="/GameLogic/GeneralApplicators/BaseAttackDmg_Hero.APLR">
+						<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
+					</DamageApplicator>
+				</Item>
+			</applicators>
+		</BaseAttack>
+	</attackAbility>
+	<creepSkins>
+		<Item href="/Summons/Clone/S1/Strength.CREEPSKIN" />
+	</creepSkins>
+	<description textref="/Summons/Clone/Strength.SUMMONED_description.txt" />
+	<image href="/UI/Styles/Icons/Summons/Clone/StrengthFace.ITEX" />
+	<nativeAttack>Material</nativeAttack>
+	<nativeDefence>Material</nativeDefence>
+	<stats href="/Summons/Clone/Strength.SUMMONED" id="43C14233-7890-4E38-A943-A6807AFB2ACA">
+		<StatsContainer parent="/Summons/Clone/stats_Clone.STCN">
+			<stats>
+				<Item skip="1" />
+				<Item skip="1" />
+				<Item>
+					<value>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</value>
+				</Item>
+				<Item skip="1" />
+				<Item skip="1" />
+				<Item skip="1" />
+				<Item skip="1" />
+				<Item skip="1" />
+				<Item skip="1" />
+				<Item skip="1" />
+			</stats>
+		</StatsContainer>
+	</stats>
+</Summoned>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PermanentStatModApplicator>
+	<BackLink DBID="/Items/Talents/Common/G362_Str.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G363_Int.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G364_Life_Str_Int.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G365_Will_Str_Int.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G366_Stamina_Str_Int.TALENT" Count="1" />
+	<applyTarget>ApplicatorTarget</applyTarget>
+	<caption>G351_FormCounter</caption>
+	<customApplyType>None</customApplyType>
+	<enabled>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<LoggingEvent>-1</LoggingEvent>
+	<modifier>
+		<addValue>
+			<compiledString></compiledString>
+			<returnType>float</returnType>
+			<sString>1.0f</sString>
+		</addValue>
+		<multValue>
+			<compiledString></compiledString>
+			<returnType>float</returnType>
+			<sString>1.0f</sString>
+		</multValue>
+		<stat>Life</stat>
+		<topModifier>false</topModifier>
+		<variable>G351_FormCounter</variable>
+	</modifier>
+	<providerName></providerName>
+</PermanentStatModApplicator>

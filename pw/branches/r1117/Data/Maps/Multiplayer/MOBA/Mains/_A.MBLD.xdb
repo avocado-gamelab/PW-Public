@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MainBuilding parent="/Buildings/A/Main/_Parent.MBLD">
+	<BackLink DBID="/Maps/Multiplayer/MOBA/_.ADMP" Count="1" />
+	<BackLink DBID="/Maps/Multiplayer/MOBA/Training.ADMPDSCR" Count="1" />
+	<BackLink DBID="/Maps/Multiplayer/MOBA/Map2/_.ADMP" Count="1" />
+	<BackLink DBID="/Maps/Multiplayer/MOBA/Mod2/_.ADMP" Count="1" />
+	<BackLink DBID="/Maps/Multiplayer/MOBA/Mod9/_.ADMP" Count="1" />
+	<BackLink DBID="/Maps/Multiplayer/MOBA/NewYear/_.ADMP" Count="1" />
+	<BackLink DBID="/Maps/Multiplayer/MOBA/NightMap/_.ADMP" Count="1" />
+	<BackLink DBID="/Maps/Multiplayer/PFmap/_.ADMP" Count="1" />
+	<BackLink DBID="/Maps/Multiplayer/PFmap/Mod2/_.ADMP" Count="1" />
+	<BackLink DBID="/Maps/Test/BalanseTest/_.ADMP" Count="1" />
+	<BackLink DBID="/Maps/Test/CoopCreaturesTest/_.ADMP" Count="1" />
+	<BackLink DBID="/Maps/Test/Duel/_.ADMP" Count="1" />
+	<BackLink DBID="/Maps/Test/PlaneMap/_.ADMP" Count="1" />
+	<BackLink DBID="/Maps/Test/Splines/_.ADMP" Count="1" />
+	<BackLink DBID="/Maps/Test/Test5x5/_.ADMP" Count="1" />
+	<abilities>
+		<Item href="/Buildings/DefaultStats/_Tower_SeeInvis.ABLT" />
+		<Item href="/Buildings/DefaultStats/CheckDragonKill.ABLT" />
+		<Item href="/Buildings/DefaultStats/CheckCatKill.ABLT" />
+		<Item href="/Buildings/DefaultStats/CheckGameDuration.ABLT" />
+		<Item skip="1" />
+	</abilities>
+	<attackAbility href="/Buildings/DefaultStats/DefaultMainAttack.ATCK" />
+	<maxAOEDelay>90</maxAOEDelay>
+	<minAOEDelay>60</minAOEDelay>
+	<overtipBarsWidth>300</overtipBarsWidth>
+	<stats href="/Buildings/DefaultStats/Main_MOBA.STCN" />
+	<targetingParams href="/GameLogic/Main_TargetingParams.UNTP" />
+</MainBuilding>

@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdvMapNeutralCreepSpawner>
+	<BackLink DBID="/Maps/Multiplayer/MOBA/_.ADMP" Count="2" />
+	<baseLevel>0</baseLevel>
+	<collision>
+		<x1>0</x1>
+		<x2>0</x2>
+		<y1>0</y1>
+		<y2>0</y2>
+	</collision>
+	<evadeParams>
+		<evadeTimeout>60</evadeTimeout>
+		<restoreHealthPercent>0.35</restoreHealthPercent>
+		<waitForEvadeTime>2</waitForEvadeTime>
+		<waitForNextTargetTime>2</waitForNextTargetTime>
+	</evadeParams>
+	<firstSpawnTimeOffset>15</firstSpawnTimeOffset>
+	<groups>
+		<Item>
+			<creeps>
+				<Item>
+					<creep href="/Maps/Multiplayer/MOBA/Spawners/Neutral_6.NCSPN" id="2DBF1215-EBE3-4E3D-96DB-87A41E155DA1">
+						<AdvMapCreep parent="/Creeps/Champions/Champion2/PVP.CREEP">
+							<attackAbility href="/Maps/Multiplayer/MOBA/Spawners/Neutral_6.NCSPN" id="6560B044-0141-4204-96DE-1EC109070806">
+								<BaseAttack parent="/Creeps/Champions/Champion2/AttackAbility.ATCK">
+									<flags>5</flags>
+									<passiveApplicators>
+										<Item href="/Maps/Multiplayer/MOBA/Spawners/Neutral_6.NCSPN" id="E6D8F417-7950-4945-854D-4F4592F63C00">
+											<TriggerApplicator parent="/Glyphs/HealTriggerCreeps_Moba.APLR" />
+										</Item>
+									</passiveApplicators>
+								</BaseAttack>
+							</attackAbility>
+						</AdvMapCreep>
+					</creep>
+					<limitWalkDistance>-1</limitWalkDistance>
+					<offset>
+						<location>
+							<x>0</x>
+							<y>0</y>
+							<z>0</z>
+						</location>
+						<rotation>
+							<w>1</w>
+							<x>0</x>
+							<y>0</y>
+							<z>0</z>
+						</rotation>
+						<scale>
+							<x>1</x>
+							<y>1</y>
+							<z>1</z>
+						</scale>
+					</offset>
+					<specialAwarding>false</specialAwarding>
+					<useSpawnerWalkLimit>true</useSpawnerWalkLimit>
+					<waveDelayToAppear>0</waveDelayToAppear>
+				</Item>
+				<Item>
+					<creep href="/Maps/Multiplayer/MOBA/Spawners/Neutral_6.NCSPN" id="967FECC8-7004-4C82-9C5F-AE5CFD3CDCFD">
+						<AdvMapCreep parent="/Creeps/Normals/Normal1/PVP_Range.CREEP" />
+					</creep>
+					<limitWalkDistance>-1</limitWalkDistance>
+					<offset>
+						<location>
+							<x>3</x>
+							<y>0</y>
+							<z>0</z>
+						</location>
+						<rotation>
+							<w>1</w>
+							<x>0</x>
+							<y>0</y>
+							<z>0</z>
+						</rotation>
+						<scale>
+							<x>1</x>
+							<y>1</y>
+							<z>1</z>
+						</scale>
+					</offset>
+					<specialAwarding>false</specialAwarding>
+					<useSpawnerWalkLimit>true</useSpawnerWalkLimit>
+					<waveDelayToAppear>0</waveDelayToAppear>
+				</Item>
+				<Item>
+					<creep href="/Creeps/Minions/Minion5/PvP.CREEP" />
+					<limitWalkDistance>-1</limitWalkDistance>
+					<offset>
+						<location>
+							<x>4.5</x>
+							<y>-3</y>
+							<z>0</z>
+						</location>
+						<rotation>
+							<w>1</w>
+							<x>0</x>
+							<y>0</y>
+							<z>0</z>
+						</rotation>
+						<scale>
+							<x>1</x>
+							<y>1</y>
+							<z>1</z>
+						</scale>
+					</offset>
+					<specialAwarding>false</specialAwarding>
+					<useSpawnerWalkLimit>true</useSpawnerWalkLimit>
+					<waveDelayToAppear>0</waveDelayToAppear>
+				</Item>
+				<Item>
+					<creep href="/Creeps/Minions/Minion5/PvP.CREEP" />
+					<limitWalkDistance>-1</limitWalkDistance>
+					<offset>
+						<location>
+							<x>-1.5</x>
+							<y>-3</y>
+							<z>0</z>
+						</location>
+						<rotation>
+							<w>1</w>
+							<x>0</x>
+							<y>0</y>
+							<z>0</z>
+						</rotation>
+						<scale>
+							<x>1</x>
+							<y>1</y>
+							<z>1</z>
+						</scale>
+					</offset>
+					<specialAwarding>false</specialAwarding>
+					<useSpawnerWalkLimit>true</useSpawnerWalkLimit>
+					<waveDelayToAppear>0</waveDelayToAppear>
+				</Item>
+			</creeps>
+		</Item>
+	</groups>
+	<heightObject>false</heightObject>
+	<isAggressive>false</isAggressive>
+	<levelUpInfo>
+		<increment>1</increment>
+		<interval>240</interval>
+		<lifetimeLevelUp>true</lifetimeLevelUp>
+		<spawnLevelUpIncrement>0</spawnLevelUpIncrement>
+		<spawnLevelUpInterval>0</spawnLevelUpInterval>
+	</levelUpInfo>
+	<limitWalkDistance>15</limitWalkDistance>
+	<lockMask>
+		<mask />
+		<tileSize>0.5</tileSize>
+	</lockMask>
+	<mapForceStatModifierApplication>0</mapForceStatModifierApplication>
+	<minimapIcon>NeutralsWeak</minimapIcon>
+	<minLockScale>0</minLockScale>
+	<naftaForGroupKill>0</naftaForGroupKill>
+	<path />
+	<rounded>false</rounded>
+	<showMinimapIcon>true</showMinimapIcon>
+	<spawnDelay>90</spawnDelay>
+	<useEvade>true</useEvade>
+	<waveCount>0</waveCount>
+</AdvMapNeutralCreepSpawner>

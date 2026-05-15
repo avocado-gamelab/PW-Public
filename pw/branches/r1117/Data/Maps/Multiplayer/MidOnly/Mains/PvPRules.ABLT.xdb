@@ -1,0 +1,925 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Ability>
+	<BackLink DBID="/Maps/Multiplayer/MidOnly/Mains/_A.MBLD" Count="1" />
+	<BackLink DBID="/Maps/Multiplayer/MidOnly/Mains/_B.MBLD" Count="1" />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<autoTargetSelector href="" />
+	<caption>Определяет особые условия победы/поражения</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<constants href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="1AE26FDE-A20F-4B72-8639-FCE7205B47C3">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="C3B95E7E-8E41-4B16-9B5B-5EA9C8C8F5A6">
+					<UnitConstant>
+						<name>LoseFragDifference</name>
+						<var>
+							<compiledString>FQwAAAABAAAAEAAAAEhlcm9Db3VudGVyAFWL7GgAAAAAi0UIixCLTQiLgogBAAD/0F3D</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vHeroCounter</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="7F13500A-876B-48E6-A86D-9EF30D99D665">
+					<UnitConstant>
+						<name>CurrentFragDifferenceTarget</name>
+						<var>
+							<compiledString>FRYAAAACAAAAHQAAADIAAABFbmVteURlYXRoAABBbGx5RGVhdGgAVYvsg+wMaAAAAACLRQyLEItNDIuCiAEAAP/QaAwAAACLTQyLEYtNDIuCiAEAAN1d+P/Q3G342V302UX0i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>receiver.vEnemyDeath - receiver.vAllyDeath</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="D0B8BA7D-AE72-449B-A289-90CC15515414">
+					<UnitConstant>
+						<name>CurrentFragDifferenceSelf</name>
+						<var>
+							<compiledString>FRYAAAACAAAAHQAAADIAAABFbmVteURlYXRoAABBbGx5RGVhdGgAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/QaAwAAACLTQiLEYtNCIuCiAEAAN1d+P/Q3G342V302UX0i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vEnemyDeath - sender.vAllyDeath</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="605E71D5-8638-4B28-B040-90B9F7296AEB">
+					<UnitConstant>
+						<name>RemainingFrags</name>
+						<var>
+							<compiledString>FSoAAAADAAAAOQAAAEsAAABmAAAATG9zZUZyYWdEaWZmZXJlbmNlAABFbmVteURlYXRoAABBbGx5RGVhdGgAVYvsg+wUi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JoFAAAAItFCIsQi00Ii4KIAQAA3V34/9DcbfhoIAAAAItNCIsRi00Ii4KIAQAA3V3w/9DcRfDZXezZReyL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cLoseFragDifference - sender.vEnemyDeath + sender.vAllyDeath</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="AFA36788-A937-49BE-BDE6-015138320D02">
+					<UnitConstant>
+						<name>RequiredTowerNumber</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>2 ;//min(sender.vHeroCounter/2, 2)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<cooldownTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="" />
+	<dispatch href="" />
+	<flags>4</flags>
+	<image href="" />
+	<imageSecondState href="" />
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<name textref="" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="9892E559-6807-4CDC-A0E0-D1E33CF7544F">
+			<TargetsCounterApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>HeroCounterForPvP</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName>HeroCounterForPvP</formulaName>
+				<lifeTime>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+					<returnType>float</returnType>
+					<sString>-1</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<targetSelector href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="08CE568B-2953-4120-A084-06965AA7B105">
+					<HeroEnumerator>
+						<flags>2</flags>
+						<mode>Normal</mode>
+						<targetFilter>805306371</targetFilter>
+					</HeroEnumerator>
+				</targetSelector>
+			</TargetsCounterApplicator>
+		</Item>
+		<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="98BCE6DD-C271-4E48-8899-D21B6B8C80E1">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>HeroCounter</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FSEAAAACAAAALAAAAEQAAABIZXJvQ291bnRlckZvclB2UAAAAHRhcmdldHNDb3VudABVi+xRagGLRRBQaAAAAACLTQiLEYtNCIuCnAEAAP/QiUX8aBQAAACLTfyLEYtN/ItCVP/Qi+Vdww==</compiledString>
+						<returnType>float</returnType>
+						<sString>sender.FindApplicator("HeroCounterForPvP", pMisc, UNIT)-&gt;GetVariable("targetsCount")</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>HeroCounter</variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
+		<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="33F666FC-12F0-42C0-94A9-2CB119B76AD3">
+			<AuraApplicator>
+				<applicators>
+					<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="5399A91F-A6E2-446C-8FB4-F3024859B746">
+						<StatusApplicator>
+							<applicators>
+								<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="927946E9-5F62-4DF3-976D-611364FF3429">
+									<TriggerApplicator>
+										<actionsCount>
+											<compiledString>FQAAAAAAAAAAVYvsM8Bdww==</compiledString>
+											<returnType>int</returnType>
+											<sString>0</sString>
+										</actionsCount>
+										<applyTarget>ApplicatorTarget</applyTarget>
+										<behaviorFlags>248</behaviorFlags>
+										<caption>Триггер на свою смерть</caption>
+										<effect>
+											<Item href="" />
+											<Item href="" />
+										</effect>
+										<enabled>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</enabled>
+										<formulaName></formulaName>
+										<lifeTime>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>-1.0</sString>
+										</lifeTime>
+										<LoggingEvent>-1</LoggingEvent>
+										<playAck>false</playAck>
+										<processor href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="2ED261E9-8D4C-415F-BB56-0B2BD36F0578">
+											<EventProcessorOnDeath>
+												<applyTarget>ApplicatorTarget</applyTarget>
+												<castSpellDelay>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>0.0f</sString>
+												</castSpellDelay>
+												<checkSender>0</checkSender>
+												<objectFilter>536870915</objectFilter>
+												<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+												<spell href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="D6AD51ED-45F4-4738-A1C8-49D3052783A1">
+													<Spell>
+														<applicators>
+															<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="82FB39F8-2A90-4FDD-B7FD-72B4DCCA10AD">
+																<SpellApplicator>
+																	<applyTarget>ApplicatorTarget</applyTarget>
+																	<caption>Спелл в гз</caption>
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<formulaName></formulaName>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<spell href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="8F3D152B-325D-4F51-B53B-5C9B1F5ACB3A">
+																		<Spell>
+																			<applicators>
+																				<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="F5A1E1FA-F571-46BF-8E6E-1FA1180A2A67">
+																					<PermanentStatModApplicator>
+																						<applyTarget>ApplicatorTarget</applyTarget>
+																						<caption>Счетчик погибших союзников</caption>
+																						<customApplyType>None</customApplyType>
+																						<enabled>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</enabled>
+																						<formulaName></formulaName>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<modifier>
+																							<addValue>
+																								<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																								<returnType>float</returnType>
+																								<sString>1.0f</sString>
+																							</addValue>
+																							<multValue>
+																								<compiledString></compiledString>
+																								<returnType>float</returnType>
+																								<sString>1.0f</sString>
+																							</multValue>
+																							<stat>Life</stat>
+																							<topModifier>false</topModifier>
+																							<variable>AllyDeath</variable>
+																						</modifier>
+																						<providerName></providerName>
+																					</PermanentStatModApplicator>
+																				</Item>
+																				<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="43396916-C478-4919-A5FA-FD6ACB3EE078">
+																					<KillApplicator>
+																						<applyTarget>ApplicatorTarget</applyTarget>
+																						<caption>Убиваем гз, если разница в фрагах достигла условия</caption>
+																						<dontGiveRewards>false</dontGiveRewards>
+																						<enabled>
+																							<compiledString>FS8AAAACAAAAPgAAAFgAAABDdXJyZW50RnJhZ0RpZmZlcmVuY2VUYXJnZXQATG9zZUZyYWdEaWZmZXJlbmNlAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoHAAAAItVEIsCi00Qi1BQ3V34/9LZ4Nxd+N/g9sQBdQnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>cCurrentFragDifferenceTarget &lt;= -cLoseFragDifference</sString>
+																						</enabled>
+																						<flag>None</flag>
+																						<formulaName></formulaName>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<providerName></providerName>
+																					</KillApplicator>
+																				</Item>
+																			</applicators>
+																			<dispatch href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="562DF15A-22E0-4BE6-9C13-F9A71492DAD7">
+																				<DispatchImmediate>
+																					<alwaysApply>false</alwaysApply>
+																					<applyEffect>
+																						<Item href="" />
+																						<Item href="" />
+																					</applyEffect>
+																					<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																					<applyEffectOrientation>Default</applyEffectOrientation>
+																					<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																					<dieAfterApply>true</dieAfterApply>
+																					<dispatchEffect>
+																						<Item href="" />
+																						<Item href="" />
+																					</dispatchEffect>
+																					<flags>0</flags>
+																					<instantApply>false</instantApply>
+																				</DispatchImmediate>
+																			</dispatch>
+																		</Spell>
+																	</spell>
+																	<spellTarget>ApplicatorTarget</spellTarget>
+																	<targetSelector href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="51AE285F-659D-44F5-BA0F-0B84B003DED7">
+																		<MainBuildingTargetSelector />
+																	</targetSelector>
+																</SpellApplicator>
+															</Item>
+														</applicators>
+														<dispatch href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="D255BC79-45E8-49D3-831F-DDA67D3E2F0A">
+															<DispatchImmediate>
+																<alwaysApply>false</alwaysApply>
+																<applyEffect>
+																	<Item href="" />
+																	<Item href="" />
+																</applyEffect>
+																<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																<applyEffectOrientation>Default</applyEffectOrientation>
+																<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																<dieAfterApply>true</dieAfterApply>
+																<dispatchEffect>
+																	<Item href="" />
+																	<Item href="" />
+																</dispatchEffect>
+																<flags>0</flags>
+																<instantApply>false</instantApply>
+															</DispatchImmediate>
+														</dispatch>
+													</Spell>
+												</spell>
+											</EventProcessorOnDeath>
+										</processor>
+										<providerName></providerName>
+										<startCondition>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</startCondition>
+										<useAbilityCooldown>false</useAbilityCooldown>
+										<useAbilityOwnerMana>false</useAbilityOwnerMana>
+									</TriggerApplicator>
+								</Item>
+							</applicators>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>248</behaviorFlags>
+							<caption>Правила игры</caption>
+							<customCounter>
+								<compiledString></compiledString>
+								<returnType>int</returnType>
+								<sString>0</sString>
+							</customCounter>
+							<customProgress>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</customProgress>
+							<description textref="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT_5399a91fa6e2446c8fb4f3024859b746_description.txt" />
+							<dispellPriority>NonDispellable</dispellPriority>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<flags>0</flags>
+							<formulaName></formulaName>
+							<image href="/UI/Styles/Icons/Statuses/Neutral/brothershoulder.ITEX" />
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<name textref="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT_5399a91fa6e2446c8fb4f3024859b746_name.txt" />
+							<power>0</power>
+							<providerName></providerName>
+							<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+							<stackCount>0</stackCount>
+							<startCondition>
+								<compiledString>FQgAAAACAAAADQAAACMAAABJc0Nsb25lAFWL7FFoAAAAAItFDIsQi00Mi4KIAQAA/9DcHUUAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+								<returnType>bool</returnType>
+								<sString>receiver.vIsClone == 0</sString>
+							</startCondition>
+							<statusPosition>-1000</statusPosition>
+							<stopBehaviour>StopByTime</stopBehaviour>
+							<unstackableWith href="" />
+						</StatusApplicator>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>248</behaviorFlags>
+				<caption>Аура на союзных героев с счетчиком союзных смертей</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<range>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAB6RA==</compiledString>
+					<returnType>float</returnType>
+					<sString>1000</sString>
+				</range>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<targets>268435459</targets>
+				<targetSelector href="" />
+				<type>None</type>
+			</AuraApplicator>
+		</Item>
+		<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="2B1BCE69-E281-4D00-9D53-F0ED272A421D">
+			<AuraApplicator>
+				<applicators>
+					<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="D5FA27D3-24F0-49BB-A94E-254E3DEB0446">
+						<StatusApplicator>
+							<applicators>
+								<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="90C8FD93-BAB8-4662-90FF-6AC2FC84138D">
+									<TriggerApplicator>
+										<actionsCount>
+											<compiledString>FQAAAAAAAAAAVYvsM8Bdww==</compiledString>
+											<returnType>int</returnType>
+											<sString>0</sString>
+										</actionsCount>
+										<applyTarget>ApplicatorTarget</applyTarget>
+										<behaviorFlags>248</behaviorFlags>
+										<caption>Триггер на свою смерть</caption>
+										<effect>
+											<Item href="" />
+											<Item href="" />
+										</effect>
+										<enabled>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</enabled>
+										<formulaName></formulaName>
+										<lifeTime>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>-1.0</sString>
+										</lifeTime>
+										<LoggingEvent>-1</LoggingEvent>
+										<playAck>false</playAck>
+										<processor href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="A1FECD32-9217-4D00-B062-3CF1C0E1CB4A">
+											<EventProcessorOnDeath>
+												<applyTarget>ApplicatorTarget</applyTarget>
+												<castSpellDelay>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>0.0f</sString>
+												</castSpellDelay>
+												<checkSender>0</checkSender>
+												<objectFilter>536870915</objectFilter>
+												<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+												<spell href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="59A18781-5363-4546-9C09-E488BE0F82B5">
+													<Spell>
+														<applicators>
+															<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="69045507-7C69-439B-A03B-269BAF270812">
+																<SpellApplicator>
+																	<applyTarget>AbilityOwner</applyTarget>
+																	<caption>Спелл в гз</caption>
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<formulaName></formulaName>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<spell href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="6E9DB40A-7B8B-404C-B428-F45FCA466D9D">
+																		<Spell>
+																			<applicators>
+																				<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="CA75AB9E-1109-4651-9272-6B3C0D7DAEDD">
+																					<PermanentStatModApplicator>
+																						<applyTarget>ApplicatorTarget</applyTarget>
+																						<caption>Счетчик погибших врагов</caption>
+																						<customApplyType>None</customApplyType>
+																						<enabled>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</enabled>
+																						<formulaName></formulaName>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<modifier>
+																							<addValue>
+																								<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																								<returnType>float</returnType>
+																								<sString>1.0f</sString>
+																							</addValue>
+																							<multValue>
+																								<compiledString></compiledString>
+																								<returnType>float</returnType>
+																								<sString>1.0f</sString>
+																							</multValue>
+																							<stat>Life</stat>
+																							<topModifier>false</topModifier>
+																							<variable>EnemyDeath</variable>
+																						</modifier>
+																						<providerName></providerName>
+																					</PermanentStatModApplicator>
+																				</Item>
+																				<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="74289C31-308B-4270-9969-27768A78F144">
+																					<KillApplicator>
+																						<applyTarget>ApplicatorTarget</applyTarget>
+																						<caption>Убиваем гз, если разница в фрагах достигла условия</caption>
+																						<dontGiveRewards>false</dontGiveRewards>
+																						<enabled>
+																							<compiledString>FS8AAAACAAAAPgAAAFgAAABDdXJyZW50RnJhZ0RpZmZlcmVuY2VUYXJnZXQATG9zZUZyYWdEaWZmZXJlbmNlAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoHAAAAItVEIsCi00Qi1BQ3V34/9LZ4Nxd+N/g9sQBdQnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>cCurrentFragDifferenceTarget &lt;= -cLoseFragDifference</sString>
+																						</enabled>
+																						<flag>None</flag>
+																						<formulaName></formulaName>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<providerName></providerName>
+																					</KillApplicator>
+																				</Item>
+																			</applicators>
+																			<dispatch href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="6A698B73-924F-463D-A261-49FDF296796F">
+																				<DispatchImmediate>
+																					<alwaysApply>false</alwaysApply>
+																					<applyEffect>
+																						<Item href="" />
+																						<Item href="" />
+																					</applyEffect>
+																					<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																					<applyEffectOrientation>Default</applyEffectOrientation>
+																					<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																					<dieAfterApply>true</dieAfterApply>
+																					<dispatchEffect>
+																						<Item href="" />
+																						<Item href="" />
+																					</dispatchEffect>
+																					<flags>0</flags>
+																					<instantApply>false</instantApply>
+																				</DispatchImmediate>
+																			</dispatch>
+																		</Spell>
+																	</spell>
+																	<spellTarget>AbilityOwner</spellTarget>
+																	<targetSelector href="" />
+																</SpellApplicator>
+															</Item>
+														</applicators>
+														<dispatch href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="B285CDB4-8440-40B8-A4D3-726191B2E3FA">
+															<DispatchImmediate>
+																<alwaysApply>false</alwaysApply>
+																<applyEffect>
+																	<Item href="" />
+																	<Item href="" />
+																</applyEffect>
+																<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																<applyEffectOrientation>Default</applyEffectOrientation>
+																<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																<dieAfterApply>true</dieAfterApply>
+																<dispatchEffect>
+																	<Item href="" />
+																	<Item href="" />
+																</dispatchEffect>
+																<flags>0</flags>
+																<instantApply>false</instantApply>
+															</DispatchImmediate>
+														</dispatch>
+													</Spell>
+												</spell>
+											</EventProcessorOnDeath>
+										</processor>
+										<providerName></providerName>
+										<startCondition>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</startCondition>
+										<useAbilityCooldown>false</useAbilityCooldown>
+										<useAbilityOwnerMana>false</useAbilityOwnerMana>
+									</TriggerApplicator>
+								</Item>
+							</applicators>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>248</behaviorFlags>
+							<caption>Тех статус</caption>
+							<customCounter>
+								<compiledString></compiledString>
+								<returnType>int</returnType>
+								<sString>0</sString>
+							</customCounter>
+							<customProgress>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</customProgress>
+							<description textref="" />
+							<dispellPriority>NonDispellable</dispellPriority>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<flags>0</flags>
+							<formulaName></formulaName>
+							<image href="" />
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<name textref="" />
+							<power>0</power>
+							<providerName></providerName>
+							<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+							<stackCount>0</stackCount>
+							<startCondition>
+								<compiledString>FQgAAAACAAAADQAAACMAAABJc0Nsb25lAFWL7FFoAAAAAItFDIsQi00Mi4KIAQAA/9DcHUUAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+								<returnType>bool</returnType>
+								<sString>receiver.vIsClone == 0</sString>
+							</startCondition>
+							<statusPosition>-1000</statusPosition>
+							<stopBehaviour>StopByTime</stopBehaviour>
+							<unstackableWith href="" />
+						</StatusApplicator>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>248</behaviorFlags>
+				<caption>Аура на вражеских героев, чтобы установить счетчик вражеских смертей</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<range>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAB6RA==</compiledString>
+					<returnType>float</returnType>
+					<sString>1000</sString>
+				</range>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<targets>536870915</targets>
+				<targetSelector href="" />
+				<type>None</type>
+			</AuraApplicator>
+		</Item>
+		<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="4401D56E-B3D3-49CE-8EAC-33407955C0F7">
+			<AuraApplicator>
+				<applicators>
+					<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="8E6CF1ED-5012-4F74-8852-CB1502B07BC5">
+						<TriggerApplicator>
+							<actionsCount>
+								<compiledString>FQAAAAAAAAAAVYvsM8Bdww==</compiledString>
+								<returnType>int</returnType>
+								<sString>0</sString>
+							</actionsCount>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>248</behaviorFlags>
+							<caption>Триггер на свою смерть</caption>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<playAck>false</playAck>
+							<processor href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="333C59E8-221B-4D7B-8DA3-C34509195A18">
+								<EventProcessorOnDeath>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<castSpellDelay>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</castSpellDelay>
+									<checkSender>0</checkSender>
+									<objectFilter>536870915</objectFilter>
+									<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+									<spell href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="17EE9BCB-44A9-4D18-9113-EB46BDD4E5F5">
+										<Spell>
+											<applicators>
+												<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="90F740F7-0378-47FC-AEF5-DAC16506554F">
+													<SpellApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>Спелл в гз</caption>
+														<enabled>
+															<compiledString></compiledString>
+															<returnType>bool</returnType>
+															<sString>true</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<providerName></providerName>
+														<spell href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="29CEA470-B3C9-413D-9A63-006C08066DD4">
+															<Spell>
+																<applicators>
+																	<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="393457BD-A367-437A-959A-5AB23FACDB94">
+																		<PermanentStatModApplicator>
+																			<applyTarget>ApplicatorTarget</applyTarget>
+																			<caption>Счетчик разрушенных башен</caption>
+																			<customApplyType>None</customApplyType>
+																			<enabled>
+																				<compiledString></compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</enabled>
+																			<formulaName></formulaName>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<modifier>
+																				<addValue>
+																					<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																					<returnType>float</returnType>
+																					<sString>1.0f</sString>
+																				</addValue>
+																				<multValue>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>1.0f</sString>
+																				</multValue>
+																				<stat>Life</stat>
+																				<topModifier>false</topModifier>
+																				<variable>TowerDeath</variable>
+																			</modifier>
+																			<providerName></providerName>
+																		</PermanentStatModApplicator>
+																	</Item>
+																	<Item href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="9B60E007-7D79-4DC1-B7AD-ED2EA7375300">
+																		<KillApplicator>
+																			<applyTarget>ApplicatorTarget</applyTarget>
+																			<caption>Убиваем гз, если разрушены обе башни</caption>
+																			<dontGiveRewards>false</dontGiveRewards>
+																			<enabled>
+																				<compiledString>FSAAAAACAAAAJwAAAEQAAABUb3dlckRlYXRoAABSZXF1aXJlZFRvd2VyTnVtYmVyAFWL7IPsDGgAAAAAi0UMixCLTQyLgogBAAD/0ItNDFGLVQhSaAwAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xEF6CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>receiver.vTowerDeath &gt;= cRequiredTowerNumber</sString>
+																			</enabled>
+																			<flag>None</flag>
+																			<formulaName></formulaName>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<providerName></providerName>
+																		</KillApplicator>
+																	</Item>
+																</applicators>
+																<dispatch href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="19961DA2-4015-4418-864C-16CECF5CE43D">
+																	<DispatchImmediate>
+																		<alwaysApply>false</alwaysApply>
+																		<applyEffect>
+																			<Item href="" />
+																			<Item href="" />
+																		</applyEffect>
+																		<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																		<applyEffectOrientation>Default</applyEffectOrientation>
+																		<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																		<dieAfterApply>true</dieAfterApply>
+																		<dispatchEffect>
+																			<Item href="" />
+																			<Item href="" />
+																		</dispatchEffect>
+																		<flags>0</flags>
+																		<instantApply>false</instantApply>
+																	</DispatchImmediate>
+																</dispatch>
+															</Spell>
+														</spell>
+														<spellTarget>ApplicatorTarget</spellTarget>
+														<targetSelector href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="34346E7C-9F14-4066-B7F7-D12BFA50BC70">
+															<MainBuildingTargetSelector />
+														</targetSelector>
+													</SpellApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Maps/Multiplayer/MidOnly/Mains/PvPRules.ABLT" id="E2C85D18-FBFD-45A0-B2BA-A508E66DD136">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+								</EventProcessorOnDeath>
+							</processor>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<useAbilityCooldown>false</useAbilityCooldown>
+							<useAbilityOwnerMana>false</useAbilityOwnerMana>
+						</TriggerApplicator>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>248</behaviorFlags>
+				<caption>Аура на союзные башни с триггером на разрушение</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<range>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAB6RA==</compiledString>
+					<returnType>float</returnType>
+					<sString>1000</sString>
+				</range>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<targets>268435520</targets>
+				<targetSelector href="" />
+				<type>None</type>
+			</AuraApplicator>
+		</Item>
+	</passiveApplicators>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="" />
+	<targetType>807346687</targetType>
+	<type>Passive</type>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Ability>
