@@ -108,7 +108,7 @@ NI_DEFINE_REFCOUNT( lobby::FastReconnectCtx );
 namespace lobby
 {
 
-GameClient::GameClient( ClientBase * _client, NWorld::IMapCollection * _mapCollection, FastReconnectCtx * _fastReconnectCtx, const bool _isSpectator, const bool _isTutorial ) :
+GameClient::GameClient( ClientBase * _client, NWorld::IMapCollection * _mapCollection, FastReconnectCtx * _fastReconnectCtx, const bool _isSpectator, const bool _isTutorial, const bool _isSingle, const int _ratingMin, const int _ratingMax ) :
 gameState( EGameState::Startup ),
 client( _client ),
 clientId( _client->ClientId() ),
@@ -130,7 +130,10 @@ nextFrameTimeDump( timer::Now() + 10.0 ),
 frameTimeHistogram( lifehack::EasyVector<double>( 0.0, 2.0, 10.0, 20.0, 30.0, 40.0, 50.0 ) ),
 fastReconnectCtx( _fastReconnectCtx ),
 isSpectator( _isSpectator ),
-isTutorial( _isTutorial )
+isTutorial( _isTutorial ),
+isSingle( _isSingle ),
+ratingMin( _ratingMin ),
+ratingMax( _ratingMax )
 {
   CrashRptWrapper::AddTagToReport( "UserId", NStr::StrFmt( "%d", clientId ) );
 

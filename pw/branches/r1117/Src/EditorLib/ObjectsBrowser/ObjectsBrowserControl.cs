@@ -455,7 +455,7 @@ namespace EditorLib.ObjectsBrowser
       }
     }
 
-    private ObjectsFolder currentFolder = null;
+    internal ObjectsFolder currentFolder = null;
     public ObjectsFolder CurrentFolder
     {
       get { return currentFolder; }

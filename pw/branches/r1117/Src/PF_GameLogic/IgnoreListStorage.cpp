@@ -25,9 +25,10 @@ namespace
 #define _IGNORE_LIST_VERSIONLESS (0ULL)
 #define _IGNORE_LIST_V1 (1ULL)
 #define _IGNORE_LIST_V2 (2ULL)
+#define _IGNORE_LIST_V3 (3ULL)
 
 #define IGNORE_LIST_MAGIC _IgnoreListMagic
-#define IGNORE_LIST_VERSION _IGNORE_LIST_V2
+#define IGNORE_LIST_VERSION _IGNORE_LIST_V3
 
 namespace
 {
@@ -55,7 +56,7 @@ namespace
     case EIgnoreListStorageFormat::Legacy:
       return NStr::StrFmt("ignorelist%llu.dat", _auid);
     case EIgnoreListStorageFormat::Regular:
-      return NStr::StrFmt("%016llX.ignore", _auid);
+      return NStr::StrFmt("ignore.ignore");
     default:
       return NStr::StrFmt("~.ignore");
     }
@@ -100,7 +101,7 @@ namespace
 
       TLines lines;
 
-      NStr::SplitString(szBuffer.c_str() + 1, &lines, L"\r\n"); // ���������� ���� wchar_t � BOM
+      NStr::SplitString(szBuffer.c_str() + 1, &lines, L"\r\n"); // ���������� ���� wchar_t � BOM
 
       TLines::const_iterator it = lines.begin();
       TLines::const_iterator it_end = lines.end();
@@ -143,6 +144,7 @@ namespace
 
     bool operator()(TUserSet& users, TUserNicknameMap& nicknames)
     {
+		MessageTrace("Try Read Impl");
       const CObj<FileStream> pStream(new FileStream(path, FILEACCESS_READ, FILEOPEN_OPEN_EXISTING));
 
       if (!IsValid(pStream) || !pStream->IsOk() || !pStream->CanRead())
@@ -158,6 +160,13 @@ namespace
         pStream->Seek(0, SEEKORIGIN_BEGIN);
       }
 
+      // Если это новый формат V3 (только никнеймы), читаем по-другому
+      if (header.version == _IGNORE_LIST_V3)
+      {
+        return ReadNicknameOnlyFormat(pStream, users, nicknames);
+      }
+
+      // Старый формат с auid и никнеймами
       TUserId userId;
       TUserNickname userNickname;
 
@@ -233,8 +242,8 @@ namespace
 
     bool TryReadNickname(const CObj<FileStream>& stream, TUserNickname& nickname)
     {
-      if (!ShouldReadNicknames())
-        return true;
+      //if (!ShouldReadNicknames())
+        //return true;
 
       unsigned short length;
 
@@ -259,12 +268,60 @@ namespace
         return false;
       }
 
+      // Удаляем завершающий ноль, если он есть
+      if (length > 0 && nickname[length - 1] == 0)
+      {
+        nickname.resize(length - 1);
+      }
+
+	  MessageTrace("Read nickname success: '%s' (original length=%d, final length=%d)", 
+                   NStr::ToMBCS(nickname).c_str(), length, nickname.length());
+
       return true;
     }
 
     bool ShouldReadNicknames() const
     {
-      return (header.version == _IGNORE_LIST_V2);
+      return (header.version == _IGNORE_LIST_V2) || (header.version == _IGNORE_LIST_V3);
+    }
+
+    bool ReadNicknameOnlyFormat(const CObj<FileStream>& pStream, TUserSet& users, TUserNicknameMap& nicknames)
+    {
+      MessageTrace("Reading nickname-only format");
+
+      // Читаем количество никнеймов
+      unsigned int nicknameCount;
+      (*pStream) >> nicknameCount;
+
+      if (!pStream->IsOk())
+      {
+        ErrorTrace("Read nickname count from \"%s\" failed!", path);
+        return false;
+      }
+
+      // Очищаем старые данные - в новом формате нет auid
+      users.clear();
+      nicknames.clear();
+
+      // Читаем никнеймы
+      for (unsigned int i = 0; i < nicknameCount; ++i)
+      {
+        TUserNickname nickname;
+        if (!TryReadNickname(pStream, nickname))
+        {
+          ErrorTrace("Read nickname from \"%s\" failed!", path);
+          return false;
+        }
+
+        if (!nickname.empty())
+        {
+          // Используем специальный маркер для обозначения нового формата
+          nicknames[i + 1] = nickname; // Используем индекс + 1 как временный ключ
+        }
+      }
+
+      pStream->Close();
+      return true;
     }
 
     const nstl::string path;
@@ -278,50 +335,32 @@ namespace
     explicit IgnoreListWriterImpl(const nstl::string& _path)
       : path(_path)
       , header()
+      , nicknameSet(0)
     {
       header.magic = IGNORE_LIST_MAGIC;
       header.version = IGNORE_LIST_VERSION;
     }
 
+    // Новый конструктор для сохранения только никнеймов (V3)
+    explicit IgnoreListWriterImpl(const nstl::string& _path, const TUserNicknameStringSet& _nicknameSet)
+      : path(_path)
+      , header()
+      , nicknameSet(&_nicknameSet)
+    {
+      header.magic = IGNORE_LIST_MAGIC;
+      header.version = _IGNORE_LIST_V3;
+    }
+
     bool operator()(const TUserSet& users, const TUserNicknameMap& nicknames) const
     {
-      const CObj<FileStream> pStream(new FileStream(path, FILEACCESS_WRITE, FILEOPEN_CREATE_NEW));
-
-      if (!IsValid(pStream) || !pStream->IsOk() || !pStream->CanWrite())
+      if (header.version == _IGNORE_LIST_V3)
       {
-        MessageTrace("Cannot write ignore list file \"%s\"", path);
-        return false;
+        return WriteNicknameOnlyFormat();
       }
-
-      MessageTrace("Writing \"%s\"", path);
-
-      if (ShouldWriteHeader())
+      else
       {
-        (*pStream) << header.magic;
-        (*pStream) << header.version;
+        return WriteOldFormat(users, nicknames);
       }
-
-      TUserSet::const_iterator it = users.begin();
-      TUserSet::const_iterator it_end = users.end();
-      for (; it != it_end; ++it)
-      {
-        (*pStream) << (*it);
-
-        if (!pStream->IsOk())
-        {
-          ErrorTrace("Write to \"%s\" failed!", path);
-          break;
-        }
-
-        if (TryWriteNickname(pStream, *it, nicknames))
-        {
-          // placeholder
-        }
-      }
-
-      pStream->Close();
-
-      return true;
     }
   private:
     IgnoreListWriterImpl();
@@ -333,7 +372,7 @@ namespace
 
     bool ShouldWriteNicknames() const
     {
-      return (header.version == _IGNORE_LIST_V2);
+      return (header.version == _IGNORE_LIST_V2) || (header.version == _IGNORE_LIST_V3);
     }
 
     bool TryWriteNickname(const CObj<FileStream>& stream, const TUserId& userId, const TUserNicknameMap& nicknames) const
@@ -385,6 +424,97 @@ namespace
     const nstl::string path;
 
     IgnoreListHeader header;
+    const TUserNicknameStringSet* nicknameSet;
+
+    bool WriteOldFormat(const TUserSet& users, const TUserNicknameMap& nicknames) const
+    {
+      const CObj<FileStream> pStream(new FileStream(path, FILEACCESS_WRITE, FILEOPEN_CREATE_NEW));
+
+      if (!IsValid(pStream) || !pStream->IsOk() || !pStream->CanWrite())
+      {
+        MessageTrace("Cannot write ignore list file \"%s\"", path);
+        return false;
+      }
+
+      MessageTrace("Writing \"%s\"", path);
+
+      if (ShouldWriteHeader())
+      {
+        (*pStream) << header.magic;
+        (*pStream) << header.version;
+      }
+
+      TUserSet::const_iterator it = users.begin();
+      TUserSet::const_iterator it_end = users.end();
+      for (; it != it_end; ++it)
+      {
+        (*pStream) << (*it);
+
+        if (!pStream->IsOk())
+        {
+          ErrorTrace("Write to \"%s\" failed!", path);
+          break;
+        }
+
+        if (TryWriteNickname(pStream, *it, nicknames))
+        {
+          // placeholder
+        }
+      }
+
+      pStream->Close();
+
+      return true;
+    }
+
+    bool WriteNicknameOnlyFormat() const
+    {
+      const CObj<FileStream> pStream(new FileStream(path, FILEACCESS_WRITE, FILEOPEN_CREATE_NEW));
+
+      if (!IsValid(pStream) || !pStream->IsOk() || !pStream->CanWrite())
+      {
+        MessageTrace("Cannot write ignore list file \"%s\"", path);
+        return false;
+      }
+
+      MessageTrace("Writing nicknames only \"%s\"", path);
+
+      // Записываем заголовок
+      (*pStream) << header.magic;
+      (*pStream) << header.version;
+
+      if (!pStream->IsOk())
+      {
+        ErrorTrace("Write header to \"%s\" failed!", path);
+        return false;
+      }
+
+      // Записываем количество никнеймов
+      unsigned int nicknameCount = nicknameSet ? nicknameSet->size() : 0;
+      (*pStream) << nicknameCount;
+
+      if (!pStream->IsOk())
+      {
+        ErrorTrace("Write nickname count to \"%s\" failed!", path);
+        return false;
+      }
+
+      // Записываем никнеймы
+      if (nicknameSet)
+      {
+        for (TUserNicknameStringSet::const_iterator it = nicknameSet->begin(); it != nicknameSet->end(); ++it)
+        {
+          if (!WriteNicknameImpl(pStream, NStr::ToUnicode(*it)))
+          {
+            ErrorTrace("Write nickname to \"%s\" failed!", path);
+            return false;
+          }
+        }
+      }
+
+      pStream->Close();
+      return true;
+    }
   };
 
   class IgnoreListWriter : public NonCopyable
@@ -392,6 +522,15 @@ namespace
   public:
     explicit IgnoreListWriter(const TUserId& _auid)
       : auid(_auid)
+      , nicknameSet(0)
+    {
+
+    }
+
+    // Новый конструктор для сохранения только никнеймов
+    explicit IgnoreListWriter(const TUserId& _auid, const TUserNicknameStringSet& _nicknameSet)
+      : auid(_auid)
+      , nicknameSet(&_nicknameSet)
     {
 
     }
@@ -400,12 +539,20 @@ namespace
     {
       const nstl::string path(MakeIgnoreListFilePath(auid, EIgnoreListStorageFormat::Regular));
 
-      return IgnoreListWriterImpl(path)(users, nicknames);
+      if (nicknameSet)
+      {
+        return IgnoreListWriterImpl(path, *nicknameSet)(users, nicknames);
+      }
+      else
+      {
+        return IgnoreListWriterImpl(path)(users, nicknames);
+      }
     }
   private:
     IgnoreListWriter();
 
     const TUserId auid;
+    const TUserNicknameStringSet* nicknameSet;
   };
 
   class IgnoreListReader : public NonCopyable
@@ -423,10 +570,12 @@ namespace
       nicknames.clear();
 
       {
+		  MessageTrace("Try Read");
         const nstl::string path(MakeIgnoreListFilePath(auid, EIgnoreListStorageFormat::Regular));
-
+ MessageTrace("%s", path);
         if (NFile::DoesFileExist(path))
         {
+			MessageTrace("File Exists");
           IgnoreListReaderImpl impl(path);
 
           const bool read = impl(users, nicknames);
@@ -440,12 +589,13 @@ namespace
           return read;
         }
       }
-
+  MessageTrace("Try Regular");
       {
         const nstl::string path(MakeIgnoreListFilePath(auid, EIgnoreListStorageFormat::Legacy));
-
+  MessageTrace("%s", path);
         if (NFile::DoesFileExist(path))
         {
+				MessageTrace("File Exists");
           const bool read = LegacyIgnoreListReaderImpl(path)(users, nicknames);
 
           if (read)
@@ -457,7 +607,7 @@ namespace
           return read;
         }
       }
-
+MessageTrace("End Read");
       return true;
     }
   private:
@@ -474,6 +624,7 @@ namespace NGameX
     : ownerUserId(_auid)
     , users()
   {
+	  MessageTrace("Load %s", _auid);
     LoadFromFile();
   }
 
@@ -482,77 +633,112 @@ namespace NGameX
     if (!listener)
       return;
 
-    // TODO: �� ��������� listener'�, ���� �� ��� ���������������
+    // TODO: �� ��������� listener'�, ���� �� ��� ���������������
 
     listeners.push_back(listener);
   }
 
-  void IgnoreListStorage::AddUser(const TUserId auid)
+  void IgnoreListStorage::AddUser(const TUserNickname& nickname)
   {
-    if (!auid)
-      return;
-
-    TUserSet::const_iterator it = users.find(auid);
-
-    if (it != users.end())
-      return;
-
-    users.insert(auid);
-
-    SaveToFile();
-
-    for (TListeners::iterator it_listener = listeners.begin(); it_listener != listeners.end(); ++it_listener)
-    {
-      if (const TListenerPtr listener = (*it_listener))
-      {
-        listener->OnUserAddedToIgnoreList(auid);
-      }
-    }
-  }
-
-  void IgnoreListStorage::RemoveUser(const TUserId auid)
-  {
-    if (!auid)
-      return;
-
-    TUserSet::iterator it = users.find(auid);
-
-    if (it == users.end())
-      return;
-
-    users.erase(it);
-
-    SaveToFile();
-
-    for (TListeners::iterator it_listener = listeners.begin(); it_listener != listeners.end(); ++it_listener)
-    {
-      if (const TListenerPtr listener = (*it_listener))
-      {
-        listener->OnUserRemovedFromIgnoreList(auid);
-      }
-    }
-  }
-
-  void IgnoreListStorage::AddUserNickname(const TUserId auid, const TUserNickname& nickname)
-  {
-    if (!auid)
-      return;
-
     if (nickname.empty())
-      nicknames.erase(auid);
-    else
-      nicknames[auid] = nickname;
+      return;
+
+    nstl::string nicknameStr = NStr::ToMBCS(nickname);
+    if (nicknameStringSet.find(nicknameStr) != nicknameStringSet.end())
+      return;
+
+    nicknameStringSet.insert(nicknameStr);
+    SaveToFile();
+
+    // Уведомляем слушателей
+    for (TListeners::iterator it_listener = listeners.begin(); it_listener != listeners.end(); ++it_listener)
+    {
+      if (const TListenerPtr listener = (*it_listener))
+      {
+        listener->OnUserAddedToIgnoreList(nickname);
+      }
+    }
+  }
+
+  void IgnoreListStorage::RemoveUser(const TUserNickname& nickname)
+  {
+    if (nickname.empty())
+      return;
+
+    nstl::string nicknameStr = NStr::ToMBCS(nickname);
+    IgnoreList::TUserNicknameStringSet::iterator it = nicknameStringSet.find(nicknameStr);
+
+    if (it == nicknameStringSet.end())
+      return;
+
+    nicknameStringSet.erase(it);
+    SaveToFile();
+
+    // Уведомляем слушателей
+    for (TListeners::iterator it_listener = listeners.begin(); it_listener != listeners.end(); ++it_listener)
+    {
+      if (const TListenerPtr listener = (*it_listener))
+      {
+        listener->OnUserRemovedFromIgnoreList(nickname);
+      }
+    }
+  }
+
+
+
+  bool IgnoreListStorage::ContainsNickname(const TUserNickname& nickname) const
+  {
+    nstl::string nicknameStr = NStr::ToMBCS(nickname);
+    MessageTrace("ContainsNickname: Checking nickname: '%s' (len=%d)", nicknameStr.c_str(), nicknameStr.length());
+    MessageTrace("ContainsNickname: Total ignored nicknames: %d", nicknameStringSet.size());
+    
+    int index = 0;
+    for (IgnoreList::TUserNicknameStringSet::const_iterator it = nicknameStringSet.begin(); it != nicknameStringSet.end(); ++it, ++index)
+    {
+      MessageTrace("ContainsNickname: [%d] '%s' (len=%d)", index, it->c_str(), it->length());
+      if (nicknameStr == *it)
+      {
+        MessageTrace("ContainsNickname: EXACT MATCH found at index %d!", index);
+      }
+    }
+    
+    bool result = (nicknameStringSet.find(nicknameStr) != nicknameStringSet.end());
+    MessageTrace("ContainsNickname: Result: %s", result ? "IGNORED" : "NOT_IGNORED");
+    
+    return result;
   }
 
   void IgnoreListStorage::LoadFromFile()
   {
     const IgnoreListReader reader(ownerUserId);
     reader(users, nicknames);
+    
+    // Заполняем nicknameStringSet из загруженных nicknames
+    nicknameStringSet.clear();
+    MessageTrace("LoadFromFile: Processing %d nicknames from file", nicknames.size());
+    for (IgnoreList::TUserNicknameMap::const_iterator it = nicknames.begin(); it != nicknames.end(); ++it)
+    {
+      if (!it->second.empty())
+      {
+        nstl::string nicknameStr = NStr::ToMBCS(it->second);
+        MessageTrace("LoadFromFile: Converting nickname: wstring='%s' -> string='%s' (len=%d)", 
+                     NStr::ToMBCS(it->second).c_str(), nicknameStr.c_str(), nicknameStr.length());
+        nicknameStringSet.insert(nicknameStr);
+      }
+    }
+    
+    // Если это новый формат (V3), users уже очищен в ReadNicknameOnlyFormat
+    // Очищаем nicknames, оставляем только nicknameSet
+    if (users.empty() && !nicknames.empty())
+    {
+      // Это признак нового формата - нет auid, только никнеймы
+      nicknames.clear();
+    }
   }
 
   void IgnoreListStorage::SaveToFile() const
   {
-    const IgnoreListWriter writer(ownerUserId);
+    const IgnoreListWriter writer(ownerUserId, nicknameStringSet);
     writer(users, nicknames);
   }
 

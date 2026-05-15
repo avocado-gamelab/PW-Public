@@ -511,7 +511,7 @@ ICommandsLog * HybridServerDispencer::GetReplayWriter(Peered::TSessionId session
     if (!replaysTerminator.Get())
       return GetDummyReplayWriter();
 
-    // NUM_TASK ïàïêè äëÿ êàòåãîðèé; BDS èñïîëüçóåò std::ofstream, à îí ïàïîê íå ñîçäàåò
+    // NUM_TASK Ð¿Ð°Ð¿ÐºÐ¸ Ð´Ð»Ñ ÐºÐ°Ñ‚ÐµÐ³Ð¾Ñ€Ð¸Ð¹; BDS Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐµÑ‚ std::ofstream, Ð° Ð¾Ð½ Ð¿Ð°Ð¿Ð¾Ðº Ð½Ðµ ÑÐ¾Ð·Ð´Ð°ÐµÑ‚
     // HACKY
     // TODO: verify?
     if (replayCategory)
@@ -521,7 +521,7 @@ ICommandsLog * HybridServerDispencer::GetReplayWriter(Peered::TSessionId session
       NFile::CreatePath(NFile::Combine(replaysFolder, *replayCategory));
     }
 
-    // NUM_TASK ïðåäñòàâëåíèå sessionID â èìåíè ðåïëåÿ â 10-÷íîé ñèñòåìå
+    // NUM_TASK Ð¿Ñ€ÐµÐ´ÑÑ‚Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ sessionID Ð² Ð¸Ð¼ÐµÐ½Ð¸ Ñ€ÐµÐ¿Ð»ÐµÑ Ð² 10-Ñ‡Ð½Ð¾Ð¹ ÑÐ¸ÑÑ‚ÐµÐ¼Ðµ
     const nstl::string fileName = replayCategory
       ? NDebug::GenerateDebugFileName(NI_STRFMT("%llu", sessionId), "pwrp", replayCategory->c_str(), true)
       : NDebug::GenerateDebugFileName(NI_STRFMT("%llu", sessionId), "pwrp", 0, false);

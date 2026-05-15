@@ -85,7 +85,7 @@ public:
    * This method decreases reference counter and releases <I>this</I> 
    * if this counter becomes zero.
    *
-   * @note : condition changed to m_nRefCount == 0
+   * @note [antonmuhin]: condition changed to m_nRefCount == 0
    *  to escape double deletion problem. Sure, it can arise only
    *  in multi-threading environment and should be handled
    *  more carefully, so regard it as multi-threading for poors :)

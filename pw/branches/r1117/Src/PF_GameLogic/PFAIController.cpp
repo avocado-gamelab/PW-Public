@@ -44,7 +44,9 @@ PFAIController::PFAIController( PFBaseHero* hero, NCore::ITransceiver* transceiv
   , usePotionDelay( 0 )
   , blessDelay( 0 )
   , mountDelay( 0 )
-  ,findFlagDelay(0)
+  , findFlagDelay( 0 )
+  , prevHealth( -1.0f )
+  , isFleeing( false )
 {
   if ( IsValid(GetHelper().pDBBots) && GetHelper().pDBBots->midOnly )
     SetLine( 1, shift );
@@ -368,18 +370,26 @@ void PFAIController::UseTalents()
   {
     TalentWrapper talentWrapper;
     Target target;
+    int adjustedPriority; // Улучшенный приоритет с учетом контекста
 
-    ToUse( const TalentWrapper& _talentWrapper, Target _target ) : talentWrapper( _talentWrapper ), target( _target ) { }
+    ToUse( const TalentWrapper& _talentWrapper, Target _target, int _priority )
+      : talentWrapper( _talentWrapper ), target( _target ), adjustedPriority( _priority ) { }
 
     ToUse()
     {
       talentWrapper = TalentWrapper();
       target = Target();
+      adjustedPriority = -1;
     }
   };
 
   nstl::vector<ToUse> talentsToUse;
   int bestPriority = -1;
+
+  // Получаем текущее здоровье героя для приоритизации лечебных способностей
+  float health, healthMax;
+  GetHelper().GetLife( health, healthMax );
+  float healthFraction = health / healthMax;
 
   for ( TalentWrapper i = GetFirstTalent(); i.IsValid(); ++i )
   {
@@ -413,14 +423,93 @@ void PFAIController::UseTalents()
 
     NI_VERIFY( ( target.IsObject() || target.IsPosition() ), "Wrong ability target", continue; );
 
-    if ( priority >= bestPriority )
+    // Улучшенная приоритизация способностей
+    int adjustedPriority = priority;
+
+    // Проверяем тип способности
+    NDb::ESpellTarget targetType = pTalent->GetTargetType();
+    const NDb::Ability* pDBAbility = pTalent->GetDBDesc();
+
+    // Приоритет лечебным способностям при низком здоровье (<50%)
+    if ( healthFraction < 0.5f && (targetType & NDb::SPELLTARGET_ALLY) )
     {
-      if ( priority > bestPriority )
+      // Если способность нацелена на союзников, вероятно это лечение
+      adjustedPriority += 50; // Повышаем приоритет лечебным способностям
+    }
+
+    // Приоритет AoE способностям при наличии нескольких врагов
+    if ( pDBAbility && pDBAbility->aoeType != NDb::ABILITYAOEVISUAL_NONE )
+    {
+      // Подсчитываем врагов в радиусе
+      struct EnemyCounter : NonCopyable
       {
-        bestPriority = priority;
+        int count;
+        EnemyCounter() : count(0) {}
+        void operator()(PFBaseUnit &unit) { count++; }
+      } counter;
+
+      float aoeRange = pTalent->GetUseRange();
+      if ( aoeRange > 0 )
+      {
+        GetWorld()->GetAIWorld()->ForAllUnitsInRange(
+          GetHero()->GetPosition(),
+          aoeRange,
+          counter,
+          UnitMaskingPredicate( GetHero()->GetOppositeFactionFlags(), NDb::SPELLTARGET_ALL )
+        );
+
+        // Если 3+ врагов в радиусе, повышаем приоритет AoE способности
+        if ( counter.count >= 3 )
+        {
+          adjustedPriority += 30; // Бонус за множественные цели
+        }
+      }
+    }
+
+    // УЛУЧШЕНИЕ: Приоритет контрольным способностям при отступлении
+    // Проверяем, отступаем ли мы (низкое здоровье или численное превосходство врага)
+    const AIBaseState* currentState = CurrentState();
+    bool isRetreating = (healthFraction < 0.4f) ||
+                        (currentState && currentState->stateType == ESCAPEFROMTOWER) ||
+                        CheckNumericalSuperiority(15.0f);
+
+    if (isRetreating && pDBAbility)
+    {
+      // Проверяем, является ли способность контрольной (stun, slow, knockback и т.д.)
+      // Контрольные способности имеют applicators с флагами контроля
+      bool isControlAbility = false;
+
+      // Проверяем applicators на наличие контроля
+      for (int i = 0; i < pDBAbility->applicators.size(); ++i)
+      {
+        const NDb::BaseApplicator* pAppl = pDBAbility->applicators[i];
+        if (pAppl)
+        {
+          // Проверяем типы контрольных applicators
+          if (dynamic_cast<const NDb::StatusApplicator*>(pAppl) ||
+              dynamic_cast<const NDb::FlagsApplicator*>(pAppl))
+          {
+            isControlAbility = true;
+            break;
+          }
+        }
+      }
+
+      // Если это контрольная способность, сильно повышаем приоритет при отступлении
+      if (isControlAbility)
+      {
+        adjustedPriority += 60; // Высокий приоритет контролю при отступлении
+      }
+    }
+
+    if ( adjustedPriority >= bestPriority )
+    {
+      if ( adjustedPriority > bestPriority )
+      {
+        bestPriority = adjustedPriority;
         talentsToUse.clear();
       }
-      talentsToUse.push_back( ToUse( i, target ) );
+      talentsToUse.push_back( ToUse( i, target, adjustedPriority ) );
     }
 	}
 
@@ -666,6 +755,40 @@ void PFAIController::DoNotAttackTower()
   PushState(newState);
 }
 
+// Проверка численного превосходства - подсчет союзников и врагов в радиусе
+bool PFAIController::CheckNumericalSuperiority(float checkRadius)
+{
+  struct UnitCounter : NonCopyable
+  {
+    int allyCount;
+    int enemyCount;
+    NDb::EFaction myFaction;
+
+    UnitCounter(NDb::EFaction faction) : allyCount(0), enemyCount(0), myFaction(faction) {}
+
+    void operator()(PFBaseUnit &unit)
+    {
+      if (unit.IsDead())
+        return;
+
+      if (unit.GetFaction() == myFaction)
+        allyCount++;
+      else if (unit.GetFaction() != NDb::FACTION_NEUTRAL)
+        enemyCount++;
+    }
+  } counter(GetHero()->GetFaction());
+
+  GetWorld()->GetAIWorld()->ForAllUnitsInRange(
+    GetHero()->GetPosition(),
+    checkRadius,
+    counter,
+    UnitMaskingPredicate(GetHero()->GetOppositeFactionFlags() | (1 << GetHero()->GetFaction()), NDb::SPELLTARGET_ALL)
+  );
+
+  // Если врагов на 2+ больше чем союзников - численное превосходство врага
+  return (counter.enemyCount >= counter.allyCount + 2);
+}
+
 void PFAIController::EscapeFromTower()
 {
   if ( healing )		// do not override healing command
@@ -679,15 +802,54 @@ void PFAIController::EscapeFromTower()
     return;
   }
 
-  
-  float health, healthMax;
-  GetHelper().GetLife( health, healthMax );
+  // Подсчёт союзных крипов рядом с героем
+  struct AlliedCreepCounter : NonCopyable
+  {
+    int count;
+    NDb::EFaction myFaction;
+    AlliedCreepCounter( NDb::EFaction faction ) : count(0), myFaction(faction) {}
+    void operator()( PFBaseUnit& unit )
+    {
+      if ( !unit.IsDead() && unit.GetFaction() == myFaction &&
+           unit.GetUnitType() == NDb::UNITTYPE_CREEP )
+        count++;
+    }
+  } creepCounter( GetHero()->GetFaction() );
 
-  if (health/healthMax >= 0.95f)
-    return;
+  GetWorld()->GetAIWorld()->ForAllUnitsInRange(
+    GetHero()->GetPosition(),
+    15.0f,
+    creepCounter,
+    UnitMaskingPredicate( (1 << GetHero()->GetFaction()), NDb::SPELLTARGET_ALL )
+  );
+
+  const bool fewAlliedCreeps = ( creepCounter.count <= 2 );
 
   TowerFinder towerFinder;
-  GetHero()->ForAllAttackersOnce( towerFinder );
+
+  if ( fewAlliedCreeps )
+  {
+    // Мало союзных крипов — уходим от любой видимой башни превентивно
+    GetWorld()->GetAIWorld()->ForAllInRange(
+      GetHero()->GetPosition(),
+      GetHero()->GetVisibilityRange(),
+      towerFinder,
+      UnitMaskingPredicate( GetHero(), NDb::ESpellTarget( NDb::SPELLTARGET_TOWER | NDb::SPELLTARGET_ENEMY | NDb::SPELLTARGET_MAINBUILDING ) )
+    );
+  }
+  else
+  {
+    float health, healthMax;
+    GetHelper().GetLife( health, healthMax );
+
+    if ( health/healthMax >= 0.6f )
+    {
+      if ( !CheckNumericalSuperiority(15.0f) )
+        return;
+    }
+
+    GetHero()->ForAllAttackersOnce( towerFinder );
+  }
 
   if ( !towerFinder.found )
     return;
@@ -701,7 +863,7 @@ void PFAIController::EscapeFromTower()
   //PFMainBuilding* pMainBuilding = dynamic_cast<PFMainBuilding*>(towerFinder.unit);
   //if (pMainBuilding )
     //escapeTowerDistance = pTowerUnit->GetAttackRange() * 2.2f;
-  
+
   // negative distance means go back
   CVec2 rallyPoint = GetRoadPointByOffset( towerFinder.unit->GetPosition().AsVec2D(), -escapeTowerDistance );
 
@@ -717,6 +879,8 @@ void PFAIController::OnDie()
 	Cleanup();		// reset state machine
 	healing = HEAL_NONE;
 	healingTick = 0;
+  prevHealth = -1.0f;
+  isFleeing  = false;
 }
 
 void PFAIController::OnRespawn()
@@ -781,7 +945,7 @@ void PFAIController::Step( float timeDelta )
     findFlagDelay = 0;
   }
 
-  // ���� �� ������� - �� ������� �����
+  // ���� �� ������� - �� ������� �����
   if ( !GetHelper().pDBBots->midOnly )
     AttackTower();
   else
@@ -793,6 +957,41 @@ void PFAIController::Step( float timeDelta )
 	// check war front
 	CheckWarFront( timeDelta );
 
+  // --- Реакция на урон ---
+  {
+    float health, healthMax;
+    GetHelper().GetLife( health, healthMax );
+
+    if ( prevHealth > 0.0f && !IsDead() && healing == HEAL_NONE )
+    {
+      float healthDelta = ( prevHealth - health ) / healthMax;
+
+      static const float c_fleeThreshold = 0.20f;  // 20% HP за удар → бегство
+      static const float c_kiteThreshold = 0.05f;  // 5% HP за удар → кайтинг
+
+      if ( healthDelta >= c_fleeThreshold )
+      {
+        isFleeing = true;
+      }
+      else if ( !isFleeing && healthDelta >= c_kiteThreshold )
+      {
+        // Кайтинг только если не двигаемся и не убегаем
+        const AIBaseState* cs = CurrentState();
+        if ( !cs || ( cs->stateType != MOVE && cs->stateType != ESCAPEFROMTOWER ) )
+        {
+          KiteBack();
+        }
+      }
+    }
+
+    // Обрабатываем режим бегства
+    if ( isFleeing )
+      FleeFromDanger();
+
+    // Сохраняем HP для следующего тика
+    prevHealth = health;
+  }
+
   if (g_debugAIStates && GetCurrentStateName())
   {
     CVec3 pos = GetHero()->GetPosition();
@@ -800,6 +999,61 @@ void PFAIController::Step( float timeDelta )
     Render::Color white( 255, 255, 255, 255 );
     Render::DebugRenderer::DrawText3D( GetCurrentStateName(), pos, 20, white);
   }
+}
+
+void PFAIController::KiteBack()
+{
+  static const float c_kiteStepDistance = 4.0f;
+
+  CVec2 heroPos     = GetHero()->GetPosition().AsVec2D();
+  CVec2 stepBackPos = GetRoadPointByOffset( heroPos, -c_kiteStepDistance );
+
+  // Некомбатное перемещение назад (короткий шаг)
+  PushState( new AIMoveToState( this, stepBackPos, MAX_WAR_FRONT_DISTANCE, false ) );
+}
+
+void PFAIController::FleeFromDanger()
+{
+  // Лечение имеет приоритет — выходим из режима бегства
+  if ( healing )
+  {
+    isFleeing = false;
+    return;
+  }
+
+  // Уже бежим — не стакаем состояния
+  const AIBaseState* cs = CurrentState();
+  if ( cs && cs->stateType == ESCAPEFROMTOWER )
+    return;
+
+  // Проверяем: есть ли ещё атакующие?
+  struct AnyAttackerFinder
+  {
+    bool found;
+    AnyAttackerFinder() : found(false) {}
+    bool operator()( PFLogicObject& ) { found = true; return true; }
+  } finder;
+
+  GetHero()->ForAllAttackersOnce( finder );
+
+  if ( !finder.found )
+  {
+    // Больше никто не атакует — выходим из режима бегства
+    isFleeing = false;
+    DBG("*** FLEE ENDED - BACK TO GAME ***");
+    OnBecameIdle();
+    return;
+  }
+
+  // Всё ещё атакуют — делаем шаг назад
+  static const float c_fleeStepDistance = 15.0f;
+  CVec2 heroPos    = GetHero()->GetPosition().AsVec2D();
+  CVec2 rallyPoint = GetRoadPointByOffset( heroPos, -c_fleeStepDistance );
+
+  DBG("*** FLEE FROM DANGER ***");
+  AIBaseState* newState = new AIMoveToState( this, rallyPoint, MAX_WAR_FRONT_DISTANCE, false );
+  newState->stateType = ESCAPEFROMTOWER;  // используем существующий тип для early-out проверок
+  PushState( newState );
 }
 
 void PFAIController::OnBecameIdle()

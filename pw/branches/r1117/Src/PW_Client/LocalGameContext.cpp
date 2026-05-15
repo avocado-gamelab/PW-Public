@@ -27,6 +27,7 @@
 #include "ReplayRunner.h"
 #include "PF_GameLogic/IgnoreListStorage.h"
 #include "Game/PF/Client/LobbyPvx/NewReplay.h"
+#include "Client/NetworkStatusOverlay.h"
 #include "Version.h"
 
 static bool g_enableReplayLocalGame = false;
@@ -698,6 +699,9 @@ bool LocalGameContext::LoadReplay( const char * name, const vector<wstring> & ar
 
   const string replayName = NStr::ToMBCS( args[0] );
   replayRunner = new ReplayRunner( replayName, mapCollection );
+
+  NMainLoop::NetworkStatusOverlay::Instance().Clear();
+  NMainLoop::NetworkStatusOverlay::Instance().SetEnabled( false );
 
   if ( lobbyScreen )
     NScreenCommands::PushCommand( NScreenCommands::CreatePopScreenCommand( lobbyScreen ) );

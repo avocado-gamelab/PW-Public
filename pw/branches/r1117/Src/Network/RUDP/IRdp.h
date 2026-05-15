@@ -161,6 +161,8 @@ public:
   virtual bool                  Init( IRdpSocketFactory * _socketFactory, const RdpOptions & _opt, ni_rnd::IGenerator * _rnd, timer::ITimer * _timer ) = 0;
   virtual IRdpConnection *      Connect( const NetAddr & _remote, unsigned _mux, IRdpConnectionCallback * _cb ) = 0;
   virtual IRdpListenContext *   Listen( unsigned _mux, IRdpListenContextCallback * _cb ) = 0;
+  virtual int                   FailoverConnections( const NetAddr & _oldAddr, const NetAddr & _newAddr ) = 0;
+  virtual void                  SetFailoverAddr( const NetAddr & _failoverAddr ) = 0;  // auto-failover on retransmit threshold
 };
 
 IRdp * NewRdpInstance();

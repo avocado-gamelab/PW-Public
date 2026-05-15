@@ -1117,13 +1117,13 @@ void GatewayJsonHandler::HandleServerStatus( Json::Value & pvxReply, const Json:
   { 
     SVC_LOG_MSG.Trace( "Sending server status..." );
 
-    // запрашиваем текущую статистику сервера
+    // Р·Р°РїСЂР°С€РёРІР°РµРј С‚РµРєСѓС‰СѓСЋ СЃС‚Р°С‚РёСЃС‚РёРєСѓ СЃРµСЂРІРµСЂР°
     if ( StrongMT<socialLobby::RISocialInterface> soclobby = SocLobbyThreadSafe() )
       soclobby->GetServerStatus( this, &GatewayJsonHandler::OnServerStatus );
 
     Json::Value status( Json::objectValue );
 
-    {// забираем значения из кэша
+    {// Р·Р°Р±РёСЂР°РµРј Р·РЅР°С‡РµРЅРёСЏ РёР· РєСЌС€Р°
       threading::MutexLock lock(mutex); 
       status["accept_timeout"] = lastServerStatus.acceptTimeout;
       status["average_mm_time"] = lastServerStatus.averageMmTime;
@@ -1135,6 +1135,7 @@ void GatewayJsonHandler::HandleServerStatus( Json::Value & pvxReply, const Json:
       status["reconnect_timeout"] = lastServerStatus.reconnectTimeout;
       status["guard_lobby_timeout"] = lastServerStatus.guardLobbyTimeout;
       status["mm_debug_status"] = lastServerStatus.pvpMmDebugStatus.c_str();
+      status["dev_mode"] = lastServerStatus.devMode;
     }
 
     pvxReply["server_status"] = status;

@@ -84,7 +84,7 @@ class GameClientPW : public NGameX::IGameControl, public GameClient
   NI_DECLARE_REFCOUNT_CLASS_2( GameClientPW, NGameX::IGameControl, GameClient );
 
 public:
-  GameClientPW( ClientPW * _client, NWorld::IMapCollection * _mapCollection, Game::NetworkStatusScreen * _networkStatusScreen, FastReconnectCtxPW * _fastReconnectCtxPw, NGameX::ISocialConnection * _socialConnection, Game::LoadingScreen * _loadingScreen, NGameX::GuildEmblem* _guildEmblem, const bool _isSpectator, const bool _isTutorial );
+  GameClientPW( ClientPW * _client, NWorld::IMapCollection * _mapCollection, Game::NetworkStatusScreen * _networkStatusScreen, FastReconnectCtxPW * _fastReconnectCtxPw, NGameX::ISocialConnection * _socialConnection, Game::LoadingScreen * _loadingScreen, NGameX::GuildEmblem* _guildEmblem, const bool _isSpectator, const bool _isTutorial, const bool _isSingle, const int _ratingMin, const int _ratingMax );
   virtual ~GameClientPW(); 
 
   void SetChatClient( gamechat::IClient * chatClient );

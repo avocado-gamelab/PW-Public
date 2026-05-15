@@ -50,6 +50,86 @@ static bool FindBuildings(PFWorld* pWorld, const CVec3& pos, float range, int fa
 	return objects.size() > 0;
 }
 
+// Функция оценки приоритета цели для улучшенного ИИ
+// Возвращает числовой score - чем выше, тем приоритетнее цель
+static float CalculateTargetScore(const CPtr<PFBaseUnit>& target, const CPtr<PFBaseUnit>& owner)
+{
+	if (!IsValid(target) || !IsValid(owner))
+		return 0.0f;
+
+	float score = 0.0f;
+
+	// Герои имеют высокий приоритет (+100 очков)
+	if (target->IsHero())
+	{
+		score += 100.0f;
+	}
+
+	// Приоритет слабым целям (до +50 очков в зависимости от потери здоровья)
+	float healthFraction = target->GetHealth() / target->GetMaxHealth();
+	if (healthFraction < 1.0f)
+	{
+		score += 50.0f * (1.0f - healthFraction);
+	}
+
+	// Дополнительный бонус целям с очень низким здоровьем (<30%)
+	if (healthFraction < 0.3f)
+	{
+		score += 30.0f;
+	}
+
+	// Приоритет ближайшим целям (+20 очков если дистанция < 10)
+	float distance = fabs2(target->GetPosition().AsVec2D() - owner->GetPosition().AsVec2D());
+	if (distance < 10.0f)
+	{
+		score += 20.0f;
+	}
+
+	// ФОКУСИРОВКА НА ОДНОЙ ЦЕЛИ: если союзники уже атакуют эту цель, повысить приоритет
+	// Это заставляет ботов концентрировать огонь на одной цели
+	struct AllyAttackerCounter : NonCopyable
+	{
+		int count;
+		const CPtr<PFBaseUnit>& targetToCheck;
+		NDb::EFaction myFaction;
+
+		AllyAttackerCounter(const CPtr<PFBaseUnit>& target, NDb::EFaction faction)
+			: count(0), targetToCheck(target), myFaction(faction) {}
+
+		void operator()(PFBaseUnit &unit)
+		{
+			if (unit.IsDead() || unit.GetFaction() != myFaction)
+				return;
+
+			// Проверяем, атакует ли этот союзник нашу цель
+			const CPtr<PFBaseUnit>& unitTarget = unit.GetCurrentTarget();
+			if (IsValid(unitTarget) && unitTarget == targetToCheck)
+			{
+				count++;
+			}
+		}
+	} allyCounter(target, owner->GetFaction());
+
+	// Подсчитываем союзников в радиусе, атакующих эту же цель
+	if (owner->GetWorld() && owner->GetWorld()->GetAIWorld())
+	{
+		owner->GetWorld()->GetAIWorld()->ForAllUnitsInRange(
+			owner->GetPosition(),
+			20.0f,  // Радиус проверки союзников
+			allyCounter,
+			UnitMaskingPredicate(1 << owner->GetFaction(), NDb::SPELLTARGET_ALL)
+		);
+
+		// Если 1+ союзников атакуют эту цель, повысить приоритет (фокус огня)
+		if (allyCounter.count >= 1)
+		{
+			score += 40.0f;  // Сильный бонус за фокусировку
+		}
+	}
+
+	return score;
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // PFBasicMicroAI
@@ -143,6 +223,8 @@ bool PFBasicMicroAI::GetTargetImpl(Target& target, const ITargetCondition* const
 			if (FindUnits(pUnit->GetWorld(), pUnit->GetPosition(), useRange, factionFlags, targetType, objects))
 			{
 				CPtr<PFBaseUnit> bestUnit = NULL;
+				float bestScore = -1.0f; // Максимальный score для выбора лучшей цели
+
 				for (int i = 0; i < objects.size(); i++)
 				{
 					CPtr<PFBaseUnit> obj(objects[i]);
@@ -153,13 +235,14 @@ bool PFBasicMicroAI::GetTargetImpl(Target& target, const ITargetCondition* const
             if (!CheckTargetCondition(target, condition, pAbility))
               continue;
           }
-					bestUnit = obj;
-#if USE_NEW_AI
-					if (obj->IsHero() && bestUnit && !bestUnit->IsHero() && (targetType & (NDb::SPELLTARGET_HEROMALE | NDb::SPELLTARGET_HEROFEMALE)) )
-						break;					// found a hero
-#else
-					break;
-#endif
+
+					// Используем улучшенную систему оценки целей
+					float score = CalculateTargetScore(obj, pUnit);
+					if (score > bestScore)
+					{
+						bestScore = score;
+						bestUnit = obj;
+					}
 				}
 				if (bestUnit.GetPtr())
 				{

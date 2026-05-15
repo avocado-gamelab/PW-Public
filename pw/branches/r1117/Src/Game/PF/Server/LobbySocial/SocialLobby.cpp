@@ -18,6 +18,7 @@
 #include "Server/LiveMMaking/RankTable.h"
 #include "Db/DBServer.auto.h"
 #include "SocialLobbyMMStatisticsEx.h"
+#include "../LobbyPvx/LobbyConfig.h"
 
 
 NI_DEFINE_REFCOUNT( socialLobby::SocialLobby );
@@ -454,7 +455,7 @@ void SocialLobby::AddRequest( const SMatchmakingRequest & _reqData, INotify * _c
     {
       _callback->Failure();
       return;
-    }
+    } 
 
   ctx->SetParty( party );
 
@@ -605,6 +606,7 @@ SServerStatus SocialLobby::GetServerStatus()
   GetServerStatusEx(st);
 
   st.pvpMmDebugStatus = mmDebugStatus;
+  st.devMode = lobby::IsDevModeEnabled();
 
   return st;
 }
@@ -763,11 +765,12 @@ UserContext * SocialLobby::FindSpectatorTarget( const SMatchmakingRequestCore & 
     return 0;
   }
 
-  if ( 
-    ( game->Data().mapType != NDb::MAPTYPE_PVP ) && 
-    ( game->Data().mapType != NDb::MAPTYPE_CTE ) && 
+  if (
+    ( game->Data().mapType != NDb::MAPTYPE_PVP ) &&
+    ( game->Data().mapType != NDb::MAPTYPE_CTE ) &&
     ( game->Data().mapType != NDb::MAPTYPE_SERIES ) &&
-    ( game->Data().mapType != NDb::MAPTYPE_COOPERATIVE ) )
+    ( game->Data().mapType != NDb::MAPTYPE_COOPERATIVE ) &&
+    ( game->Data().mapType != NDb::MAPTYPE_TRAINING ) )
   {
     SOCLOBBY_LOG_WRN( "Wrong spectator target game map type. uid=%d, target=%d, game=%s, game_type=%d", _reqData.uid, _targetUid, game->StrId(), (int)game->Data().mapType );
     return 0;

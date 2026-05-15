@@ -3,6 +3,7 @@
 #include "RdpHandshake.h"
 #include "RdpWriter.h"
 #include "RdpPktQueue.h"
+#include "RdpLogic.h"
 #include "RdpPacket.h"
 #include "RdpStats.h"
 #include "System/InlineProfiler.h"
@@ -485,6 +486,14 @@ void RdpConnection::ConnCbPacketAcknowledged( timer::Time _rtt )
 void RdpConnection::ConnCbPacketRetransmitted()
 {
   ccLogic.OnPacketRetransmitted();
+}
+
+
+
+void RdpConnection::ConnCbRetransmitThreshold()
+{
+  if ( ctx.logic )
+    ctx.logic->TryAutoFailover( descr.remote );
 }
 
 

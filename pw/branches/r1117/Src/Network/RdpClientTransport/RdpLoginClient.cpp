@@ -14,11 +14,12 @@ namespace rdp_transport
 
 #pragma warning( disable: 4355 ) //'this' : used in base member initializer list
 
-LoginClient::LoginClient( ni_udp::IRdp * _rdp, const ni_udp::NetAddr & _loginSvcAddr, unsigned _loginSvcMux, const nstl::string & _login, const nstl::string & _password, const nstl::string & _sessionKey ) :
+LoginClient::LoginClient( ni_udp::IRdp * _rdp, const ni_udp::NetAddr & _loginSvcAddr, unsigned _loginSvcMux, const nstl::string & _login, const nstl::string & _password, const nstl::string & _sessionKey, const nstl::string & _serverAddress ) :
 state( ELoginClientState::Connecting ),
 login( _login ),
 password( _password ),
 sessionKey( _sessionKey ),
+serverAddress( _serverAddress ),
 loginSvcAddr( _loginSvcAddr ),
 rdp( _rdp ),
 timeout( operationTimeout, this, &LoginClient::OnTimeout ),
@@ -240,7 +241,7 @@ void LoginClient::OnSvcReqReply( const newLogin::ServiceReqReply  & _reply )
   }
 
   ClientChannel * chan = it->second;
-  chan->OnSvcRequestReply( _reply );
+  chan->OnSvcRequestReply( _reply, serverAddress );
 }
 
 } //namespace rdp_transport

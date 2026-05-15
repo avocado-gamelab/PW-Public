@@ -31,14 +31,16 @@ namespace Transport
       unsigned int pingperiod = Defaults::GetPingPeriod(), unsigned int to = Defaults::GetOpenChannelTimeout()) = 0;
     virtual void GetNewAcceptedChannels(vector< StrongMT< Transport::IChannel > > & _chnls) { _chnls; }
 
-    virtual void Login( const Network::NetAddress& loginServerAddress, const nstl::string& login, const nstl::string& _password, const nstl::string& sessionKey="", Login::LoginType::Enum _loginType = Login::LoginType::ORDINARY ) = 0;
+    virtual void Login( const Network::NetAddress& loginServerAddress, const nstl::string& login, const nstl::string& _password, const nstl::string& sessionKey="", Login::LoginType::Enum _loginType = Login::LoginType::ORDINARY, const nstl::string& serverAddress="" ) = 0;
     virtual void Logout() = 0;
     virtual Login::ELoginResult::Enum GetLoginResult() const = 0;
-    virtual EStatus::Enum GetStatus() = 0; // в частности, по CRITICAL_FAIL можно прибивать
+    virtual EStatus::Enum GetStatus() = 0; // пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ CRITICAL_FAIL пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     virtual TServiceId GetSessionPath() const { return TServiceId(); };
     virtual Network::NetAddress GetRelayAddress() const = 0;
     virtual Network::NetAddress GetSecondaryRelayAddress() const = 0;
     virtual void Step() = 0;
+    virtual int FailoverToAddress( const nstl::string & _newServerAddress ) { return 0; }
+    virtual void SetFailoverAddress( const nstl::string & _newServerAddress ) {}
   };
 
 }

@@ -14,7 +14,7 @@ struct SThreadNames
   TNames    names;
 };
 
-// Fix NUM_TASK
+// Fix PF-67361
 static SThreadNames threadNames;
 #endif
 

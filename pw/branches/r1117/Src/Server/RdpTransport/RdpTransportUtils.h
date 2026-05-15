@@ -43,6 +43,7 @@ struct CommonCtx
 
 string FormatAddr( const ni_udp::NetAddr & _addr, unsigned _mux );
 bool ParseAddress( ni_udp::NetAddr & _addr, unsigned & _mux, const char * _str );
+bool ParseAddressWithChangeIp( ni_udp::NetAddr & _addr, unsigned & _mux, const char * _str, const char * _strFromClientCfg );
 
 
 

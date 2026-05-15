@@ -25,6 +25,7 @@
 #include "PF_GameLogic/HeroSpawn.h"
 #include "PF_GameLogic/PFHero.h"
 #include "PF_GameLogic/AdventureScreen.h"
+#include "PF_GameLogic/RandomNicknameHelper.hpp"
 
 
 namespace 
@@ -80,16 +81,17 @@ END_LUA_TYPEINFO( LoadingScreenLogic )
 
 
 
-LoadingScreenLogic::LoadingScreenLogic( NGameX::LoadingStatusHandler * statusHandler, const NDb::DBUIData* _uiData, const bool _isSpectator, const bool _isTutorial ) 
+LoadingScreenLogic::LoadingScreenLogic( NGameX::LoadingStatusHandler * statusHandler, const NDb::DBUIData* _uiData, const bool _isSpectator, const bool _isTutorial )
 : loadingStatusHandler(statusHandler)
 , uiData(_uiData)
 , isSpectator( _isSpectator )
 , isTutorial( _isTutorial )
 , leftTeamForce(0), rightTeamForce(0),
-isShowTeamForce(true),partyFlag(true),tamburFlag(true) 
+isShowTeamForce(true),partyFlag(true),tamburFlag(true),
+isSingle(false), ratingMin(1300), ratingMax(1400)
 {
 
-  levelToExp = NDb::SessionRoot::GetRoot()->logicRoot->aiLogic->levelToExperienceTable; 
+  levelToExp = NDb::SessionRoot::GetRoot()->logicRoot->aiLogic->levelToExperienceTable;
 }
 
 
@@ -300,7 +302,7 @@ void LoadingScreenLogic::AddPlayer( int userId, const NCore::PlayerStartInfo& in
 {
   if (heroInfo.isBot)
   {
-    wstring botNickname;
+    wstring botNickname = info.nickname.empty() ? wstring() : info.nickname;
     bool isMale = true;
 
     NDb::Ptr<NDb::Hero> hero = NWorld::FindHero( m_heroDb, NULL, heroInfo.heroId );
@@ -333,6 +335,14 @@ void LoadingScreenLogic::AddPlayer( int userId, const NCore::PlayerStartInfo& in
     recalcTeamForce(heroInfo);
     loadingHeroes->AddBot(userId);
     flashInterface->SetHeroLevel(userId, 1);
+
+    const int rating = (int)(info.playerInfo.heroRating);
+    if (rankCalculator && rating > 0)
+    {
+      const NDb::Rank & rank = rankCalculator->GetRank(rating);
+      NDb::EFaction faction = ConvertToFaction(heroInfo.team);
+      flashInterface->SetHeroRaiting(userId, rating, 0, 0, false, rankCalculator->GetRankIcon(faction, rank), rankCalculator->GetRankName(faction, rank));
+    }
   }
   else
   {
@@ -549,6 +559,12 @@ void LoadingScreenLogic::AddModeVisual( const NDb::AdvMapModeDescription * modeD
   modeDescriptions.push_back(modeDescription);
 }
 
+void LoadingScreenLogic::SetRatingParams(bool _isSingle, int _ratingMin, int _ratingMax)
+{
+  isSingle = _isSingle;
+  ratingMin = _ratingMin;
+  ratingMax = _ratingMax;
+}
 
 
 } //namespace Game

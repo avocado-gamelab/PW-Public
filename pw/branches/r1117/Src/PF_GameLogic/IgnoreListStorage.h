@@ -10,6 +10,8 @@ namespace IgnoreList
 
   typedef nstl::set<TUserId> TUserSet;
   typedef nstl::map<TUserId, TUserNickname> TUserNicknameMap;
+  typedef nstl::set<TUserNickname> TUserNicknameSet;
+  typedef nstl::set<nstl::string> TUserNicknameStringSet;
 }
 
 using IgnoreList::TUserId;
@@ -19,8 +21,8 @@ _interface IIgnoreListListener : public IBaseInterfaceST
 {
   NI_DECLARE_CLASS_1( IIgnoreListListener, IBaseInterfaceST );
 
-  virtual void OnUserAddedToIgnoreList(const TUserId auid) = 0;
-  virtual void OnUserRemovedFromIgnoreList(const TUserId auid) = 0;
+  virtual void OnUserAddedToIgnoreList(const TUserNickname& nickname) = 0;
+  virtual void OnUserRemovedFromIgnoreList(const TUserNickname& nickname) = 0;
 };
 
 
@@ -32,10 +34,10 @@ public:
 
   void AddListener(IIgnoreListListener* const listener);
 
-  void AddUser(const TUserId auid);
-  void RemoveUser(const TUserId auid);
+  void AddUser(const TUserNickname& nickname);
+  void RemoveUser(const TUserNickname& nickname);
 
-  void AddUserNickname(const TUserId auid, const TUserNickname& nickname);
+  bool ContainsNickname(const TUserNickname& nickname) const;
 
   bool ContainsUser(const TUserId auid) const
   {
@@ -48,6 +50,11 @@ public:
   const IgnoreList::TUserSet& GetIgnoredUsers() const
   {
     return users;
+  }
+
+  const IgnoreList::TUserNicknameStringSet& GetIgnoredNicknames() const
+  {
+    return nicknameStringSet;
   }
 private:
   typedef Weak<IIgnoreListListener> TListenerWeakPtr;
@@ -64,6 +71,7 @@ private:
 
   IgnoreList::TUserSet users;
   IgnoreList::TUserNicknameMap nicknames;
+  IgnoreList::TUserNicknameStringSet nicknameStringSet;
 };
 
 }

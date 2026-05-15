@@ -1011,7 +1011,7 @@ public class TerrainElementInstance : libdb.ICompositeDBValue, libdb.IChangeable
 
 	public Vec3 position { get { return _position; } set { _position.Assign( value ); } }
 
-	[FloatMinMax(0, 360)]
+	[FloatMinMax(0f, 360f)]
 	[GenerateChangedEvent]
 	public float angle { get { return _angle.Get(); } set { _angle.Set( value ); } }
 

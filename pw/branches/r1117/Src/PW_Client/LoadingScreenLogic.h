@@ -136,6 +136,8 @@ public:
   void ShowTeamForce();
   LoadingFlashInterface * GetLoadingFlashInterface() {return flashInterface;}
 
+  void SetRatingParams(bool _isSingle, int _ratingMin, int _ratingMax);
+
 private:
   bool isShowTeamForce, partyFlag, tamburFlag;
   uint leftTeamForce, rightTeamForce;
@@ -161,6 +163,10 @@ private:
   Weak<UI::FlashContainer2> flashWnd;
   const bool isSpectator;
   const bool isTutorial;
+
+  bool isSingle;
+  int ratingMin;
+  int ratingMax;
 
   //flash UI
   Strong<LoadingFlashInterface>   flashInterface;

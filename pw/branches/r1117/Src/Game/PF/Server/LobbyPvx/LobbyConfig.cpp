@@ -38,4 +38,6 @@ StrongMT<IConfigProvider> CreateConfigFromStatics()
   return new Transport::ConfigProvider<SLobbyConfigData, ConfigProviderPolicy>;
 }
 
+bool IsDevModeEnabled() { return s_config.enableDevMode; }
+
 } //namespace lobby

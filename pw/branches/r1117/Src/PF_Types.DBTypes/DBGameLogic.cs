@@ -2443,7 +2443,7 @@ public class TurretParams : libdb.ICompositeDBValue, libdb.IChangeable
 	public float turretAngleAcceleration { get { return _turretAngleAcceleration.Get(); } set { _turretAngleAcceleration.Set( value ); } }
 
 	[Description( "Turret rotation tolerance (angles)" )]
-	[FloatMinMax(0, 360)]
+	[FloatMinMax(0f, 360f)]
 	public float turretRotaionTolerance { get { return _turretRotaionTolerance.Get(); } set { _turretRotaionTolerance.Set( value ); } }
 
 	public float turretLastAngleResetDelay { get { return _turretLastAngleResetDelay.Get(); } set { _turretLastAngleResetDelay.Set( value ); } }
@@ -6401,7 +6401,7 @@ public class UnitTargetingParameters : DBResource
 	public float unitTypeTableWeight { get { return _unitTypeTableWeight.Get(); } set { _unitTypeTableWeight.Set( value ); } }
 
 	[Category( "Targeting by range" )]
-	[FloatMinMax(0, 1)]
+	[FloatMinMax(0f, 1f)]
 	public float weightMaximumRangePersent { get { return _weightMaximumRangePersent.Get(); } set { _weightMaximumRangePersent.Set( value ); } }
 
 	[Category( "Targeting by range" )]

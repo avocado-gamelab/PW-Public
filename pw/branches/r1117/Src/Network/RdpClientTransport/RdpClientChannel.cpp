@@ -22,7 +22,7 @@ timeout( defaultTimeout, this, &ClientChannel::OnTimeout )
 
 
 
-void ClientChannel::OnSvcRequestReply( const newLogin::ServiceReqReply & _reply )
+void ClientChannel::OnSvcRequestReply( const newLogin::ServiceReqReply & _reply, const nstl::string & serverAddress )
 {
   MessageTrace( "ClientChannel: Connection details arrived. code=%s(%d), svcid=%s, req_id=%d, addr=%s", newLogin::ESvcConnectionResult::ToString( _reply.code ), (int)_reply.code, _reply.svcId.c_str(), _reply.requestId, _reply.externalAddress );
 
@@ -53,14 +53,17 @@ void ClientChannel::OnSvcRequestReply( const newLogin::ServiceReqReply & _reply 
 
   ni_udp::NetAddr svcAddr;
   unsigned mux = 0;
-  if ( !ParseAddress( svcAddr, mux, _reply.externalAddress.c_str() ) )
+  //Transport::ClientCfg::GetLoginAddress()
+  const char * clientCfgStr = serverAddress.c_str(); //"185.72.144.197:35001@10";
+
+  if ( !ParseAddressWithChangeIp( svcAddr, mux, _reply.externalAddress.c_str(), clientCfgStr ) )
   {
     ErrorTrace( "ClientChannel: Cannot parse service address. svcid=%s, addr=%s, req_id=%d", GetAddress().target.c_str(), svcAddr, requestId );
     CloseClientChannel();
     return;
   }
 
-  MessageTrace( "ClientChannel: Connecting to sevice. svcid=%s, addr=%s, mux=%u, req_id=%d", _reply.svcId.c_str(), svcAddr, mux, requestId );
+  MessageTrace( "ClientChannel: Connecting to service. svcid=%s, addr=%s, mux=%u, req_id=%d", _reply.svcId.c_str(), svcAddr, mux, requestId );
 
   if ( !InitAsActive( rdp, svcAddr, mux ) )
   {

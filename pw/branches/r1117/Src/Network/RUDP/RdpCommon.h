@@ -30,12 +30,17 @@ class IRdpPacketAllocator;
 
 
 //TODO: Convert most of the members into methods of IRdpConnImplCallback 
+class RdpLogic;
+
 struct RdpCommonCtx
 {
   StrongMT<RdpOptionsObject>      options;
   StrongMT<RdpWriter>             writer;
   StrongMT<RdpConnStats>          stats;
   StrongMT<IRdpPacketAllocator>   allocator;
+  RdpLogic *                      logic;  // non-owning, for failover callback
+
+  RdpCommonCtx() : logic(0) {}
 };
 
 
@@ -61,6 +66,7 @@ public:
   virtual void ConnCbFailure() = 0;
   virtual void ConnCbPacketAcknowledged( timer::Time _rtt ) = 0;
   virtual void ConnCbPacketRetransmitted() = 0;
+  virtual void ConnCbRetransmitThreshold() {}  // Called when retransmit count reaches failover threshold
 };
 
 } //namespace ni_udp

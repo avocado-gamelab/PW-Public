@@ -1,10 +1,12 @@
 if platform == 'win32':
-  sources = [ 
+  sources = [
       'NewDelete.h',
       'NewDelete.cpp',
       'malloc.c.h',
       'nedmalloc.h',
       'nedmalloc.cpp',
+      'rpmalloc/rpmalloc.cpp',
+      'rpmalloc/rpmalloc.h',
       'NewHandlerDetails.h',
       'NewHandler.h',
       'NewHandler.cpp',
@@ -24,5 +26,5 @@ components = [
     'MemoryLib/SymAccess'
 ]
 
-compilerKeys = [ '/DNI_MALLOC_IMPL=1' ]
+compilerKeys = [ '/DNI_MALLOC_IMPL=3' ]
 #compilerKeys = [ '/DNI_MALLOC_IMPL=2', '/DNI_DUMP_LEAKS_TO_FILE', '/DMAX_STACK_SIZE=30', '/DCHECK_MEMORY_LEAKS']

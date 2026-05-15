@@ -1,2 +1,31 @@
-﻿.idea
+.idea
 pw/branches/r1117/Bin/logs
+
+# Шифрование / anti-cheat — не публиковать
+pw/branches/r1117/Src/System/Crypt/
+
+# Документация по шифрованию — раскрывает алгоритм и ключи
+pw/branches/r1117/Src/System/FileSystem/ENCRYPTION_README.md
+pw/branches/r1117/Src/System/FileSystem/KEY_OBFUSCATION_GUIDE.md
+pw/branches/r1117/Src/System/FileSystem/CHACHA20_LEGACY_C++_GUIDE.md
+pw/branches/r1117/Src/System/FileSystem/test_encryption.bat
+pw/branches/r1117/Src/System/FileSystem/test_chacha20_compatibility.cpp
+pw/branches/r1117/Src/System/FileSystem/simple_test.cpp
+pw/branches/r1117/Src/System/FileSystem/ZipFileSystem.test.cpp
+
+# Machine-specific VS project user settings
+*.user
+*.suo
+*.resharper.user
+
+# Build artifacts
+pw/branches/r1117/Src/_Debug/
+pw/branches/r1117/Src/_Release/
+pw/branches/r1117/Src/_ReleaseSingleExe/
+pw/branches/r1117/Src/_ShippingSingleExe/
+**/obj/
+
+# VS2008 IDE artifacts
+*.ncb
+*.sln.cache
+*.tmp_*.vcproj

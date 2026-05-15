@@ -87,20 +87,30 @@ IgnoreListController::IgnoreListController(const CreateStruct& cs)
   DoInit(cs.flashContainer);
 }
 
-void IgnoreListController::OnUserAddedToIgnoreList(const TUserId auid)
+void IgnoreListController::OnUserAddedToIgnoreList(const TUserNickname& nickname)
 {
   if (!flashInterface)
     return;
 
-  flashInterface->IgnoreUser(GetPlayerIdByUserId(auid));
+  // Находим playerId по никнейму для передачи в Flash
+  const TPlayerId playerId = GetPlayerIdByNickname(nickname);
+  if (playerId >= 0)
+  {
+    flashInterface->IgnoreUser(playerId);
+  }
 }
 
-void IgnoreListController::OnUserRemovedFromIgnoreList(const TUserId auid)
+void IgnoreListController::OnUserRemovedFromIgnoreList(const TUserNickname& nickname)
 {
   if (!flashInterface)
     return;
 
-  flashInterface->RemoveIgnore(GetPlayerIdByUserId(auid));
+  // Находим playerId по никнейму для передачи в Flash
+  const TPlayerId playerId = GetPlayerIdByNickname(nickname);
+  if (playerId >= 0)
+  {
+    flashInterface->RemoveIgnore(playerId);
+  }
 }
 
 bool IgnoreListController::IsIgnored(const TUserId auid) const
@@ -111,18 +121,31 @@ bool IgnoreListController::IsIgnored(const TUserId auid) const
   return ignoreListStorage->ContainsUser(auid);
 }
 
+bool IgnoreListController::IsIgnoredByNickname(const TUserNickname& nickname) const
+{
+  if (!ignoreListStorage)
+    return false;
+
+  return ignoreListStorage->ContainsNickname(nickname);
+}
+
 void IgnoreListController::InvalidateFlashInterface()
 {
   if (!flashInterface)
     return;
 
-  const IgnoreList::TUserSet& ignoredUsers = ignoreListStorage->GetIgnoredUsers();
+  const IgnoreList::TUserNicknameStringSet& ignoredNicknames = ignoreListStorage->GetIgnoredNicknames();
 
-  IgnoreList::TUserSet::const_iterator it = ignoredUsers.begin();
-  IgnoreList::TUserSet::const_iterator it_end = ignoredUsers.end();
+  IgnoreList::TUserNicknameStringSet::const_iterator it = ignoredNicknames.begin();
+  IgnoreList::TUserNicknameStringSet::const_iterator it_end = ignoredNicknames.end();
   for (; it != it_end; ++it)
   {
-    flashInterface->IgnoreUser(GetPlayerIdByUserId(*it));
+    const TUserNickname nickname = NStr::ToUnicode(*it);
+    const TPlayerId playerId = GetPlayerIdByNickname(nickname);
+    if (playerId >= 0)
+    {
+      flashInterface->IgnoreUser(playerId);
+    }
   }
 }
 
@@ -151,12 +174,23 @@ void IgnoreListController::OnFSCommand( UI::FlashContainer2* _wnd, const char* l
   {
   case IgnoreUser:
     DevTrace("IgnoreList: Ignore #%llu", userId);
-    ignoreListStorage->AddUserNickname(userId, GetUserNicknameByPlayerId(playerId));
-    ignoreListStorage->AddUser(userId);
+    {
+      const TUserNickname& nickname = GetUserNicknameByPlayerId(playerId);
+      if (!nickname.empty())
+      {
+        ignoreListStorage->AddUser(nickname);
+      }
+    }
     break;
   case RemoveIgnoreFromUser:
     DevTrace("IgnoreList: Forgive #%llu", userId);
-    ignoreListStorage->RemoveUser(userId);
+    {
+      const TUserNickname& nickname = GetUserNicknameByPlayerId(playerId);
+      if (!nickname.empty())
+      {
+        ignoreListStorage->RemoveUser(nickname);
+      }
+    }
     break;
   }
 }
@@ -179,6 +213,27 @@ NGameX::TUserId IgnoreListController::GetUserIdByPlayerId(const TPlayerId player
     return 0ULL;
 
   return playerIdMapper->GetUserId(playerId);
+}
+
+NGameX::TPlayerId IgnoreListController::GetPlayerIdByNickname(const TUserNickname& nickname) const
+{
+  if (!playerIdMapper)
+    return -1;
+  if (nickname.empty())
+    return -1;
+
+  // Перебираем всех игроков и ищем по никнейму
+  // TODO: Это не самый эффективный способ, но работает для небольшого количества игроков
+  for (int playerId = 0; playerId < 10; ++playerId) // предполагаем максимум 10 игроков
+  {
+    const TUserNickname& playerNickname = playerIdMapper->GetUserNicknameByPlayerId(playerId);
+    if (playerNickname == nickname)
+    {
+      return playerId;
+    }
+  }
+  
+  return -1; // не найден
 }
 
 const TUserNickname& IgnoreListController::GetUserNicknameByPlayerId(const TPlayerId playerId) const

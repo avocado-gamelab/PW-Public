@@ -68,7 +68,7 @@ class GameContext : public BaseObjectMT, public IGameContext, public lobby::ICli
   NI_DECLARE_REFCOUNT_CLASS_4( GameContext, BaseObjectMT, IGameContextUiInterface, lobby::IClientNotify, rpc::IGateKeeperCallback )
 
 public:
-  GameContext( const char * _sessionKey, const char * _devLogin, const char * _mapId, NGameX::ISocialConnection * _socialConnection, NGameX::GuildEmblem* _guildEmblem, const bool _isSpectator, const bool _isTutorial );
+  GameContext( const char * _sessionKey, const char * _devLogin, const char * _mapId, NGameX::ISocialConnection * _socialConnection, NGameX::GuildEmblem* _guildEmblem, const bool _isSpectator, const bool _isTutorial, const bool _isSingle, const int _ratingMin, const int _ratingMax, const char * _serverAddress );
   ~GameContext();
 
   //IGameContext
@@ -123,12 +123,16 @@ private:
   Weak<NGameX::GuildEmblem>           guildEmblem;
 
   string                              socialLoginAddress;
+  string                              lastSocialLoginAddress;
   string                              socialLogin;
   string                              socialPassword;
 
   bool                                clientWasInitialized;
   const bool                          isSpectator;
   const bool                          isTutorial;
+  const bool                          isSingle;
+  const int                           ratingMin;
+  const int                           ratingMax;
 
   Weak<LoadingScreen>                 loadingScreen;  
   Weak<NetworkStatusScreen>           networkStatusScreen;
@@ -142,9 +146,29 @@ private:
   string                              mapId;    
   Weak<NGameX::LoadingStatusHandler>  loadingStatusHandler;
 
+  string							  serverAddress;
+
+  // Auto-fallback на alternative endpoint когда login на current провалился
+  // (таймаут/NoConnection). Ставится при первой попытке retry — чтобы повторный
+  // провал не зациклил ConnectToCluster. Сбрасывается на Success.
+  bool                                loginFallbackAttempted;
+
+  // Deferred fallback: первый сервисный канал (lobby/2, gamesvc/1, chat) не
+  // пробился после успешного login — у части игроков main:35001 отвечает на
+  // probe и login handshake, но main:35010 (svc-порт) у них блокируется. Тогда
+  // OnChannelClosed выставляет флаг, а Poll() в безопасной точке вызывает
+  // TryLoginFallback и переподключается через proxy. Не из callback'а — потому
+  // что дёргать ConnectToCluster из OnChannelClosed небезопасно (рекурсивно
+  // снесёт текущий channel state).
+  bool                                needsDeferredFailover;
+  Login::LoginType::Enum              lastLoginType;
+
   StrongMT<Transport::IChannel>       inputChannel;
 
   void Init();
+  // Пробует перелогиниться через responsive альтернативу ServerAddressList.
+  // Возвращает true если retry запущен, false если альтернативы нет или уже пробовали.
+  bool TryLoginFallback( Login::ELoginResult::Enum _failureReason );
   void Cleanup();
   bool ParseSessionKey( const char * _sessKey );
   void StartFastReconnect();

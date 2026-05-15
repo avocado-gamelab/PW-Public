@@ -39,7 +39,7 @@ public:
 
   int RequestId() const { return requestId; }
 
-  void OnSvcRequestReply( const newLogin::ServiceReqReply & _reply );
+  void OnSvcRequestReply( const newLogin::ServiceReqReply & _reply, const nstl::string & serverAddress );
   bool Poll( timer::Time _now );
 
 public:

@@ -45,6 +45,11 @@ public:
 
   void ParallelPoll();
 
+  // Failover: change remote address for all connections matching oldAddr to newAddr
+  int FailoverConnections( const NetAddr & _oldAddr, const NetAddr & _newAddr );
+  void SetFailoverAddr( const NetAddr & _failoverAddr );
+  bool TryAutoFailover( const NetAddr & _failingAddr );
+
 protected:
   //threading::IThreadJob
   virtual void Work( volatile bool & isRunning );
@@ -93,6 +98,10 @@ private:
   StrongMT<timer::ITimer>         clock;
   StrongMT<RdpEphemeralMuxes>     ephemeralMuxes;
   StrongMT<RdpStats>              globalStats;
+
+  NetAddr                         failoverAddr;
+  bool                            failoverActive;
+  bool                            failoverDone;
 
   timer::Time                     tempDbgNextDump, tempDbgPrevPollTime;
   LONG                            tempDbgDgSent, tempDbgDgRecv, tempDbgWarn, tempDbgErr, tempDbgRetr, tempDbgDelivered;

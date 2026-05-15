@@ -137,4 +137,16 @@ IRdpListenContext * Rdp::Listen( unsigned _mux, IRdpListenContextCallback * _cb 
   return logic->StartListen( _mux, _cb );
 }
 
+
+int Rdp::FailoverConnections( const NetAddr & _oldAddr, const NetAddr & _newAddr )
+{
+  return logic->FailoverConnections( _oldAddr, _newAddr );
+}
+
+
+void Rdp::SetFailoverAddr( const NetAddr & _failoverAddr )
+{
+  logic->SetFailoverAddr( _failoverAddr );
+}
+
 } //namespace ni_udp

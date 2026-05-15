@@ -31,6 +31,11 @@ const string & GetLoginServerAddress()
   return loginAddr;
 }
 
+void SetLoginServerAddress( const string & addr )
+{
+  loginAddr = addr;
+}
+
 int GetFirstServerPort()
 {
   return firstServerPort;

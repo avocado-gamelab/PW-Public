@@ -70,11 +70,12 @@ public:
 
   void InvalidateFlashInterface();
   bool IsIgnored(const TUserId auid) const;
+  bool IsIgnoredByNickname(const TUserNickname& nickname) const;
   void OnFastReconnect(IgnoreListStorage *_ignoreListStorage);
 
   // IIgnoreListListener
-  virtual void OnUserAddedToIgnoreList(const TUserId auid);
-  virtual void OnUserRemovedFromIgnoreList(const TUserId auid);
+  virtual void OnUserAddedToIgnoreList(const TUserNickname& nickname);
+  virtual void OnUserRemovedFromIgnoreList(const TUserNickname& nickname);
 
   // UI::IFSCommandListner
   virtual void OnFSCommand( UI::FlashContainer2* _wnd, const char* listenerID,  const char* args, const wchar_t * argsW  );
@@ -86,6 +87,8 @@ private:
   TPlayerId GetPlayerIdByUserId(const TUserId userId) const;
   TUserId GetUserIdByPlayerId(const TPlayerId playerId) const;
 
+  TPlayerId GetPlayerIdByNickname(const TUserNickname& nickname) const;
+  
   const TUserNickname& GetUserNicknameByPlayerId(const TPlayerId playerId) const;
 
   Weak<IgnoreListStorage>     ignoreListStorage;

@@ -4,6 +4,8 @@
   @file
 
   @brief ring::Ring
+
+  @author antonmuhin
 */
 #include <stddef.h>
 #include "Basic.h"

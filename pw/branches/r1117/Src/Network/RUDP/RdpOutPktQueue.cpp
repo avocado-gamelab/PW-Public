@@ -184,6 +184,10 @@ void RdpOutPktQueue::Poll( timer::Time _now )
       if ( _now < pkt->LastTryTime() + rtto )
         continue;
 
+      // Auto-failover: at half retransmit limit, trigger address migration
+      if ( pkt->TryIndex() == ctx.options->retransmitLimit / 2 )
+        callback->ConnCbRetransmitThreshold();
+
       if ( pkt->TryIndex() >= ctx.options->retransmitLimit )
       {
         if ( ( ctx.options->logEvents & RdpOptions::LogMajorEvents ) || ( ctx.options->logEvents & RdpOptions::LogWarnings ) )

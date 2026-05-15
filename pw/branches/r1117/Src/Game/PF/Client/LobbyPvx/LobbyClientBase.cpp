@@ -62,7 +62,9 @@ statusTimeLimit( -1 ),
 gameSessionId( 0 ),
 serverTimestamp( 0 ),
 timeDelta( 0 ),
-leaveAckCounter( 0 )
+leaveAckCounter( 0 ),
+joinSocialRetries( 0 ),
+joinSocialRetryTime( 0 )
 {
   lobbyUserProxy = new LobbyUserProxy( this );
 }
@@ -152,6 +154,15 @@ void ClientBase::Poll()
   if ( ( statusTimeLimit > 0 ) && ( now > statusTimeLimit ) )
   {
     SetError( EClientError::ServiceTimeOut );
+  }
+
+  // Retry JoinSocialGame after GameNotFound (waiting for Social Lobby to register reconnecting user)
+  if ( joinSocialRetryTime > 0 && now >= joinSocialRetryTime && serverInst && status == EClientStatus::Connected )
+  {
+    joinSocialRetryTime = 0;
+    MessageTrace( "Retrying JoinSocialGame (attempt %d/5)...", joinSocialRetries );
+    serverInst->JoinSocialGame( this, &ClientBase::OnOperatioResult );
+    lastLobbyOperationResult = EOperationResult::InProgress;
   }
 
   if ( entrance )
@@ -269,10 +280,17 @@ void ClientBase::OnOperatioResult( EOperationResult::Enum result )
     case EClientStatus::Connected:
       lastLobbyOperationResult = result;
 
-      if ( inSocialMode && ( result != EOperationResult::Ok ) )
+      if ( inSocialMode && ( result == EOperationResult::GameNotFound ) && joinSocialRetries < 5 )
+      {
+        ++joinSocialRetries;
+        joinSocialRetryTime = timer::Now() + 2.0;
+        MessageTrace( "GameNotFound, will retry JoinSocialGame in 2s (attempt %d/5)", joinSocialRetries );
+        lastLobbyOperationResult = EOperationResult::InProgress;
+      }
+      else if ( inSocialMode && ( result != EOperationResult::Ok ) )
         SetError( EClientError::ServiceDenial );
       break;
-  } 
+  }
 }
 
 

@@ -224,7 +224,7 @@ void PingContext::UpdateStatus( const socialLobby::SMatchmakingStatus & _status 
     if ( data.sessionContextId != _status.sessionContextId )
       SVC_LOG_WRN.Trace( "Got wrong mmid for context: uid=%s ('%s' vs '%s')", uidString, data.sessionContextId, _status.sessionContextId );
 
-  //NOTE: Ответ от lobby может прийти ПОСЛЕ УДАЛЕНИЯ запроса по cancel
+  //NOTE: РћС‚РІРµС‚ РѕС‚ lobby РјРѕР¶РµС‚ РїСЂРёР№С‚Рё РџРћРЎР›Р• РЈР”РђР›Р•РќРРЇ Р·Р°РїСЂРѕСЃР° РїРѕ cancel
 
   if ( ctxState == EContextState::Condemned )
     if ( _status.progress != socialLobby::ERequestStatus::Null ) {

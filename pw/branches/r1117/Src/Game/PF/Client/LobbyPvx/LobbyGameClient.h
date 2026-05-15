@@ -85,7 +85,7 @@ class GameClient : public NCore::ISessionRunner, public BaseObjectMT
 public:
   typedef map<int, int> TUsersLoadingStatus; //userId -> loadingProgress
 
-  GameClient( ClientBase * _client, NWorld::IMapCollection * _mapCollection, FastReconnectCtx * _fastReconnectCtx, const bool _isSpectator, const bool _isTutorial );
+  GameClient( ClientBase * _client, NWorld::IMapCollection * _mapCollection, FastReconnectCtx * _fastReconnectCtx, const bool _isSpectator, const bool _isTutorial, const bool _isSingle, const int _ratingMin, const int _ratingMax );
 
   ClientBase * Client() { return client; }
   Transport::TClientId ClientId() { return clientId; }
@@ -147,14 +147,19 @@ protected:
   StrongMT<NWorld::IMapLoader> GetMapLoader() { return mapLoader; }
   bool IsSpectator() const { return isSpectator; }
   bool IsTutorial() const { return isTutorial; }
+  bool IsSingle() const { return isSingle; }
+  int GetRatingMin() const { return ratingMin; }
+  int GetRatingMax() const { return ratingMax; }
   NWorld::MapDescriptionLoader * MapDescription() const { return mapDescription; }
+
+protected:
+  NCore::MapStartInfo                 mapStartInfo;
 
 private:
   EGameState::Enum                    gameState;
   StrongMT<ClientBase>                client;
   WeakMT<Transport::IChannel>         lobbyServerChannel;
   Transport::TClientId                clientId;
-  NCore::MapStartInfo                 mapStartInfo;
   StrongMT<NCore::ServerNode>         hybridServerNode;
   bool                                hybridStarted;
   wstring                             nickname;
@@ -198,6 +203,9 @@ private:
   StrongMT<FastReconnectCtx>          fastReconnectCtx;
   const bool                          isSpectator;
   const bool                          isTutorial;
+  const bool                          isSingle;
+  const int                           ratingMin;
+  const int                           ratingMax;
 
   Strong<NWorld::MapDescriptionLoader>  mapDescription;
 

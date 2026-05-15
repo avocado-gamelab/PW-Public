@@ -69,7 +69,6 @@
 				AdditionalLibraryDirectories=""
 				GenerateDebugInformation="true"
 				GenerateMapFile="true"
-				MapFileName="/MAP:pw_game_map"
 				MapExports="true"
 				SubSystem="2"
 				LargeAddressAware="2"
@@ -181,7 +180,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="&quot;$(ProjectDir)..\..\vendor\BuildUtils\CopyReference.exe&quot; $(InputPath) $(ConfigurationName) $(TargetDir)"
+				CommandLine="&quot;$(ProjectDir)..\..\vendor\BuildUtils\CopyReference.exe&quot; $(InputPath) $(ConfigurationName) $(TargetDir)&#x0D;&#x0A;&quot;$(ProjectDir)..\..\copy_to_bin.cmd&quot; $(TargetPath) $(OutDir) $(ProjectDir) &quot;$(ProjectDir)..\..\..\GameDesign\Bin&quot;"
 			/>
 		</Configuration>
 		<Configuration
@@ -215,7 +214,7 @@
 				EnableIntrinsicFunctions="true"
 				FavorSizeOrSpeed="1"
 				WholeProgramOptimization="false"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_SHIPPING"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_SHIPPING;STARFORCE_PROTECTED"
 				RuntimeLibrary="2"
 				BufferSecurityCheck="false"
 				EnableFunctionLevelLinking="true"
@@ -300,7 +299,7 @@
 				InlineFunctionExpansion="2"
 				EnableIntrinsicFunctions="true"
 				FavorSizeOrSpeed="1"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_SHIPPING;DO_NOT_USE_DLLMAIN;CURL_STATICLIB"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_SHIPPING;DO_NOT_USE_DLLMAIN;CURL_STATICLIB;STARFORCE_PROTECTED"
 				ExceptionHandling="0"
 				RuntimeLibrary="2"
 				BufferSecurityCheck="false"
@@ -322,7 +321,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				UseLibraryDependencyInputs="true"
-				AdditionalDependencies="JsonCpp.lib comsuppw.lib CrashRpt.lib CxxTest.lib d3d9.lib d3dx9.lib DbgHelp.lib dinput8.lib dxerr.lib dxguid.lib fmodex_vc.lib fmod_event.lib fmod_event_net.lib freetype244MT.lib GlU32.Lib gtrtst32.lib jpeglib.lib Psapi.lib Rpcrt4.lib shlwapi.lib Tamarin.lib version.lib wbemuuid.lib winmm.lib zdll.lib ws2_32.lib ssleay32MT.lib libeay32MT.lib ACE.lib IOTerabit.lib TProactor.lib sakijapi.lib libcurl.lib steam_api.lib CensorDll.lib"
+				AdditionalDependencies=" JsonCpp.lib comsuppw.lib CrashRpt.lib CxxTest.lib d3d9.lib d3dx9.lib DbgHelp.lib dinput8.lib dxerr.lib dxguid.lib fmodex_vc.lib fmod_event.lib fmod_event_net.lib freetype244MT.lib GlU32.Lib gtrtst32.lib jpeglib.lib Psapi.lib Rpcrt4.lib shlwapi.lib Tamarin.lib version.lib wbemuuid.lib winmm.lib zdll.lib ws2_32.lib ssleay32MT.lib libeay32MT.lib ACE.lib IOTerabit.lib TProactor.lib sakijapi.lib libcurl.lib steam_api.lib CensorDll.lib"
 				OutputFile="$(OutDir)\$(ProjectName).exe"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="../../vendor\DirectShow\lib;../../vendor\zlib\lib;../../vendor\DirectX\Lib\x86;../../vendor/jpeglib/lib;../../vendor/freetype/lib;../../vendor/Tamarin/lib/Release;../../vendor/Gl/lib;../../vendor\DirectX\Include;../../vendor\fmod\api\lib;../../vendor\fmod\fmoddesignerapi\api\lib;../../vendor\CxxTest\lib;../../vendor\DTW\lib\i386;../../vendor/CrashRpt/lib;../../vendor\openSSL\lib\static;../../vendor/ACE_wrappers/lib;../../vendor/Terabit/lib;../../vendor/StarForce/StarForce;../../vendor/libcurl/lib/Release;../../Vendor/Steam/1.23a/redistributable_bin;../../Tools/Censor/lib/Release;../../vendor/JsonCpp/lib/Release"
@@ -353,7 +352,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="&quot;$(ProjectDir)..\..\vendor\BuildUtils\CopyReference.exe&quot; $(InputPath) $(ConfigurationName) $(TargetDir)"
+				CommandLine="&quot;$(ProjectDir)..\..\vendor\BuildUtils\CopyReference.exe&quot; $(InputPath) $(ConfigurationName) $(TargetDir)&#x0D;&#x0A;&quot;$(ProjectDir)..\..\copy_to_bin.cmd&quot; $(TargetPath) $(OutDir) $(ProjectDir) &quot;$(ProjectDir)..\..\Bin&quot;&#x0D;&#x0A;"
 			/>
 		</Configuration>
 		<Configuration
@@ -408,7 +407,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				UseLibraryDependencyInputs="true"
-				AdditionalDependencies="JsonCpp.lib comsuppw.lib CrashRpt.lib CxxTest.lib d3d9.lib d3dx9.lib DbgHelp.lib dinput8.lib dxerr.lib dxguid.lib fmodex_vc.lib fmod_event.lib fmod_event_net.lib freetype244MT.lib GlU32.Lib gtrtst32.lib jpeglib.lib Psapi.lib Rpcrt4.lib shlwapi.lib Tamarin.lib version.lib wbemuuid.lib winmm.lib zdll.lib ws2_32.lib ssleay32MT.lib libeay32MT.lib ACE.lib IOTerabit.lib TProactor.lib sakijapi.lib libcurl.lib steam_api.lib CensorDll.lib"
+				AdditionalDependencies=" JsonCpp.lib comsuppw.lib CrashRpt.lib CxxTest.lib d3d9.lib d3dx9.lib DbgHelp.lib dinput8.lib dxerr.lib dxguid.lib fmodex_vc.lib fmod_event.lib fmod_event_net.lib freetype244MT.lib GlU32.Lib gtrtst32.lib jpeglib.lib Psapi.lib Rpcrt4.lib shlwapi.lib Tamarin.lib version.lib wbemuuid.lib winmm.lib zdll.lib ws2_32.lib ssleay32MT.lib libeay32MT.lib ACE.lib IOTerabit.lib TProactor.lib sakijapi.lib libcurl.lib steam_api.lib CensorDll.lib"
 				OutputFile="$(OutDir)\$(ProjectName).exe"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="../../vendor\DirectShow\lib;../../vendor\zlib\lib;../../vendor\DirectX\Lib\x86;../../vendor/jpeglib/lib;../../vendor/freetype/lib;../../vendor/Tamarin/lib/Release;../../vendor/Gl/lib;../../vendor\DirectX\Include;../../vendor\fmod\api\lib;../../vendor\fmod\fmoddesignerapi\api\lib;../../vendor\CxxTest\lib;../../vendor\DTW\lib\i386;../../vendor/CrashRpt/lib;../../vendor\openSSL\lib\static;../../vendor/ACE_wrappers/lib;../../vendor/Terabit/lib;../../vendor/StarForce/StarForce;../../vendor/libcurl/lib/Release;../../Vendor/Steam/1.23a/redistributable_bin;../../Tools/Censor/lib/Release;../../vendor/JsonCpp/lib/Release"
@@ -439,7 +438,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="&quot;$(ProjectDir)..\..\vendor\BuildUtils\CopyReference.exe&quot; $(InputPath) $(ConfigurationName) $(TargetDir)"
+				CommandLine="&quot;$(ProjectDir)..\..\vendor\BuildUtils\CopyReference.exe&quot; $(InputPath) $(ConfigurationName) $(TargetDir)&#x0D;&#x0A;&quot;$(ProjectDir)..\..\copy_to_bin.cmd&quot; $(TargetPath) $(OutDir) $(ProjectDir) &quot;$(ProjectDir)..\..\..\GameDesign\Bin&quot;&#x0D;&#x0A;"
 			/>
 		</Configuration>
 	</Configurations>

@@ -44,7 +44,7 @@ namespace Transport
   }
 
   void ClientTransportSystem2::Login( const Network::NetAddress& _loginServerAddress, const string& _login, const string& _password,
-    const string& _sessionKey, Login::LoginType::Enum _loginType )
+    const string& _sessionKey, Login::LoginType::Enum _loginType, const string& _serverAddress )
   {
     if ( state == LoggingIn || state == ContactingRelay )
       return;

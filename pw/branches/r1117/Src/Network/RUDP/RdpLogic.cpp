@@ -24,7 +24,9 @@ now( _clock->Now() ),
 tempDbgNextDump( 30.0 ),
 tempDbgDgSent( 0 ), tempDbgDgRecv( 0 ), tempDbgWarn( 0 ), tempDbgErr( 0 ), tempDbgRetr( 0 ), tempDbgDelivered( 0 ),
 tempDbgPollHisto( lifehack::EasyVector<double>( 0.0, 1.0, 2.0, 5.0, 10.0, 20.0, 50.0, 100.0, 200.0, 500.0 ) ),
-tempDbgSleepHisto( lifehack::EasyVector<double>( 0.0, 1.0, 2.0, 5.0, 10.0, 20.0, 50.0, 100.0, 200.0, 500.0 ) )
+tempDbgSleepHisto( lifehack::EasyVector<double>( 0.0, 1.0, 2.0, 5.0, 10.0, 20.0, 50.0, 100.0, 200.0, 500.0 ) ),
+failoverActive( false ),
+failoverDone( false )
 {
   globalStats = new RdpStats;
   ctx.options = new RdpOptionsObject( _opt );
@@ -75,6 +77,7 @@ void RdpLogic::Setup( ISocket * _socket, IRdpPacketAllocator * _pktAllocator )
   ephemeralMuxes = new RdpEphemeralMuxes( ctx.options, rnd );
 
   ctx.writer = new RdpWriter( socket, ctx.stats );
+  ctx.logic = this;
 }
 
 
@@ -152,6 +155,40 @@ void RdpLogic::ParallelPoll()
   {
     threading::MutexLock lock( mutex );
     PollConnections();
+
+    // Execute deferred auto-failover after PollConnections (safe to modify map now)
+    if ( failoverDone && failoverActive )
+    {
+      failoverActive = false;  // one-shot
+      const unsigned long newIp = failoverAddr.Address();
+
+      typedef std::vector< std::pair<ConnDescriptor, StrongMT<RdpConnection> > > TToMove;
+      TToMove toMove;
+
+      for ( Connections::iterator it = connections.begin(); it != connections.end(); )
+      {
+        if ( it->first.remote.Address() != newIp )
+        {
+          toMove.push_back( *it );
+          it = connections.erase( it );
+        }
+        else
+          ++it;
+      }
+
+      for ( size_t i = 0; i < toMove.size(); ++i )
+      {
+        NetAddr newRemote = toMove[i].first.remote;
+        newRemote.sin_addr.s_addr = newIp;
+        ConnDescriptor newDescr( newRemote, toMove[i].first.localMux, toMove[i].first.remoteMux );
+        toMove[i].second->ChangeRemoteAddr( newRemote );
+        connections[newDescr] = toMove[i].second;
+      }
+
+      if ( toMove.size() > 0 )
+        WarningTrace( "Auto-failover: migrated %d connections to %s", (int)toMove.size(), failoverAddr );
+    }
+
     PollListenContexts();
   }
 
@@ -552,13 +589,85 @@ RdpConnection * RdpLogic::FindConnNoLock( const ConnDescriptor & _descr ) const
   NI_PROFILE_HEAVY_FUNCTION;
 
   Connections::const_iterator it = connections.find( _descr );
-  if ( it == connections.end() )
+  if ( it != connections.end() )
+    return it->second;
+
+  // Fallback: search by mux pair only (supports failover where remote IP changed)
+  MuxKey key = _descr.GetMuxKey();
+  for ( Connections::const_iterator cit = connections.begin(); cit != connections.end(); ++cit )
   {
-    WarningTrace( "Unknown connection descriptor. local_addr=%s, descr=%s", localAddr, _descr );
-    return 0;
+    if ( cit->first.GetMuxKey() == key )
+      return cit->second;
   }
 
-  return it->second;
+  WarningTrace( "Unknown connection descriptor. local_addr=%s, descr=%s", localAddr, _descr );
+  return 0;
+}
+
+
+
+int RdpLogic::FailoverConnections( const NetAddr & _oldAddr, const NetAddr & _newAddr )
+{
+  threading::MutexLock lock( mutex );
+
+  // Match by IP only (ignore port) — different services use different ports on same server
+  const unsigned long oldIp = _oldAddr.Address();
+  const unsigned long newIp = _newAddr.Address();
+
+  // Collect connections that need re-keying
+  typedef std::vector< std::pair<ConnDescriptor, StrongMT<RdpConnection> > > TToMove;
+  TToMove toMove;
+
+  for ( Connections::iterator it = connections.begin(); it != connections.end(); )
+  {
+    if ( it->first.remote.Address() == oldIp )
+    {
+      toMove.push_back( *it );
+      it = connections.erase( it );
+    }
+    else
+      ++it;
+  }
+
+  // Re-insert with new IP but keep original port
+  for ( size_t i = 0; i < toMove.size(); ++i )
+  {
+    NetAddr newRemote = toMove[i].first.remote;
+    newRemote.sin_addr.s_addr = newIp;
+    ConnDescriptor newDescr( newRemote, toMove[i].first.localMux, toMove[i].first.remoteMux );
+    toMove[i].second->ChangeRemoteAddr( newRemote );
+    connections[newDescr] = toMove[i].second;
+  }
+
+  if ( toMove.size() > 0 )
+    MessageTrace( "Failover: migrated %d connections from IP %s to IP %s", (int)toMove.size(), _oldAddr, _newAddr );
+
+  return (int)toMove.size();
+}
+
+
+
+void RdpLogic::SetFailoverAddr( const NetAddr & _failoverAddr )
+{
+  threading::MutexLock lock( mutex );
+  failoverAddr = _failoverAddr;
+  failoverActive = true;
+  failoverDone = false;
+  MessageTrace( "Failover address set to %s", _failoverAddr );
+}
+
+
+
+bool RdpLogic::TryAutoFailover( const NetAddr & _failingAddr )
+{
+  // Called from retransmit path during PollConnections — can't modify map here
+  // Just set pending flag, actual migration happens after PollConnections completes
+  if ( !failoverActive || failoverDone )
+    return false;
+
+  failoverDone = true;
+  WarningTrace( "Auto-failover pending for %s -> %s", _failingAddr, failoverAddr );
+  return true;
 }
 
 

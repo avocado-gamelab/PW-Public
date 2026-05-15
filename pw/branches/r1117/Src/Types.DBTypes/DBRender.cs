@@ -4355,7 +4355,7 @@ public class DropMaterial : Material
 
 	public AnimatedFloat opacity { get { return _opacity; } set { _opacity.Assign( value ); } }
 
-	[FloatMinMax(0, 1)]
+	[FloatMinMax(0f, 1f)]
 	public float reflectivityLerp { get { return _reflectivityLerp.Get(); } set { _reflectivityLerp.Set( value ); } }
 
 	public float reflectivityAdd { get { return _reflectivityAdd.Get(); } set { _reflectivityAdd.Set( value ); } }

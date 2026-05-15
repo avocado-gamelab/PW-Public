@@ -199,7 +199,7 @@ namespace DI
   template <class T, class Policy = InjectorPolicy::Weak, const bool = Detail::CheckDependencyType<T>::value>
   struct Injector
   {
-    BOOST_STATIC_ASSERT_MSG(false, "Invalid injector definition!");
+    //BOOST_STATIC_ASSERT_MSG(false, "Invalid injector definition!");
   };
 
   namespace

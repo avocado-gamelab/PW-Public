@@ -119,7 +119,8 @@ void VotingForSurrenderLogic::Init( NCore::ETeam::Enum team_, NDb::Ptr<NDb::Voti
   state.Clear();  
   beforeSurrender.Reset();
   votingDuration.Reset();
-  votingCooldown.Start( pDbMission->cooldownAfterStart );
+  // Anticrash hack
+  votingCooldown.Start( 600 /*pDbMission->cooldownAfterStart*/ );
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   
@@ -464,7 +465,8 @@ void VotingForSurrenderLogic::CheckForVotingCompleteImpl()
 
   //Минимальное количество пользователей, которые могут проголосовать против при общем 
   //положительном итоге 
-  const int maxUsersForFightIgnored = pDbMission->maxUsersForFightIgnored;
+  // anticrash hack
+  const int maxUsersForFightIgnored = 1;/*pDbMission->maxUsersForFightIgnored;*/
 
   //Если слишком много пользователей против, то голосование провалено
   if( stat.votesForFight > maxUsersForFightIgnored )

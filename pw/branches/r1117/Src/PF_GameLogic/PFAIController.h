@@ -74,10 +74,15 @@ public:
 
   void CheckWarFront( float timeDelta );
   CVec2 GetRoadPointByOffset( CVec2 const& pos, float offset );
+  void KiteBack();
+  void FleeFromDanger();
   const vector<CVec2>& GetRoad() const { return road; }
   void EscapeFromTower();
   void AttackTower();
   void DoNotAttackTower();
+
+  // Проверка численного превосходства врага
+  bool CheckNumericalSuperiority(float checkRadius);
 
 protected:
   PFAIController() {}
@@ -98,6 +103,8 @@ private:
   EHealPhase healing;
   int        healingTick;
   float      warFrontTimeDist;
+  float      prevHealth;
+  bool       isFleeing;
 
   TalentWrapper GetFirstTalent() { return TalentWrapper( GetHero(), 0, 0 ); }
   TalentWrapper GetLastTalent();

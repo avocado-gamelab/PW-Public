@@ -15,7 +15,7 @@ namespace StatisticService.RPC
     private ISessionWriter writer;
     private ISessionEventWriter eventwriter;
     private IKontagentManager kontagentManager;
-
+    private static RabbitMqPublisher _rabbitMq = new RabbitMqPublisher();
 
     public StatisticClusterWriter(IUnmanagedRpcCallbacks unrpc, ISessionWriter writer, ISessionEventWriter eventwriter, IKontagentManager km)
     {
@@ -23,17 +23,89 @@ namespace StatisticService.RPC
       this.eventwriter = eventwriter;
       this.kontagentManager = km;
 
-      unrpc.Register(new RemoteCallHandler<SessionStartEvent>(LogSessionStart));
-      unrpc.Register(new RemoteCallHandler<SessionResultEvent>(LogSessionResults));
-      unrpc.Register(new RemoteCallHandler<MMakingCanceled>(LogMMakingCancelled));
-      unrpc.Register(new RemoteCallHandler<MMakingGame>(LogMMakingGame));
-      unrpc.Register(new RemoteCallHandler<UserDisconnectEvent>(LogUserDisconnected));
-      unrpc.Register(new RemoteCallHandler<UserStatusEvent>(LogUserStatus));
-      unrpc.Register(new RemoteCallHandler<UserCheatEvent>(LogUserCheated));
-      unrpc.Register(new RemoteCallHandler<ExceedingStepTimeInfoServer>(LogGSLag));
-      unrpc.Register(new RemoteCallHandler<ReconnectAttemptInfo>(LogReconnect));
-      unrpc.Register(new RemoteCallHandler<SessionTrafficInfo>(LogTraffic));
+      unrpc.Register(new RemoteCallHandler<SessionStartEvent>(LogSessionStartAndPublish));
+      unrpc.Register(new RemoteCallHandler<SessionResultEvent>(LogSessionResultsAndPublish));
+      unrpc.Register(new RemoteCallHandler<MMakingCanceled>(LogMMakingCancelledAndPublish));
+      unrpc.Register(new RemoteCallHandler<MMakingGame>(LogMMakingGameAndPublish));
+      unrpc.Register(new RemoteCallHandler<UserDisconnectEvent>(LogUserDisconnectedAndPublish));
+      unrpc.Register(new RemoteCallHandler<UserStatusEvent>(LogUserStatusAndPublish));
+      unrpc.Register(new RemoteCallHandler<UserCheatEvent>(LogUserCheatedAndPublish));
+      unrpc.Register(new RemoteCallHandler<ExceedingStepTimeInfoServer>(LogGSLagAndPublish));
+      unrpc.Register(new RemoteCallHandler<ReconnectAttemptInfo>(LogReconnectAndPublish));
+      unrpc.Register(new RemoteCallHandler<SessionTrafficInfo>(LogTrafficAndPublish));
     }
+
+    /// <summary>
+    /// Publishes event to RabbitMQ. Called from StatisticWriter/StatisticDebugWriter for their events.
+    /// </summary>
+    public static void PublishToRabbitMQ<T>(T info, ICallContext callCtx)
+    {
+      _rabbitMq.Publish(info);
+    }
+
+    // Wrappers: original handler + RabbitMQ publish
+
+    private void LogSessionStartAndPublish(SessionStartEvent info, ICallContext callCtx)
+    {
+      LogSessionStart(info, callCtx);
+      _rabbitMq.Publish(info);
+    }
+
+    private void LogSessionResultsAndPublish(SessionResultEvent info, ICallContext callCtx)
+    {
+      LogSessionResults(info, callCtx);
+      _rabbitMq.Publish(info);
+    }
+
+    private void LogMMakingCancelledAndPublish(MMakingCanceled info, ICallContext callCtx)
+    {
+      LogMMakingCancelled(info, callCtx);
+      _rabbitMq.Publish(info);
+    }
+
+    private void LogMMakingGameAndPublish(MMakingGame game, ICallContext callCtx)
+    {
+      LogMMakingGame(game, callCtx);
+      _rabbitMq.Publish(game);
+    }
+
+    private void LogUserDisconnectedAndPublish(UserDisconnectEvent evt, ICallContext callCtx)
+    {
+      LogUserDisconnected(evt, callCtx);
+      _rabbitMq.Publish(evt);
+    }
+
+    private void LogUserStatusAndPublish(UserStatusEvent evt, ICallContext callCtx)
+    {
+      LogUserStatus(evt, callCtx);
+      _rabbitMq.Publish(evt);
+    }
+
+    private void LogUserCheatedAndPublish(UserCheatEvent evt, ICallContext callCtx)
+    {
+      LogUserCheated(evt, callCtx);
+      _rabbitMq.Publish(evt);
+    }
+
+    private void LogGSLagAndPublish(ExceedingStepTimeInfoServer info, ICallContext callCtx)
+    {
+      LogGSLag(info, callCtx);
+      _rabbitMq.Publish(info);
+    }
+
+    private void LogReconnectAndPublish(ReconnectAttemptInfo info, ICallContext callCtx)
+    {
+      LogReconnect(info, callCtx);
+      _rabbitMq.Publish(info);
+    }
+
+    private void LogTrafficAndPublish(SessionTrafficInfo info, ICallContext callCtx)
+    {
+      LogTraffic(info, callCtx);
+      _rabbitMq.Publish(info);
+    }
+
+    // Original handlers
 
     //remote
     public void LogSessionStart(SessionStartEvent info, ICallContext callCtx)

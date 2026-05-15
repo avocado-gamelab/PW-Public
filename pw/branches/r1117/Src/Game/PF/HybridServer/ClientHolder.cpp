@@ -59,7 +59,6 @@ Clients::~Clients()
     mcChannelWrapper->Close();
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ClientHolder* Clients::WaitClient( uint clientId, bool isSpectator, const wstring& nickname )
 {
   ClientHolder* newClient = new ClientHolder;
@@ -69,7 +68,6 @@ ClientHolder* Clients::WaitClient( uint clientId, bool isSpectator, const wstrin
   return newClient;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int Clients::GetReadyCount() const
 {
   int result = 0;
@@ -83,7 +81,6 @@ int Clients::GetReadyCount() const
   return result;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int Clients::GetLoadingCount() const
 {
   int result = 0;
@@ -100,7 +97,6 @@ int Clients::GetLoadingCount() const
   return result;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::CheckStatuses(bool calculateGap, nstl::vector<int>& clientIndices, nstl::vector<Peered::BriefClientInfo>& clientInfos, Peered::IWorld* world)
 {
   int currentStep = GetPendingStep();
@@ -243,7 +239,6 @@ void Clients::CheckStatuses(bool calculateGap, nstl::vector<int>& clientIndices,
     }
   }
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ClientContainer::iterator Clients::_RemoveClient( ClientContainer::iterator it, Peered::IWorld* world, nstl::vector<Peered::BriefClientInfo> &clientInfos, nstl::vector<int> &clientIndices, Peered::Status status, Peered::EDisconnectReason::Enum reason )
 {
   ClientHolder* client = it->second;
@@ -252,7 +247,6 @@ ClientContainer::iterator Clients::_RemoveClient( ClientContainer::iterator it, 
   clientIndices.push_back(client->clientIndex);
   return result;
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ClientContainer::iterator Clients::_DisconnectClient( ClientContainer::iterator it, Peered::Status status, Peered::EDisconnectReason::Enum reason /*= Peered::EDisconnectReason::None*/ )
 {
   //Debugging NUM_TASK
@@ -288,7 +282,6 @@ ClientContainer::iterator Clients::_DisconnectClient( ClientContainer::iterator 
 
   return clients.erase(it);
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool Clients::RemoveWaitClient( uint clientId )
 {
   ClientContainer::iterator it = _FindWaitClient(clientId);
@@ -301,7 +294,6 @@ bool Clients::RemoveWaitClient( uint clientId )
   return false;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool Clients::DisconnectClient(uint clientIndex, Peered::Status status /*= Peered::DisconnectedByServer*/, Peered::EDisconnectReason::Enum reason /*= Peered::EDisconnectReason::None*/)
 {
   ClientContainer::iterator it = clients.find(clientIndex);
@@ -315,7 +307,6 @@ bool Clients::DisconnectClient(uint clientIndex, Peered::Status status /*= Peere
   return false;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool Clients::DisconnectClients(const nstl::vector<int>& clientIndexes, Peered::Status status /*= Peered::DisconnectedByServer*/, Peered::EDisconnectReason::Enum reason /*= Peered::EDisconnectReason::None*/)
 {
   bool retVal = true;
@@ -329,19 +320,16 @@ bool Clients::DisconnectClients(const nstl::vector<int>& clientIndexes, Peered::
   return retVal;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ClientContainer::iterator Clients::_FindWaitClient(uint clientId)
 {
   return passiveClients.find(clientId);
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool Clients::IsClientDisconnected(int clientIndex)
 {
   ClientHolder* client = GetDisconnectedClient(clientIndex);
   return client;
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ClientHolder* Clients::GetDisconnectedClient(int clientIndex)
 {
   for (ClientContainer::iterator it = passiveClients.begin();it!=passiveClients.end();++it)
@@ -354,7 +342,6 @@ ClientHolder* Clients::GetDisconnectedClient(int clientIndex)
   return 0;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ClientHolder& Clients::AddClient(uint clientId, Login::ClientVersion _clientVersion, IGameClient* _client)
 {
   ClientHolder* result = 0;
@@ -414,7 +401,6 @@ ClientHolder& Clients::AddClient(uint clientId, Login::ClientVersion _clientVers
   return *result;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ClientHolder * Clients::AddClientFast(uint clientId, int clientIndex, IGameClient* _client, int fromStep)
 {
   bool needRestore = false;
@@ -507,14 +493,12 @@ ClientHolder * Clients::AddClientFast(uint clientId, int clientIndex, IGameClien
   return client;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool Clients::AddClientToMcChannel(ClientHolder & client)
 {
   client.SetStepSendType(UNICAST);
   return mcChannelWrapper->AddClient(client.GetClient(), client.GetClientId(), client.clientIndex);
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::AddSpectator( uint clientId, const wstring& nickname )
 {
   ClientList::iterator itSpectator = spectators.find(clientId);
@@ -544,7 +528,6 @@ void Clients::AddSpectator( uint clientId, const wstring& nickname )
   OnRejoinClient(clientId);
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::AddCommand(ClientHolder & client, const rpc::MemoryBlock& info, bool isPlayerCommand)
 {
   commands.Append(info.memory, info.size);
@@ -556,7 +539,6 @@ void Clients::AddCommand(ClientHolder & client, const rpc::MemoryBlock& info, bo
   trafficStatistics->AddInTrafficSize(info.size);
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const char* Clients::GetStatus(Clients::Status status)
 {
   switch (status)
@@ -573,7 +555,6 @@ const char* Clients::GetStatus(Clients::Status status)
   return "<Unknown>";
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool Clients::CheckSnapshots(int clientIndex)
 {
   bool result = false; 
@@ -589,7 +570,6 @@ bool Clients::CheckSnapshots(int clientIndex)
   return result;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool Clients::CheckSnapshots(nstl::vector<int>& clientIndexes)
 {
   bool result = false; 
@@ -605,7 +585,6 @@ bool Clients::CheckSnapshots(nstl::vector<int>& clientIndexes)
   return result;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::AddClientToSnapshots(int clientIndex, int fromStep, bool isReserved /*= false*/)
 {
   for (int i=0; i < snapshots.size(); ++i)
@@ -617,7 +596,6 @@ void Clients::AddClientToSnapshots(int clientIndex, int fromStep, bool isReserve
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::RemoveClientFromSnapshots(int clientIndex, int toStep, bool unreserve /*= false*/)
 {
   bool complete = false;
@@ -646,7 +624,6 @@ void Clients::RemoveClientFromSnapshots(int clientIndex, int toStep, bool unrese
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const char* Clients::GetClientStatus(Peered::Status status)
 {
   switch (status)
@@ -668,7 +645,6 @@ const char* Clients::GetClientStatus(Peered::Status status)
 }
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool Clients::DisconnectRejoiningClient(int clientIndex, Peered::EDisconnectReason::Enum reason, bool checkSnapshots /*= true*/)
 {
   if (RemoveRejoinClient(clientIndex)) // disconnect only if it was really in the rejoiners list
@@ -706,7 +682,6 @@ bool Clients::DisconnectRejoiningClient(int clientIndex, Peered::EDisconnectReas
   return false;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::DisconnectRejoiningClients(Peered::EDisconnectReason::Enum reason, bool checkSnapshots /*= true*/)
 {
   if (GetRejoinCount() == 0)
@@ -722,7 +697,6 @@ void Clients::DisconnectRejoiningClients(Peered::EDisconnectReason::Enum reason,
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::LogReconnectResult(int clientId, EReconnectType::Enum reconnectType, EReconnectResult::Enum reconnectResult)
 {
   if (statisticsWrapper)
@@ -739,7 +713,6 @@ void Clients::LogReconnectResult(int clientId, EReconnectType::Enum reconnectTyp
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::LogClientStatus(const Peered::BriefClientInfo & info,
                               Peered::EDisconnectReason::Enum reason /*= Peered::EDisconnectReason::None*/)
 {
@@ -756,7 +729,6 @@ void Clients::LogClientStatus(const Peered::BriefClientInfo & info,
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::UpdateCommands(bool stepped)
 {
   NI_PROFILE_BLOCK( "Sending step commands" );
@@ -767,7 +739,6 @@ void Clients::UpdateCommands(bool stepped)
   trafficStatistics->FinishOutTrafficFrame();
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::UpdateCommands(bool stepped, ClientHolder & holder)
 {
   if (!holder.IsAsynced()
@@ -814,7 +785,6 @@ void Clients::UpdateCommands(bool stepped, ClientHolder & holder)
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::SendStep(bool stepped)
 {
   if (!data.sessionSettings.multicastStepsEnabled)
@@ -910,7 +880,6 @@ void Clients::SendStep(bool stepped)
   trafficStatistics->FinishOutTrafficFrame();
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::UpdateCommandsBlocked()
 {
   for (ClientContainer::iterator it = clients.begin(); it != clients.end(); ++it)
@@ -920,7 +889,6 @@ void Clients::UpdateCommandsBlocked()
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool Clients::IsAllClientsFinished() const
 {
   for (ClientContainer::iterator it = clients.begin(); it != clients.end(); ++it)
@@ -936,7 +904,6 @@ bool Clients::IsAllClientsFinished() const
   return true;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::LogFinishResults(const ResultsData & results, int number, int count) const
 {
   // This is kind of debug log, which should be removed or commented after NUM_TASK is fixed
@@ -961,7 +928,6 @@ void Clients::LogFinishResults(const ResultsData & results, int number, int coun
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const StatisticService::RPC::SessionClientResults * Clients::GetFinishResults()
 {
   nstl::list<ResultsData> results;
@@ -1066,7 +1032,6 @@ const StatisticService::RPC::SessionClientResults * Clients::GetFinishResults()
   return bestResults->results;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 uint Clients::FillClientStatistics(nstl::vector<Peered::SClientStatistics> & clientsStatistics)
 {
   float stepsPerSecond = 1000.0f / data.sessionSettings.simulationStep;
@@ -1117,7 +1082,6 @@ uint Clients::FillClientStatistics(nstl::vector<Peered::SClientStatistics> & cli
 
   return GetPendingStep()/stepsPerSecond;
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::UpdateClientCommands( ClientHolder& holder, bool stepped, int lastStep )
 {
   if ((data.sessionSettings.confirmFrequency == 0) || holder.IsReadyToGo(data.sessionSettings.trustGap * data.sessionSettings.confirmFrequency))
@@ -1142,7 +1106,6 @@ void Clients::UpdateClientCommands( ClientHolder& holder, bool stepped, int last
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Fills game results with default info:
 // - victoriousFaction is None;
 // - user statistics contains only IDs and "leaver" flag, while the rest is by default 0.
@@ -1168,7 +1131,6 @@ void Clients::FillDefaultGameResults(StatisticService::RPC::SessionClientResults
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool Clients::OnRejoinClient(uint clientId)
 {
   ClientContainer::iterator it = _FindWaitClient(clientId);
@@ -1203,7 +1165,6 @@ bool Clients::OnRejoinClient(uint clientId)
   return false;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool Clients::OnGameLeave(int clientIndex, Peered::IWorld* world)
 {
   ClientContainer::iterator it = clients.find(clientIndex);
@@ -1233,7 +1194,6 @@ bool Clients::OnGameLeave(int clientIndex, Peered::IWorld* world)
   return true;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::SendCrcData(int clientIndex, int step, const rpc::MemoryBlock& crcData)
 {
   ClientContainer::iterator it = clients.find(clientIndex);
@@ -1289,7 +1249,6 @@ void Clients::SendCrcData(int clientIndex, int step, const rpc::MemoryBlock& crc
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::CheckCrcDataRequestsTimeOut()
 {
   if (asyncData.clientsForCrcRequest.size() > 0 && data.sessionSettings.crcDataRequestsTimeout > 0)
@@ -1305,7 +1264,6 @@ void Clients::CheckCrcDataRequestsTimeOut()
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::CancelCrcDataRequests()
 {
   for (list<int>::iterator itClientIndex = asyncData.clientsForCrcRequest.begin(); 
@@ -1329,7 +1287,6 @@ void Clients::CancelCrcDataRequests()
   asyncData.clientsForCrcRequest.clear();
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::OnDisconnectAck(int clientIndex)
 {
   if (ClientHolder * client = GetPassiveClientByIndex(clientIndex))
@@ -1346,7 +1303,6 @@ void Clients::OnDisconnectAck(int clientIndex)
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::DispatchPlaySameTeamDecision(int clientIndex, const bool agreed)
 {
   ClientHolder* const sender = GetClient(clientIndex);
@@ -1375,7 +1331,6 @@ void Clients::DispatchPlaySameTeamDecision(int clientIndex, const bool agreed)
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::DispatchBadBehaviourComplaint(int clientIndex, const Transport::TClientId reportedClientId, const int reportItemId)
 {
   ClientHolder* const sender = GetClient(clientIndex);
@@ -1404,7 +1359,6 @@ void Clients::DispatchBadBehaviourComplaint(int clientIndex, const Transport::TC
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::AwardClients(const TUserAwards & awards)
 {
   for (ClientContainer::iterator it = clients.begin(); it != clients.end(); ++it)
@@ -1422,7 +1376,6 @@ void Clients::AwardClients(const TUserAwards & awards)
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::OnFirstConnectionTimeout()
 {
   statusChanges.clear();
@@ -1443,19 +1396,16 @@ void Clients::OnFirstConnectionTimeout()
   firstConnectionTimeOutSent = true;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::AddClientToProtectionRecords(const int clientIndex, const int fromStep, const bool reserved /*= false*/)
 {
   _protection.AddClient(clientIndex, fromStep, reserved);
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::RemoveClientFromProtectionRecords(const int clientIndex, const int toStep, const bool unreserve /*= false*/)
 {
   _protection.RemoveClient(clientIndex, toStep, unreserve);
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::RemoveClientFromProtectionRecords(const int clientIndex)
 {
   const Protection::StepRecordVector& records = _protection.GetStepRecords();
@@ -1470,7 +1420,6 @@ void Clients::RemoveClientFromProtectionRecords(const int clientIndex)
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::UpdateProtection()
 {
   if (data.sessionSettings.pmConfirmFrequency <= 0)
@@ -1492,7 +1441,6 @@ void Clients::UpdateProtection()
   CheckProtectionMagicConfirmation();
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::UpdateProtectionRecords()
 {
   const Protection::StepRecordVector& records = _protection.GetStepRecords();
@@ -1580,7 +1528,6 @@ void Clients::UpdateProtectionRecords()
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::UpdateProtectionAsyncRecords()
 {
   const Protection::StepRecordVector& records = _protection.GetStepRecords();
@@ -1602,7 +1549,6 @@ void Clients::UpdateProtectionAsyncRecords()
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int Clients::_GenerateIndex()
 {
   ++clientIndex;
@@ -1617,7 +1563,6 @@ int Clients::_GenerateIndex()
   return newIndex % INDEX_STEP + clientIndex * INDEX_STEP;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::MakeStep()
 {
   commands.FinishStep();
@@ -1625,7 +1570,6 @@ void Clients::MakeStep()
   ResetCommandsSizeInfo();
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::EraseSteps(int endStep)
 {
   if (endStep > commands.GetStartStep())
@@ -1636,7 +1580,6 @@ void Clients::EraseSteps(int endStep)
   commands.EraseSteps(endStep);
   statuses.EraseSteps(endStep);
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::DisconnectAllClients(Peered::EDisconnectReason::Enum reason /*= Peered::EDisconnectReason::None*/)
 {
   while (clients.size() > 0)
@@ -1646,7 +1589,6 @@ void Clients::DisconnectAllClients(Peered::EDisconnectReason::Enum reason /*= Pe
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::SendWorldDataInfo(int clientIndex, const WorldDataInfo& _worldDataInfo)
 {
   ClientHolder* client = GetClient(clientIndex);
@@ -1705,7 +1647,6 @@ void Clients::SendWorldDataInfo(int clientIndex, const WorldDataInfo& _worldData
   SendAllClientsStatuses();
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::SendWorldDataPart(int clientIndex, const rpc::MemoryBlock& worldDataPart)
 {
   trafficStatistics->AddInReconnectTrafficSize(worldDataPart.size);
@@ -1755,12 +1696,10 @@ void Clients::SendWorldDataPart(int clientIndex, const rpc::MemoryBlock& worldDa
       "GameServer: SendWorldDataPart: World data parts completed (sid=%016x cid=%d cidx=%d partsCount=%d)", 
         data.serverId, client->GetClientId(), clientIndex, worldDataInfo.partsCount );
 
-    // Send world data to all rejoiners, which already requested it
-    _SendWorldData(snapshot);
+    _SchedulePendingWorldData(snapshot);
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::SetGameClientReconnect(int clientIndex, Peered::IGameClientReconnect * gameClientReconnect)
 {
   RejoinerData * rejoinerData = GetRejoinerData(clientIndex);
@@ -1778,7 +1717,6 @@ void Clients::SetGameClientReconnect(int clientIndex, Peered::IGameClientReconne
   rejoinerData->SetGameClientReconnect(gameClientReconnect);
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::OnGameCheated(uint clientId, uint clientIndex, lobby::ECheatType::Enum cheatType /*= lobby::ECheatType::None*/)
 {
   localLog(logStream, NLogg::LEVEL_WARNING).Trace(
@@ -1803,7 +1741,6 @@ void Clients::OnGameCheated(uint clientId, uint clientIndex, lobby::ECheatType::
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::DumpSteps(int endStep)
 {
   int steps = endStep-commands.GetStartStep();
@@ -1815,7 +1752,6 @@ void Clients::DumpSteps(int endStep)
   dumpStepsCount = 0;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::CheckAsyncSnapshots()
 {
   bool allDisconnected = false;
@@ -1873,7 +1809,6 @@ void Clients::CheckAsyncSnapshots()
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool Clients::CheckAsyncSnapshot(WorldSnapshot * snapshot, const nstl::vector<AsyncInfo> & asyncInfo)
 {
   bool allDisconnected = false;
@@ -1952,7 +1887,6 @@ bool Clients::CheckAsyncSnapshot(WorldSnapshot * snapshot, const nstl::vector<As
   return allDisconnected;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::RequestCrcData()
 {
   list<int>::iterator it =  asyncData.clientsForCrcRequest.begin();
@@ -1967,7 +1901,6 @@ void Clients::RequestCrcData()
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::RequestCrcDataFromClient(int clientIndex, bool isAsync)
 {
   ClientContainer::iterator itClient = clients.find(clientIndex);
@@ -1982,7 +1915,6 @@ void Clients::RequestCrcDataFromClient(int clientIndex, bool isAsync)
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::UpdateSnapshots()
 {
   if (snapshots.size() == 0)
@@ -2085,7 +2017,6 @@ void Clients::UpdateSnapshots()
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 WorldSnapshot* Clients::GetWorldSnapshot(int step)
 {
   for (WorldSnapshotContainer::iterator it=snapshots.begin();it!=snapshots.end();++it)
@@ -2098,7 +2029,6 @@ WorldSnapshot* Clients::GetWorldSnapshot(int step)
   return 0;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::CheckSnapshotAllocated(int step)
 {
   struct Local
@@ -2144,7 +2074,6 @@ void Clients::CheckSnapshotAllocated(int step)
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::AllocateSnapshot(int _step, CrcStatuses::Status _status)
 {
   WorldSnapshot* snapshot;
@@ -2171,7 +2100,6 @@ void Clients::AllocateSnapshot(int _step, CrcStatuses::Status _status)
   snapshots.push_back(snapshot);
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::DeallocateSnapshots( int _index)
 {
   for (int i=0;i<_index;++i)
@@ -2195,7 +2123,6 @@ namespace
   };
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::DeleteSnapshots(WorldSnapshotContainer& _container)
 {
   nstl::for_each(_container.begin(), _container.end(), Deleter());
@@ -2203,7 +2130,6 @@ void Clients::DeleteSnapshots(WorldSnapshotContainer& _container)
   _container.clear();
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::UpdateStatusChanges()
 {
   NI_PROFILE_BLOCK( "Client status changes" );
@@ -2248,7 +2174,6 @@ void Clients::UpdateStatusChanges()
   OnChangeClientStatus(statusChanges);
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int Clients::CheckClients(Peered::ICommandsHandler* handler, Peered::IWorld* world)
 {
   CheckStatuses((GetStatus() == Clients::Started), statusChangesIndices, statusChanges, world);
@@ -2276,7 +2201,6 @@ int Clients::CheckClients(Peered::ICommandsHandler* handler, Peered::IWorld* wor
   return clients.size();
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::CheckPassiveClients()
 {
   
@@ -2314,7 +2238,6 @@ void Clients::CheckPassiveClients()
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::CheckProtectionMagicDelays()
 {
   if (data.sessionSettings.pmDelayGap <= 0)
@@ -2362,7 +2285,6 @@ void Clients::CheckProtectionMagicDelays()
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::CheckProtectionMagicConfirmation()
 {
   if (data.sessionSettings.pmTrustGap <= 0)
@@ -2439,7 +2361,6 @@ void Clients::ProcessPendingProtectionMagic()
   _pendingMagic.clear();
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int Clients::_RequestWorldData()
 {
   if (!gameServerReconnect)
@@ -2487,7 +2408,6 @@ int Clients::_RequestWorldData()
   return clientIndex;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::_SendWorldData(WorldSnapshot* snapshot)
 {
   list<int> disconnectClients;
@@ -2544,7 +2464,167 @@ void Clients::_SendWorldData(WorldSnapshot* snapshot)
   trafficStatistics->FinishOutReconnectTrafficFrame();
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void Clients::_SchedulePendingWorldData(WorldSnapshot* snapshot)
+{
+  if (_pendingSnapshotSend.active)
+  {
+    localLog(logStream, NLogg::LEVEL_WARNING).Trace(
+      "GameServer: _SchedulePendingWorldData: pending send is already active, overwriting (sid=%016x)",
+      data.serverId);
+  }
+
+  _pendingSnapshotSend.active = true;
+  _pendingSnapshotSend.snapshot = snapshot;
+  _pendingSnapshotSend.info = worldDataInfo;
+  _pendingSnapshotSend.rejoiners.clear();
+
+  for (RejoinersData::iterator it = rejoinClients.begin(); it != rejoinClients.end(); ++it)
+  {
+    ClientHolder* client = GetClient(it->first);
+    if (!client || !it->second.IsWorldRequested() || it->second.IsWorldApplied())
+      continue;
+    if (!it->second.GetGameClientReconnect())
+    {
+      localLog(logStream, NLogg::LEVEL_WARNING).Trace(
+        "GameServer: _SchedulePendingWorldData: client reconnect iface isn't set, skipping (sid=%016x cid=%d cidx=%d)",
+        data.serverId, client->GetClientId(), it->first);
+      LogReconnectResult(it->second.GetClientId(), EReconnectType::Normal, EReconnectResult::NoReconnectIface);
+      DisconnectRejoiningClient(it->first, Peered::EDisconnectReason::ServerError);
+      continue;
+    }
+    PendingRejoiner pr;
+    pr.clientIndex = it->first;
+    _pendingSnapshotSend.rejoiners.push_back(pr);
+  }
+
+  if (_pendingSnapshotSend.rejoiners.empty())
+  {
+    _pendingSnapshotSend.active = false;
+    _pendingSnapshotSend.snapshot = 0;
+    _InitRejoinData();
+    trafficStatistics->FinishOutReconnectTrafficFrame();
+    return;
+  }
+
+  localLog(logStream, NLogg::LEVEL_MESSAGE).Trace(
+    "[THROTTLE] _SchedulePendingWorldData: scheduled (sid=%016x rejoiners=%d step=%d parts=%d budget=4/step)",
+    data.serverId, (int)_pendingSnapshotSend.rejoiners.size(),
+    _pendingSnapshotSend.info.step, _pendingSnapshotSend.info.partsCount);
+}
+
+void Clients::_FinalizePendingRejoiner(int clientIndex, WorldSnapshot* snapshot)
+{
+  RejoinerData* rejoinerData = GetRejoinerData(clientIndex);
+  if (!rejoinerData)
+    return;
+  ClientHolder* client = GetClient(clientIndex);
+  if (!client)
+    return;
+
+  client->SetSnapshotApplyTimeoutStep(0);
+  rejoinerData->SetWorldAppliedStep(_pendingSnapshotSend.info.step);
+
+  const int nextProtectionMagicConfirmationStep =
+    GetNextConfirmationStep(_pendingSnapshotSend.info.step, data.sessionSettings.pmConfirmFrequency)
+    + data.sessionSettings.pmConfirmFrequency;
+
+  RemoveClientFromSnapshots(clientIndex, _pendingSnapshotSend.info.step, true);
+  RemoveClientFromProtectionRecords(clientIndex, nextProtectionMagicConfirmationStep, true);
+
+  localLog(logStream, NLogg::LEVEL_MESSAGE).Trace(
+    "[THROTTLE] _FinalizePendingRejoiner: rejoiner DONE (sid=%016x cid=%d cidx=%d dataStep=%d partsCount=%d)",
+    data.serverId, client->GetClientId(), clientIndex,
+    _pendingSnapshotSend.info.step, _pendingSnapshotSend.info.partsCount);
+}
+
+void Clients::PumpPendingWorldData(int chunksBudget)
+{
+  if (!_pendingSnapshotSend.active || !_pendingSnapshotSend.snapshot)
+    return;
+
+  WorldSnapshot* const snapshot = _pendingSnapshotSend.snapshot;
+  const int totalParts = _pendingSnapshotSend.info.partsCount;
+  bool allDone = true;
+  int chunksSentThisStep = 0;
+  int rejoinersAdvanced = 0;
+
+  for (size_t i = 0; i < _pendingSnapshotSend.rejoiners.size(); ++i)
+  {
+    PendingRejoiner& pr = _pendingSnapshotSend.rejoiners[i];
+    if (pr.finalized)
+      continue;
+
+    RejoinerData* rejoinerData = GetRejoinerData(pr.clientIndex);
+    ClientHolder* client = GetClient(pr.clientIndex);
+    if (!rejoinerData || !client || !rejoinerData->GetGameClientReconnect())
+    {
+      localLog(logStream, NLogg::LEVEL_MESSAGE).Trace(
+        "[THROTTLE] PumpPendingWorldData: rejoiner dropped mid-transfer (sid=%016x cidx=%d cursor=%d/%d)",
+        data.serverId, pr.clientIndex, pr.cursor, totalParts);
+      pr.finalized = true; // считаем dropped, дальше не работаем с ним
+      continue;
+    }
+    Peered::IGameClientReconnect* gameClientReconnect = rejoinerData->GetGameClientReconnect();
+
+    if (!pr.initSent)
+    {
+      gameClientReconnect->ApplyWorldDataInfo(_pendingSnapshotSend.info);
+      client->Rewind(_pendingSnapshotSend.info.step, data.sessionSettings.confirmFrequency);
+      client->nextStep = _pendingSnapshotSend.info.step + 1;
+      pr.initSent = true;
+      localLog(logStream, NLogg::LEVEL_MESSAGE).Trace(
+        "[THROTTLE] PumpPendingWorldData: init sent (sid=%016x cid=%d cidx=%d step=%d)",
+        data.serverId, client->GetClientId(), pr.clientIndex, _pendingSnapshotSend.info.step);
+    }
+
+    const int cursorBefore = pr.cursor;
+    int budget = chunksBudget;
+    while (budget > 0 && pr.cursor < totalParts)
+    {
+      rpc::MemoryBlock& dataPart = snapshot->GetWorldDataPart(pr.cursor);
+      gameClientReconnect->ApplyWorldDataPart(dataPart);
+      trafficStatistics->AddOutReconnectTrafficSize(dataPart.size);
+      ++pr.cursor;
+      --budget;
+    }
+    const int sent = pr.cursor - cursorBefore;
+    if (sent > 0)
+    {
+      ++rejoinersAdvanced;
+      chunksSentThisStep += sent;
+    }
+
+    if (pr.cursor >= totalParts)
+    {
+      _FinalizePendingRejoiner(pr.clientIndex, snapshot);
+      pr.finalized = true;
+    }
+    else
+    {
+      allDone = false;
+    }
+  }
+
+  if (chunksSentThisStep > 0)
+  {
+    localLog(logStream, NLogg::LEVEL_MESSAGE).Trace(
+      "[THROTTLE] PumpPendingWorldData: tick — sent %d chunks across %d rejoiner(s) (sid=%016x budget/step=%d)",
+      chunksSentThisStep, rejoinersAdvanced, data.serverId, chunksBudget);
+  }
+
+  if (allDone)
+  {
+    localLog(logStream, NLogg::LEVEL_MESSAGE).Trace(
+      "[THROTTLE] PumpPendingWorldData: ALL DONE — pending state cleared (sid=%016x)",
+      data.serverId);
+    _pendingSnapshotSend.active = false;
+    _pendingSnapshotSend.snapshot = 0;
+    _pendingSnapshotSend.rejoiners.clear();
+    _InitRejoinData();
+    trafficStatistics->FinishOutReconnectTrafficFrame();
+  }
+}
+
 void Clients::_WorldDataRequestTimeOut()
 {
   uint clientId = 0;
@@ -2576,7 +2656,6 @@ void Clients::_WorldDataRequestTimeOut()
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::AllocateProtectionRecord(const int step)
 {
   Protection::StepRecord* const record = _protection.AllocateStepRecord(step);
@@ -2600,13 +2679,11 @@ void Clients::AllocateProtectionRecord(const int step)
   record->Update();
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::DeallocateProtectionRecords(const int count)
 {
   _protection.DeallocateStepRecords(count);
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::DispatchProtectionAsyncRecord(Protection::StepRecord* const record)
 {
   record->NotifyAsyncInfoSent();
@@ -2709,7 +2786,6 @@ void Clients::ProcessMagicRecord(const Protection::MagicRecord& magicRecord)
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::OnChangeClientStatus(const nstl::vector<Peered::BriefClientInfo>& clientInfos, bool sendOnHybridLink /*= true*/, bool sendToClients /*= true*/)
 {
   if (sendOnHybridLink && statsLink)
@@ -2729,7 +2805,6 @@ void Clients::OnChangeClientStatus(const nstl::vector<Peered::BriefClientInfo>& 
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::StartGame(int forcedStartTimerValue)
 {
   if (forcedStartTimerValue > 0)
@@ -2779,7 +2854,6 @@ void Clients::StartGame(int forcedStartTimerValue)
   SendAllClientsStatuses();
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Clients::_InitRejoinData()
 {
   worldDataInfo.clear();

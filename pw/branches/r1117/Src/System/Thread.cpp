@@ -94,7 +94,7 @@ void Thread::Stop( bool waitForStop, int timeoutInMs )
 {
   if( !externalHandle )
     return;
-  
+
   DebugTrace( "Stopping thread. tid=%d, from_tid=%d, ptr=%08x", threadID, CurrentThreadID(), (void*)this );
 
   isRunning = false;

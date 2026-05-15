@@ -62,12 +62,12 @@ void LoadingFlashInterface::SetPlayersFaction( NDb::EFaction leftFaction, NDb::E
 }
 
 //IgnoreList
-void LoadingFlashInterface::IgnoreUser( const int playerId )
+void LoadingFlashInterface::IgnoreUser(const int playerId)
 {
   CallMethod("IgnoreUser", playerId);
 }
 
-void LoadingFlashInterface::RemoveIgnore( const int playerId )
+void LoadingFlashInterface::RemoveIgnore(const int playerId)
 {
   CallMethod("RemoveIgnore", playerId);
 }

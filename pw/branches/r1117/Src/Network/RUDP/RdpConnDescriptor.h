@@ -6,6 +6,29 @@
 namespace ni_udp
 {
 
+struct MuxKey
+{
+  unsigned localMux;
+  unsigned remoteMux;
+
+  MuxKey( unsigned _localMux, unsigned _remoteMux ) :
+  localMux( _localMux ), remoteMux( _remoteMux )
+  {}
+
+  bool operator < ( const MuxKey & other ) const
+  {
+    if ( remoteMux != other.remoteMux )
+      return remoteMux < other.remoteMux;
+    return localMux < other.localMux;
+  }
+
+  bool operator == ( const MuxKey & other ) const
+  {
+    return ( localMux == other.localMux ) && ( remoteMux == other.remoteMux );
+  }
+};
+
+
 struct ConnDescriptor
 {
   NetAddr   remote;
@@ -15,6 +38,8 @@ struct ConnDescriptor
   ConnDescriptor( const NetAddr & _remoteAddr, unsigned _localMux, unsigned _remoteMux ) :
   remote( _remoteAddr ), localMux( _localMux ), remoteMux( _remoteMux )
   {}
+
+  MuxKey GetMuxKey() const { return MuxKey( localMux, remoteMux ); }
 
   bool operator < ( const ConnDescriptor & other ) const
   {

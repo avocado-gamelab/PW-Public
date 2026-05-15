@@ -8,12 +8,13 @@ enum EMultiSampleType
 	MULTISAMPLE_NONE = 0,
 };
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Параметры режима рендеринга
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 struct RenderMode
 {
 	EMultiSampleType multiSampleType;
 	unsigned int multiSampleQuality;
 	bool isFullScreen;
+	bool isBorderless;
 	unsigned int width;
 	unsigned int height;
   unsigned int width3D;

@@ -20,6 +20,8 @@
 // использовании указателей на forward declared classes
 // * нельз€ переопредел€ть operator new, так как удал€тс€ объекты будут с помощью
 // стандартного operator`a delete (из-за delete this)
+//
+// —м. http://confluence.nivalnetwork.com/confluence/display/prog/Smart+Pointers
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #ifndef NI_PLATF_LINUX
 #pragma warning(disable:4250)
@@ -124,6 +126,8 @@ class BinChunkSaver;
 /// ¬ объ€влении финального класса надо указать макрос OBJECT_BASIC_METHODS( <classname> ), 
 /// либо OBJECT_METHODS( <TypeID>, <className> ): в них реализованы абстрактные методы, 
 /// объ€вленные в IObjectBase.
+/// 
+/// —м. http://confluence.nivalnetwork.com/confluence/display/prog/Smart+Pointers
 class CObjectBase : public IObjectBase
 {
 	// delete this object
@@ -270,7 +274,7 @@ template<class T> inline const CObjectBase *CastToObjectBase( const T *p ) { ret
 template<class T> inline T *CastToUserObject( CObjectBase *p, T *pu ) { return CastToUserObjectImpl( p, pu, pu ); }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//FIXME: Removing ability to use IsValid() on forward declared pointers for NUM_TASK/NUM_TASK
+//FIXME: Removing ability to use IsValid() on forward declared pointers for PF-20592/PF-22701
 //template<class T> inline bool IsValid( T *p ) { return p != 0 && p != GetInvalid<T>() && !CastToObjectBase( p )->IsInvalidRef(); }
 inline bool IsValid( IObjectBase *p ) { return p != 0 && !CastToObjectBase( p )->IsInvalidRef(); }
 inline bool IsValid( const IObjectBase *p ) { return p != 0 && !CastToObjectBase( p )->IsInvalidRef(); }

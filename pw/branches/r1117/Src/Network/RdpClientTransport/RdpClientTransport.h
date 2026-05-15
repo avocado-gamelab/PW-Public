@@ -32,7 +32,7 @@ public:
   virtual StrongMT<Transport::IChannel> OpenChannel( Transport::TServiceId interfaceId, unsigned int pingperiod, unsigned int to );
   virtual void GetNewAcceptedChannels(vector<StrongMT<Transport::IChannel>> & _chnls);
 
-  virtual void Login( const Network::NetAddress & _loginServerAddress, const nstl::string & _login, const nstl::string & _password, const nstl::string & _sessionKey, Login::LoginType::Enum _loginType );
+  virtual void Login( const Network::NetAddress & _loginServerAddress, const nstl::string & _login, const nstl::string & _password, const nstl::string & _sessionKey, Login::LoginType::Enum _loginType, const nstl::string & serverAddress );
   virtual void Logout();
   virtual Login::ELoginResult::Enum GetLoginResult() const;
   virtual Transport::EStatus::Enum GetStatus();
@@ -40,6 +40,8 @@ public:
   virtual Network::NetAddress GetRelayAddress() const;
   virtual Network::NetAddress GetSecondaryRelayAddress() const;
   virtual void Step() {}
+  virtual int FailoverToAddress( const nstl::string & _newServerAddress );
+  virtual void SetFailoverAddress( const nstl::string & _newServerAddress );
 
 private:
   class Worker;

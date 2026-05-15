@@ -300,10 +300,23 @@ bool EscapeFromTowerState::OnStep( float dt )
 {
   bool res = AIMoveToState::OnStep(dt);
 
-  if ( IsValid(pTower) && checkTime < 0 ) 
+  if ( IsValid(pTower) && checkTime < 0 )
   {
-    if ( pHelper->pUnit->IsInRange(pTower, pTower->GetAttackRange()*1.5f) )
+    // Улучшенная логика уклонения: увеличена дистанция проверки с 1.5x до 2.0x
+    // Это дает ботам больше времени на безопасное отступление
+    if ( pHelper->pUnit->IsInRange(pTower, pTower->GetAttackRange()*2.0f) )
+    {
       checkTime = 1.0f;
+
+      // Дополнительная проверка: если здоровье < 40%, немедленно отступать
+      float health, healthMax;
+      pHelper->GetLife( health, healthMax );
+      if (health/healthMax < 0.4f)
+      {
+        // Продолжаем отступление при низком здоровье
+        checkTime = 2.0f;
+      }
+    }
     else
     {
       pHelper->Stop();

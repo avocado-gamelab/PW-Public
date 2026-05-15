@@ -202,7 +202,7 @@ public class ConsumablesShop : DBResource
 	public libdb.IChangeableList<DBPtr<Consumable>> items { get { return _items; } set { _items.Assign( value ); } }
 
 	[Description( "Interaction radius" )]
-	[FloatMin(0)]
+	[FloatMin(0f)]
 	public float interactionRadius { get { return _interactionRadius.Get(); } set { _interactionRadius.Set( value ); } }
 
 	[Description( "True if shop is secret" )]

@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "ChunklessSaver.h"
 #include "BinChunkSerializer.h"
-#include <TestSuite.h>
+#include "cxxtest/TestSuite.h"
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 _interface IObject1 : public IObjectBase
 {

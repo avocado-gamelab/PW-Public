@@ -78,6 +78,8 @@ public:
   NGameX::IgnoreListStorage* GetIgnoreListStorage() { return ignoreListStorage; }
   NGameX::LoadingStatusHandler * GetLoadingStatusHandler() {return loadingStatusHandler;}
 
+  void SetRatingParams(bool _isSingle, int _ratingMin, int _ratingMax);
+
 private:
   Strong<LoadingScreenLogic>  logic;
   CObj<LoadingProgress>     progress;

@@ -369,7 +369,7 @@ void CommandsScheduler::SendCommand(int clientIndex, const rpc::MemoryBlock& inf
     else
     {
       localLog( logStream, NLogg::LEVEL_WARNING ).Trace(
-        "GameServer: SendCommand: Command from spectator detected (sid=%016x cid=%d cidx=%d)", 
+        "GameServer: SendCommand: Command from spectator detected (sid=%016x cid=%d cidx=%d)",
           data.serverId, client->GetClientId(), clientIndex);
       // Just disconnect for current (simple) version of spectator
       //clients.OnGameCheated(client->GetClientId(), clientIndex);
@@ -775,6 +775,8 @@ int CommandsScheduler::Step(int delta)
     }
 
     clients.SendStep(stepped);
+
+    clients.PumpPendingWorldData(4);
   }
 
   return int(data.sessionSettings.simulationStep*timeScaleOO);

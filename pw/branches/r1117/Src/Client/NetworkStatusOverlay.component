@@ -1,0 +1,11 @@
+sources = [
+    'NetworkStatusOverlay.cpp',
+    'NetworkStatusOverlay.h',
+]
+
+components = [
+  'System/Ptr',
+  'Render/Render',
+]
+
+platformFeatures = { 'win32' : Win32Features( 'stdafx.h' ) }

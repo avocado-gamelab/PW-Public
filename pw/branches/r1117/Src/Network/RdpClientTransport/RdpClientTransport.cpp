@@ -117,7 +117,7 @@ void ClientTransport::GetNewAcceptedChannels(vector<StrongMT<Transport::IChannel
 
 
 
-void ClientTransport::Login( const Network::NetAddress & _loginServerAddress, const nstl::string & _login, const nstl::string & _password, const nstl::string & _sessionKey, Login::LoginType::Enum _loginType )
+void ClientTransport::Login( const Network::NetAddress & _loginServerAddress, const nstl::string & _login, const nstl::string & _password, const nstl::string & _sessionKey, Login::LoginType::Enum _loginType, const nstl::string & serverAddress )
 {
   threading::MutexLock lock( initShutdownMutex );
   thread = 0;
@@ -127,7 +127,9 @@ void ClientTransport::Login( const Network::NetAddress & _loginServerAddress, co
 
   ni_udp::NetAddr loginSvcAddr;
   unsigned loginSvcMux = 0;
-  if ( !ParseAddress( loginSvcAddr, loginSvcMux, _loginServerAddress.c_str() ) )
+  // Transport::ClientCfg::GetLoginAddress().c_str();
+  const char * clientCfgStr = serverAddress.c_str();//"185.72.144.197:35001@10";
+  if ( !ParseAddressWithChangeIp( loginSvcAddr, loginSvcMux, _loginServerAddress.c_str(), clientCfgStr ) )
     return;
 
   if ( loginSvcAddr.Address() == INADDR_ANY )
@@ -147,7 +149,7 @@ void ClientTransport::Login( const Network::NetAddress & _loginServerAddress, co
   if ( !rdp->Init( sockFact, opts, rndFact->Produce( (unsigned)timer::GetTicks() ), new timer::RealTimer ) )
     return;
 
-  loginClient = new LoginClient( rdp, loginSvcAddr, loginSvcMux, _login, _password, _sessionKey );
+  loginClient = new LoginClient( rdp, loginSvcAddr, loginSvcMux, _login, _password, _sessionKey, serverAddress );
 
   thread = new threading::JobThread( new Worker( this ), "ClientTransport" );
 }
@@ -161,6 +163,58 @@ void ClientTransport::Logout()
 
   threading::MutexLock lock2( mutex );
   Cleanup();
+}
+
+
+
+int ClientTransport::FailoverToAddress( const nstl::string & _newServerAddress )
+{
+  threading::MutexLock lock( mutex );
+
+  if ( !rdp || !loginClient )
+    return 0;
+
+  // Parse new address
+  ni_udp::NetAddr newAddr;
+  unsigned newMux = 0;
+  if ( !ParseAddress( newAddr, newMux, _newServerAddress.c_str() ) )
+  {
+    ErrorTrace( "FailoverToAddress: cannot parse address '%s'", _newServerAddress.c_str() );
+    return 0;
+  }
+
+  // Get current login address to find connections to migrate
+  ni_udp::NetAddr oldAddr = loginClient->LoginSvcAddr();
+
+  MessageTrace( "FailoverToAddress: migrating from %s to %s", oldAddr, newAddr );
+
+  // Set auto-failover for early migration (before retransmit limit exhausted)
+  rdp->SetFailoverAddr( newAddr );
+
+  int migrated = rdp->FailoverConnections( oldAddr, newAddr );
+
+  // Update login client's server address for future channels
+  loginClient->ChangeServerAddress( _newServerAddress, newAddr );
+
+  return migrated;
+}
+
+
+
+void ClientTransport::SetFailoverAddress( const nstl::string & _newServerAddress )
+{
+  threading::MutexLock lock( mutex );
+
+  if ( !rdp )
+    return;
+
+  ni_udp::NetAddr newAddr;
+  unsigned newMux = 0;
+  if ( !ParseAddress( newAddr, newMux, _newServerAddress.c_str() ) )
+    return;
+
+  rdp->SetFailoverAddr( newAddr );
+  MessageTrace( "SetFailoverAddress: %s", _newServerAddress.c_str() );
 }
 
 

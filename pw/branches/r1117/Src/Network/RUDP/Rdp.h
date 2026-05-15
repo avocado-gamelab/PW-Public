@@ -24,6 +24,8 @@ public:
   virtual bool                  Init( IRdpSocketFactory * _socketFactory, const RdpOptions & _opt, ni_rnd::IGenerator * _rnd, timer::ITimer * _clock );
   virtual IRdpConnection *      Connect( const NetAddr & _remote, unsigned _mux, IRdpConnectionCallback * _cb );
   virtual IRdpListenContext *   Listen( unsigned _mux, IRdpListenContextCallback * _cb );
+  virtual int                   FailoverConnections( const NetAddr & _oldAddr, const NetAddr & _newAddr );
+  virtual void                  SetFailoverAddr( const NetAddr & _failoverAddr );
 
 private:
   StrongMT<threading::JobThread>  workerThread;

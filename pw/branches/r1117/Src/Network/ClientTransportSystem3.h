@@ -25,7 +25,7 @@ namespace Transport
 
     // IClientTransportSystem
     void Login( const Network::NetAddress& loginServerAddress, const string& login, const string& _password, 
-      const string& sessionKey="", Login::LoginType::Enum _loginType = Login::LoginType::ORDINARY);
+      const string& sessionKey="", Login::LoginType::Enum _loginType = Login::LoginType::ORDINARY, const nstl::string& serverAddress="");
     void Logout();
     EStatus::Enum GetStatus();
 

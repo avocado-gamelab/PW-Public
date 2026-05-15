@@ -20,6 +20,8 @@
 #include <errno.h>
 #elif NI_MALLOC_IMPL == 2
 #include "nedmalloc.h"
+#elif NI_MALLOC_IMPL == 3
+#include "rpmalloc/rpmalloc.h"
 #endif
 
 // there is some predefined values for MAX_STACK_SIZE
@@ -506,6 +508,12 @@ static void DumpMemoryLeaks()
 #define NI_FREE(p)                 nedalloc::nedfree(p)
 #define NI_FREE_ALIGNED(p)         nedalloc::nedfree(p)
 #define NI_REALLOC(p,s)            nedalloc::nedrealloc(p,s)
+#elif NI_MALLOC_IMPL == 3
+#define NI_MALLOC(s)               rpmalloc(s)
+#define NI_MALLOC_ALIGNED(s,a)     rpaligned_alloc(a,s)
+#define NI_FREE(p)                 rpfree(p)
+#define NI_FREE_ALIGNED(p)         rpfree(p)
+#define NI_REALLOC(p,s)            rprealloc(p,s)
 #else
 #error You must choose malloc implementation in NI_MALLOC_IMPL
 #endif
@@ -769,6 +777,11 @@ size_t GetAllocatedFootprint()
 #elif NI_MALLOC_IMPL == 2
   // nedmalloc
   return nedalloc::nedmalloc_footprint();
+#elif NI_MALLOC_IMPL == 3
+  // rpmalloc
+  rpmalloc_global_statistics_t stats = {0};
+  rpmalloc_global_statistics(&stats);
+  return (size_t)stats.mapped;
 #else
 #error Unknown malloc implementation chosen in NI_MALLOC_IMPL
 #endif
@@ -845,6 +858,23 @@ bool RemoveMemoryCallback( TCommonMemoryCallback callback, bool forAllocs )
 #ifndef DO_NOT_USE_DLLMAIN
 BOOL WINAPI DllMain( HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved )
 {
+#if NI_MALLOC_IMPL == 3
+  switch ( fdwReason )
+  {
+    case DLL_PROCESS_ATTACH:
+      rpmalloc_initialize();
+      break;
+    case DLL_THREAD_ATTACH:
+      rpmalloc_thread_initialize();
+      break;
+    case DLL_THREAD_DETACH:
+      rpmalloc_thread_finalize(1);
+      break;
+    case DLL_PROCESS_DETACH:
+      rpmalloc_finalize();
+      break;
+  }
+#endif
   if((DLL_PROCESS_DETACH == fdwReason) && g_blockInitialized)
   {
     g_blockInitialized = false;

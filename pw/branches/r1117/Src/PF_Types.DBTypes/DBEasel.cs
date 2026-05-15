@@ -9368,7 +9368,7 @@ public class DBPriestessLevelStats : DBResource
 	public int silverMedalNafta { get { return _silverMedalNafta.Get(); } set { _silverMedalNafta.Set( value ); } }
 
 	[Category( "How much nafta will be returned to priestess on level fail. [0, 1]" )]
-	[FloatMinMax(0, 1)]
+	[FloatMinMax(0f, 1f)]
 	public float failNaftaReturnMultiplier { get { return _failNaftaReturnMultiplier.Get(); } set { _failNaftaReturnMultiplier.Set( value ); } }
 
 	private void Initialize( DBResource owner )

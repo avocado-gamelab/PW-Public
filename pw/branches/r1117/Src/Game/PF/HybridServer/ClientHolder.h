@@ -131,7 +131,6 @@ struct ClientHolder
         info.step = step-confirmFrequency;
       } else
       {
-        // TODO: info.step = step - step % confirmFrequency -- ����������
         info.step = (((step + (confirmFrequency-step%confirmFrequency))/confirmFrequency)-1)*confirmFrequency; // first unconfirmed step
       }
     }
@@ -1112,6 +1111,11 @@ private:
   int  _RequestWorldData();
   void _SendWorldData(WorldSnapshot* snapshot);
   void _WorldDataRequestTimeOut();
+public:
+  void PumpPendingWorldData(int chunksBudget);
+private:
+  void _SchedulePendingWorldData(WorldSnapshot* snapshot);
+  void _FinalizePendingRejoiner(int clientIndex, WorldSnapshot* snapshot);
 
   void AllocateProtectionRecord(const int step);
   void DeallocateProtectionRecords(const int count);
@@ -1166,6 +1170,24 @@ private:
 
   Protection::StepRecords _protection;
   nstl::vector<Protection::MagicRecord> _pendingMagic;
+
+  struct PendingRejoiner
+  {
+    int clientIndex;
+    int cursor;       // 0..partsCount, индекс следующей части
+    bool initSent;    // ApplyWorldDataInfo + Rewind отправлены
+    bool finalized;   // SetWorldAppliedStep + RemoveClientFromSnapshots сделаны
+    PendingRejoiner() : clientIndex(-1), cursor(0), initSent(false), finalized(false) {}
+  };
+  struct PendingSnapshotSend
+  {
+    bool                       active;
+    WorldSnapshot*             snapshot;     // shared, не owning — лежит в Clients::snapshots
+    Peered::WorldDataInfo      info;
+    nstl::vector<PendingRejoiner> rejoiners;
+    PendingSnapshotSend() : active(false), snapshot(0) {}
+  };
+  PendingSnapshotSend _pendingSnapshotSend;
 };
 
 }

@@ -138,7 +138,6 @@ void LoadingScreen::InitLoadingUI()
 
   logic->GetLoadingFlashInterface()->SetLoadingState(false);
 
-  //забываем про него. уже все проинициализировали
   loadingGameContext = 0;
 }
 
@@ -219,6 +218,12 @@ void LoadingScreen::SetHeroInfo( int userId, HeroInfo & heroInfo )
 
   logic->SetHeroInfo( userId, heroesInfo[userId], clientSettings );
   heroesInfo[userId].isProcessed = true;
+}
+
+void LoadingScreen::SetRatingParams(bool _isSingle, int _ratingMin, int _ratingMax)
+{
+  if (logic)
+    logic->SetRatingParams(_isSingle, _ratingMin, _ratingMax);
 }
 
 } //namespace Game

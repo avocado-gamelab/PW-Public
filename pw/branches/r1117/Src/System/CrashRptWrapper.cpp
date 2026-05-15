@@ -7,7 +7,6 @@
 #include "MemoryLib/SymAccess.h"
 #include "Version.h"
 #include "FileSystem/FilePath.h"
-#include "FileSystem/FileUtils.h"
 #include <CrashRpt.h>
 
 
@@ -75,18 +74,15 @@ void InstallForProcess( const char * uploadUrl, bool useBinaryEncoding, bool noG
   info.pszRestartCmdLine = NULL;
 
   // get the current language from the 'lang.cfg' file
-  // get the current language from the 'lang.cfg' file
   nstl::string filepath("");
-
-  nstl::string lang;
-  NStr::UnicodeToUTF8(&lang, NGlobal::GetVar("language").GetString());
-  if (!lang.empty())
+  if (!NGlobal::GetVar("language").GetString().empty())
   {
-    filepath = NFile::Combine(NFile::GetBaseDir(), "Data/Localization/" + lang + "/crashrpt_lang.ini");
-  }
-
-  if (NFile::DoesFileExist(filepath))
+    filepath = NFile::Combine(NFile::GetBaseDir(), "Data/Localization/" +
+                                            NStr::ToMBCS(NGlobal::GetVar("language").GetString()) +
+                                            "/crashrpt_lang.ini");
     info.pszLangFilePath = filepath.c_str();
+    //NI_ALWAYS_ASSERT( NI_STRFMT( "Loading CrashRpt handler localization: %s", info.pszLangFilePath ) );
+  }
 
   int installResult = crInstall( &info );
   //NI_ASSERT( installResult == 0, "Failed to install exception handler" )

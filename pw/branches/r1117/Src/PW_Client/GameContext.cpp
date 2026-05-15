@@ -1,6 +1,7 @@
 #include "stdafx.h"
 
 #include "GameContext.h"
+#include "ServerAddressList.h"
 
 #include "NewLobbyGameClientPW.h"
 #include "ReplayRunner.h"
@@ -8,6 +9,7 @@
 #include "Network/Initializer.h"
 #include "Network/TransportInitializer.h"
 #include "Network/ClientTransportConfig.h"
+#include "Network/ClusterConfiguration.h"
 #pragma warning(push)
 #pragma warning(disable:4996)
 #include "Network/ClientTransportSystem2.h"
@@ -18,6 +20,7 @@
 
 
 #include "Client/ScreenCommands.h"
+#include "Client/NetworkStatusOverlay.h"
 #include "NetworkStatusScreen.h"
 #include "Client/WasserzeichenScreen.h"
 
@@ -76,14 +79,20 @@ NI_DEFINE_REFCOUNT( Game::IGameContextUiInterface )
 namespace Game
 {
 
-GameContext::GameContext( const char * _sessionKey, const char * _devLogin, const char * _mapId, NGameX::ISocialConnection * _socialConnection, NGameX::GuildEmblem* _guildEmblem, const bool _isSpectator, const bool _isTutorial ) :
+GameContext::GameContext( const char * _sessionKey, const char * _devLogin, const char * _mapId, NGameX::ISocialConnection * _socialConnection, NGameX::GuildEmblem* _guildEmblem, const bool _isSpectator, const bool _isTutorial, const bool _isSingle, const int _ratingMin, const int _ratingMax, const char * _serverAddress ) :
   socialMode( _sessionKey ? true : false ),
   status( EContextStatus::Ready ),
   clientWasInitialized( false ),
   socialConnection(_socialConnection),
   guildEmblem( _guildEmblem ),
   isSpectator( _isSpectator ),
-  isTutorial( _isTutorial )
+  isTutorial( _isTutorial ),
+  isSingle( _isSingle ),
+  ratingMin( _ratingMin ),
+  ratingMax( _ratingMax ),
+  loginFallbackAttempted( false ),
+  needsDeferredFailover( false ),
+  lastLoginType( Login::LoginType::ORDINARY )
 {
   if ( _sessionKey )
     if ( !ParseSessionKey( _sessionKey ) )
@@ -94,6 +103,9 @@ GameContext::GameContext( const char * _sessionKey, const char * _devLogin, cons
 
   if (_mapId)
     mapId = _mapId;
+
+  if(_serverAddress)
+	  serverAddress = _serverAddress;
 
   NGlobal::RegisterContextCmd( "login", this, &GameContext::LoginOnServer );
   NGlobal::RegisterContextCmd( "replay", this, &GameContext::LoadReplay );
@@ -133,11 +145,67 @@ void GameContext::Init()
 
   Login::ClientVersion ver(VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH, VERSION_REVISION);
 
+  // Если Castle передал альтернативные endpoints — выбираем живейший по пингу.
+  // При fast-reconnect пропускаем probe (до 1.5с), чтобы не жечь время восстановления —
+  // transport уже сам мигрирует по preconfigured failover'у, если нужно.
+  // При login-retry после первого fail'а тоже пропускаем — current уже установлен
+  // в responsive alternative через TryLoginFallback, повторный probe с вероятностью
+  // 50/50 вернёт нас на мёртвый main (сетевой фильтр может пропустить probe но не login).
+  if ( ServerAddressList::Instance().HasAlternatives() && !fastReconnectCtx && !loginFallbackAttempted )
+  {
+    NMainLoop::NetworkStatusOverlay::Instance().Log( "Probing servers..." );
+    int best = ServerAddressList::Instance().ChooseBestByPing();
+    if ( best >= 0 )
+    {
+      ServerAddressList::Instance().SetCurrent( best );
+      serverAddress = ServerAddressList::Instance().GetCurrentAddress();
+      MessageTrace( "ServerAddressList: chose '%s' (%s) by ping probe",
+        ServerAddressList::Instance().GetCurrentName(), serverAddress.c_str() );
+      NMainLoop::NetworkStatusOverlay::Instance().Log( "Chose '%s' by ping",
+        ServerAddressList::Instance().GetCurrentName() );
+    }
+    else
+    {
+      WarningTrace( "ServerAddressList: all endpoints failed probe, keeping '%s' (%s)",
+        ServerAddressList::Instance().GetCurrentName(), serverAddress.c_str() );
+      NMainLoop::NetworkStatusOverlay::Instance().Log(
+        "All endpoints unhealthy! Keeping '%s'",
+        ServerAddressList::Instance().GetCurrentName() );
+    }
+  }
+  else if ( loginFallbackAttempted )
+  {
+    // Обновляем serverAddress из pinned current — Cleanup() мог не стереть, но
+    // надёжнее взять свежий.
+    serverAddress = ServerAddressList::Instance().GetCurrentAddress();
+    MessageTrace( "ServerAddressList: using pinned '%s' (%s) for login retry",
+      ServerAddressList::Instance().GetCurrentName(), serverAddress.c_str() );
+    NMainLoop::NetworkStatusOverlay::Instance().Log(
+      "Retry on pinned '%s'",
+      ServerAddressList::Instance().GetCurrentName() );
+  }
+
+  // Синхронизируем глобальный loginAddr с финальным выбором. Единая точка записи:
+  // Game.cpp заполнил serverAddress из Castle params, здесь (после ChooseBestByPing или
+  // fast-reconnect skip) адрес окончателен — write-once-per-Init избавляет от race
+  // с reader'ами Transport::ClientCfg::GetLoginAddress() на других потоках.
+  // Пустую строку не пишем — это значит -params не был передан (legacy/dev запуск
+  // через MiniLauncher), и login_address уже выставлен из game.cfg через REGISTER_VAR.
+  // Перетирать его пустотой нельзя — иначе loginAdr ниже окажется пустым и логин упадёт.
+  if ( !serverAddress.empty() )
+    Network::SetLoginServerAddress( serverAddress );
+
   ni_udp::NetAddr loginSvcAddr;
   unsigned loginSvcMux = 0;
   const char * loginAdr = socialMode ? socialLoginAddress.c_str() : Transport::ClientCfg::GetLoginAddress().c_str();
+  // Без -params (legacy/MiniLauncher запуск) serverAddress пустой. ParseAddressWithChangeIp
+  // парсит clientCfgStr ради change-IP failover, и фейлится на пустой строке — клиент тогда
+  // молча уходит в TCP fallback, но UniServerApp слушает только UDP/RDP, и подключение
+  // отбивается ECONNREFUSED. Fallback на loginAdr — даёт тот же endpoint, парсинг проходит,
+  // UDP-путь активируется.
+  const char * clientCfgStr = serverAddress.empty() ? loginAdr : serverAddress.c_str();
 
-  if ( rdp_transport::ParseAddress( loginSvcAddr, loginSvcMux, loginAdr ) && loginSvcMux )
+  if ( rdp_transport::ParseAddressWithChangeIp( loginSvcAddr, loginSvcMux, loginAdr, clientCfgStr ) && loginSvcMux )
   {
     MessageTrace( "UDP transport login address: %s@%u", loginSvcAddr, loginSvcMux );
 
@@ -147,8 +215,26 @@ void GameContext::Init()
   }
   else
   {
+    if ( !loginAdr || !loginAdr[0] )
+    {
+      ErrorTrace( "Failed to determine server address: loginAdr is empty, serverAddress=[%s]", serverAddress.c_str() );
+    }
     MessageTrace( "TCP transport login address: %s", loginAdr );
     clientTransportSystem = new Transport::ClientTransportSystem3( networkDriver, Transport::GetGlobalMessageFactory(), ver );
+  }
+
+  // Preconfigure RDP-уровневый failover на *responsive* альтернативу — чтобы
+  // transport мигрировал сам при retransmit threshold на активном endpoint'е.
+  // Если альтернатива не ответила на probe — failover не ставим (мигрировать некуда).
+  if ( clientTransportSystem && ServerAddressList::Instance().HasAlternatives() )
+  {
+    nstl::string failoverAddr( ServerAddressList::Instance().GetResponsiveAlternativeAddress() );
+    if ( !failoverAddr.empty() )
+    {
+      clientTransportSystem->SetFailoverAddress( failoverAddr );
+      MessageTrace( "Preconfigured failover to %s", failoverAddr.c_str() );
+      NMainLoop::NetworkStatusOverlay::Instance().Log( "Failover ready: %s", failoverAddr.c_str() );
+    }
   }
 }
 
@@ -159,7 +245,7 @@ void GameContext::Cleanup()
   debugVarsSender = 0;
   if ( chatClient )
   {
-    // ��������� ������ NUM_TASK
+    // ��������� ������ NUM_TASK
     chatClient->Shutdown();
   }
   chatClient = 0;
@@ -172,6 +258,8 @@ void GameContext::Cleanup()
   clientTransportSystem = 0;
   networkDriver = 0;
   gateKeeper = 0;
+
+  needsDeferredFailover = false;
 
   status = EContextStatus::Ready;
 }
@@ -191,6 +279,11 @@ bool GameContext::ParseSessionKey( const char * _sessKey )
   if ( !loginEnd )
     return false;
   NI_ASSERT( loginEnd[0], "" );
+
+  if(lastSocialLoginAddress != socialLoginAddress)
+  {
+	  lastSocialLoginAddress = socialLoginAddress;
+  }
 
   socialLoginAddress = string( _sessKey, addrEnd - _sessKey );
   socialLogin = string( addrEnd + 1, loginEnd - ( addrEnd + 1 ) );
@@ -272,6 +365,25 @@ int GameContext::Poll( float dt )
 
   PollFastReconnect();
 
+  // Deferred fallback после провала первого svc-канала. Делаем здесь, не из
+  // OnChannelClosed: ConnectToCluster() сам сделает Cleanup()+Logout() старой
+  // сессии, выставит pinned alt в Init() (через loginFallbackAttempted=true)
+  // и переподключится через proxy. Один раз за сессию — guard в TryLoginFallback.
+  if ( needsDeferredFailover )
+  {
+    needsDeferredFailover = false;
+    if ( TryLoginFallback( Login::ELoginResult::NoConnection ) )
+      return numCommands;
+    // Альтернатива пропала между OnChannelClosed и Poll() — отдаём наверх как было.
+    if (clientTransportSystem)
+      clientTransportSystem->Logout();
+    if ( NGlobal::GetVar( "exit_on_finish", 0 ).GetFloat() != 0 )
+    {
+      ErrorTrace( "GameContext::Poll deferred fallback unavailable" );
+      NMainFrame::Exit();
+    }
+  }
+
   switch ( status )
   {
     default:
@@ -284,8 +396,11 @@ int GameContext::Poll( float dt )
         loadingStatusHandler->OnLoginStatus( res );
       if ( res == Login::ELoginResult::Success )
       {
-        if ( isSpectator )
+        loginFallbackAttempted = false; // сброс для будущих sessions
+        NMainLoop::NetworkStatusOverlay::Instance().Log( "Login OK" );
+        if ( isSpectator || fastReconnectCtx )
         {
+          // Skip statistics during fast reconnect to minimize delay
           StartLobbyClient();
         }
         else
@@ -298,6 +413,10 @@ int GameContext::Poll( float dt )
       }
       else if ( res != Login::ELoginResult::NoResult )
       {
+        NMainLoop::NetworkStatusOverlay::Instance().Log( "Login FAILED (%d)", (int)res );
+        // Network-level failure на текущем endpoint — пробуем responsive alternative один раз.
+        if ( TryLoginFallback( res ) )
+          break;
         status = EContextStatus::Error;
         persistentEvents::GetSingleton()->WriteEvent( fastReconnectCtx ? persistentEvents::EEvent::LoginFailedInFR : persistentEvents::EEvent::LoginFailed, (int)res );
       }
@@ -315,6 +434,9 @@ int GameContext::Poll( float dt )
       if ( lobbyClient->Status() == lobby::EClientStatus::Connected )
       {
         status = EContextStatus::InGame;
+
+        // Сеть работает, лобби поднято — overlay больше не нужен.
+        NMainLoop::NetworkStatusOverlay::Instance().Clear();
 
         if ( persistentEvents::GetSingleton() )
           persistentEvents::GetSingleton()->Open();
@@ -572,8 +694,26 @@ void GameContext::OnChannelClosed( Transport::IChannel * channel, rpc::Node * no
     if (clientTransportSystem)
     {
       Transport::EStatus::Enum st = clientTransportSystem->GetStatus();
-      if (Transport::EStatus::CRITICAL_FAIL == st)
+      if (Transport::EStatus::CRITICAL_FAIL == st || Transport::EStatus::FAIL == st)
       {
+        // Deferred fallback: первый раз за сессию, есть responsive alt и мы
+        // в social-режиме (есть кэш login/password для re-login через proxy).
+        // Откладываем реальный TryLoginFallback в Poll() — из callback'а
+        // вызывать ConnectToCluster нельзя (рекурсивный snос текущего канала).
+        const char* altAddrRaw = ServerAddressList::Instance().GetResponsiveAlternativeAddress();
+        if ( !loginFallbackAttempted && socialMode && !fastReconnectCtx
+             && !needsDeferredFailover
+             && altAddrRaw && altAddrRaw[0] )
+        {
+          MessageTrace( "Service channel '%s' failed — scheduling login fallback to alt endpoint",
+                        channel->GetAddress().target.c_str() );
+          NMainLoop::NetworkStatusOverlay::Instance().Log(
+            "Svc '%s' failed — scheduling fallback",
+            channel->GetAddress().target.c_str() );
+          needsDeferredFailover = true;
+          return;
+        }
+
         clientTransportSystem->Logout();
         if ( NGlobal::GetVar( "exit_on_finish", 0 ).GetFloat() != 0 )
         {
@@ -623,9 +763,11 @@ void GameContext::ConnectToCluster( const string & login, const string & passwor
   NI_VERIFY( status == EContextStatus::Ready, "", return );
   NI_VERIFY( clientTransportSystem, "Client transport system could not be initialized!", return );
 
+  lastLoginType = _loginType;
+
   if ( socialMode )
   {
-    clientTransportSystem->Login( socialLoginAddress, socialLogin, "", socialPassword, _loginType );
+    clientTransportSystem->Login( socialLoginAddress, socialLogin, "", socialPassword, _loginType, serverAddress );
     lastLogin = socialLogin;
   }
   else
@@ -637,8 +779,59 @@ void GameContext::ConnectToCluster( const string & login, const string & passwor
   }
 
   status = EContextStatus::WaitingLogin;
-  if ( loadingStatusHandler) 
+  if ( loadingStatusHandler)
     loadingStatusHandler->OnLoginStatus( Login::ELoginResult::NoResult );
+}
+
+
+bool GameContext::TryLoginFallback( Login::ELoginResult::Enum _failureReason )
+{
+  // Fallback имеет смысл только для network-level сбоев. Server-side отказы
+  // (InvalidCredentials, Banned, ServerOutdated...) не фиксятся другим endpoint'ом.
+  if ( _failureReason != Login::ELoginResult::NoConnection &&
+       _failureReason != Login::ELoginResult::AsyncTimeout )
+    return false;
+
+  if ( loginFallbackAttempted )
+    return false;
+  if ( !socialMode )
+    return false; // non-social path не знает password для retry после Cleanup()
+  if ( fastReconnectCtx )
+    return false; // fast-reconnect сам имеет свою failover-логику
+
+  nstl::string altAddr( ServerAddressList::Instance().GetResponsiveAlternativeAddress() );
+  if ( altAddr.empty() )
+    return false;
+
+  // Находим индекс alt'а в списке, чтобы зафиксировать его как current —
+  // иначе повторный Init снова запустит ChooseBestByPing и с вероятностью
+  // 50/50 вернётся на мёртвый main (burst probe корректный, но сеть может
+  // пропускать пакеты неравномерно между probe и реальным login).
+  bool pinned = false;
+  for ( int idx = 0; idx < ServerAddressList::kMaxEntries; ++idx )
+  {
+    const char* a = ServerAddressList::Instance().GetEntryAddress( idx );
+    if ( a && a[0] && altAddr == a )
+    {
+      ServerAddressList::Instance().SetCurrent( idx );
+      pinned = true;
+      break;
+    }
+  }
+  if ( !pinned )
+    return false;
+
+  loginFallbackAttempted = true;
+  serverAddress = altAddr;
+
+  MessageTrace( "LoginClient auto-fallback: retrying on '%s' (%s) after login failure=%d",
+    ServerAddressList::Instance().GetCurrentName(), altAddr.c_str(), (int)_failureReason );
+  NMainLoop::NetworkStatusOverlay::Instance().Log(
+    "Auto-fallback: retrying on '%s' (reason=%d)",
+    ServerAddressList::Instance().GetCurrentName(), (int)_failureReason );
+
+  ConnectToCluster( socialLogin, socialPassword, lastLoginType );
+  return true;
 }
 
 
@@ -737,7 +930,7 @@ void GameContext::AcquireGameStat()
 {
   gameStat = 0;
 
-  //UGLY: ������ ��������� �����, ���������������� � �������� �� SessionRunnerPW
+  //UGLY: ������ ��������� �����, ���������������� � �������� �� SessionRunnerPW
   debugVarsSender = new DebugVarsSender;
 
   StrongMT<StatisticService::IStatDataDispatcher> statDispatcher = s_stat_immidiate ? 
@@ -850,7 +1043,7 @@ void GameContext::StartGameClient()
   NI_ASSERT( lobbyClient, "" );
 
   gameStatLogic = 0;
-  gameClient = new lobby::GameClientPW( lobbyClient, lobbyClient->Maps(), networkStatusScreen, fastReconnectCtx, socialConnection, loadingScreen, guildEmblem, isSpectator, isTutorial );
+  gameClient = new lobby::GameClientPW( lobbyClient, lobbyClient->Maps(), networkStatusScreen, fastReconnectCtx, socialConnection, loadingScreen, guildEmblem, isSpectator, isTutorial, isSingle, ratingMin, ratingMax );
 
   if ( gameStat )
   {

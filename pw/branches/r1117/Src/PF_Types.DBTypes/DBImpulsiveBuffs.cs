@@ -361,7 +361,7 @@ public class ImpulsiveBuff : libdb.ICompositeDBValue, libdb.IChangeable
 	public string cooldownGroup { get { return _cooldownGroup.Get(); } set { _cooldownGroup.Set( value ); } }
 
 	[Description( "Priority" )]
-	[FloatMinMax(0, 1)]
+	[FloatMinMax(0f, 1f)]
 	public float priority { get { return _priority.Get(); } set { _priority.Set( value ); } }
 
 	[Description( "Specifies buff target class" )]
@@ -1434,7 +1434,7 @@ public class EvtEnemyFlees : ImpulsiveEvent
 	private UndoRedo<float> _cowardDetectRange;
 	private UndoRedo<float> _cowardChaseRange;
 
-	[FloatMinMax(0, 100)]
+	[FloatMinMax(0f, 100f)]
 	public float health { get { return _health.Get(); } set { _health.Set( value ); } }
 
 	public ECompareOperator operation { get { return _operation.Get(); } set { _operation.Set( value ); } }

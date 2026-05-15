@@ -28,6 +28,23 @@ string FormatAddr( const ni_udp::NetAddr & _addr, unsigned _mux )
 }
 
 
+bool ParseAddressWithChangeIp( ni_udp::NetAddr & _addr, unsigned & _mux, const char * _str, const char * _strFromClientCfg )
+{
+	ni_udp::NetAddr originCfgAddr;
+	unsigned mux = 0;
+
+	bool successClientCfg = ParseAddress(_addr, mux, _strFromClientCfg);
+	if(!successClientCfg)
+		return false;
+
+	bool success = ParseAddress(originCfgAddr, _mux, _str);
+	if(!success)
+		return false;
+
+	_addr.SetPort(originCfgAddr.Port());
+	return _addr.Port() != 0;
+}
+
 
 bool ParseAddress( ni_udp::NetAddr & _addr, unsigned & _mux, const char * _str )
 {

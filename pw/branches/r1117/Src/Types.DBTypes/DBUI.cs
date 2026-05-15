@@ -4100,7 +4100,7 @@ public class UIAnimatedCursor : UICursorBase
 	public int fps { get { return _fps.Get(); } set { _fps.Set( value ); } }
 
 	[Description( "Примерная задержка (длительность первого кадра) перед зацикливанием последовательности." )]
-	[FloatMin(0)]
+	[FloatMin(0f)]
 	public float delay { get { return _delay.Get(); } set { _delay.Set( value ); } }
 
 	[Description( "X-координата хотспота, ноль - слева." )]

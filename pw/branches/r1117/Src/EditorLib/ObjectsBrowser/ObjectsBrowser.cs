@@ -148,11 +148,10 @@ namespace EditorLib.ObjectsBrowser
       if( DesignMode )
         return;
 
-      // здесь все правильно, при иниц. не надо через пропертю this.CurrentFolder гнать(по крайней мере до ближайшего рефактора)
-      if( objectsBrowserControl.CurrentFolder == null )
-        objectsBrowserControl.CurrentFolder = ObjectsRootFolder.Root;
-      else
-        objectsBrowserControl.CurrentFolder = objectsBrowserControl.CurrentFolder;
+      // при инициализации нельзя через проперти CurrentFolder — Invoke падает, т.к. handle ещё не готов для MarshaledInvoke.
+      // Ставим поле напрямую; RefreshList вызовется ниже через ExtensionsFilter setter.
+      if( objectsBrowserControl.currentFolder == null )
+        objectsBrowserControl.currentFolder = ObjectsRootFolder.Root;
 
 			objectsBrowserControl.ExtensionsFilter = new List<string>( DataBase.KnownResourcesExtensions );
 

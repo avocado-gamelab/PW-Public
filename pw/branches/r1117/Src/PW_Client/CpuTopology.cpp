@@ -9,7 +9,7 @@
 #include <intrin.h>
 #include "CpuTopology.h"
 
-#pragma intrinsic(__cpuidex)
+//#pragma intrinsic(__cpuidex)
 
 
 //---------------------------------------------------------------------------------
@@ -540,12 +540,12 @@ private:
     //-----------------------------------------------------------------------------
     void        UncheckedCall_( FnSet fnSet, DWORD fn )
     {
-        int CPUInfo[4];
-        __cpuidex( CPUInfo, fnSet | fn, 0 );
-        m_eax = CPUInfo[0];
-        m_ebx = CPUInfo[1];
-        m_ecx = CPUInfo[2];
-        m_edx = CPUInfo[3];
+        //int CPUInfo[4];
+        //__cpuidex( CPUInfo, fnSet | fn, 0 );
+        //m_eax = CPUInfo[0];
+        //m_ebx = CPUInfo[1];
+        //m_ecx = CPUInfo[2];
+        //m_edx = CPUInfo[3];
     }
 
     // Private Members

@@ -47,37 +47,37 @@ public class DayNightSettings : libdb.ICompositeDBValue, libdb.IChangeable
 	public EDayNightState initialState { get { return _initialState.Get(); } set { _initialState.Set( value ); } }
 
 	[Description( "Относительное смещение начального состояния. Пример: 0.3 - 30% дня (ночи) уже прошло на момент старта." )]
-	[FloatMinMax(0, 1)]
+	[FloatMinMax(0f, 1f)]
 	public float initialStateFraction { get { return _initialStateFraction.Get(); } set { _initialStateFraction.Set( value ); } }
 
 	[Description( "Длительность визуального эффекта перехода из дня в ночь и наоборот, в секундах" )]
-	[FloatMin(0)]
+	[FloatMin(0f)]
 	public float transitionDuration { get { return _transitionDuration.Get(); } set { _transitionDuration.Set( value ); } }
 
 	[Description( "Относительная граница, при переходе через которую меняется визуальное состояние MSO" )]
-	[FloatMinMax(0, 1)]
+	[FloatMinMax(0f, 1f)]
 	public float transitionThreshold { get { return _transitionThreshold.Get(); } set { _transitionThreshold.Set( value ); } }
 
 	[Description( "Длительность дня, в секундах" )]
-	[FloatMin(5)]
+	[FloatMin(5f)]
 	public float dayDuration { get { return _dayDuration.Get(); } set { _dayDuration.Set( value ); } }
 
 	[Description( "Длительность ночи, в секундах" )]
-	[FloatMin(5)]
+	[FloatMin(5f)]
 	public float nightDuration { get { return _nightDuration.Get(); } set { _nightDuration.Set( value ); } }
 
 	[Browsable( false )]
-	[FloatMin(0)]
+	[FloatMin(0f)]
 	[HideInOutliner]
 	public float twilightDuration { get { return _twilightDuration.Get(); } set { _twilightDuration.Set( value ); } }
 
 	[Browsable( false )]
-	[FloatMinMax(0, 1)]
+	[FloatMinMax(0f, 1f)]
 	[HideInOutliner]
 	public float twilightFraction { get { return _twilightFraction.Get(); } set { _twilightFraction.Set( value ); } }
 
 	[Description( "Коэффициент уменьшения specular-компоненты динамического освещения ночью" )]
-	[FloatMinMax(0, 1)]
+	[FloatMinMax(0f, 1f)]
 	public float nightSpecularReduction { get { return _nightSpecularReduction.Get(); } set { _nightSpecularReduction.Set( value ); } }
 
 	[Description( "Прячет виджет времени суток" )]

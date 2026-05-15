@@ -187,6 +187,9 @@ private:
 
   int                             leaveAckCounter;
 
+  int                             joinSocialRetries;
+  timer::Time                     joinSocialRetryTime;
+
   void OnEntrance();
   void OnGetServerInstance( RIServerInstance * svInst );
   void OnOperatioResult( EOperationResult::Enum result );

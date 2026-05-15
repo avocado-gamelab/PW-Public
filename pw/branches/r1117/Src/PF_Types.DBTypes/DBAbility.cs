@@ -9405,7 +9405,7 @@ public class DayNightTransitionApplicator : BaseApplicator
 
 	public EDayNightState desiredState { get { return _desiredState.Get(); } set { _desiredState.Set( value ); } }
 
-	[FloatMinMax(0, 1)]
+	[FloatMinMax(0f, 1f)]
 	public float desiredStateFraction { get { return _desiredStateFraction.Get(); } set { _desiredStateFraction.Set( value ); } }
 
 	private void Initialize( DBResource owner )
@@ -19127,10 +19127,10 @@ public class ResurrectApplicator : BaseApplicator
 	private UndoRedo<float> _healthPercent;
 	private UndoRedo<float> _energyPercent;
 
-	[FloatMinMax(0, 100)]
+	[FloatMinMax(0f, 100f)]
 	public float healthPercent { get { return _healthPercent.Get(); } set { _healthPercent.Set( value ); } }
 
-	[FloatMinMax(0, 100)]
+	[FloatMinMax(0f, 100f)]
 	public float energyPercent { get { return _energyPercent.Get(); } set { _energyPercent.Set( value ); } }
 
 	private void Initialize( DBResource owner )

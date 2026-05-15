@@ -37,6 +37,7 @@ public:
 
   bool ActiveSide() const { return activeSide; }
   void ChangeLocalMuxUnsafe( unsigned _localMux ) { descr.localMux = _localMux; }
+  void ChangeRemoteAddr( const NetAddr & _newAddr ) { descr.remote = _newAddr; }
 
   //IRdpConnection mirror
   EConnStatus::Enum     Status();
@@ -64,6 +65,7 @@ public:
   virtual void ConnCbFailure();
   virtual void ConnCbPacketAcknowledged( timer::Time _rtt );
   virtual void ConnCbPacketRetransmitted();
+  virtual void ConnCbRetransmitThreshold();
 
   //IRdpPktQueueCallback
   virtual timer::Time ConnCbCurrentRetransmitTime() const { return ccLogic.RetransmitTimeout(); }

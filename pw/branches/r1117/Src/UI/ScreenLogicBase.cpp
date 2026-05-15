@@ -143,8 +143,8 @@ bool ScreenLogicBase::ProcessMouseUp( const Input::SSysParams & sysParams, const
 
 bool ScreenLogicBase::ProcessMouseDblClick( const Input::SSysParams & sysParams, const EMButton::Enum & mbutton )
 {
-  //Хороший шмать копипаста из ProcessMouseDown и ProcessMouseUp, различается только вызываемой функцией и булевым флагом
-  //@iA@TODO: При дальнейшем наращивании кода можно будет засунуть все в функцию, принимающую указатель на метод класса... или шаблон
+  //РҐРѕСЂРѕС€РёР№ С€РјР°С‚СЊ РєРѕРїРёРїР°СЃС‚Р° РёР· ProcessMouseDown Рё ProcessMouseUp, СЂР°Р·Р»РёС‡Р°РµС‚СЃСЏ С‚РѕР»СЊРєРѕ РІС‹Р·С‹РІР°РµРјРѕР№ С„СѓРЅРєС†РёРµР№ Рё Р±СѓР»РµРІС‹Рј С„Р»Р°РіРѕРј
+  //@iA@TODO: РџСЂРё РґР°Р»СЊРЅРµР№С€РµРј РЅР°СЂР°С‰РёРІР°РЅРёРё РєРѕРґР° РјРѕР¶РЅРѕ Р±СѓРґРµС‚ Р·Р°СЃСѓРЅСѓС‚СЊ РІСЃРµ РІ С„СѓРЅРєС†РёСЋ, РїСЂРёРЅРёРјР°СЋС‰СѓСЋ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РјРµС‚РѕРґ РєР»Р°СЃСЃР°... РёР»Рё С€Р°Р±Р»РѕРЅ
   NI_ASSERT( user, "" );
 
   struct Job : public WindowPointJob {

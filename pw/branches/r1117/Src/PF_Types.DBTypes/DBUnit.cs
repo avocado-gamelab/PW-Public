@@ -3514,7 +3514,7 @@ public class BattleBuilding : Building
 	private UndoRedo<float> _baseRotation;
 
 	[Description( "Tower turret initial and idle rotation (angles)" )]
-	[FloatMinMax(0, 360)]
+	[FloatMinMax(0f, 360f)]
 	public float baseRotation { get { return _baseRotation.Get(); } set { _baseRotation.Set( value ); } }
 
 	private void Initialize( DBResource owner )

@@ -38,6 +38,7 @@
 
 #include "PF_GameLogic/ForceCalc.h"
 #include "PF_GameLogic/ChatController.h"
+#include "PF_GameLogic/RandomNicknameHelper.hpp"
 #include "PF_GameLogic/IgnoreListStorage.h"
 
 #include "PF_GameLogic/AsyncMapStartup.h"
@@ -56,7 +57,6 @@ REGISTER_DEV_VAR( "fs_log_ingame_activity0", s_LogIngameActivity, STORAGE_NONE )
 
 static int s_boostVal = 1;
 REGISTER_DEV_VAR( "boost_thread_priority_val", s_boostVal, STORAGE_NONE);
-// NOTE: hardcode. полагаемся на то, что оператор настроит список жалоб правильно. см. NUM_TASK
 #ifndef BAD_BEHAVIOUR_REPORT_ITEM_ID
 #define BAD_BEHAVIOUR_REPORT_ITEM_ID 1
 #endif
@@ -67,10 +67,10 @@ REGISTER_DEV_VAR( "boost_thread_priority_val", s_boostVal, STORAGE_NONE);
 namespace lobby
 {
 
-GameClientPW::GameClientPW( ClientPW * _client, NWorld::IMapCollection * _mapCollection, Game::NetworkStatusScreen * _networkStatusScreen, 
-                           FastReconnectCtxPW * _fastReconnectCtxPw, NGameX::ISocialConnection * _socialConnection, Game::LoadingScreen * _loadingScreen, 
-                           NGameX::GuildEmblem* _guildEmblem, const bool _isSpectator, const bool _isTutorial ) :
-GameClient( _client, _mapCollection, _fastReconnectCtxPw, _isSpectator, _isTutorial ),
+GameClientPW::GameClientPW( ClientPW * _client, NWorld::IMapCollection * _mapCollection, Game::NetworkStatusScreen * _networkStatusScreen,
+                           FastReconnectCtxPW * _fastReconnectCtxPw, NGameX::ISocialConnection * _socialConnection, Game::LoadingScreen * _loadingScreen,
+                           NGameX::GuildEmblem* _guildEmblem, const bool _isSpectator, const bool _isTutorial, const bool _isSingle, const int _ratingMin, const int _ratingMax ) :
+GameClient( _client, _mapCollection, _fastReconnectCtxPw, _isSpectator, _isTutorial, _isSingle, _ratingMin, _ratingMax ),
 mapLoadStatus( _fastReconnectCtxPw ? EMapLoading::Done : EMapLoading::None ),
 networkStatusScreen( _networkStatusScreen ),
 client(_client),
@@ -95,7 +95,6 @@ loadingScreeen (_loadingScreen)
   ignoreListStorage = new NGameX::IgnoreListStorage( ClientId() );
 }
 
-//наму нужен деструктор, чтобы в явном виде указать какие члены долны шотдауниться раньше
 GameClientPW::~GameClientPW()
 {
   loadingThread = 0;
@@ -454,6 +453,8 @@ void GameClientPW::ShowLoadingScreen()
 
   loadingScreeen->Setup(loadingGameContext );
 
+  loadingScreeen->SetRatingParams(IsSingle(), GetRatingMin(), GetRatingMax());
+
   if (client)
   {
     NDebug::SetSrv2ClientTimeDelta(client->GetTimeDelta());
@@ -534,6 +535,19 @@ void GameClientPW::OnPlayerInfoLoaded()
     loadingScreeen->ApplyClientSettings(ServerNode()->GetClientSettings());
   }
 
+  for (int i = 0; i < mapStartInfo.playersInfo.size(); ++i)
+  {
+    NCore::PlayerStartInfo & psi = mapStartInfo.playersInfo[i];
+    if (psi.playerType == NCore::EPlayerType::Computer)
+    {
+      if (IsSingle())
+      {
+		const int rating = (GetRatingMax() > GetRatingMin()) ? (GetRatingMin() + rand() % (GetRatingMax() - GetRatingMin() + 1)) : GetRatingMin();
+      	psi.playerInfo.heroRating = (float)rating;
+        psi.nickname = NGameX::RandomNicknameHelper::GetRandomNickname();
+      }
+    }
+  }
 
   bool hasBots = false;
 
@@ -566,7 +580,7 @@ void GameClientPW::OnPlayerInfoLoaded()
       info.force = force;
       info.raiting = (int)( playerStartInfo.playerInfo.heroRating );
 
-      if (!hasBots && !Client()->GameParams().customGame) // с ботами или в договорных не дают рейт
+      if (!hasBots && !Client()->GameParams().customGame) // пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
       {
         info.winDeltaRaiting = playerStartInfo.playerInfo.ratingDeltaPrediction.onVictory;
         info.loseDeltaRaiting = playerStartInfo.playerInfo.ratingDeltaPrediction.onDefeat;
@@ -929,7 +943,6 @@ void GameClientPW::ProcessBadBehaviourComplaints()
         return;
       }
 
-      // NOTE: такое не может случиться при нормальных условиях
       if (sender == receiver)
       {
         ErrorTrace("ProcessBadBehaviourComplaints: reported self (uid=%d)", complaint.senderClientId);

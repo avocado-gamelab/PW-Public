@@ -3387,11 +3387,11 @@ public class FlyOffText : libdb.ICompositeDBValue, libdb.IChangeable
 	public Vec2 acceleration { get { return _acceleration; } set { _acceleration.Assign( value ); } }
 
 	[Description( "Initial opacity" )]
-	[FloatMinMax(0, 1)]
+	[FloatMinMax(0f, 1f)]
 	public float startOpacity { get { return _startOpacity.Get(); } set { _startOpacity.Set( value ); } }
 
 	[Description( "Target opacity at lifeTime" )]
-	[FloatMinMax(0, 1)]
+	[FloatMinMax(0f, 1f)]
 	public float endOpacity { get { return _endOpacity.Get(); } set { _endOpacity.Set( value ); } }
 
 	[Description( "Flyoff alignment" )]
@@ -13826,21 +13826,21 @@ public class DBMinimap : DBResource
 
 	[Category( "Fade" )]
 	[Description( "Normal opacity" )]
-	[FloatMinMax(0, 1)]
+	[FloatMinMax(0f, 1f)]
 	public float normalOpacity { get { return _normalOpacity.Get(); } set { _normalOpacity.Set( value ); } }
 
 	[Category( "Fade" )]
 	[Description( "Minigame opacity" )]
-	[FloatMinMax(0, 1)]
+	[FloatMinMax(0f, 1f)]
 	public float minigameOpacity { get { return _minigameOpacity.Get(); } set { _minigameOpacity.Set( value ); } }
 
 	[Category( "Fade" )]
 	[Description( "Transition time" )]
-	[FloatMin(0)]
+	[FloatMin(0f)]
 	public float transitionVelocity { get { return _transitionVelocity.Get(); } set { _transitionVelocity.Set( value ); } }
 
 	[Description( "¬рем€ жизни сигнала (пинга), в секундах" )]
-	[FloatMinMax(1, 600)]
+	[FloatMinMax(1f, 600f)]
 	public float signalLifeTime { get { return _signalLifeTime.Get(); } set { _signalLifeTime.Set( value ); } }
 
 	[Description( "÷вет сигнала (пинга) по умолчанию" )]

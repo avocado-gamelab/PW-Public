@@ -144,7 +144,7 @@ void Alphabet::LoadAlphabet( FT_Library ftLibrary, const char* _ttfFileName, int
     widthK = UI::GetScreenResolution().x > 0 ? ( float( UI::GetUIScreenResolution().x ) / float( UI::GetScreenResolution().x ) ) : 1.0f;
     heightK = UI::GetScreenResolution().y > 0 ? ( float( UI::GetUIScreenResolution().y ) / float( UI::GetScreenResolution().y ) ) : 1.0f;
 
-    float ascent  = _fontSize;
+    float ascent  = _fontSize * 1.2f;
     float descent = ceilf( _fontSize * float( minDescent ) / float( maxAscent ) );
     float height = ascent - descent;
 
@@ -212,7 +212,9 @@ const Glyph& Alphabet::GetGlyph( wchar_t symbol )
   Glyph & newGlyph = glyphHashMap[symbol];
 
   if ( flashFont )
-    FT_Load_Char( face, symbol, s_useFontHintingInFlash ? FT_LOAD_FORCE_AUTOHINT : FT_LOAD_NO_HINTING );
+	  // enable font hinting
+    // FT_Load_Char( face, symbol, s_useFontHintingInFlash ? FT_LOAD_FORCE_AUTOHINT : FT_LOAD_NO_HINTING );
+	FT_Load_Char( face, symbol, FT_LOAD_FORCE_AUTOHINT );
   else
     FT_Load_Char( face, symbol, FT_LOAD_IGNORE_TRANSFORM | FT_LOAD_FORCE_AUTOHINT );
 
