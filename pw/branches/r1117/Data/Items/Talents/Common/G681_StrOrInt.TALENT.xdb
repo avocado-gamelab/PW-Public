@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set8" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set8_kit5" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G681_StrOrInt.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset8/status_Cataclysm_Debuff.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset8_5_Warfog/Redset8_5_Warfog.TALKIT" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="4" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NormTal.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_RedSet8.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet8Add.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season9_Mediocre.ROLLCONT" Count="1" />
+	<BackLink DBID="/GameLogic/TalentGroup.TGRP" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Fairy_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Prince_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/WitchDoctor_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NY2020_MediocreList.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season13_MediocreList.ROLLCONT" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="E1C686AA-F41A-41C3-B94E-BD5677E491FA">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Спелл во врагов</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="8C6E1830-14BB-4E8C-BB96-3D4ACDF12CDA">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="069CC7F9-7CB7-4D6C-BAB3-833F46503395">
+								<StatusApplicator>
+									<applicators>
+										<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="B1EBD90B-0019-4988-9DD8-AE57BA613821">
+											<EyeApplicator>
+												<applyTarget>ApplicatorTarget</applyTarget>
+												<behaviorFlags>145</behaviorFlags>
+												<cancelObstacles>false</cancelObstacles>
+												<caption>Открываем варфог</caption>
+												<effect>
+													<Item href="" />
+													<Item href="" />
+												</effect>
+												<enabled>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</enabled>
+												<eyeTarget>ApplicatorTarget</eyeTarget>
+												<flags>8</flags>
+												<formulaName></formulaName>
+												<lifeTime>
+													<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+													<returnType>float</returnType>
+													<sString>-1.0f</sString>
+												</lifeTime>
+												<LoggingEvent>-1</LoggingEvent>
+												<providerName></providerName>
+												<startCondition>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</startCondition>
+												<visRange>
+													<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAQA==</compiledString>
+													<returnType>float</returnType>
+													<sString>4</sString>
+												</visRange>
+											</EyeApplicator>
+										</Item>
+										<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="0DD8AAE4-8F3D-4900-9EA1-5965CCC1067A">
+											<StatusApplicator parent="/Heroes/DefaultStatus/_BLIND_status.APLR">
+												<dispellPriority>NonDispellable</dispellPriority>
+											</StatusApplicator>
+										</Item>
+									</applicators>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<behaviorFlags>146</behaviorFlags>
+									<caption>Статус</caption>
+									<customCounter>
+										<compiledString></compiledString>
+										<returnType>int</returnType>
+										<sString>0</sString>
+									</customCounter>
+									<customProgress>
+										<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</customProgress>
+									<description textref="/Items/Talents/Common/G681_StrOrInt.TALENT_069cc7f97cb74d6cbab3833f46503395_description.txt" />
+									<dispellPriority>High</dispellPriority>
+									<effect>
+										<Item href="/Summons/Spear/_DecalLight.EFFT" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<flags>2</flags>
+									<formulaName></formulaName>
+									<image href="/UI/Styles/Icons/Talents/_681.ITEX" />
+									<lifeTime>
+										<compiledString>FQkAAAABAAAAFQAAAExpZmVUaW1lAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+										<returnType>float</returnType>
+										<sString>cLifeTime</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<name textref="/Items/Talents/Common/G681_StrOrInt.TALENT_069cc7f97cb74d6cbab3833f46503395_name.txt" />
+									<power>0</power>
+									<providerName></providerName>
+									<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+									<stackCount>0</stackCount>
+									<startCondition>
+										<compiledString>FQAAAAAAAAAAVYvsaAAIAACLRQyLEItNDItCaP/QD7bA99gbwIPAAV3D</compiledString>
+										<returnType>bool</returnType>
+										<sString>!rFlag(2048)</sString>
+									</startCondition>
+									<statusPosition>0</statusPosition>
+									<stopBehaviour>StopByTime</stopBehaviour>
+									<unstackableWith href="" />
+								</StatusApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="4F14B76E-A038-4550-8D09-C42623F0A0DB">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>true</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="26C9CA19-73A8-4202-90BB-1C8D6855112E">
+					<UnitEnumerator>
+						<flags>0</flags>
+						<mode>Normal</mode>
+						<targetFilter>536870915</targetFilter>
+					</UnitEnumerator>
+				</targetSelector>
+			</SpellApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Redset8_4_TriggerShield/spell_G657_StatModSelf.APLR" />
+		<Item href="/Items/Talents/TalentKits/Redset8_4_TriggerShield/spell_G657_StatModAllies.APLR" />
+		<Item href="/Items/Talents/TalentKits/Redset8_4_TriggerShield/spell_G657_StatModEnemies.APLR" />
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G681: Соколиная зоркость</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G681_StrOrInt.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G681_StrOrInt.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="C39D4715-C0DB-41CF-90CC-687B977C77C1">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ4AAAACAAAAEwAAACkAAABHNjgxX1N0ck9ySW50AFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUsAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAADwPw==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG681_StrOrInt==1</sString>
+				</condition>
+				<name>StrOrInt</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="C174A0AE-BD90-43FF-B283-3F038AF620C9">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLQnj/0DPJg/gDD5zBisFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>mActivatedWithinKit &lt; 3</sString>
+				</condition>
+				<name>InForma</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="73B91449-734E-4C49-ABE8-7143CEE719B5">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="C8003B7B-2050-45FB-B91E-0B268792C9C4">
+					<UnitConstant>
+						<name>Add_Stat</name>
+						<var>
+							<compiledString>FQgAAAABAAAAFAAAAFQ1X1N0YXQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT5_Stat</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset8_5_Warfog/const_Redset8_5_AddStat" />
+				<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="B83C1433-48A0-4521-AA87-652DBA2F5DE6">
+					<UnitConstant>
+						<name>LifeTime</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>5.0f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="5A3041F1-8886-47CD-8CC5-1D449C05EEAF">
+					<UnitConstant>
+						<name>Blind_Duration</name>
+						<var>
+							<compiledString>FQkAAAABAAAAFQAAAExpZmVUaW1lAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cLifeTime</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="01815BEC-3B57-438C-AF01-9EB23F240D51">
+					<UnitConstant>
+						<name>Blind_StartCondition</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvsUYtFEIsQi00Qi4KQAAAA/9APtsiJTfzbRfyL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>mIsNight</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="B73C17EB-C248-4AE9-AB2C-5B31B333F773">
+					<UnitConstant>
+						<name>Blind_MissChance</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABIQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>50.0f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset8/const_Redset8_CDTime" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>120</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G681_StrOrInt.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="6DDD79C5-20E3-447B-9685-1E5FFC3192AD">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>true</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>1</flags>
+	<forceBonus>22.7</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_681.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>4</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G681_StrOrInt.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="72791D5A-A9C4-47C0-A4B2-CA8711A840CA">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>RedSet8_5Counter</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>RedSet8_5Counter</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="9925EE97-E96A-42F8-92BB-6B70A0AE9A58">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>StrOrInt</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&gt;=sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G681_StrOrInt</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="A5777407-2043-431D-BBE0-35A922151145">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Strength</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&gt;=sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9TdGF0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Strength</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="FC4DB42B-DD88-4EB4-B4AD-34D5D5BFF69B">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Intellect</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&lt;sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9TdGF0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Intellect</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Redset8_5_Warfog/Program_Redset8_5_StrOrInt.APLR" />
+		<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" id="A212F94E-CA77-4630-B8F0-071E4870E21E">
+			<FlagsApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Запрет использовать талант, если нет 3</caption>
+				<consumables />
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLQnj/0DPJg/gDD5zBisFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>mActivatedWithinKit &lt; 3</sString>
+				</enabled>
+				<flag>1024</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents>
+					<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" />
+				</talents>
+				<useListAs>ListAsRule</useListAs>
+			</FlagsApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G681</persistentId>
+	<prerequisiteTalents />
+	<rarity>exclusive</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G681_StrOrInt.TALENT_shortDescription.txt" />
+	<talentRollGroups>16</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats>
+		<Item>
+			<addValueName>Add_Stat</addValueName>
+			<stat>Strength</stat>
+			<values>
+				<Item>19</Item>
+				<Item>20.4</Item>
+				<Item>21.8</Item>
+				<Item>23.2</Item>
+				<Item>24.6</Item>
+				<Item>26</Item>
+				<Item>27.4</Item>
+				<Item>28.8</Item>
+				<Item>30.2</Item>
+				<Item>31.6</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_Stat</addValueName>
+			<stat>Intellect</stat>
+			<values>
+				<Item>19</Item>
+				<Item>20.4</Item>
+				<Item>21.8</Item>
+				<Item>23.2</Item>
+				<Item>24.6</Item>
+				<Item>26</Item>
+				<Item>27.4</Item>
+				<Item>28.8</Item>
+				<Item>30.2</Item>
+				<Item>31.6</Item>
+			</values>
+		</Item>
+	</variativeMaxTalentStats>
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
-	<BackLink DBID="/Items/Talents/Class/Healer/Ability1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A1.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Healer/CharityPowerSpell.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/AreaHeal.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/CharityPowerSpell_AoE.APLR" Count="1" />
 	<applicators>
 		<Item href="/Items/Talents/Class/Healer/status_A3_CharityPower.APLR" id="95C42817-7D4C-4435-884B-B333E1B79FB5">
 			<StatModApplicator>
@@ -118,9 +120,9 @@
 		<Item href="" />
 	</effect>
 	<enabled>
-		<compiledString>FRYAAAACAAAAHQAAADYAAABIZWFsZXJfQTMAAABIZWFsZXJfQTMAVYvsg+wMaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgMAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0EYtVCDtVDHQJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+		<compiledString>FRYAAAACAAAAHQAAADYAAABIZWFsZXJfQTMAAABIZWFsZXJfQTMAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgMAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCKRfuL5V3D</compiledString>
 		<returnType>bool</returnType>
-		<sString>tal("Healer_A3") &amp;&amp; pFirst != pSecond</sString>
+		<sString>tal("Healer_A3")</sString>
 	</enabled>
 	<flags>0</flags>
 	<formulaName></formulaName>

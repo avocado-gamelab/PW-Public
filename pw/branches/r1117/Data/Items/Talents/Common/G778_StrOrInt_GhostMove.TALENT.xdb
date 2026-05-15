@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Items/Talents/TalentKits/Redset7_12_SuperMove/Redset7_12_SuperMove.TALKIT" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet7_11.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="6" />
+	<BackLink DBID="/GameLogic/TalentGroup.TGRP" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Redset7_12.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/LB_G778" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_SuperSpeed" Count="1" />
+	<BackLink DBID="/Social/Quests/TalentQuests/_Settings" Count="1" />
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/status_G778_GhostWalk.APLR" />
+		<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/status_G780_G781_Buff.APLR" />
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G778: Резвая иноходь</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT" id="EBB1C826-6DCF-450F-A33A-D5FA7AD0A160">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ4AAAACAAAAEwAAACkAAABHNzc4X1N0ck9ySW50AFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUsAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAADwPw==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG778_StrOrInt == 1</sString>
+				</condition>
+				<name>StrOrInt</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/condition_This_InForma" />
+		<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/condition_G777_IsBought" />
+		<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/condition_G780_InForma" />
+		<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/condition_G780_BuffStrOrInt" />
+		<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/condition_G781_InForma" />
+		<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/condition_G781_BuffSpdOrDex" />
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT" id="19618DB4-8672-4D37-9846-EB78A891BEEB">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT" id="1437AAE9-3EB9-4425-9721-8EBD1B42B757">
+					<UnitConstant>
+						<name>Add_StrOrInt</name>
+						<var>
+							<compiledString>FQgAAAABAAAAFAAAAFQxX1N0YXQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT1_Stat</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/const_G777_CanCountActivate" />
+				<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/const_G777_kitCounter_TT" />
+				<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/const_TECH_FormCapacity" />
+				<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/const_G777_BonusSpeedPerTalent" />
+				<Item href="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT" id="7EB2A380-C9DC-4D12-B442-2EFB6947677B">
+					<UnitConstant>
+						<name>G778_GhostWalkDuration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>10</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/const_G780_BuffAmount" />
+				<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/const_G781_BuffAmount" />
+				<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/const_G780_G781_BuffDuration" />
+				<Item href="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT" id="FFEB40AC-8FE6-49DC-A716-C7644516ED9B">
+					<UnitConstant>
+						<name>This_InForma</name>
+						<var>
+							<compiledString>FQwAAAACAAAAEQAAACcAAABHNzc4X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAADbRfyL5V3DAAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG778_Active &gt; 0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAA0Qg==</compiledString>
+		<returnType>float</returnType>
+		<sString>45</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT" id="4166A72E-AAC0-42FA-813C-F49AB483D028">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>18</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_778.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT" id="4CFA085E-D3F1-4603-BB65-9C208FE08CED">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>StrOrInt</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength &gt;= sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G778_StrOrInt</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT" id="3F12BF29-A715-4064-8F87-710EEE20D245">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Strength</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength &gt;= sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQ0AAAABAAAAGQAAAEFkZF9TdHJPckludABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_StrOrInt</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Strength</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT" id="175C81B9-909B-470C-B07F-A62B06EA1ECD">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Intellect</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength &lt; sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQ0AAAABAAAAGQAAAEFkZF9TdHJPckludABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_StrOrInt</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Intellect</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/appl_G777_FormCounter.APLR" />
+		<Item href="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT" id="F4553B46-6EE6-441C-ACA3-5DC6E346EDE8">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>G778_Active</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString>FRYAAAACAAAAIwAAADYAAABHNzc3X0NhbkNvdW50QWN0aXZhdGUAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3B1SAAAA3+D2xER7BsZF/wHrBMZF/wCKRf+L5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG777_CanCountActivate</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G778_Active</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT" id="F29703FE-37B0-48A1-B681-3EEE332651D8">
+			<FlagsApplicator parent="/GameLogic/GeneralApplicators/ForbidTalentByCondition.APLR">
+				<caption>автозапрет таланта без базы / вне формы</caption>
+				<enabled>
+					<compiledString>FRwAAAAEAAAAIwAAADwAAAByAAAAiAAAAEc3NzcAAAAARzc3NwAAAABHNzc4X0FjdGl2ZQBVi+yD7AxoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAgAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQraBAAAACLVQiLAotNCIuQiAEAAP/S3B2qAAAA3+D2xEF1CcdF9AAAAADrB8dF9AEAAACKRfSL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(tal("G777") &amp;&amp; sender.vG778_Active &gt; 0)</sString>
+				</enabled>
+				<talents>
+					<Item href="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT" />
+				</talents>
+			</FlagsApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/appl_G777_BonusSpeed.APLR" />
+	</passiveApplicators>
+	<persistentId>G778</persistentId>
+	<prerequisiteTalents />
+	<rarity>magnificent</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G778_StrOrInt_GhostMove.TALENT_shortDescription.txt" />
+	<talentRollGroups>16</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats>
+		<Item>
+			<addValueName>Add_StrOrInt</addValueName>
+			<stat>Strength</stat>
+			<values>
+				<Item>5</Item>
+				<Item>5.4</Item>
+				<Item>5.8</Item>
+				<Item>6.2</Item>
+				<Item>6.6</Item>
+				<Item>7</Item>
+				<Item>7.4</Item>
+				<Item>7.8</Item>
+				<Item>8.2</Item>
+				<Item>8.6</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_StrOrInt</addValueName>
+			<stat>Intellect</stat>
+			<values>
+				<Item>5</Item>
+				<Item>5.4</Item>
+				<Item>5.8</Item>
+				<Item>6.2</Item>
+				<Item>6.6</Item>
+				<Item>7</Item>
+				<Item>7.4</Item>
+				<Item>7.8</Item>
+				<Item>8.2</Item>
+				<Item>8.6</Item>
+			</values>
+		</Item>
+	</variativeMaxTalentStats>
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

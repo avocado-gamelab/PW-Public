@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
-	<BackLink DBID="/Items/Talents/Class/FallenAngel/Ability_A4_2_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/FallenAngel.TALENTSET" Count="1" />
 	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/FallenAngel.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/FallenAngel/Ability_A4_2_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -33,8 +33,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/FallenAngel/Ability_A3_SUP.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/FallenAngel/Ability_A3_SUP.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/FallenAngel/Ability_A3_SUP.TALENT" id="D45B99DD-BC7B-4F05-8683-3027D279ECF5">
 			<ConditionFormula>
@@ -52,7 +52,9 @@
 	</conflictingTalents>
 	<constants href="/Items/Talents/Class/FallenAngel/Ability_A3_SUP.TALENT" id="3BC361C0-FFE9-4FA5-9297-067611E937AF">
 		<UnitConstantsContainer>
-			<vars />
+			<vars>
+				<Item href="/Items/Talents/Class/FallenAngel/const_A3_SUP_DamageMultiplier" />
+			</vars>
 		</UnitConstantsContainer>
 	</constants>
 	<consumptionBonus>
@@ -73,7 +75,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>22.7</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/FallenAngel/A3_SUP.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
-	<BackLink DBID="/Items/Talents/Level1/G482_SelfHeal.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G482_SelfHeal.TALENT" Count="1" />
 	<applicators>
 		<Item href="/Items/Talents/TalentKits/RedSet2_2_Heal/status_G482_HealOfTime.APLR" id="88059EFC-8A71-47E8-AF0D-6DCE64CC6534">
 			<SpellPeriodicallyApplicator>
@@ -181,6 +181,36 @@
 										<Item href="/Items/Talents/TalentKits/RedSet2_2_Heal/status_G482_HealOfTime.APLR" id="805F5A45-88F9-4CCE-B3CD-643E58089D11">
 											<Spell>
 												<applicators>
+													<Item href="/Items/Talents/TalentKits/RedSet2_2_Heal/status_G482_HealOfTime.APLR" id="010E70A3-E9EF-4BD9-B4BA-23AD8EFEB798">
+														<PermanentStatModApplicator>
+															<applyTarget>AbilityOwner</applyTarget>
+															<caption>Запоминаем оверхил</caption>
+															<customApplyType>None</customApplyType>
+															<enabled>
+																<compiledString></compiledString>
+																<returnType>bool</returnType>
+																<sString>true</sString>
+															</enabled>
+															<formulaName></formulaName>
+															<LoggingEvent>-1</LoggingEvent>
+															<modifier>
+																<addValue>
+																	<compiledString>FQwAAAABAAAAJwAAAEhlYWxQZXJUaWNrAFWL7IPsFItFCIsQi00IiwL/0ItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d+P/Q3EX4i00IixGLTQiLQgzdXfD/0Nxt8Nld7NlF7IvlXcM=</compiledString>
+																	<returnType>float</returnType>
+																	<sString>sLife + cHealPerTick - sMaxLife</sString>
+																</addValue>
+																<multValue>
+																	<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+																	<returnType>float</returnType>
+																	<sString>0</sString>
+																</multValue>
+																<stat>Life</stat>
+																<topModifier>false</topModifier>
+																<variable>G482_Overheal</variable>
+															</modifier>
+															<providerName></providerName>
+														</PermanentStatModApplicator>
+													</Item>
 													<Item href="/Items/Talents/TalentKits/RedSet2_2_Heal/status_G482_HealOfTime.APLR" id="46350CAD-DDD0-4AF4-9926-86E0B347D622">
 														<HealApplicator>
 															<amount>
@@ -201,6 +231,28 @@
 															<LoggingEvent>-1</LoggingEvent>
 															<providerName></providerName>
 															<uiEvent href="/UI/Events/CommonEvents/EventHeal.UIEV" />
+														</HealApplicator>
+													</Item>
+													<Item href="/Items/Talents/TalentKits/RedSet2_2_Heal/status_G482_HealOfTime.APLR" id="21BFB9EE-4986-4E77-9D3D-15066B3A0D5E">
+														<HealApplicator>
+															<amount>
+																<compiledString>FTAAAAADAAAANwAAAFQAAABtAAAARzQ4Ml9PdmVyaGVhbAAAAE92ZXJoZWFsVG9NYW5hQ29udmVyc2lvblBlcmNlbnQAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Qi00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ3V34/9DcTfjcDXsAAADZXfTZRfSL5V3DexSuR+F6hD8=</compiledString>
+																<returnType>float</returnType>
+																<sString>sender.vG482_Overheal * cOverhealToManaConversionPercent * 0.01</sString>
+															</amount>
+															<applyTarget>ApplicatorTarget</applyTarget>
+															<caption>Восстанавливаем энергию на процент от оверхила</caption>
+															<enabled>
+																<compiledString>FQ4AAAACAAAAEwAAACkAAABHNDgyX092ZXJoZWFsAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUsAAADf4PbEQXUJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+																<returnType>bool</returnType>
+																<sString>sender.vG482_Overheal &gt; 0</sString>
+															</enabled>
+															<formulaName></formulaName>
+															<healTarget>Energy</healTarget>
+															<ignoreHealingMods>false</ignoreHealingMods>
+															<LoggingEvent>-1</LoggingEvent>
+															<providerName></providerName>
+															<uiEvent href="/UI/Events/CommonEvents/EventEnergy.UIEV" />
 														</HealApplicator>
 													</Item>
 												</applicators>
@@ -245,10 +297,104 @@
 				<targetSelector href="" />
 			</SpellPeriodicallyApplicator>
 		</Item>
+		<Item href="/Items/Talents/TalentKits/RedSet2_2_Heal/status_G482_HealOfTime.APLR" id="E352A99B-6DA1-44AE-A2E4-DA5EEE6A578D">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Add_MaterialDamageDecrease</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FRcAAAABAAAAIwAAAERhbWFnZVJlZHVjdGlvblBlcmNlbnQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+						<returnType>float</returnType>
+						<sString>cDamageReductionPercent</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>MaterialDamageDecrease</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/RedSet2_2_Heal/status_G482_HealOfTime.APLR" id="50A825D2-DB9F-4628-9A8A-76713C4D51B4">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Add_EnergyDamageDecrease</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FRcAAAABAAAAIwAAAERhbWFnZVJlZHVjdGlvblBlcmNlbnQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+						<returnType>float</returnType>
+						<sString>cDamageReductionPercent</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>EnergyDamageDecrease</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
 	</applicators>
 	<applyTarget>AbilityOwner</applyTarget>
 	<behaviorFlags>0</behaviorFlags>
-	<caption>Статус с хилом</caption>
+	<caption>Статус с хилом и снижением урона</caption>
 	<customCounter>
 		<compiledString>FQAAAAAAAAAAVYvsM8Bdww==</compiledString>
 		<returnType>int</returnType>

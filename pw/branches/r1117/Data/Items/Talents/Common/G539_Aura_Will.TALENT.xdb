@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set3" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set3_kit5" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset3_5_AOE/Redset3_5_AOE.TALKIT" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="3" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_LosTal7.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_RedSet3.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet3.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Angel_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Healer_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NY2020_BadList.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season13_BadList.ROLLCONT" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G539: Гимн решительности</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G539_Aura_Will.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G539_Aura_Will.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G539_Aura_Will.TALENT" id="BFFE8A42-F6CD-4EB5-B93E-5A957AB8528D">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTM5X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF0CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(sender.vG539_Active&gt;0)</sString>
+				</condition>
+				<name>InForma</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G539_Aura_Will.TALENT" id="4116F7ED-A614-4B77-A27B-B759EA1EE06F">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G539_Aura_Will.TALENT" id="4904FA17-7A85-4322-8EB8-9D0AFF1085F6">
+					<UnitConstant>
+						<name>Add_Will</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUNV9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcNmZmZmZmbmPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT5_Stat * 0.7</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G539_Aura_Will.TALENT" id="45A32A06-9060-49BD-940E-248BD89A1097">
+					<UnitConstant>
+						<name>TT_Add_Will</name>
+						<var>
+							<compiledString>FQ0AAAABAAAAEQAAAEc1MzlfQWRkV2lsbABVi+xoAAAAAItFDIsQi00Mi4KIAQAA/9Bdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>receiver.vG539_AddWill</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset3_5_AOE/const_G536_MaxForm" />
+				<Item href="/Items/Talents/TalentKits/Redset3_5_AOE/const_G539_Add_Will" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G539_Aura_Will.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>22.7</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_539.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>4</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G539_Aura_Will.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G539_Aura_Will.TALENT" id="8094C649-4CA1-48D6-9877-B74576297A39">
+			<AuraApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Common/Applicators/status_G539_Will.APLR" />
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>-- Аура (Воли)</caption>
+				<effect>
+					<Item href="/Items/Talents/Common/G539_Aura_Will.TALENT" id="85DB4F69-0AAE-458D-B946-DF597A142ECB">
+						<AuraEffect>
+							<deathType>Manual</deathType>
+							<enableCondition href="" />
+							<lifeTime>0</lifeTime>
+							<type>Ally</type>
+						</AuraEffect>
+					</Item>
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<range>
+					<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+					<returnType>float</returnType>
+					<sString>cRange_Long</sString>
+				</range>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<targets>335544335</targets>
+				<targetSelector href="" />
+				<type>Ally</type>
+			</AuraApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Applicators/status_G539_WillSelf.APLR" />
+		<Item href="/Items/Talents/Common/G539_Aura_Will.TALENT" id="A7D52554-C305-4939-BB9B-B0B246C9F960">
+			<PermanentStatModApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<caption>+Воли</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9XaWxsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Will</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Will</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G539_Aura_Will.TALENT" id="6CFCB8C3-2302-439F-BCE1-DC53558FA6B6">
+			<PermanentStatModApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<caption>Счетчик аур</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>Status_539</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G539_Aura_Will.TALENT" id="24404E66-C098-4577-ADE7-6B1063EC2315">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Счетчик прибавки</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName>Add_Will varible</formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9XaWxsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Will</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G539_AddWill</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Redset3_5_AOE/G536_FormCounter.APLR" />
+		<Item href="/Items/Talents/Common/G539_Aura_Will.TALENT" id="46D4F849-E10E-43B3-A750-6E4E338666D8">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>G539_Active</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString>FSkAAAADAAAAMAAAAE0AAAB/AAAARzUzNl9Gb3JtQ291bnRlcgAAAABHNTM2X01heEZvcm0AAAAARzUzNgBVi+yD7BBoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgUAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sQBdTWLTQiLEYtNCIuCfAEAAP/QiUX0aCQAAACLTfSLEYtN9IuCqAEAAP/QhcB0CcdF8AEAAADrB8dF8AAAAACKRfCL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>(sender.vG536_FormCounter &lt;= cG536_MaxForm)&amp;&amp;(sObjectMaster-&gt;GetTalent("G536"))</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G539_Active</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G539</persistentId>
+	<prerequisiteTalents />
+	<rarity>good</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>16</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>Will</stat>
+			<values>
+				<Item>13.3</Item>
+				<Item>14.28</Item>
+				<Item>15.26</Item>
+				<Item>16.24</Item>
+				<Item>17.22</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>136258047</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Long</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

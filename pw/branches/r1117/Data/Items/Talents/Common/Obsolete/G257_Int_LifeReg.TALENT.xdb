@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar4" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_AtkSpd_Upg" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Dex" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Dex_Upg" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Energy" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Life_Energy" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Life_Energy_Upg" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Sta_Upg" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Upg" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Will" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Will_Upg" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_Int" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_Int_Upg" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Fairy/_A.HROB" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Fairy/_B.HROB" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Episode1/heroes/ally/_.HROB" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="3" />
+	<BackLink DBID="/Test/Talents/TestSet10.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Angel/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Assassin/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Bard/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Inventor/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mowgli/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Assassin/New_SUP.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G257: Дикий разум</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G257_Int_LifeReg.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G257_Int_LifeReg.TALENT" id="557D2B80-B954-4EA1-B2A3-855309D82C4C">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G257_Int_LifeReg.TALENT" id="377B8816-EFE4-46E2-BD40-AEBD9288FABF">
+					<UnitConstant>
+						<name>Add_Intellect</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUNF9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcMAAAAAAADgPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT4_Stat * 0.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G257_Int_LifeReg.TALENT" id="CF707923-855A-430A-A3BC-A63830EBCE21">
+					<UnitConstant>
+						<name>Add_LifeRegAbs</name>
+						<var>
+							<compiledString>FRYAAAADAAAAJQAAAD8AAABYAAAAVDRfU3RhdABMaWZlUmVnQnVkZ2V0AFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoCAAAAItVEIsCi00Qi1BQ3V34/9LcTfjcDWYAAADZXfTZRfSL5V3DAAAAAAAA4D8=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT4_Stat * cLifeRegBudget * 0.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>6</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G257_Int_LifeReg.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>16.15</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_257.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>3</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G257_Int_LifeReg.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/Obsolete/G257_Int_LifeReg.TALENT" id="DD3B0A4D-0381-4774-88A6-4F9D64A3A3AC">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Intellect</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQ4AAAABAAAAGgAAAEFkZF9JbnRlbGxlY3QAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Intellect</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Intellect</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G257_Int_LifeReg.TALENT" id="672B189F-D416-4407-95C3-70C994CA0B4A">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_LifeRegAbs</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQ8AAAABAAAAGwAAAEFkZF9MaWZlUmVnQWJzAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_LifeRegAbs</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>LifeRegenerationAbsolute</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G257</persistentId>
+	<prerequisiteTalents />
+	<rarity>excellent</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/Obsolete/G257_Int_LifeReg.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>Intellect</stat>
+			<values>
+				<Item>6.5</Item>
+				<Item>7</Item>
+				<Item>7.5</Item>
+				<Item>8</Item>
+				<Item>8.5</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName></addValueName>
+			<stat>LifeRegenerationAbsolute</stat>
+			<values>
+				<Item>5.85</Item>
+				<Item>6.3</Item>
+				<Item>6.75</Item>
+				<Item>7.2</Item>
+				<Item>7.65</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>2040319</targetType>
+	<type>Simple</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

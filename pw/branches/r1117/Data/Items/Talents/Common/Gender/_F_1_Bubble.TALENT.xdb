@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>(Ж-1) Пузырь</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="75EE38AC-8773-4A99-A1C6-CD8B1070A2A0">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsi0UIixCLTQiLQgj/0A+2wPfYG8CDwAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sIsMale == false</sString>
+				</condition>
+				<name>HeroGenderValid</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="BDDECC79-BE38-43A2-A064-C202B15EF29D">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsi0UIixCLTQiLQnD/0DPJg/gCD5TBisFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sZZimaSex == ZZSEX_FEMALE</sString>
+				</condition>
+				<name>ZZSexValid</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="DDAB1AB3-E1E1-4A26-9106-0B12D755896D">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="006442FA-9C5D-4B9E-A7E3-18F208C32E6F">
+					<UnitConstant>
+						<name>Range</name>
+						<var>
+							<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange_Long</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="97EC806E-1420-4832-8A02-F4564F79AC8E">
+					<UnitConstant>
+						<name>Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="F0CD1036-AD80-4800-ADF6-048568E31B4F">
+					<UnitConstant>
+						<name>Add_Life</name>
+						<var>
+							<compiledString>FQsAAAADAAEAFAAAAB4AAABHAAAAkgAAAExpZmVCdWRnZXQAVYvsg+wMUdkFbAAAANkcJFHZBWgAAADZHCSLRRCLEItNEItCbP/QUdkcJOg1AAAAg8QEi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ3V34/9DcTfjZXfTZRfSL5V3DmplZQJqZmT5Vi+xR2UUI2Rwk6AUAAACDxARdw1WL7FHZRQiD7AjdHCToXv///4PECNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>floor(refineScale(3.4,0.3))*cLifeBudget</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Gender/const_DamageAbsorb" />
+				<Item href="/Items/Talents/Common/Gender/const_PercentOfLife" />
+				<Item href="/Items/Talents/Common/Gender/const_GenderCooldown" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQ8AAAABAAAAGwAAAEdlbmRlckNvb2xkb3duAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<returnType>float</returnType>
+		<sString>cGenderCooldown</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>19</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/Gender_Female.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>true</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="3B77AABA-19B3-4813-86F1-BE8AE7FFFEE7">
+			<AuraApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Common/Gender/_1/EnemyHeroesCounter.APLR" />
+					<Item href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="3E3DD01A-E428-4FCC-86BC-6CF74333F0D6">
+						<TriggerApplicator parent="/Items/Talents/Common/Gender/_1/Trigger.APLR">
+							<actionsCount>
+								<compiledString></compiledString>
+								<sString>0</sString>
+							</actionsCount>
+							<enabled>
+								<compiledString></compiledString>
+								<sString>true</sString>
+							</enabled>
+							<lifeTime>
+								<compiledString></compiledString>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<processor href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="EA29E570-C0B2-4FC8-8025-4A019C7B50F6">
+								<EventProcessorGroup parent="/Items/Talents/Common/Gender/_1/GroupProcessor.EVNT">
+									<spell href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="6E7DAEDD-32AF-48D7-BFB5-5D6462E226E0">
+										<Spell>
+											<applicators>
+												<Item href="/GameLogic/GeneralApplicators/Dispell.APLR" />
+												<Item href="/Items/Talents/Common/Gender/status_G3m.APLR" />
+												<Item href="/Items/Talents/Common/Gender/_1/effect_gender1.APLR" />
+												<Item href="/Items/Talents/Common/Gender/_1/effect_gender2.APLR" />
+												<Item href="/Items/Talents/Common/Gender/_1/_status_TriggeredGenderMale.APLR" />
+												<Item href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="26282CC3-04A5-4AC2-B798-9EE2AAB7EEDC">
+													<SpellApplicator>
+														<applyTarget>AbilityOwner</applyTarget>
+														<caption>Trigger Self</caption>
+														<enabled>
+															<compiledString></compiledString>
+															<returnType>bool</returnType>
+															<sString>true</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<providerName></providerName>
+														<spell href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="C9E205AF-AAF0-4818-B85E-B1932FB6029E">
+															<Spell>
+																<applicators>
+																	<Item href="/Items/Talents/Common/Gender/_1/_status_TriggeredGenderFemale.APLR" />
+																</applicators>
+																<dispatch href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="10D5C027-E163-4BB7-B098-91ED9E90B091">
+																	<DispatchImmediate>
+																		<alwaysApply>false</alwaysApply>
+																		<applyEffect>
+																			<Item href="" />
+																			<Item href="" />
+																		</applyEffect>
+																		<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																		<applyEffectOrientation>Default</applyEffectOrientation>
+																		<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																		<dieAfterApply>true</dieAfterApply>
+																		<dispatchEffect>
+																			<Item href="" />
+																			<Item href="" />
+																		</dispatchEffect>
+																		<flags>0</flags>
+																		<instantApply>false</instantApply>
+																	</DispatchImmediate>
+																</dispatch>
+															</Spell>
+														</spell>
+														<spellTarget>ApplicatorTarget</spellTarget>
+														<targetSelector href="" />
+													</SpellApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="78C70538-AAE2-4AC4-9F5A-EA97757BFC7A">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+								</EventProcessorGroup>
+							</processor>
+						</TriggerApplicator>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>аура</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FRMAAAABAAAARAAAAEVuYWJsZUdlbmRlclN0YXR1cwBVi+xRi0UIixCLTQiLQnD/0IP4AnU9i00IixGLTQiLQgj/0A+2yIXJdSlqAItVEFJoAAAAAItFCIsQi00Ii4KcAQAA/9A7RRB1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>sZZimaSex == ZZSEX_FEMALE &amp;&amp; sIsMale == false &amp;&amp; sender.applEnableGenderStatus(GLOBAL) == pMisc</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<range>
+					<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+					<returnType>float</returnType>
+					<sString>cRange</sString>
+				</range>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<targets>1909247</targets>
+				<targetSelector href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="C08E88DF-55C2-4A8F-B5E9-C4684F9C4C39">
+					<ComparingTargetSelector>
+						<referenceValue>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</referenceValue>
+						<targetSelector href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="901FB2CF-2345-49AA-B70F-958FB8E59B28">
+							<ConditionTargetSelector>
+								<condition>
+									<compiledString>FTYAAAAGAAAAVQAAAGsAAACfAAAAuAAAAM0AAAAQAQAASXNDbG9uZQBQZXJjZW50T2ZMaWZlAAAARW5hYmxlR2VuZGVyU3RhdHVzAABGYWtlRGVhdGgAVYvsg+wUi0UMixCLTQyLQgj/0A+2yIXJD4TeAAAAaAAAAACLVQyLAotNDIuQiAEAAP/S3B1IAQAA3+D2xEQPirgAAACLRQyLEItNDIsC/9CLTQyLEYtNDItCDN1d+P/Qi00MUYtVCFJoCAAAAItFEIsQi00Qi0JQ3V3w/9DcTfDcDUABAADcXfjf4PbEQXVsagCLTRBRaBgAAACLVQyLAotNDIuQnAEAAP/SO0UQdUyLRQyLEItNDItCcP/Qg/gBdBGLTQyLEYtNDItCcP/QhcB1KWoAi00QUWgsAAAAi1UMiwKLTQyLkJwBAAD/0jtFEHUJx0XsAQAAAOsHx0XsAAAAAIpF7IvlXcMAAABA4XqEPwAAAAAAAAAA</compiledString>
+									<returnType>bool</returnType>
+									<sString>rIsMale &amp;&amp; receiver.vIsClone == 0 &amp;&amp; rLife &lt; rMaxLife * cPercentOfLife * 0.01f &amp;&amp; receiver.FindApplicator( "EnableGenderStatus", pMisc, GLOBAL ) == pMisc &amp;&amp; (rZZimaSex == ZZSEX_MALE || rZZimaSex == ZZSEX_UNDEFINED)&amp;&amp;receiver.applFakeDeath(GLOBAL) == pMisc</sString>
+								</condition>
+								<flags>0</flags>
+								<mode>Normal</mode>
+								<targetSelector href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="8A871BB9-FA7E-42F2-8166-730E2E6E6F34">
+									<AreaTargetSelector>
+										<absolutePosition>
+											<x>0</x>
+											<y>0</y>
+										</absolutePosition>
+										<flags>0</flags>
+										<mode>Normal</mode>
+										<range>
+											<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+											<returnType>float</returnType>
+											<sString>cRange</sString>
+										</range>
+										<targetFilter>268435459</targetFilter>
+										<targetSelector href="" />
+									</AreaTargetSelector>
+								</targetSelector>
+							</ConditionTargetSelector>
+						</targetSelector>
+						<valueToCompare>
+							<compiledString>FQAAAAAAAAAAVYvsi0UMixCLTQyLAv/QXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>rLife</sString>
+						</valueToCompare>
+					</ComparingTargetSelector>
+				</targetSelector>
+				<type>None</type>
+			</AuraApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Gender/Status_F.APLR" />
+		<Item href="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT" id="53BD0CE9-3533-4983-9FF6-6E13284C6649">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>- Добавляем Здоровье</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9MaWZlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Life</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId></persistentId>
+	<prerequisiteTalents />
+	<rarity>ordinary</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/Gender/_F_1_Bubble.TALENT_shortDescription.txt" />
+	<talentRollGroups>0</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>Life</stat>
+			<values>
+				<Item>90</Item>
+				<Item>90</Item>
+				<Item>120</Item>
+				<Item>120</Item>
+				<Item>120</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>0</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_kit4" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset1_4_AOEHealDmg/R4_AOEHealDmg.TALKIT" Count="2" />
+	<BackLink DBID="/Social/TalentsCollection" Count="5" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NormTal.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_RedSet1.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet2_1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Epic_Life.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Epic_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Naga/Epic_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Naga/Epic_Will.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Unicorn/Epic_IntWill.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Warlord/Epic_StrSta.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season9_Mediocre.ROLLCONT" Count="1" />
+	<BackLink DBID="/GameLogic/TalentGroup.TGRP" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Naga_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NY2020_MediocreList.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season13_MediocreList.ROLLCONT" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="DFC4B45F-8D9F-4080-9EDD-BE07FB2CBEB9">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Спел аппликатор</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="422FE6BB-9507-49D8-88DB-7B08FB6510AA">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="702BBDDC-855E-439F-A7D3-9887C1BE8AAB">
+								<SpellSwitchApplicator>
+									<activeSpellIndex>
+										<compiledString>FQAAAAAAAAAAVYvsVotFCIsQi00Ii4KQAQAA/9CL8ItNDIsRi00Mi4KQAQAA/9AzyTvwD5XBi8FeXcM=</compiledString>
+										<returnType>int</returnType>
+										<sString>sFctn == rFctn ? 0 : 1</sString>
+									</activeSpellIndex>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<caption></caption>
+									<dontUseDispatches>true</dontUseDispatches>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+									<spells>
+										<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="F0BBADBE-49A6-4C85-9E99-BAA76561C8B5">
+											<Spell>
+												<applicators>
+													<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="797C38BA-D420-414C-8F68-B578F21D67BF">
+														<HealApplicator>
+															<amount>
+																<compiledString>FZ4AAAAJAAEArQAAAMsAAADpAAAAAwEAACABAAB1AQAAlQEAALIBAAD1AQAA9AIAAEc0NjhfTWF4SGVhbFBlcmNlbnQARzQ2OF9NaW5IZWFsUGVyY2VudABHNDY4X01pbkhlYWxQZXJjZW50AEc0NjhfTWF4SGVhbFBlcmNlbnQARzQ2OF9NaW5IZWFsUGVyY2VudABHNDY4X01heEhlYWxSYW5nZQAAAEc0NjhfTWluSGVhbFJhbmdlAAAARzQ2OF9NYXhIZWFsUmFuZ2UAVYvsg+xQi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JR2Rwki0UMUItNCFFoFAAAAItVEIsCi00Qi1BQ/9JR2Rwki0UMUItNCFFoKAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWg8AAAAi1UQiwKLTRCLUFDdXej/0otFDFCLTQhRaFAAAACLVRCLAotNEItQUN1d4P/S3G3gjUX4UItNDIsRi00Mi4KMAQAA3V3Y/9BQjU3wUYtVCIsCi00Ii5CMAQAA/9JQ6A0BAACDxAiLRQxQi00IUWhkAAAAi1UQiwKLTRCLUFDdXdD/0txt0ItFDFCLTQhRaHgAAACLVRCLAotNEItQUN1dyP/Si0UMUItNCFFojAAAAItVEIsCi00Qi1BQ3V3A/9LcbcDcfcjZ6N7h3E3Y3EXo2V282UW8UdkcJOhpAAAAg8QE2Rwk6DYAAACDxAjcDRYCAACLRQiLEItNCItCDN1dtP/Q3E202V2w2UWwi+Vdw3sUrkfheoQ/AAAAAAAA8D9Vi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3DVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdw1WL7IPsFItFCNlABItNDNhhBNld9NlF9FHZHCSLVQjZAotFDNgg2V3w2UXwUdkcJI1N+OhXAAAA2UX42E342UX82E383sHZXezZRexR2Rwk6AcAAACDxASL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6OT8//+DxAjZXfzZRfyL5V3DVYvsUYlN/ItF/NlFCNkYi0382UUM2VkEi0X8i+VdwggA</compiledString>
+																<returnType>float</returnType>
+																<sString>min(max( cG468_MinHealPercent + (cG468_MaxHealPercent - cG468_MinHealPercent) * (1.0f - ((d(sPos, rPos) - cG468_MaxHealRange) / (cG468_MinHealRange - cG468_MaxHealRange))), cG468_MinHealPercent), cG468_MaxHealPercent) * 0.01 * sMaxLife</sString>
+															</amount>
+															<applyTarget>ApplicatorTarget</applyTarget>
+															<caption>Хилим пропорционально расстоянию до цели</caption>
+															<enabled>
+																<compiledString>FQwAAAACAAAAEQAAACcAAABHNDY4X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+																<returnType>bool</returnType>
+																<sString>sender.vG468_Active &gt; 0</sString>
+															</enabled>
+															<formulaName></formulaName>
+															<healTarget>Health</healTarget>
+															<ignoreHealingMods>false</ignoreHealingMods>
+															<LoggingEvent>-1</LoggingEvent>
+															<providerName></providerName>
+															<uiEvent href="/UI/Events/CommonEvents/EventHeal.UIEV" />
+														</HealApplicator>
+													</Item>
+													<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="0A1B1C22-294F-4328-BF5A-E271532DECFF">
+														<VariableProxyApplicator>
+															<applicators>
+																<Item>
+																	<applicator href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="7562A8B2-BE29-4D8B-994A-9C1EB77AA341">
+																		<DispellApplicator>
+																			<applyTarget>ApplicatorTarget</applyTarget>
+																			<caption>dispell</caption>
+																			<enabled>
+																				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</enabled>
+																			<formulaName></formulaName>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<maxEffectsToDispell>
+																				<compiledString>FQ8AAAABAAAAGwAAAERpc3BlbGxfTnVtYmVyAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SUdkcJOgFAAAAg8QEXcO4AQAAAA+i98IAAAAEdAfzDyxEJATD6QAAAABVi+yD7AzZRQjZffwPt0X8DQAMAACJRfjZbfjbXfTZbfyLRfSL5V3D</compiledString>
+																				<returnType>int</returnType>
+																				<sString>f2l(cDispell_Number); // global const = 100, redeclare in ability if need another value</sString>
+																			</maxEffectsToDispell>
+																			<providerName></providerName>
+																			<targets href="" />
+																		</DispellApplicator>
+																	</applicator>
+																	<variableNames>
+																		<Item>effectsDispelled</Item>
+																	</variableNames>
+																</Item>
+																<Item>
+																	<applicator href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="E1BB9192-082A-4936-AF8C-3AB751EC0220">
+																		<FlagsApplicator>
+																			<applyTarget>ApplicatorTarget</applyTarget>
+																			<behaviorFlags>33</behaviorFlags>
+																			<caption>fx dispell</caption>
+																			<consumables />
+																			<effect>
+																				<Item href="/Effects/Buffs/Dispel/_Ally.EFFT" />
+																				<Item href="" />
+																			</effect>
+																			<enabled>
+																				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</enabled>
+																			<flag>0</flag>
+																			<formulaName></formulaName>
+																			<lifeTime>
+																				<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPg==</compiledString>
+																				<returnType>float</returnType>
+																				<sString>0.2f</sString>
+																			</lifeTime>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<providerName></providerName>
+																			<startCondition>
+																				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</startCondition>
+																			<talents />
+																			<useListAs>ListAsRule</useListAs>
+																		</FlagsApplicator>
+																	</applicator>
+																	<variableNames />
+																</Item>
+															</applicators>
+															<applyTarget>ApplicatorTarget</applyTarget>
+															<caption>Диспелл и эффекты к нему</caption>
+															<enabled>
+																<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>true</sString>
+															</enabled>
+															<formulaName></formulaName>
+															<LoggingEvent>-1</LoggingEvent>
+															<providerName></providerName>
+														</VariableProxyApplicator>
+													</Item>
+												</applicators>
+												<dispatch href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="73DB61FB-A49A-4E39-B521-61FA42E12F91">
+													<DispatchImmediate>
+														<alwaysApply>false</alwaysApply>
+														<applyEffect>
+															<Item href="" />
+															<Item href="" />
+														</applyEffect>
+														<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+														<applyEffectOrientation>Default</applyEffectOrientation>
+														<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+														<dieAfterApply>true</dieAfterApply>
+														<dispatchEffect>
+															<Item href="" />
+															<Item href="" />
+														</dispatchEffect>
+														<flags>0</flags>
+														<instantApply>false</instantApply>
+													</DispatchImmediate>
+												</dispatch>
+											</Spell>
+										</Item>
+										<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="D17BCDB5-2EFB-47F9-A84A-377474880A54">
+											<Spell>
+												<applicators>
+													<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="0C70204E-4A5C-44D4-A2EA-0611BB0CF9B0">
+														<VariableProxyApplicator>
+															<applicators>
+																<Item>
+																	<applicator href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="F00CB484-C23A-4A4C-A6BF-50346C38B6ED">
+																		<DispellApplicator>
+																			<applyTarget>ApplicatorTarget</applyTarget>
+																			<caption>dispell</caption>
+																			<enabled>
+																				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</enabled>
+																			<formulaName></formulaName>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<maxEffectsToDispell>
+																				<compiledString>FQ8AAAABAAAAGwAAAERpc3BlbGxfTnVtYmVyAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SUdkcJOgFAAAAg8QEXcO4AQAAAA+i98IAAAAEdAfzDyxEJATD6QAAAABVi+yD7AzZRQjZffwPt0X8DQAMAACJRfjZbfjbXfTZbfyLRfSL5V3D</compiledString>
+																				<returnType>int</returnType>
+																				<sString>f2l(cDispell_Number); // global const = 100, redeclare in ability if need another value</sString>
+																			</maxEffectsToDispell>
+																			<providerName></providerName>
+																			<targets href="" />
+																		</DispellApplicator>
+																	</applicator>
+																	<variableNames>
+																		<Item>effectsDispelled</Item>
+																	</variableNames>
+																</Item>
+																<Item>
+																	<applicator href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="82220A1D-043A-420F-AE85-BE8A1FA24298">
+																		<FlagsApplicator>
+																			<applyTarget>ApplicatorTarget</applyTarget>
+																			<behaviorFlags>33</behaviorFlags>
+																			<caption>fx dispell</caption>
+																			<consumables />
+																			<effect>
+																				<Item href="/Effects/Buffs/Dispel/_Enemy.EFFT" />
+																				<Item href="" />
+																			</effect>
+																			<enabled>
+																				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</enabled>
+																			<flag>0</flag>
+																			<formulaName></formulaName>
+																			<lifeTime>
+																				<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPg==</compiledString>
+																				<returnType>float</returnType>
+																				<sString>0.2f</sString>
+																			</lifeTime>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<providerName></providerName>
+																			<startCondition>
+																				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</startCondition>
+																			<talents />
+																			<useListAs>ListAsRule</useListAs>
+																		</FlagsApplicator>
+																	</applicator>
+																	<variableNames />
+																</Item>
+															</applicators>
+															<applyTarget>ApplicatorTarget</applyTarget>
+															<caption>Диспелл и эффекты к нему</caption>
+															<enabled>
+																<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>true</sString>
+															</enabled>
+															<formulaName></formulaName>
+															<LoggingEvent>-1</LoggingEvent>
+															<providerName></providerName>
+														</VariableProxyApplicator>
+													</Item>
+												</applicators>
+												<dispatch href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="892BAF3E-1019-4C4D-813B-48BE2BFCB684">
+													<DispatchImmediate>
+														<alwaysApply>false</alwaysApply>
+														<applyEffect>
+															<Item href="" />
+															<Item href="" />
+														</applyEffect>
+														<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+														<applyEffectOrientation>Default</applyEffectOrientation>
+														<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+														<dieAfterApply>true</dieAfterApply>
+														<dispatchEffect>
+															<Item href="" />
+															<Item href="" />
+														</dispatchEffect>
+														<flags>0</flags>
+														<instantApply>false</instantApply>
+													</DispatchImmediate>
+												</dispatch>
+											</Spell>
+										</Item>
+									</spells>
+								</SpellSwitchApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="B61EE5DA-6E67-49F6-A114-3BD2BE0064E7">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="4059A16D-F105-485F-891A-DF359EFF1A8D">
+					<CountingTargetSelector>
+						<enableSorting>true</enableSorting>
+						<flags>0</flags>
+						<heroesFirst>true</heroesFirst>
+						<mode>Normal</mode>
+						<order>Increasing</order>
+						<sortingValue>
+							<compiledString>FQAAAAAAAAAAVYvsUWjoAwAAagGLRRCLEItNEItCXP/QiUX820X8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>random(1, 1000)</sString>
+						</sortingValue>
+						<targetSelector href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="107BCC65-7D7D-4FBF-ABA6-636C2BF62063">
+							<AreaTargetSelector>
+								<absolutePosition>
+									<x>0</x>
+									<y>0</y>
+								</absolutePosition>
+								<flags>0</flags>
+								<mode>Normal</mode>
+								<range>
+									<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+									<returnType>float</returnType>
+									<sString>cRange</sString>
+								</range>
+								<targetFilter>1879310339</targetFilter>
+								<targetSelector href="" />
+							</AreaTargetSelector>
+						</targetSelector>
+						<targetsNumber>
+							<compiledString>FQ8AAAABAAAAGwAAAFRhcmdldHNfTnVtYmVyAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SUdkcJOgFAAAAg8QEXcO4AQAAAA+i98IAAAAEdAfzDyxEJATD6QAAAABVi+yD7AzZRQjZffwPt0X8DQAMAACJRfjZbfjbXfTZbfyLRfSL5V3D</compiledString>
+							<returnType>int</returnType>
+							<sString>f2l(cTargets_Number)</sString>
+						</targetsNumber>
+					</CountingTargetSelector>
+				</targetSelector>
+			</SpellApplicator>
+		</Item>
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G467: Непоколебимое торжество</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G467_Life_StaOrWill.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G467_Life_StaOrWill.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="5B4B26D9-FC76-4E87-A009-B725775C4176">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNDY4X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG468_Active &gt; 0</sString>
+				</condition>
+				<name>G468_HealDamage</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="463037A6-CFA3-48DA-9E38-214F98126D88">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQsAAAACAAAAEAAAACYAAABHNDY1X1JhbmdlAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUgAAADf4PbEQXUJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG465_Range &gt; 0</sString>
+				</condition>
+				<name>G465_Range</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="5630FD54-EE7A-434B-8C3A-B195D75FB4ED">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQsAAAACAAAAEAAAACYAAABHNDY2X1JhbmdlAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUgAAADf4PbEQXUJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG466_Range &gt; 0</sString>
+				</condition>
+				<name>G466_Cooldown</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="3B991929-FFE9-4EE0-9E91-385A4EAA19B8">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSEAAAAEAAAAMAAAAEMAAABPAAAAaAAAAEc0Njdfa2l0Q291bnRlcl9UVAAARzQ2NwAAAABHNDY3AFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3B20AAAA3+D2xEF1WGgUAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoHAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdAnHRfQAAAAA6wfHRfQBAAAAikX0i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(cG467_kitCounter_TT&gt;0&amp;&amp;(tal("G467")))</sString>
+				</condition>
+				<name>FormNotActiveSession</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="345346AF-4C0C-450B-85AC-4297ED37BACD">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSEAAAACAAAAMAAAAEoAAABHNDY3X2tpdENvdW50ZXJfVFQAAEc0NjdfTWF4Rm9ybQBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBQAAACLVRCLAotNEItQUN1d+P/S3F343+D2xAV6CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG467_kitCounter_TT&gt;cG467_MaxForm</sString>
+				</condition>
+				<name>FormOverChargedSession</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="A6FCB54A-2815-4B21-A6E4-4C448DC5553B">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSkAAAAEAAAAOAAAAEsAAABXAAAAcAAAAEc0Njdfa2l0Q291bnRlcl9UVF9DYXN0bGUAAABHNDY3AAAAAEc0NjcAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcHbwAAADf4PbEQXVYaBwAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgkAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0CcdF9AAAAADrB8dF9AEAAACKRfSL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(cG467_kitCounter_TT_Castle&gt;0&amp;&amp;(tal("G467")))</sString>
+				</condition>
+				<name>FormNotActiveCastle</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="8073CF02-C0D7-4B01-B84A-A92C8411634B">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSkAAAACAAAAOAAAAFIAAABHNDY3X2tpdENvdW50ZXJfVFRfQ2FzdGxlAAAARzQ2N19NYXhGb3JtAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoHAAAAItVEIsCi00Qi1BQ3V34/9LcXfjf4PbEBXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG467_kitCounter_TT_Castle&gt;cG467_MaxForm</sString>
+				</condition>
+				<name>FormOverChargedCastle</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="0FC87174-0B23-4790-8D09-64ADB3985975">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="57060D79-7BC9-43BB-BC85-E2A3A2648F4B">
+					<UnitConstant>
+						<name>Add_Def</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUNF9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcNmZmZmZmbWPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT4_Stat * 0.35</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset1_4_AOEHealDmg/const_G468_MinHealPercent" />
+				<Item href="/Items/Talents/TalentKits/Redset1_4_AOEHealDmg/const_G468_MaxHealPercent" />
+				<Item href="/Items/Talents/TalentKits/Redset1_4_AOEHealDmg/const_G468_MinHealRange" />
+				<Item href="/Items/Talents/TalentKits/Redset1_4_AOEHealDmg/const_G468_MaxHealRange" />
+				<Item href="/Items/Talents/TalentKits/Redset1_4_AOEHealDmg/const_Targets_Number" />
+				<Item href="/Items/Talents/TalentKits/Redset1_4_AOEHealDmg/const_G467_Cooldown" />
+				<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="21709ECF-146A-40DB-958E-FF70E31D3A4C">
+					<UnitConstant>
+						<name>Range</name>
+						<var>
+							<compiledString>FRwAAAADAAAAIwAAADkAAABdAAAAUmFuZ2VfTWVkaXVtAAAAAEc0NjVfQWN0aXZlAFWL7IPsCGgQAAAAi0UIixCLTQiLgogBAAD/0NwdewAAAN/g9sRBdQnHRfwDAAAA6wfHRfwAAAAAi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ/9DaRfzZXfjZRfiL5V3DAAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange_Medium + (sender.vG465_Active &gt; 0 ? 3 : 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset1_4_AOEHealDmg/const_G467_MaxForm" />
+				<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="46526393-BA65-4645-85E9-0814E0B51F6A">
+					<UnitConstant>
+						<name>TECH_FormCapacity</name>
+						<var>
+							<compiledString>FQ0AAAABAAAAGQAAAEc0NjdfTWF4Rm9ybQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cG467_MaxForm</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="0CC6B91A-1F9B-498E-913D-88E0A6852E15">
+					<UnitConstant>
+						<name>G467_kitCounter_TT</name>
+						<var>
+							<compiledString>FQ0AAAACAAAAFAAAAC0AAABHNDY3AAAAAEc0NjcAVYvsg+wYaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgIAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCLTRCLEYtNEItCeP/QiUX020X0Udnu2RwkUdno2RwkD7ZN+1HdXezoGAAAAIPEDNxt7Nld6NlF6IvlXcMAAIA/AAAAAFWL7FEPtkUIhcB0CNlFDNld/OsG2UUQ2V382UX8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>mActivatedWithinKit - s(tal("G467"), 1 , 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="30D67BFC-D5ED-4D55-8512-0421345731CD">
+					<UnitConstant>
+						<name>G467_kitCounter_TT_Castle</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvsUVHZ7tkcJItFEIsQi00Qi0J4/9CD6AGJRfzbRfxR2Rwk6AsAAACDxAiL5V3DAAAAAFWL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>max(mActivatedWithinKit - 1, 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset1_4_AOEHealDmg/const_G466_Cooldown" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQ4AAAABAAAAGgAAAEc0NjdfQ29vbGRvd24AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cG467_Cooldown</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G467_Life_StaOrWill.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="88ECA856-2CC9-4C2B-AAFE-3B533C16488B">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>2</flags>
+	<forceBonus>16.15</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_467.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>3</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G467_Life_StaOrWill.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="C5B14959-688E-4489-9C48-EF0B2BC4CEBA">
+			<AuraApplicator>
+				<applicators>
+					<Item href="/Items/Talents/TalentKits/Redset1_4_AOEHealDmg/status_G467_StaminaWill_Increase.APLR" />
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Аура Стойкости и Воли</caption>
+				<effect>
+					<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" id="EA2FD0D1-5233-4464-81D6-969A97CFF97F">
+						<AuraEffect>
+							<deathType>Manual</deathType>
+							<enableCondition href="" />
+							<lifeTime>0</lifeTime>
+							<type>Ally</type>
+						</AuraEffect>
+					</Item>
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<range>
+					<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+					<returnType>float</returnType>
+					<sString>cRange_Long</sString>
+				</range>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<targets>1409286159</targets>
+				<targetSelector href="" />
+				<type>Ally</type>
+			</AuraApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G467</persistentId>
+	<prerequisiteTalents />
+	<rarity>good</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G467_Life_StaOrWill.TALENT_shortDescription.txt" />
+	<talentRollGroups>16</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

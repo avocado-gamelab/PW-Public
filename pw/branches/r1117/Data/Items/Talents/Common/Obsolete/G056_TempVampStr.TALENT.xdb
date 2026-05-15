@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/TalentGroup.TGRP" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/defaultSet.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_Will" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet3.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="2" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Common/Applicators/status_56_Strength_Lifesteal.APLR" />
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G056: Упоение битвой</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G056_TempVampStr.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G056_TempVampStr.TALENT" id="D4FF04D1-C49F-4A2C-A898-57B7A3B0F447">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G056_TempVampStr.TALENT" id="B9AA4952-3CC9-4F41-A9F7-C3951DA6416A">
+					<UnitConstant>
+						<name>Add_LifeDrain</name>
+						<var>
+							<compiledString>FRgAAAADAAAAJwAAAEEAAABaAAAAVDVfU3RhdABMaWZlU3RlYWxCdWRnZXQAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgIAAAAi1UQiwKLTRCLUFDdXfj/0txN+NwNaAAAANld9NlF9IvlXcMAAAAAAADgPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT5_Stat * cLifeStealBudget * 0.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G056_TempVampStr.TALENT" id="EB766869-4B20-4E51-A133-1840C911EE20">
+					<UnitConstant>
+						<name>Temp_Power</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUNV9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcMAAAAAAAAIQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT5_Stat * 3</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G056_TempVampStr.TALENT" id="E65B8E64-B33D-4E17-AD85-C29844A59007">
+					<UnitConstant>
+						<name>Buff_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>8</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABwQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>60</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G056_TempVampStr.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/Obsolete/G056_TempVampStr.TALENT" id="751E9D7D-44C9-4364-A7A4-5EFC454A1F02">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>19</flags>
+	<forceBonus>22.7</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_056.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="/Items/Talents/Common/Obsolete/G056_TempVampStr.TALENT" id="38DEE58B-ABDE-4305-9059-B2D3775C4A2A">
+		<MultipleTargetSelectorMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString>FQAAAAABAAAAKAAAAFWL7IPsDItFCIsQi00Ii0IE/9CLTQiLEYtNCItCEN1d+P/Q3H343B1KAAAA3+D2xEF1CcdF9AEAAADrB8dF9AAAAACKRfSL5V3DmpmZmZmZ2T8=</compiledString>
+				<returnType>bool</returnType>
+				<sString>sEnergy / sMaxEnergy &gt; 0.4</sString>
+			</condition>
+			<minTargetCount>3</minTargetCount>
+			<minTargetWeight>0</minTargetWeight>
+			<targetSelector href="/Items/Talents/Common/Obsolete/G056_TempVampStr.TALENT" id="04AAB341-972D-44DC-9C4E-2AFD39DB44B5">
+				<AreaTargetSelector>
+					<absolutePosition>
+						<x>0</x>
+						<y>0</y>
+					</absolutePosition>
+					<flags>0</flags>
+					<mode>Normal</mode>
+					<range>
+						<compiledString>FQ0AAAABAAAAGQAAAFJhbmdlX01lZGl1bQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<returnType>float</returnType>
+						<sString>cRange_Medium</sString>
+					</range>
+					<targetFilter>536871235</targetFilter>
+					<targetSelector href="" />
+				</AreaTargetSelector>
+			</targetSelector>
+			<unitFilter>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</unitFilter>
+		</MultipleTargetSelectorMicroAI>
+	</microAI>
+	<minLevel>4</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G056_TempVampStr.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/Obsolete/G056_TempVampStr.TALENT" id="260AD76F-EA75-4A3A-B6C0-A8CE66697E83">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption></caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQ4AAAABAAAAGgAAAEFkZF9MaWZlRHJhaW4AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_LifeDrain</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>LifeDrain</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G056</persistentId>
+	<prerequisiteTalents />
+	<rarity>excellent</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/Obsolete/G056_TempVampStr.TALENT_shortDescription.txt" />
+	<talentRollGroups>0</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>LifeDrain</stat>
+			<values>
+				<Item>19</Item>
+				<Item>20.4</Item>
+				<Item>21.8</Item>
+				<Item>23.2</Item>
+				<Item>24.6</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>0</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

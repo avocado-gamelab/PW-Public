@@ -3,9 +3,9 @@
 	<BackLink DBID="/Items/Talents/Class/Chronicle/Ability_A4u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Chronicle/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Chronicle/Ability_A4_2.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Chronicle_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Chronicle_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Chronicle_MightyStr.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Chronicle_MightyStr.TALENTSET" Count="1" />
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
@@ -89,8 +89,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Chronicle/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Chronicle/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Chronicle/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Chronicle/Ability_A4.TALENT" id="EECABAEE-1DA3-4B65-9C10-2B55C027C0B3">
 			<ConditionFormula>
@@ -135,9 +135,9 @@
 					<UnitConstant>
 						<name>Hero_AttackSpeed</name>
 						<var>
-							<compiledString>FQoAAAAEAAAAGQAAADEAAABKAAAAUAAAAFRpbWVDb2VmZgBVi+yD7BCLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0tno3sFR2QWDAAAA2Rwki0UIixCLTQiLQhzdXfj/0NwNewAAANwFcwAAANld9NlF9FHZHCToLAAAAIPECNxN+Nld8NlF8IvlXcMAAAAAKVzfPwAAAOCa5m0/AAAAQAAAAAAAAPA/VYvsUdlFCNlFDN7Z3+D2xEF1CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+							<compiledString>FSMAAAACAAAAMgAAAFAAAABUaW1lQ29lZmYAAABCYXNlQXR0YWNrU3BlZWRGb3JtdWxhAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S2ejewYtFDFCLTQhRaAwAAACLVRCLAotNEItQUN1d+P/S3E342V302UX0i+VdwwAAAAAAAPA/</compiledString>
 							<returnType>float</returnType>
-							<sString>(1 + cTimeCoeff) * min(sAttackSpeed * 0.00365f + 0.49f, 2)</sString>
+							<sString>(1 + cTimeCoeff) * cBaseAttackSpeedFormula</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -250,7 +250,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>6</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Chronicle/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

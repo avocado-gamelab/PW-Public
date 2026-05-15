@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Vampire.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Vampire.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A1_SUP.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A3_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -21,11 +22,13 @@
 		<sString>0.0f</sString>
 	</aoeSize>
 	<aoeType>None</aoeType>
-	<applicators />
+	<applicators>
+		<Item href="/Items/Talents/Class/Vampire/status_A0_SUP_EternalHunger.APLR" />
+	</applicators>
 	<askId>0</askId>
 	<autoTargetSelector href="" />
 	<budget>-1</budget>
-	<caption>А0. Вечный голод</caption>
+	<caption>А0_SUP. Вечный голод</caption>
 	<castAllowRange>
 		<compiledString></compiledString>
 		<returnType>float</returnType>
@@ -33,8 +36,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" id="5BCA7B7E-12B0-43C6-971D-D4688C077D31">
 			<ConditionFormula>
@@ -49,21 +52,46 @@
 	</conditionFormulas>
 	<conflictingTalents>
 		<Item href="/Items/Talents/Class/Vampire/Ability_A1_SUP.TALENT" />
+		<Item href="/Items/Talents/Class/Vampire/Ability_A3_SUP.TALENT" />
 	</conflictingTalents>
 	<constants href="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" id="C777C06F-CC2A-4753-AA9A-C0B78DC21C8B">
 		<UnitConstantsContainer>
 			<vars>
-				<Item href="/Items/Talents/Class/Vampire/const_A0_LifeDrainPercent" />
-				<Item href="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" id="45986E39-CF76-4238-9ED0-22BE22000B8B">
+				<Item href="/Items/Talents/Class/Vampire/const_A0_SUP_Duration" />
+				<Item href="/Items/Talents/Class/Vampire/const_A0_SUP_HealShieldConversionPercent" />
+				<Item href="/Items/Talents/Class/Vampire/const_A0_SUP_LifeDrainMultiplier" />
+				<Item href="/Items/Talents/Class/Vampire/const_A0_SUP_ShieldDuration" />
+				<Item href="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" id="AE2B8BA9-F430-4A25-8C30-B0C1E1242184">
 					<UnitConstant>
-						<name>A0_SUP_LifeDrainPercentTT</name>
+						<name>A0_SUP_ShieldCapacity</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAC0Qg==</compiledString>
+							<compiledString>FTAAAAACAAAAPwAAAFEAAABTYXZlZEJsb29kU2hpZWxkQ2FwYWNpdHkAAAAAVmFtcGlyZV9CbG9vZFNoaWVsZABVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0mgcAAAAi0UIixCLTQiLgogBAADdXfj/0NxF+Nld9NlF9IvlXcM=</compiledString>
 							<returnType>float</returnType>
-							<sString>90.0f</sString>
+							<sString>cSavedBloodShieldCapacity + sender.vVampire_BloodShield</sString>
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" id="2EF6F40B-EB7D-43A9-9B62-5FB8ABE07CA1">
+					<UnitConstant>
+						<name>CurrentBloodShieldCapacity</name>
+						<var>
+							<compiledString>FSMAAAACAAAALgAAAEYAAABWYW1waXJlX0Jsb29kU2hpZWxkAGRhbWFnZVRvQWJzb3JiAFWL7FFqAYtFEFBoAAAAAItNCIsRi00Ii4KcAQAA/9CJRfxoFAAAAItN/IsRi038i0JU/9CL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.applVampire_BloodShield(UNIT)-&gt;GetVariable("damageToAbsorb")</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" id="69A5DA9B-1753-4CFC-B454-B589905B3252">
+					<UnitConstant>
+						<name>SavedBloodShieldCapacity</name>
+						<var>
+							<compiledString>FRkAAAABAAAAHQAAAFNhdmVkQmxvb2RTaGllbGRDYXBhY2l0eQBVi+xoAAAAAItFCIsQi00Ii4KIAQAA/9Bdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vSavedBloodShieldCapacity</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Vampire/const_A0_SUP_AdditionalLifeDrainPercent" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -72,9 +100,9 @@
 		<percent>0</percent>
 	</consumptionBonus>
 	<cooldownTime>
-		<compiledString></compiledString>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAA0Qg==</compiledString>
 		<returnType>float</returnType>
-		<sString>0.0f</sString>
+		<sString>45</sString>
 	</cooldownTime>
 	<cooldownTimeSecondState>
 		<compiledString></compiledString>
@@ -83,9 +111,27 @@
 	</cooldownTimeSecondState>
 	<description textref="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT_description.txt" />
 	<devPoints>1</devPoints>
-	<dispatch href="" />
-	<flags>1</flags>
-	<forceBonus>6</forceBonus>
+	<dispatch href="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" id="211AD1C6-184D-4760-99A3-49F3C74AB915">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>18</flags>
+	<forceBonus>22.7</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Vampire/A0_SUP.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -104,16 +150,174 @@
 	<naftaCost>800</naftaCost>
 	<name textref="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT_name.txt" />
 	<node></node>
-	<passiveApplicators />
+	<passiveApplicators>
+		<Item href="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" id="2D09F100-A5E6-4714-86D6-491A67393E07">
+			<SpellPeriodicallyApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Периодический спелл с обновлением прочности щита</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FRQAAAACAAAAGQAAAC8AAABWYW1waXJlX0Jsb29kU2hpZWxkAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHVEAAADf4PbEQXUJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vVampire_BloodShield &gt; 0</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<period>
+					<compiledString>FQUAAAABAAAAEQAAAFNURVAAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+					<returnType>float</returnType>
+					<sString>cSTEP</sString>
+				</period>
+				<providerName></providerName>
+				<scaleMode>ScaleIsCount</scaleMode>
+				<spell href="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" id="371B4C0E-A6E0-48EB-A045-E3A4E47F826E">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" id="7D5CAF31-A7CD-4514-93B6-9231D7DF5E94">
+								<PermanentStatModApplicator>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<caption>Запоминаем текущую прочность щита</caption>
+									<customApplyType>None</customApplyType>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<modifier>
+										<addValue>
+											<compiledString>FRsAAAABAAAAJwAAAEN1cnJlbnRCbG9vZFNoaWVsZENhcGFjaXR5AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+											<returnType>float</returnType>
+											<sString>cCurrentBloodShieldCapacity</sString>
+										</addValue>
+										<multValue>
+											<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+											<returnType>float</returnType>
+											<sString>0</sString>
+										</multValue>
+										<stat>Life</stat>
+										<topModifier>false</topModifier>
+										<variable>SavedBloodShieldCapacity</variable>
+									</modifier>
+									<providerName></providerName>
+								</PermanentStatModApplicator>
+							</Item>
+							<Item href="/Items/Talents/Class/Vampire/status_BloodShield.APLR" />
+							<Item href="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" id="1F7005D8-C26F-4B11-A913-32DC104D75B3">
+								<PermanentStatModApplicator>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<caption>Обнуляем накопленный абсорб</caption>
+									<customApplyType>None</customApplyType>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<modifier>
+										<addValue>
+											<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+											<returnType>float</returnType>
+											<sString>0</sString>
+										</addValue>
+										<multValue>
+											<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+											<returnType>float</returnType>
+											<sString>0</sString>
+										</multValue>
+										<stat>Life</stat>
+										<topModifier>false</topModifier>
+										<variable>Vampire_BloodShield</variable>
+									</modifier>
+									<providerName></providerName>
+								</PermanentStatModApplicator>
+							</Item>
+							<Item href="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" id="0CF210DD-DD99-498D-8EEF-47085EEA1FB7">
+								<PermanentStatModApplicator>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<caption>Обнуляем запомненную прочность щита</caption>
+									<customApplyType>None</customApplyType>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<modifier>
+										<addValue>
+											<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+											<returnType>float</returnType>
+											<sString>0</sString>
+										</addValue>
+										<multValue>
+											<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+											<returnType>float</returnType>
+											<sString>0</sString>
+										</multValue>
+										<stat>Life</stat>
+										<topModifier>false</topModifier>
+										<variable>SavedBloodShieldCapacity</variable>
+									</modifier>
+									<providerName></providerName>
+								</PermanentStatModApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" id="3A76000E-9220-47D5-B6ED-2AD95AAE6682">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<startOffset>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</startOffset>
+				<targetSelector href="" />
+			</SpellPeriodicallyApplicator>
+		</Item>
+	</passiveApplicators>
 	<persistentId>Vampire_A0_SUP</persistentId>
 	<prerequisiteTalents />
 	<rarity>Class</rarity>
-	<requireLineOfSight>true</requireLineOfSight>
-	<shortDescription textref="" />
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT_shortDescription.txt" />
 	<talentRollGroups>63</talentRollGroups>
 	<talentStats />
-	<targetType>2040319</targetType>
-	<type>Passive</type>
+	<targetType>0</targetType>
+	<type>Active</type>
 	<upgradeLevel>0</upgradeLevel>
 	<useRange>
 		<compiledString></compiledString>

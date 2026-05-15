@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/FallenAngel.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/FallenAngel.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/FallenAngel/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/FallenAngel/Ability_A4_2u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/FallenAngel_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/FallenAngel_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/FallenAngel/Epic_IntDex.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/FallenAngel/Epic_IntSpeed.TALENTSET" Count="1" />
 	<activationConditions />
@@ -37,8 +37,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/FallenAngel/Ability_A4u.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/FallenAngel/Ability_A4u.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/FallenAngel/Ability_A4u.TALENT" id="28595FA8-366D-4DC9-8111-16D30DC5111A">
 			<ConditionFormula>
@@ -59,6 +59,7 @@
 		<UnitConstantsContainer>
 			<vars>
 				<Item href="/Items/Talents/Class/FallenAngel/const_A4u_Range" />
+				<Item href="/Items/Talents/Class/FallenAngel/const_A4_2_SUP_Buff_RegenPercent" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -80,7 +81,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/FallenAngel/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

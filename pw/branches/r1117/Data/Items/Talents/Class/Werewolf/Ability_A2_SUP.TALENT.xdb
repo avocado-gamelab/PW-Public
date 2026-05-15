@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Werewolf.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Werewolf.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Werewolf_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Werewolf/Ability_A4_A4_2_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Werewolf_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -34,8 +34,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Werewolf/Ability_A2_SUP.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Werewolf/Ability_A2_SUP.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Werewolf/Ability_A2_SUP.TALENT" id="8B00EDDD-BFEA-436B-9909-5C22B7BCDB1C">
 			<ConditionFormula>
@@ -77,7 +77,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>22.7</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Werewolf/A2_SUP.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -99,7 +99,7 @@
 	<passiveApplicators />
 	<persistentId>Werewolf_A2_SUP</persistentId>
 	<prerequisiteTalents>
-		<Item href="/Items/Talents/Class/Werewolf/Ability2.TALENT" />
+		<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" />
 	</prerequisiteTalents>
 	<rarity>Class</rarity>
 	<requireLineOfSight>false</requireLineOfSight>

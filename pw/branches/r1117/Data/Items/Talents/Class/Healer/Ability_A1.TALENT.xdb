@@ -1,0 +1,800 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Healer.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Healer_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A1_SUP.TALENT" Count="2" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A1_Upg1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A1_Upg2.TALENT" Count="2" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A5_SUP.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Healer_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSetHealer.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Duel_En.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Elite.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Epic.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A3_SUP.TALENT" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="/Effects/UI/AOESelection/Circle.MTRL" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString>FSwAAAADAAAAMwAAAEwAAACKAAAASGVhbGVyX0ExX1VwZzEAAEhlYWxlcl9BMV9VcGcxAABSYW5nZV9TaG9ydABVi+yD7AxoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQfi1UMUotFCFBoIAAAAItNEIsRi00Qi0JQ/9DZXfTrBdnu2V302UX0i+VdwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>tal("Healer_A1_Upg1") ? cRange_Short : 0</sString>
+	</aoeSize>
+	<aoeType>Disk</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="024DD2C3-E351-4570-A57E-42D2794B4088">
+			<SpellSwitchApplicator>
+				<activeSpellIndex>
+					<compiledString>FQAAAAABAAAAJAAAAFWL7IPsDItFDIsQi00MiwL/0ItNDIsRi00Mi0IM3V34/9DcNUkAAADcXfjf4PbEAXUJx0X0AQAAAOsHx0X0AAAAAItF9IvlXcMAAAAAAAAAQA==</compiledString>
+					<returnType>int</returnType>
+					<sString>rLife &lt;= rMaxLife/2 ? 1:0</sString>
+				</activeSpellIndex>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Свич от количества хп</caption>
+				<dontUseDispatches>true</dontUseDispatches>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spells>
+					<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="886F2D2C-DF8A-4851-82E3-478119761F46">
+						<Spell>
+							<applicators>
+								<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="BDBF887A-4E3F-476A-BC34-B20E5BCF2020">
+									<VariableProxyApplicator parent="/Items/Talents/Class/Healer/HealAndGiveNafta.APLR">
+										<applicators>
+											<Item>
+												<applicator href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="678C3671-C75A-40E4-ABAB-FAC2858DBC47">
+													<HealApplicator parent="/Items/Talents/Class/Healer/Heal.APLR">
+														<amount>
+															<compiledString>FTcAAAAEAAAAPgAAAFcAAACNAAAArQAAAEhlYWxlcl9BMQAAAEhlYWxlcl9BMQAAAEhlYWxlcl9BMQAAAEExX0hlYWxBbW91bnRfQmFzZQBVi+yD7BBoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQ3aBgAAACLVQiLAotNCIuQqAEAAP/SiUX0i0UMUItNCFFoJAAAAItV9IsCi030i1BQ/9LZXfDrBdnu2V3w2UXwi+VdwwAAAAA=</compiledString>
+															<returnType>float</returnType>
+															<sString>talconst("Healer_A1","A1_HealAmount_Base")</sString>
+														</amount>
+													</HealApplicator>
+												</applicator>
+											</Item>
+											<Item skip="1" />
+										</applicators>
+									</VariableProxyApplicator>
+								</Item>
+							</applicators>
+							<dispatch href="" />
+						</Spell>
+					</Item>
+					<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="FF599610-E6B2-40A5-AFF0-2B4C89419A0C">
+						<Spell>
+							<applicators>
+								<Item href="/Items/Talents/Class/Healer/HealAndGiveNafta.APLR" />
+							</applicators>
+							<dispatch href="" />
+						</Spell>
+					</Item>
+				</spells>
+			</SpellSwitchApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="8EFD3A92-7E79-4F2E-8769-4162246F7C80">
+			<SpellProbabilityApplicator parent="/Items/Talents/Class/Healer/CharityDefenceSpell.APLR">
+				<probability>
+					<compiledString>FSsAAAAEAAAAMgAAAEsAAACBAAAAoQAAAEhlYWxlcl9BMgAAAEhlYWxlcl9BMgAAAEhlYWxlcl9BMgAAAEEyUHJvYwBVi+yD7BBoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQ3aBgAAACLVQiLAotNCIuQqAEAAP/SiUX0i0UMUItNCFFoJAAAAItV9IsCi030i1BQ/9LZXfDrBdnu2V3w2UXwi+VdwwAAAAA=</compiledString>
+					<returnType>float</returnType>
+					<sString>talconst("Healer_A2","A2Proc")</sString>
+				</probability>
+			</SpellProbabilityApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="E31137F2-8887-451C-9507-2C5C1FA7DBEC">
+			<SpellProbabilityApplicator parent="/Items/Talents/Class/Healer/CharityPowerSpell.APLR">
+				<probability>
+					<compiledString>FSsAAAAEAAAAMgAAAEsAAACBAAAAoQAAAEhlYWxlcl9BMwAAAEhlYWxlcl9BMwAAAEhlYWxlcl9BMwAAAEEzUHJvYwBVi+yD7BBoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQ3aBgAAACLVQiLAotNCIuQqAEAAP/SiUX0i0UMUItNCFFoJAAAAItV9IsCi030i1BQ/9LZXfDrBdnu2V3w2UXwi+VdwwAAAAA=</compiledString>
+					<returnType>float</returnType>
+					<sString>talconst("Healer_A3","A3Proc")</sString>
+				</probability>
+			</SpellProbabilityApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Healer/AreaHeal.APLR" />
+		<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="4FF488AE-3D39-42F7-9CA9-05C6340D7645">
+			<SpellSwitchApplicator>
+				<activeSpellIndex>
+					<compiledString>FQAAAAAAAAAAVYvsUdno2RwkUdnu2Rwki0UIO0UMD5XBD7bRUugYAAAAg8QI2Rwk6C4AAACDxARdwwAAAAAAAIA/VYvsUQ+2RQiFwHQI2UUM2V386wbZRRDZXfzZRfyL5V3DuAEAAAAPovfCAAAABHQH8w8sRCQEw+kAAAAAVYvsg+wM2UUI2X38D7dF/A0ADAAAiUX42W3421302W38i0X0i+Vdww==</compiledString>
+					<returnType>int</returnType>
+					<sString>f2l( s( pFirst != pSecond, 0, 1 ) )</sString>
+				</activeSpellIndex>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>лечение Целительницы в 2х вариантах: цель=нея, цель=я</caption>
+				<dontUseDispatches>true</dontUseDispatches>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spells>
+					<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="BD052E4A-F45A-419C-BFA5-2E767E95BD88">
+						<Spell>
+							<applicators>
+								<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="5F508D4D-3505-4FCA-9A4B-9CDCE5913415">
+									<SpellSwitchApplicator>
+										<activeSpellIndex>
+											<compiledString>FQAAAAABAAAAJAAAAFWL7IPsDItFCIsQi00IiwL/0ItNCIsRi00Ii0IM3V34/9DcNUkAAADcXfjf4PbEAXUJx0X0AQAAAOsHx0X0AAAAAItF9IvlXcMAAAAAAAAAQA==</compiledString>
+											<returnType>int</returnType>
+											<sString>sLife &lt;= sMaxLife/2 ? 1:0</sString>
+										</activeSpellIndex>
+										<applyTarget>AbilityOwner</applyTarget>
+										<caption>Свич от количества хп</caption>
+										<dontUseDispatches>true</dontUseDispatches>
+										<enabled>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</enabled>
+										<formulaName></formulaName>
+										<LoggingEvent>-1</LoggingEvent>
+										<providerName></providerName>
+										<spells>
+											<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="F42E08F7-CF05-4038-BC5E-D0B427CA1FE7">
+												<Spell>
+													<applicators>
+														<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="842B80C8-2A05-4A60-A2EC-A9A75400A6E6">
+															<HealApplicator parent="/Items/Talents/Class/Healer/A1HealSelf.APLR">
+																<amount>
+																	<compiledString>FRwAAAABAAAAKAAAAEExSGVhbFNlbGZBbW91bnQxX05vTG93TGlmZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+																	<returnType>float</returnType>
+																	<sString>cA1HealSelfAmount1_NoLowLife</sString>
+																</amount>
+																<formulaName></formulaName>
+																<providerName></providerName>
+															</HealApplicator>
+														</Item>
+														<Item href="/Items/Talents/Class/Healer/CharityDefenceSpell_AoE.APLR" />
+														<Item href="/Items/Talents/Class/Healer/CharityPowerSpell_AoE.APLR" />
+													</applicators>
+													<dispatch href="" />
+												</Spell>
+											</Item>
+											<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="2B637D7D-B314-4F16-9554-86C2E4AD57EF">
+												<Spell>
+													<applicators>
+														<Item href="/Items/Talents/Class/Healer/A1HealSelf.APLR" />
+														<Item href="/Items/Talents/Class/Healer/CharityDefenceSpell_AoE.APLR" />
+														<Item href="/Items/Talents/Class/Healer/CharityPowerSpell_AoE.APLR" />
+													</applicators>
+													<dispatch href="" />
+												</Spell>
+											</Item>
+										</spells>
+									</SpellSwitchApplicator>
+								</Item>
+							</applicators>
+							<dispatch href="" />
+						</Spell>
+					</Item>
+					<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="2FB9D042-66D6-479C-A5AD-19BC553CBC48">
+						<Spell>
+							<applicators>
+								<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="252E390B-4A0F-4F01-8EF8-DBF8C964A964">
+									<SpellSwitchApplicator>
+										<activeSpellIndex>
+											<compiledString>FQAAAAABAAAAJAAAAFWL7IPsDItFCIsQi00IiwL/0ItNCIsRi00Ii0IM3V34/9DcNUkAAADcXfjf4PbEAXUJx0X0AQAAAOsHx0X0AAAAAItF9IvlXcMAAAAAAAAAQA==</compiledString>
+											<returnType>int</returnType>
+											<sString>sLife &lt;= sMaxLife/2 ? 1:0</sString>
+										</activeSpellIndex>
+										<applyTarget>AbilityOwner</applyTarget>
+										<caption>Свич от количества хп с экспой</caption>
+										<dontUseDispatches>true</dontUseDispatches>
+										<enabled>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</enabled>
+										<formulaName></formulaName>
+										<LoggingEvent>-1</LoggingEvent>
+										<providerName></providerName>
+										<spells>
+											<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="D14232F1-AB04-4E17-B77E-6C79484D1833">
+												<Spell>
+													<applicators>
+														<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="50A1C5D5-489D-4689-9B30-B3D136286F1B">
+															<VariableProxyApplicator>
+																<applicators>
+																	<Item>
+																		<applicator href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="73AE6360-5309-4C3C-B587-8F287ED4CD14">
+																			<HealApplicator>
+																				<amount>
+																					<compiledString>FRwAAAABAAAAKAAAAEExSGVhbFNlbGZBbW91bnQyX05vTG93TGlmZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+																					<returnType>float</returnType>
+																					<sString>cA1HealSelfAmount2_NoLowLife</sString>
+																				</amount>
+																				<applyTarget>AbilityOwner</applyTarget>
+																				<caption>лечение самой жрицы</caption>
+																				<enabled>
+																					<compiledString></compiledString>
+																					<returnType>bool</returnType>
+																					<sString>true</sString>
+																				</enabled>
+																				<formulaName></formulaName>
+																				<healTarget>Health</healTarget>
+																				<ignoreHealingMods>false</ignoreHealingMods>
+																				<LoggingEvent>-1</LoggingEvent>
+																				<providerName></providerName>
+																				<uiEvent href="/UI/Events/CommonEvents/EventHeal.UIEV" />
+																			</HealApplicator>
+																		</applicator>
+																		<variableNames>
+																			<Item>amountRestored</Item>
+																		</variableNames>
+																	</Item>
+																	<Item>
+																		<applicator href="/Items/Talents/Class/Healer/A0GiveNafta.APLR" />
+																		<variableNames />
+																	</Item>
+																</applicators>
+																<applyTarget>ApplicatorTarget</applyTarget>
+																<caption>лечение самой жрицы + нафта</caption>
+																<enabled>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>true</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<providerName></providerName>
+															</VariableProxyApplicator>
+														</Item>
+														<Item href="/Items/Talents/Class/Healer/CharityDefenceSpell_AoE.APLR" />
+														<Item href="/Items/Talents/Class/Healer/CharityPowerSpell_AoE.APLR" />
+													</applicators>
+													<dispatch href="" />
+												</Spell>
+											</Item>
+											<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="7752A5E8-9933-491E-B4F7-C8BA7E774CC1">
+												<Spell>
+													<applicators>
+														<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="85452731-59AE-4E60-86E5-18632524E8D1">
+															<VariableProxyApplicator>
+																<applicators>
+																	<Item>
+																		<applicator href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="17FD22D0-A76B-4D83-B7D3-A39B36412F70">
+																			<HealApplicator>
+																				<amount>
+																					<compiledString>FRIAAAABAAAAHgAAAEExSGVhbFNlbGZBbW91bnQyAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+																					<returnType>float</returnType>
+																					<sString>cA1HealSelfAmount2</sString>
+																				</amount>
+																				<applyTarget>AbilityOwner</applyTarget>
+																				<caption>лечение самой жрицы</caption>
+																				<enabled>
+																					<compiledString></compiledString>
+																					<returnType>bool</returnType>
+																					<sString>true</sString>
+																				</enabled>
+																				<formulaName></formulaName>
+																				<healTarget>Health</healTarget>
+																				<ignoreHealingMods>false</ignoreHealingMods>
+																				<LoggingEvent>-1</LoggingEvent>
+																				<providerName></providerName>
+																				<uiEvent href="/UI/Events/CommonEvents/EventHeal.UIEV" />
+																			</HealApplicator>
+																		</applicator>
+																		<variableNames>
+																			<Item>amountRestored</Item>
+																		</variableNames>
+																	</Item>
+																	<Item>
+																		<applicator href="/Items/Talents/Class/Healer/A0GiveNafta.APLR" />
+																		<variableNames />
+																	</Item>
+																</applicators>
+																<applyTarget>ApplicatorTarget</applyTarget>
+																<caption>лечение самой жрицы + нафта</caption>
+																<enabled>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>true</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<providerName></providerName>
+															</VariableProxyApplicator>
+														</Item>
+														<Item href="/Items/Talents/Class/Healer/CharityDefenceSpell_AoE.APLR" />
+														<Item href="/Items/Talents/Class/Healer/CharityPowerSpell_AoE.APLR" />
+													</applicators>
+													<dispatch href="" />
+												</Spell>
+											</Item>
+										</spells>
+									</SpellSwitchApplicator>
+								</Item>
+							</applicators>
+							<dispatch href="" />
+						</Spell>
+					</Item>
+				</spells>
+			</SpellSwitchApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="86E8BC69-E934-4FD7-8768-D1CC5A8E3414">
+			<ProgramApplicator>
+				<applicators>
+					<Item>
+						<applicator href="" />
+						<continueCondition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>2</continueEvents>
+						<delay>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzczMPQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>0.1</sString>
+						</delay>
+						<stopCondition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+					<Item>
+						<applicator href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="6CDAC206-C9CE-4D95-A503-C804D14D4B7D">
+							<SpellApplicator>
+								<applyTarget>ApplicatorTarget</applyTarget>
+								<caption>(UPG2) - если цель не герой и взят А1у2, то выдаем компенсацию маны и КД</caption>
+								<enabled>
+									<compiledString>FR8AAAADAAAATAAAAFgAAABxAAAASGVhbGVyX0ExX1VwZzIAAEhlYWxlcl9BMV9VcGcyAFWL7IPsDFHZ6NkcJFHZ7tkcJItFDIsQi00Mi0JU/9APtshR6IYAAACDxAzcHb0AAADf4PbERHtYaAAAAACLVQiLAotNCIuQqAEAAP/ShcB0KmgQAAAAi0UIixCLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0CcdF9AEAAADrB8dF9AAAAACKRfSL5V3DAAAAAAAAAAAAAAAAAACAP1WL7FEPtkUIhcB0CNlFDNld/OsG2UUQ2V382UX8i+Vdww==</compiledString>
+									<returnType>bool</returnType>
+									<sString>s(rIsHero, false, true) &amp;&amp; tal("Healer_A1_Upg2") ;//&amp;&amp; sender.vHealer_A1_IsHero == 0</sString>
+								</enabled>
+								<formulaName></formulaName>
+								<LoggingEvent>-1</LoggingEvent>
+								<providerName></providerName>
+								<spell href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="D388C7E5-1ECA-45C1-9FF6-017663040467">
+									<Spell>
+										<applicators>
+											<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="59A0B797-D952-4D2D-9503-0C4CBA6406BE">
+												<HealApplicator>
+													<amount>
+														<compiledString>FRIAAAABAAAAHgAAAENvbXBlc2F0aW9uRW5lcmd5AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+														<returnType>float</returnType>
+														<sString>cCompesationEnergy</sString>
+													</amount>
+													<applyTarget>AbilityOwner</applyTarget>
+													<caption> - выдаем компенсационную ману</caption>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<healTarget>Energy</healTarget>
+													<ignoreHealingMods>false</ignoreHealingMods>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<uiEvent href="" />
+												</HealApplicator>
+											</Item>
+											<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="82CCBA97-D1E3-45EA-850D-44F4AEB8722A">
+												<RefreshCooldownApplicator>
+													<allowCdIncrease>false</allowCdIncrease>
+													<applyTarget>AbilityOwner</applyTarget>
+													<caption> - выдаем компенсационный кулдаун</caption>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<flags>253</flags>
+													<formulaName></formulaName>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<reduceByPercent>false</reduceByPercent>
+													<reductionAmount>
+														<compiledString>FQ8AAAABAAAAGwAAAENvbXBlbnNhdGlvbkNEAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+														<returnType>float</returnType>
+														<sString>cCompensationCD</sString>
+													</reductionAmount>
+													<refreshThis>false</refreshThis>
+													<talents>
+														<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" />
+													</talents>
+													<useListAs>ListAsRule</useListAs>
+												</RefreshCooldownApplicator>
+											</Item>
+										</applicators>
+										<dispatch href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="2B31D455-3A1C-4353-9849-E9FBC85F4DDE">
+											<DispatchImmediate>
+												<alwaysApply>false</alwaysApply>
+												<applyEffect>
+													<Item href="" />
+													<Item href="" />
+												</applyEffect>
+												<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+												<applyEffectOrientation>Default</applyEffectOrientation>
+												<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+												<dieAfterApply>true</dieAfterApply>
+												<dispatchEffect>
+													<Item href="" />
+													<Item href="" />
+												</dispatchEffect>
+												<flags>0</flags>
+												<instantApply>false</instantApply>
+											</DispatchImmediate>
+										</dispatch>
+									</Spell>
+								</spell>
+								<spellTarget>ApplicatorTarget</spellTarget>
+								<targetSelector href="" />
+							</SpellApplicator>
+						</applicator>
+						<continueCondition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>2</continueEvents>
+						<delay>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0</sString>
+						</delay>
+						<stopCondition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Программа возврата</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+			</ProgramApplicator>
+		</Item>
+	</applicators>
+	<askId>1</askId>
+	<autoTargetSelector href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="EEEF6580-5293-4301-93DF-FDAD5C725C4B">
+		<SelectApplicatorTarget>
+			<applicatorIndex>0</applicatorIndex>
+			<applicatorName></applicatorName>
+			<namedApplicatorTarget>ApplicatorTarget</namedApplicatorTarget>
+			<selectTarget>AbilityOwner</selectTarget>
+		</SelectApplicatorTarget>
+	</autoTargetSelector>
+	<budget>-1</budget>
+	<caption>А1. Исцеление</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Class/Healer/Ability_A1.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Healer/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Healer/Ability_A1.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="1E577D09-39C6-46BE-BE6F-6B4FC557D9C6">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR8AAAACAAAAJgAAAD8AAABIZWFsZXJfQTFfVXBnMQAASGVhbGVyX0ExX1VwZzEAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwIPAAYvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Healer_A1_Upg1") == false</sString>
+				</condition>
+				<name>Healer_A1_Upg1</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="05580619-7965-469F-956F-D2A0D2DAC7DA">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR8AAAACAAAAJgAAAD8AAABIZWFsZXJfQTFfVXBnMgAASGVhbGVyX0ExX1VwZzIAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwIPAAYvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Healer_A1_Upg2") == false</sString>
+				</condition>
+				<name>Healer_A1_Upg2</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Healer/condition_BoostStr" />
+		<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="2807775D-EF9C-45F0-A990-FD028D1420F8">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR4AAAACAAAAJQAAAD4AAABIZWFsZXJfQTFfU1VQAAAASGVhbGVyX0ExX1NVUABVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Healer_A1_SUP") == false</sString>
+				</condition>
+				<name>Healer_A1_SUP</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="7AB8D26C-2939-40E1-B2B9-57D3CD509245">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UMixCLTQyLgsgAAAD/0ItNDIsRi00Mi4LMAAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>rBaseStamina &gt;= rBaseWill</sString>
+				</condition>
+				<name>AddStamina</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="C7CB3079-5225-4273-A059-E8A05BB4EC82">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="B3F3CC6B-8341-4A13-B258-9D2601074DBE">
+					<UnitConstant>
+						<name>A1HealAmount</name>
+						<var>
+							<compiledString>FWMAAAAGAAAAagAAAIMAAADBAAAA2wAAAPEAAAAKAQAASGVhbGVyX0ExX1NVUAAAAEhlYWxlcl9BMV9TVVAAAABBMV9IZWFsQW1vdW50X0Jhc2UAAEExX1NVUF9IZWFsSW5jcmVhc2VQZXJjZW50AABBMV9IZWFsQW1vdW50X0Jhc2UAVYvsg+wcaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0SYtVDFKLRQhQaCAAAACLTRCLEYtNEItCUP/Qi00MUYtVCFJoNAAAAItFEIsQi00Qi0JQ3V3w/9DcDTMBAADZ6N7B3E3w3V3o6x2LTQxRi1UIUmhQAAAAi0UQixCLTRCLQlD/0N1d6N1F6Nld5NlF5IvlXcMAAAAAAADwP3sUrkfheoQ/</compiledString>
+							<returnType>float</returnType>
+							<sString>tal("Healer_A1_SUP")? cA1_HealAmount_Base*(1+cA1_SUP_HealIncreasePercent*0.01) : cA1_HealAmount_Base</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="BCDC2A63-82E6-40A6-B628-0843C3C89034">
+					<UnitConstant>
+						<name>A1HealAmountJustified</name>
+						<var>
+							<compiledString>FR0AAAACAAAASwAAAHwAAABBMUhlYWxBbW91bnQAAAAAQTFIZWFsQW1vdW50AFWL7IPsIItFDIsQi00Mi0IM/9CLTQyLEYtNDIsC3V34/9DcbfiLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlDdXfD/0Nxd8N/g9sRBdQbGRe8B6wTGRe8Ai00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ/9BR2Rwki00MixGLTQyLQgz/0ItNDIsRi00MiwLdXeT/0Nxt5Nld4NlF4FHZHCQPtk3vUegHAAAAg8QMi+Vdw1WL7FEPtkUIhcB0CNlFDNld/OsG2UUQ2V382UX8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>s( rMaxLife - rLife &lt; cA1HealAmount, rMaxLife - rLife, cA1HealAmount)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="F3234044-7280-458C-B3E6-5F84CE9E42A0">
+					<UnitConstant>
+						<name>A1AreaHeal</name>
+						<var>
+							<compiledString>FTkAAAAEAAAAQAAAAFkAAAB5AAAAnQAAAEhlYWxlcl9BMV9VcGcxAABIZWFsZXJfQTFfVXBnMQAAQTFBcmVhSGVhbAAAQTFIZWFsQW1vdW50AFWL7IPsDGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdDdoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTQxRi1UIUmggAAAAi0X8ixCLTfyLQlD/0Nld+OsF2e7ZXfiLTQxRi1UIUmgsAAAAi0UQixCLTRCLQlD/0NhN+Nld9NlF9IvlXcMAAAAA</compiledString>
+							<returnType>float</returnType>
+							<sString>talconstNoCheck("Healer_A1_Upg1","A1AreaHeal") * cA1HealAmount</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="E7EA2B1F-913E-40FB-A367-3464E4AE4ED5">
+					<UnitConstant>
+						<name>A1HealSelfAmount1</name>
+						<var>
+							<compiledString>FQ0AAAACAAAAGgAAAC0AAABBMUhlYWxBbW91bnQAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3A07AAAA2V382UX8i+VdwwAAAAAAAOA/</compiledString>
+							<returnType>float</returnType>
+							<sString>cA1HealAmount * 0.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="E518C8DE-6304-4F03-A4C8-6006C3690FED">
+					<UnitConstant>
+						<name>A1HealSelfAmount2</name>
+						<var>
+							<compiledString>FQ0AAAACAAAAGgAAAC0AAABBMUhlYWxBbW91bnQAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3A07AAAA2V382UX8i+VdwwAAAAAAAPg/</compiledString>
+							<returnType>float</returnType>
+							<sString>cA1HealAmount * 1.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Healer/const_A2_AddHalfDefence" />
+				<Item href="/Items/Talents/Class/Healer/const_A3_AddHalfPower" />
+				<Item href="/Items/Talents/Class/Healer/const_NaftaGained_Single" />
+				<Item href="/Items/Talents/Class/Healer/const_NaftaGained_AoE" />
+				<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="66C69065-0734-45D0-878C-AB8CF7B6C3EE">
+					<UnitConstant>
+						<name>CompesationEnergy</name>
+						<var>
+							<compiledString>FRQAAAACAAAAMAAAAEYAAABDb21wZW5zYXRpb25QZXJjZW50AFWL7IPsDItFEIsQi00Qi0IY/9CLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlDdXfj/0Nw1VwAAANxN+Nld9NlF9IvlXcMAAAAAAABZQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>mManaCost * (cCompensationPercent/100 )</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="600B1648-43B7-4A48-BB5E-36FF39B4EEC5">
+					<UnitConstant>
+						<name>CompensationCD</name>
+						<var>
+							<compiledString>FRQAAAACAAAAMAAAAEYAAABDb21wZW5zYXRpb25QZXJjZW50AFWL7IPsDItFEIsQi00Qi0I8/9CLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlDdXfj/0Nw1VwAAANxN+Nld9NlF9IvlXcMAAAAAAABZQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>mCooldown * (cCompensationPercent/100 )</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Healer/const_CompensPercent" />
+				<Item href="/Items/Talents/Class/Healer/const_A2_AddDefence" />
+				<Item href="/Items/Talents/Class/Healer/const_A3_AddPower" />
+				<Item href="/Items/Talents/Class/Healer/const_A1_SUP_HealIncreasePercent" />
+				<Item href="/Items/Talents/Class/Healer/const_A1_SUP_HealthAmount" />
+				<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="D52EDF39-2176-4DED-9DC9-45D09CBC3887">
+					<UnitConstant>
+						<name>A1_HealAmount_Base</name>
+						<var>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAAAgQgAAlkM=</compiledString>
+							<returnType>float</returnType>
+							<sString>damageScale(sIntellect, 40, 300)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="769DF60A-EFF1-4668-A1E5-E71B961B6D24">
+					<UnitConstant>
+						<name>A1HealSelfAmount1_NoLowLife</name>
+						<var>
+							<compiledString>FRMAAAACAAAAIAAAADMAAABBMV9IZWFsQW1vdW50X0Jhc2UAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3A1BAAAA2V382UX8i+VdwwAAAAAAAOA/</compiledString>
+							<returnType>float</returnType>
+							<sString>cA1_HealAmount_Base * 0.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="B99ECD83-4A96-48FC-9D61-9CEC2C70295A">
+					<UnitConstant>
+						<name>A1HealSelfAmount2_NoLowLife</name>
+						<var>
+							<compiledString>FRMAAAACAAAAIAAAADMAAABBMV9IZWFsQW1vdW50X0Jhc2UAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3A1BAAAA2V382UX8i+VdwwAAAAAAAPg/</compiledString>
+							<returnType>float</returnType>
+							<sString>cA1_HealAmount_Base * 1.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Healer/const_A1AreaHeal_NoLowLife" />
+				<Item href="/Items/Talents/Class/Healer/const_A3_SUP_BonusDuration" />
+				<Item href="/Items/Talents/Class/Healer/const_A3_SUP_BonusValue" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+		<returnType>float</returnType>
+		<sString>5</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Healer/Ability_A1.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="E264D71D-9EF6-47DA-A85C-74C9E27FB0BD">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="/Effects/Buffs/Cure/_1.EFFT" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>32783</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Healer/A1.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQw==</compiledString>
+		<returnType>float</returnType>
+		<sString>160</sString>
+	</manaCost>
+	<marker>doCast1</marker>
+	<microAI href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="7DE12ABF-A964-4F18-8AFD-902F2E51C40D">
+		<TargetSelectorMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString>FQAAAAABAAAAKAAAAFWL7IPsDItFCIsQi00Ii0IE/9CLTQiLEYtNCItCEN1d+P/Q3H343B1KAAAA3+D2xEF1CcdF9AEAAADrB8dF9AAAAACKRfSL5V3DMzMzMzMz0z8=</compiledString>
+				<returnType>bool</returnType>
+				<sString>sEnergy / sMaxEnergy &gt; 0.3</sString>
+			</condition>
+			<targetSelector href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="F18F2350-B4B9-447A-B031-47C7361454AB">
+				<FirstTargetSelector>
+					<nearestTarget>false</nearestTarget>
+					<targetSelector href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="FFC93092-8974-4953-8466-4CF6AAD7A089">
+						<ConditionTargetSelector>
+							<condition>
+								<compiledString>FQAAAAABAAAAJwAAAFWL7IPsDItFDIsQi00MiwL/0ItNDIsRi00Mi0IM3V34/9DcffjcHUkAAADf4PbEBXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcOamZmZmZnpPw==</compiledString>
+								<returnType>bool</returnType>
+								<sString>rLife / rMaxLife &lt; 0.8</sString>
+							</condition>
+							<flags>0</flags>
+							<mode>Normal</mode>
+							<targetSelector href="/Items/Talents/Class/Healer/Ability_A1.TALENT" id="826369CF-75EB-4FF4-BDB2-21B44A8ADDA2">
+								<AreaTargetSelector>
+									<absolutePosition>
+										<x>0</x>
+										<y>0</y>
+									</absolutePosition>
+									<flags>0</flags>
+									<mode>Normal</mode>
+									<range>
+										<compiledString>FQ0AAAABAAAAGQAAAFJhbmdlX0V4TG9uZwBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+										<returnType>float</returnType>
+										<sString>cRange_ExLong</sString>
+									</range>
+									<targetFilter>1484783619</targetFilter>
+									<targetSelector href="" />
+								</AreaTargetSelector>
+							</targetSelector>
+						</ConditionTargetSelector>
+					</targetSelector>
+				</FirstTargetSelector>
+			</targetSelector>
+		</TargetSelectorMicroAI>
+	</microAI>
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>300</naftaCost>
+	<name textref="/Items/Talents/Class/Healer/Ability_A1.TALENT_name.txt" />
+	<node>ability1</node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/trigger_G766_RefreshAndNotify.APLR" />
+	</passiveApplicators>
+	<persistentId>Healer_A1</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Class/Healer/Ability_A1.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>1342177311</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Long</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set3" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set3_kit1" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset3_1_Boots/Redset3_1_Boots.TALKIT" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="4" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_LosTal7.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_RedSet3.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NY2020_BadList.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season13_BadList.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet3.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G518: Одержимость странника</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G518_AttackSpeed_VampLife.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G518_AttackSpeed_VampLife.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G518_AttackSpeed_VampLife.TALENT" id="8227E1E2-D859-4190-94AD-9566CF618869">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTE4X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF0CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(sender.vG518_Active&gt;0)</sString>
+				</condition>
+				<name>InForma</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G518_AttackSpeed_VampLife.TALENT" id="02C0BA81-5E38-4B72-8C44-7CD22B969F2A">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRAAAAACAAAAFQAAACsAAABHNTE4X0xpZmVPckVucmcAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdTQAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAPA/</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG518_LifeOrEnrg == 1</sString>
+				</condition>
+				<name>LifeOrEnrg</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G518_AttackSpeed_VampLife.TALENT" id="CD636EDA-ED24-4EA2-9DFF-7B87C9A2DBF1">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G518_AttackSpeed_VampLife.TALENT" id="4F198475-B14D-4484-B213-57C8DD6A3C82">
+					<UnitConstant>
+						<name>Add_LifeOrEnrg</name>
+						<var>
+							<compiledString>FRMAAAACAAAAIgAAADwAAABUNV9TdGF0AExpZmVCdWRnZXQAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgIAAAAi1UQiwKLTRCLUFDdXfj/0txN+Nld9NlF9IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT5_Stat * cLifeBudget</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset3_1_Boots/const_G515_MaxForm" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G518_AttackSpeed_VampLife.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>22.7</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_518.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>4</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G518_AttackSpeed_VampLife.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G518_AttackSpeed_VampLife.TALENT" id="944E8C2F-450E-4BCD-A04E-1B8995780D10">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>LifeOrEnrg</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G518_LifeOrEnrg</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G518_AttackSpeed_VampLife.TALENT" id="70AA9EE0-06FF-4FBC-9FB8-CFAF05823D87">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Life</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLQnz/0ItNCIsRi00Ii4KAAAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseLife &gt;= sBaseEnergy</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQ8AAAABAAAAGwAAAEFkZF9MaWZlT3JFbnJnAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_LifeOrEnrg</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G518_AttackSpeed_VampLife.TALENT" id="BCAF693B-D3DA-4003-959A-74AB624D8831">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Energy</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLQnz/0ItNCIsRi00Ii4KAAAAA3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseLife &lt; sBaseEnergy</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQ8AAAABAAAAGwAAAEFkZF9MaWZlT3JFbnJnAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_LifeOrEnrg</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Redset3_1_Boots/G515_FormCounter.APLR" />
+		<Item href="/Items/Talents/Common/G518_AttackSpeed_VampLife.TALENT" id="2B4BE8D5-4AA1-424F-B0B6-6B40BEE98937">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>G518_Active</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString>FSkAAAADAAAAMAAAAE0AAAB/AAAARzUxNV9Gb3JtQ291bnRlcgAAAABHNTE1X01heEZvcm0AAAAARzUxNQBVi+yD7BBoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgUAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sQBdTWLTQiLEYtNCIuCfAEAAP/QiUX0aCQAAACLTfSLEYtN9IuCqAEAAP/QhcB0CcdF8AEAAADrB8dF8AAAAACKRfCL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>(sender.vG515_FormCounter &lt;= cG515_MaxForm)&amp;&amp;(sObjectMaster-&gt;GetTalent("G515"))</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G518_Active</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G518</persistentId>
+	<prerequisiteTalents />
+	<rarity>exclusive</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>16</talentRollGroups>
+	<talentStats />
+	<targetType>136258047</targetType>
+	<type>Simple</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats>
+		<Item>
+			<addValueName>Add_LifeOrEnrg</addValueName>
+			<stat>Life</stat>
+			<values>
+				<Item>570</Item>
+				<Item>612</Item>
+				<Item>654</Item>
+				<Item>696</Item>
+				<Item>738</Item>
+				<Item>780</Item>
+				<Item>822</Item>
+				<Item>864</Item>
+				<Item>906</Item>
+				<Item>948</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_LifeOrEnrg</addValueName>
+			<stat>Life</stat>
+			<values>
+				<Item>570</Item>
+				<Item>612</Item>
+				<Item>654</Item>
+				<Item>696</Item>
+				<Item>738</Item>
+				<Item>780</Item>
+				<Item>822</Item>
+				<Item>864</Item>
+				<Item>906</Item>
+				<Item>948</Item>
+			</values>
+		</Item>
+	</variativeMaxTalentStats>
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

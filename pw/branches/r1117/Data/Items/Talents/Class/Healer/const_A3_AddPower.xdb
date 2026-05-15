@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <UnitConstant>
-	<BackLink DBID="/Items/Talents/Class/Healer/Ability3.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Healer/Ability1.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Healer/Ability4.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Healer/Ability4_2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A3.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A4.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A4_2.TALENT" Count="1" />
 	<name>A3AddPower</name>
 	<var>
-		<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUEAAADZHCRR2QU9AAAA2RwkagKLRQiLEItNCItCEP/QUdkcJGoAi00QixGLTRCLQmD/0F3DmplZQAAAyEE=</compiledString>
+		<compiledString>FTIAAAAGAAAAOQAAAFIAAACEAAAAjgAAAMoAAADoAAAASGVhbGVyX0EzX1NVUAAAAEhlYWxlcl9BM19TVVAAAABBM19TVVBfQm9udXNWYWx1ZQBVi+yD7CBoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AGoBUdkFEQEAANkcJFHZBQ0BAADZHCRqAotNCIsRi00Ii0IQ/9BR2RwkagCLTRCLEYtNEItCYP/QD7ZN+4lN9NtF9ItVDFKLRQhQaCAAAACLTRCLEYtNEItCUNnJ3V3s3V3k/9DcTeTcNQUBAADZ6N7B3E3s2V3g2UXgi+VdwwAAAAAAAPA/AAAAAAAAWUCamVlAAADIQQ==</compiledString>
 		<returnType>float</returnType>
-		<sString>abilityScaleCustomEnergy(sMaxEnergy, 3.4, 25)</sString>
+		<sString>abilityScaleCustomEnergy(sMaxEnergy, 3.4, 25) * (1 + tal("Healer_A3_SUP") * cA3_SUP_BonusValue/100)</sString>
 	</var>
 </UnitConstant>

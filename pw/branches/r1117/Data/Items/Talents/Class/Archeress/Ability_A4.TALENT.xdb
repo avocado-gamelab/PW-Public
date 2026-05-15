@@ -2,8 +2,14 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Archeress.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Archeress_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Archeress/Ability_A4.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Archeress/Ability_A4_2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Archeress/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Archeress/Ability_A4u.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
 	<BackLink DBID="/Test/Talents/Archeress/Duel.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Archeress/Duel_Vamp.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Archeress/Elite_NoAsp.TALENTSET" Count="1" />
@@ -12,12 +18,6 @@
 	<BackLink DBID="/Test/Talents/Archeress/Elite_Stat_1.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Archeress/Elite_Vamp.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Archeress/Epic_AspdVamp.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Archeress.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Archeress/Ability_A4_2.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Archeress/Ability_A4_2u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Archeress_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -788,8 +788,8 @@
 		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Archeress/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Archeress/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Archeress/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Archeress/Ability_A4.TALENT" id="CA4BF354-858F-442F-A302-DC49DC5E13CE">
 			<ConditionFormula>
@@ -843,9 +843,9 @@
 					<UnitConstant>
 						<name>TargetsNumber</name>
 						<var>
-							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
 							<returnType>float</returnType>
-							<sString>1</sString>
+							<sString>2</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -959,7 +959,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>7</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Archeress/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

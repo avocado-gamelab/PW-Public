@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Monster.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Monster.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Monster_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Monster/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Monster/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Monster/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Monster/Ability_A4u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Monster_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Test/Talents/RedSet5Add.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Monster/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Monster/Duel_Str.TALENTSET" Count="1" />
@@ -777,7 +777,7 @@
 	<askId>4</askId>
 	<autoTargetSelector href="" />
 	<budget>-1</budget>
-	<caption>А4 Твари</caption>
+	<caption>А4 Выброс токсичности</caption>
 	<castAllowRange>
 		<compiledString></compiledString>
 		<returnType>float</returnType>
@@ -796,8 +796,8 @@
 		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Monster/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Monster/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Monster/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Monster/Ability_A4.TALENT" id="C4D27142-57B6-47CC-81EA-E9E3E58BB24A">
 			<ConditionFormula>
@@ -929,9 +929,9 @@
 					<UnitConstant>
 						<name>A4_BaseStackCooldown</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQQ==</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQQ==</compiledString>
 							<returnType>float</returnType>
-							<sString>30</sString>
+							<sString>25</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -996,7 +996,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>519</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Monster/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -1004,9 +1004,9 @@
 	<isUltimateTalent>true</isUltimateTalent>
 	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
 	<manaCost>
-		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADcQg==</compiledString>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQg==</compiledString>
 		<returnType>float</returnType>
-		<sString>110</sString>
+		<sString>100</sString>
 	</manaCost>
 	<marker></marker>
 	<microAI href="/Items/Talents/Class/Monster/Ability_A4.TALENT" id="3474380B-5748-4F3D-9DC4-B2F7B9E2908F">

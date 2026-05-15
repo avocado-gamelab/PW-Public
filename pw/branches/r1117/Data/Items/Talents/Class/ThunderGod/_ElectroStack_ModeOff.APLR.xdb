@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PermanentStatModApplicator>
-	<BackLink DBID="/Items/Talents/Class/ThunderGod/Ability1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" Count="1" />
 	<BackLink DBID="/Maps/Tutorial/Talents/Tutorial_ThunderGod.TALENT" Count="1" />
 	<applyTarget>AbilityOwner</applyTarget>
 	<caption>(UPG) - переменная ElectroStack_Off = 1, чтобы снять с себя стеки от А0</caption>
 	<customApplyType>None</customApplyType>
 	<enabled>
-		<compiledString>FSkAAAADAAAAMAAAAEkAAACFAAAAVGh1bmRlcl9BMV9VcGcyAFRodW5kZXJfQTFfVXBnMgBBMURlYnVmZgBVi+yD7AxoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQpagGLVRBSaCAAAACLRQiLEItNCIuCnAEAAP/QO0UQdQnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+		<compiledString>FTEAAAADAAAAOAAAAFEAAACNAAAAVGh1bmRlckdvZF9BMV9VcGcyAABUaHVuZGVyR29kX0ExX1VwZzIAAEExRGVidWZmAFWL7IPsDGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoFAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdClqAYtVEFJoKAAAAItFCIsQi00Ii4KcAQAA/9A7RRB1CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
 		<returnType>bool</returnType>
-		<sString>tal("Thunder_A1_Upg2")&amp;&amp;sender.applA1Debuff(UNIT) == pMisc</sString>
+		<sString>tal("ThunderGod_A1_Upg2")&amp;&amp;sender.applA1Debuff(UNIT) == pMisc</sString>
 	</enabled>
 	<formulaName></formulaName>
 	<LoggingEvent>-1</LoggingEvent>

@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/TalentGroup.TGRP" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet12.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet4.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Common/Obsolete/G151_Dmg_Slow.TALENT" id="4CE90947-D829-491F-8F75-D93D743A9615">
+			<DamageApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<cancelInvisibility>false</cancelInvisibility>
+				<caption>- наносим урон абилкой</caption>
+				<damage>
+					<compiledString>FQcAAAABAAAAEwAAAERhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+					<returnType>float</returnType>
+					<sString>cDamage</sString>
+				</damage>
+				<damageMode>4</damageMode>
+				<damageType>Energy</damageType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<timeLimiter>-1</timeLimiter>
+				<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
+			</DamageApplicator>
+		</Item>
+		<Item href="/Heroes/DefaultStatus/_SLOW_MOVE.APLR" />
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G151: Магический спазм</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/Obsolete/G151_Dmg_Slow.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G151_Dmg_Slow.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G151_Dmg_Slow.TALENT" id="C473FC72-985E-4BF2-A7FC-002D61A21CC9">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G151_Dmg_Slow.TALENT" id="4BC5FF66-321D-4505-BD0A-2D26B6906524">
+					<UnitConstant>
+						<name>Slow_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>3</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G151_Dmg_Slow.TALENT" id="7D7BD32D-6CAB-4307-9597-F5309299C8DA">
+					<UnitConstant>
+						<name>Damage</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUNF9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcMAAAAAAAAuQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT4_Stat * 15</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G151_Dmg_Slow.TALENT" id="A1F0ED48-48FC-4F4B-BAE3-94A3FF7D061C">
+					<UnitConstant>
+						<name>Dec_MoveSpeed</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACMQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>70</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>120</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G151_Dmg_Slow.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/Obsolete/G151_Dmg_Slow.TALENT" id="450CB766-8C42-4290-9E29-4836BB50D104">
+		<DispatchLinearWithLink>
+			<aiming>Straight</aiming>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="/Effects/Shots/Spear/_LightHit.EFFT" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="/Effects/Shots/Spear/_Light.EFFT" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<flyMode>Parabolic</flyMode>
+			<fromLocator>Body</fromLocator>
+			<height>0</height>
+			<killEffect>true</killEffect>
+			<links />
+			<locatorOrient>false</locatorOrient>
+			<maxDeviation>180</maxDeviation>
+			<maxDistance>-1</maxDistance>
+			<maxRise>0.5</maxRise>
+			<minRise>0</minRise>
+			<persistentApplicators />
+			<speed>30</speed>
+			<suspendTime>0</suspendTime>
+			<toLocator>Body</toLocator>
+		</DispatchLinearWithLink>
+	</dispatch>
+	<flags>3</flags>
+	<forceBonus>16.15</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_151.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="/Items/Talents/Common/Obsolete/G151_Dmg_Slow.TALENT" id="72F10B9C-430F-4ADC-8515-19EEFD48AF12">
+		<TargetSelectorMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</condition>
+			<targetSelector href="/Items/Talents/Common/Obsolete/G151_Dmg_Slow.TALENT" id="F004AF27-B03D-42EA-B951-DC0DE242FF67">
+				<FirstTargetSelector>
+					<nearestTarget>true</nearestTarget>
+					<targetSelector href="/Items/Talents/Common/Obsolete/G151_Dmg_Slow.TALENT" id="5136F0E5-01B5-4AFE-8AFC-E7557DACF89C">
+						<ConditionTargetSelector>
+							<condition>
+								<compiledString>FQAAAAABAAAAJwAAAFWL7IPsDItFDIsQi00MiwL/0ItNDIsRi00Mi0IM3V34/9DcffjcHUkAAADf4PbEBXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcOamZmZmZnZPw==</compiledString>
+								<returnType>bool</returnType>
+								<sString>rLife / rMaxLife &lt; 0.4</sString>
+							</condition>
+							<flags>0</flags>
+							<mode>Normal</mode>
+							<targetSelector href="/Items/Talents/Common/Obsolete/G151_Dmg_Slow.TALENT" id="C26A485F-5D28-49B0-9EB9-47D9D63CA732">
+								<AreaTargetSelector>
+									<absolutePosition>
+										<x>0</x>
+										<y>0</y>
+									</absolutePosition>
+									<flags>0</flags>
+									<mode>Normal</mode>
+									<range>
+										<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+										<returnType>float</returnType>
+										<sString>cRange_Long</sString>
+									</range>
+									<targetFilter>672923651</targetFilter>
+									<targetSelector href="" />
+								</AreaTargetSelector>
+							</targetSelector>
+						</ConditionTargetSelector>
+					</targetSelector>
+				</FirstTargetSelector>
+			</targetSelector>
+		</TargetSelectorMicroAI>
+	</microAI>
+	<minLevel>3</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G151_Dmg_Slow.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators />
+	<persistentId>G151</persistentId>
+	<prerequisiteTalents />
+	<rarity>excellent</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/Obsolete/G151_Dmg_Slow.TALENT_shortDescription.txt" />
+	<talentRollGroups>0</talentRollGroups>
+	<talentStats />
+	<targetType>672989247</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Long</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

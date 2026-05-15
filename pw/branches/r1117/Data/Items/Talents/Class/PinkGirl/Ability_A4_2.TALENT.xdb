@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/PinkGirl_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/PinkGirl_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/PinkGirl/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/PinkGirl/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/PinkGirl/Ability_A4u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/PinkGirl_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/PinkGirl_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -62,6 +62,7 @@
 							<useListAs>ListAsRule</useListAs>
 						</FlagsApplicator>
 					</Item>
+					<Item href="/Heroes/DefaultStatus/_MasterStatConnect_Life.APLR" />
 					<Item href="/Heroes/DefaultStatus/_MasterStatConnect_Intellect.APLR" />
 					<Item href="/Heroes/DefaultStatus/_MasterStatConnect_Dexterity.APLR" />
 					<Item href="/Heroes/DefaultStatus/_MasterStatConnect_AttackSpeed.APLR" />
@@ -141,6 +142,558 @@
 					</Item>
 					<Item href="/GameLogic/GeneralApplicators/Immune2Control.APLR" />
 					<Item href="/GameLogic/GeneralApplicators/Uncontrollable.APLR" />
+					<Item href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="DFB2A197-C978-4C75-AE62-0DE3FB98955D">
+						<ProgramApplicator>
+							<applicators>
+								<Item>
+									<applicator href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="5D8158C0-4F5A-4FCD-A3FB-C70C3FB9C1B4">
+										<FlagsApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<behaviorFlags>152</behaviorFlags>
+											<caption>Ждем</caption>
+											<consumables />
+											<effect>
+												<Item href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="97668D87-DF61-49A7-9D45-0D5EDBBC6F35">
+													<EffectList>
+														<deathType>Manual</deathType>
+														<effects>
+															<Item href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="1853F147-97C1-4F47-9E39-19AFB2761916">
+																<EffectSwitcher>
+																	<deathType>Manual</deathType>
+																	<effectOnInvisible href="/Summons/Bubo/FXDecalEnemy.EFFT" />
+																	<effectOnVisible href="/Summons/Bubo/FXDecalAlly.EFFT" />
+																	<enableCondition href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="F9525F9B-68D6-4E47-AF03-336900963012">
+																		<ConditionFormula>
+																			<condition>
+																				<compiledString>FSgAAAACAAAALwAAAEgAAABQbGFndWVEb2N0b3JfQTFfU1VQAFBsYWd1ZURvY3Rvcl9BMV9TVVAAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgUAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwIPAAYvlXcM=</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>!tal("PlagueDoctor_A1_SUP")</sString>
+																			</condition>
+																			<name></name>
+																		</ConditionFormula>
+																	</enableCondition>
+																	<isVisibleUnderWarfog>false</isVisibleUnderWarfog>
+																	<lifeTime>0</lifeTime>
+																	<logic>FactionVisibility</logic>
+																</EffectSwitcher>
+															</Item>
+															<Item href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="681B0A4D-AF95-4151-B041-215108259E80">
+																<EffectSwitcher>
+																	<deathType>Manual</deathType>
+																	<effectOnInvisible href="/Summons/Bubo/FXDecalEnemy_SUP.EFFT" />
+																	<effectOnVisible href="/Summons/Bubo/FXDecalAlly_SUP.EFFT" />
+																	<enableCondition href="" />
+																	<isVisibleUnderWarfog>false</isVisibleUnderWarfog>
+																	<lifeTime>0</lifeTime>
+																	<logic>FactionVisibility</logic>
+																</EffectSwitcher>
+															</Item>
+														</effects>
+														<enableCondition href="" />
+														<lifeTime>0</lifeTime>
+													</EffectList>
+												</Item>
+												<Item href="" />
+											</effect>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<flag>0</flag>
+											<formulaName></formulaName>
+											<lifeTime>
+												<compiledString>FREAAAABAAAAHQAAAEE0XzJfQ2F0RHVyYXRpb24AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+												<returnType>float</returnType>
+												<sString>cA4_2_CatDuration</sString>
+											</lifeTime>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<startCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</startCondition>
+											<talents />
+											<useListAs>ListAsRule</useListAs>
+										</FlagsApplicator>
+									</applicator>
+									<continueCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</continueCondition>
+									<continueEvents>2</continueEvents>
+									<delay>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</delay>
+									<stopCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</stopCondition>
+									<stopEvents>0</stopEvents>
+								</Item>
+								<Item>
+									<applicator href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="48F5CD7B-3497-4261-87E7-8390F41B14A1">
+										<DamageApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<cancelInvisibility>false</cancelInvisibility>
+											<caption>Наносим себе урон 10 раз</caption>
+											<damage>
+												<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1</sString>
+											</damage>
+											<damageMode>0</damageMode>
+											<damageType>Pure</damageType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<timeLimiter>-1</timeLimiter>
+											<uiEvent href="" />
+										</DamageApplicator>
+									</applicator>
+									<continueCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</continueCondition>
+									<continueEvents>1</continueEvents>
+									<delay>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</delay>
+									<stopCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</stopCondition>
+									<stopEvents>0</stopEvents>
+								</Item>
+								<Item>
+									<applicator href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="BD75BF74-2C33-46D6-B943-CB2554229B31">
+										<DamageApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<cancelInvisibility>false</cancelInvisibility>
+											<caption>Наносим себе урон 10 раз</caption>
+											<damage>
+												<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1</sString>
+											</damage>
+											<damageMode>0</damageMode>
+											<damageType>Pure</damageType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<timeLimiter>-1</timeLimiter>
+											<uiEvent href="" />
+										</DamageApplicator>
+									</applicator>
+									<continueCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</continueCondition>
+									<continueEvents>1</continueEvents>
+									<delay>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</delay>
+									<stopCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</stopCondition>
+									<stopEvents>0</stopEvents>
+								</Item>
+								<Item>
+									<applicator href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="CBB7F776-C8C3-420E-BF65-D9447ACD7E56">
+										<DamageApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<cancelInvisibility>false</cancelInvisibility>
+											<caption>Наносим себе урон 10 раз</caption>
+											<damage>
+												<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1</sString>
+											</damage>
+											<damageMode>0</damageMode>
+											<damageType>Pure</damageType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<timeLimiter>-1</timeLimiter>
+											<uiEvent href="" />
+										</DamageApplicator>
+									</applicator>
+									<continueCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</continueCondition>
+									<continueEvents>1</continueEvents>
+									<delay>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</delay>
+									<stopCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</stopCondition>
+									<stopEvents>0</stopEvents>
+								</Item>
+								<Item>
+									<applicator href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="05BCEB9B-13FF-41C5-BAA3-2F8FD6A1802D">
+										<DamageApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<cancelInvisibility>false</cancelInvisibility>
+											<caption>Наносим себе урон 10 раз</caption>
+											<damage>
+												<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1</sString>
+											</damage>
+											<damageMode>0</damageMode>
+											<damageType>Pure</damageType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<timeLimiter>-1</timeLimiter>
+											<uiEvent href="" />
+										</DamageApplicator>
+									</applicator>
+									<continueCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</continueCondition>
+									<continueEvents>1</continueEvents>
+									<delay>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</delay>
+									<stopCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</stopCondition>
+									<stopEvents>0</stopEvents>
+								</Item>
+								<Item>
+									<applicator href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="0CC629AE-06DF-4A0C-B6DA-D98F9F3A8475">
+										<DamageApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<cancelInvisibility>false</cancelInvisibility>
+											<caption>Наносим себе урон 10 раз</caption>
+											<damage>
+												<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1</sString>
+											</damage>
+											<damageMode>0</damageMode>
+											<damageType>Pure</damageType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<timeLimiter>-1</timeLimiter>
+											<uiEvent href="" />
+										</DamageApplicator>
+									</applicator>
+									<continueCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</continueCondition>
+									<continueEvents>1</continueEvents>
+									<delay>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</delay>
+									<stopCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</stopCondition>
+									<stopEvents>0</stopEvents>
+								</Item>
+								<Item>
+									<applicator href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="F11A7BEC-1811-4232-85A0-FED95E73D9C2">
+										<DamageApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<cancelInvisibility>false</cancelInvisibility>
+											<caption>Наносим себе урон 10 раз</caption>
+											<damage>
+												<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1</sString>
+											</damage>
+											<damageMode>0</damageMode>
+											<damageType>Pure</damageType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<timeLimiter>-1</timeLimiter>
+											<uiEvent href="" />
+										</DamageApplicator>
+									</applicator>
+									<continueCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</continueCondition>
+									<continueEvents>1</continueEvents>
+									<delay>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</delay>
+									<stopCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</stopCondition>
+									<stopEvents>0</stopEvents>
+								</Item>
+								<Item>
+									<applicator href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="21ECF55E-45A2-4371-91B2-56B6872AAAE1">
+										<DamageApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<cancelInvisibility>false</cancelInvisibility>
+											<caption>Наносим себе урон 10 раз</caption>
+											<damage>
+												<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1</sString>
+											</damage>
+											<damageMode>0</damageMode>
+											<damageType>Pure</damageType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<timeLimiter>-1</timeLimiter>
+											<uiEvent href="" />
+										</DamageApplicator>
+									</applicator>
+									<continueCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</continueCondition>
+									<continueEvents>1</continueEvents>
+									<delay>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</delay>
+									<stopCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</stopCondition>
+									<stopEvents>0</stopEvents>
+								</Item>
+								<Item>
+									<applicator href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="8089E9EB-ECC4-4A84-B817-AF7825C5F136">
+										<DamageApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<cancelInvisibility>false</cancelInvisibility>
+											<caption>Наносим себе урон 10 раз</caption>
+											<damage>
+												<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1</sString>
+											</damage>
+											<damageMode>0</damageMode>
+											<damageType>Pure</damageType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<timeLimiter>-1</timeLimiter>
+											<uiEvent href="" />
+										</DamageApplicator>
+									</applicator>
+									<continueCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</continueCondition>
+									<continueEvents>1</continueEvents>
+									<delay>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</delay>
+									<stopCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</stopCondition>
+									<stopEvents>0</stopEvents>
+								</Item>
+								<Item>
+									<applicator href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="A9F29EB3-839F-49CA-8E3D-EDF2890802A8">
+										<DamageApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<cancelInvisibility>false</cancelInvisibility>
+											<caption>Наносим себе урон 10 раз</caption>
+											<damage>
+												<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1</sString>
+											</damage>
+											<damageMode>0</damageMode>
+											<damageType>Pure</damageType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<timeLimiter>-1</timeLimiter>
+											<uiEvent href="" />
+										</DamageApplicator>
+									</applicator>
+									<continueCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</continueCondition>
+									<continueEvents>1</continueEvents>
+									<delay>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</delay>
+									<stopCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</stopCondition>
+									<stopEvents>0</stopEvents>
+								</Item>
+								<Item>
+									<applicator href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="4C582DCA-22C5-4342-83E7-E59137BE70D6">
+										<DamageApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<cancelInvisibility>false</cancelInvisibility>
+											<caption>Наносим себе урон 10 раз</caption>
+											<damage>
+												<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1</sString>
+											</damage>
+											<damageMode>0</damageMode>
+											<damageType>Pure</damageType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<timeLimiter>-1</timeLimiter>
+											<uiEvent href="" />
+										</DamageApplicator>
+									</applicator>
+									<continueCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</continueCondition>
+									<continueEvents>1</continueEvents>
+									<delay>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</delay>
+									<stopCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>0</sString>
+									</stopCondition>
+									<stopEvents>0</stopEvents>
+								</Item>
+							</applicators>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption>Программа самоуничтожения</caption>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString>FR8AAAACAAAAJgAAAD8AAABQaW5rR2lybF9BNF8ydQAAUGlua0dpcmxfQTRfMnUAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCKRfuL5V3D</compiledString>
+								<returnType>bool</returnType>
+								<sString>tal("PinkGirl_A4_2u")</sString>
+							</startCondition>
+						</ProgramApplicator>
+					</Item>
 				</applicators>
 				<applyTarget>AbilityOwner</applyTarget>
 				<behaviour href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="A784144C-E80A-4E9C-9BB3-D5B73F553655">
@@ -245,8 +798,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="2E645174-DE5D-4407-9727-A5029395A604">
 			<ConditionFormula>
@@ -360,6 +913,17 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/PinkGirl/Ability_A4_2.TALENT" id="085A8EA7-DF02-45AC-A247-0E130FD9724A">
+					<UnitConstant>
+						<name>MasterStatConnected_Life</name>
+						<var>
+							<compiledString>FTEAAAADAAAAOAAAAFEAAACRAAAAUGlua0dpcmxfQTRfMnUAAFBpbmtHaXJsX0E0XzJ1AABDYXRfQWRkSGl0UG9pbnRzAFWL7IPsGGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4lN9NtF9ItVDFKLRQhQaCAAAACLTRCLEYtNEItCUN1d7P/Q3E3s2V3o2UXoi+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>tal("PinkGirl_A4_2u") * cCat_AddHitPoints</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/PinkGirl/const_Cat_AddHitPoints" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -412,7 +976,7 @@
 		</DispatchLinear>
 	</dispatch>
 	<flags>9</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/PinkGirl/A5.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

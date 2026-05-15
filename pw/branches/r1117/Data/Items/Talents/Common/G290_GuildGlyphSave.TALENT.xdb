@@ -1,0 +1,667 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/GameLogic/TalentGroup.TGRP" Count="1" />
+	<BackLink DBID="/Items/ClanItems/CS084_G290" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_ClanOrange" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="4" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_OrangeSet6.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Quests/TalentQuests/_Settings" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet14.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="A5FF7153-DF27-4B87-AB2C-E498CF7BD7BE">
+			<FlagsApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Сбрасываем запоминание глифа</caption>
+				<consumables />
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flag>0</flag>
+				<formulaName>G290GlyphUp</formulaName>
+				<lifeTime>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPg==</compiledString>
+					<returnType>float</returnType>
+					<sString>0.2</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents />
+				<useListAs>ListAsRule</useListAs>
+			</FlagsApplicator>
+		</Item>
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G290: Неугасающая искра</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations>
+		<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="DEA23697-7CC7-4DA8-AB6E-7D75A890C46D">
+			<ConditionCastLimitation>
+				<condition>
+					<compiledString>FQ0AAAACAAAAEgAAACgAAABHbHlwaENhdGNoZWQAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdSgAAAN/g9sRBdQnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vGlyphCatched &gt; 0.0f</sString>
+				</condition>
+				<uiEvent href="" />
+			</ConditionCastLimitation>
+		</Item>
+	</castLimitations>
+	<commonDescription textref="/Items/Talents/Common/G290_GuildGlyphSave.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G290_GuildGlyphSave.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="C0A973A2-3A28-4D12-863C-E355FDEA473E">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ4AAAACAAAAEwAAACkAAABOdW1iZXJPZkdseXBoAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUsAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vNumberOfGlyph == 0</sString>
+				</condition>
+				<name>NumberOfGlyph0</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="31FA3AB8-4000-45AA-B458-DE2FB2F997FC">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ4AAAACAAAAEwAAACkAAABOdW1iZXJPZkdseXBoAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUsAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAADwPw==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vNumberOfGlyph == 1</sString>
+				</condition>
+				<name>NumberOfGlyph1</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="41B93C7F-6FBC-4233-9557-F4B4AEB43FAA">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ4AAAACAAAAEwAAACkAAABOdW1iZXJPZkdseXBoAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUsAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAQA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vNumberOfGlyph == 2</sString>
+				</condition>
+				<name>NumberOfGlyph2</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="751B5AD9-9680-48A7-AE6A-911152C364CC">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ4AAAACAAAAEwAAACkAAABOdW1iZXJPZkdseXBoAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUsAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAIQA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vNumberOfGlyph == 3</sString>
+				</condition>
+				<name>NumberOfGlyph3</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="3ABB347C-FC2D-4015-8D7B-8CDA72BF0EB9">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ4AAAACAAAAEwAAACkAAABOdW1iZXJPZkdseXBoAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUsAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAUQA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vNumberOfGlyph == 5</sString>
+				</condition>
+				<name>NumberOfGlyph5</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="15469F6A-0933-43D2-86C8-6810CA6FA300">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ4AAAACAAAAEwAAACkAAABOdW1iZXJPZkdseXBoAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUsAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAgQA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vNumberOfGlyph == 8</sString>
+				</condition>
+				<name>NumberOfGlyph8</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="2228A268-595C-4642-99B6-6E0D2F01FD41">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ4AAAACAAAAEwAAACkAAABOdW1iZXJPZkdseXBoAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUsAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAQQA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vNumberOfGlyph == 4</sString>
+				</condition>
+				<name>NumberOfGlyph4</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="024FF84C-CAB9-4812-A461-14F8E9F86213">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ4AAAACAAAAEwAAACkAAABOdW1iZXJPZkdseXBoAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUsAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAYQA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vNumberOfGlyph == 6</sString>
+				</condition>
+				<name>NumberOfGlyph6</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="6C968684-17F9-475B-B1D3-6F052DF61D83">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ4AAAACAAAAEwAAACkAAABHMjkwX1N0ck9ySW50AFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUsAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAADwPw==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG290_StrOrInt==1</sString>
+				</condition>
+				<name>StrOrInt</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="2518BFA9-B267-4759-972A-BD38752D6FD5">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="E501CBF6-9A7A-4A20-9A74-CFDD12A8C706">
+					<UnitConstant>
+						<name>Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABwQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>60</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="4AA98466-CF4D-4EA9-837D-25B32A5DFFDB">
+					<UnitConstant>
+						<name>SaveTime</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABwQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>60</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="F866810A-0BE4-43F7-9CB4-1289F45CEFD2">
+					<UnitConstant>
+						<name>Add_Stat</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUMl9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcOamZmZmZnpPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT2_Stat * 0.8</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+		<returnType>float</returnType>
+		<sString>1</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G290_GuildGlyphSave.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/Applicators/dispatch_G290UpgradeDispatch.DSCH" />
+	<flags>19</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_290.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G290_GuildGlyphSave.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="7022B78A-E39D-4664-AC04-DB1F7DA0CF89">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Триггер, который ловит глифы</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName>G290GlyphUp2</formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="3090BEAF-1C98-4EA6-8163-5C2675A74EC4">
+					<EventProcessorPickupGlyph>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<filter>
+							<abilitiesList />
+							<abilityCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</abilityCondition>
+							<abilityCostMode>Energy</abilityCostMode>
+							<exceptThis>false</exceptThis>
+							<flags>1610613827</flags>
+							<onlySingleTarget>false</onlySingleTarget>
+						</filter>
+						<spell href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="D327A802-8A6D-41F8-8A09-2A82F2251CC1">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="A22E87F4-B6A0-44F8-8939-1B2E865BD294">
+										<StatusApplicator>
+											<applicators>
+												<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="5FE5BC76-80AF-4C2D-B0E7-2DDAB0242CEF">
+													<ProgramApplicator>
+														<applicators>
+															<Item>
+																<applicator href="/Items/Talents/Common/Applicators/status_G290_GuildGlyphSave.APLR" />
+																<continueCondition>
+																	<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																	<returnType>bool</returnType>
+																	<sString>0</sString>
+																</continueCondition>
+																<continueEvents>2</continueEvents>
+																<delay>
+																	<compiledString></compiledString>
+																	<returnType>float</returnType>
+																	<sString>-1.0</sString>
+																</delay>
+																<stopCondition>
+																	<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																	<returnType>bool</returnType>
+																	<sString>0</sString>
+																</stopCondition>
+																<stopEvents>0</stopEvents>
+															</Item>
+															<Item>
+																<applicator href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="87631C2E-CC83-476C-977B-B65819C4D99A">
+																	<SpellApplicator>
+																		<applyTarget>ApplicatorTarget</applyTarget>
+																		<caption>Автоматически используем глиф</caption>
+																		<enabled>
+																			<compiledString>FQwAAAABAAAAFgAAAEcyOTBHbHlwaFVwAFWL7GoBi0UQUGgAAAAAi00IixGLTQiLgpwBAAD/0DPJO0UQD5TBisFdww==</compiledString>
+																			<returnType>bool</returnType>
+																			<sString>sender.applG290GlyphUp(UNIT) == pMisc </sString>
+																		</enabled>
+																		<formulaName></formulaName>
+																		<LoggingEvent>-1</LoggingEvent>
+																		<providerName></providerName>
+																		<spell href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="28F6F60B-CDC3-4CD8-9CFB-A994B1FEFE61">
+																			<Spell>
+																				<applicators />
+																				<dispatch href="/Items/Talents/Common/Applicators/dispatch_G290UpgradeDispatch.DSCH" />
+																			</Spell>
+																		</spell>
+																		<spellTarget>ApplicatorTarget</spellTarget>
+																		<targetSelector href="" />
+																	</SpellApplicator>
+																</applicator>
+																<continueCondition>
+																	<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																	<returnType>bool</returnType>
+																	<sString>0</sString>
+																</continueCondition>
+																<continueEvents>2</continueEvents>
+																<delay>
+																	<compiledString></compiledString>
+																	<returnType>float</returnType>
+																	<sString>-1.0</sString>
+																</delay>
+																<stopCondition>
+																	<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																	<returnType>bool</returnType>
+																	<sString>0</sString>
+																</stopCondition>
+																<stopEvents>0</stopEvents>
+															</Item>
+														</applicators>
+														<applyTarget>AbilityOwner</applyTarget>
+														<behaviorFlags>3</behaviorFlags>
+														<caption>Программа, которая по таймеру автоматически пользует глиф</caption>
+														<effect>
+															<Item href="" />
+															<Item href="" />
+														</effect>
+														<enabled>
+															<compiledString></compiledString>
+															<returnType>bool</returnType>
+															<sString>true</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<lifeTime>
+															<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+															<returnType>float</returnType>
+															<sString>-1</sString>
+														</lifeTime>
+														<LoggingEvent>-1</LoggingEvent>
+														<providerName></providerName>
+														<startCondition>
+															<compiledString></compiledString>
+															<returnType>bool</returnType>
+															<sString>true</sString>
+														</startCondition>
+													</ProgramApplicator>
+												</Item>
+											</applicators>
+											<applyTarget>AbilityOwner</applyTarget>
+											<behaviorFlags>1</behaviorFlags>
+											<caption>фейк статус с программой</caption>
+											<customCounter>
+												<compiledString></compiledString>
+												<returnType>int</returnType>
+												<sString>0</sString>
+											</customCounter>
+											<customProgress>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</customProgress>
+											<description textref="" />
+											<dispellPriority>NonDispellable</dispellPriority>
+											<effect>
+												<Item href="" />
+												<Item href="" />
+											</effect>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<flags>4</flags>
+											<formulaName></formulaName>
+											<image href="" />
+											<lifeTime>
+												<compiledString>FQkAAAACAAAAFgAAACkAAABTYXZlVGltZQBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcBTcAAADZXfzZRfyL5V3DAAAAAAAA4D8=</compiledString>
+												<returnType>float</returnType>
+												<sString>cSaveTime + 0.5</sString>
+											</lifeTime>
+											<LoggingEvent>-1</LoggingEvent>
+											<name textref="" />
+											<power>0</power>
+											<providerName></providerName>
+											<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+											<stackCount>0</stackCount>
+											<startCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</startCondition>
+											<statusPosition>0</statusPosition>
+											<stopBehaviour>StopByTime</stopBehaviour>
+											<unstackableWith href="" />
+										</StatusApplicator>
+									</Item>
+									<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="D6A9651A-CEAB-4A90-BA62-C8AB6493B8E1">
+										<AbilityUpgradeApplicator>
+											<applicators />
+											<applyCount>
+												<compiledString></compiledString>
+												<returnType>int</returnType>
+												<sString>0</sString>
+											</applyCount>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<behaviorFlags>1</behaviorFlags>
+											<caption>Улучшаем талант, что он заряжен</caption>
+											<effect>
+												<Item href="" />
+												<Item href="" />
+											</effect>
+											<enabled>
+												<compiledString>FQwAAAABAAAAFgAAAEcyOTBHbHlwaFVwAFWL7GoBi0UQUGgAAAAAi00IixGLTQiLgpwBAAD/0DPJO0UQD5TBisFdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>sender.applG290GlyphUp(UNIT) == pMisc</sString>
+											</enabled>
+											<flags>24</flags>
+											<formulaName></formulaName>
+											<lifeTime>
+												<compiledString>FQkAAAABAAAAFQAAAFNhdmVUaW1lAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+												<returnType>float</returnType>
+												<sString>cSaveTime</sString>
+											</lifeTime>
+											<LoggingEvent>-1</LoggingEvent>
+											<persistentApplicators />
+											<providerName></providerName>
+											<startCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</startCondition>
+											<talents>
+												<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" />
+											</talents>
+											<targetAbility>TalentFromList</targetAbility>
+											<useListAs>ListAsRule</useListAs>
+										</AbilityUpgradeApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="114371B0-06C6-4FAE-8DF5-980D34A294AE">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>true</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+					</EventProcessorPickupGlyph>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="96BE9070-2865-4BC3-A74F-585F1FEEE840">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>StrOrInt</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&gt;=sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G290_StrOrInt</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="614B1F4C-9FF8-4F77-8A07-CF28E61D2AA0">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Strength</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&gt;=sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9TdGF0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Strength</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" id="6C95C4FD-BFAF-4AB0-A7A8-2B30E8864043">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Intellect</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&lt;sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9TdGF0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Intellect</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G290</persistentId>
+	<prerequisiteTalents />
+	<rarity>exclusive</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G290_GuildGlyphSave.TALENT_shortDescription.txt" />
+	<talentRollGroups>0</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats>
+		<Item>
+			<addValueName>Add_Stat</addValueName>
+			<stat>Strength</stat>
+			<values>
+				<Item>5.76</Item>
+				<Item>6.16</Item>
+				<Item>6.56</Item>
+				<Item>6.96</Item>
+				<Item>7.36</Item>
+				<Item>7.76</Item>
+				<Item>8.16</Item>
+				<Item>8.56</Item>
+				<Item>8.96</Item>
+				<Item>9.36</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_Stat</addValueName>
+			<stat>Intellect</stat>
+			<values>
+				<Item>5.76</Item>
+				<Item>6.16</Item>
+				<Item>6.56</Item>
+				<Item>6.96</Item>
+				<Item>7.36</Item>
+				<Item>7.76</Item>
+				<Item>8.16</Item>
+				<Item>8.56</Item>
+				<Item>8.96</Item>
+				<Item>9.36</Item>
+			</values>
+		</Item>
+	</variativeMaxTalentStats>
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

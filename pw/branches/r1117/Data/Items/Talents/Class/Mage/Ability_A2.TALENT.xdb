@@ -1,0 +1,1497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Mage.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Mage_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Mage_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Mage/Ability_A2_SUP.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Mage/Ability_A2u.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
+	<BackLink DBID="/Test/Talents/Mage/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mage/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mage/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mage/Elite_PvE.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mage/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mage/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mage/Epic_Str.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString>FSQAAAADAAAAKwAAAEQAAACCAAAATWFnZV9BMl9TVVAATWFnZV9BMl9TVVAAUmFuZ2VfTWVsZWUAVYvsg+wMaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgMAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0H4tVDFKLRQhQaBgAAACLTRCLEYtNEItCUP/Q2V306wXZ7tld9NlF9IvlXcMAAAAA</compiledString>
+		<returnType>float</returnType>
+		<sString>tal("Mage_A2_SUP") ? cRange_Melee : 0</sString>
+	</aoeSize>
+	<aoeType>Disk</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="CCCCBE26-865F-4C55-8B40-255AAB2509DF">
+			<ProgramApplicator>
+				<applicators>
+					<Item>
+						<applicator href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="738C0952-0BD2-4F06-9AE6-6FB4BBA770CB">
+							<ChannellingApplicator>
+								<applicatorsOnSelf>
+									<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="A1524945-C244-4CB2-9227-C72883998F4C">
+										<ChangeAnimationApplicator>
+											<affectAllSets>false</affectAllSets>
+											<animation>channeling</animation>
+											<animState>Move</animState>
+											<applyTarget>AbilityOwner</applyTarget>
+											<behaviorFlags>0</behaviorFlags>
+											<caption>Анимация ченнелинга</caption>
+											<effect>
+												<Item href="/Items/Talents/Class/Mage/ChannelAnim.EFFT" />
+												<Item href="" />
+											</effect>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<lifeTime>
+												<compiledString>FQwAAAABAAAAGAAAAENoYW5uZWxUaW1lAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+												<returnType>float</returnType>
+												<sString>cChannelTime</sString>
+											</lifeTime>
+											<LoggingEvent>-1</LoggingEvent>
+											<marker></marker>
+											<providerName></providerName>
+											<startCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</startCondition>
+											<upper>false</upper>
+										</ChangeAnimationApplicator>
+									</Item>
+									<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="BFC62543-3345-4AE8-87C4-E0835553638E">
+										<TriggerApplicator>
+											<actionsCount>
+												<compiledString></compiledString>
+												<returnType>int</returnType>
+												<sString>1</sString>
+											</actionsCount>
+											<applyTarget>AbilityOwner</applyTarget>
+											<behaviorFlags>216</behaviorFlags>
+											<caption>Триггер на свою смерть для сброса КД</caption>
+											<effect>
+												<Item href="" />
+												<Item href="" />
+											</effect>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<lifeTime>
+												<compiledString>FQwAAAABAAAAGAAAAENoYW5uZWxUaW1lAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+												<returnType>float</returnType>
+												<sString>cChannelTime</sString>
+											</lifeTime>
+											<LoggingEvent>-1</LoggingEvent>
+											<playAck>false</playAck>
+											<processor href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="3B905A7B-EAB5-4A65-8AE6-E4FD8307A53B">
+												<EventProcessorOnDeath>
+													<applyTarget>ApplicatorTarget</applyTarget>
+													<castSpellDelay>
+														<compiledString></compiledString>
+														<returnType>float</returnType>
+														<sString>0.0f</sString>
+													</castSpellDelay>
+													<checkSender>0</checkSender>
+													<objectFilter>2040319</objectFilter>
+													<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+													<spell href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="2A8304D0-97AF-4F43-A1BE-61311A5FF448">
+														<Spell>
+															<applicators>
+																<Item href="/GameLogic/GeneralApplicators/RefreshThis.APLR" />
+															</applicators>
+															<dispatch href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="0813F6ED-4BD7-4536-8F1D-F075EE6A7164">
+																<DispatchImmediate>
+																	<alwaysApply>false</alwaysApply>
+																	<applyEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</applyEffect>
+																	<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																	<applyEffectOrientation>Default</applyEffectOrientation>
+																	<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																	<dieAfterApply>true</dieAfterApply>
+																	<dispatchEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</dispatchEffect>
+																	<flags>0</flags>
+																	<instantApply>false</instantApply>
+																</DispatchImmediate>
+															</dispatch>
+														</Spell>
+													</spell>
+												</EventProcessorOnDeath>
+											</processor>
+											<providerName></providerName>
+											<startCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</startCondition>
+											<useAbilityCooldown>false</useAbilityCooldown>
+											<useAbilityOwnerMana>false</useAbilityOwnerMana>
+										</TriggerApplicator>
+									</Item>
+								</applicatorsOnSelf>
+								<applyTarget>AbilityOwner</applyTarget>
+								<behaviorFlags>216</behaviorFlags>
+								<cancelOnDisable>false</cancelOnDisable>
+								<cancelOnInterrupt>true</cancelOnInterrupt>
+								<cancelSpell href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="13C3E505-C263-40CF-B3E5-0BBABC41E6E4">
+									<Spell>
+										<applicators>
+											<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="A354E26F-994D-474F-BA3B-2F4C6C5E28AA">
+												<ProgramApplicator>
+													<applicators>
+														<Item>
+															<applicator href="/Items/Talents/Class/Mage/StopAnimEffect_1.APLR" />
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>2</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQwAAAACAAAAIwAAADYAAABJbnRlcnJ1cHRlZABVi+yD7AiLRRCLEItNEItCSP/QiUX8aAAAAACLTfyLEYtN/ItCVP/Q3B1YAAAA3+D2xER6CcdF+AEAAADrB8dF+AAAAACKRfiL5V3DAAAAAAAAAAA=</compiledString>
+																<returnType>bool</returnType>
+																<sString>appl.parent.vInterrupted == 0; //in case player cancelled by pressing Esc key</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/GameLogic/GeneralApplicators/RefreshThis.APLR" />
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>1</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="BD0DB018-C702-48EF-BCB0-09157866F3DA">
+																<SpellApplicator>
+																	<applyTarget>AbilityOwner</applyTarget>
+																	<caption>Спелл в себя для возврата Энергии (дабы cancelSpell ченнела завершился до хила)</caption>
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<formulaName></formulaName>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<spell href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="B6C89BE7-7960-4B3C-A4EA-C6F0E96409F0">
+																		<Spell>
+																			<applicators>
+																				<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="DE387EAB-3468-43D7-A343-347386D348AD">
+																					<HealApplicator>
+																						<amount>
+																							<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLQhj/0F3D</compiledString>
+																							<returnType>float</returnType>
+																							<sString>mManaCost</sString>
+																						</amount>
+																						<applyTarget>AbilityOwner</applyTarget>
+																						<caption>Возвращаем Энергию</caption>
+																						<enabled>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</enabled>
+																						<formulaName></formulaName>
+																						<healTarget>Energy</healTarget>
+																						<ignoreHealingMods>false</ignoreHealingMods>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<providerName></providerName>
+																						<uiEvent href="" />
+																					</HealApplicator>
+																				</Item>
+																			</applicators>
+																			<dispatch href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="159132DA-4635-4545-BD33-03E04F8639A1">
+																				<DispatchImmediate>
+																					<alwaysApply>false</alwaysApply>
+																					<applyEffect>
+																						<Item href="" />
+																						<Item href="" />
+																					</applyEffect>
+																					<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																					<applyEffectOrientation>Default</applyEffectOrientation>
+																					<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																					<dieAfterApply>true</dieAfterApply>
+																					<dispatchEffect>
+																						<Item href="" />
+																						<Item href="" />
+																					</dispatchEffect>
+																					<flags>0</flags>
+																					<instantApply>false</instantApply>
+																				</DispatchImmediate>
+																			</dispatch>
+																		</Spell>
+																	</spell>
+																	<spellTarget>AbilityOwner</spellTarget>
+																	<targetSelector href="" />
+																</SpellApplicator>
+															</applicator>
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>2</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+													</applicators>
+													<applyTarget>AbilityOwner</applyTarget>
+													<behaviorFlags>216</behaviorFlags>
+													<caption></caption>
+													<effect>
+														<Item href="" />
+														<Item href="" />
+													</effect>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<lifeTime>
+														<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPg==</compiledString>
+														<returnType>float</returnType>
+														<sString>0.2</sString>
+													</lifeTime>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<startCondition>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</startCondition>
+												</ProgramApplicator>
+											</Item>
+										</applicators>
+										<dispatch href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="BF3731C3-A992-45A7-A08F-0B3254072CD5">
+											<DispatchImmediate>
+												<alwaysApply>false</alwaysApply>
+												<applyEffect>
+													<Item href="" />
+													<Item href="" />
+												</applyEffect>
+												<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+												<applyEffectOrientation>Default</applyEffectOrientation>
+												<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+												<dieAfterApply>true</dieAfterApply>
+												<dispatchEffect>
+													<Item href="" />
+													<Item href="" />
+												</dispatchEffect>
+												<flags>0</flags>
+												<instantApply>true</instantApply>
+											</DispatchImmediate>
+										</dispatch>
+									</Spell>
+								</cancelSpell>
+								<caption>ченнел</caption>
+								<channelingType>Creation</channelingType>
+								<effect>
+									<Item href="" />
+									<Item href="" />
+								</effect>
+								<enabled>
+									<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</enabled>
+								<formulaName>A2Channel</formulaName>
+								<interruptEvents>2658782</interruptEvents>
+								<lifeTime>
+									<compiledString>FQwAAAABAAAAGAAAAENoYW5uZWxUaW1lAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+									<returnType>float</returnType>
+									<sString>cChannelTime</sString>
+								</lifeTime>
+								<LoggingEvent>-1</LoggingEvent>
+								<period>0</period>
+								<periodicalSpell href="" />
+								<providerName></providerName>
+								<removeStartSpellEffectOnInterrupt>true</removeStartSpellEffectOnInterrupt>
+								<scaleWhenInterrupted>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>1.0f</sString>
+								</scaleWhenInterrupted>
+								<startCondition>
+									<compiledString>FQAAAAAAAAAAVYvsaAAAABCLRQiLEItNCItCaP/QD7bA99gbwIPAAV3D</compiledString>
+									<returnType>bool</returnType>
+									<sString>!sFlag(268435456)</sString>
+								</startCondition>
+								<startSpell href="" />
+								<stopSpell href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="EE9D3855-C95A-4380-8AFC-6AC64B0A9E04">
+									<Spell>
+										<applicators>
+											<Item href="/Items/Talents/Class/Mage/Hex.APLR" />
+											<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="DEB028E1-835B-478D-A598-17A46E48515D">
+												<SpellApplicator>
+													<applyTarget>ApplicatorTarget</applyTarget>
+													<caption>АОЕ хекс</caption>
+													<enabled>
+														<compiledString>FRgAAAACAAAAHwAAADgAAABNYWdlX0EyX1NVUABNYWdlX0EyX1NVUABVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AIpF+4vlXcM=</compiledString>
+														<returnType>bool</returnType>
+														<sString>tal("Mage_A2_SUP")</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<spell href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="F21BD658-F49C-40D2-B05F-4B0ED35ADA9A">
+														<Spell>
+															<applicators>
+																<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="8D75E0FE-4CF2-43A6-9A32-858B231ADF9F">
+																	<ProgramApplicator>
+																		<applicators>
+																			<Item>
+																				<applicator href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="F7830B16-461E-43E1-9A5E-AF47C3201130">
+																					<FlagsApplicator>
+																						<applyTarget>ApplicatorTarget</applyTarget>
+																						<behaviorFlags>145</behaviorFlags>
+																						<caption>fx scale и микростун</caption>
+																						<consumables />
+																						<effect>
+																							<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="75FFF982-7200-4044-8B82-4D0ACE39D294">
+																								<ScaleColorEffect>
+																									<blendMode>LerpByAlpha</blendMode>
+																									<colorAdd>
+																										<A>0</A>
+																										<B>0</B>
+																										<G>0</G>
+																										<R>0</R>
+																									</colorAdd>
+																									<colorMul>
+																										<A>1</A>
+																										<B>1</B>
+																										<G>1</G>
+																										<R>1</R>
+																									</colorMul>
+																									<deathType>Manual</deathType>
+																									<enableCondition href="" />
+																									<fadeInTime>0.2</fadeInTime>
+																									<fadeOutTime>0</fadeOutTime>
+																									<fullRecolor>false</fullRecolor>
+																									<lifeTime>0</lifeTime>
+																									<scale>0.5</scale>
+																									<scaleIn>1</scaleIn>
+																									<scaleOut>1</scaleOut>
+																								</ScaleColorEffect>
+																							</Item>
+																							<Item href="" />
+																						</effect>
+																						<enabled>
+																							<compiledString>FQ0AAAABAAAAFwAAAFNPQkpSZXBsYWNlcgBVi+xqAItFEFBoAAAAAItNDIsRi00Mi4KcAQAA/9AzyTtFEA+UwYrBXcM=</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>receiver.applSOBJReplacer(GLOBAL) == pMisc</sString>
+																						</enabled>
+																						<flag>1663</flag>
+																						<formulaName></formulaName>
+																						<lifeTime>
+																							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPg==</compiledString>
+																							<returnType>float</returnType>
+																							<sString>0.2</sString>
+																						</lifeTime>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<providerName></providerName>
+																						<startCondition>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</startCondition>
+																						<talents />
+																						<useListAs>ListAsException</useListAs>
+																					</FlagsApplicator>
+																				</applicator>
+																				<continueCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>2</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																			<Item>
+																				<applicator href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="B1A052AA-16F1-4AE5-B9DC-CFA85DE99DB4">
+																					<StatusApplicator>
+																						<applicators>
+																							<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="3A372D06-E3A0-4631-A87C-AED92334757A">
+																								<StatusApplicator>
+																									<applicators>
+																										<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="2FCDF3C6-1D6F-471C-B32E-75E67B8C14D5">
+																											<FlagsApplicator>
+																												<applyTarget>ApplicatorTarget</applyTarget>
+																												<behaviorFlags>144</behaviorFlags>
+																												<caption>не могу ничего кроме как двигаться</caption>
+																												<consumables />
+																												<effect>
+																													<Item href="" />
+																													<Item href="" />
+																												</effect>
+																												<enabled>
+																													<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																													<returnType>bool</returnType>
+																													<sString>true</sString>
+																												</enabled>
+																												<flag>525950</flag>
+																												<formulaName></formulaName>
+																												<lifeTime>
+																													<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+																													<returnType>float</returnType>
+																													<sString>-1.0</sString>
+																												</lifeTime>
+																												<LoggingEvent>-1</LoggingEvent>
+																												<providerName></providerName>
+																												<startCondition>
+																													<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																													<returnType>bool</returnType>
+																													<sString>true</sString>
+																												</startCondition>
+																												<talents />
+																												<useListAs>ListAsException</useListAs>
+																											</FlagsApplicator>
+																										</Item>
+																										<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="7E393928-D9CF-4F94-BFE0-AEBF0CCD9328">
+																											<StatModApplicator>
+																												<applyTarget>ApplicatorTarget</applyTarget>
+																												<behaviorFlags>144</behaviorFlags>
+																												<caption>медленно бегать</caption>
+																												<constraint>None</constraint>
+																												<dontUpdate>true</dontUpdate>
+																												<effect>
+																													<Item href="" />
+																													<Item href="" />
+																												</effect>
+																												<enabled>
+																													<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																													<returnType>bool</returnType>
+																													<sString>true</sString>
+																												</enabled>
+																												<formulaName></formulaName>
+																												<lifeTime>
+																													<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+																													<returnType>float</returnType>
+																													<sString>-1.0</sString>
+																												</lifeTime>
+																												<LoggingEvent>-1</LoggingEvent>
+																												<modifier>
+																													<addValue>
+																														<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+																														<returnType>float</returnType>
+																														<sString>0</sString>
+																													</addValue>
+																													<multValue>
+																														<compiledString>FRcAAAADAAAAJgAAADkAAABGAAAAQTJfTW92ZVBlcmNlbnQAAFJlZHVjZQBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNZwAAAItFDFCLTQhRaBAAAACLVRCLAotNEItQUN1d+P/S3E342V302UX0i+Vdw3sUrkfheoQ/</compiledString>
+																														<returnType>float</returnType>
+																														<sString>cA2_MovePercent * 0.01*cReduce</sString>
+																													</multValue>
+																													<stat>MoveSpeed</stat>
+																													<topModifier>false</topModifier>
+																													<variable></variable>
+																												</modifier>
+																												<providerName></providerName>
+																												<startCondition>
+																													<compiledString>FRgAAAACAAAAHwAAADgAAABNYWdlX0EyX1NVUABNYWdlX0EyX1NVUABVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AIpF+4vlXcM=</compiledString>
+																													<returnType>bool</returnType>
+																													<sString>tal("Mage_A2_SUP")</sString>
+																												</startCondition>
+																												<statModName></statModName>
+																											</StatModApplicator>
+																										</Item>
+																										<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="BA2158A6-3A7A-4637-8C74-788ECB9A8499">
+																											<SpellPeriodicallyApplicator>
+																												<applyTarget>ApplicatorTarget</applyTarget>
+																												<behaviorFlags>144</behaviorFlags>
+																												<caption>период урон</caption>
+																												<effect>
+																													<Item href="" />
+																													<Item href="" />
+																												</effect>
+																												<enabled>
+																													<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																													<returnType>bool</returnType>
+																													<sString>true</sString>
+																												</enabled>
+																												<formulaName></formulaName>
+																												<lifeTime>
+																													<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+																													<returnType>float</returnType>
+																													<sString>-1.0</sString>
+																												</lifeTime>
+																												<LoggingEvent>-1</LoggingEvent>
+																												<period>
+																													<compiledString>FQoAAAABAAAAFgAAAEEyX1BlcmlvZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+																													<returnType>float</returnType>
+																													<sString>cA2_Period</sString>
+																												</period>
+																												<providerName></providerName>
+																												<scaleMode>ScaleIsCount</scaleMode>
+																												<spell href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="D806AD61-3E76-465B-A35B-C03D284AE205">
+																													<Spell>
+																														<applicators>
+																															<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="30041A11-30A7-437B-AD34-958602C86C2F">
+																																<DamageApplicator>
+																																	<applyTarget>ApplicatorTarget</applyTarget>
+																																	<cancelInvisibility>false</cancelInvisibility>
+																																	<caption>урон аое</caption>
+																																	<damage>
+																																		<compiledString>FQoAAAABAAAAFgAAAEEyX0RhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+																																		<returnType>float</returnType>
+																																		<sString>cA2_Damage</sString>
+																																	</damage>
+																																	<damageMode>4</damageMode>
+																																	<damageType>Material</damageType>
+																																	<enabled>
+																																		<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																																		<returnType>bool</returnType>
+																																		<sString>true</sString>
+																																	</enabled>
+																																	<formulaName></formulaName>
+																																	<LoggingEvent>-1</LoggingEvent>
+																																	<providerName></providerName>
+																																	<timeLimiter>-1</timeLimiter>
+																																	<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
+																																</DamageApplicator>
+																															</Item>
+																														</applicators>
+																														<dispatch href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="808C78E1-1E93-435D-B689-8B501575144F">
+																															<DispatchImmediate>
+																																<alwaysApply>false</alwaysApply>
+																																<applyEffect>
+																																	<Item href="" />
+																																	<Item href="" />
+																																</applyEffect>
+																																<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																																<applyEffectOrientation>Default</applyEffectOrientation>
+																																<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																																<dieAfterApply>true</dieAfterApply>
+																																<dispatchEffect>
+																																	<Item href="" />
+																																	<Item href="" />
+																																</dispatchEffect>
+																																<flags>1</flags>
+																																<instantApply>false</instantApply>
+																															</DispatchImmediate>
+																														</dispatch>
+																													</Spell>
+																												</spell>
+																												<startCondition>
+																													<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																													<returnType>bool</returnType>
+																													<sString>true</sString>
+																												</startCondition>
+																												<startOffset>
+																													<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzczMPQ==</compiledString>
+																													<returnType>float</returnType>
+																													<sString>0.1f</sString>
+																												</startOffset>
+																												<targetSelector href="" />
+																											</SpellPeriodicallyApplicator>
+																										</Item>
+																									</applicators>
+																									<applyTarget>ApplicatorTarget</applyTarget>
+																									<behaviorFlags>144</behaviorFlags>
+																									<caption>статус Превращен аое</caption>
+																									<customCounter>
+																										<compiledString></compiledString>
+																										<returnType>int</returnType>
+																										<sString>0</sString>
+																									</customCounter>
+																									<customProgress>
+																										<compiledString></compiledString>
+																										<returnType>float</returnType>
+																										<sString>-1.0</sString>
+																									</customProgress>
+																									<description textref="" />
+																									<dispellPriority>NonDispellable</dispellPriority>
+																									<effect>
+																										<Item href="" />
+																										<Item href="" />
+																									</effect>
+																									<enabled>
+																										<compiledString></compiledString>
+																										<returnType>bool</returnType>
+																										<sString>true</sString>
+																									</enabled>
+																									<flags>0</flags>
+																									<formulaName>StatusHexed</formulaName>
+																									<image href="/UI/Styles/Icons/Heroes/Mage/A2.ITEX" />
+																									<lifeTime>
+																										<compiledString>FRMAAAACAAAAIgAAADwAAABBMl9EdXJhdGlvbgBSZWR1Y2UAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgMAAAAi1UQiwKLTRCLUFDdXfj/0txN+Nld9NlF9IvlXcM=</compiledString>
+																										<returnType>float</returnType>
+																										<sString>cA2_Duration*cReduce</sString>
+																									</lifeTime>
+																									<LoggingEvent>-1</LoggingEvent>
+																									<name textref="" />
+																									<power>0</power>
+																									<providerName></providerName>
+																									<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+																									<stackCount>0</stackCount>
+																									<startCondition>
+																										<compiledString></compiledString>
+																										<returnType>bool</returnType>
+																										<sString>true</sString>
+																									</startCondition>
+																									<statusPosition>0</statusPosition>
+																									<stopBehaviour>StopByTime</stopBehaviour>
+																									<unstackableWith href="" />
+																								</StatusApplicator>
+																							</Item>
+																							<Item href="/Items/Talents/Class/Mage/ReplaceSOBJ.APLR" />
+																						</applicators>
+																						<applyTarget>ApplicatorTarget</applyTarget>
+																						<behaviorFlags>147</behaviorFlags>
+																						<caption>статус-контейнер, содержащий статус Hexed и замену модели, нужен для работы dispell'а</caption>
+																						<customCounter>
+																							<compiledString></compiledString>
+																							<returnType>int</returnType>
+																							<sString>0</sString>
+																						</customCounter>
+																						<customProgress>
+																							<compiledString></compiledString>
+																							<returnType>float</returnType>
+																							<sString>-1.0</sString>
+																						</customProgress>
+																						<description textref="" />
+																						<dispellPriority>High</dispellPriority>
+																						<effect>
+																							<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="219C7A9A-9265-43B3-98C2-F5A394C82F1B">
+																								<ScaleColorEffect>
+																									<blendMode>LerpByAlpha</blendMode>
+																									<colorAdd>
+																										<A>0</A>
+																										<B>0</B>
+																										<G>0</G>
+																										<R>0</R>
+																									</colorAdd>
+																									<colorMul>
+																										<A>1</A>
+																										<B>1</B>
+																										<G>1</G>
+																										<R>1</R>
+																									</colorMul>
+																									<deathType>Manual</deathType>
+																									<enableCondition href="" />
+																									<fadeInTime>0</fadeInTime>
+																									<fadeOutTime>0.2</fadeOutTime>
+																									<fullRecolor>false</fullRecolor>
+																									<lifeTime>0</lifeTime>
+																									<scale>0.5</scale>
+																									<scaleIn>1</scaleIn>
+																									<scaleOut>1</scaleOut>
+																								</ScaleColorEffect>
+																							</Item>
+																							<Item href="" />
+																						</effect>
+																						<enabled>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</enabled>
+																						<flags>0</flags>
+																						<formulaName></formulaName>
+																						<image href="" />
+																						<lifeTime>
+																							<compiledString></compiledString>
+																							<returnType>float</returnType>
+																							<sString>-1.0</sString>
+																						</lifeTime>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<name textref="" />
+																						<power>0</power>
+																						<providerName></providerName>
+																						<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+																						<stackCount>0</stackCount>
+																						<startCondition>
+																							<compiledString>FRwAAAAEAAAAIQAAADcAAABDAAAAWQAAAEltbXVuZTJDb250cm9sAABUcmFuc2Zvcm1lZABVi+xRaAAAAACLRQyLEItNDIuCiAEAAP/Q3B17AAAA3+D2xER6K2gQAAAAi00MixGLTQyLgogBAAD/0NwdewAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>receiver.vImmune2Control == 0 &amp;&amp; receiver.vTransformed == 0</sString>
+																						</startCondition>
+																						<statusPosition>0</statusPosition>
+																						<stopBehaviour>StopByAllChilds</stopBehaviour>
+																						<unstackableWith href="" />
+																					</StatusApplicator>
+																				</applicator>
+																				<continueCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>1</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																		</applicators>
+																		<applyTarget>ApplicatorTarget</applyTarget>
+																		<behaviorFlags>0</behaviorFlags>
+																		<caption>аое хекс</caption>
+																		<effect>
+																			<Item href="" />
+																			<Item href="" />
+																		</effect>
+																		<enabled>
+																			<compiledString>FRwAAAAEAAAAIQAAADcAAABDAAAAWQAAAEltbXVuZTJDb250cm9sAABUcmFuc2Zvcm1lZABVi+xRaAAAAACLRQyLEItNDIuCiAEAAP/Q3B17AAAA3+D2xER6K2gQAAAAi00MixGLTQyLgogBAAD/0NwdewAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+																			<returnType>bool</returnType>
+																			<sString>receiver.vImmune2Control == 0 &amp;&amp; receiver.vTransformed == 0</sString>
+																		</enabled>
+																		<formulaName></formulaName>
+																		<lifeTime>
+																			<compiledString></compiledString>
+																			<returnType>float</returnType>
+																			<sString>-1.0</sString>
+																		</lifeTime>
+																		<LoggingEvent>-1</LoggingEvent>
+																		<providerName></providerName>
+																		<startCondition>
+																			<compiledString></compiledString>
+																			<returnType>bool</returnType>
+																			<sString>true</sString>
+																		</startCondition>
+																	</ProgramApplicator>
+																</Item>
+																<Item href="/Items/Talents/Class/Mage/StopAnimEffect_1.APLR" />
+																<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="B189AD3C-38D2-4664-9FFC-530D4C21F2A9">
+																	<StatModApplicator>
+																		<applyTarget>AbilityOwner</applyTarget>
+																		<behaviorFlags>0</behaviorFlags>
+																		<caption>SpellCompleted</caption>
+																		<constraint>None</constraint>
+																		<dontUpdate>false</dontUpdate>
+																		<effect>
+																			<Item href="" />
+																			<Item href="" />
+																		</effect>
+																		<enabled>
+																			<compiledString></compiledString>
+																			<returnType>bool</returnType>
+																			<sString>true</sString>
+																		</enabled>
+																		<formulaName></formulaName>
+																		<lifeTime>
+																			<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABAQA==</compiledString>
+																			<returnType>float</returnType>
+																			<sString>3</sString>
+																		</lifeTime>
+																		<LoggingEvent>-1</LoggingEvent>
+																		<modifier>
+																			<addValue>
+																				<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																				<returnType>float</returnType>
+																				<sString>1</sString>
+																			</addValue>
+																			<multValue>
+																				<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+																				<returnType>float</returnType>
+																				<sString>0</sString>
+																			</multValue>
+																			<stat>Life</stat>
+																			<topModifier>false</topModifier>
+																			<variable>SpellCompleted</variable>
+																		</modifier>
+																		<providerName></providerName>
+																		<startCondition>
+																			<compiledString></compiledString>
+																			<returnType>bool</returnType>
+																			<sString>true</sString>
+																		</startCondition>
+																		<statModName></statModName>
+																	</StatModApplicator>
+																</Item>
+															</applicators>
+															<dispatch href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="6AD907A0-9270-4981-9F84-2AFA02E020BE">
+																<DispatchImmediate>
+																	<alwaysApply>false</alwaysApply>
+																	<applyEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</applyEffect>
+																	<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																	<applyEffectOrientation>Default</applyEffectOrientation>
+																	<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																	<dieAfterApply>true</dieAfterApply>
+																	<dispatchEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</dispatchEffect>
+																	<flags>0</flags>
+																	<instantApply>true</instantApply>
+																</DispatchImmediate>
+															</dispatch>
+														</Spell>
+													</spell>
+													<spellTarget>ApplicatorTarget</spellTarget>
+													<targetSelector href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="91031C2D-F9BB-4CBC-8B6E-5CDD840F543B">
+														<AreaTargetSelector>
+															<absolutePosition>
+																<x>0</x>
+																<y>0</y>
+															</absolutePosition>
+															<flags>1</flags>
+															<mode>Normal</mode>
+															<range>
+																<compiledString>FQwAAAABAAAAGAAAAFJhbmdlX01lbGVlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+																<returnType>float</returnType>
+																<sString>cRange_Melee</sString>
+															</range>
+															<targetFilter>672137279</targetFilter>
+															<targetSelector href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="C319FFFE-E1ED-4A93-9E77-28BDA26D5820">
+																<SelectApplicatorTarget>
+																	<applicatorIndex>0</applicatorIndex>
+																	<applicatorName></applicatorName>
+																	<namedApplicatorTarget>ApplicatorTarget</namedApplicatorTarget>
+																	<selectTarget>ApplicatorTarget</selectTarget>
+																</SelectApplicatorTarget>
+															</targetSelector>
+														</AreaTargetSelector>
+													</targetSelector>
+												</SpellApplicator>
+											</Item>
+											<Item href="/Items/Talents/Class/Mage/StopAnimEffect_1.APLR" />
+											<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="14FC3299-38FB-41D8-9FD1-6630D7EF5E99">
+												<StatModApplicator>
+													<applyTarget>AbilityOwner</applyTarget>
+													<behaviorFlags>0</behaviorFlags>
+													<caption>SpellCompleted</caption>
+													<constraint>None</constraint>
+													<dontUpdate>false</dontUpdate>
+													<effect>
+														<Item href="" />
+														<Item href="" />
+													</effect>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<lifeTime>
+														<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABAQA==</compiledString>
+														<returnType>float</returnType>
+														<sString>3</sString>
+													</lifeTime>
+													<LoggingEvent>-1</LoggingEvent>
+													<modifier>
+														<addValue>
+															<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+															<returnType>float</returnType>
+															<sString>1</sString>
+														</addValue>
+														<multValue>
+															<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+															<returnType>float</returnType>
+															<sString>0</sString>
+														</multValue>
+														<stat>Life</stat>
+														<topModifier>false</topModifier>
+														<variable>SpellCompleted</variable>
+													</modifier>
+													<providerName></providerName>
+													<startCondition>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</startCondition>
+													<statModName></statModName>
+												</StatModApplicator>
+											</Item>
+										</applicators>
+										<dispatch href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="DEBA7CAA-8E73-41DB-A8D4-9564517233D3">
+											<DispatchImmediate>
+												<alwaysApply>false</alwaysApply>
+												<applyEffect>
+													<Item href="" />
+													<Item href="" />
+												</applyEffect>
+												<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+												<applyEffectOrientation>Default</applyEffectOrientation>
+												<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+												<dieAfterApply>true</dieAfterApply>
+												<dispatchEffect>
+													<Item href="" />
+													<Item href="" />
+												</dispatchEffect>
+												<flags>0</flags>
+												<instantApply>false</instantApply>
+											</DispatchImmediate>
+										</dispatch>
+									</Spell>
+								</stopSpell>
+								<targetSelector href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="88A8E940-B33B-4D3A-B5C0-829875C2EADB">
+									<SelectApplicatorTarget>
+										<applicatorIndex>0</applicatorIndex>
+										<applicatorName></applicatorName>
+										<namedApplicatorTarget>ApplicatorTarget</namedApplicatorTarget>
+										<selectTarget>ApplicatorTarget</selectTarget>
+									</SelectApplicatorTarget>
+								</targetSelector>
+							</ChannellingApplicator>
+						</applicator>
+						<continueCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>1</continueEvents>
+						<delay>
+							<compiledString>FQwAAAACAAAAGQAAACwAAABDaGFubmVsVGltZQBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcBToAAADZXfzZRfyL5V3DmpmZmZmZuT8=</compiledString>
+							<returnType>float</returnType>
+							<sString>cChannelTime + 0.1</sString>
+						</delay>
+						<stopCondition>
+							<compiledString>FQwAAAACAAAAIwAAADYAAABJbnRlcnJ1cHRlZABVi+yD7AiLRRCLEItNEItCSP/QiUX8aAAAAACLTfyLEYtN/ItCVP/Q3B1YAAAA3+D2xER6CcdF+AEAAADrB8dF+AAAAACKRfiL5V3DAAAAAAAAAAA=</compiledString>
+							<returnType>bool</returnType>
+							<sString>appl.parent.vInterrupted == 0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+					<Item>
+						<applicator href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="0B59C60B-00DE-48F9-837D-684F9DF19F81">
+							<FlagsApplicator>
+								<applyTarget>ApplicatorTarget</applyTarget>
+								<behaviorFlags>0</behaviorFlags>
+								<caption>Ждем пока прилетит спел ченнела</caption>
+								<consumables />
+								<effect>
+									<Item href="" />
+									<Item href="" />
+								</effect>
+								<enabled>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</enabled>
+								<flag>0</flag>
+								<formulaName></formulaName>
+								<lifeTime>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>-1.0</sString>
+								</lifeTime>
+								<LoggingEvent>-1</LoggingEvent>
+								<providerName></providerName>
+								<startCondition>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</startCondition>
+								<talents />
+								<useListAs>ListAsRule</useListAs>
+							</FlagsApplicator>
+						</applicator>
+						<continueCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>2</continueEvents>
+						<delay>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0</sString>
+						</delay>
+						<stopCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+					<Item>
+						<applicator href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="9FC28909-9D09-41FD-BB73-44235510E954">
+							<WaitForSpellApplicator>
+								<applyTarget>ApplicatorTarget</applyTarget>
+								<behaviorFlags>0</behaviorFlags>
+								<behaviour>0</behaviour>
+								<caption>Рефрешим кд, если цель мувается, а диспатч ждет очереди</caption>
+								<dispatchSource href="" />
+								<effect>
+									<Item href="" />
+									<Item href="" />
+								</effect>
+								<enabled>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</enabled>
+								<firstTargetToHit href="" />
+								<formulaName>A2Check</formulaName>
+								<lifeTime>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>-1.0</sString>
+								</lifeTime>
+								<LoggingEvent>-1</LoggingEvent>
+								<providerName></providerName>
+								<spell href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="13461D11-B813-4BDD-8CEF-1BDE728EE35D">
+									<Spell>
+										<applicators>
+											<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="A98EBEDC-464A-41F1-B604-9ABF5C9FD740">
+												<RefreshCooldownApplicator>
+													<allowCdIncrease>false</allowCdIncrease>
+													<applyTarget>AbilityOwner</applyTarget>
+													<caption>Сбрасываем КД текущей абилки если цель стала невосприимчива к спелу</caption>
+													<enabled>
+														<compiledString>FQ8AAAACAAAAFAAAACoAAABTcGVsbENvbXBsZXRlZABVi+xRaAAAAACLRQyLEItNDIuCiAEAAP/Q3B1MAAAA3+D2xER7CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAA8D8=</compiledString>
+														<returnType>bool</returnType>
+														<sString>receiver.vSpellCompleted != 1</sString>
+													</enabled>
+													<flags>0</flags>
+													<formulaName></formulaName>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<reduceByPercent>false</reduceByPercent>
+													<reductionAmount>
+														<compiledString></compiledString>
+														<returnType>float</returnType>
+														<sString>-1.0f</sString>
+													</reductionAmount>
+													<refreshThis>true</refreshThis>
+													<talents />
+													<useListAs>ListAsRule</useListAs>
+												</RefreshCooldownApplicator>
+											</Item>
+										</applicators>
+										<dispatch href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="A85ACB0F-94FF-4A03-8E19-02EA8EB4A38D">
+											<DispatchImmediate>
+												<alwaysApply>false</alwaysApply>
+												<applyEffect>
+													<Item href="" />
+													<Item href="" />
+												</applyEffect>
+												<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+												<applyEffectOrientation>Default</applyEffectOrientation>
+												<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+												<dieAfterApply>true</dieAfterApply>
+												<dispatchEffect>
+													<Item href="" />
+													<Item href="" />
+												</dispatchEffect>
+												<flags>0</flags>
+												<instantApply>false</instantApply>
+											</DispatchImmediate>
+										</dispatch>
+									</Spell>
+								</spell>
+								<spellTarget>ApplicatorTarget</spellTarget>
+								<startCondition>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</startCondition>
+							</WaitForSpellApplicator>
+						</applicator>
+						<continueCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>2</continueEvents>
+						<delay>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+							<returnType>float</returnType>
+							<sString>-1</sString>
+						</delay>
+						<stopCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+					<Item>
+						<applicator href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="9FEEDB8D-338E-4E03-A0C9-373D8BB6117A">
+							<RefreshCooldownApplicator>
+								<allowCdIncrease>false</allowCdIncrease>
+								<applyTarget>AbilityOwner</applyTarget>
+								<caption>Сбрасываем КД текущей абилки если цель стала невосприимчива к спелу</caption>
+								<enabled>
+									<compiledString>FQ8AAAACAAAAFAAAACoAAABTcGVsbENvbXBsZXRlZABVi+xRaAAAAACLRQyLEItNDIuCiAEAAP/Q3B1MAAAA3+D2xER7CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAA8D8=</compiledString>
+									<returnType>bool</returnType>
+									<sString>receiver.vSpellCompleted != 1</sString>
+								</enabled>
+								<flags>0</flags>
+								<formulaName></formulaName>
+								<LoggingEvent>-1</LoggingEvent>
+								<providerName></providerName>
+								<reduceByPercent>false</reduceByPercent>
+								<reductionAmount>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>-1.0f</sString>
+								</reductionAmount>
+								<refreshThis>true</refreshThis>
+								<talents />
+								<useListAs>ListAsRule</useListAs>
+							</RefreshCooldownApplicator>
+						</applicator>
+						<continueCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>2</continueEvents>
+						<delay>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0</sString>
+						</delay>
+						<stopCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption></caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+			</ProgramApplicator>
+		</Item>
+	</applicators>
+	<askId>2</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А2. Превращение</caption>
+	<castAllowRange>
+		<compiledString>FQ0AAAACAAAAGgAAAC0AAABSYW5nZV9FeExvbmcAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3AU7AAAA2V382UX8i+VdwwAAAAAAADRA</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_ExLong+20</sString>
+	</castAllowRange>
+	<castLimitations>
+		<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="D5547767-9934-4F2C-B746-BF3150A35349">
+			<ConditionCastLimitation>
+				<condition>
+					<compiledString>FQ8AAAACAAAAFAAAACoAAABJbW11bmUyQ29udHJvbABVi+xRaAAAAACLRQyLEItNDIuCiAEAAP/Q3B1MAAAA3+D2xER6CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>receiver.vImmune2Control == 0</sString>
+				</condition>
+				<uiEvent href="/UI/Events/ErrorMessages/CastError_Immune2Ctrl.UIEV" />
+			</ConditionCastLimitation>
+		</Item>
+		<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="3C92A90F-5447-460D-909D-CA30221168EB">
+			<ConditionCastLimitation>
+				<condition>
+					<compiledString>FRgAAAADAAAAHQAAADMAAABFAAAAVHJhbnNmb3JtZWQAU3RhdHVzSGV4ZWQAVYvsUWgAAAAAi0UMixCLTQyLgogBAAD/0NwddQAAAN/g9sREeilqAItNEFFoDAAAAItVDIsCi00Mi5CcAQAA/9I7RRB1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>receiver.vTransformed == 0 &amp;&amp; receiver.applStatusHexed(GLOBAL) == pMisc</sString>
+				</condition>
+				<uiEvent href="/UI/Events/ErrorMessages/CastError_AlreadyTransformed.UIEV" />
+			</ConditionCastLimitation>
+		</Item>
+	</castLimitations>
+	<commonDescription textref="/Items/Talents/Class/Mage/Ability_A2.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Mage/Ability_A2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Mage/Ability_A2.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="B6EF6589-4BE1-4360-A4B7-FB4C12ADDE14">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRUAAAACAAAAHAAAADUAAABNYWdlX0EydQAAAABNYWdlX0EydQBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Mage_A2u") == false</sString>
+				</condition>
+				<name>Mage_A2u</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="C9252B98-98AC-45A8-8214-664955D93FE7">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRgAAAACAAAAHwAAADgAAABNYWdlX0EyX1NVUABNYWdlX0EyX1NVUABVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Mage_A2_SUP") == false</sString>
+				</condition>
+				<name>Mage_A2_SUP</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="BD68E68E-67BF-4A4B-8C8E-2E6F5F173BA9">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Mage/const_A0_ChannelTime" />
+				<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="55019B83-9CFF-4783-809A-CC50DC1835BA">
+					<UnitConstant>
+						<name>ChannelTimeBase</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Mage/const_A0_ChannelTimeMin" />
+				<Item href="/Items/Talents/Class/Mage/const_A0_ChannelTimeReduce" />
+				<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="9BCC7C16-7621-4F41-A739-E856B1ED7A09">
+					<UnitConstant>
+						<name>A2_Damage</name>
+						<var>
+							<compiledString>FVYAAAAHAAAAXQAAAHYAAACsAAAAzAAAAOsAAAAIAQAAIgEAAE1hZ2VfQTJ1AAAAAE1hZ2VfQTJ1AAAAAE1hZ2VfQTJ1AAAAAEEydV9EYW1hZ2UAAEEyX0RhbWFnZUJhc2UAAABBMl9EdXJhdGlvbgBBMl9QZXJpb2QAVYvsg+wcaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgMAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0N2gYAAAAi1UIiwKLTQiLkKgBAAD/0olF9ItFDFCLTQhRaCQAAACLVfSLAotN9ItQUP/S2V3w6x2LRQxQi00IUWgwAAAAi1UQiwKLTRCLUFD/0tld8ItFDFCLTQhRaEAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoTAAAAItVEIsCi00Qi1BQ3V3o/9LcfejYffDZXeTZReSL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>stalconst("Mage_A2u","A2u_Damage", cA2_DamageBase ) / (cA2_Duration / cA2_Period)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="D28388BF-8767-4D0C-858E-9D4280BD5323">
+					<UnitConstant>
+						<name>A2_Period</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>0.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="06047248-E206-4537-87E1-B1A7203D66EE">
+					<UnitConstant>
+						<name>A2_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="01FA00BE-5B2B-4378-9F44-9AF9C6A149ED">
+					<UnitConstant>
+						<name>A2_MovePercent</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>40</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="2AA88D37-53B6-4BC2-8CFE-1A34011908DD">
+					<UnitConstant>
+						<name>A2_DamageTotal_TT</name>
+						<var>
+							<compiledString>FSIAAAADAAAAMQAAAEsAAABoAAAAQTJfRGFtYWdlAAAAQTJfRHVyYXRpb24AQTJfUGVyaW9kAFWL7IPsFItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoDAAAAItVEIsCi00Qi1BQ3V34/9KLRQxQi00IUWgYAAAAi1UQiwKLTRCLUFDdXfD/0tx98NxN+Nld7NlF7IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cA2_Damage * (cA2_Duration / cA2_Period)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="7366AF0E-CD3E-43DB-ABE6-80E078512E20">
+					<UnitConstant>
+						<name>A2_DamageBase</name>
+						<var>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCMAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAAAMQgCAg0M=</compiledString>
+							<returnType>float</returnType>
+							<sString>damageScale(sStrength,35,263)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="2052212B-9A10-4812-8E6C-04A6CA5DCA73">
+					<UnitConstant>
+						<name>Reduce</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>0.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Mage/const_A2_Percentage" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FRgAAAACAAAAHwAAADgAAABNYWdlX0EyX1NVUABNYWdlX0EyX1NVUABVi+yD7AxoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Tfv32RvJg+H7g8EPiU3020X0i+Vdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>tal("Mage_A2_SUP") ? 10 : 15</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Mage/Ability_A2.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="90F9F0E4-E5C4-4147-9D88-A7395554E43F">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>67631</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Mage/A2.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADcQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>110</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="6D65DE54-5C47-437E-8EC3-0F97EE58C40F">
+		<TargetSelectorMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</condition>
+			<targetSelector href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="6022E3B9-4608-42C6-8955-42F744D7E59E">
+				<FirstTargetSelector>
+					<nearestTarget>false</nearestTarget>
+					<targetSelector href="/Items/Talents/Class/Mage/Ability_A2.TALENT" id="35EF40EB-5EE1-4F6D-9755-E3A7781BA53A">
+						<AreaTargetSelector>
+							<absolutePosition>
+								<x>0</x>
+								<y>0</y>
+							</absolutePosition>
+							<flags>0</flags>
+							<mode>Normal</mode>
+							<range>
+								<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+								<returnType>float</returnType>
+								<sString>cRange_Long</sString>
+							</range>
+							<targetFilter>671088643</targetFilter>
+							<targetSelector href="" />
+						</AreaTargetSelector>
+					</targetSelector>
+				</FirstTargetSelector>
+			</targetSelector>
+		</TargetSelectorMicroAI>
+	</microAI>
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>300</naftaCost>
+	<name textref="/Items/Talents/Class/Mage/Ability_A2.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/trigger_G766_RefreshAndNotify.APLR" />
+	</passiveApplicators>
+	<persistentId>Mage_A2</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Class/Mage/Ability_A2.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>538705983</targetType>
+	<type>Channelling</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Long</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

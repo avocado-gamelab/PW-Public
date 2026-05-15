@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Ent.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Ent_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Ent_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Ent.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Ent_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Ent_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Ent/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Ent/Epic_Str.TALENTSET" Count="1" />
 	<activationConditions />
@@ -36,8 +36,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Ent/Ability_A5.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Ent/Ability_A5.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas />
 	<conflictingTalents />
 	<constants href="/Items/Talents/Class/Ent/Ability_A5.TALENT" id="5F24E9F0-CD30-4B50-9739-E424EAEB4F7C">
@@ -93,9 +93,9 @@
 		<percent>0</percent>
 	</consumptionBonus>
 	<cooldownTime>
-		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACQQQ==</compiledString>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABwQQ==</compiledString>
 		<returnType>float</returnType>
-		<sString>18</sString>
+		<sString>15</sString>
 	</cooldownTime>
 	<cooldownTimeSecondState>
 		<compiledString></compiledString>
@@ -106,7 +106,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Ent/A5.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

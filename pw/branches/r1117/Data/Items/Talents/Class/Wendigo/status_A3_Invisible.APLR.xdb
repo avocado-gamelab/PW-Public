@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
-	<BackLink DBID="/Items/Talents/Class/Wendigo/Ability2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Wendigo/Ability_A2.TALENT" Count="1" />
 	<applicators>
 		<Item href="/Items/Talents/Class/Wendigo/status_A3_Invisible.APLR" id="DA4BAD78-1DD5-45BE-B7E7-A30F5E81A935">
 			<ProgramApplicator>
@@ -33,6 +33,34 @@
 							<sString>0</sString>
 						</continueCondition>
 						<continueEvents>1</continueEvents>
+						<delay>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0</sString>
+						</delay>
+						<stopCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+					<Item>
+						<applicator href="/Items/Talents/Class/Wendigo/status_A3_Invisible.APLR" id="31B8F952-2A72-4D06-8286-FB3C52843458">
+							<InvisibilityApplicator parent="/GameLogic/GeneralApplicators/Invisibility.APLR">
+								<fadeIn>
+									<compiledString>FRQAAAABAAAAIAAAAEludmlzaWJpbGl0eV9GYWRlSW4AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+									<returnType>float</returnType>
+									<sString>cInvisibility_FadeIn</sString>
+								</fadeIn>
+							</InvisibilityApplicator>
+						</applicator>
+						<continueCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>2</continueEvents>
 						<delay>
 							<compiledString></compiledString>
 							<returnType>float</returnType>
@@ -111,30 +139,10 @@
 						</stopCondition>
 						<stopEvents>0</stopEvents>
 					</Item>
-					<Item>
-						<applicator href="/GameLogic/GeneralApplicators/Invisibility.APLR" />
-						<continueCondition>
-							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
-							<returnType>bool</returnType>
-							<sString>0</sString>
-						</continueCondition>
-						<continueEvents>2</continueEvents>
-						<delay>
-							<compiledString></compiledString>
-							<returnType>float</returnType>
-							<sString>-1.0</sString>
-						</delay>
-						<stopCondition>
-							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
-							<returnType>bool</returnType>
-							<sString>0</sString>
-						</stopCondition>
-						<stopEvents>0</stopEvents>
-					</Item>
 				</applicators>
 				<applyTarget>ApplicatorTarget</applyTarget>
 				<behaviorFlags>147</behaviorFlags>
-				<caption>невидимость</caption>
+				<caption>Невидимость</caption>
 				<effect>
 					<Item href="" />
 					<Item href="" />
@@ -159,11 +167,11 @@
 				</startCondition>
 			</ProgramApplicator>
 		</Item>
-		<Item href="/Items/Talents/Class/Wendigo/status_A3_Invisible.APLR" id="91252F3D-9E55-4687-A50F-780922948A0C">
+		<Item href="/Items/Talents/Class/Wendigo/status_A3_Invisible.APLR" id="B93DBF32-9987-4108-B729-A7DE74BD6801">
 			<StatModApplicator>
-				<applyTarget>ApplicatorTarget</applyTarget>
+				<applyTarget>AbilityOwner</applyTarget>
 				<behaviorFlags>0</behaviorFlags>
-				<caption> - CoverOnMe = 1</caption>
+				<caption>Ускорение</caption>
 				<constraint>None</constraint>
 				<dontUpdate>false</dontUpdate>
 				<effect>
@@ -171,31 +179,31 @@
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString></compiledString>
+					<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLgpAAAAD/0F3D</compiledString>
 					<returnType>bool</returnType>
-					<sString>true</sString>
+					<sString>mIsNight</sString>
 				</enabled>
-				<formulaName></formulaName>
+				<formulaName>WendigoSelfRoot</formulaName>
 				<lifeTime>
-					<compiledString></compiledString>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
 					<returnType>float</returnType>
-					<sString>-1.0</sString>
+					<sString>-1</sString>
 				</lifeTime>
 				<LoggingEvent>-1</LoggingEvent>
 				<modifier>
 					<addValue>
-						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<compiledString></compiledString>
 						<returnType>float</returnType>
-						<sString>1</sString>
+						<sString>0.0f</sString>
 					</addValue>
 					<multValue>
-						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<compiledString>FQgAAAABAAAAFAAAAE5pZ2h0TVMAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
 						<returnType>float</returnType>
-						<sString>1</sString>
+						<sString>cNightMS</sString>
 					</multValue>
-					<stat>Life</stat>
+					<stat>MoveSpeed</stat>
 					<topModifier>false</topModifier>
-					<variable>CoverOnMe</variable>
+					<variable></variable>
 				</modifier>
 				<providerName></providerName>
 				<startCondition>
@@ -209,7 +217,7 @@
 	</applicators>
 	<applyTarget>ApplicatorTarget</applyTarget>
 	<behaviorFlags>147</behaviorFlags>
-	<caption>статус Невидимость</caption>
+	<caption>Статус невидимость и ускорение</caption>
 	<customCounter>
 		<compiledString></compiledString>
 		<returnType>int</returnType>
@@ -227,13 +235,13 @@
 		<Item href="" />
 	</effect>
 	<enabled>
-		<compiledString>FVAAAAAHAAAAcAAAAIYAAACcAAAAtgAAAMwAAADeAAAA/gAAAFZhbXBSZXNTdGFydGVkAABHMjk0SGVyb09mZgBEcmFnb25SZXNTdGFydGVkAAAAAFZhbXBpcmVBNF8yRGlzYWJsZQAAU3RhdHVzSGV4ZWQAVYvsUYtFEIsQi00Qi4KQAAAA/9APtsiFyQ+EsQAAAGgAAAAAi1UIiwKLTQiLkIgBAAD/0twdLgEAAN/g9sRED4qLAAAAagCLRRBQaBAAAACLTQiLEYtNCIuCnAEAAP/QOUUQdWtoHAAAAItNCIsRi00Ii4KIAQAA/9DcHS4BAADf4PbERHpJagCLTRBRaDAAAACLVQiLAotNCIuQnAEAAP/SOUUQdSlqAItFEFBoRAAAAItNCIsRi00Ii4KcAQAA/9A5RRB1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+		<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
 		<returnType>bool</returnType>
-		<sString>mIsNight &amp;&amp; sender.vVampResStarted == 0 &amp;&amp; pMisc == sender.applG294HeroOff(GLOBAL) &amp;&amp; sender.vDragonResStarted == 0 &amp;&amp; pMisc == sender.applVampireA4_2Disable(GLOBAL) &amp;&amp; pMisc == sender.applStatusHexed(GLOBAL)</sString>
+		<sString>true</sString>
 	</enabled>
 	<flags>4</flags>
-	<formulaName>WendigoInvis</formulaName>
-	<image href="/UI/Styles/Icons/Statuses/Standard/Invis.ITEX" />
+	<formulaName>WendigoHunter</formulaName>
+	<image href="/UI/Styles/Icons/Heroes/Wendigo/A2.ITEX" />
 	<lifeTime>
 		<compiledString></compiledString>
 		<returnType>float</returnType>

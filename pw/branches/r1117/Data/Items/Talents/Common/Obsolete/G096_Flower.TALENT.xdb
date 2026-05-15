@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/TalentGroup.TGRP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar4" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet12.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet16.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet8.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet9.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/GameLogic/GeneralApplicators/ChangeTerrainToNative.APLR" />
+		<Item href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="3DC0E584-BDD2-48F9-BFA4-DCC245936A8F">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>спелл с fx и лечилкой</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="25B6BA14-5AFC-41E1-81F8-B1C97C2A021A">
+					<Spell>
+						<applicators />
+						<dispatch href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="C4697C44-C82D-45EB-94D6-330D7AE63A8B">
+							<DispatchByTime>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<cancelOnSenderDeath>true</cancelOnSenderDeath>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="FC4CD334-7E8D-48D9-9CE0-BD4871E24557">
+										<EffectSwitcher>
+											<deathType>Manual</deathType>
+											<effectOnInvisible href="/Effects/Buffs/Flower/_Enemy.EFFT" />
+											<effectOnVisible href="/Effects/Buffs/Flower/_.EFFT" />
+											<enableCondition href="" />
+											<isVisibleUnderWarfog>false</isVisibleUnderWarfog>
+											<lifeTime>0</lifeTime>
+											<logic>FactionVisibility</logic>
+										</EffectSwitcher>
+									</Item>
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<lifeTime>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>-1.0</sString>
+								</lifeTime>
+								<persistentApplicators>
+									<Item href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="189B132D-E44D-4754-9D02-F042FE3E54E6">
+										<SpellPeriodicallyApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<behaviorFlags>0</behaviorFlags>
+											<caption>период спелл</caption>
+											<effect>
+												<Item href="" />
+												<Item href="" />
+											</effect>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<lifeTime>
+												<compiledString>FQ0AAAABAAAAGQAAAFRpbWVfVGVycmFpbgBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+												<returnType>float</returnType>
+												<sString>cTime_Terrain</sString>
+											</lifeTime>
+											<LoggingEvent>-1</LoggingEvent>
+											<period>
+												<compiledString>FQcAAAABAAAAEwAAAFBlcmlvZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+												<returnType>float</returnType>
+												<sString>cPeriod</sString>
+											</period>
+											<providerName></providerName>
+											<scaleMode>ScaleIsCount</scaleMode>
+											<spell href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="4B6665FB-A98E-4F9E-82C4-3F020EFCD273">
+												<Spell>
+													<applicators>
+														<Item href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="FED65212-109C-48D5-A54F-D32B458D4E83">
+															<HealApplicator parent="/GameLogic/GeneralApplicators/Heal.APLR">
+																<amount>
+																	<compiledString>FQsAAAABAAAAFwAAAEhlYWxBbW91bnQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+																</amount>
+																<enabled>
+																	<compiledString></compiledString>
+																</enabled>
+															</HealApplicator>
+														</Item>
+														<Item href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="0DB2B771-AFAF-4621-B648-26E56680CD51">
+															<HealApplicator parent="/GameLogic/GeneralApplicators/Heal.APLR">
+																<amount>
+																	<compiledString>FQsAAAABAAAAFwAAAEhlYWxBbW91bnQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+																</amount>
+																<enabled>
+																	<compiledString></compiledString>
+																</enabled>
+																<healTarget>Energy</healTarget>
+																<uiEvent href="/UI/Events/CommonEvents/EventEnergy.UIEV" />
+															</HealApplicator>
+														</Item>
+													</applicators>
+													<dispatch href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="C2D020F2-3E61-41BD-ADF1-AF8408C68334">
+														<DispatchImmediate>
+															<alwaysApply>false</alwaysApply>
+															<applyEffect>
+																<Item href="/Effects/Buffs/Regen/_TimeShort.EFFT" />
+																<Item href="" />
+															</applyEffect>
+															<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+															<applyEffectOrientation>Default</applyEffectOrientation>
+															<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+															<dieAfterApply>true</dieAfterApply>
+															<dispatchEffect>
+																<Item href="" />
+																<Item href="" />
+															</dispatchEffect>
+															<flags>0</flags>
+															<instantApply>false</instantApply>
+														</DispatchImmediate>
+													</dispatch>
+												</Spell>
+											</spell>
+											<startCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</startCondition>
+											<startOffset>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>0.0f</sString>
+											</startOffset>
+											<targetSelector href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="76DC0227-8B45-4E48-8FF9-DDF092352689">
+												<AreaTargetSelector>
+													<absolutePosition>
+														<x>0</x>
+														<y>0</y>
+													</absolutePosition>
+													<flags>0</flags>
+													<mode>Normal</mode>
+													<range>
+														<compiledString>FQ8AAAABAAAAGwAAAFJhZGl1c19UZXJyYWluAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+														<returnType>float</returnType>
+														<sString>cRadius_Terrain</sString>
+													</range>
+													<targetFilter>1344012351</targetFilter>
+													<targetSelector href="" />
+												</AreaTargetSelector>
+											</targetSelector>
+										</SpellPeriodicallyApplicator>
+									</Item>
+								</persistentApplicators>
+							</DispatchByTime>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="EEDBE9DE-C6B6-4FEE-910E-C78BB9590CE4">
+					<ConvertTargetToLand>
+						<aggregateMode>First</aggregateMode>
+						<targetSelector href="" />
+					</ConvertTargetToLand>
+				</targetSelector>
+			</SpellApplicator>
+		</Item>
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G096: Аленький цветочек</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/Obsolete/G096_Flower.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G096_Flower.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="7C34FC43-8590-484E-9DB2-540A101FE40C">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="DC9FB6C9-A3A3-4493-85E4-7A2F1FD1D09D">
+					<UnitConstant>
+						<name>Time_Terrain</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACoQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>21</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="ADA4A4D1-B858-4CF3-BF03-A6988E3B86FD">
+					<UnitConstant>
+						<name>Radius_Terrain</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>10</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="23DDDC9E-1A74-459D-80D1-DC815CD6DEE4">
+					<UnitConstant>
+						<name>HealAmount</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUNF9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcMAAAAAAAAQQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT4_Stat * 4</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="07118683-1503-456A-8A35-446E68D7BF35">
+					<UnitConstant>
+						<name>Period</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>3</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAC0Qg==</compiledString>
+		<returnType>float</returnType>
+		<sString>90</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G096_Flower.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="45658624-943F-4D84-B19A-AE8978FD53D4">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="/Effects/Environment/TerrainDomination/_Cast.EFFT" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>3</flags>
+	<forceBonus>16.15</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_096.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="67CD6138-02F9-4CCC-B2C2-317E340B15F0">
+		<MultipleTargetSelectorMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString>FQAAAAABAAAAKAAAAFWL7IPsDItFCIsQi00Ii0IE/9CLTQiLEYtNCItCEN1d+P/Q3H343B1KAAAA3+D2xEF1CcdF9AEAAADrB8dF9AAAAACKRfSL5V3DmpmZmZmZ2T8=</compiledString>
+				<returnType>bool</returnType>
+				<sString>sEnergy / sMaxEnergy &gt; 0.4</sString>
+			</condition>
+			<minTargetCount>3</minTargetCount>
+			<minTargetWeight>0</minTargetWeight>
+			<targetSelector href="/Items/Talents/Common/Obsolete/G096_Flower.TALENT" id="BA8E97B1-C499-41C9-B463-36943917DDDF">
+				<AreaTargetSelector>
+					<absolutePosition>
+						<x>0</x>
+						<y>0</y>
+					</absolutePosition>
+					<flags>0</flags>
+					<mode>Normal</mode>
+					<range>
+						<compiledString>FQ8AAAABAAAAGwAAAFJhZGl1c19UZXJyYWluAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cRadius_Terrain</sString>
+					</range>
+					<targetFilter>1343225859</targetFilter>
+					<targetSelector href="" />
+				</AreaTargetSelector>
+			</targetSelector>
+			<unitFilter>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</unitFilter>
+		</MultipleTargetSelectorMicroAI>
+	</microAI>
+	<minLevel>3</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G096_Flower.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators />
+	<persistentId>G096</persistentId>
+	<prerequisiteTalents />
+	<rarity>excellent</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/Obsolete/G096_Flower.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQ8AAAABAAAAGwAAAFJhZGl1c19UZXJyYWluAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<returnType>float</returnType>
+		<sString>cRadius_Terrain</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

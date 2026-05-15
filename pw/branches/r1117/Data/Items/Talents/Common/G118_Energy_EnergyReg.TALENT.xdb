@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Hunter.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Manawyrm.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/Tutorial/Talents/M2_ThunderGod.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/Tutorial/Talents/ThunderM1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Test_ManaRework.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet3.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="3" />
+	<BackLink DBID="/Items/Talents/TalentKits/LostLegacy/LostLegacy.TALKIT" Count="1" />
+	<BackLink DBID="/Test/Talents/LostLegacy.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G118: Жизненная энергия</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G118_Energy_EnergyReg.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G118_Energy_EnergyReg.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G118_Energy_EnergyReg.TALENT" id="BB3172DF-498C-4869-BF47-8591CDEA47BF">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRAAAAACAAAAFQAAACsAAABHMTE4X0xpZmVPckVucmcAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdTQAAAN/g9sRBdQnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG118_LifeOrEnrg &gt; 0</sString>
+				</condition>
+				<name>LifeOrEnrg</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G118_Energy_EnergyReg.TALENT" id="62EF46B5-333A-49F3-8B85-8E7BDA1F62D5">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G118_Energy_EnergyReg.TALENT" id="E6D1D47F-8CCE-4758-9E33-904CCFFDE874">
+					<UnitConstant>
+						<name>CooldownReduction</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>4</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G118_Energy_EnergyReg.TALENT" id="6CAEA235-88C4-417F-B7EC-4514D2C873BF">
+					<UnitConstant>
+						<name>Add_LifeOrEnrg</name>
+						<var>
+							<compiledString>FScAAAADAAAANgAAAFAAAABwAAAAVDVfU3RhdABDb29sZG93blJlZHVjdGlvbgAAAExpZmVCdWRnZXQAVYvsg+wUi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgIAAAAi1UQiwKLTRCLUFDdXfj/0txt+ItFDFCLTQhRaBwAAACLVRCLAotNEItQUN1d8P/S3E3w2V3s2UXsi+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>(cT5_Stat - cCooldownReduction) * cLifeBudget</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/LostLegacy/const_Add_CDR_Bonus_1" />
+				<Item href="/Items/Talents/TalentKits/LostLegacy/const_Add_CDR_Bonus_2" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G118_Energy_EnergyReg.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>22.7</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_118.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>4</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G118_Energy_EnergyReg.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G118_Energy_EnergyReg.TALENT" id="4DF0C52E-A193-411D-B3C1-4B48F914B0F3">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>LifeOrEnrg</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLQnz/0ItNCIsRi00Ii4KAAAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseLife &gt;= sBaseEnergy</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G118_LifeOrEnrg</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G118_Energy_EnergyReg.TALENT" id="9AD2AA45-9E84-4EF6-9774-607A5696E853">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Life</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLQnz/0ItNCIsRi00Ii4KAAAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseLife &gt;= sBaseEnergy</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQ8AAAABAAAAGwAAAEFkZF9MaWZlT3JFbnJnAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_LifeOrEnrg</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G118_Energy_EnergyReg.TALENT" id="9780C658-A2B5-4642-BF59-FABF1FEF41F2">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Energy</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLQnz/0ItNCIsRi00Ii4KAAAAA3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseLife &lt; sBaseEnergy</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQ8AAAABAAAAGwAAAEFkZF9MaWZlT3JFbnJnAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_LifeOrEnrg</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Energy</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/_commonData/Total_CDR.APLR" />
+		<Item href="/Items/Talents/TalentKits/LostLegacy/appl_PermStat_CDR_Bonus_1.APLR" />
+		<Item href="/Items/Talents/TalentKits/LostLegacy/appl_PermStat_CDR_Bonus_2.APLR" />
+		<Item href="/GameLogic/GeneralApplicators/CooldownReduction.APLR" />
+	</passiveApplicators>
+	<persistentId>G118</persistentId>
+	<prerequisiteTalents />
+	<rarity>magnificent</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G118_Energy_EnergyReg.TALENT_shortDescription.txt" />
+	<talentRollGroups>0</talentRollGroups>
+	<talentStats />
+	<targetType>2040319</targetType>
+	<type>Simple</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats>
+		<Item>
+			<addValueName>Add_LifeOrEnrg</addValueName>
+			<stat>Life</stat>
+			<values>
+				<Item>450</Item>
+				<Item>492</Item>
+				<Item>534</Item>
+				<Item>576</Item>
+				<Item>618</Item>
+				<Item>660</Item>
+				<Item>702</Item>
+				<Item>744</Item>
+				<Item>786</Item>
+				<Item>828</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_LifeOrEnrg</addValueName>
+			<stat>Energy</stat>
+			<values>
+				<Item>450</Item>
+				<Item>492</Item>
+				<Item>534</Item>
+				<Item>576</Item>
+				<Item>618</Item>
+				<Item>660</Item>
+				<Item>702</Item>
+				<Item>744</Item>
+				<Item>786</Item>
+				<Item>828</Item>
+			</values>
+		</Item>
+	</variativeMaxTalentStats>
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

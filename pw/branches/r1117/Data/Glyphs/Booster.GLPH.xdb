@@ -27,80 +27,20 @@
 			<ProgramApplicator>
 				<applicators>
 					<Item>
-						<applicator href="/Glyphs/Booster.GLPH" id="9B6BA630-B46E-4AC5-90EF-BC03A2FDA848">
-							<StatusApplicator parent="/Heroes/DefaultStatus/_QUICKNESS_status_high.APLR">
-								<applicators>
-									<Item skip="1" />
-									<Item skip="1" />
-									<Item href="/Glyphs/Booster.GLPH" id="5C25FDC4-6FF1-40B6-BE9F-4EEE4ABD631C">
-										<StatModApplicator>
-											<applyTarget>ApplicatorTarget</applyTarget>
-											<behaviorFlags>144</behaviorFlags>
-											<caption>увеличить скорость атак</caption>
-											<constraint>None</constraint>
-											<dontUpdate>false</dontUpdate>
-											<effect>
-												<Item href="" />
-												<Item href="" />
-											</effect>
-											<enabled>
-												<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
-												<returnType>bool</returnType>
-												<sString>true</sString>
-											</enabled>
-											<formulaName>HasteAttackSpeed</formulaName>
-											<lifeTime>
-												<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
-												<returnType>float</returnType>
-												<sString>-1.0</sString>
-											</lifeTime>
-											<LoggingEvent>-1</LoggingEvent>
-											<modifier>
-												<addValue>
-													<compiledString>FREAAAABAAAAHQAAAEF0dGFja1NwZWVkQm9udXMAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
-													<returnType>float</returnType>
-													<sString>cAttackSpeedBonus</sString>
-												</addValue>
-												<multValue>
-													<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
-													<returnType>float</returnType>
-													<sString>1</sString>
-												</multValue>
-												<stat>AttackSpeed</stat>
-												<topModifier>false</topModifier>
-												<variable></variable>
-											</modifier>
-											<providerName></providerName>
-											<startCondition>
-												<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
-												<returnType>bool</returnType>
-												<sString>true</sString>
-											</startCondition>
-											<statModName>Haste_AtkSpdPercent</statModName>
-										</StatModApplicator>
-									</Item>
-								</applicators>
-								<formulaName>GlyphHasteStatus</formulaName>
-								<lifeTime>
-									<compiledString>FUMAAAAFAAAASgAAAGAAAAB0AAAAjgAAALMAAABSZWRzZXQ3XzdDb3VudGVyAAAAAEhhc3RlX0R1cmF0aW9uAABFeHRyYUR1cmF0aW9uAAAASGFzdGVfRHVyYXRpb24AVYvsg+wUaAAAAACLRQyLEItNDIuCiAEAAP/Q3B3UAAAA3+D2xAF1P4tNDFGLVQhSaBQAAACLRRCLEItNEItCUP/Qi00MUYtVCFJoJAAAAItFEIsQi00Qi0JQ3V34/9DcRfjdXfDrHYtNDFGLVQhSaDQAAACLRRCLEItNEItCUP/Q3V3w3UXw2V3s2UXsi+VdwwAAAAAAAPA/</compiledString>
-									<returnType>float</returnType>
-									<sString>receiver.vRedset7_7Counter &gt;= 1? cHaste_Duration + cExtraDuration : cHaste_Duration</sString>
-								</lifeTime>
-							</StatusApplicator>
-						</applicator>
+						<applicator href="/Heroes/DefaultStatus/status_Quickness_Glyph.APLR" />
 						<continueCondition>
-							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<compiledString></compiledString>
 							<returnType>bool</returnType>
 							<sString>0</sString>
 						</continueCondition>
 						<continueEvents>1</continueEvents>
 						<delay>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+							<compiledString></compiledString>
 							<returnType>float</returnType>
 							<sString>-1.0</sString>
 						</delay>
 						<stopCondition>
-							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<compiledString></compiledString>
 							<returnType>bool</returnType>
 							<sString>0</sString>
 						</stopCondition>
@@ -128,9 +68,9 @@
 								</enabled>
 								<formulaName></formulaName>
 								<lifeTime>
-									<compiledString>FUMAAAAFAAAASgAAAGAAAAB0AAAAjgAAALMAAABSZWRzZXQ3XzdDb3VudGVyAAAAAEhhc3RlX0R1cmF0aW9uAABFeHRyYUR1cmF0aW9uAAAASGFzdGVfRHVyYXRpb24AVYvsg+wUaAAAAACLRQyLEItNDIuCiAEAAP/Q3B3UAAAA3+D2xAF1P4tNDFGLVQhSaBQAAACLRRCLEItNEItCUP/Qi00MUYtVCFJoJAAAAItFEIsQi00Qi0JQ3V34/9DcRfjdXfDrHYtNDFGLVQhSaDQAAACLRRCLEItNEItCUP/Q3V3w3UXw2V3s2UXsi+VdwwAAAAAAAPA/</compiledString>
+									<compiledString>FUMAAAAFAAAASgAAAGAAAAB0AAAAjgAAALMAAABSZWRzZXQ3XzdDb3VudGVyAAAAAEhhc3RlX0R1cmF0aW9uAABFeHRyYUR1cmF0aW9uAAAASGFzdGVfRHVyYXRpb24AVYvsg+wUaAAAAACLRQyLEItNDIuCiAEAAP/Q3B3UAAAA3+D2xAF1P4tNDFGLVQhSaBQAAACLRRCLEItNEItCUP/Qi00MUYtVCFJoJAAAAItFEIsQi00Qi0JQ3V34/9DcRfjdXfDrHYtNDFGLVQhSaDQAAACLRRCLEItNEItCUP/Q3V3w3UXw2V3s2UXsi+VdwwAAAAAAAAhA</compiledString>
 									<returnType>float</returnType>
-									<sString>receiver.vRedset7_7Counter &gt;= 1? cHaste_Duration + cExtraDuration : cHaste_Duration</sString>
+									<sString>receiver.vRedset7_7Counter &gt;= 3? cHaste_Duration + cExtraDuration : cHaste_Duration</sString>
 								</lifeTime>
 								<LoggingEvent>-1</LoggingEvent>
 								<playAck>false</playAck>
@@ -279,9 +219,9 @@
 					<UnitConstant>
 						<name>Haste_Duration</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABwQg==</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQg==</compiledString>
 							<returnType>float</returnType>
-							<sString>60</sString>
+							<sString>40</sString>
 						</var>
 					</UnitConstant>
 				</Item>

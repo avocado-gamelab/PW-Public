@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CloneHeroApplicator>
-	<BackLink DBID="/Items/Talents/Class/FireFox/Ability3.TALENT" Count="2" />
+	<BackLink DBID="/Items/Talents/Class/FireFox/Ability_A3.TALENT" Count="2" />
 	<applicators>
 		<Item href="/Items/Talents/Class/FireFox/A3Clone.APLR" id="C567FC8D-6313-4F60-9FBC-8E770BA24236">
 			<TeleportApplicator>
@@ -26,7 +26,39 @@
 				<teleportTarget>AbilityOwner</teleportTarget>
 			</TeleportApplicator>
 		</Item>
-		<Item href="/GameLogic/GeneralApplicators/Isolated.APLR" />
+		<Item href="/Items/Talents/Class/FireFox/A3Clone.APLR" id="3D70BFC8-85E4-4E7F-81CD-E7668B290EBD">
+			<FlagsApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Запреты</caption>
+				<consumables />
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flag>2046</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents />
+				<useListAs>ListAsRule</useListAs>
+			</FlagsApplicator>
+		</Item>
 		<Item href="/GameLogic/GeneralApplicators/SetClone.APLR" />
 		<Item href="/GameLogic/GeneralApplicators/Immune2Control.APLR" />
 		<Item href="/Items/Talents/Class/FireFox/A3Clone.APLR" id="67B75109-79CF-4596-8CB6-233F54C2D5D2">
@@ -37,21 +69,10 @@
 							<FlagsApplicator>
 								<applyTarget>ApplicatorTarget</applyTarget>
 								<behaviorFlags>152</behaviorFlags>
-								<caption>Включаем анимацию и ждем некоторое время (за вычетом дельты)</caption>
+								<caption>Задержка перед эффектом стана</caption>
 								<consumables />
 								<effect>
-									<Item href="/Items/Talents/Class/FireFox/A3Clone.APLR" id="B02AA5FE-87F4-4B7E-A532-2C04E9704F17">
-										<PlayAnimationEffect>
-											<animGraphNode>ability3Loop</animGraphNode>
-											<deathType>Manual</deathType>
-											<enableCondition href="" />
-											<goToOtherNodeOnStop>true</goToOtherNodeOnStop>
-											<lifeTime>0</lifeTime>
-											<marker></marker>
-											<markerReachTime>0</markerReachTime>
-											<returnAnimGraphNode>ability3</returnAnimGraphNode>
-										</PlayAnimationEffect>
-									</Item>
+									<Item href="" />
 									<Item href="" />
 								</effect>
 								<enabled>
@@ -69,7 +90,7 @@
 								<LoggingEvent>-1</LoggingEvent>
 								<providerName></providerName>
 								<startCondition>
-									<compiledString></compiledString>
+									<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
 									<returnType>bool</returnType>
 									<sString>true</sString>
 								</startCondition>
@@ -175,19 +196,130 @@
 				</startCondition>
 			</ProgramApplicator>
 		</Item>
+		<Item href="/Items/Talents/Class/FireFox/A3Clone.APLR" id="F69850BA-DD9D-4B52-AE47-7B1B51996138">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Спелл с выбором цели, к которой движется клон</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Class/FireFox/A3Clone.APLR" id="F8855D90-866B-428B-80D9-B7B97B79226A">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Class/FireFox/A3Clone.APLR" id="14A17FCA-6948-450F-BC5A-378C93BA78FA">
+								<MoveToApplicator>
+									<applyTarget>PrevApplicatorTarget</applyTarget>
+									<behaviorFlags>145</behaviorFlags>
+									<caption>Клон бежит вперёд</caption>
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<isMoveDirect>
+										<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+										<returnType>bool</returnType>
+										<sString>false</sString>
+									</isMoveDirect>
+									<isNotStackable>true</isNotStackable>
+									<justRotate>false</justRotate>
+									<lifeTime>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<moveRange>
+										<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</moveRange>
+									<moveSpeed>
+										<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+										<returnType>float</returnType>
+										<sString>0</sString>
+									</moveSpeed>
+									<moveTarget>ApplicatorTarget</moveTarget>
+									<offset>
+										<x>0</x>
+										<y>0</y>
+									</offset>
+									<providerName></providerName>
+									<pushUnits>false</pushUnits>
+									<startCondition>
+										<compiledString>FQAAAAAAAAAAVYvsi0UIixCLTQiLQkT/0F3D</compiledString>
+										<returnType>bool</returnType>
+										<sString>pFirst-&gt;IsMoving()</sString>
+									</startCondition>
+								</MoveToApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Class/FireFox/A3Clone.APLR" id="7E387E01-149E-4ADB-9D07-6C7D080F8A16">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="/Items/Talents/Class/FireFox/A3Clone.APLR" id="5CF3D96B-C88F-4002-8106-8B9CFA8BFEDB">
+					<PointTargetSelector>
+						<checkMinRange>true</checkMinRange>
+						<mode>OffsetFromOwner</mode>
+						<offset>
+							<x>0</x>
+							<y>1</y>
+						</offset>
+						<paralleledTarget>false</paralleledTarget>
+						<range>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>30</sString>
+						</range>
+						<targetSelector href="" />
+						<traceMode>0</traceMode>
+					</PointTargetSelector>
+				</targetSelector>
+			</SpellApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/FireFox/A3u_StunProgramm.APLR" />
 	</applicators>
-	<applyTarget>ApplicatorTarget</applyTarget>
+	<applyTarget>AbilityOwner</applyTarget>
 	<caption>клон лисички</caption>
 	<enabled>
 		<compiledString></compiledString>
 		<returnType>bool</returnType>
 		<sString>true</sString>
 	</enabled>
-	<flags>1</flags>
+	<flags>65</flags>
 	<followRange>
-		<compiledString></compiledString>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAB6RA==</compiledString>
 		<returnType>float</returnType>
-		<sString>-1.0</sString>
+		<sString>1000</sString>
 	</followRange>
 	<formulaName></formulaName>
 	<lifeTime>

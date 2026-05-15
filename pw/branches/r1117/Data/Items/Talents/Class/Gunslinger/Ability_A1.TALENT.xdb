@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Gunslinger.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Gunslinger_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Gunslinger.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Gunslinger_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Gunslinger_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Gunslinger/Ability_A1u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Gunslinger_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Gunslinger/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Gunslinger/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Gunslinger/Elite_IntAsp.TALENTSET" Count="1" />
@@ -819,9 +819,9 @@
 								</offset>
 								<paralleledTarget>false</paralleledTarget>
 								<range>
-									<compiledString>FQsAAAABAAAAGAAAAFJhbmdlX0xvbmcAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3MDZXfzZRfyL5V3D</compiledString>
+									<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAFDDRw==</compiledString>
 									<returnType>float</returnType>
-									<sString>cRange_Long*2</sString>
+									<sString>100000</sString>
 								</range>
 								<targetSelector href="/Items/Talents/Class/Gunslinger/Ability_A1.TALENT" id="4C3334E1-CEF1-4557-BBD8-67CA1A46442B">
 									<SelectApplicatorTarget>
@@ -851,8 +851,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Gunslinger/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Gunslinger/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Gunslinger/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Gunslinger/Ability_A1.TALENT" id="DAE352CF-BF89-47AC-884A-0A1B6F5D3246">
 			<ConditionFormula>
@@ -1043,7 +1043,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>75</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Gunslinger/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

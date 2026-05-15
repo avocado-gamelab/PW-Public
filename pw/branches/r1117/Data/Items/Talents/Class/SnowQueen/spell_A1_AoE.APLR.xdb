@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SpellPeriodicallyApplicator>
+	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" Count="2" />
+	<applyTarget>ApplicatorTarget</applyTarget>
+	<behaviorFlags>152</behaviorFlags>
+	<caption>Периодический спелл</caption>
+	<effect>
+		<Item href="" />
+		<Item href="" />
+	</effect>
+	<enabled>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<lifeTime>
+		<compiledString>FQwAAAABAAAAGAAAAEExX0R1cmF0aW9uAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<returnType>float</returnType>
+		<sString>cA1_Duration</sString>
+	</lifeTime>
+	<LoggingEvent>-1</LoggingEvent>
+	<period>
+		<compiledString>FQoAAAABAAAAFgAAAEExX1BlcmlvZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+		<returnType>float</returnType>
+		<sString>cA1_Period</sString>
+	</period>
+	<providerName></providerName>
+	<scaleMode>ScaleIsCount</scaleMode>
+	<spell href="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR" id="121C749B-C08D-41CD-850C-354915A4F0BA">
+		<Spell>
+			<applicators>
+				<Item href="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR" id="2D40B0E2-1583-4BED-8DB1-94FF00A9E4D0">
+					<VariableProxyApplicator>
+						<applicators>
+							<Item>
+								<applicator href="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR" id="66F85622-366B-4E08-A63F-9F3E78EA593F">
+									<DamageApplicator>
+										<applyTarget>ApplicatorTarget</applyTarget>
+										<cancelInvisibility>false</cancelInvisibility>
+										<caption>урон</caption>
+										<damage>
+											<compiledString>FQoAAAABAAAAFgAAAEExX0RhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+											<returnType>float</returnType>
+											<sString>cA1_Damage</sString>
+										</damage>
+										<damageMode>4</damageMode>
+										<damageType>Energy</damageType>
+										<enabled>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</enabled>
+										<formulaName></formulaName>
+										<LoggingEvent>-1</LoggingEvent>
+										<providerName></providerName>
+										<timeLimiter>-1</timeLimiter>
+										<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
+									</DamageApplicator>
+								</applicator>
+								<variableNames>
+									<Item>damageDealed</Item>
+								</variableNames>
+							</Item>
+							<Item>
+								<applicator href="/Items/Talents/Class/SnowQueen/status_A0_Tech.APLR" />
+								<variableNames />
+							</Item>
+						</applicators>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<caption>урон + A0</caption>
+						<enabled>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</enabled>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<providerName></providerName>
+					</VariableProxyApplicator>
+				</Item>
+				<Item href="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR" id="EE9B5D9D-CDD1-4CB3-AA9B-987F6018EC0E">
+					<SpellApplicator>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<caption>Урон и обездвиживание</caption>
+						<enabled>
+							<compiledString>FVkAAAAFAAAAYAAAAHkAAAC1AAAA2AAAAP8AAABTbm93UXVlZW5fQTF1AAAAU25vd1F1ZWVuX0ExdQAAAFNub3dRdWVlbl9BMF9TdGF0dXMAQTF1X1N0YWNrc0ZvclByb2MAAABTbm93UXVlZW5fQTF1X0NEAFWL7IPsGGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdHNqAYtVEFJoIAAAAItFDIsQi00Mi4KgAQAA/9CJRfTbRfSLTQxRi1UIUmg0AAAAi0UQixCLTRCLQlDdXez/0N1F7Nrp3+D2xER6KWoBi00QUWhIAAAAi1UMiwKLTQyLkJwBAAD/0jtFEHUJx0XoAQAAAOsHx0XoAAAAAIpF6IvlXcM=</compiledString>
+							<returnType>bool</returnType>
+							<sString>tal("SnowQueen_A1u") &amp;&amp; receiver.CountApplicators( "SnowQueen_A0_Status", pMisc, UNIT ) == cA1u_StacksForProc &amp;&amp; receiver.applSnowQueen_A1u_CD(UNIT) == pMisc</sString>
+						</enabled>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<providerName></providerName>
+						<spell href="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR" id="8FEB01F7-4141-4BEF-972D-F725ABB75188">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR" id="3B9FE331-E4A2-42AA-8F88-56C11A30103D">
+										<DamageApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<cancelInvisibility>false</cancelInvisibility>
+											<caption>Урон в цель</caption>
+											<damage>
+												<compiledString>FRAAAAABAAAAHAAAAEExdV9Cb251c0RhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+												<returnType>float</returnType>
+												<sString>cA1u_BonusDamage </sString>
+											</damage>
+											<damageMode>0</damageMode>
+											<damageType>Material</damageType>
+											<enabled>
+												<compiledString>FSYAAAACAAAAMwAAAFYAAABTbm93UXVlZW5fQTBfU3RhdHVzAEExdV9TdGFja3NGb3JQcm9jAFWL7IPsEGoBi0UQUGgAAAAAi00MixGLTQyLgqABAAD/0IlF/NtF/ItNDFGLVQhSaBQAAACLRRCLEItNEItCUN1d9P/Q3UX02unf4PbERHoJx0XwAQAAAOsHx0XwAAAAAIpF8IvlXcM=</compiledString>
+												<returnType>bool</returnType>
+												<sString>receiver.CountApplicators( "SnowQueen_A0_Status", pMisc, UNIT ) == cA1u_StacksForProc</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName>SnowQueen_A1</providerName>
+											<timeLimiter>-1</timeLimiter>
+											<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
+										</DamageApplicator>
+									</Item>
+									<Item href="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR" id="8101C5C3-B792-4ECE-B263-7710AC86DB72">
+										<StatusApplicator>
+											<applicators>
+												<Item href="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR" id="298B116D-55CB-4748-87B6-E3E2396861DB">
+													<FlagsApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<behaviorFlags>144</behaviorFlags>
+														<caption></caption>
+														<consumables />
+														<effect>
+															<Item href="/Effects/Debuffs/Roots/_Needle.EFFT" />
+															<Item href="" />
+														</effect>
+														<enabled>
+															<compiledString></compiledString>
+															<returnType>bool</returnType>
+															<sString>true</sString>
+														</enabled>
+														<flag>131073</flag>
+														<formulaName></formulaName>
+														<lifeTime>
+															<compiledString>FQ4AAAABAAAAGgAAAFJvb3RfRHVyYXRpb24AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+															<returnType>float</returnType>
+															<sString>cRoot_Duration</sString>
+														</lifeTime>
+														<LoggingEvent>-1</LoggingEvent>
+														<providerName></providerName>
+														<startCondition>
+															<compiledString></compiledString>
+															<returnType>bool</returnType>
+															<sString>true</sString>
+														</startCondition>
+														<talents />
+														<useListAs>ListAsRule</useListAs>
+													</FlagsApplicator>
+												</Item>
+												<Item href="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR" id="F8EB1287-3F70-48B4-B10C-DE87E99EA377">
+													<UIMessageApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption> - FlyOff Message</caption>
+														<enabled>
+															<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+															<returnType>bool</returnType>
+															<sString>true</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<message textref="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR_f8eb12873f7048b4b10cde87e99ea377_message.txt" />
+														<providerName></providerName>
+														<uiEvent href="/UI/Events/CommonEvents/EventCustomFlyoff.UIEV" />
+														<value>
+															<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+															<returnType>float</returnType>
+															<sString>-1.0</sString>
+														</value>
+													</UIMessageApplicator>
+												</Item>
+											</applicators>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<behaviorFlags>145</behaviorFlags>
+											<caption>статус Root (Root_Duration)</caption>
+											<customCounter>
+												<compiledString>FQAAAAAAAAAAVYvsM8Bdww==</compiledString>
+												<returnType>int</returnType>
+												<sString>0</sString>
+											</customCounter>
+											<customProgress>
+												<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</customProgress>
+											<description textref="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR_8101c5c3b7924eceb2637710ac86db72_description.txt" />
+											<dispellPriority>High</dispellPriority>
+											<effect>
+												<Item href="" />
+												<Item href="" />
+											</effect>
+											<enabled>
+												<compiledString>FS0AAAAGAAAASwAAAGEAAAB1AAAAiAAAAJQAAACqAAAASW1tdW5lMkNvbnRyb2wAAFJvb3RfQ29uZGl0aW9uAABBbGxvd0NvbnRyb2wAVYvsUWgAABAAi0UMixCLTQyLQmj/0A+2yIXJdUloAAAAAItVDIsCi00Mi5CIAQAA/9LcHdQAAADf4PbERHoni0UMUItNCFFoEAAAAItVEIsCi00Qi1BQ/9LcHdQAAADf4PbERHoraCAAAACLRQyLEItNDIuCiAEAAP/Q3B3MAAAA3+D2xER7CcdF/AAAAADrB8dF/AEAAACKRfyL5V3DAAAAAAAA8D8AAAAAAAAAAA==</compiledString>
+												<returnType>bool</returnType>
+												<sString>(!rFlag(1048576) &amp;&amp; receiver.vImmune2Control == 0 &amp;&amp; cRoot_Condition) || receiver.vAllowControl == 1</sString>
+											</enabled>
+											<flags>0</flags>
+											<formulaName>StatusRoot</formulaName>
+											<image href="/UI/Styles/Icons/Heroes/SnowQueen/A1.ITEX" />
+											<lifeTime>
+												<compiledString>FQ4AAAABAAAAGgAAAFJvb3RfRHVyYXRpb24AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+												<returnType>float</returnType>
+												<sString>cRoot_Duration</sString>
+											</lifeTime>
+											<LoggingEvent>-1</LoggingEvent>
+											<name textref="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR_8101c5c3b7924eceb2637710ac86db72_name.txt" />
+											<power>0</power>
+											<providerName></providerName>
+											<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+											<stackCount>0</stackCount>
+											<startCondition>
+												<compiledString>FRQAAAACAAAAIQAAADQAAABSb290X1N0YXJ0Q29uZGl0aW9uAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twdUAAAAN/g9sREewbGRf8B6wTGRf8AikX/i+VdwwAAAAAAAAAA</compiledString>
+												<returnType>bool</returnType>
+												<sString>cRoot_StartCondition</sString>
+											</startCondition>
+											<statusPosition>0</statusPosition>
+											<stopBehaviour>StopByTime</stopBehaviour>
+											<unstackableWith href="/Heroes/DefaultStatus/List_RootUnstacked.APLS" />
+										</StatusApplicator>
+									</Item>
+									<Item href="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR" id="6434287E-9C50-49D1-BA3B-8FDFE84BD3F8">
+										<StatusApplicator>
+											<applicators />
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<behaviorFlags>0</behaviorFlags>
+											<caption>Тех статус КД на руты</caption>
+											<customCounter>
+												<compiledString></compiledString>
+												<returnType>int</returnType>
+												<sString>0</sString>
+											</customCounter>
+											<customProgress>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</customProgress>
+											<description textref="" />
+											<dispellPriority>Medium</dispellPriority>
+											<effect>
+												<Item href="" />
+												<Item href="" />
+											</effect>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<flags>0</flags>
+											<formulaName>SnowQueen_A1u_CD</formulaName>
+											<image href="" />
+											<lifeTime>
+												<compiledString>FQcAAAABAAAAEwAAAEExdV9DRABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+												<returnType>float</returnType>
+												<sString>cA1u_CD</sString>
+											</lifeTime>
+											<LoggingEvent>-1</LoggingEvent>
+											<name textref="" />
+											<power>0</power>
+											<providerName></providerName>
+											<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+											<stackCount>0</stackCount>
+											<startCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</startCondition>
+											<statusPosition>0</statusPosition>
+											<stopBehaviour>StopByTime</stopBehaviour>
+											<unstackableWith href="" />
+										</StatusApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR" id="8DE5C6DE-D803-4F21-A571-4CE5613C5D4E">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>false</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+						<spellTarget>ApplicatorTarget</spellTarget>
+						<targetSelector href="" />
+					</SpellApplicator>
+				</Item>
+			</applicators>
+			<dispatch href="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR" id="28F3D7AC-EB1C-4B0F-AD14-E0639405A7BE">
+				<DispatchImmediate>
+					<alwaysApply>false</alwaysApply>
+					<applyEffect>
+						<Item href="" />
+						<Item href="" />
+					</applyEffect>
+					<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+					<applyEffectOrientation>Default</applyEffectOrientation>
+					<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+					<dieAfterApply>true</dieAfterApply>
+					<dispatchEffect>
+						<Item href="" />
+						<Item href="" />
+					</dispatchEffect>
+					<flags>1</flags>
+					<instantApply>false</instantApply>
+				</DispatchImmediate>
+			</dispatch>
+		</Spell>
+	</spell>
+	<startCondition>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</startCondition>
+	<startOffset>
+		<compiledString>FQUAAAABAAAAEQAAAFNURVAAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cSTEP</sString>
+	</startOffset>
+	<targetSelector href="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR" id="7C1FE85F-92DE-473B-8B3F-53D7F49477F7">
+		<ConditionTargetSelector>
+			<condition>
+				<compiledString>FQUAAAABAAAADwAAAFdhcmQAVYvsagCLRRBQaAAAAACLTQyLEYtNDIuCnAEAAP/QM8k7RRAPlMGKwV3D</compiledString>
+				<returnType>bool</returnType>
+				<sString>receiver.applWard(GLOBAL) == pMisc</sString>
+			</condition>
+			<flags>0</flags>
+			<mode>Normal</mode>
+			<targetSelector href="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR" id="0B97F72C-C5CE-41FD-91C4-AAFBE6E48F57">
+				<AreaTargetSelector>
+					<absolutePosition>
+						<x>0</x>
+						<y>0</y>
+					</absolutePosition>
+					<flags>0</flags>
+					<mode>Normal</mode>
+					<range>
+						<compiledString>FQkAAAABAAAAFQAAAEExX1JhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cA1_Range</sString>
+					</range>
+					<targetFilter>538771519</targetFilter>
+					<targetSelector href="" />
+				</AreaTargetSelector>
+			</targetSelector>
+		</ConditionTargetSelector>
+	</targetSelector>
+</SpellPeriodicallyApplicator>

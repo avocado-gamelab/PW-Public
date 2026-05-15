@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Monster.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Monster_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Monster.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Monster_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Monster/Ability_A3.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Monster/Ability_A3u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Monster_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Monster_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Monster/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Monster/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Monster/Elite_Aspd.TALENTSET" Count="1" />
@@ -288,7 +288,7 @@
 	<askId>3</askId>
 	<autoTargetSelector href="" />
 	<budget>-1</budget>
-	<caption>А3 Твари</caption>
+	<caption>А3 Стремительные атаки</caption>
 	<castAllowRange>
 		<compiledString></compiledString>
 		<returnType>float</returnType>
@@ -296,8 +296,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Monster/Ability_A3.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Monster/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Monster/Ability_A3.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Monster/Ability_A3.TALENT" id="3BBE9405-C62B-4046-B79B-971688A40440">
 			<ConditionFormula>
@@ -383,7 +383,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>18</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Monster/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

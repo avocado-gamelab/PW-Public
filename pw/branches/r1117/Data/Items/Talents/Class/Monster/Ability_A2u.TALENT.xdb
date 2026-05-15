@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Monster.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Monster_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Monster_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Monster.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Monster_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Monster_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Monster/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Monster/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Monster/Elite_Aspd.TALENTSET" Count="1" />
@@ -34,7 +34,7 @@
 	<askId>0</askId>
 	<autoTargetSelector href="" />
 	<budget>-1</budget>
-	<caption>А2у Твари</caption>
+	<caption>А2у Сковывающее присутствие</caption>
 	<castAllowRange>
 		<compiledString></compiledString>
 		<returnType>float</returnType>
@@ -42,8 +42,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Monster/Ability_A2u.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Monster/Ability_A2u.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Monster/Ability_A2u.TALENT" id="A3809946-8637-4955-8573-D4FA8FDD5E10">
 			<ConditionFormula>
@@ -61,7 +61,7 @@
 		<UnitConstantsContainer>
 			<vars>
 				<Item href="/Items/Talents/Class/Monster/const_A2u_DecMoveSpeed" />
-				<Item href="/Items/Talents/Class/Monster/const_A2_AddAtkSpd" />
+				<Item href="/Items/Talents/Class/Monster/const_A2_Add_Stat" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -83,7 +83,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Monster/A2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

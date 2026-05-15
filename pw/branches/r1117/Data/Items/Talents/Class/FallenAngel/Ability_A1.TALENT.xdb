@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/FallenAngel.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/FallenAngel_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/FallenAngel.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/FallenAngel_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/FallenAngel_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/FallenAngel/Ability_A1u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/FallenAngel/Ability_A3.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/FallenAngel_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/FallenAngel/Epic_IntDex.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/FallenAngel/Epic_IntSpeed.TALENTSET" Count="1" />
 	<activationConditions />
@@ -137,8 +137,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/FallenAngel/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/FallenAngel/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/FallenAngel/Ability_A1.TALENT" id="01C5981A-B999-4AF0-AE58-9BED316597F2">
 			<ConditionFormula>
@@ -283,7 +283,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>3</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/FallenAngel/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

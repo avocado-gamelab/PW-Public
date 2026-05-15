@@ -2,9 +2,9 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/SnowQueen.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/SnowQueen_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/SnowQueen_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/SnowQueen.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/SnowQueen_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/SnowQueen_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Duel.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Elite_IntLife.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Elite_StrInt.TALENTSET" Count="1" />
@@ -40,8 +40,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/SnowQueen/Ability_A3u.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/SnowQueen/Ability_A3u.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/SnowQueen/Ability_A3u.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/SnowQueen/Ability_A3u.TALENT" id="42697219-36C7-4CEE-844E-79C6EE01F491">
 			<ConditionFormula>
@@ -71,6 +71,7 @@
 				<Item href="/Items/Talents/Class/SnowQueen/const_A3_AddEnergyRegenAbs" />
 				<Item href="/Items/Talents/Class/SnowQueen/const_A3_AddLifeRegenAbs" />
 				<Item href="/Items/Talents/Class/SnowQueen/const_A3_Cooldown" />
+				<Item href="/Items/Talents/Class/SnowQueen/const_A3_StrongAttackDamageMultPercent" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -92,7 +93,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/SnowQueen/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

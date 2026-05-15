@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Zealot.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Zealot_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Zealot.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Zealot_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Zealot_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Zealot/Ability_A3.TALENT" Count="2" />
 	<BackLink DBID="/Items/Talents/Class/Zealot/Ability_A3u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Zealot/appl_A0_RefreshCD.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Zealot_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -876,8 +876,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Zealot/Ability_A3.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Zealot/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Zealot/Ability_A3.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Zealot/Ability_A3.TALENT" id="7D749B55-5663-4EB0-9AB0-9EF3505BE1C1">
 			<ConditionFormula>
@@ -924,6 +924,7 @@
 				<Item href="/Items/Talents/Class/Zealot/const_A1_SUP_Dec_MoveSpeed" />
 				<Item href="/Items/Talents/Class/Zealot/const_A1_SUP_Slow_Percentage" />
 				<Item href="/Items/Talents/Class/Zealot/const_A1_SUP_Slow_StartCondition" />
+				<Item href="/Items/Talents/Class/Zealot/const_A1_SUP_Damage" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -963,7 +964,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>82</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Zealot/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <SpellApplicator>
-	<BackLink DBID="/Items/Talents/Class/Healer/Ability1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A1.TALENT" Count="1" />
 	<applyTarget>ApplicatorTarget</applyTarget>
 	<caption>полечить всех вокруг</caption>
 	<enabled>
@@ -70,11 +70,11 @@
 														<applicator href="/Items/Talents/Class/Healer/AreaHeal.APLR" id="B1FB3CA0-3322-4A2E-8D96-2E4CAC03FDD2">
 															<AddNaftaApplicator>
 																<applyTarget>AbilityOwner</applyTarget>
-																<caption>дать нафты за areaHeal</caption>
+																<caption>(Отключено) дать нафты за areaHeal</caption>
 																<enabled>
-																	<compiledString></compiledString>
+																	<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
 																	<returnType>bool</returnType>
-																	<sString>true</sString>
+																	<sString>false</sString>
 																</enabled>
 																<formulaName></formulaName>
 																<isFromImpulseBuff>false</isFromImpulseBuff>
@@ -102,6 +102,8 @@
 												<providerName></providerName>
 											</VariableProxyApplicator>
 										</Item>
+										<Item href="/Items/Talents/Class/Healer/CharityDefenceSpell_AoE.APLR" />
+										<Item href="/Items/Talents/Class/Healer/CharityPowerSpell_AoE.APLR" />
 									</applicators>
 									<dispatch href="" />
 								</Spell>
@@ -143,11 +145,11 @@
 														<applicator href="/Items/Talents/Class/Healer/AreaHeal.APLR" id="9A0980B6-EE6B-4396-8139-7568F1169470">
 															<AddNaftaApplicator>
 																<applyTarget>AbilityOwner</applyTarget>
-																<caption>дать нафты за areaHeal</caption>
+																<caption>(Отключено) дать нафты за areaHeal</caption>
 																<enabled>
-																	<compiledString></compiledString>
+																	<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
 																	<returnType>bool</returnType>
-																	<sString>true</sString>
+																	<sString>false</sString>
 																</enabled>
 																<formulaName></formulaName>
 																<isFromImpulseBuff>false</isFromImpulseBuff>
@@ -175,6 +177,8 @@
 												<providerName></providerName>
 											</VariableProxyApplicator>
 										</Item>
+										<Item href="/Items/Talents/Class/Healer/CharityDefenceSpell_AoE.APLR" />
+										<Item href="/Items/Talents/Class/Healer/CharityPowerSpell_AoE.APLR" />
 									</applicators>
 									<dispatch href="" />
 								</Spell>

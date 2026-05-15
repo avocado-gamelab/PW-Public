@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Hunter.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Hunter_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Hunter_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Hunter.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Hunter/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Hunter/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Hunter/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Hunter/Elite_PvE.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Hunter/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Hunter/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Hunter/Epic_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Hunter/Ability_A0_SUP.TALENT" Count="1" />
+	<BackLink DBID="/Test/Talents/Test_Satanic.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А0. Кровотечение</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Hunter/Ability_A0.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Hunter/Ability_A0.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Hunter/Ability_A0.TALENT" id="883D9125-D02F-4DF4-B512-08D1835A9261">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR4AAAACAAAAJQAAAD4AAABIdW50ZXJfQTBfU1VQAAAASHVudGVyX0EwX1NVUABVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Hunter_A0_SUP") == false</sString>
+				</condition>
+				<name>Hunter_A0_SUP</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/Hunter/Ability_A0.TALENT" id="8FCED3E6-3E74-4019-A38A-A3001A11CC4B">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Hunter/Ability_A0.TALENT" id="8DF2E207-D8F7-4218-A273-1641CB9E21AB">
+					<UnitConstant>
+						<name>A0_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>3</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Hunter/Ability_A0.TALENT" id="12459563-B8CD-43A2-B504-B5643614AC07">
+					<UnitConstant>
+						<name>A0_Damage</name>
+						<var>
+							<compiledString>FR4AAAAGAAAAJQAAAD4AAAB4AAAAggAAANcAAADhAAAASHVudGVyX0EwX1NVUAAAAEh1bnRlcl9BMF9TVVAAVYvsg+wMaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0X2oBUdkFQgEAANkcJFHZBT4BAADZHCRqAItVCIsCi00Ii5A0AQAA/9JR2Rwki0UIixCLTQiLgjABAAD/0FHZHCTojgAAAIPEBNkcJGoAi00QixGLTRCLQmD/0Nld9OtdagFR2QU6AQAA2RwkUdkFNgEAANkcJGoAi00IixGLTQiLgjQBAAD/0FHZHCSLTQiLEYtNCIuCMAEAAP/QUdkcJOgvAAAAg8QE2RwkagCLTRCLEYtNEItCYP/Q2V302UX0i+VdwwAAoEAAABhCAADgQAAASEJVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>tal("Hunter_A0_SUP") ? abilityScale(max(sStrength, sIntellect), 7, 50) : abilityScale(max(sStrength, sIntellect), 5, 38)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Hunter/Ability_A0.TALENT" id="F2472250-C8B8-4248-B37B-962D233FC53B">
+					<UnitConstant>
+						<name>A0_HealDebuffPercent</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABIQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>50</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Hunter/const_A0Damage" />
+				<Item href="/Items/Talents/Class/Hunter/Ability_A0.TALENT" id="E38A29AE-EEC9-4DF4-B525-79C1CCC1FA9A">
+					<UnitConstant>
+						<name>A0_OpenFogRadius</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>7</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Hunter/Ability_A0.TALENT" id="ADE2476A-F60B-4060-A7AD-A2F848D7109C">
+					<UnitConstant>
+						<name>A0_MaxOpenFogDist</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>40</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Hunter/Ability_A0.TALENT" id="4ACF7015-6A3B-4934-A1BF-7C871D2F1FD7">
+					<UnitConstant>
+						<name>A1u_MaxStacks</name>
+						<var>
+							<compiledString>FTIAAAAEAAAAOQAAAFIAAACIAAAAqAAAAEh1bnRlcl9BMXUAAEh1bnRlcl9BMXUAAEh1bnRlcl9BMXUAAEExdV9NYXhTdGFja3MAVYvsg+wQaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgMAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0N2gYAAAAi1UIiwKLTQiLkKgBAAD/0olF9ItFDFCLTQhRaCQAAACLVfSLAotN9ItQUP/S2V3w6wXZ7tld8NlF8IvlXcMAAAAA</compiledString>
+							<returnType>float</returnType>
+							<sString>talconst("Hunter_A1u","A1u_MaxStacks")</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Hunter/Ability_A0.TALENT" id="37F7180C-914D-4BDE-84E3-1A3889EDA1CC">
+					<UnitConstant>
+						<name>A0_StartOffset</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>0.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Hunter/Ability_A0.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Hunter/A0.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>true</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>0</naftaCost>
+	<name textref="/Items/Talents/Class/Hunter/Ability_A0.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators />
+	<persistentId>Hunter_A0</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>2040319</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

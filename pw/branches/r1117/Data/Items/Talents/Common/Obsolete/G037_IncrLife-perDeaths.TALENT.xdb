@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Fairy.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Hunter.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Fairy/Fairy.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="2" />
+	<BackLink DBID="/Test/Talents/TestSet1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet13.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet14.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet15.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet6.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet7.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet8.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet9.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSetLand.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSetNewUltimates1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TST_6_6_BlindOscar.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TST_7_2_Pirates.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G037: Упорство</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="A86A803D-2C8C-4E01-8E65-790D949858FB">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="3EDE7950-B76B-4515-B59E-3BA2BF9D0935">
+					<UnitConstant>
+						<name>Add_Life</name>
+						<var>
+							<compiledString>FRMAAAADAAAAIgAAADwAAABVAAAAVDJfU3RhdABMaWZlQnVkZ2V0AFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoCAAAAItVEIsCi00Qi1BQ3V34/9LcTfjcDWMAAADZXfTZRfSL5V3DAAAAAAAA4D8=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT2_Stat * cLifeBudget * 0.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="54DA2F4C-D4A5-4C7C-A76E-646947CAD486">
+					<UnitConstant>
+						<name>PrimeAmount</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABIQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>50</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="C48C1DD7-777A-405E-B7E2-5939E7382EAE">
+					<UnitConstant>
+						<name>Add_LifePerm</name>
+						<var>
+							<compiledString>FRMAAAADAAAAIgAAADwAAABVAAAAVDJfU3RhdABMaWZlQnVkZ2V0AFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoCAAAAItVEIsCi00Qi1BQ3V34/9LcTfjcDWMAAADZXfTZRfSL5V3DmpmZmZmZyT8=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT2_Stat * cLifeBudget * 0.2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="A4168632-7DCC-4150-A683-5A33150760F6">
+					<UnitConstant>
+						<name>LifeIncreasesCap</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="B1B2545D-615D-4FD1-965A-248D96546388">
+					<UnitConstant>
+						<name>TT_Add_LifePermCap</name>
+						<var>
+							<compiledString>FSEAAAACAAAAMAAAAEoAAABBZGRfTGlmZVBlcm0AAAAATGlmZUluY3JlYXNlc0NhcABVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBAAAACLVRCLAotNEItQUN1d+P/S3E342V302UX0i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cAdd_LifePerm * cLifeIncreasesCap</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_037.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="C16BC95E-9108-4125-AE98-66A79298386A">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>+Life</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9MaWZlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Life</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="85A0838F-7072-465C-9A6B-135202886D91">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>триггер на воскрешение (прайм)</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="6F81EDD9-1D50-40BF-999F-4E5514DF6BD2">
+					<EventProcessorCondition>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<condition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</condition>
+						<events>1048576</events>
+						<onlyParent>false</onlyParent>
+						<spell href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="118A1AF6-A2A0-45F9-ACB4-7F1834278594">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="3174E9B6-F8FF-4CB1-8BA9-2D65124802ED">
+										<AddNaftaApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>дать прайма</caption>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<isFromImpulseBuff>false</isFromImpulseBuff>
+											<LoggingEvent>-1</LoggingEvent>
+											<nafta>
+												<compiledString>FQwAAAABAAAAGAAAAFByaW1lQW1vdW50AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+												<returnType>float</returnType>
+												<sString>cPrimeAmount</sString>
+											</nafta>
+											<providerName></providerName>
+										</AddNaftaApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="D6E931C3-B841-4E81-883D-30C5B845D82B">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>false</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+					</EventProcessorCondition>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="CA08CD45-3105-4E6E-87FF-596EA2A3A745">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString>FREAAAABAAAAHQAAAExpZmVJbmNyZWFzZXNDYXAAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JR2Rwk6AUAAACDxARdw7gBAAAAD6L3wgAAAAR0B/MPLEQkBMPpAAAAAFWL7IPsDNlFCNl9/A+3RfwNAAwAAIlF+Nlt+Ntd9Nlt/ItF9IvlXcM=</compiledString>
+					<returnType>int</returnType>
+					<sString>f2l(cLifeIncreasesCap)</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>триггер на воскрешение (хиты)</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="880774BA-708F-4FE5-B341-4DF6C4C8EF75">
+					<EventProcessorCondition>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<condition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</condition>
+						<events>1048576</events>
+						<onlyParent>false</onlyParent>
+						<spell href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="9A3745DF-73C7-412F-9D83-16A039513DB0">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="282DB0D0-BF83-4718-A6F3-9EE82C59D89E">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>+Life</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FQ0AAAABAAAAGQAAAEFkZF9MaWZlUGVybQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+													<returnType>float</returnType>
+													<sString>cAdd_LifePerm</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable></variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Common/Obsolete/G037_IncrLife-perDeaths.TALENT" id="A6B519EC-ECAA-4ACE-9F05-C09319467CEC">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>false</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+					</EventProcessorCondition>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G037</persistentId>
+	<prerequisiteTalents />
+	<rarity>excellent</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>0</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>Life</stat>
+			<values>
+				<Item>108</Item>
+				<Item>115.5</Item>
+				<Item>123</Item>
+				<Item>130.5</Item>
+				<Item>138</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>0</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Rifleman_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Rifleman_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Rifleman/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Rifleman/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Rifleman/Ability_A4u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Rifleman_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Rifleman_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -36,8 +36,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Rifleman/Ability_A4_2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Rifleman/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Rifleman/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Rifleman/Ability_A4_2.TALENT" id="B50D0CAD-7A19-4292-A3F1-8A296D9CE941">
 			<ConditionFormula>
@@ -101,6 +101,26 @@
 				</Item>
 				<Item href="/Items/Talents/Class/Rifleman/const_A4_2u_A3_BonusRangePercent_TT" />
 				<Item href="/Items/Talents/Class/Rifleman/const_A4_2u_VisibilityRangePercent_TT" />
+				<Item href="/Items/Talents/Class/Rifleman/Ability_A4_2.TALENT" id="5EDD7086-40FF-40F2-9233-E3CB9E1314BD">
+					<UnitConstant>
+						<name>A4_2_AdditionalDamage</name>
+						<var>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAACgQAAAAUM=</compiledString>
+							<returnType>float</returnType>
+							<sString>damageScale(sIntellect, 5, 129)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Rifleman/Ability_A4_2.TALENT" id="704BD017-BB85-4C92-BA11-E13B6FDCE5E8">
+					<UnitConstant>
+						<name>UltimateConstant</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -122,7 +142,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>0</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Rifleman/A4_2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -174,6 +194,112 @@
 				<talents />
 				<useListAs>ListAsRule</useListAs>
 			</FlagsApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Rifleman/Ability_A4_2.TALENT" id="1C9BDF0D-AB09-4706-AB58-4804FA14E71B">
+			<AbilityUpgradeApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Class/Rifleman/Ability_A4_2.TALENT" id="CFD4E9CE-B6E6-4B0B-97EA-216967C54219">
+						<SpellApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<caption>Спелл с уроном</caption>
+							<enabled>
+								<compiledString>FREAAAACAAEAUgAAAIkAAAA3AQAAUmFuZ2VfTG9uZwAAV2FyZABVi+yD7ByNRfhQi00MixGLTQyLgowBAAD/0FCNTfBRi1UIiwKLTQiLkIwBAAD/0lDocwAAAIPECItFDFCLTQhRaAAAAACLVRCLAotNEItQUN1d6P/S3F3o3+D2xAV6O4tFDIsQi00Mi0JQ/9CD+BF0KWoAi00QUWgMAAAAi1UMiwKLTQyLkJwBAAD/0jtFEHUJx0XkAQAAAOsHx0XkAAAAAIpF5IvlXcNVi+yD7BSLRQjZQASLTQzYYQTZXfTZRfRR2Rwki1UI2QKLRQzYINld8NlF8FHZHCSNTfjoVwAAANlF+NhN+NlF/NhN/N7B2V3s2UXsUdkcJOgHAAAAg8QEi+Vdw1WL7FHZRQjZHCToBQAAAIPEBF3DVYvsUdlFCIPsCN0cJOih/v//g8QI2V382UX8i+Vdw1WL7FGJTfyLRfzZRQjZGItN/NlFDNlZBItF/IvlXcIIAA==</compiledString>
+								<returnType>bool</returnType>
+								<sString>d(sPos, receiver.GetPos()) &gt; cRange_Long &amp;&amp; rUnitKind != 17 &amp;&amp; receiver.applWard(GLOBAL) == pMisc</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<LoggingEvent>-1</LoggingEvent>
+							<providerName></providerName>
+							<spell href="/Items/Talents/Class/Rifleman/Ability_A4_2.TALENT" id="CED858AB-6FE6-4BCA-AAD0-6B8756796E0B">
+								<Spell>
+									<applicators>
+										<Item href="/Items/Talents/Class/Rifleman/Ability_A4_2.TALENT" id="30A3ED44-258A-4B10-9350-363A2F74283A">
+											<DamageApplicator>
+												<applyTarget>ApplicatorTarget</applyTarget>
+												<cancelInvisibility>false</cancelInvisibility>
+												<caption>Сам урон</caption>
+												<damage>
+													<compiledString>FRYAAAABAAAAIgAAAEE0XzJfQWRkaXRpb25hbERhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+													<returnType>float</returnType>
+													<sString>cA4_2_AdditionalDamage</sString>
+												</damage>
+												<damageMode>8</damageMode>
+												<damageType>Energy</damageType>
+												<enabled>
+													<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</enabled>
+												<formulaName></formulaName>
+												<LoggingEvent>-1</LoggingEvent>
+												<providerName></providerName>
+												<timeLimiter>-1</timeLimiter>
+												<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
+											</DamageApplicator>
+										</Item>
+									</applicators>
+									<dispatch href="/Items/Talents/Class/Rifleman/Ability_A4_2.TALENT" id="FD796328-88E3-4207-AC27-275B2B2BF563">
+										<DispatchImmediate>
+											<alwaysApply>false</alwaysApply>
+											<applyEffect>
+												<Item href="" />
+												<Item href="" />
+											</applyEffect>
+											<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+											<applyEffectOrientation>Default</applyEffectOrientation>
+											<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+											<dieAfterApply>true</dieAfterApply>
+											<dispatchEffect>
+												<Item href="" />
+												<Item href="" />
+											</dispatchEffect>
+											<flags>0</flags>
+											<instantApply>false</instantApply>
+										</DispatchImmediate>
+									</dispatch>
+								</Spell>
+							</spell>
+							<spellTarget>ApplicatorTarget</spellTarget>
+							<targetSelector href="" />
+						</SpellApplicator>
+					</Item>
+				</applicators>
+				<applyCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</applyCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>16</behaviorFlags>
+				<caption>Наносим дополнительный урон атакой по врагам вдали</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flags>0</flags>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<persistentApplicators />
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents />
+				<targetAbility>BaseAttack</targetAbility>
+				<useListAs>ListAsRule</useListAs>
+			</AbilityUpgradeApplicator>
 		</Item>
 	</passiveApplicators>
 	<persistentId>Rifleman_A4_2</persistentId>

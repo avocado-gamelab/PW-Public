@@ -2,14 +2,14 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Archeress.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Archeress_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Archeress.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Archeress_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Archeress/Ability_A2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Archeress/Ability_A2_SUP.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Archeress/Ability_A2u1.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Archeress/Ability_A2u2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Archeress_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Archeress_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Archeress/Duel.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Archeress/Duel_Vamp.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Archeress/Elite_NoAsp.TALENTSET" Count="1" />
@@ -206,8 +206,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Archeress/Ability_A2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Archeress/Ability_A2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Archeress/Ability_A2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Archeress/Ability_A2.TALENT" id="824DC0E0-4FD7-429A-BCD3-217D15E333F5">
 			<ConditionFormula>
@@ -319,7 +319,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>82</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Archeress/A2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

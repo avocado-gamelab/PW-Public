@@ -1,0 +1,623 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Demonolog.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Demonolog_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Demonolog_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Demonolog/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Demonolog/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Demonolog/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Demonolog/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Demonolog/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Demonolog/Epic_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Demonolog/Ability_A0_SUP.TALENT" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А0. Владыка архонтов</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Demonolog/Ability_A0.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Demonolog/Ability_A0.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas />
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="20548FB7-12C8-4BC3-A451-530B524F19A9">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="F5974C60-AE81-4C86-978D-04596A747198">
+					<UnitConstant>
+						<name>A0_SummonsTimer</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABwQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>60</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_MaxDemons" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_DemonsLife" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_DemonsPower" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_DemonsStamina" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_DemonsWill" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_DemonsDex" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_DemonsSpeed" />
+				<Item href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="80EAE636-F0E8-40F9-93D3-FD9F12B4722A">
+					<UnitConstant>
+						<name>TT_DemonLife</name>
+						<var>
+							<compiledString>FRkAAAACAAAAJgAAADkAAABNYXN0ZXJTdGF0Q29ubmVjdGVkX0xpZmUAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3AVHAAAA2V382UX8i+VdwwAAAAAAAHlA</compiledString>
+							<returnType>float</returnType>
+							<sString>400 + cMasterStatConnected_Life</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_DemonDamage" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_DemonsAttackSpeed" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_HealSelf" />
+				<Item href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="E0B0C50E-B474-447C-8043-CC46F4DA7283">
+					<UnitConstant>
+						<name>TT_DemonDamage</name>
+						<var>
+							<compiledString>FRoAAAACAAAAJwAAADoAAABNYXN0ZXJTdGF0Q29ubmVjdGVkX1Bvd2VyAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twFSAAAANld/NlF/IvlXcMAAAAAAADwPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>cMasterStatConnected_Power + 1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_CastAbsorb" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_SUP_IncMaxDemons" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Demonolog/Ability_A0.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>5</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Demonolog/A0.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>true</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>0</naftaCost>
+	<name textref="/Items/Talents/Class/Demonolog/Ability_A0.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="B6AA82A2-989B-4E3D-BAE6-9256FF5AD65F">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>216</behaviorFlags>
+				<caption>Запоминаем кол-во демонов при смерти</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="0939DB0A-58FC-45BF-ABCF-1B13CDBFE847">
+					<EventProcessorOnDeath>
+						<applyTarget>AbilityOwner</applyTarget>
+						<castSpellDelay>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</castSpellDelay>
+						<checkSender>0</checkSender>
+						<objectFilter>2040319</objectFilter>
+						<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+						<spell href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="82E61A6C-B0F3-46DE-8026-9C41BF89AEF5">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="F49754FF-5061-43FB-BA66-7D498675DC54">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>savedemons</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FR4AAAADAAAAIwAAADkAAABMAAAARGVtb25zQTRTdGFydAAAAERlbW9uc0lzQWxpdmUAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdbgAAAN/g9sREewfZ7tld/OsYaBAAAACLTQiLEYtNCIuCiAEAAP/Q2V382UX8i+VdwwAAAAAAAAAAAAAAAA==</compiledString>
+													<returnType>float</returnType>
+													<sString>sender.vDemonsA4Start ? 0 : sender.vDemonsIsAlive</sString>
+												</addValue>
+												<multValue>
+													<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+													<returnType>float</returnType>
+													<sString>0</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>SaveDemons</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="03FECB67-ECE8-4CFB-BE02-E14E95BBDF64">
+										<PermanentStatModApplicator>
+											<applyTarget>AbilityOwner</applyTarget>
+											<caption>Демонолог умер</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>0.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>DemonologDead</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="4E8C8EA3-633D-4191-B376-F4DD3BC1F4C0">
+									<DispatchImmediate>
+										<alwaysApply>true</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>true</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+					</EventProcessorOnDeath>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQgAAAACAAAADQAAACMAAABJc0Nsb25lAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUUAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vIsClone == 0</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="AAB4E86B-0C5B-47AF-B19F-0EE4D8548F2B">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>Возрождение всех саммонов после своей смерти</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQ0AAAACAAAAEgAAACgAAABEZW1vblNwYXduZWQAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdSgAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vDemonSpawned == 0</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="15C7AD19-D7CA-44D1-AC95-27CB26393270">
+					<EventProcessorCondition>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<condition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</condition>
+						<events>1048576</events>
+						<onlyParent>false</onlyParent>
+						<spell href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="3088B59C-F238-4DC0-A74A-F878AA985B33">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="CC9AAAC6-91BD-4A8E-9701-1BCAF89D230F">
+										<PermanentStatModApplicator>
+											<applyTarget>AbilityOwner</applyTarget>
+											<caption>DemonologDead = 0</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>0.0f</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>0.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>DemonologDead</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Items/Talents/Class/Demonolog/SummonDemons.APLR" />
+									<Item href="/Items/Talents/Class/Demonolog/SummonDemons.APLR" />
+									<Item href="/Items/Talents/Class/Demonolog/SummonDemons.APLR" />
+									<Item href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="660CC5B6-85B6-48E8-BF35-D7661F998401">
+										<PermanentStatModApplicator>
+											<applyTarget>AbilityOwner</applyTarget>
+											<caption>savedemons = 0</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+													<returnType>float</returnType>
+													<sString>0</sString>
+												</addValue>
+												<multValue>
+													<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+													<returnType>float</returnType>
+													<sString>0</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>SaveDemons</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="0A04565A-AFDF-448D-B391-FEADAA95A7D1">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>false</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+					</EventProcessorCondition>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQgAAAACAAAADQAAACMAAABJc0Nsb25lAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUUAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vIsClone == 0</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="67168894-5B5A-4117-8F1A-555FD7F8A1E9">
+			<SpellPeriodicallyApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Смотрим, надо ли еще саммонить</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FS0AAAADAAAAOgAAAFQAAABxAAAAQTBfV2FpdFRpbWVyAAAAAERlbW9uc0lzQWxpdmUAAABBMF9NYXhEZW1vbnMAVYvsg+wMagCLRRBQaAAAAACLTQiLEYtNCIuCnAEAAP/QO0UQdUVoEAAAAItNCIsRi00Ii4KIAQAA/9CLTQxRi1UIUmggAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBdQnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.applA0_WaitTimer(GLOBAL)==pMisc &amp;&amp; sender.vDemonsIsAlive &lt; cA0_MaxDemons</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<period>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</period>
+				<providerName></providerName>
+				<scaleMode>ScaleIsCount</scaleMode>
+				<spell href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="7CEF3698-5BE0-4354-AEF4-28BD6127FC94">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="330C9612-5054-46DF-80A7-72495C46B242">
+								<ProgramApplicator>
+									<applicators>
+										<Item>
+											<applicator href="/Items/Talents/Class/Demonolog/status_A0_AddDemons.APLR" />
+											<continueCondition>
+												<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</continueCondition>
+											<continueEvents>2</continueEvents>
+											<delay>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</delay>
+											<stopCondition>
+												<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</stopCondition>
+											<stopEvents>0</stopEvents>
+										</Item>
+										<Item>
+											<applicator href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="FC0D69D6-C023-4DF3-8984-17B7F3061A63">
+												<SummonApplicator parent="/Items/Talents/Class/Demonolog/SummonDemons.APLR">
+													<summonedUnitsCount>
+														<compiledString></compiledString>
+														<returnType>int</returnType>
+														<sString>1</sString>
+													</summonedUnitsCount>
+												</SummonApplicator>
+											</applicator>
+											<continueCondition>
+												<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</continueCondition>
+											<continueEvents>1</continueEvents>
+											<delay>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</delay>
+											<stopCondition>
+												<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</stopCondition>
+											<stopEvents>0</stopEvents>
+										</Item>
+									</applicators>
+									<applyTarget>AbilityOwner</applyTarget>
+									<behaviorFlags>0</behaviorFlags>
+									<caption>Запускаем таймер и саммон</caption>
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<lifeTime>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+									<startCondition>
+										<compiledString>FQgAAAACAAAADQAAACMAAABJc0Nsb25lAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUUAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+										<returnType>bool</returnType>
+										<sString>sender.vIsClone == 0</sString>
+									</startCondition>
+								</ProgramApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="A40DB7A6-5A0F-46A9-B2B8-3D11C309AC2E">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<startCondition>
+					<compiledString>FQgAAAACAAAADQAAACMAAABJc0Nsb25lAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUUAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vIsClone == 0</sString>
+				</startCondition>
+				<startOffset>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</startOffset>
+				<targetSelector href="" />
+			</SpellPeriodicallyApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="4945001B-B5FD-4962-907F-DBA8C875E004">
+			<SpellApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<caption>Первый спавн демона в начале игры</caption>
+				<enabled>
+					<compiledString>FQgAAAACAAAADQAAACMAAABJc0Nsb25lAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUUAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vIsClone == 0</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="6F74D286-927B-4F49-BCB1-D0C8DF878E50">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="169DB25F-0191-4DCD-B992-EB7E734F1510">
+								<SummonApplicator parent="/Items/Talents/Class/Demonolog/SummonDemons.APLR">
+									<summonedUnitsCount>
+										<compiledString></compiledString>
+										<returnType>int</returnType>
+										<sString>1</sString>
+									</summonedUnitsCount>
+								</SummonApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Class/Demonolog/Ability_A0.TALENT" id="544EE7D1-D2D0-4117-80D1-60F95B3DD7BF">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="" />
+			</SpellApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>Demonolog_A0</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>1073741824</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

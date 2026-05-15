@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Alchemist_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Alchemist_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Alchemist/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Alchemist/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Alchemist/Ability_A4u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Alchemist/Ability_A4u_2.TALENT" Count="2" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
 	<BackLink DBID="/Test/Talents/Alchemist/Epic_Str_ult2.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Alchemist_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Alchemist_Mighty.TALENTSET" Count="2" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -436,20 +436,10 @@
 				<uiEvent href="/UI/Events/ErrorMessages/CastError_Immune2Ctrl.UIEV" />
 			</ConditionCastLimitation>
 		</Item>
-		<Item href="/Items/Talents/Class/Alchemist/Ability_A4_2.TALENT" id="512263D1-6BC4-48F2-8469-959A8917AB30">
-			<ConditionCastLimitation>
-				<condition>
-					<compiledString>FR4AAAACAAAAIwAAADwAAABBbGNoZW1pc3RfQTQAAAAAQWxjaGVtaXN0X0E0dQBVi+xRaAAAAACLRQiLEItNCIuCqAEAAP/QhcB1ImgQAAAAi00IixGLTQiLgqgBAAD/0IXAdQnHRfwBAAAA6wfHRfwAAAAAikX8i+Vdww==</compiledString>
-					<returnType>bool</returnType>
-					<sString>!sender.GetTalent( "Alchemist_A4" ) &amp;&amp; !sender.GetTalent( "Alchemist_A4u" )</sString>
-				</condition>
-				<uiEvent href="" />
-			</ConditionCastLimitation>
-		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Alchemist/Ability_A4_2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Alchemist/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Alchemist/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Alchemist/Ability_A4_2.TALENT" id="370F3431-96B5-4A7D-9E38-84AF7C203383">
 			<ConditionFormula>
@@ -648,7 +638,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>19</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Alchemist/A4_2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

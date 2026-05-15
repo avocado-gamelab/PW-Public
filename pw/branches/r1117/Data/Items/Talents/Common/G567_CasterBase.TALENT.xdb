@@ -1,0 +1,748 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set4" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set4_kit5" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset4_5_CasterDot/Redset4_5_CasterDot.TALKIT" Count="2" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/PlagueDoctor_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="2" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NormTal.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NY2020_MediocreList.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_RedSet4.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season13_MediocreList.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season9_Mediocre.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet4.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet4Add.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Alchemist/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Alchemist/Epic_Str_ult2.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Archeress/Epic_AspdVamp_Ult2.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Artist/Epic_Str_Ult2.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Brewer/Brewer.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Ghostlord/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Ghostlord/Epic_Int_Ult2.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Ghostlord/Epic_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Ghostlord/Epic_Str_Ult2.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Highlander/Epic_AspVamp_Ultimate2.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Marine/Epic_AspdStr_Ultimate2.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Monster/Epic_Int_Ult2.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Shadow/Shadow.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/SnowQueen/Epic_IntLife_Ult2.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Vampire/Epic_Str_Ult2.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Prince_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Invisible_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Faceless_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Alchemist_Mighty.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>false</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G567: Символ леса</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G567_CasterBase.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G567_CasterBase.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="3D7C0ECB-375E-44A0-A331-5A2CA6338A4F">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSEAAAAEAAAAMAAAAEMAAABPAAAAaAAAAEc1Njdfa2l0Q291bnRlcl9UVAAARzU2NwAAAABHNTY3AFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3B20AAAA3+D2xEF1WGgUAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoHAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdAnHRfQAAAAA6wfHRfQBAAAAikX0i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(cG567_kitCounter_TT&gt;0&amp;&amp;(tal("G567")))</sString>
+				</condition>
+				<name>FormNotActiveSession</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="5F734841-A145-4573-AF31-F70201AB12AE">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSEAAAACAAAAMAAAAEoAAABHNTY3X2tpdENvdW50ZXJfVFQAAEc1NjdfTWF4Rm9ybQBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBQAAACLVRCLAotNEItQUN1d+P/S3F343+D2xAV6CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG567_kitCounter_TT&gt;cG567_MaxForm</sString>
+				</condition>
+				<name>FormOverChargedSession</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="DA0B169C-1A5C-41CF-AFBA-28BEC5A243F4">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSkAAAAEAAAAOAAAAEsAAABXAAAAcAAAAEc1Njdfa2l0Q291bnRlcl9UVF9DYXN0bGUAAABHNTY3AAAAAEc1NjcAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcHbwAAADf4PbEQXVYaBwAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgkAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0CcdF9AAAAADrB8dF9AEAAACKRfSL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(cG567_kitCounter_TT_Castle&gt;0&amp;&amp;(tal("G567")))</sString>
+				</condition>
+				<name>FormNotActiveCastle</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="A7FC14B8-38D7-4383-B219-A5E9A8454B0F">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSkAAAACAAAAOAAAAFIAAABHNTY3X2tpdENvdW50ZXJfVFRfQ2FzdGxlAAAARzU2N19NYXhGb3JtAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoHAAAAItVEIsCi00Qi1BQ3V34/9LcXfjf4PbEBXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG567_kitCounter_TT_Castle&gt;cG567_MaxForm</sString>
+				</condition>
+				<name>FormOverChargedCastle</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="A105A4DA-C4EC-49E5-8C88-19F4E0B88B20">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTY5X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG569_Active &gt; 0</sString>
+				</condition>
+				<name>G569</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="960DE2B7-E131-49DA-94AE-6F20EDC08E92">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTcwX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG570_Active &gt; 0</sString>
+				</condition>
+				<name>G570</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="B122B437-ED08-4DAE-92F6-8BDD457B0DF8">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UMixCLTQyLgsgAAAD/0ItNDIsRi00Mi4LMAAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>rBaseStamina &gt;= rBaseWill</sString>
+				</condition>
+				<name>G567_StatusCondition</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="C3D76B71-416A-4B3E-B65F-14988B3A1B8C">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTY5X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG569_Active&gt;0</sString>
+				</condition>
+				<name>G569_ArmorWillCut</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="2E959D38-4BF1-4C6C-95B1-2586E503E010">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTgxX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG581_Active&gt;0</sString>
+				</condition>
+				<name>G581</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="B9BEA89E-ABDE-4499-BA30-DD6BF87585A3">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTcxX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG571_Active&gt;0</sString>
+				</condition>
+				<name>G571</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G567_CasterBase.TALENT" id="99831372-D017-4E9F-84E4-B2FD9224ACA7">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="DB3058DD-B2C5-4C7F-9527-1861504E94C0">
+					<UnitConstant>
+						<name>G567_kitCounter_TT</name>
+						<var>
+							<compiledString>FQ0AAAACAAAAFAAAAC0AAABHNTY3AAAAAEc1NjcAVYvsg+wYaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgIAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCLTRCLEYtNEItCeP/QiUX020X0Udnu2RwkUdno2RwkD7ZN+1HdXezoGAAAAIPEDNxt7Nld6NlF6IvlXcMAAIA/AAAAAFWL7FEPtkUIhcB0CNlFDNld/OsG2UUQ2V382UX8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>mActivatedWithinKit - s(tal("G567"), 1 , 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="0C0C12AD-A9E0-40AD-89C6-AF0A496AF903">
+					<UnitConstant>
+						<name>G567_kitCounter_TT_Castle</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvsUVHZ7tkcJItFEIsQi00Qi0J4/9CD6AGJRfzbRfxR2Rwk6AsAAACDxAiL5V3DAAAAAFWL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>max(mActivatedWithinKit - 1, 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="6769EFE1-8111-4F8A-A568-943081C4330B">
+					<UnitConstant>
+						<name>G567_DamagePerTick</name>
+						<var>
+							<compiledString>FSMAAAADAAAAMgAAAEYAAABmAAAAVDJfU3RhdABHNTY4X0FjdGl2ZQBHNTY4X0FkZERhbWFnZQBVi+yD7BSLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0tzAaAgAAACLRQiLEItNCIuCiAEAAN1d+P/Qi00MUYtVCFJoFAAAAItFEIsQi00Qi0JQ3V3w/9DcTfDcRfjZXezZReyL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cT2_Stat * 2 + sender.vG568_Active * cG568_AddDamage</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="22B533E8-23D9-416B-BAD3-341F8F0EC950">
+					<UnitConstant>
+						<name>G567_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>3</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="5D95EDA3-1ED5-454D-B6E1-6CB5301B131B">
+					<UnitConstant>
+						<name>TECH_FormCapacity</name>
+						<var>
+							<compiledString>FQ0AAAABAAAAGQAAAEc1NjdfTWF4Rm9ybQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cG567_MaxForm</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset4_5_CasterDot/const_G567_MaxForm" />
+				<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="04C3E763-7F46-4D23-84E2-CAAA74DCA4F7">
+					<UnitConstant>
+						<name>G567_DamagePeriod</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="51E85EAD-6620-4717-8689-67125951A856">
+					<UnitConstant>
+						<name>Root_Condition</name>
+						<var>
+							<compiledString>FQsAAAABAAAAFgAAAEc1NjdTdGF0dXMAVYvsUWoBi0UQUGgAAAAAi00MixGLTQyLgpwBAAD/0DPJO0UQD5XBiU3820X8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>receiver.applG567Status(UNIT) != pMisc</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset4_5_CasterDot/const_G568_AddDamage" />
+				<Item href="/Items/Talents/TalentKits/Redset4_5_CasterDot/const_G569_DecreaseStaWill" />
+				<Item href="/Items/Talents/TalentKits/Redset4_5_CasterDot/const_G570_HealPercent" />
+				<Item href="/Items/Talents/TalentKits/Redset4_5_CasterDot/const_G570_Heal" />
+				<Item href="/Items/Talents/TalentKits/Redset4_5_CasterDot/const_G571_AddSkillDamage" />
+				<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="899EC6F5-74E2-4FBD-9E35-9A3FF93B0C86">
+					<UnitConstant>
+						<name>G567_DamagePerTick_TT</name>
+						<var>
+							<compiledString>FUgAAAAFAAAATwAAAGUAAAB5AAAAkQAAAMoAAABHNTY3X0RhbWFnZVBlclRpY2tUb29sdGlwAAAARzU4MV9BY3RpdmUARzU4MV9BZGREYW1hZ2UAAEc1ODFfU2F2ZWRDb3VudABVi+yD7BRoHAAAAItFCIsQi00Ii4KIAQAA/9DcHewAAADf4PbEQXVMi00MUYtVCFJoKAAAAItFEIsQi00Qi0JQ/9BR2ejZHCRoOAAAAItNDIsRi00Mi4KIAQAA3V34/9BR2Rwk6EMAAACDxAjcffjdXfDrBdnu3V3wi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ/9DcRfDZXezZReyL5V3DAACAPwAAAAAAAAAAVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cG567_DamagePerTickTooltip + (sender.vG581_Active &gt; 0 ? (cG581_AddDamage/max(receiver.vG581_SavedCount,1)) :0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="2B45CC06-5A0D-4402-8525-612BF0A6E2E2">
+					<UnitConstant>
+						<name>G567_DamagePerTickTooltip</name>
+						<var>
+							<compiledString>FRMAAAABAAAAHwAAAEc1NjdfRGFtYWdlUGVyVGljawBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cG567_DamagePerTick</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="513EA8C5-FC8F-4F46-B1D3-4ECD03B60A4D">
+					<UnitConstant>
+						<name>G571_AddSkillDamage</name>
+						<var>
+							<compiledString>FQ0AAAACAAAAKQAAAEIAAABHNTcxX1BlcmNlbnQAVYvsg+wMi0UMixCLTQyLQgz/0ItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d+P/Q3E343A1QAAAA2V302UX0i+Vdw3sUrkfheoQ/</compiledString>
+							<returnType>float</returnType>
+							<sString>rMaxLife * cG571_Percent * 0.01</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="18C28662-3EBA-4994-A307-17A80C81B1BB">
+					<UnitConstant>
+						<name>ArmorCut_StartCondition</name>
+						<var>
+							<compiledString>FQwAAAACAAAAEwAAACkAAABHNTY5X0FjdGl2ZQBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9DcHXgAAADf4PbEQXU2i00IixGLTQiLgjABAAD/0ItNCIsRi00Ii4I0AQAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAANtF9IvlXcMAAAAAAAAAAA==</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG569_Active &gt; 0 &amp;&amp; sStrength &gt;= sIntellect</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="3F328D7B-D4EC-4824-B9FE-FABFB9000256">
+					<UnitConstant>
+						<name>ArmorCut_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="5C9055B9-AB5A-45D6-9915-5CEB4BBF8C06">
+					<UnitConstant>
+						<name>ArmorCut_Amount</name>
+						<var>
+							<compiledString>FRUAAAABAAAAIQAAAEc1NjlfRGVjcmVhc2VTdGFXaWxsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cG569_DecreaseStaWill</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="30279A32-BD32-45DE-BACD-B3F924853E83">
+					<UnitConstant>
+						<name>WillCut_StartCondition</name>
+						<var>
+							<compiledString>FQwAAAACAAAAEwAAACkAAABHNTY5X0FjdGl2ZQBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9DcHXgAAADf4PbEQXU2i00IixGLTQiLgjABAAD/0ItNCIsRi00Ii4I0AQAA3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAANtF9IvlXcMAAAAAAAAAAA==</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG569_Active &gt; 0 &amp;&amp; sStrength &lt; sIntellect</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="488396E9-E988-4082-BE78-F1BE3FDBDDF7">
+					<UnitConstant>
+						<name>WillCut_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="C4F9D6AA-366C-4487-ABBC-3B209EE06E0A">
+					<UnitConstant>
+						<name>WillCut_Amount</name>
+						<var>
+							<compiledString>FRUAAAABAAAAIQAAAEc1NjlfRGVjcmVhc2VTdGFXaWxsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cG569_DecreaseStaWill</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset4_5_CasterDot/const_G581_AddDamage" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G567_CasterBase.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_567.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G567_CasterBase.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="EE2677EB-B9F5-4919-8D63-2AAA9041A909">
+			<AbilityUpgradeApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Common/Applicators/G567_CasterBase.APLR" />
+					<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="71F993CE-BC99-40A6-9937-86E6ED9567FC">
+						<AbilityUpgradeTechApplicator>
+							<abilityLastUseStep>0</abilityLastUseStep>
+							<abilityObjectId>0</abilityObjectId>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<caption>TECH_Applicator</caption>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<LoggingEvent>-1</LoggingEvent>
+							<providerName></providerName>
+						</AbilityUpgradeTechApplicator>
+					</Item>
+				</applicators>
+				<applyCount>
+					<compiledString>FQAAAAAAAAAAVYvsM8Bdww==</compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</applyCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>144</behaviorFlags>
+				<caption>Урон в цель</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flags>64</flags>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<persistentApplicators />
+				<providerName>G567</providerName>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLgpQAAAD/0F3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>pMisc-&gt;CheckUpgradePerCastPerTarget()</sString>
+				</startCondition>
+				<talents>
+					<Item href="/Items/Talents/Class/IronKnight/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/IronKnight/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/IronKnight/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Alchemist/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Alchemist/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Angel/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Angel/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/Artist/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Artist/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Artist/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Archeress/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Archeress/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Archeress/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Assassin/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Assassin/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Bard/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Bard/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Crusader/Ability_A1_A.TALENT" />
+					<Item href="/Items/Talents/Class/Crusader/Ability_A1_B.TALENT" />
+					<Item href="/Items/Talents/Class/Crusader/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Crusader/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Crusader/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Demonolog/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Ent/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Ent/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Faceless/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" />
+					<Item href="/Items/Talents/Class/Faceless/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/Fairy/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Fairy/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/FallenAngel/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/FallenAngel/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/FireFox/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/FireFox/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Fluffy/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Fluffy/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Fluffy/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/Freeze/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Freeze/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Frogenglut/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Frogenglut/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/GhostLord/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/GhostLord/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/GhostLord/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Gunslinger/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Gunslinger/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/Highlander/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Highlander/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Highlander/Ability_A4a.TALENT" />
+					<Item href="/Items/Talents/Class/Hunter/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Hunter/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Hunter/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Inventor/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/Inventor/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Invisible/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Invisible/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/IronKnight/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Mage/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Mage/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Mage/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/Mage/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Mage/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/MagicGirl/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/MagicGirl/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/ManaWyrm/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/ManaWyrm/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/ManaWyrm/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Marine/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Marine/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Marine/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Marine/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Monster/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Monster/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Monster/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Mowgli/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/Night/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/PinkGirl/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/PinkGirl/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/PinkGirl/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Prince/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Ratcatcher/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Ratcatcher/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Ratcatcher/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/Reaper/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Reaper/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Rifleman/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Rifleman/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/Rifleman/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Rockman/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/Rockman/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Rockman/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/SnowQueen/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/SnowQueen/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/SnowQueen/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/ThunderGod/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/ThunderGod/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/ThunderGod/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/ThunderGod/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Unicorn/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Unicorn/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Unicorn/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Unicorn/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Vampire/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Vampire/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Vampire/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/Vampire/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Warlord/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Warlord/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Warlord/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Witch/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Witch/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/WitchDoctor/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/WitchDoctor/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/WitchDoctor/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Witcher/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Witcher/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/PlagueDoctor/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/PlagueDoctor/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/PlagueDoctor/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/PlagueDoctor/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Katana/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Katana/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Katana/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Katana/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Freeze/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/FallenAngel/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Plane/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Plane/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Invisible/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Zealot/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Zealot/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/WraithKing/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/WraithKing/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/WraithKing/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Dryad/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Dryad/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Dryad/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Demonolog/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Night/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Dryad/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Stalker/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Stalker/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Gunner/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Gunner/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Gunner/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Ent/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/Chronicle/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Brewer/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Brewer/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Brewer/Ability_A2u.TALENT" />
+					<Item href="/Items/Talents/Class/MagicGirl/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/MagicGirl/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/MagicGirl/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Shadow/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Shadow/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/Wendigo/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Wendigo/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/Wendigo/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" />
+					<Item href="/Items/Talents/Class/Trickster/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Trickster/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Banshee/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Banshee/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Shaman/Ability_A1.TALENT" />
+					<Item href="/Items/Talents/Class/Shaman/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/Bomber/Ability_A1u.TALENT" />
+					<Item href="/Items/Talents/Class/Bomber/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Bomber/Ability_A3.TALENT" />
+					<Item href="/Items/Talents/Class/Bomber/Ability_A4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Prince/Ability_A1.TALENT" />
+				</talents>
+				<targetAbility>TalentFromList</targetAbility>
+				<useListAs>ListAsRule</useListAs>
+			</AbilityUpgradeApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="86B54041-4673-4A79-8961-0676898A2484">
+			<AbilityUpgradeApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Common/Applicators/G567_CasterBase.APLR" />
+					<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="A47588AD-D4EB-4F29-85AC-686BCF81A9DD">
+						<AbilityUpgradeTechApplicator>
+							<abilityLastUseStep>0</abilityLastUseStep>
+							<abilityObjectId>0</abilityObjectId>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<caption>TECH_Applicator</caption>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<LoggingEvent>-1</LoggingEvent>
+							<providerName></providerName>
+						</AbilityUpgradeTechApplicator>
+					</Item>
+				</applicators>
+				<applyCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</applyCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>144</behaviorFlags>
+				<caption>Урон в цель без FirstCast</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flags>0</flags>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<persistentApplicators />
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents>
+					<Item href="/Items/Talents/Class/Chronicle/Ability_A0.TALENT" />
+					<Item href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" />
+					<Item href="/Items/Talents/Class/Brewer/Ability_A0.TALENT" />
+				</talents>
+				<targetAbility>TalentFromList</targetAbility>
+				<useListAs>ListAsRule</useListAs>
+			</AbilityUpgradeApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" id="259418BB-ECBE-4E94-820D-1D705BF3751B">
+			<StatModApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>216</behaviorFlags>
+				<caption>G567 Реген. Жизни</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQoAAAACAAAADwAAACUAAABHNTY3X0hlYWwAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdRwAAAN/g9sRBdQnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG567_Heal&gt;0</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQoAAAABAAAAFgAAAEc1NzBfSGVhbABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<returnType>float</returnType>
+						<sString>cG570_Heal</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>LifeRegenerationAbsolute</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G567</persistentId>
+	<prerequisiteTalents />
+	<rarity>outstanding</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G567_CasterBase.TALENT_shortDescription.txt" />
+	<talentRollGroups>16</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

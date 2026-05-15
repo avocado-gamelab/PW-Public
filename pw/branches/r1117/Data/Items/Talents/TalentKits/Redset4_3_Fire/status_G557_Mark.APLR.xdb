@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
-	<BackLink DBID="/Items/Talents/Level4/G557_EnemyAoeDmg.TALENT" Count="2" />
+	<BackLink DBID="/Items/Talents/Common/G557_EnemyAoeDmg.TALENT" Count="2" />
 	<applicators>
 		<Item href="/Items/Talents/TalentKits/Redset4_3_Fire/G557_PeriodDmg.APLR" />
 		<Item href="/Items/Talents/TalentKits/Redset4_3_Fire/status_G557_Mark.APLR" id="B17328A7-CA26-4E99-9418-DD26D14D1476">
@@ -94,13 +94,296 @@
 				<useAbilityOwnerMana>false</useAbilityOwnerMana>
 			</TriggerApplicator>
 		</Item>
-		<Item href="/Items/Talents/TalentKits/Redset4_3_Fire/status_G557_Mark.APLR" id="5FCDAAD8-AFB3-4AB1-A538-C9C5B97FDCF4">
-			<StatusApplicator parent="/Heroes/DefaultStatus/_FEAR_status.APLR">
+		<Item href="/Items/Talents/TalentKits/Redset4_3_Fire/status_G557_Mark.APLR" id="7AB03B13-AD1E-4FF3-AFF1-8E5C8D0564B6">
+			<StatusApplicator>
+				<applicators>
+					<Item href="/Items/Talents/TalentKits/Redset4_3_Fire/status_G557_Mark.APLR" id="AC3840E8-F4EC-44C5-ABF6-7D85D15BB158">
+						<StatModApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption>Изменение урона героев</caption>
+							<constraint>None</constraint>
+							<dontUpdate>false</dontUpdate>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString>FQAAAAAAAAAAVYvsi0UMixCLTQyLQlT/0F3D</compiledString>
+								<returnType>bool</returnType>
+								<sString>rIsHero</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<modifier>
+								<addValue>
+									<compiledString>FS0AAAADAAAASAAAAGIAAAB5AAAARzU2MF9EYW1hZ2VJbmNyZWFzZU9yRGVjcmVhc2UAAABBcmNoZXJlc3NfQTAAVYvsg+wMi0UMixCLTQyLQlT/0A+2yIXJdCRoIAAAAItVDIsCi00Mi5CoAQAA/9KFwHQL3QWfAAAA3V346wXZ6N1d+ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3E342V302UX0i+VdwwAAAAAAAPA/AAAAAAAA4D8=</compiledString>
+									<returnType>float</returnType>
+									<sString>cG560_DamageIncreaseOrDecrease * (( rIsHero &amp;&amp; receiver.GetTalent("Archeress_A0")) ? 0.5 : 1)</sString>
+								</addValue>
+								<multValue>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>1.0f</sString>
+								</multValue>
+								<stat>BaseAttack</stat>
+								<topModifier>false</topModifier>
+								<variable>DamageSummand</variable>
+							</modifier>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<statModName>G560_DamageIncreaseOrDecrease</statModName>
+						</StatModApplicator>
+					</Item>
+					<Item href="/Items/Talents/TalentKits/Redset4_3_Fire/status_G557_Mark.APLR" id="FA682FD7-9108-43E5-B15F-45B3D30E0B6F">
+						<StatModApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption>Изменение урона НЕ героев</caption>
+							<constraint>None</constraint>
+							<dontUpdate>false</dontUpdate>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString>FQAAAAAAAAAAVYvsi0UMixCLTQyLQlT/0A+2wPfYG8CDwAFdww==</compiledString>
+								<returnType>bool</returnType>
+								<sString>!rIsHero</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<modifier>
+								<addValue>
+									<compiledString>FR4AAAABAAAAKgAAAEc1NjBfRGFtYWdlSW5jcmVhc2VPckRlY3JlYXNlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+									<returnType>float</returnType>
+									<sString>cG560_DamageIncreaseOrDecrease</sString>
+								</addValue>
+								<multValue>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>1.0f</sString>
+								</multValue>
+								<stat>BaseAttack</stat>
+								<topModifier>false</topModifier>
+								<variable>DamageSummand</variable>
+							</modifier>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<statModName>G560_DamageIncreaseOrDecrease</statModName>
+						</StatModApplicator>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>144</behaviorFlags>
+				<caption>Статус повышения урона</caption>
+				<customCounter>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</customCounter>
+				<customProgress>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</customProgress>
+				<description textref="/Items/Talents/TalentKits/Redset4_3_Fire/status_G557_Mark.APLR_7ab03b13ad1e4ff3aff18e5c8d0564b6_description.txt" />
+				<dispellPriority>Medium</dispellPriority>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
 				<enabled>
-					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTYwX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<compiledString>FQwAAAACAAAAEgAAACgAAABHNTYwX0FjdGl2ZQBVi+xRVmgAAAAAi0UIixCLTQiLgogBAAD/0NwdcQAAAN/g9sRBdS+LTQiLEYtNCIuCkAEAAP/Qi/CLTQyLEYtNDIuCkAEAAP/QO/B1CcdF/AEAAADrB8dF/AAAAACKRfxei+VdwwAAAAAAAAAA</compiledString>
 					<returnType>bool</returnType>
-					<sString>sender.vG560_Active &gt; 0</sString>
+					<sString>sender.vG560_Active &gt; 0 &amp;&amp; sFctn == rFctn</sString>
 				</enabled>
+				<flags>0</flags>
+				<formulaName></formulaName>
+				<image href="/UI/Styles/Icons/Talents/_560.ITEX" />
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<name textref="/Items/Talents/TalentKits/Redset4_3_Fire/status_G557_Mark.APLR_7ab03b13ad1e4ff3aff18e5c8d0564b6_name.txt" />
+				<power>0</power>
+				<providerName></providerName>
+				<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+				<stackCount>0</stackCount>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statusPosition>0</statusPosition>
+				<stopBehaviour>StopByTime</stopBehaviour>
+				<unstackableWith href="" />
+			</StatusApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Redset4_3_Fire/status_G557_Mark.APLR" id="9C6B4DE0-515C-478D-AB5C-FE3333D17B8A">
+			<StatusApplicator>
+				<applicators>
+					<Item href="/Items/Talents/TalentKits/Redset4_3_Fire/status_G557_Mark.APLR" id="0A3AC935-78CB-4397-90EB-70F87AF930F1">
+						<StatModApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption>Изменение урона героев</caption>
+							<constraint>None</constraint>
+							<dontUpdate>false</dontUpdate>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString>FQAAAAAAAAAAVYvsi0UMixCLTQyLQlT/0F3D</compiledString>
+								<returnType>bool</returnType>
+								<sString>rIsHero</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<modifier>
+								<addValue>
+									<compiledString>FS0AAAADAAAASAAAAGIAAAB5AAAARzU2MF9EYW1hZ2VJbmNyZWFzZU9yRGVjcmVhc2UAAABBcmNoZXJlc3NfQTAAVYvsg+wMi0UMixCLTQyLQlT/0A+2yIXJdCRoIAAAAItVDIsCi00Mi5CoAQAA/9KFwHQL3QWhAAAA3V346wXZ6N1d+ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S2eDcTfjZXfTZRfSL5V3DAAAAAAAA8D8AAAAAAADgPw==</compiledString>
+									<returnType>float</returnType>
+									<sString>-cG560_DamageIncreaseOrDecrease * (( rIsHero &amp;&amp; receiver.GetTalent("Archeress_A0")) ? 0.5 : 1)</sString>
+								</addValue>
+								<multValue>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>1.0f</sString>
+								</multValue>
+								<stat>BaseAttack</stat>
+								<topModifier>false</topModifier>
+								<variable>DamageSummand</variable>
+							</modifier>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<statModName>G560_DamageIncreaseOrDecrease</statModName>
+						</StatModApplicator>
+					</Item>
+					<Item href="/Items/Talents/TalentKits/Redset4_3_Fire/status_G557_Mark.APLR" id="4E1D75B6-FFD0-40DF-A6B3-C4988F0A56D2">
+						<StatModApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption>Изменение урона НЕ героев</caption>
+							<constraint>None</constraint>
+							<dontUpdate>false</dontUpdate>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString>FQAAAAAAAAAAVYvsi0UMixCLTQyLQlT/0A+2wPfYG8CDwAFdww==</compiledString>
+								<returnType>bool</returnType>
+								<sString>!rIsHero</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<modifier>
+								<addValue>
+									<compiledString>FR4AAAABAAAAKgAAAEc1NjBfRGFtYWdlSW5jcmVhc2VPckRlY3JlYXNlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S2eBdww==</compiledString>
+									<returnType>float</returnType>
+									<sString>-cG560_DamageIncreaseOrDecrease</sString>
+								</addValue>
+								<multValue>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>1.0f</sString>
+								</multValue>
+								<stat>BaseAttack</stat>
+								<topModifier>false</topModifier>
+								<variable>DamageSummand</variable>
+							</modifier>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<statModName>G560_DamageIncreaseOrDecrease</statModName>
+						</StatModApplicator>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>144</behaviorFlags>
+				<caption>Статус понижения урона</caption>
+				<customCounter>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</customCounter>
+				<customProgress>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</customProgress>
+				<description textref="/Items/Talents/TalentKits/Redset4_3_Fire/status_G557_Mark.APLR_9c6b4de0515c478dab5cfe3333d17b8a_description.txt" />
+				<dispellPriority>Medium</dispellPriority>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQwAAAACAAAAEgAAACgAAABHNTYwX0FjdGl2ZQBVi+xRVmgAAAAAi0UIixCLTQiLgogBAAD/0NwdcQAAAN/g9sRBdS+LTQiLEYtNCIuCkAEAAP/Qi/CLTQyLEYtNDIuCkAEAAP/QO/B0CcdF/AEAAADrB8dF/AAAAACKRfxei+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG560_Active &gt; 0 &amp;&amp; sFctn != rFctn</sString>
+				</enabled>
+				<flags>0</flags>
+				<formulaName></formulaName>
+				<image href="/UI/Styles/Icons/Talents/_560.ITEX" />
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<name textref="/Items/Talents/TalentKits/Redset4_3_Fire/status_G557_Mark.APLR_9c6b4de0515c478dab5cfe3333d17b8a_name.txt" />
+				<power>0</power>
+				<providerName></providerName>
+				<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+				<stackCount>0</stackCount>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statusPosition>0</statusPosition>
+				<stopBehaviour>StopByTime</stopBehaviour>
+				<unstackableWith href="" />
 			</StatusApplicator>
 		</Item>
 		<Item href="/Items/Talents/TalentKits/Redset4_3_Fire/status_G557_Mark.APLR" id="DA742402-C963-4735-BA85-73DAE2676B35">

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/ThunderGod.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/ThunderGod_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/ThunderGod_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/Tutorial/Talents/M2_ThunderGod.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/Tutorial/Talents/ThunderM1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Elite_Str_1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Epic_Str.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А3у. Скорость молнии</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/ThunderGod/Ability_A3_Upg.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/ThunderGod/Ability_A3_Upg.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/ThunderGod/Ability_A3_Upg.TALENT" id="95ADE4B6-AA7C-43EE-87F7-82F97B97DAC5">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR4AAAACAAAAJQAAAD4AAABUaHVuZGVyR29kX0EzAAAAVGh1bmRlckdvZF9BMwBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("ThunderGod_A3") == false</sString>
+				</condition>
+				<name>ThunderGod_A3</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/ThunderGod/Ability_A3_Upg.TALENT" id="05D4A750-7F9D-44C5-B8EB-F5DB9688BEB4">
+			<ConditionFormula>
+				<condition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</condition>
+				<name>ThunderGod_A3U</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/ThunderGod/Ability_A3_Upg.TALENT" id="8ADF6556-A110-454A-AD25-9FE5F3B66C24">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/ThunderGod/Ability_A3_Upg.TALENT" id="20C91CB2-BFB5-4761-86E3-C0077F639BDA">
+					<UnitConstant>
+						<name>TT_A3_SlowDuration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>3</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/ThunderGod/Ability_A3_Upg.TALENT" id="3280314B-F470-430D-93AF-4722A473BC80">
+					<UnitConstant>
+						<name>TT_A3_Dec_MoveSpeed</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>30</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/ThunderGod/Ability_A3_Upg.TALENT" id="9F8B5D1E-C2DF-4525-A583-481C4D5684E5">
+					<UnitConstant>
+						<name>TT_A3_movespeed_prev</name>
+						<var>
+							<compiledString>FRIAAAABAAAAHgAAAEEzdV9IYXN0ZV9QZXJjZW50AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cA3u_Haste_Percent</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/ThunderGod/const_A3u_HastePercent" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/ThunderGod/Ability_A3_Upg.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>13.21</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/ThunderGod/A3.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>2</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>440</naftaCost>
+	<name textref="/Items/Talents/Class/ThunderGod/Ability_A3_Upg.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators />
+	<persistentId>ThunderGod_A3_Upg</persistentId>
+	<prerequisiteTalents>
+		<Item href="/Items/Talents/Class/ThunderGod/Ability_A3.TALENT" />
+	</prerequisiteTalents>
+	<rarity>Class</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>2040319</targetType>
+	<type>Passive</type>
+	<upgradeLevel>1</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set3" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set3_kit4" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset3_4_Dot/Redset3_4_Dot.TALKIT" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="4" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NormTal.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_RedSet3.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet3.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season9_Mediocre.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NY2020_MediocreList.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season13_MediocreList.ROLLCONT" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G532: Неумолимый яд</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G532_Dex.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G532_Dex.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G532_Dex.TALENT" id="40340713-13FF-4D6D-883F-0576FA33B999">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTMyX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF0CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(sender.vG532_Active&gt;0)</sString>
+				</condition>
+				<name>InForma</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G532_Dex.TALENT" id="76F31607-36D3-4F96-A367-DE0E2CD62569">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ0AAAACAAAAEgAAACgAAABHNTMyX01heFN0YXQAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdSgAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAPA/</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG532_MaxStat == 1</sString>
+				</condition>
+				<name>MaxSpd</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G532_Dex.TALENT" id="E101021E-5FC7-40E3-B380-3290391ADF26">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ0AAAACAAAAEgAAACgAAABHNTMyX01heFN0YXQAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdSgAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAABA</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG532_MaxStat == 2</sString>
+				</condition>
+				<name>MaxDex</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G532_Dex.TALENT" id="2008AB91-0BE6-4CCF-AF72-1A0E12088B5B">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ0AAAACAAAAEgAAACgAAABHNTMyX01heFN0YXQAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdSgAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAhA</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG532_MaxStat == 3</sString>
+				</condition>
+				<name>MaxSta</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G532_Dex.TALENT" id="1ABAEF02-20F1-428C-9B6E-890AEF47801F">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ0AAAACAAAAEgAAACgAAABHNTMyX01heFN0YXQAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdSgAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAABBA</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG532_MaxStat == 4</sString>
+				</condition>
+				<name>MaxWill</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G532_Dex.TALENT" id="CEBC0702-1D14-4DF3-99BC-B4E7B5DCD59A">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G532_Dex.TALENT" id="B5DCC103-072D-428B-869B-1FC8B2048591">
+					<UnitConstant>
+						<name>Add_SpdOrDexOrStaOrWill</name>
+						<var>
+							<compiledString>FQgAAAABAAAAFAAAAFQyX1N0YXQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT2_Stat</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset3_4_Dot/const_G532_MaxForm" />
+				<Item href="/Items/Talents/TalentKits/Redset3_4_Dot/const_G532_Add_DurationNT" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G532_Dex.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_532.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G532_Dex.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G532_Dex.TALENT" id="8DBBE514-7329-4E9B-A854-66EE486371C0">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>MaxStat</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvsg+wki0UIixCLTQiLgowAAAD/0ItNCIsRi00Ii4LMAAAA3V34/9BR2Rwki00IixGLTQiLgsgAAAD/0FHZHCTo3gAAAIPEBNkcJItNCIsRi00Ii4LAAAAA/9BR2Rwk6L8AAACDxAjcXfjf4PbEQXoMx0X0AQAAAOmfAAAAi00IixGLTQiLgsAAAAD/0ItNCIsRi00Ii4LMAAAA3V3s/9BR2Rwki00IixGLTQiLgsgAAAD/0FHZHCToZgAAAIPECNxd7N/g9sRBegnHRegCAAAA60OLTQiLEYtNCIuCyAAAAP/Qi00IixGLTQiLgswAAADdXeD/0Nxd4N/g9sRBegnHRdwDAAAA6wfHRdwEAAAAi03ciU3oi1XoiVX020X0i+Vdw1WL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>sBaseAttackSpeed &gt;= max(sBaseDexterity, max(sBaseStamina, sBaseWill)) ? 1 : sBaseDexterity&gt;=max(sBaseStamina, sBaseWill) ? 2 : sBaseStamina&gt;=sBaseWill ? 3 : 4</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G532_MaxStat</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G532_Dex.TALENT" id="63F20A7E-7541-434F-B447-7CF6DEFF7085">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Spd</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgowAAAD/0ItNCIsRi00Ii4LMAAAA3V34/9BR2Rwki00IixGLTQiLgsgAAAD/0FHZHCToQwAAAIPEBNkcJItNCIsRi00Ii4LAAAAA/9BR2Rwk6CQAAACDxAjcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseAttackSpeed &gt;= max(sBaseDexterity, max(sBaseStamina, sBaseWill))</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FRgAAAABAAAAJAAAAEFkZF9TcGRPckRleE9yU3RhT3JXaWxsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_SpdOrDexOrStaOrWill</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>AttackSpeed</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G532_Dex.TALENT" id="F47603C5-7D16-4E68-A48A-2571F5E18629">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Dexterity</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgsAAAAD/0ItNCIsRi00Ii4LMAAAA3V34/9BR2Rwki00IixGLTQiLgsgAAAD/0FHZHCToQwAAAIPEBNkcJItNCIsRi00Ii4KMAAAA/9BR2Rwk6CQAAACDxAjcXfjf4PbEBXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseDexterity &gt; max(sBaseAttackSpeed, max(sBaseStamina, sBaseWill))</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FRgAAAABAAAAJAAAAEFkZF9TcGRPckRleE9yU3RhT3JXaWxsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_SpdOrDexOrStaOrWill</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Dexterity</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G532_Dex.TALENT" id="6A9BB5AA-D1BF-412E-B76C-58DD41B6CB8F">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Stamina</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgsgAAAD/0ItNCIsRi00Ii4LMAAAA3V34/9BR2Rwki00IixGLTQiLgsAAAAD/0FHZHCToQwAAAIPEBNkcJItNCIsRi00Ii4KMAAAA/9BR2Rwk6CQAAACDxAjcXfjf4PbEBXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStamina &gt; max(sBaseAttackSpeed, max(sBaseDexterity, sBaseWill))</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FRgAAAABAAAAJAAAAEFkZF9TcGRPckRleE9yU3RhT3JXaWxsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_SpdOrDexOrStaOrWill</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Stamina</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G532_Dex.TALENT" id="2A26ACB7-8E5D-4112-867D-9A8ADD164CFB">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Will</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgswAAAD/0ItNCIsRi00Ii4LIAAAA3V34/9BR2Rwki00IixGLTQiLgsAAAAD/0FHZHCToQwAAAIPEBNkcJItNCIsRi00Ii4KMAAAA/9BR2Rwk6CQAAACDxAjcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseWill &gt;= max(sBaseAttackSpeed, max(sBaseDexterity, sBaseStamina))</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FRgAAAABAAAAJAAAAEFkZF9TcGRPckRleE9yU3RhT3JXaWxsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_SpdOrDexOrStaOrWill</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Will</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Redset3_4_Dot/G532_FormCounter.APLR" />
+		<Item href="/Items/Talents/Common/G532_Dex.TALENT" id="7CCDA6AF-39F3-4B8B-87D9-93FFC0929AE2">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>G532_Active</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString>FSkAAAADAAAAMAAAAE0AAAB/AAAARzUzMV9Gb3JtQ291bnRlcgAAAABHNTMxX01heEZvcm0AAAAARzUzMQBVi+yD7BBoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgUAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sQBdTWLTQiLEYtNCIuCfAEAAP/QiUX0aCQAAACLTfSLEYtN9IuCqAEAAP/QhcB0CcdF8AEAAADrB8dF8AAAAACKRfCL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>(sender.vG531_FormCounter &lt;= cG531_MaxForm)&amp;&amp;(sObjectMaster-&gt;GetTalent("G531"))</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G532_Active</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G532</persistentId>
+	<prerequisiteTalents />
+	<rarity>outstanding</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>16</talentRollGroups>
+	<talentStats />
+	<targetType>136258047</targetType>
+	<type>Simple</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats>
+		<Item>
+			<addValueName>Add_SpdOrDexOrStaOrWill</addValueName>
+			<stat>AttackSpeed</stat>
+			<values>
+				<Item>7.2</Item>
+				<Item>7.7</Item>
+				<Item>8.2</Item>
+				<Item>8.7</Item>
+				<Item>9.2</Item>
+				<Item>9.7</Item>
+				<Item>10.2</Item>
+				<Item>10.7</Item>
+				<Item>11.2</Item>
+				<Item>11.7</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_SpdOrDexOrStaOrWill</addValueName>
+			<stat>Dexterity</stat>
+			<values>
+				<Item>7.2</Item>
+				<Item>7.7</Item>
+				<Item>8.2</Item>
+				<Item>8.7</Item>
+				<Item>9.2</Item>
+				<Item>9.7</Item>
+				<Item>10.2</Item>
+				<Item>10.7</Item>
+				<Item>11.2</Item>
+				<Item>11.7</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_SpdOrDexOrStaOrWill</addValueName>
+			<stat>Stamina</stat>
+			<values>
+				<Item>7.2</Item>
+				<Item>7.7</Item>
+				<Item>8.2</Item>
+				<Item>8.7</Item>
+				<Item>9.2</Item>
+				<Item>9.7</Item>
+				<Item>10.2</Item>
+				<Item>10.7</Item>
+				<Item>11.2</Item>
+				<Item>11.7</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_SpdOrDexOrStaOrWill</addValueName>
+			<stat>Will</stat>
+			<values>
+				<Item>7.2</Item>
+				<Item>7.7</Item>
+				<Item>8.2</Item>
+				<Item>8.7</Item>
+				<Item>9.2</Item>
+				<Item>9.7</Item>
+				<Item>10.2</Item>
+				<Item>10.7</Item>
+				<Item>11.2</Item>
+				<Item>11.7</Item>
+			</values>
+		</Item>
+	</variativeMaxTalentStats>
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

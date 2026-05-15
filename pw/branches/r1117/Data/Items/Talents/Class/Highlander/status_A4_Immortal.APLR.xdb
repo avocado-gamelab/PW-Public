@@ -1,7 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
 	<BackLink DBID="/Items/Talents/Class/Highlander/LastHitTrigger.APLR" Count="1" />
-	<applicators />
+	<applicators>
+		<Item href="/Items/Talents/Class/Highlander/status_A4_Immortal.APLR" id="FA9BB527-75D5-4CCF-87DF-A3458CD60726">
+			<AbilityUpgradeApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Class/Highlander/status_A4_Immortal.APLR" id="0E455FC6-F228-436C-8E24-3A5B8644D0FD">
+						<HealApplicator>
+							<amount>
+								<compiledString>FRoAAAACAAAAOAAAAFEAAABBNEF0dGFja0VuZXJneUNvc3RQZXJjZW50AFWL7IPsDItFCIsQi00Ii0IQ/9DZ4ItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d+P/Q3E343A1fAAAA2V302UX0i+VdwwAAAEDheoQ/</compiledString>
+								<returnType>float</returnType>
+								<sString>-sMaxEnergy * cA4AttackEnergyCostPercent * 0.01f</sString>
+							</amount>
+							<applyTarget>AbilityOwner</applyTarget>
+							<caption></caption>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<healTarget>Energy</healTarget>
+							<ignoreHealingMods>true</ignoreHealingMods>
+							<LoggingEvent>-1</LoggingEvent>
+							<providerName></providerName>
+							<uiEvent href="" />
+						</HealApplicator>
+					</Item>
+				</applicators>
+				<applyCount>
+					<compiledString>FQAAAAAAAAAAVYvsM8Bdww==</compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</applyCount>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>16</behaviorFlags>
+				<caption>Сжигаем себе ману с каждой атакой</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flags>0</flags>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<persistentApplicators />
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents />
+				<targetAbility>BaseAttack</targetAbility>
+				<useListAs>ListAsRule</useListAs>
+			</AbilityUpgradeApplicator>
+		</Item>
+	</applicators>
 	<applyTarget>ApplicatorTarget</applyTarget>
 	<behaviorFlags>1</behaviorFlags>
 	<caption>статус</caption>

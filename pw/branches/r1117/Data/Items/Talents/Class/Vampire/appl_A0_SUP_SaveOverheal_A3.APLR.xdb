@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PermanentStatModApplicator>
+	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A3.TALENT" Count="1" />
+	<applyTarget>AbilityOwner</applyTarget>
+	<caption>Запоминаем оверхил от всех целей лужи</caption>
+	<customApplyType>None</customApplyType>
+	<enabled>
+		<compiledString>FRYAAAABAAAAIAAAAFZhbXBpcmVfRXRlcm5hbEh1bmdlcgBVi+xqAYtFEFBoAAAAAItNCIsRi00Ii4KcAQAA/9AzyTtFEA+VwYrBXcM=</compiledString>
+		<returnType>bool</returnType>
+		<sString>sender.applVampire_EternalHunger(UNIT) != pMisc</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<LoggingEvent>-1</LoggingEvent>
+	<modifier>
+		<addValue>
+			<compiledString>FUcAAAAFAAAAVAAAAHEAAACKAAAAzgAAAOcAAABBM19EYW1hZ2VEb25lAAAAQTBfTGlmZURyYWluUGVyY2VudABBMF9TVVBfSGVhbFNoaWVsZENvbnZlcnNpb25QZXJjZW50AFWL7IPsKFHZ7tkcJGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaBAAAACLRRCLEItNEItCUN1d+P/Q3E343DX9AAAAi00MixGLTQyLQgzdXfD/0ItNDIsRi00MiwLdXej/0Nxt6Nxt8Nld5NlF5FHZHCToRwAAAIPECItNDFGLVQhSaCQAAACLRRCLEItNEItCUN1d3P/Q3E3c3A31AAAA2V3Y2UXYi+Vdw3sUrkfheoQ/AAAAAAAAWUAAAAAAVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+			<returnType>float</returnType>
+			<sString>max(sender.vA3_DamageDone * cA0_LifeDrainPercent / 100 - (rMaxLife - rLife), 0) * cA0_SUP_HealShieldConversionPercent * 0.01</sString>
+		</addValue>
+		<multValue>
+			<compiledString></compiledString>
+			<returnType>float</returnType>
+			<sString>1.0f</sString>
+		</multValue>
+		<stat>Life</stat>
+		<topModifier>false</topModifier>
+		<variable>Vampire_BloodShield</variable>
+	</modifier>
+	<providerName></providerName>
+</PermanentStatModApplicator>

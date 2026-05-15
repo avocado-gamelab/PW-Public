@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Naga_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Naga/Ability_A4.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Naga/Ability_A4_2u.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Naga/Ability_A4u1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="/Effects/UI/AOESelection/Circle.MTRL" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString>FREAAAABAAAAHQAAAEE0XzJfVGF1bnRfUmFuZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cA4_2_Taunt_Range</sString>
+	</aoeSize>
+	<aoeType>Disk</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="7B62EF6D-4D04-4870-9FBD-0099ED6700A3">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Спелл с программой</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="BB2FF2BF-B198-4E95-95B2-EF1FB4F72EC0">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="AB6FE07A-7122-48AD-95EB-2C95F74FF697">
+								<ProgramApplicator>
+									<applicators>
+										<Item>
+											<applicator href="/Items/Talents/Class/Naga/status_A4_2_Self.APLR" />
+											<continueCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</continueCondition>
+											<continueEvents>1</continueEvents>
+											<delay>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</delay>
+											<stopCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</stopCondition>
+											<stopEvents>0</stopEvents>
+										</Item>
+										<Item>
+											<applicator href="/Items/Talents/Class/Naga/status_A4_2_Enemy.APLR" />
+											<continueCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</continueCondition>
+											<continueEvents>2</continueEvents>
+											<delay>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</delay>
+											<stopCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</stopCondition>
+											<stopEvents>0</stopEvents>
+										</Item>
+										<Item>
+											<applicator href="/Heroes/DefaultStatus/_PANIC_status.APLR" />
+											<continueCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</continueCondition>
+											<continueEvents>2</continueEvents>
+											<delay>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</delay>
+											<stopCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</stopCondition>
+											<stopEvents>0</stopEvents>
+										</Item>
+										<Item>
+											<applicator href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="7AF9CC35-CE38-41A7-8B99-919531A0FBFB">
+												<FlagsApplicator>
+													<applyTarget>AbilityTarget</applyTarget>
+													<behaviorFlags>0</behaviorFlags>
+													<caption></caption>
+													<consumables />
+													<effect>
+														<Item href="" />
+														<Item href="" />
+													</effect>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<flag>65536</flag>
+													<formulaName></formulaName>
+													<lifeTime>
+														<compiledString>FQUAAAABAAAAEgAAAFNURVAAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3MDZXfzZRfyL5V3D</compiledString>
+														<returnType>float</returnType>
+														<sString>cSTEP*2</sString>
+													</lifeTime>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<startCondition>
+														<compiledString>FRUAAAACAAAAIgAAADUAAABQYW5pY19TdGFydENvbmRpdGlvbgBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcHVcAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+														<returnType>bool</returnType>
+														<sString>!cPanic_StartCondition</sString>
+													</startCondition>
+													<talents />
+													<useListAs>ListAsRule</useListAs>
+												</FlagsApplicator>
+											</applicator>
+											<continueCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</continueCondition>
+											<continueEvents>1</continueEvents>
+											<delay>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</delay>
+											<stopCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</stopCondition>
+											<stopEvents>0</stopEvents>
+										</Item>
+										<Item>
+											<applicator href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="D5264756-1954-41B0-A9EB-FE076911ECE5">
+												<InvisibilityApplicator>
+													<applyTarget>AbilityTarget</applyTarget>
+													<behaviorFlags>0</behaviorFlags>
+													<caption>Выходим из стейта атаки</caption>
+													<effect>
+														<Item href="" />
+														<Item href="" />
+													</effect>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<fadeIn>
+														<compiledString>FQUAAAABAAAAEQAAAFNURVAAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+														<returnType>float</returnType>
+														<sString>cSTEP</sString>
+													</fadeIn>
+													<formulaName></formulaName>
+													<ignoreCancel>false</ignoreCancel>
+													<lifeTime>
+														<compiledString>FQUAAAABAAAAEQAAAFNURVAAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+														<returnType>float</returnType>
+														<sString>cSTEP</sString>
+													</lifeTime>
+													<LoggingEvent>-1</LoggingEvent>
+													<onBecomeInvisible href="" />
+													<providerName></providerName>
+													<startCondition>
+														<compiledString>FRUAAAACAAAAIgAAADUAAABQYW5pY19TdGFydENvbmRpdGlvbgBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcHVcAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+														<returnType>bool</returnType>
+														<sString>!cPanic_StartCondition</sString>
+													</startCondition>
+												</InvisibilityApplicator>
+											</applicator>
+											<continueCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</continueCondition>
+											<continueEvents>1</continueEvents>
+											<delay>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</delay>
+											<stopCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</stopCondition>
+											<stopEvents>0</stopEvents>
+										</Item>
+									</applicators>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<behaviorFlags>0</behaviorFlags>
+									<caption>Программа </caption>
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<lifeTime>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+									<startCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</startCondition>
+								</ProgramApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="75085B2E-F460-4514-8233-49EFFC9B2CBB">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="FD7525ED-1B57-4C29-9F01-D938FC06FE8E">
+					<ComparingTargetSelector>
+						<referenceValue>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</referenceValue>
+						<targetSelector href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="5E1BD024-581D-4C59-BC37-D661088E21E2">
+							<AreaTargetSelector>
+								<absolutePosition>
+									<x>0</x>
+									<y>0</y>
+								</absolutePosition>
+								<flags>0</flags>
+								<mode>Normal</mode>
+								<range>
+									<compiledString>FREAAAABAAAAHQAAAEE0XzJfVGF1bnRfUmFuZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+									<returnType>float</returnType>
+									<sString>cA4_2_Taunt_Range</sString>
+								</range>
+								<targetFilter>679477251</targetFilter>
+								<targetSelector href="" />
+							</AreaTargetSelector>
+						</targetSelector>
+						<valueToCompare>
+							<compiledString>FR4AAAADAAEAJQAAAD0AAABHAAAAGQEAAEFiaWxpdHlUYXJnZXQAAABBYmlsaXR5VGFyZ2V0AFWL7IPsGGgAAAAAi0UQixCLTRCLQkz/0DlFDHUL2QWXAAAA2V3s60poEAAAAItNEIsRi00Qi0JM/9CJReiNTfhRi1XoiwKLTeiLkIwBAAD/0lCNRfBQi00MixGLTQyLgowBAAD/0FDoEQAAAIPECNld7NlF7IvlXcMAAHpEVYvsg+wUi0UI2UAEi00M2GEE2V302UX0UdkcJItVCNkCi0UM2CDZXfDZRfBR2RwkjU346FcAAADZRfjYTfjZRfzYTfzewdld7NlF7FHZHCToBwAAAIPEBIvlXcNVi+xR2UUI2Rwk6AUAAACDxARdw1WL7FHZRQiD7AjdHCTov/7//4PECNld/NlF/IvlXcNVi+xRiU38i0X82UUI2RiLTfzZRQzZWQSLRfyL5V3CCAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>pSecond == pMisc-&gt;GetObject("AbilityTarget") ? 1000 : d(pSecond-&gt;GetPos(), pMisc-&gt;GetObject("AbilityTarget")-&gt;GetPos())</sString>
+						</valueToCompare>
+					</ComparingTargetSelector>
+				</targetSelector>
+			</SpellApplicator>
+		</Item>
+	</applicators>
+	<askId>4</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А4. Зрительный контакт</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Class/Naga/Ability_A4_2.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Naga/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Naga/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="F9C93D57-4794-46F7-8781-3A5D08392559">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRcAAAACAAAAHgAAADcAAABOYWdhX0E0XzJ1AABOYWdhX0E0XzJ1AFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoDAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZF+/fYG8CDwAGL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Naga_A4_2u") == false</sString>
+				</condition>
+				<name>Naga_A4_2u</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents>
+		<Item href="/Items/Talents/Class/Naga/Ability_A4.TALENT" />
+		<Item href="/Items/Talents/Class/Naga/Ability_A4u1.TALENT" />
+	</conflictingTalents>
+	<constants href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="38944830-9377-47F3-AA18-4E1F7850A7D2">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="1FA864DD-2392-4442-809C-5A9A4CBC91E5">
+					<UnitConstant>
+						<name>A4_2_Taunt_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>3</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="E9A0EF62-AA32-487F-A248-85B2F7F01241">
+					<UnitConstant>
+						<name>A4_2_Taunt_Range</name>
+						<var>
+							<compiledString>FQ0AAAABAAAAGQAAAFJhbmdlX01lZGl1bQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange_Medium</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Naga/const_A4_2u_Evade_Mult" />
+				<Item href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="5882AB1D-5AF0-427C-9F16-273826C5782B">
+					<UnitConstant>
+						<name>A4u_Evade_Mult</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>30 ;// До след перевода текстов</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Naga/const_A4_2u_DamageMult" />
+				<Item href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="484F94B1-E59B-4848-A604-B6A883D3365F">
+					<UnitConstant>
+						<name>Panic_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>3</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="FBC5572A-BB8E-458A-8B73-A40AEBD723DB">
+					<UnitConstant>
+						<name>UltimateConstant</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="F9744281-B789-40B4-935B-5373DBF5715E">
+					<UnitConstant>
+						<name>Panic_StartCondition</name>
+						<var>
+							<compiledString>FRYAAAACAAAALgAAAEIAAABUYXJnZXQAAEFiaWxpdHlUYXJnZXQAVYvsg+wIVotFEIsQi00Qi0JI/9CJRfxoCAAAAItNEIsRi00Qi0JM/9CL8GgAAAAAi038ixGLTfyLQkz/0DPJO8YPlMGJTfjbRfhei+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>pMisc-&gt;GetObjectParent()-&gt;GetObject("Target") == pMisc-&gt;GetObject("AbilityTarget") </sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="05B31241-B7D0-43FB-9968-73F2DDBC8A95">
+					<UnitConstant>
+						<name>TT_A4_2u_DamageMult</name>
+						<var>
+							<compiledString>FREAAAACAAAAHgAAADEAAABBNF8ydV9EYW1hZ2VNdWx0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0tw1PwAAANld/NlF/IvlXcMAAAAAAABZQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cA4_2u_DamageMult / 100</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABIQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>50</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Naga/Ability_A4_2.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Class/Naga/Ability_A4_2.TALENT" id="68508A42-0974-4518-9BEC-70E51B767EF2">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>3</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Naga/A4_2.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>true</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAMQw==</compiledString>
+		<returnType>float</returnType>
+		<sString>140</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>390</naftaCost>
+	<name textref="/Items/Talents/Class/Naga/Ability_A4_2.TALENT_name.txt" />
+	<node>ability4</node>
+	<passiveApplicators />
+	<persistentId>Naga_A4_2</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Class/Naga/Ability_A4_2.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>671088641</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQ0AAAABAAAAGQAAAFJhbmdlX01lZGl1bQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Medium</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

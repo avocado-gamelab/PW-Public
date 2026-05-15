@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/Redset7_11_MiniRefresher.TALKIT" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="1" />
+	<BackLink DBID="/Test/Talents/Bomber/Test.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_MiniRefresher" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>false</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G773: Момент могущества</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="37B6A4D4-62CA-4CC0-9371-476781B094A2">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNzczX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG773_Active &gt; 0</sString>
+				</condition>
+				<name>InForma</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="5AD61F1C-3D8B-426F-803C-01C7A75BE203">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ4AAAACAAAAEwAAACkAAABHNzczX1N0ck9ySW50AFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUsAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAADwPw==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG773_StrOrInt == 1</sString>
+				</condition>
+				<name>StrOrInt</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="8E324795-6D95-425D-B763-481DD3A8DABD">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ0AAAACAAAAEgAAACgAAABHNzczX01heFN0YXQAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdSgAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAPA/</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG773_MaxStat == 1</sString>
+				</condition>
+				<name>MaxSpd</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="8DE1C108-8D87-44FD-B6F8-52144D72F7DF">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ0AAAACAAAAEgAAACgAAABHNzczX01heFN0YXQAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdSgAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAABA</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG773_MaxStat == 2</sString>
+				</condition>
+				<name>MaxDex</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="ADC6A8B2-41C5-4C69-B37F-C3E968AA9DF4">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ0AAAACAAAAEgAAACgAAABHNzczX01heFN0YXQAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdSgAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAhA</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG773_MaxStat == 3</sString>
+				</condition>
+				<name>MaxSta</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="D8BAF373-4CE4-418E-804E-94354A3FBB2A">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ0AAAACAAAAEgAAACgAAABHNzczX01heFN0YXQAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdSgAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAABBA</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG773_MaxStat == 4</sString>
+				</condition>
+				<name>MaxWill</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="C7A618DF-0C68-4FE7-A637-3E689EA1B325">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="33CF8B65-A0FD-4351-936A-3F2C6AB5EE45">
+					<UnitConstant>
+						<name>Add_Stat</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUNl9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcMzMzMzMzPjPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT6_Stat * 0.6</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="0D999678-34C3-4DE1-A2B8-C69BAD346FAD">
+					<UnitConstant>
+						<name>Add_Stat2</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUNl9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcOamZmZmZnZPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT6_Stat * 0.4</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/const_G773_CooldownReduction" />
+				<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/const_G766_MaxForm" />
+				<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/const_G766_CanCountActivate" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>0</flags>
+	<forceBonus>31.31</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_773.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>5</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="C645A532-16AA-4202-8C61-08A2210E79D9">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>StrOrInt</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&gt;=sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G773_StrOrInt</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="475AF863-AD5E-44E6-8033-762818064F3B">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Strength</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&gt;=sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9TdGF0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Strength</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="493BD313-1ED7-46EF-B09F-D4C99BECC766">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Intellect</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&lt;sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9TdGF0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Intellect</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="0B76874D-7A48-429F-8923-D24DA71530C0">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>MaxStat</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvsg+wki0UIixCLTQiLgowAAAD/0ItNCIsRi00Ii4LMAAAA3V34/9BR2Rwki00IixGLTQiLgsgAAAD/0FHZHCTo3gAAAIPEBNkcJItNCIsRi00Ii4LAAAAA/9BR2Rwk6L8AAACDxAjcXfjf4PbEQXoMx0X0AQAAAOmfAAAAi00IixGLTQiLgsAAAAD/0ItNCIsRi00Ii4LMAAAA3V3s/9BR2Rwki00IixGLTQiLgsgAAAD/0FHZHCToZgAAAIPECNxd7N/g9sRBegnHRegCAAAA60OLTQiLEYtNCIuCyAAAAP/Qi00IixGLTQiLgswAAADdXeD/0Nxd4N/g9sRBegnHRdwDAAAA6wfHRdwEAAAAi03ciU3oi1XoiVX020X0i+Vdw1WL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>sBaseAttackSpeed &gt;= max(sBaseDexterity, max(sBaseStamina, sBaseWill)) ? 1 : sBaseDexterity&gt;=max(sBaseStamina, sBaseWill) ? 2 : sBaseStamina&gt;=sBaseWill ? 3 : 4</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G773_MaxStat</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="162290B0-583E-4D06-83D0-D2245CD623BA">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Spd</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgowAAAD/0ItNCIsRi00Ii4LMAAAA3V34/9BR2Rwki00IixGLTQiLgsgAAAD/0FHZHCToQwAAAIPEBNkcJItNCIsRi00Ii4LAAAAA/9BR2Rwk6CQAAACDxAjcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseAttackSpeed &gt;= max(sBaseDexterity, max(sBaseStamina, sBaseWill))</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQoAAAABAAAAFgAAAEFkZF9TdGF0MgBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat2</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>AttackSpeed</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="848B210D-9197-41D2-B0A1-148F5C4C3036">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Will</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgswAAAD/0ItNCIsRi00Ii4LIAAAA3V34/9BR2Rwki00IixGLTQiLgsAAAAD/0FHZHCToQwAAAIPEBNkcJItNCIsRi00Ii4KMAAAA/9BR2Rwk6CQAAACDxAjcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseWill &gt;= max(sBaseAttackSpeed, max(sBaseDexterity, sBaseStamina))</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQoAAAABAAAAFgAAAEFkZF9TdGF0MgBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat2</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Will</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="745DEB34-6443-4997-B4D8-9AA7E17DCF86">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Dexterity</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgsAAAAD/0ItNCIsRi00Ii4LMAAAA3V34/9BR2Rwki00IixGLTQiLgsgAAAD/0FHZHCToQwAAAIPEBNkcJItNCIsRi00Ii4KMAAAA/9BR2Rwk6CQAAACDxAjcXfjf4PbEBXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseDexterity &gt; max(sBaseAttackSpeed, max(sBaseStamina, sBaseWill))</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQoAAAABAAAAFgAAAEFkZF9TdGF0MgBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat2</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Dexterity</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="D3DC6214-2C71-44C7-89C3-62B8D18BFCBD">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Stamina</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgsgAAAD/0ItNCIsRi00Ii4LMAAAA3V34/9BR2Rwki00IixGLTQiLgsAAAAD/0FHZHCToQwAAAIPEBNkcJItNCIsRi00Ii4KMAAAA/9BR2Rwk6CQAAACDxAjcXfjf4PbEBXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStamina &gt; max(sBaseAttackSpeed, max(sBaseDexterity, sBaseWill))</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQoAAAABAAAAFgAAAEFkZF9TdGF0MgBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat2</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Stamina</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/appl_G766_FormCounter.APLR" />
+		<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" id="C71D0E43-3D15-4D41-A265-B7FCA801D05C">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>G773_Active</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString>FRYAAAACAAAAIwAAADYAAABHNzY2X0NhbkNvdW50QWN0aXZhdGUAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3B1SAAAA3+D2xER7BsZF/wHrBMZF/wCKRf+L5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG766_CanCountActivate</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G773_Active</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G773</persistentId>
+	<prerequisiteTalents />
+	<rarity>magnificent</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>16</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Simple</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats>
+		<Item>
+			<addValueName>Add_Stat</addValueName>
+			<stat>Strength</stat>
+			<values>
+				<Item>16.2</Item>
+				<Item>17.4</Item>
+				<Item>18.6</Item>
+				<Item>19.8</Item>
+				<Item>21</Item>
+				<Item>22.2</Item>
+				<Item>23.4</Item>
+				<Item>24.6</Item>
+				<Item>25.8</Item>
+				<Item>27</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_Stat</addValueName>
+			<stat>Intellect</stat>
+			<values>
+				<Item>16.2</Item>
+				<Item>17.4</Item>
+				<Item>18.6</Item>
+				<Item>19.8</Item>
+				<Item>21</Item>
+				<Item>22.2</Item>
+				<Item>23.4</Item>
+				<Item>24.6</Item>
+				<Item>25.8</Item>
+				<Item>27</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_Stat2</addValueName>
+			<stat>AttackSpeed</stat>
+			<values>
+				<Item>10.8</Item>
+				<Item>11.6</Item>
+				<Item>12.4</Item>
+				<Item>13.2</Item>
+				<Item>14</Item>
+				<Item>14.8</Item>
+				<Item>15.6</Item>
+				<Item>16.4</Item>
+				<Item>17.2</Item>
+				<Item>18</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_Stat2</addValueName>
+			<stat>Will</stat>
+			<values>
+				<Item>10.8</Item>
+				<Item>11.6</Item>
+				<Item>12.4</Item>
+				<Item>13.2</Item>
+				<Item>14</Item>
+				<Item>14.8</Item>
+				<Item>15.6</Item>
+				<Item>16.4</Item>
+				<Item>17.2</Item>
+				<Item>18</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_Stat2</addValueName>
+			<stat>Dexterity</stat>
+			<values>
+				<Item>10.8</Item>
+				<Item>11.6</Item>
+				<Item>12.4</Item>
+				<Item>13.2</Item>
+				<Item>14</Item>
+				<Item>14.8</Item>
+				<Item>15.6</Item>
+				<Item>16.4</Item>
+				<Item>17.2</Item>
+				<Item>18</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_Stat2</addValueName>
+			<stat>Stamina</stat>
+			<values>
+				<Item>10.8</Item>
+				<Item>11.6</Item>
+				<Item>12.4</Item>
+				<Item>13.2</Item>
+				<Item>14</Item>
+				<Item>14.8</Item>
+				<Item>15.6</Item>
+				<Item>16.4</Item>
+				<Item>17.2</Item>
+				<Item>18</Item>
+			</values>
+		</Item>
+	</variativeMaxTalentStats>
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

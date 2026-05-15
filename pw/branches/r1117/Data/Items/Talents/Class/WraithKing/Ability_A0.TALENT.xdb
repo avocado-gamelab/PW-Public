@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/WraithKing.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/WraithKing_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/WraithKing_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/WraithKing.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/WraithKing_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/WraithKing_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -34,9 +34,30 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/WraithKing/Ability_A0.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
-	<conditionFormulas />
+	<compiledDescriptionA textref="/Items/Talents/Class/WraithKing/Ability_A0.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/WraithKing/Ability_A0.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/WraithKing/Ability_A0.TALENT" id="1AEC38F7-15B6-4159-AAB5-ED84CFAFA5E5">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FREAAAACAAAAHgAAADEAAABBMF9BcnNlbmFsU3R1Y2tzAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twdUwAAAN/g9sRBdQnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>cA0_ArsenalStucks &gt; 0</sString>
+				</condition>
+				<name>HasArsenalStacks</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/WraithKing/Ability_A0.TALENT" id="FE376394-3CDC-4183-8C28-64B9273747D9">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSQAAAACAAAAMwAAAE0AAABBMF9BcnNlbmFsU3R1Y2tzAAAAAEEwX0Fyc2VuYWxUb3RhbABVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBQAAACLVRCLAotNEItQUN1d+P/S3F343+D2xEF6CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>cA0_ArsenalStucks &gt;= cA0_ArsenalTotal</sString>
+				</condition>
+				<name>MaxArsenalStacks</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
 	<conflictingTalents />
 	<constants href="/Items/Talents/Class/WraithKing/Ability_A0.TALENT" id="B1CBDF62-E11F-4AF3-AADA-5AE9B4685133">
 		<UnitConstantsContainer>
@@ -72,6 +93,8 @@
 				<Item href="/Items/Talents/Class/WraithKing/const_A4_2_GiveArsenal" />
 				<Item href="/Items/Talents/Class/WraithKing/const_A4_2_TargetCounter" />
 				<Item href="/Items/Talents/Class/WraithKing/const_A4_2_ArsenalPerAlly" />
+				<Item href="/Items/Talents/Class/WraithKing/const_A0_AttackDamagePercentPerArsenal" />
+				<Item href="/Items/Talents/Class/WraithKing/const_A0_AdditionalAttackDamagePercent" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -93,7 +116,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>4</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/WraithKing/A0.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

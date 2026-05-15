@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
-	<BackLink DBID="/Items/Talents/Level2/G487_MarkAOEDMG.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/RedSet2_4_Blow/status_G487_MarkDmg.APLR" Count="1" />
 	<applicators>
 		<Item href="/Items/Talents/TalentKits/RedSet2_4_Blow/status_G487_MarkDmg.APLR" id="5F213F9E-7598-4D2F-9743-CF4EEDCAFDAB">
@@ -94,46 +94,22 @@
 								<spell href="/Items/Talents/TalentKits/RedSet2_4_Blow/status_G487_MarkDmg.APLR" id="5C43180D-ACD8-4CB3-813E-F818B43777D7">
 									<Spell>
 										<applicators>
-											<Item href="/Items/Talents/TalentKits/RedSet2_4_Blow/status_G487_MarkDmg.APLR" id="719BDF9B-320D-40AD-AA42-07E0A7440870">
-												<DamageApplicator>
-													<applyTarget>ApplicatorTarget</applyTarget>
-													<cancelInvisibility>false</cancelInvisibility>
-													<caption>Урон</caption>
-													<damage>
-														<compiledString>FQcAAAABAAAAEwAAAERhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
-														<returnType>float</returnType>
-														<sString>cDamage</sString>
-													</damage>
-													<damageMode>4</damageMode>
-													<damageType>Material</damageType>
-													<enabled>
-														<compiledString></compiledString>
-														<returnType>bool</returnType>
-														<sString>true</sString>
-													</enabled>
-													<formulaName></formulaName>
-													<LoggingEvent>-1</LoggingEvent>
-													<providerName></providerName>
-													<timeLimiter>-1</timeLimiter>
-													<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
-												</DamageApplicator>
-											</Item>
 											<Item href="/Items/Talents/TalentKits/RedSet2_4_Blow/status_G487_MarkDmg.APLR" id="4E13C31B-6604-4CF4-AECD-513EF4CEBC84">
 												<DamageApplicator>
 													<applyTarget>ApplicatorTarget</applyTarget>
 													<cancelInvisibility>false</cancelInvisibility>
 													<caption>Урон</caption>
 													<damage>
-														<compiledString>FQwAAAACAAAAKAAAAEEAAABHNDkxX0RhbWFnZQBVi+yD7AyLRQyLEItNDItCDP/Qi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ3V34/9DcTfjcNU8AAADZXfTZRfSL5V3DAAAAAAAAWUA=</compiledString>
+														<compiledString>FSAAAAAFAAAAJwAAAD0AAABeAAAAdwAAAI4AAABEYW1hZ2UAAEc0OTFfQWN0aXZlAEc0OTFfRGFtYWdlAFWL7IPsFGgIAAAAi0UIixCLTQiLgogBAAD/0NwdtAAAAN/g9sRBdTiLTQyLEYtNDItCDP/Qi00MUYtVCFJoFAAAAItFEIsQi00Qi0JQ3V34/9DcTfjcNawAAADdXfDrBdnu3V3wi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ/9DcRfDZXezZReyL5V3DAAAAAAAAWUAAAAAAAAAAAA==</compiledString>
 														<returnType>float</returnType>
-														<sString>rMaxLife * cG491_Damage / 100</sString>
+														<sString>cDamage + (sender.vG491_Active&gt;0 ? rMaxLife * cG491_Damage / 100 : 0)</sString>
 													</damage>
 													<damageMode>4</damageMode>
 													<damageType>Pure</damageType>
 													<enabled>
-														<compiledString>FQwAAAACAAAAEQAAACcAAABHNDkxX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+														<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
 														<returnType>bool</returnType>
-														<sString>sender.vG491_Active&gt;0</sString>
+														<sString>true</sString>
 													</enabled>
 													<formulaName></formulaName>
 													<LoggingEvent>-1</LoggingEvent>
@@ -187,7 +163,7 @@
 													<returnType>float</returnType>
 													<sString>cBlowRange</sString>
 												</range>
-												<targetFilter>538705983</targetFilter>
+												<targetFilter>537133119</targetFilter>
 												<targetSelector href="" />
 											</AreaTargetSelector>
 										</targetSelector>
@@ -287,16 +263,16 @@
 															<returnType>float</returnType>
 															<sString>cBlowRange</sString>
 														</range>
-														<targetFilter>538705983</targetFilter>
+														<targetFilter>538705979</targetFilter>
 														<targetSelector href="" />
 													</AreaTargetSelector>
 												</targetSelector>
 											</ConditionTargetSelector>
 										</targetSelector>
 										<targetsNumber>
-											<compiledString>FQAAAAAAAAAAVYvsuAIAAABdww==</compiledString>
+											<compiledString>FQ4AAAABAAAAGgAAAEc0ODdfTWF4Q291bnQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JR2Rwk6AUAAACDxARdw7gBAAAAD6L3wgAAAAR0B/MPLEQkBMPpAAAAAFWL7IPsDNlFCNl9/A+3RfwNAAwAAIlF+Nlt+Ntd9Nlt/ItF9IvlXcM=</compiledString>
 											<returnType>int</returnType>
-											<sString>2</sString>
+											<sString>f2l(cG487_MaxCount)</sString>
 										</targetsNumber>
 									</CountingTargetSelector>
 								</targetSelector>

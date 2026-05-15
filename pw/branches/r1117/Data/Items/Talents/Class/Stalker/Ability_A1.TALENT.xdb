@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Stalker.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Stalker_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Stalker.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Stalker_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Stalker_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Stalker/Ability_A1u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Stalker_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -159,9 +159,9 @@
 																				<Item href="/Items/Talents/Class/Stalker/Ability_A1.TALENT" id="01B77D18-429C-4B96-852B-34E5A7AC75D1">
 																					<SpellSwitchApplicator>
 																						<activeSpellIndex>
-																							<compiledString>FQAAAAAAAAAAVYvsg+wMi0UMixCLTQyLgkABAAD/0ItNDIsRi00Mi4JEAQAA3V34/9DcXfjf4PbEQXoJx0X0AAAAAOsHx0X0AQAAAItF9IvlXcM=</compiledString>
+																							<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgjABAAD/0ItNCIsRi00Ii4I0AQAA3V34/9DcXfjf4PbEQXoJx0X0AAAAAOsHx0X0AQAAAItF9IvlXcM=</compiledString>
 																							<returnType>int</returnType>
-																							<sString>rStamina &gt;= rWill ? 0 : 1</sString>
+																							<sString>sStrength &gt;= sIntellect ? 0 : 1</sString>
 																						</activeSpellIndex>
 																						<applyTarget>ApplicatorTarget</applyTarget>
 																						<caption>Свич дебаффа</caption>
@@ -352,7 +352,7 @@
 																			<segmentDirectionOffset>0</segmentDirectionOffset>
 																			<segmentEnd>CurrentPosition</segmentEnd>
 																			<segmentEndTargetSelector href="" />
-																			<targetFilter>536870915</targetFilter>
+																			<targetFilter>538705923</targetFilter>
 																		</CapsuleTargetSelector>
 																	</targetSelector>
 																</SpellPeriodicallyApplicator>
@@ -669,8 +669,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Stalker/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Stalker/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Stalker/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Stalker/Ability_A1.TALENT" id="B7107B6E-3DD3-4D1E-BB56-0B8D02136899">
 			<ConditionFormula>
@@ -690,6 +690,16 @@
 					<sString>tal("Stalker_A0_SUP") == false</sString>
 				</condition>
 				<name>Stalker_A0_SUP</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Stalker/Ability_A1.TALENT" id="8E653FAB-78B4-4F5E-9B4C-5DF2D821D2A3">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgsgAAAD/0ItNCIsRi00Ii4LMAAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStamina &gt;= sBaseWill</sString>
+				</condition>
+				<name>StaOrWill</name>
 			</ConditionFormula>
 		</Item>
 	</conditionFormulas>
@@ -786,7 +796,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>595</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Stalker/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -867,7 +877,7 @@
 					<sString>true</sString>
 				</startCondition>
 				<talents>
-					<Item href="/Items/Talents/Class/Naga/Ability1.TALENT" />
+					<Item href="/Items/Talents/Class/Naga/Ability_A1.TALENT" />
 				</talents>
 				<useListAs>ListAsRule</useListAs>
 			</FlagsApplicator>

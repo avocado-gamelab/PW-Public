@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Items/ClanItems/CS083_G289" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="3" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_OrangeSet6.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Quests/TalentQuests/_Settings" Count="1" />
+	<BackLink DBID="/Test/Talents/SpeedBoots.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet11.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet12.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet14.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_ClanOrange" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G289: Неустанный защитник</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations>
+		<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="8383871B-18A5-4743-AC7B-10144DFD9E8B">
+			<ConditionCastLimitation>
+				<condition>
+					<compiledString>FQ8AAAACAAAAFAAAACoAAABDYW5BY3RpdmF0ZTI4OQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1MAAAA3+D2xER7CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vCanActivate289 != 0</sString>
+				</condition>
+				<uiEvent href="/UI/Events/ErrorMessages/CastError_NoValidTargets.UIEV" />
+			</ConditionCastLimitation>
+		</Item>
+	</castLimitations>
+	<commonDescription textref="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="C87187C2-C09B-4DE8-8184-C3478EC4A586">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ4AAAACAAAAEwAAACkAAABHMjg5X1N0ck9ySW50AFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUsAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAADwPw==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG289_StrOrInt==1</sString>
+				</condition>
+				<name>StrOrInt</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="A2978434-026E-49F4-B45D-7A37C29A9329">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="3E9A5041-0D12-4922-AF63-55FADA47773A">
+					<UnitConstant>
+						<name>Add_Stat</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUM19TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcNmZmZmZmbmPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT3_Stat * 0.7</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="9D5A0530-4CF1-4500-86E2-670BEAE349A0">
+					<UnitConstant>
+						<name>TT_Give_LifeRegAbs</name>
+						<var>
+							<compiledString>FQ8AAAABAAAAEwAAAEcyODlfQWRkX0hQUmVnAFWL7GgAAAAAi0UMixCLTQyLgogBAAD/0F3D</compiledString>
+							<returnType>float</returnType>
+							<sString>receiver.vG289_Add_HPReg</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="9C17FF0F-10EE-4221-84ED-A4FD2EA2D9E5">
+					<UnitConstant>
+						<name>LifeCondition</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABIQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>50</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="34A4A46C-D0C8-4E90-B495-4A5B59B96994">
+					<UnitConstant>
+						<name>Haste_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="39D78F18-17EF-46D2-9A28-EE5E5BD3816E">
+					<UnitConstant>
+						<name>Haste_Percent</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>20</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="962A5557-6BC7-409A-8F56-C20824F4A4BA">
+					<UnitConstant>
+						<name>TECH_TargetsNumber</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="79972018-DD99-4541-926D-2D4F7EE030D6">
+					<UnitConstant>
+						<name>Haste_Condition</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>true</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="AFAD225A-F0B4-44F5-81D7-B740EAD7FF1D">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>true</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>19</flags>
+	<forceBonus>13.21</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_289.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>2</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="B1A72527-58D8-4682-843E-A6444B3C0E92">
+			<AuraApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="AADDD296-6DE0-433D-BA1F-B7FEEDC22718">
+						<StatModApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption>Счетчик аур</caption>
+							<constraint>None</constraint>
+							<dontUpdate>false</dontUpdate>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<modifier>
+								<addValue>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>1.0f</sString>
+								</addValue>
+								<multValue>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>1.0f</sString>
+								</multValue>
+								<stat>Life</stat>
+								<topModifier>false</topModifier>
+								<variable>Status_289</variable>
+							</modifier>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<statModName></statModName>
+						</StatModApplicator>
+					</Item>
+					<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="9E0094E9-2760-443C-9707-0AE5B2DE7AB4">
+						<StatModApplicator>
+							<applyTarget>AbilityOwner</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption>увеличить CanActivate289</caption>
+							<constraint>None</constraint>
+							<dontUpdate>false</dontUpdate>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString>FScAAAAGAAAALgAAAEMAAABgAAAAhgAAAKQAAADGAAAAVGFyZ2V0AABUYXJnZXQAAExpZmVDb25kaXRpb24AAABUYXJnZXQAVYvsg+wgaAAAAACLRRCLEItNEItCTP/QiUX8aAgAAACLTRCLEYtNEItCTP/QiUX4i00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ/9CLTfiLEYtN+ItCDN1d8P/Q3E3w3A3wAAAAi038ixGLTfyLAt1d6P/Q3F3o3+D2xAV6N2ggAAAAi00QixGLTRCLQkz/0IlF5ItN5IsRi03kiwL/0Nwd6AAAAN/g9sQBdQnHReABAAAA6wfHReAAAAAAikXgi+VdwwAAAAAAAPA/AAAAQOF6hD8=</compiledString>
+								<returnType>bool</returnType>
+								<sString>appl.oTarget.Life &lt; appl.oTarget.MaxLife * cLifeCondition * 0.01f &amp;&amp; appl.oTarget.Life &gt;= 1</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<modifier>
+								<addValue>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>1.0f</sString>
+								</addValue>
+								<multValue>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>1.0f</sString>
+								</multValue>
+								<stat>Life</stat>
+								<topModifier>false</topModifier>
+								<variable>CanActivate289</variable>
+							</modifier>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<statModName></statModName>
+						</StatModApplicator>
+					</Item>
+					<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="C495A5EB-FED2-4715-8BB0-F2A7F505ECA7">
+						<StatusApplicator parent="/Heroes/DefaultStatus/_HASTE_status.APLR">
+							<applicators>
+								<Item skip="1" />
+								<Item delete="1" />
+							</applicators>
+						</StatusApplicator>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>поиск целей, у которых мало здоровья</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName>Find289Targets</formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<range>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</range>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<targets>2040319</targets>
+				<targetSelector href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="375E7B2F-1A53-4CE0-BE68-47CD7FF0BE11">
+					<ComparingTargetSelector>
+						<referenceValue>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</referenceValue>
+						<targetSelector href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="F1A12DE5-A910-4ABA-802F-DD8F74CCB1E2">
+							<ConditionTargetSelector>
+								<condition>
+									<compiledString>FXgAAAANAAAAowAAALwAAADPAAAA5QAAAPUAAAALAQAAGwEAADEBAABBAQAAVwEAAGkBAACJAQAAqQEAAExpZmVDb25kaXRpb24AAABHaXZlTGlmZVJlZzI4OQAAQTRTdGFydGVkAAAAQW5nZWxBNVN0YXJ0AAAAAFZhbXBSZXNTdGFydGVkAABGYWlyeU1vdW50QTMAAAAATmlnaHRNb3VudEE0AAAAAEcyOTRIZXJvT2ZmAFWL7IPsFItFDIsQi00MiwL/0ItNDIsRi00Mi0IM3V34/9CLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlDdXfD/0NxN8NwN6QEAANxd+N/g9sRBD4X9AAAAaBAAAACLTQyLEYtNDIuCiAEAAP/Q3B3hAQAA3+D2xEEPitcAAABoIAAAAItNDIsRi00Mi4KIAQAA/9DcHdkBAADf4PbERA+KsQAAAGgsAAAAi00MixGLTQyLgogBAAD/0Nwd2QEAAN/g9sRED4qLAAAAaDwAAACLTQyLEYtNDIuCiAEAAP/Q3B3ZAQAA3+D2xER6aWoAi00QUWhMAAAAi1UMiwKLTQyLkJwBAAD/0jtFEHVJagCLRRBQaFwAAACLTQyLEYtNDIuCnAEAAP/QO0UQdSlqAItNEFFobAAAAItVDIsCi00Mi5CcAQAA/9I7RRB1CcdF7AEAAADrB8dF7AAAAACKReyL5V3DAAAAAAAAAAAAAAAAAADwP3sUrkfheoQ/</compiledString>
+									<returnType>bool</returnType>
+									<sString>rLife &lt; rMaxLife * cLifeCondition * 0.01 &amp;&amp; receiver.vGiveLifeReg289 &lt;= 1 &amp;&amp; receiver.vA4Started == 0 &amp;&amp; receiver.vAngelA5Start == 0 &amp;&amp; receiver.vVampResStarted == 0 &amp;&amp; receiver.applFairyMountA3(GLOBAL) == pMisc &amp;&amp; receiver.applNightMountA4(GLOBAL) == pMisc &amp;&amp; receiver.applG294HeroOff(GLOBAL) == pMisc</sString>
+								</condition>
+								<flags>0</flags>
+								<mode>Normal</mode>
+								<targetSelector href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="85DBEB98-8850-41E0-841B-6CBD26311857">
+									<ListOfTargetSelectors>
+										<flags>0</flags>
+										<mode>Normal</mode>
+										<targetSelectors>
+											<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="10F031AE-1B3F-4B82-B2DA-E053B9B44B47">
+												<HeroEnumerator>
+													<flags>0</flags>
+													<mode>Normal</mode>
+													<targetFilter>1342177283</targetFilter>
+												</HeroEnumerator>
+											</Item>
+											<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="AFD8DD3B-04CB-4886-83EA-870313E75BD8">
+												<ConditionTargetSelector>
+													<condition>
+														<compiledString>FQkAAAACAAAADgAAACQAAABMaWtlSGVybwBVi+xRaAAAAACLRQyLEItNDIuCiAEAAP/Q3B1GAAAA3+D2xAF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAA8D8=</compiledString>
+														<returnType>bool</returnType>
+														<sString>receiver.vLikeHero &gt;= 1</sString>
+													</condition>
+													<flags>0</flags>
+													<mode>Normal</mode>
+													<targetSelector href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="BCCADD3E-3802-491D-BC62-41701FBFBC15">
+														<SummonEnumerator>
+															<flags>0</flags>
+															<mode>Normal</mode>
+															<summonTypes>1</summonTypes>
+														</SummonEnumerator>
+													</targetSelector>
+												</ConditionTargetSelector>
+											</Item>
+										</targetSelectors>
+									</ListOfTargetSelectors>
+								</targetSelector>
+							</ConditionTargetSelector>
+						</targetSelector>
+						<valueToCompare>
+							<compiledString>FRYAAAAFAAAAHQAAADMAAABHAAAAVQAAAHAAAABBMUlzV29ya2luZwBHMjg5UmVnSFAAVYvsg+wcaAAAAACLRQyLEItNDIuCiAEAAP/Q3B3FAAAA3+D2xER6B9no3V346wndBbUAAADdXfhqAItNEFFoDAAAAItVDIsCi00Mi5CcAQAA/9I7RRB1C90FrQAAAN1d8OsF2e7dXfCLRQyLEItNDIsC/9CLTQyLEYtNDItCDN1d6P/Q3H3o3E343EXw2V3k2UXki+Vdw3sUrkfheqQ/AAAAAAAA4D8AAAAAAADwPwAAAAAAAAAA</compiledString>
+							<returnType>float</returnType>
+							<sString>(rLife/rMaxLife) * (receiver.vA1IsWorking == 0 ? 1 : 0.5) + (receiver.applG289RegHP(GLOBAL) == pMisc ? 0.04: 0)</sString>
+						</valueToCompare>
+					</ComparingTargetSelector>
+				</targetSelector>
+				<type>None</type>
+			</AuraApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="D12D19EA-F769-4C4A-8BF7-F824C8927164">
+			<FlagsApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>запрет пока нет поврежденных союзников</caption>
+				<consumables />
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQ8AAAACAAAAFAAAACoAAABDYW5BY3RpdmF0ZTI4OQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1MAAAA3+D2xER6CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vCanActivate289 == 0</sString>
+				</enabled>
+				<flag>1024</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents>
+					<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" />
+				</talents>
+				<useListAs>ListAsRule</useListAs>
+			</FlagsApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="B01AAD8A-88EE-407F-8310-920C2F137E99">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>StrOrInt</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&gt;=sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G289_StrOrInt</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="5FF42D02-D9BF-4D49-919F-A3857BE417EE">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Strength</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&gt;=sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9TdGF0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Strength</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" id="81359AF6-1A55-42C3-8470-8D75A11941E9">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Intellect</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&lt;sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9TdGF0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Intellect</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G289</persistentId>
+	<prerequisiteTalents />
+	<rarity>exclusive</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT_shortDescription.txt" />
+	<talentRollGroups>0</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats>
+		<Item>
+			<addValueName>Add_Stat</addValueName>
+			<stat>Strength</stat>
+			<values>
+				<Item>7</Item>
+				<Item>7.56</Item>
+				<Item>8.12</Item>
+				<Item>8.679999</Item>
+				<Item>9.24</Item>
+				<Item>9.8</Item>
+				<Item>10.36</Item>
+				<Item>10.92</Item>
+				<Item>11.48</Item>
+				<Item>12.04</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_Stat</addValueName>
+			<stat>Intellect</stat>
+			<values>
+				<Item>7</Item>
+				<Item>7.56</Item>
+				<Item>8.12</Item>
+				<Item>8.679999</Item>
+				<Item>9.24</Item>
+				<Item>9.8</Item>
+				<Item>10.36</Item>
+				<Item>10.92</Item>
+				<Item>11.48</Item>
+				<Item>12.04</Item>
+			</values>
+		</Item>
+	</variativeMaxTalentStats>
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

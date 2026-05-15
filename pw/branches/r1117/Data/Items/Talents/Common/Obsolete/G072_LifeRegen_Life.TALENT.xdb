@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Dialog/CastleTutorial/Ador/m3/m30_qB" Count="5" />
+	<BackLink DBID="/Dialog/CastleTutorial/Dokt/m3/m30_qA" Count="5" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar3" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/defaultSet.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Episode1/Talents/DuelRockman_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Crusader/Duel_A_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Crusader/Duel_A_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Crusader/Duel_B_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Crusader/Duel_B_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Firefox/Duel_HpInt.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Freeze/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Freeze/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Highlander/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Marine/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Marine/Duel_Cat.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Monster/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Naga/Duel_Vamp.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Night/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Rockman/Duel_Life.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Rockman/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Unicorn/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Vampire/Duel_Asp.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Vampire/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Vampire/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Warlord/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Test_ManaRework.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet3.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="3" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G072: Сердце дракона</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G072_LifeRegen_Life.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G072_LifeRegen_Life.TALENT" id="49DC95E1-CD1B-4AEA-B35B-346BC81856BD">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G072_LifeRegen_Life.TALENT" id="20011D6B-04DF-40B3-9236-645B90B526E6">
+					<UnitConstant>
+						<name>Add_Life</name>
+						<var>
+							<compiledString>FRMAAAADAAAAIgAAADwAAABVAAAAVDZfU3RhdABMaWZlQnVkZ2V0AFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoCAAAAItVEIsCi00Qi1BQ3V34/9LcTfjcDWMAAADZXfTZRfSL5V3DZmZmZmZm5j8=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT6_Stat * cLifeBudget * 0.7</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G072_LifeRegen_Life.TALENT" id="F495562C-E248-4B7B-B2FC-E9DA69F2FB68">
+					<UnitConstant>
+						<name>Add_LifeRegAbs</name>
+						<var>
+							<compiledString>FRYAAAADAAAAJQAAAD8AAABYAAAAVDZfU3RhdABMaWZlUmVnQnVkZ2V0AFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoCAAAAItVEIsCi00Qi1BQ3V34/9LcTfjcDWYAAADZXfTZRfSL5V3DAAAAAAAA4D8=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT6_Stat * cLifeRegBudget * 0.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G072_LifeRegen_Life.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>31.31</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_072.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>5</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G072_LifeRegen_Life.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/Obsolete/G072_LifeRegen_Life.TALENT" id="D5FCBF42-A6E3-4C3E-90E9-BE2BE5569CEB">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption></caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9MaWZlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Life</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G072_LifeRegen_Life.TALENT" id="33F3870F-D598-48AA-B205-F461A5D801BA">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption></caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQ8AAAABAAAAGwAAAEFkZF9MaWZlUmVnQWJzAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_LifeRegAbs</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>LifeRegenerationAbsolute</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G072</persistentId>
+	<prerequisiteTalents />
+	<rarity>excellent</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/Obsolete/G072_LifeRegen_Life.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>Life</stat>
+			<values>
+				<Item>567</Item>
+				<Item>609</Item>
+				<Item>651</Item>
+				<Item>693</Item>
+				<Item>735</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName></addValueName>
+			<stat>LifeRegenerationAbsolute</stat>
+			<values>
+				<Item>12.15</Item>
+				<Item>13.05</Item>
+				<Item>13.95</Item>
+				<Item>14.85</Item>
+				<Item>15.75</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>1909247</targetType>
+	<type>Simple</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

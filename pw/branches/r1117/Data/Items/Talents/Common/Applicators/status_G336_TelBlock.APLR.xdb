@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StatusApplicator>
+	<BackLink DBID="/Items/Talents/Common/G336_StrAspd_TelBlock.TALENT" Count="1" />
+	<applicators>
+		<Item href="/Items/Talents/Common/Applicators/status_G336_TelBlock.APLR" id="D714DDA1-C0C9-4CFB-BEDD-E8AE258BD2EC">
+			<FlagsApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>144</behaviorFlags>
+				<caption>Запрет таланта Portal</caption>
+				<consumables>
+					<Item href="/Items/Consumables/AdvanceTeleportScroll.ARCT" />
+					<Item href="/Items/Consumables/TeleportScroll.ARCT" />
+				</consumables>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FRMAAAACAAAAIAAAADMAAABUZWxCbG9ja19Db25kaXRpb24AVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3B1PAAAA3+D2xER7BsZF/wHrBMZF/wCKRf+L5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>cTelBlock_Condition</sString>
+				</enabled>
+				<flag>1536</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString>FRIAAAABAAAAHgAAAFRlbEJsb2NrX0R1cmF0aW9uAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+					<returnType>float</returnType>
+					<sString>cTelBlock_Duration</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents>
+					<Item href="/Items/Talents/_commonData/Portal.TALENT" />
+					<Item href="/Items/Talents/_commonData/Portal_CTE.TALENT" />
+					<Item href="/Items/Talents/_commonData/Portal_MidOnly.TALENT" />
+				</talents>
+				<useListAs>ListAsRule</useListAs>
+			</FlagsApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Applicators/status_G336_TelBlock.APLR" id="AC64D919-5503-47B3-AF56-507852DD08EA">
+			<UIMessageApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption> - FlyOff Message</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<message textref="/Items/Talents/Common/Applicators/status_G336_TelBlock.APLR_ac64d919550347b3af56507852dd08ea_message.txt" />
+				<providerName></providerName>
+				<uiEvent href="/UI/Events/CommonEvents/EventCustomFlyoff.UIEV" />
+				<value>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</value>
+			</UIMessageApplicator>
+		</Item>
+	</applicators>
+	<applyTarget>ApplicatorTarget</applyTarget>
+	<behaviorFlags>144</behaviorFlags>
+	<caption> -- Cтатус Portal Block</caption>
+	<customCounter>
+		<compiledString></compiledString>
+		<returnType>int</returnType>
+		<sString>0</sString>
+	</customCounter>
+	<customProgress>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>-1.0</sString>
+	</customProgress>
+	<description textref="/Items/Talents/Common/Applicators/status_G336_TelBlock.APLR_description.txt" />
+	<dispellPriority>High</dispellPriority>
+	<effect>
+		<Item href="/Effects/Debuffs/TeleportBlock/_Aim.EFFT" />
+		<Item href="" />
+	</effect>
+	<enabled>
+		<compiledString>FSMAAAAEAAAAKAAAAD4AAABSAAAAZQAAAEltbXVuZTJDb250cm9sAABUZWxCbG9ja19Db25kaXRpb24AVYvsUWgAAAAAi0UMixCLTQyLgogBAAD/0NwdhwAAAN/g9sREejCLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlD/0NwdhwAAAN/g9sREewnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+		<returnType>bool</returnType>
+		<sString>receiver.vImmune2Control == 0 &amp;&amp; cTelBlock_Condition</sString>
+	</enabled>
+	<flags>0</flags>
+	<formulaName>StatusTelBlock</formulaName>
+	<image href="/UI/Styles/Icons/Talents/_336.ITEX" />
+	<lifeTime>
+		<compiledString>FRIAAAABAAAAHgAAAFRlbEJsb2NrX0R1cmF0aW9uAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<returnType>float</returnType>
+		<sString>cTelBlock_Duration</sString>
+	</lifeTime>
+	<LoggingEvent>-1</LoggingEvent>
+	<name textref="/Items/Talents/Common/Applicators/status_G336_TelBlock.APLR_name.txt" />
+	<power>0</power>
+	<providerName></providerName>
+	<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+	<stackCount>0</stackCount>
+	<startCondition>
+		<compiledString>FRgAAAACAAAAJQAAADgAAABUZWxCbG9ja19TdGFydENvbmRpdGlvbgBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcHVQAAADf4PbERHsGxkX/AesExkX/AIpF/4vlXcMAAAAAAAAAAA==</compiledString>
+		<returnType>bool</returnType>
+		<sString>cTelBlock_StartCondition</sString>
+	</startCondition>
+	<statusPosition>0</statusPosition>
+	<stopBehaviour>StopByTime</stopBehaviour>
+	<unstackableWith href="" />
+</StatusApplicator>

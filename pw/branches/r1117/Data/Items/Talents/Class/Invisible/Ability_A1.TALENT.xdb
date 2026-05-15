@@ -2,19 +2,19 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Invisible.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Invisible_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Invisible.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Invisible_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Invisible_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A1_SUP.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A1u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Invisible_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Elite_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Elite_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Epic_Str.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A1_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -51,8 +51,8 @@
 		<Item href="/Heroes/DefaultStatus/CheckTheWard.ABCL" />
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Invisible/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Invisible/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Invisible/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Invisible/Ability_A1.TALENT" id="4E85EC3B-2E77-4F54-AB42-2D81C2C0A4AF">
 			<ConditionFormula>
@@ -119,7 +119,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="/Items/Talents/Class/Invisible/A1_Dispatch.DSCH" />
 	<flags>11</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Invisible/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

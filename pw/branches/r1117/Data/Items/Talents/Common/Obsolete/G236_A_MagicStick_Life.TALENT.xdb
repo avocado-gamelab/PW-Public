@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/TalentGroup.TGRP" Count="1" />
+	<BackLink DBID="/Heroes/DefaultStatus/CancelAllEnemyDispatches.APLR" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar3" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" Count="1" />
+	<BackLink DBID="/Test/Talents/OrangeSet5.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet4.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="FB97753D-D748-49A3-9676-D41C4E8339CC">
+			<PermanentStatModApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<caption>Запоминаем значение хила для этого использования</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQ8AAAABAAAAGwAAAFRFQ0hfSGVhbFRvdGFsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cTECH_HealTotal</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>true</topModifier>
+					<variable>G236_ThisHealAmount</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="0E8D27A5-B4CE-4D2E-8604-3077254E67C1">
+			<PermanentStatModApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<caption>Обнуляем счётчик</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>true</topModifier>
+					<variable>G236Counter</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="BEA7D13C-FC43-4AE0-B31C-3345513FC478">
+			<SpellSwitchApplicator>
+				<activeSpellIndex>
+					<compiledString>FQ8AAAACAAAAFAAAACoAAABQYW50aGVySXNBbGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1YAAAA3+D2xER7CcdF/AEAAADrB8dF/AAAAADbRfxR2Rwk6A8AAACDxASL5V3DAAAAAAAA8D+4AQAAAA+i98IAAAAEdAfzDyxEJATD6QAAAABVi+yD7AzZRQjZffwPt0X8DQAMAACJRfjZbfjbXfTZbfyLRfSL5V3D</compiledString>
+					<returnType>int</returnType>
+					<sString>f2l(sender.vPantherIsAlive != 1)</sString>
+				</activeSpellIndex>
+				<applyTarget>AbilityOwner</applyTarget>
+				<caption>Выбор: мы одни или с кошкой</caption>
+				<dontUseDispatches>true</dontUseDispatches>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spells>
+					<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="859B4457-EA9E-4A27-8884-6B6211FCBA31">
+						<Spell>
+							<applicators>
+								<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="E39B65DB-7112-47FF-B94E-8BC2DFAFD8A0">
+									<SpellApplicator>
+										<applyTarget>ApplicatorTarget</applyTarget>
+										<caption>Есть кошка: спелл в саммона с хилами</caption>
+										<enabled>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</enabled>
+										<formulaName></formulaName>
+										<LoggingEvent>-1</LoggingEvent>
+										<providerName></providerName>
+										<spell href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="E658D01E-F2E3-4BF5-A166-6F2DD8C5D1B6">
+											<Spell>
+												<applicators>
+													<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="032211A1-B5F7-4566-930F-9B0BAFE8334A">
+														<PermanentStatModApplicator>
+															<applyTarget>AbilityOwner</applyTarget>
+															<caption>Запоминаем нехватку Здоровья у кошки</caption>
+															<customApplyType>None</customApplyType>
+															<enabled>
+																<compiledString></compiledString>
+																<returnType>bool</returnType>
+																<sString>true</sString>
+															</enabled>
+															<formulaName></formulaName>
+															<LoggingEvent>-1</LoggingEvent>
+															<modifier>
+																<addValue>
+																	<compiledString>FR8AAAAEAAAAJgAAADwAAABPAAAAZAAAAFBhbnRoZXJJc0FsaXZlAABUYXJnZXQAAFRhcmdldABVi+yD7BxoAAAAAItFCIsQi00Ii4KIAQAA/9DcHa8AAADf4PbERHsH2e7dXfjrTGgQAAAAi00QixGLTRCLQkz/0IlF9GgYAAAAi00QixGLTRCLQkz/0IlF8ItN8IsRi03wiwL/0ItN9IsRi030i0IM3V3o/9DcZejdXfjdRfjZXeTZReSL5V3DAAAAAAAAAAAAAAAAAADwPw==</compiledString>
+																	<returnType>float</returnType>
+																	<sString>sender.vPantherIsAlive != 1 ? 0 : appl.oTarget.MaxLife - appl.oTarget.Life</sString>
+																</addValue>
+																<multValue>
+																	<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+																	<returnType>float</returnType>
+																	<sString>0</sString>
+																</multValue>
+																<stat>Life</stat>
+																<topModifier>false</topModifier>
+																<variable>G236_ThisHealPantherLifeLack</variable>
+															</modifier>
+															<providerName></providerName>
+														</PermanentStatModApplicator>
+													</Item>
+													<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="2D634741-9CA6-4622-982A-D0853CE67330">
+														<HealApplicator>
+															<amount>
+																<compiledString>FTEAAAACAAAANQAAAE4AAABHMjM2X1RoaXNIZWFsQW1vdW50AEcyMzZfVGhpc0hlYWxQYW50aGVyTGlmZUxhY2sAVYvsaAAAAACLRQiLEItNCIuCiAEAAP/QUdkcJGgUAAAAi00IixGLTQiLgogBAAD/0FHZHCToBQAAAIPECF3DVYvsUdlFCNlFDN7Z3+D2xEF1CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+																<returnType>float</returnType>
+																<sString>min(sender.vG236_ThisHealPantherLifeLack, sender.vG236_ThisHealAmount)</sString>
+															</amount>
+															<applyTarget>ApplicatorTarget</applyTarget>
+															<caption>Есть кошка: хил в саммона</caption>
+															<enabled>
+																<compiledString>FR0AAAACAAAAIgAAADgAAABHMjM2X1RoaXNIZWFsUGFudGhlckxpZmVMYWNrAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHVoAAADf4PbEQXUJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+																<returnType>bool</returnType>
+																<sString>sender.vG236_ThisHealPantherLifeLack &gt; 0</sString>
+															</enabled>
+															<formulaName></formulaName>
+															<healTarget>Health</healTarget>
+															<ignoreHealingMods>false</ignoreHealingMods>
+															<LoggingEvent>-1</LoggingEvent>
+															<providerName></providerName>
+															<uiEvent href="/UI/Events/CommonEvents/EventHeal.UIEV" />
+														</HealApplicator>
+													</Item>
+													<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="036CAA60-645F-41DB-9402-E72AA38C870A">
+														<HealApplicator>
+															<amount>
+																<compiledString>FTEAAAACAAAAOAAAAE0AAABHMjM2X1RoaXNIZWFsQW1vdW50AEcyMzZfVGhpc0hlYWxQYW50aGVyTGlmZUxhY2sAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/QaBQAAACLTQiLEYtNCIuCiAEAAN1d+P/Q3G342V302UX0UdkcJFHZ7tkcJOgLAAAAg8QIi+VdwwAAAABVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+																<returnType>float</returnType>
+																<sString>max(0, sender.vG236_ThisHealAmount - sender.vG236_ThisHealPantherLifeLack)</sString>
+															</amount>
+															<applyTarget>AbilityOwner</applyTarget>
+															<caption>Есть кошка: хил в героя</caption>
+															<enabled>
+																<compiledString>FTQAAAACAAAAOwAAAFAAAABHMjM2X1RoaXNIZWFsUGFudGhlckxpZmVMYWNrAAAAAEcyMzZfVGhpc0hlYWxBbW91bnQAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/QaCAAAACLTQiLEYtNCIuCiAEAAN1d+P/Q3F343+D2xEF1CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+																<returnType>bool</returnType>
+																<sString>sender.vG236_ThisHealPantherLifeLack &lt; sender.vG236_ThisHealAmount</sString>
+															</enabled>
+															<formulaName></formulaName>
+															<healTarget>Health</healTarget>
+															<ignoreHealingMods>false</ignoreHealingMods>
+															<LoggingEvent>-1</LoggingEvent>
+															<providerName></providerName>
+															<uiEvent href="/UI/Events/CommonEvents/EventHeal.UIEV" />
+														</HealApplicator>
+													</Item>
+												</applicators>
+												<dispatch href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="62B4462E-D0F8-46B4-A275-B4CA3F5FC13F">
+													<DispatchImmediate>
+														<alwaysApply>false</alwaysApply>
+														<applyEffect>
+															<Item href="" />
+															<Item href="" />
+														</applyEffect>
+														<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+														<applyEffectOrientation>Default</applyEffectOrientation>
+														<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+														<dieAfterApply>true</dieAfterApply>
+														<dispatchEffect>
+															<Item href="" />
+															<Item href="" />
+														</dispatchEffect>
+														<flags>0</flags>
+														<instantApply>true</instantApply>
+													</DispatchImmediate>
+												</dispatch>
+											</Spell>
+										</spell>
+										<spellTarget>ApplicatorTarget</spellTarget>
+										<targetSelector href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="C58BCD44-7B72-468B-ABD3-0B23DED17416">
+											<RelativeUnitTargetSelector>
+												<relation>AlphaSummon</relation>
+											</RelativeUnitTargetSelector>
+										</targetSelector>
+									</SpellApplicator>
+								</Item>
+							</applicators>
+							<dispatch href="" />
+						</Spell>
+					</Item>
+					<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="BC3087C2-7AB3-49BE-84A9-AD0F6134AA68">
+						<Spell>
+							<applicators>
+								<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="8F5F6473-1410-4A6A-9675-DCAD2D83592F">
+									<HealApplicator>
+										<amount>
+											<compiledString>FRQAAAABAAAAGAAAAEcyMzZfVGhpc0hlYWxBbW91bnQAVYvsaAAAAACLRQiLEItNCIuCiAEAAP/QXcM=</compiledString>
+											<returnType>float</returnType>
+											<sString>sender.vG236_ThisHealAmount</sString>
+										</amount>
+										<applyTarget>AbilityOwner</applyTarget>
+										<caption>Нет кошки: хил в героя</caption>
+										<enabled>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</enabled>
+										<formulaName></formulaName>
+										<healTarget>Health</healTarget>
+										<ignoreHealingMods>false</ignoreHealingMods>
+										<LoggingEvent>-1</LoggingEvent>
+										<providerName></providerName>
+										<uiEvent href="/UI/Events/CommonEvents/EventHeal.UIEV" />
+									</HealApplicator>
+								</Item>
+							</applicators>
+							<dispatch href="" />
+						</Spell>
+					</Item>
+				</spells>
+			</SpellSwitchApplicator>
+		</Item>
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G236: Резервы здоровья</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="051B1EC6-B5D9-4481-B913-56C11ECD1AFB">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHMjM2Q291bnRlcgBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG236Counter &gt; 0</sString>
+				</condition>
+				<name>EnoughPoints</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="63D6B6EE-AF3A-455D-97FE-E05A025AF5BD">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="2509B426-A192-4699-B319-9553ACC813DD">
+					<UnitConstant>
+						<name>Range</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAC4QQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>23</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="B95C9970-460D-4780-AC9B-C409BB9189FF">
+					<UnitConstant>
+						<name>StacksPerCast</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="EC494E6B-32BB-4847-BFD3-B30AC8C96E5B">
+					<UnitConstant>
+						<name>MaxStacks</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>20</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="C48370B7-9D66-4551-A381-11F7B050FE75">
+					<UnitConstant>
+						<name>HealPerStack</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUMl9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcMAAAAAAAAcQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT2_Stat * 7</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="87F3AE16-2A4D-4456-859B-642C89444C03">
+					<UnitConstant>
+						<name>TECH_CurrentCounter</name>
+						<var>
+							<compiledString>FQwAAAABAAAAEAAAAEcyMzZDb3VudGVyAFWL7GgAAAAAi0UIixCLTQiLgogBAAD/0F3D</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG236Counter</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="D8958108-4895-4EC3-8F0B-0B67B7E00DC3">
+					<UnitConstant>
+						<name>TECH_HealTotal</name>
+						<var>
+							<compiledString>FSQAAAACAAAAMwAAAE0AAABIZWFsUGVyU3RhY2sAAAAAVEVDSF9DdXJyZW50Q291bnRlcgBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBAAAACLVRCLAotNEItQUN1d+P/S3E342V302UX0i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cHealPerStack * cTECH_CurrentCounter</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABwQQ==</compiledString>
+		<returnType>float</returnType>
+		<sString>15</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="6F345E03-0C75-4DBF-A829-8FC407558523">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="/Effects/Buffs/Regen/_.EFFT" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>18</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_236.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="7BE429CB-8927-420D-9383-0F24E9F91BD5">
+		<BasicMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString>FScAAAAEAAAALgAAAEsAAACTAAAA0gAAAEcyMzZDb3VudGVyAE1heFN0YWNrcwAAAFRFQ0hfSGVhbFRvdGFsAFWL7IPsJGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaAwAAACLRRCLEItNEItCUN1d+P/Q3UX42unf4PbERHpGi00IixGLTQiLQgz/0ItNCIsRi00IiwLdXfD/0Nxt8ItNDFGLVQhSaBgAAACLRRCLEItNEItCUN1d6P/Q3F3o3+D2xAV7NYtNCIsRi00IiwL/0ItNCIsRi00Ii0IM3V3g/9DcfeDcHfQAAADf4PbEBXsJx0XcAAAAAOsHx0XcAQAAAIpF3IvlXcOamZmZmZm5Pw==</compiledString>
+				<returnType>bool</returnType>
+				<sString>(sender.vG236Counter == cMaxStacks) &amp;&amp; (sMaxLife - sLife) &gt; cTECH_HealTotal || (sLife / sMaxLife &lt; 0.1)</sString>
+			</condition>
+		</BasicMicroAI>
+	</microAI>
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="4A5A9A6D-0D5F-43E1-A824-8B6C7F60C7B5">
+			<FlagsApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Запрет использовать без стеков</caption>
+				<consumables />
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHMjM2Q291bnRlcgBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF6CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG236Counter &lt;= 0</sString>
+				</enabled>
+				<flag>1024</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents>
+					<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" />
+				</talents>
+				<useListAs>ListAsRule</useListAs>
+			</FlagsApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="0FFB521B-E715-461D-AED3-4FF9E1BF0FBA">
+			<AuraApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="ECC9782D-6260-4C9F-ACC7-38C6334AE751">
+						<TriggerApplicator>
+							<actionsCount>
+								<compiledString></compiledString>
+								<returnType>int</returnType>
+								<sString>0</sString>
+							</actionsCount>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption>Триггер на каст</caption>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<playAck>false</playAck>
+							<processor href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="A6E21FD0-9FCE-44B3-A56F-D87C9B7F5AC5">
+								<EventProcessorAbilityManacostTransformer>
+									<applyTarget>AbilityOwner</applyTarget>
+									<filter>
+										<abilitiesList />
+										<abilityCondition>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</abilityCondition>
+										<abilityCostMode>Custom</abilityCostMode>
+										<exceptThis>false</exceptThis>
+										<flags>536871102</flags>
+										<onlySingleTarget>false</onlySingleTarget>
+									</filter>
+									<spell href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="217F70F7-A1F3-4B23-B48E-3BF2B9F8DAE9">
+										<Spell>
+											<applicators>
+												<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="D3803E4F-4D49-41B9-8A6C-3C0C6BD677D2">
+													<SpellApplicator>
+														<applyTarget>PrevApplicatorTarget</applyTarget>
+														<caption></caption>
+														<enabled>
+															<compiledString></compiledString>
+															<returnType>bool</returnType>
+															<sString>true</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<providerName></providerName>
+														<spell href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="598383EE-1053-42C7-B8CB-C742201F0381">
+															<Spell>
+																<applicators>
+																	<Item href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="7C09462F-9F65-4507-ADBA-4A84BF9865A2">
+																		<PermanentStatModApplicator>
+																			<applyTarget>AbilityOwner</applyTarget>
+																			<caption>Увеличиваем счётчик</caption>
+																			<customApplyType>None</customApplyType>
+																			<enabled>
+																				<compiledString>FRYAAAACAAAAHQAAADoAAABHMjM2Q291bnRlcgBNYXhTdGFja3MAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Qi00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>sender.vG236Counter &lt; cMaxStacks</sString>
+																			</enabled>
+																			<formulaName></formulaName>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<modifier>
+																				<addValue>
+																					<compiledString>FQ4AAAABAAAAGgAAAFN0YWNrc1BlckNhc3QAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+																					<returnType>float</returnType>
+																					<sString>cStacksPerCast</sString>
+																				</addValue>
+																				<multValue>
+																					<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																					<returnType>float</returnType>
+																					<sString>1</sString>
+																				</multValue>
+																				<stat>Life</stat>
+																				<topModifier>false</topModifier>
+																				<variable>G236Counter</variable>
+																			</modifier>
+																			<providerName></providerName>
+																		</PermanentStatModApplicator>
+																	</Item>
+																</applicators>
+																<dispatch href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="754E9103-A470-4005-BC0D-F686A05708C3">
+																	<DispatchLinear>
+																		<aiming>Straight</aiming>
+																		<alwaysApply>true</alwaysApply>
+																		<applyEffect>
+																			<Item href="/Effects/Buffs/EnergyBurst/_FlyInGreen.EFFT" />
+																			<Item href="" />
+																		</applyEffect>
+																		<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																		<applyEffectOrientation>Motion</applyEffectOrientation>
+																		<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																		<dieAfterApply>true</dieAfterApply>
+																		<dispatchEffect>
+																			<Item href="" />
+																			<Item href="" />
+																		</dispatchEffect>
+																		<flags>0</flags>
+																		<flyMode>Linear</flyMode>
+																		<fromLocator>Body</fromLocator>
+																		<height>0</height>
+																		<killEffect>true</killEffect>
+																		<locatorOrient>false</locatorOrient>
+																		<maxDeviation>180</maxDeviation>
+																		<maxDistance>-1</maxDistance>
+																		<maxRise>0</maxRise>
+																		<minRise>0</minRise>
+																		<persistentApplicators />
+																		<speed>40</speed>
+																		<suspendTime>0</suspendTime>
+																		<toLocator>Body</toLocator>
+																	</DispatchLinear>
+																</dispatch>
+															</Spell>
+														</spell>
+														<spellTarget>ApplicatorTarget</spellTarget>
+														<targetSelector href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="CA584423-06F0-4532-8765-A17A76F4449F">
+															<SelectApplicatorTarget>
+																<applicatorIndex>0</applicatorIndex>
+																<applicatorName></applicatorName>
+																<namedApplicatorTarget>ApplicatorTarget</namedApplicatorTarget>
+																<selectTarget>AbilityOwner</selectTarget>
+															</SelectApplicatorTarget>
+														</targetSelector>
+													</SpellApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="4E1AF9FD-6D7F-424A-958F-27FE8F4117C9">
+												<DispatchImmediate>
+													<alwaysApply>true</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+								</EventProcessorAbilityManacostTransformer>
+							</processor>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<useAbilityCooldown>false</useAbilityCooldown>
+							<useAbilityOwnerMana>false</useAbilityOwnerMana>
+						</TriggerApplicator>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Ловим касты вокруг (внимание: в диспатчах alwaysApply = true)</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FRYAAAACAAAAHQAAADoAAABHMjM2Q291bnRlcgBNYXhTdGFja3MAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Qi00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG236Counter &lt; cMaxStacks</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<range>
+					<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+					<returnType>float</returnType>
+					<sString>cRange</sString>
+				</range>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<targets>536870915</targets>
+				<targetSelector href="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT" id="BD0E1A12-B596-4D1F-8E1C-C3A65D2539A1">
+					<AreaTargetSelector>
+						<absolutePosition>
+							<x>0</x>
+							<y>0</y>
+						</absolutePosition>
+						<flags>0</flags>
+						<mode>Normal</mode>
+						<range>
+							<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange</sString>
+						</range>
+						<targetFilter>536870915</targetFilter>
+						<targetSelector href="" />
+					</AreaTargetSelector>
+				</targetSelector>
+				<type>None</type>
+			</AuraApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Applicators/status_G236_Ready.APLR" />
+	</passiveApplicators>
+	<persistentId>G236</persistentId>
+	<prerequisiteTalents />
+	<rarity>excellent</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/Obsolete/G236_A_MagicStick_Life.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

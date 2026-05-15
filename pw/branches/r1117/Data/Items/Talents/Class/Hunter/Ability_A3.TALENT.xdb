@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Hunter.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Hunter_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Hunter/Ability_A3u1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Hunter/Ability_A3u2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Hunter_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Hunter.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Hunter/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Hunter/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Hunter/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Hunter/Elite_PvE.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Hunter/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Hunter/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Hunter/Epic_Str.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Class/Hunter/Ability_A3.TALENT" id="7A9BB044-6CD6-414C-A196-763536B3D329">
+			<StatModApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>Запоминаем, где применили абилку</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString>FQ8AAAABAAAAGwAAAEhhc3RlX0R1cmF0aW9uAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+					<returnType>float</returnType>
+					<sString>cHaste_Duration</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>A3_UsedOnNT</variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQ4AAAACAAAAGwAAAC4AAABOYXRpdmVUZXJyYWluAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twdSgAAAN/g9sREewbGRf8B6wTGRf8AikX/i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>cNativeTerrain</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Hunter/A3SpellSwitch.APLR" />
+		<Item href="/Items/Talents/Class/Hunter/Ability_A3.TALENT" id="7B52EA43-D7FF-4500-B6B7-AEC54791D850">
+			<SpellApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<caption>послать спелл и себе, если уже не послали</caption>
+				<enabled>
+					<compiledString>FR8AAAADAAAAJgAAAD8AAAB1AAAASHVudGVyX0EzdTIASHVudGVyX0EzdTIAVGFyZ2V0AFWL7IPsDGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoDAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdCBoGAAAAItVEIsCi00Qi1BM/9I7RQh0CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Hunter_A3u2") &amp;&amp; $ApplTarget != pFirst</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Class/Hunter/Ability_A3.TALENT" id="F88D5DEC-833B-4CE1-9B98-752B7FFD7F1B">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Class/Hunter/A3SpellSwitch.APLR" />
+						</applicators>
+						<dispatch href="/Items/Talents/Class/Hunter/Ability_A3.TALENT" id="3663C529-58EA-40F2-83D7-6F6C784445CC">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>true</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="" />
+			</SpellApplicator>
+		</Item>
+	</applicators>
+	<askId>3</askId>
+	<autoTargetSelector href="/Items/Talents/Class/Hunter/Ability_A3.TALENT" id="282F794B-6D53-40B6-BF08-DED02CDE0C9A">
+		<FirstTargetSelector>
+			<nearestTarget>true</nearestTarget>
+			<targetSelector href="/Items/Talents/Class/Hunter/Ability_A3.TALENT" id="B9D1EC03-5186-460C-BA99-5C33E3411A1D">
+				<HeroEnumerator>
+					<flags>0</flags>
+					<mode>Normal</mode>
+					<targetFilter>1342177281</targetFilter>
+				</HeroEnumerator>
+			</targetSelector>
+		</FirstTargetSelector>
+	</autoTargetSelector>
+	<budget>-1</budget>
+	<caption>А3. Пыл охоты</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Class/Hunter/Ability_A3.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Hunter/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Hunter/Ability_A3.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Hunter/Ability_A3.TALENT" id="E25C38EC-46C4-480F-B45C-929440865BCD">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRgAAAACAAAAHwAAADgAAABIdW50ZXJfQTN1MQBIdW50ZXJfQTN1MQBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Hunter_A3u1") == false</sString>
+				</condition>
+				<name>Hunter_A3u1</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Hunter/Ability_A3.TALENT" id="E7398535-8732-43BD-880E-6903F91E8675">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRgAAAACAAAAHwAAADgAAABIdW50ZXJfQTN1MgBIdW50ZXJfQTN1MgBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Hunter_A3u2") == false</sString>
+				</condition>
+				<name>Hunter_A3u2</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/Hunter/Ability_A3.TALENT" id="A8AC44EF-EA3D-4664-8201-E901809164DE">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Hunter/Ability_A3.TALENT" id="AF4C252F-D8C8-4818-AA02-A3DD3AD054A5">
+					<UnitConstant>
+						<name>Haste_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>6</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Hunter/const_Haste_AtkSpdAmount" />
+				<Item href="/Items/Talents/Class/Hunter/const_Haste_AtkSpdAmountBase" />
+				<Item href="/Items/Talents/Class/Hunter/const_Haste_AtkSpdAmountTerrInc" />
+				<Item href="/Items/Talents/Class/Hunter/const_Haste_MoveAmount" />
+				<Item href="/Items/Talents/Class/Hunter/const_Haste_MoveAmountBase" />
+				<Item href="/Items/Talents/Class/Hunter/const_Haste_MoveAmountTerrInc" />
+				<Item href="/Items/Talents/Class/Hunter/const_A3_TerrBonus" />
+				<Item href="/Items/Talents/Class/Hunter/Ability_A3.TALENT" id="C83DAC41-191C-49F6-B1BA-D2287950A45B">
+					<UnitConstant>
+						<name>Haste_Percent</name>
+						<var>
+							<compiledString>FREAAAABAAAAHQAAAEhhc3RlX01vdmVBbW91bnQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cHaste_MoveAmount</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Hunter/Ability_A3.TALENT" id="B860CAE0-B483-410C-A802-39B708C2464B">
+					<UnitConstant>
+						<name>Haste_AtkSpdAmountTerrInc_TT</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>40</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACQQQ==</compiledString>
+		<returnType>float</returnType>
+		<sString>18</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Hunter/Ability_A3.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Class/Hunter/Ability_A3.TALENT" id="59BE21E4-C714-4297-A8A9-E0CE85DE6256">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>32787</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Hunter/A3.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAC0Qg==</compiledString>
+		<returnType>float</returnType>
+		<sString>90</sString>
+	</manaCost>
+	<marker>doCast3</marker>
+	<microAI href="/Items/Talents/Class/Hunter/Ability_A3.TALENT" id="E030DB94-3280-483F-AB57-E67C7134C111">
+		<TargetSelectorMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</condition>
+			<targetSelector href="/Items/Talents/Class/Hunter/Ability_A3.TALENT" id="3D88C6A2-F707-4FE4-9604-57B8C13E3D19">
+				<FirstTargetSelector>
+					<nearestTarget>false</nearestTarget>
+					<targetSelector href="/Items/Talents/Class/Hunter/Ability_A3.TALENT" id="4FA57737-E43E-450E-A38F-742FB2C32F92">
+						<AreaTargetSelector>
+							<absolutePosition>
+								<x>0</x>
+								<y>0</y>
+							</absolutePosition>
+							<flags>0</flags>
+							<mode>Normal</mode>
+							<range>
+								<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+								<returnType>float</returnType>
+								<sString>cRange_Long</sString>
+							</range>
+							<targetFilter>276824067</targetFilter>
+							<targetSelector href="" />
+						</AreaTargetSelector>
+					</targetSelector>
+				</FirstTargetSelector>
+			</targetSelector>
+		</TargetSelectorMicroAI>
+	</microAI>
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>390</naftaCost>
+	<name textref="/Items/Talents/Class/Hunter/Ability_A3.TALENT_name.txt" />
+	<node>ability3</node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/trigger_G766_RefreshAndNotify.APLR" />
+	</passiveApplicators>
+	<persistentId>Hunter_A3</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Class/Hunter/Ability_A3.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>1342177311</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Long</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

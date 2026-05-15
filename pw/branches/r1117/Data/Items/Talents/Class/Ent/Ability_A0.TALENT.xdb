@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Ent.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Ent_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Ent_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Ent.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Ent_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Ent_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Ent/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Ent/Epic_Str.TALENTSET" Count="1" />
 	<activationConditions />
@@ -36,8 +36,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Ent/Ability_A0.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Ent/Ability_A0.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Ent/Ability_A0.TALENT" id="E2F99F3A-EDF6-4844-9A22-982B22019647">
 			<ConditionFormula>
@@ -78,9 +78,9 @@
 					<UnitConstant>
 						<name>A0_TerrainAdditionalStat</name>
 						<var>
-							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAFHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoAi00QixGLTRCLQmD/0F3DAADAP83MNEE=</compiledString>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAFHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoAi00QixGLTRCLQmD/0F3DZmbmP5qZWUE=</compiledString>
 							<returnType>float</returnType>
-							<sString>abilityScale(sIntellect, 1.5, 11.3, false)</sString>
+							<sString>abilityScale(sIntellect, 1.8, 13.6, false)</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -88,9 +88,9 @@
 					<UnitConstant>
 						<name>A0_AddStrBase</name>
 						<var>
-							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAFHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoAi00QixGLTRCLQmD/0F3DAADAP83MNEE=</compiledString>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAFHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoAi00QixGLTRCLQmD/0F3DZmbmP5qZWUE=</compiledString>
 							<returnType>float</returnType>
-							<sString>abilityScale(sIntellect, 1.5, 11.3, false)</sString>
+							<sString>abilityScale(sIntellect, 1.8, 13.6, false)</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -98,9 +98,9 @@
 					<UnitConstant>
 						<name>A0_AddIntBase</name>
 						<var>
-							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAFHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoAi00QixGLTRCLQmD/0F3DAADAP83MNEE=</compiledString>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAFHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoAi00QixGLTRCLQmD/0F3DZmbmP5qZWUE=</compiledString>
 							<returnType>float</returnType>
-							<sString>abilityScale(sIntellect, 1.5, 11.3, false)</sString>
+							<sString>abilityScale(sIntellect, 1.8, 13.6, false)</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -126,7 +126,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Ent/A0.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

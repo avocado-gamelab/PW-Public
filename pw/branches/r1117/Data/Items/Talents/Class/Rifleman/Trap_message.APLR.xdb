@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UIMessageApplicator>
+	<BackLink DBID="/Items/Talents/Class/Rifleman/Summon_Trap.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Rifleman/Summon_Trap_SUP.APLR" Count="1" />
+	<applyTarget>AbilityOwner</applyTarget>
+	<caption>Информируем хозяина, что враг наступил в капкан</caption>
+	<enabled>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<LoggingEvent>-1</LoggingEvent>
+	<message textref="/Items/Talents/Class/Rifleman/Trap_message.APLR_message.txt" />
+	<providerName></providerName>
+	<uiEvent href="/Items/Talents/Class/Rifleman/Trap_message.APLR" id="1755972B-35A2-4DA1-8DC4-6EA4BF3AAD9A">
+		<UIEvent>
+			<signRecipients>PLAYER_ONLY</signRecipients>
+			<UISigns>
+				<Item href="/Items/Talents/Class/Rifleman/Trap_message.APLR" id="940D0112-18D0-443B-906F-33D5C67748BB">
+					<UISignFlyOffText>
+						<signRecipients>USE_FROM_PARENT</signRecipients>
+						<text>
+							<acceleration>
+								<x>0</x>
+								<y>0</y>
+							</acceleration>
+							<align>Center</align>
+							<endOpacity>0</endOpacity>
+							<layout>fly_custom_text</layout>
+							<lifeTime>2</lifeTime>
+							<offset>
+								<x>0</x>
+								<y>-100</y>
+							</offset>
+							<startOpacity>1</startOpacity>
+							<velocity>
+								<x>0</x>
+								<y>-45</y>
+							</velocity>
+						</text>
+					</UISignFlyOffText>
+				</Item>
+			</UISigns>
+		</UIEvent>
+	</uiEvent>
+	<value>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>-1.0</sString>
+	</value>
+</UIMessageApplicator>

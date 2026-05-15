@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DispatchLinear>
-	<BackLink DBID="/Items/Talents/Class/Faceless/Ability1.TALENT" Count="2" />
+	<BackLink DBID="/Items/Talents/Class/Faceless/Ability_A1.TALENT" Count="3" />
+	<BackLink DBID="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" Count="2" />
 	<aiming>Straight</aiming>
 	<alwaysApply>false</alwaysApply>
 	<applyEffect>
@@ -8,17 +9,17 @@
 		<Item href="" />
 	</applyEffect>
 	<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
-	<applyEffectOrientation>Default</applyEffectOrientation>
+	<applyEffectOrientation>Motion</applyEffectOrientation>
 	<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
 	<dieAfterApply>true</dieAfterApply>
 	<dispatchEffect>
 		<Item href="/Effects/Shots/Dagger/_A.EFFT" />
 		<Item href="/Effects/Shots/Dagger/_B.EFFT" />
 	</dispatchEffect>
-	<flags>1</flags>
-	<flyMode>Parabolic</flyMode>
+	<flags>0</flags>
+	<flyMode>Linear</flyMode>
 	<fromLocator>Attack</fromLocator>
-	<height>0</height>
+	<height>2</height>
 	<killEffect>true</killEffect>
 	<locatorOrient>false</locatorOrient>
 	<maxDeviation>180</maxDeviation>
@@ -56,8 +57,189 @@
 				<providerName></providerName>
 			</PermanentStatModApplicator>
 		</Item>
+		<Item href="/Items/Talents/Class/Faceless/A1Dagger.DSCH" id="2D6FA49C-C9A6-4D06-958B-E121C46425A0">
+			<SpellPeriodicallyApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Наносим урон, пока летим сквозь крипов</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<period>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</period>
+				<providerName></providerName>
+				<scaleMode>ScaleIsCount</scaleMode>
+				<spell href="/Items/Talents/Class/Faceless/A1Dagger.DSCH" id="E38683D5-3E4B-4058-AF36-C55A87A2CE9F">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Class/Faceless/A1Dagger.DSCH" id="BF5F6968-2B92-4F34-AA37-0137C9A6DF76">
+								<VariableProxyApplicator>
+									<applicators>
+										<Item>
+											<applicator href="/Items/Talents/Class/Faceless/A1Dagger.DSCH" id="C124ACC2-9E4E-46B8-AEAE-B639820FEC64">
+												<DamageApplicator>
+													<applyTarget>ApplicatorTarget</applyTarget>
+													<cancelInvisibility>false</cancelInvisibility>
+													<caption>урон</caption>
+													<damage>
+														<compiledString>FSMAAAADAAAAMgAAAEwAAABlAAAAQTFEYW1hZ2UAAAAAQTFfUGllcmNlRGFtYWdlUGVyY2VudABVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaAwAAACLVRCLAotNEItQUN1d+P/S3E343DVzAAAA2V302UX0i+VdwwAAAAAAAFlA</compiledString>
+														<returnType>float</returnType>
+														<sString>cA1Damage * cA1_PierceDamagePercent/100</sString>
+													</damage>
+													<damageMode>8</damageMode>
+													<damageType>Energy</damageType>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<timeLimiter>-1</timeLimiter>
+													<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
+												</DamageApplicator>
+											</applicator>
+											<variableNames>
+												<Item>isCritical</Item>
+											</variableNames>
+										</Item>
+										<Item>
+											<applicator href="/Items/Talents/Class/Faceless/A1u1Slow.APLR" />
+											<variableNames />
+										</Item>
+										<Item>
+											<applicator href="/Items/Talents/Class/Faceless/A2InstaKill.APLR" />
+											<variableNames />
+										</Item>
+										<Item>
+											<applicator href="/Items/Talents/Class/Faceless/A2CritHealing.APLR" />
+											<variableNames />
+										</Item>
+										<Item>
+											<applicator href="/Items/Talents/Class/Faceless/A2_SUP_WasCritical.APLR" />
+											<variableNames />
+										</Item>
+										<Item>
+											<applicator href="/Items/Talents/Class/Faceless/A1Dagger.DSCH" id="6C2A78AB-F92D-4EAA-8C20-D7774D7B6BDF">
+												<PermanentStatModApplicator>
+													<applyTarget>AbilityOwner</applyTarget>
+													<caption>He's dead Boss</caption>
+													<customApplyType>None</customApplyType>
+													<enabled>
+														<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+														<returnType>bool</returnType>
+														<sString>false; //appl.parent.oTarget.Life == 0</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<LoggingEvent>-1</LoggingEvent>
+													<modifier>
+														<addValue>
+															<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+															<returnType>float</returnType>
+															<sString>1.0f</sString>
+														</addValue>
+														<multValue>
+															<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+															<returnType>float</returnType>
+															<sString>0.0f</sString>
+														</multValue>
+														<stat>Life</stat>
+														<topModifier>false</topModifier>
+														<variable>HesDeadBoss</variable>
+													</modifier>
+													<providerName></providerName>
+												</PermanentStatModApplicator>
+											</applicator>
+											<variableNames />
+										</Item>
+									</applicators>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<caption>урон и замедление если есть улучшение</caption>
+									<enabled>
+										<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+								</VariableProxyApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Class/Faceless/A1Dagger.DSCH" id="B389E338-4C4F-4A4E-9D57-F3893F5EE9F6">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>1</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<startCondition>
+					<compiledString>FR4AAAACAAAAJQAAAD4AAABGYWNlbGVzc19BMXUxAAAARmFjZWxlc3NfQTF1MQBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AIpF+4vlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Faceless_A1u1")</sString>
+				</startCondition>
+				<startOffset>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</startOffset>
+				<targetSelector href="/Items/Talents/Class/Faceless/A1Dagger.DSCH" id="5EA0B807-1392-4322-B97D-4812D9C1F224">
+					<CapsuleTargetSelector>
+						<cutoffFirstSegment>false</cutoffFirstSegment>
+						<flags>0</flags>
+						<mode>SendOnce</mode>
+						<range>
+							<compiledString>FQkAAAACAAAAFgAAACkAAABBMV9XaWR0aABVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcDTcAAADZXfzZRfyL5V3DAAAAAAAA4D8=</compiledString>
+							<returnType>float</returnType>
+							<sString>cA1_Width * 0.5f</sString>
+						</range>
+						<rangeFromOwner>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</rangeFromOwner>
+						<segmentBegin>PreviousPosition</segmentBegin>
+						<segmentDirectionOffset>0</segmentDirectionOffset>
+						<segmentEnd>CurrentPosition</segmentEnd>
+						<segmentEndTargetSelector href="" />
+						<targetFilter>537133116</targetFilter>
+					</CapsuleTargetSelector>
+				</targetSelector>
+			</SpellPeriodicallyApplicator>
+		</Item>
 	</persistentApplicators>
-	<speed>20</speed>
+	<speed>30</speed>
 	<suspendTime>0</suspendTime>
-	<toLocator>Body</toLocator>
+	<toLocator></toLocator>
 </DispatchLinear>

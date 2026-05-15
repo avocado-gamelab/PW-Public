@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BaseAttack>
 	<BackLink DBID="/Heroes/Assassin/_.HROB" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A3.TALENT" Count="1" />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
 		<compiledString></compiledString>
@@ -20,7 +19,6 @@
 	</aoeSize>
 	<aoeType>None</aoeType>
 	<applicators>
-		<Item href="/Items/Talents/Class/Assassin/appl_A0_SUP_2_ApplyOrUpdate.APLR" />
 		<Item href="/Effects/Shots/HitsApplicators/MeleeHero.APLR" />
 		<Item href="/Heroes/Assassin/AttackAbility.ATCK" id="2298B12D-EF62-4E23-9036-F5252D14C213">
 			<DamageApplicator parent="/GameLogic/GeneralApplicators/BaseAttackDmg_Hero.APLR">
@@ -29,15 +27,13 @@
 					<returnType>float</returnType>
 					<sString>random ( f2l(sDamageMin), f2l(sDamageMax))</sString>
 				</damage>
-				<enabled>
-					<compiledString></compiledString>
-				</enabled>
 				<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
 			</DamageApplicator>
 		</Item>
 		<Item href="/Items/Talents/Class/Assassin/status_A3u_HasteBurst.APLR" />
 		<Item href="/Items/Talents/Class/Assassin/StopGhostRun.APLR" />
 		<Item href="/Items/Talents/Class/Assassin/A2u1_Stun.APLR" />
+		<Item href="/Heroes/status_TowerMultiplayerDamage.APLR" />
 	</applicators>
 	<autoTargetSelector href="" />
 	<caption></caption>
@@ -58,8 +54,8 @@
 				<Item href="/Items/Talents/Class/Assassin/const_A3u_Haste_Duration" />
 				<Item href="/Items/Talents/Class/Assassin/const_A3u_Haste_Percent" />
 				<Item href="/Items/Talents/Class/Assassin/const_A3u_Haste_StartCondition" />
-				<Item href="/Items/Talents/Class/Assassin/const_A0_SUP_2_Inc_Resp_Time" />
 				<Item href="/Items/Talents/Class/Assassin/const_A0_SUP_2_Appl_Duration" />
+				<Item href="/Heroes/const_TowerDamgeBuff" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>

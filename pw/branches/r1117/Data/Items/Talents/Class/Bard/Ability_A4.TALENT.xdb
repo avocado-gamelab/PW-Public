@@ -2,18 +2,18 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Bard.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Bard.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Bard_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Bard/Ability_A4_2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Bard/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Bard/Ability_A4u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
 	<BackLink DBID="/Test/Talents/Bard/Duel_Dex.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Bard/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Bard/Elite_Dex.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Bard/Elite_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Bard/Epic_Int.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Bard/Ability_A4_2.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Bard/Ability_A4_2u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Bard_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -117,8 +117,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Bard/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Bard/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Bard/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Bard/Ability_A4.TALENT" id="67941DCC-3073-474F-9CFA-9E4779E47E94">
 			<ConditionFormula>
@@ -340,7 +340,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>3</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Bard/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

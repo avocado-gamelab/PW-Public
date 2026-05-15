@@ -3,11 +3,11 @@
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/GameLogic/GeneralApplicators/CooldownReduction.APLR" Count="1" />
 	<BackLink DBID="/Heroes/DefaultStatus/status_Refresher.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Brewer.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Brewer_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Brewer.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Brewer_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Brewer_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Brewer/Ability_A0_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Brewer_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Test/Talents/Brewer/Brewer.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
@@ -39,8 +39,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Brewer/Ability_A0.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Brewer/Ability_A0.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Brewer/cond_A4_2" />
 		<Item href="/Items/Talents/Class/Brewer/cond_A0_SUP" />
@@ -121,7 +121,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Brewer/A0.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

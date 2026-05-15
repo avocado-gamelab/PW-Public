@@ -2,12 +2,12 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Inventor.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Inventor_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Inventor.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Inventor_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A1u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Inventor/ForbidOnLowDetails.APLR" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Inventor_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Inventor_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Inventor/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Inventor/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Inventor/Elite_Int.TALENTSET" Count="1" />
@@ -74,8 +74,8 @@
 		<Item href="/Items/Talents/Class/Inventor/A1A2_CastLimitation.ABCL" />
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Inventor/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Inventor/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Inventor/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Inventor/condition_EnoughDetails" />
 		<Item href="/Items/Talents/Class/Inventor/Ability_A1.TALENT" id="7743844D-72DC-4B1C-9FC4-2AAE8B9AE404">
@@ -128,9 +128,9 @@
 					<UnitConstant>
 						<name>MasterStatConnected_Intellect</name>
 						<var>
-							<compiledString>FRQAAAADAAAAHwAAACkAAABeAAAAQTFfTlRCb251c0ludGVsbGVjdABVi+yD7AxqAVHZBYMAAADZHCRR2QV/AAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0ItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d+P/Q3EX42V302UX0i+VdwwAAQEEAAK5C</compiledString>
+							<compiledString>FRQAAAADAAAAHwAAACkAAABeAAAAQTFfTlRCb251c0ludGVsbGVjdABVi+yD7AxqAVHZBYMAAADZHCRR2QV/AAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0ItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d+P/Q3EX42V302UX0i+VdwwAAAEAAAJpC</compiledString>
 							<returnType>float</returnType>
-							<sString>damageScale( sIntellect, 12, 87 )+cA1_NTBonusIntellect</sString>
+							<sString>damageScale( sIntellect, 2, 77 )+cA1_NTBonusIntellect</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -228,6 +228,18 @@
 				<Item href="/Items/Talents/Class/Inventor/const_A1_NTSlow" />
 				<Item href="/Items/Talents/Class/Inventor/const_A1_NTSlowDuration" />
 				<Item href="/Items/Talents/Class/Inventor/const_A1_NTSlowCondition" />
+				<Item href="/Items/Talents/Class/Inventor/Ability_A1.TALENT" id="E5ED5B11-2E26-4F87-BCF9-951A175D963C">
+					<UnitConstant>
+						<name>SpellDamageAbsorp</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABIQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>50.0f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Inventor/const_A0_MaxMoveSpeedPercent" />
+				<Item href="/Items/Talents/Class/Inventor/const_A1_CDR" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -236,9 +248,9 @@
 		<percent>0</percent>
 	</consumptionBonus>
 	<cooldownTime>
-		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
+		<compiledString>FU8AAAAGAAAAVgAAAG8AAACdAAAAtgAAAPwAAAAVAQAASW52ZW50b3JfQTRfU1VQAEludmVudG9yX0E0X1NVUABJbnZlbnRvcl9BNF8yX1NVUAAAAEludmVudG9yX0E0XzJfU1VQAAAAQTFfQ0RSAFWL7IPsIGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAaCAAAACLTQiLEYtNCIuCqAEAAP/QhcB0Kmg0AAAAi00IixGLTQiLgqgBAAD/0IlF9ItN9IsRi030i0IE/9CIRfPrBMZF8wAPtk37D7ZV8wPKiU3s20Xsi0UMUItNCFFoSAAAAItVEIsCi00Qi1BQ3V3k/9LcTeTcLSMBAADZXeDZReCL5V3DAAAAAAAAHEA=</compiledString>
 		<returnType>float</returnType>
-		<sString>2</sString>
+		<sString>7 - (tal("Inventor_A4_SUP") + tal("Inventor_A4_2_SUP")) * cA1_CDR</sString>
 	</cooldownTime>
 	<cooldownTimeSecondState>
 		<compiledString></compiledString>
@@ -267,7 +279,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>3</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Inventor/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

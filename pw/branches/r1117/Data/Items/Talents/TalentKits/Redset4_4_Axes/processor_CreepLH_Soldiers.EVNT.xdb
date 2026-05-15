@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventProcessorUnitDieNearMe>
+	<BackLink DBID="/Items/Talents/Common/G563_AxesEngReg.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G562_AxesBase.TALENT" Count="1" />
+	<applyTarget>AbilityOwner</applyTarget>
+	<checkSender>0</checkSender>
+	<killerFlags>9</killerFlags>
+	<range>
+		<compiledString>FQ0AAAABAAAAGQAAAFJhbmdlX0V4TG9uZwBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_ExLong</sString>
+	</range>
+	<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+	<spell href="/Items/Talents/TalentKits/Redset4_4_Axes/processor_CreepLH_Soldiers.EVNT" id="6D93AA3B-C247-4A8D-9AFD-7D17C316F2EB">
+		<Spell>
+			<applicators>
+				<Item href="/Items/Talents/TalentKits/Redset4_4_Axes/processor_CreepLH_Soldiers.EVNT" id="1229FCA2-BB8C-4691-8638-7EF78668281C">
+					<PermanentStatModApplicator>
+						<applyTarget>AbilityOwner</applyTarget>
+						<caption>Повышаем урон</caption>
+						<customApplyType>None</customApplyType>
+						<enabled>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</enabled>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<modifier>
+							<addValue>
+								<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+								<returnType>float</returnType>
+								<sString>1</sString>
+							</addValue>
+							<multValue>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>1.0f</sString>
+							</multValue>
+							<stat>Life</stat>
+							<topModifier>false</topModifier>
+							<variable>AxeAdditionalDamage</variable>
+						</modifier>
+						<providerName></providerName>
+					</PermanentStatModApplicator>
+				</Item>
+			</applicators>
+			<dispatch href="/Items/Talents/TalentKits/Redset4_4_Axes/processor_CreepLH_Soldiers.EVNT" id="BBD1B44B-A3EE-472E-AA25-6AADE74A9A3E">
+				<DispatchImmediate>
+					<alwaysApply>false</alwaysApply>
+					<applyEffect>
+						<Item href="" />
+						<Item href="" />
+					</applyEffect>
+					<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+					<applyEffectOrientation>Default</applyEffectOrientation>
+					<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+					<dieAfterApply>true</dieAfterApply>
+					<dispatchEffect>
+						<Item href="" />
+						<Item href="" />
+					</dispatchEffect>
+					<flags>0</flags>
+					<instantApply>false</instantApply>
+				</DispatchImmediate>
+			</dispatch>
+		</Spell>
+	</spell>
+	<targets>570425372</targets>
+</EventProcessorUnitDieNearMe>

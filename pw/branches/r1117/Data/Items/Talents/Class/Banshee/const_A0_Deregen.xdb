@@ -5,8 +5,8 @@
 	<BackLink DBID="/Items/Talents/Class/Banshee/Ability_A1.TALENT" Count="1" />
 	<name>A0_Deregen</name>
 	<var>
-		<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAFHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCOAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DzcxMQAAAwEE=</compiledString>
+		<compiledString>FTEAAAAFAAAAOAAAAFEAAACDAAAAjQAAAMwAAABCYW5zaGVlX0EwX1NVUAAAQmFuc2hlZV9BMF9TVVAAAEEwc3VwX011bHRpcGxpZXIAVYvsg+wgaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wBqAFHZBQUBAADZHCRR2QUBAQAA2RwkagCLTQiLEYtNCIuCOAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0A+2TfuJTfTbRfSLVQxSi0UIUGggAAAAi00QixGLTRCLQlDZyd1d7N1d5P/Q3E3k2ejewdxN7Nld4NlF4IvlXcMAAAAAAADwP83MTEAAAMBB</compiledString>
 		<returnType>float</returnType>
-		<sString>damageScale(sDexterity, 3.2, 24, false)</sString>
+		<sString>damageScale(sDexterity, 3.2, 24, false) * (1 +  tal("Banshee_A0_SUP") * cA0sup_Multiplier)</sString>
 	</var>
 </UnitConstant>

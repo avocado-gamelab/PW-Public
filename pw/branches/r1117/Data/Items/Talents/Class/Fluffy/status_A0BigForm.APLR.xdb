@@ -199,7 +199,7 @@
 			<StatModApplicator>
 				<applyTarget>ApplicatorTarget</applyTarget>
 				<behaviorFlags>0</behaviorFlags>
-				<caption>A4 AddStamina</caption>
+				<caption>A4 Reduce physical damage</caption>
 				<constraint>None</constraint>
 				<dontUpdate>false</dontUpdate>
 				<effect>
@@ -207,9 +207,9 @@
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgkABAAD/0ItNCIsRi00Ii4JEAQAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
 					<returnType>bool</returnType>
-					<sString>sStamina &gt;= sWill</sString>
+					<sString>true</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<lifeTime>
@@ -220,16 +220,16 @@
 				<LoggingEvent>-1</LoggingEvent>
 				<modifier>
 					<addValue>
-						<compiledString>FRMAAAABAAAAHwAAAEEwX1N0YW1pbmFJbmNyZWFzZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<compiledString>FRMAAAABAAAAHwAAAEEwX0RhbWFnZVJlZHVjdGlvbgBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
 						<returnType>float</returnType>
-						<sString>cA0_StaminaIncrease</sString>
+						<sString>cA0_DamageReduction</sString>
 					</addValue>
 					<multValue>
 						<compiledString></compiledString>
 						<returnType>float</returnType>
 						<sString>1.0f</sString>
 					</multValue>
-					<stat>Stamina</stat>
+					<stat>MaterialDamageDecrease</stat>
 					<topModifier>false</topModifier>
 					<variable></variable>
 				</modifier>
@@ -246,7 +246,7 @@
 			<StatModApplicator>
 				<applyTarget>ApplicatorTarget</applyTarget>
 				<behaviorFlags>0</behaviorFlags>
-				<caption>A4 AddWill</caption>
+				<caption>A4 Reduce magical damage</caption>
 				<constraint>None</constraint>
 				<dontUpdate>false</dontUpdate>
 				<effect>
@@ -254,9 +254,9 @@
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgkABAAD/0ItNCIsRi00Ii4JEAQAA3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
 					<returnType>bool</returnType>
-					<sString>sStamina &lt; sWill</sString>
+					<sString>true</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<lifeTime>
@@ -267,16 +267,16 @@
 				<LoggingEvent>-1</LoggingEvent>
 				<modifier>
 					<addValue>
-						<compiledString>FRMAAAABAAAAHwAAAEEwX1N0YW1pbmFJbmNyZWFzZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<compiledString>FRMAAAABAAAAHwAAAEEwX0RhbWFnZVJlZHVjdGlvbgBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
 						<returnType>float</returnType>
-						<sString>cA0_StaminaIncrease</sString>
+						<sString>cA0_DamageReduction</sString>
 					</addValue>
 					<multValue>
 						<compiledString></compiledString>
 						<returnType>float</returnType>
 						<sString>1.0f</sString>
 					</multValue>
-					<stat>Will</stat>
+					<stat>EnergyDamageDecrease</stat>
 					<topModifier>false</topModifier>
 					<variable></variable>
 				</modifier>
@@ -289,13 +289,16 @@
 				<statModName></statModName>
 			</StatModApplicator>
 		</Item>
-		<Item href="/Items/Talents/Class/Fluffy/status_A0BigForm.APLR" id="C6E93E14-26C3-44DE-A33F-C22EA0812E64">
-			<StatModApplicator>
+		<Item href="/Items/Talents/Class/Fluffy/status_A0BigForm.APLR" id="80B41F68-5854-4B99-9ED6-AF48FACABC77">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
 				<applyTarget>ApplicatorTarget</applyTarget>
 				<behaviorFlags>0</behaviorFlags>
-				<caption>A4_2 AddDexterity</caption>
-				<constraint>None</constraint>
-				<dontUpdate>false</dontUpdate>
+				<caption>Increase outgoing damage</caption>
 				<effect>
 					<Item href="" />
 					<Item href="" />
@@ -312,29 +315,40 @@
 					<sString>-1.0</sString>
 				</lifeTime>
 				<LoggingEvent>-1</LoggingEvent>
-				<modifier>
-					<addValue>
-						<compiledString>FRUAAAABAAAAIQAAAEEwX0luY3JlYXNlRGV4dGVyaXR5AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
-						<returnType>float</returnType>
-						<sString>cA0_IncreaseDexterity</sString>
-					</addValue>
-					<multValue>
-						<compiledString></compiledString>
-						<returnType>float</returnType>
-						<sString>1.0f</sString>
-					</multValue>
-					<stat>Dexterity</stat>
-					<topModifier>false</topModifier>
-					<variable></variable>
-				</modifier>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Class/Fluffy/status_A0BigForm.APLR" id="F8F265B6-3DB4-47C6-9A01-0654FF73CEA1">
+					<EventProcessorOutgoingDamage>
+						<abilityFilter>
+							<abilitiesList />
+							<abilityCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</abilityCondition>
+							<abilityCostMode>Custom</abilityCostMode>
+							<exceptThis>false</exceptThis>
+							<flags>1610614015</flags>
+							<onlySingleTarget>false</onlySingleTarget>
+						</abilityFilter>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<damageTypeFilter>31</damageTypeFilter>
+						<modifiedDamage>
+							<compiledString>FRoAAAAEAAAAIQAAADsAAABRAAAAWgAAAERhbWFnZQAAQTBfRGFtYWdlSW5jcmVhc2UAVYvsg+wMaAAAAACLRRCLEItNEItCVP/Qi00MUYtVCFJoCAAAAItFEIsQi00Qi0JQ3V34/9DcBWgAAADcTfjcNWgAAADZXfTZRfSL5V3DAAAAAAAAWUA=</compiledString>
+							<returnType>float</returnType>
+							<sString>appl.vDamage * (100 + cA0_DamageIncrease)/100</sString>
+						</modifiedDamage>
+						<spell href="" />
+					</EventProcessorOutgoingDamage>
+				</processor>
 				<providerName></providerName>
 				<startCondition>
 					<compiledString>FRgAAAACAAAAHwAAADgAAABGbHVmZnlfQTRfMgBGbHVmZnlfQTRfMgBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AIpF+4vlXcM=</compiledString>
 					<returnType>bool</returnType>
 					<sString>tal("Fluffy_A4_2")</sString>
 				</startCondition>
-				<statModName></statModName>
-			</StatModApplicator>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
 		</Item>
 		<Item href="/Items/Talents/Class/Fluffy/status_A0BigForm.APLR" id="9E2AAF77-784A-4738-A7B7-D67B9799560C">
 			<StatModApplicator>

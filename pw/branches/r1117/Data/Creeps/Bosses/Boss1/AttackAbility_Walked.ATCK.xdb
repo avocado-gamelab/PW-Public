@@ -85,9 +85,9 @@
 					<UnitConstant>
 						<name>Fire_Dmg</name>
 						<var>
-							<compiledString>FRQAAAABAAAAcAAAAEF0a0RhbWFnZURpc3BfQ3JlZXAAVYvsg+wQi0UIixCLTQiLggQBAAD/0FHZHCToXgAAAIPEBFCLTQiLEYtNCIuCAAEAAP/QUdkcJOhBAAAAg8QEUItNEIsRi00Qi0Jc/9CJRfzbRfyLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlDdXfT/0NxN9Nld8NlF8IvlXcO4AQAAAA+i98IAAAAEdAfzDyxEJATD6QAAAABVi+yD7AzZRQjZffwPt0X8DQAMAACJRfjZbfjbXfTZbfyLRfSL5V3D</compiledString>
+							<compiledString>FRQAAAACAAAAcAAAAIkAAABBdGtEYW1hZ2VEaXNwX0NyZWVwAFWL7IPsEItFCIsQi00Ii4IEAQAA/9BR2Rwk6GwAAACDxARQi00IixGLTQiLggABAAD/0FHZHCToTwAAAIPEBFCLTRCLEYtNEItCXP/QiUX820X8i00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ3V30/9DcTfTcNZcAAADZXfDZRfCL5V3DAAAAAAAACEC4AQAAAA+i98IAAAAEdAfzDyxEJATD6QAAAABVi+yD7AzZRQjZffwPt0X8DQAMAACJRfjZbfjbXfTZbfyLRfSL5V3D</compiledString>
 							<returnType>float</returnType>
-							<sString>random (f2l(sDamageMin), f2l(sDamageMax)) * cAtkDamageDisp_Creep</sString>
+							<sString>random (f2l(sDamageMin), f2l(sDamageMax)) * cAtkDamageDisp_Creep / 3</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -165,7 +165,7 @@
 	<passiveApplicators />
 	<requireLineOfSight>true</requireLineOfSight>
 	<shortDescription textref="" />
-	<targetType>6029823</targetType>
+	<targetType>4194752</targetType>
 	<type>Simple</type>
 	<useRange>
 		<compiledString></compiledString>

@@ -32,9 +32,9 @@
 	<formulaName>A4_ChannelingOn</formulaName>
 	<interruptEvents>6820319</interruptEvents>
 	<lifeTime>
-		<compiledString>FRIAAAABAAAAHgAAAEE0X0NoYW5uZWxpbmdUaW1lAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<compiledString>FRIAAAAEAAEAIQAAADkAAABxAAAAdwAAAH4BAABBNF9DaGFubmVsaW5nVGltZQBVi+yD7BSLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0lHZHCRR2QWsAAAA2RwkjUX4UItNEIsRi00Qi0JY/9BQjU3wUYtVCIsCi00Ii5CMAQAA/9JQ6JQAAACDxAjcNaQAAADcJZwAAADZXezZRexR2Rwk6E4AAACDxATZHCToGwAAAIPECIvlXcMAAAAAAADgPwAAAAAAAD5AzczMPVWL7FHZRQjZRQze2d/g9sRBdQjZRQjZXfzrBtlFDNld/NlF/IvlXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3DVYvsg+wUi0UI2UAEi00M2GEE2V302UX0UdkcJItVCNkCi0UM2CDZXfDZRfBR2RwkjU346FcAAADZRfjYTfjZRfzYTfzewdld7NlF7FHZHCToBwAAAIPEBIvlXcNVi+xR2UUI2Rwk6AUAAACDxARdw1WL7FHZRQiD7AjdHCToWv7//4PECNld/NlF/IvlXcNVi+xRiU38i0X82UUI2RiLTfzZRQzZWQSLRfyL5V3CCAA=</compiledString>
 		<returnType>float</returnType>
-		<sString>cA4_ChannelingTime</sString>
+		<sString>min (max( d(sPos, pMisc-&gt;GetTargetPos()) / 30 - 0.5f, 0.1f), cA4_ChannelingTime)</sString>
 	</lifeTime>
 	<LoggingEvent>-1</LoggingEvent>
 	<period>0</period>

@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Items/Talents/Class/Shaman/Ability_A3u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Shaman.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Shaman_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Shaman.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Shaman_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Shaman_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Shaman_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Social.ROOT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -42,6 +43,7 @@
 							<Item href="/Items/Talents/Class/Shaman/Ability_A3.TALENT" id="48BFBEC3-4651-4D6E-A332-E1DAD25B53CD">
 								<SummonApplicator>
 									<applicators>
+										<Item href="/GameLogic/GeneralApplicators/IgnoreTarget.APLR" />
 										<Item href="/Items/Talents/Class/Shaman/Ability_A3.TALENT" id="79C63268-C0AE-4630-A454-B50E196E1988">
 											<ProgramApplicator>
 												<applicators>
@@ -186,7 +188,7 @@
 														<applicator href="/Items/Talents/Class/Shaman/Ability_A3.TALENT" id="8D2595E0-C665-493F-972B-D7DEDC146683">
 															<FlagsApplicator>
 																<applyTarget>ApplicatorTarget</applyTarget>
-																<behaviorFlags>0</behaviorFlags>
+																<behaviorFlags>144</behaviorFlags>
 																<caption>Визуальный эффект порчи</caption>
 																<consumables />
 																<effect>
@@ -278,6 +280,30 @@
 																							<applicators>
 																								<Item href="/Heroes/DefaultStatus/OpenEnemy_status.APLR" />
 																								<Item href="/Items/Talents/Class/Shaman/A3_poison_status.APLR" />
+																								<Item href="/Items/Talents/Class/Shaman/Ability_A3.TALENT" id="3FFACE6F-0CC7-4C41-96F5-1C23897FBA45">
+																									<DamageApplicator>
+																										<applyTarget>ApplicatorTarget</applyTarget>
+																										<cancelInvisibility>false</cancelInvisibility>
+																										<caption>Наносим урон</caption>
+																										<damage>
+																											<compiledString>FQ4AAAABAAAAGgAAAEEzX1NVUF9EYW1hZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+																											<returnType>float</returnType>
+																											<sString>cA3_SUP_Damage</sString>
+																										</damage>
+																										<damageMode>4</damageMode>
+																										<damageType>Energy</damageType>
+																										<enabled>
+																											<compiledString>FR4AAAACAAAAJQAAAD4AAABTaGFtYW5fQTNfU1VQAAAAU2hhbWFuX0EzX1NVUABVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AIpF+4vlXcM=</compiledString>
+																											<returnType>bool</returnType>
+																											<sString>tal("Shaman_A3_SUP")</sString>
+																										</enabled>
+																										<formulaName></formulaName>
+																										<LoggingEvent>-1</LoggingEvent>
+																										<providerName></providerName>
+																										<timeLimiter>-1</timeLimiter>
+																										<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
+																									</DamageApplicator>
+																								</Item>
 																							</applicators>
 																							<dispatch href="/Items/Talents/Class/Shaman/Ability_A3.TALENT" id="A45ED239-FC48-489A-A8DD-D43D2BAC4435">
 																								<DispatchImmediate>
@@ -463,7 +489,7 @@
 														<applicator href="/Items/Talents/Class/Shaman/Ability_A3.TALENT" id="ADFC62CF-D2AC-4C5C-9653-189DFD3F0291">
 															<FlagsApplicator>
 																<applyTarget>ApplicatorTarget</applyTarget>
-																<behaviorFlags>0</behaviorFlags>
+																<behaviorFlags>144</behaviorFlags>
 																<caption>пых</caption>
 																<consumables />
 																<effect>
@@ -535,7 +561,7 @@
 														<applicator href="/Items/Talents/Class/Shaman/Ability_A3.TALENT" id="3EA882BB-5994-45A1-B89F-FC42164735C7">
 															<FlagsApplicator>
 																<applyTarget>ApplicatorTarget</applyTarget>
-																<behaviorFlags>0</behaviorFlags>
+																<behaviorFlags>144</behaviorFlags>
 																<caption>анимация смерти</caption>
 																<consumables />
 																<effect>
@@ -677,11 +703,10 @@
 												</startCondition>
 											</ProgramApplicator>
 										</Item>
-										<Item href="/GameLogic/GeneralApplicators/IgnoreTarget.APLR" />
 										<Item href="/Items/Talents/Class/Shaman/Ability_A3.TALENT" id="61039DA8-89E3-4B80-A7E3-2A1320261C8D">
 											<FlagsApplicator>
 												<applyTarget>ApplicatorTarget</applyTarget>
-												<behaviorFlags>0</behaviorFlags>
+												<behaviorFlags>144</behaviorFlags>
 												<caption>Эффект декалей</caption>
 												<consumables />
 												<effect>
@@ -720,6 +745,98 @@
 												<talents />
 												<useListAs>ListAsRule</useListAs>
 											</FlagsApplicator>
+										</Item>
+										<Item href="/GameLogic/GeneralApplicators/Immune2Control.APLR" />
+										<Item href="/GameLogic/GeneralApplicators/Uncontrollable.APLR" />
+										<Item href="/Items/Talents/Class/Shaman/Ability_A3.TALENT" id="B5A72E50-F5CD-4AD3-B696-9DDAC8902A90">
+											<FlagsApplicator>
+												<applyTarget>ApplicatorTarget</applyTarget>
+												<behaviorFlags>0</behaviorFlags>
+												<caption>Запреты</caption>
+												<consumables />
+												<effect>
+													<Item href="" />
+													<Item href="" />
+												</effect>
+												<enabled>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</enabled>
+												<flag>15337471</flag>
+												<formulaName></formulaName>
+												<lifeTime>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>-1.0</sString>
+												</lifeTime>
+												<LoggingEvent>-1</LoggingEvent>
+												<providerName></providerName>
+												<startCondition>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</startCondition>
+												<talents />
+												<useListAs>ListAsRule</useListAs>
+											</FlagsApplicator>
+										</Item>
+										<Item href="/Items/Talents/Class/Shaman/Ability_A3.TALENT" id="FCA3FB99-B080-43B6-BD36-AC74E317B362">
+											<TriggerApplicator>
+												<actionsCount>
+													<compiledString></compiledString>
+													<returnType>int</returnType>
+													<sString>0</sString>
+												</actionsCount>
+												<applyTarget>ApplicatorTarget</applyTarget>
+												<behaviorFlags>0</behaviorFlags>
+												<caption>канселять все диспатчи от врагов</caption>
+												<effect>
+													<Item href="" />
+													<Item href="" />
+												</effect>
+												<enabled>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</enabled>
+												<formulaName></formulaName>
+												<lifeTime>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>-1.0</sString>
+												</lifeTime>
+												<LoggingEvent>-1</LoggingEvent>
+												<playAck>false</playAck>
+												<processor href="/Items/Talents/Class/Shaman/Ability_A3.TALENT" id="3BD6F2B9-B144-4752-A378-21A374373BAD">
+													<EventProcessorCancelDispatch>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<checkSender>0</checkSender>
+														<filter>
+															<abilitiesList />
+															<abilityCondition>
+																<compiledString></compiledString>
+																<returnType>bool</returnType>
+																<sString>true</sString>
+															</abilityCondition>
+															<abilityCostMode>Energy</abilityCostMode>
+															<exceptThis>false</exceptThis>
+															<flags>1073743102</flags>
+															<onlySingleTarget>false</onlySingleTarget>
+														</filter>
+														<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+														<spell href="" />
+													</EventProcessorCancelDispatch>
+												</processor>
+												<providerName></providerName>
+												<startCondition>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</startCondition>
+												<useAbilityCooldown>false</useAbilityCooldown>
+												<useAbilityOwnerMana>false</useAbilityOwnerMana>
+											</TriggerApplicator>
 										</Item>
 									</applicators>
 									<applyTarget>AbilityOwner</applyTarget>
@@ -896,9 +1013,20 @@
 		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Shaman/Ability_A3.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
-	<conditionFormulas />
+	<compiledDescriptionA textref="/Items/Talents/Class/Shaman/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Shaman/Ability_A3.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Shaman/Ability_A3.TALENT" id="40F234FF-4CCD-4429-B087-54C655EF8B8F">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR4AAAACAAAAJQAAAD4AAABTaGFtYW5fQTNfU1VQAAAAU2hhbWFuX0EzX1NVUABVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AIpF+4vlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Shaman_A3_SUP")</sString>
+				</condition>
+				<name>Shaman_A3_SUP</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
 	<conflictingTalents />
 	<constants href="/Items/Talents/Class/Shaman/Ability_A3.TALENT" id="5BB31F3F-3EC9-447E-9635-D7325D8F6E42">
 		<UnitConstantsContainer>
@@ -984,6 +1112,7 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/Shaman/const_A3_SUP_Damage" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -1023,7 +1152,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Shaman/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

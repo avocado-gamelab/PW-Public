@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Items/Talents/Class/GhostLord/Ability_A0_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/GhostLord_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/GhostLord_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
@@ -33,8 +33,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/GhostLord/Ability_A2_SUP.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/GhostLord/Ability_A2_SUP.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/GhostLord/Ability_A2_SUP.TALENT" id="0139F27D-85D7-4D6D-858A-39B84F48A511">
 			<ConditionFormula>
@@ -57,9 +57,9 @@
 					<UnitConstant>
 						<name>A2_BonusShieldAmount</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQQ==</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQg==</compiledString>
 							<returnType>float</returnType>
-							<sString>25.0f</sString>
+							<sString>40.0f</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -85,7 +85,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>22.7</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/GhostLord/A2_SUP.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

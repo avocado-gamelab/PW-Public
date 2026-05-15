@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Rifleman.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Rifleman.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Rifleman/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Rifleman/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Rifleman/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Rifleman/Ability_A4u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Rifleman/spell_A4u_TrapInteraction.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
 	<BackLink DBID="/Test/Talents/Rifleman/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Rifleman/Epic_Str.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Rifleman/spell_A4u_TrapInteraction.APLR" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -442,7 +442,7 @@
 											</applicators>
 											<dispatch href="/Items/Talents/Class/Rifleman/Ability_A4.TALENT" id="FB4F658B-14BD-482A-8C7B-0DBD3DD7C999">
 												<DispatchLinear>
-													<aiming>Straight</aiming>
+													<aiming>Pursue</aiming>
 													<alwaysApply>false</alwaysApply>
 													<applyEffect>
 														<Item href="" />
@@ -555,9 +555,9 @@
 		<sString>10000000</sString>
 	</castAllowRange>
 	<castLimitations />
-	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<commonDescription textref="/Items/Talents/Class/Rifleman/Ability_A4.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Rifleman/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Rifleman/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Rifleman/Ability_A4.TALENT" id="2C473628-BA2E-4E85-B376-4E6543936620">
 			<ConditionFormula>
@@ -601,9 +601,9 @@
 					<UnitConstant>
 						<name>A4_Range</name>
 						<var>
-							<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<compiledString>FSAAAAACAAAAKwAAAFQAAABSaWZsZW1hbkEwTWFyawAAQTRfQ3VycmVudFJhbmdlAFWL7FFqAItFEFBoAAAAAItNDIsRi00Mi4KcAQAA/9A7RRB0B9nu2V386x2LTQxRi1UIUmgQAAAAi0UQixCLTRCLQlD/0Nld/NlF/IvlXcMAAAAA</compiledString>
 							<returnType>float</returnType>
-							<sString>cRange_Long</sString>
+							<sString>receiver.FindApplicator("RiflemanA0Mark",pMisc,GLOBAL) != pMisc ? 0 : cA4_CurrentRange</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -622,9 +622,9 @@
 					<UnitConstant>
 						<name>A4_RangeDefault</name>
 						<var>
-							<compiledString>FQ0AAAABAAAAGQAAAFJhbmdlX0V4TG9uZwBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQQ==</compiledString>
 							<returnType>float</returnType>
-							<sString>cRange_ExLong</sString>
+							<sString>20</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -649,6 +649,46 @@
 					</UnitConstant>
 				</Item>
 				<Item href="/Items/Talents/Class/Rifleman/const_A4u_ReducedChannelTime" />
+				<Item href="/Items/Talents/Class/Rifleman/Ability_A4.TALENT" id="FE2B6F2A-9004-4E99-8D28-B275D89335D4">
+					<UnitConstant>
+						<name>A4_RangePerInt</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>0.05f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Rifleman/Ability_A4.TALENT" id="C31133E9-2D8E-40CE-83D0-9C8687C8959A">
+					<UnitConstant>
+						<name>A4_MaxAdditionalRange</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>20.0f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Rifleman/Ability_A4.TALENT" id="4BA208C3-9A2D-457F-A05E-FA873E264910">
+					<UnitConstant>
+						<name>A4_TT_MaxRange</name>
+						<var>
+							<compiledString>FSYAAAACAAAANQAAAE8AAABBNF9SYW5nZURlZmF1bHQAQTRfTWF4QWRkaXRpb25hbFJhbmdlAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoEAAAAItVEIsCi00Qi1BQ3V34/9LcRfjZXfTZRfSL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cA4_RangeDefault + cA4_MaxAdditionalRange</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Rifleman/Ability_A4.TALENT" id="22477F6C-90F6-48EA-9205-17678BEA6F72">
+					<UnitConstant>
+						<name>A4_CurrentRange</name>
+						<var>
+							<compiledString>FTcAAAADAAAARgAAAGAAAACRAAAAQTRfUmFuZ2VEZWZhdWx0AEE0X01heEFkZGl0aW9uYWxSYW5nZQAAAEE0X1JhbmdlUGVySW50AFWL7IPsGItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoEAAAAItVEIsCi00Qi1BQ3V34/9JR2Rwki0UIixCLTQiLgjQBAAD/0ItNDFGLVQhSaCgAAACLRRCLEItNEItCUN1d8P/Q3E3w2V3s2UXsUdkcJOgQAAAAg8QI3EX42V3o2UXoi+Vdw1WL7FHZRQjZRQze2d/g9sRBdQjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cA4_RangeDefault + min(sIntellect * cA4_RangePerInt, cA4_MaxAdditionalRange)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -688,7 +728,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>2087</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Rifleman/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -719,9 +759,9 @@
 	<type>Channelling</type>
 	<upgradeLevel>0</upgradeLevel>
 	<useRange>
-		<compiledString>FSAAAAACAAAAKwAAAFQAAABSaWZsZW1hbkEwTWFyawAAQTRfUmFuZ2VEZWZhdWx0AFWL7FFqAItFEFBoAAAAAItNDIsRi00Mi4KcAQAA/9A7RRB0B9nu2V386x2LTQxRi1UIUmgQAAAAi0UQixCLTRCLQlD/0Nld/NlF/IvlXcMAAAAA</compiledString>
+		<compiledString>FQkAAAABAAAAFQAAAEE0X1JhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
 		<returnType>float</returnType>
-		<sString>receiver.FindApplicator("RiflemanA0Mark",pMisc,GLOBAL) != pMisc ? 0 : cA4_RangeDefault</sString>
+		<sString>cA4_Range</sString>
 	</useRange>
 	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
 	<variativeMaxTalentStats />

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
 	<BackLink DBID="/Items/Talents/Class/Healer/A4_2AutoSpell.SPLL" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Healer/Ability4_2.TALENT" Count="2" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A4_2.TALENT" Count="2" />
 	<applicators>
 		<Item href="/Items/Talents/Class/Healer/status_A4_LifeTriumph2.APLR" id="541A283A-07DD-4B8C-9ECD-6047C524B541">
 			<FlagsApplicator>
@@ -169,6 +169,23 @@
 				<useAbilityCooldown>false</useAbilityCooldown>
 				<useAbilityOwnerMana>false</useAbilityOwnerMana>
 			</TriggerApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Healer/status_A4_LifeTriumph2.APLR" id="5C1CBFFD-7E9F-4366-A191-9960F85D67E4">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Накладываем руку</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Class/Healer/Ability_A5.TALENT" />
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="" />
+			</SpellApplicator>
 		</Item>
 	</applicators>
 	<applyTarget>ApplicatorTarget</applyTarget>

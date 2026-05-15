@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Artist_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Artist_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Artist/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Artist/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Artist/Ability_A4u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Artist/status_A0_Mastery.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
 	<BackLink DBID="/Test/Talents/Artist/Epic_Str_Ult2.TALENTSET" Count="1" />
 	<activationConditions />
@@ -646,8 +646,8 @@
 		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Artist/Ability_A4_2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Artist/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Artist/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Artist/Ability_A4_2.TALENT" id="E1FC9D52-52CE-4BC8-80CB-F253CC763E56">
 			<ConditionFormula>
@@ -798,7 +798,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>7</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Artist/A4_2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

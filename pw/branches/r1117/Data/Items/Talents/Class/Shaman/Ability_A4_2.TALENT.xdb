@@ -3,8 +3,9 @@
 	<BackLink DBID="/Items/Talents/Class/Shaman/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Shaman/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Shaman/Ability_A4u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Shaman_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Shaman_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
+	<BackLink DBID="/Social.ROOT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -780,8 +781,8 @@
 		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Shaman/Ability_A4_2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Shaman/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Shaman/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Shaman/Ability_A4_2.TALENT" id="B07EDD12-9A10-4027-84AA-34F74F78A84D">
 			<ConditionFormula>
@@ -890,9 +891,9 @@
 		<percent>0</percent>
 	</consumptionBonus>
 	<cooldownTime>
-		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAC0Qg==</compiledString>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQg==</compiledString>
 		<returnType>float</returnType>
-		<sString>90</sString>
+		<sString>120</sString>
 	</cooldownTime>
 	<cooldownTimeSecondState>
 		<compiledString></compiledString>
@@ -921,7 +922,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>2085</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Shaman/A4_2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

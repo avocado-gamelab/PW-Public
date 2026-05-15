@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
-	<BackLink DBID="/Items/Talents/Level3/G477_AOE_DMG.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G477_AOE_DMG.TALENT" Count="1" />
 	<applicators>
 		<Item href="/Items/Talents/TalentKits/RedSet2_1_AoE/status_G477_ImFurios.APLR" id="D603274C-9860-4BA5-AB5A-43FFE79B8E3D">
 			<SpellPeriodicallyApplicator>
@@ -34,16 +34,16 @@
 					<Spell>
 						<applicators>
 							<Item href="/Items/Talents/TalentKits/RedSet2_1_AoE/status_G477_ImFurios.APLR" id="34E4DD9F-8434-4174-A664-FFB915DE5DD5">
-								<DamageApplicator parent="/GameLogic/GeneralApplicators/CommonDamage.APLR">
+								<DamageApplicator parent="/GameLogic/GeneralApplicators/PureDamage.APLR">
 									<damage>
 										<compiledString>FQcAAAABAAAAEwAAAERhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
 										<returnType>float</returnType>
 										<sString>cDamage</sString>
 									</damage>
-									<damageType>Material</damageType>
+									<damageType>Pure</damageType>
 									<LoggingEvent>-1</LoggingEvent>
 									<providerName></providerName>
-									<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
+									<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed.UIEV" />
 								</DamageApplicator>
 							</Item>
 						</applicators>
@@ -123,7 +123,7 @@
 										<sString>cDamage</sString>
 									</damage>
 									<damageMode>4</damageMode>
-									<damageType>Material</damageType>
+									<damageType>Pure</damageType>
 									<enabled>
 										<compiledString></compiledString>
 										<returnType>bool</returnType>
@@ -133,7 +133,7 @@
 									<LoggingEvent>-1</LoggingEvent>
 									<providerName></providerName>
 									<timeLimiter>-1</timeLimiter>
-									<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
+									<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed.UIEV" />
 								</DamageApplicator>
 							</Item>
 						</applicators>

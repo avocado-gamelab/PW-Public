@@ -2,7 +2,7 @@
 <SpellApplicator>
 	<BackLink DBID="/Items/Talents/Class/Vampire/A2_RoseProgramme.APLR" Count="1" />
 	<applyTarget>ApplicatorTarget</applyTarget>
-	<caption>Рут и блинк к цели</caption>
+	<caption>Рут и блинк к цели с уроном</caption>
 	<enabled>
 		<compiledString>FSEAAAADAAEAKAAAAD4AAACIAAAAaQEAAEEyX1Rlcm1pbmF0aW5nAABBMl9NYXhCbGlua1JhbmdlAFWL7IPsHGgAAAAAi0UIixCLTQiLgogBAAD/0Nwd4wAAAN/g9sRED4qIAAAAjU34UYtVDIsCi00Mi5CMAQAA/9JQjUXwUItNCIsRi00Ii4KMAQAA/9BQ6G8AAACDxAiLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlDdXej/0Nxd6N/g9sQBdS+LTQiLEYtNCIuCkAEAAP/QUItNDIsRi00Mi0J0/9APtsiD+QF1CcdF5AEAAADrB8dF5AAAAACKReSL5V3DAAAAAAAAAABVi+yD7BSLRQjZQASLTQzYYQTZXfTZRfRR2Rwki1UI2QKLRQzYINld8NlF8FHZHCSNTfjoVwAAANlF+NhN+NlF/NhN/N7B2V3s2UXsUdkcJOgHAAAAg8QEi+Vdw1WL7FHZRQjZHCToBQAAAIPEBF3DVYvsUdlFCIPsCN0cJOhv/v//g8QI2V382UX8i+Vdw1WL7FGJTfyLRfzZRQjZGItN/NlFDNlZBItF/IvlXcIIAA==</compiledString>
 		<returnType>bool</returnType>
@@ -169,6 +169,80 @@
 							<sString>true</sString>
 						</startCondition>
 					</MoveToApplicator>
+				</Item>
+				<Item href="/Items/Talents/Class/Vampire/A2_BlinkToTarget.APLR" id="326DA821-3293-448C-A197-86A2D4A7EEEB">
+					<VariableProxyApplicator>
+						<applicators>
+							<Item>
+								<applicator href="/Items/Talents/Class/Vampire/A2_BlinkToTarget.APLR" id="557D49D4-EB70-48EB-A83A-1297F4EA2363">
+									<DamageApplicator>
+										<applyTarget>ApplicatorTarget</applyTarget>
+										<cancelInvisibility>false</cancelInvisibility>
+										<caption>урон</caption>
+										<damage>
+											<compiledString>FQsAAAABAAAAFwAAAEEydV9EYW1hZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+											<returnType>float</returnType>
+											<sString>cA2u_Damage</sString>
+										</damage>
+										<damageMode>4</damageMode>
+										<damageType>Material</damageType>
+										<enabled>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</enabled>
+										<formulaName></formulaName>
+										<LoggingEvent>-1</LoggingEvent>
+										<providerName></providerName>
+										<timeLimiter>-1</timeLimiter>
+										<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
+									</DamageApplicator>
+								</applicator>
+								<variableNames>
+									<Item>damageDealed</Item>
+								</variableNames>
+							</Item>
+							<Item>
+								<applicator href="/Items/Talents/Class/Vampire/appl_A0_SUP_SaveOverheal.APLR" />
+								<variableNames />
+							</Item>
+							<Item>
+								<applicator href="/Items/Talents/Class/Vampire/A2_BlinkToTarget.APLR" id="8E21412E-D903-4F0B-8C7F-9264A17CE6BF">
+									<HealApplicator>
+										<amount>
+											<compiledString>FSQAAAADAAAAQwAAAFUAAABuAAAAZGFtYWdlRGVhbGVkAAAAAEEwX0xpZmVEcmFpblBlcmNlbnQAVYvsg+wQi0UQixCLTRCLQkj/0IlF/ItNDFGLVQhSaBAAAACLRRCLEItNEItCUP/QaAAAAACLTfyLEYtN/ItCVN1d9P/Q3E303DV8AAAA2V3w2UXwi+VdwwAAAAAAAFlA</compiledString>
+											<returnType>float</returnType>
+											<sString>appl.parent.GetVariable("damageDealed") * cA0_LifeDrainPercent / 100</sString>
+										</amount>
+										<applyTarget>AbilityOwner</applyTarget>
+										<caption>heal</caption>
+										<enabled>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</enabled>
+										<formulaName></formulaName>
+										<healTarget>Health</healTarget>
+										<ignoreHealingMods>false</ignoreHealingMods>
+										<LoggingEvent>-1</LoggingEvent>
+										<providerName></providerName>
+										<uiEvent href="/UI/Events/CommonEvents/EventHeal.UIEV" />
+									</HealApplicator>
+								</applicator>
+								<variableNames />
+							</Item>
+						</applicators>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<caption>Физ. урон и отхил</caption>
+						<enabled>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</enabled>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<providerName></providerName>
+					</VariableProxyApplicator>
 				</Item>
 				<Item href="/Items/Talents/Class/Vampire/A2_BlinkToTarget.APLR" id="08C2F62A-E997-4C91-B9A0-7EF144D8CB8E">
 					<TauntApplicator>

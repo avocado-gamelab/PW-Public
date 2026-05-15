@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/GameLogic/TalentGroup.TGRP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar5_Set1" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G311_K_Life_Energy.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Vampiric4_ArmourBlink/V4_ArmourBlink.TALKIT" Count="2" />
+	<BackLink DBID="/Test/Talents/Frog/Elite_Life.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Elite.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Ratcatcher/Elite_IntLife.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Ratcatcher/Elite_StrIntLife.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Rockman/Elite_Life.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/SnowQueen/Elite_StrInt.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Epic.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Rockman/Epic_StrLife.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSetKits.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/IronKnight/Epic_StrLife.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="4" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_OrangeSet1.ROLLCONT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Healer_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Healer_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Test_Satanic.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="FB459520-EE68-47C8-B284-A28801B99036">
+			<SpellApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<caption>Телепорт</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="8BD6689C-6889-49D2-96A9-DBF1BFC1DE61">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="30BCBDEA-B983-4840-B762-065D98EDEB35">
+								<TeleportApplicator>
+									<appearEffect href="/Effects/General/Blink/_SmokeEnd.EFFT" />
+									<applyTarget>AbilityOwner</applyTarget>
+									<caption>телепорт</caption>
+									<disappearEffect href="/Effects/General/Blink/_SmokeStart.EFFT" />
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<maxDistance>
+										<compiledString>FQsAAAABAAAAFwAAAFRFQ0hfUmFuZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+										<returnType>float</returnType>
+										<sString>cTECH_Range</sString>
+									</maxDistance>
+									<notifyInboundDispatches>true</notifyInboundDispatches>
+									<providerName></providerName>
+									<pushUnits>false</pushUnits>
+									<teleportTarget>ApplicatorTarget</teleportTarget>
+								</TeleportApplicator>
+							</Item>
+							<Item href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="57A2F275-904E-4D4F-9D95-9C71E9DCD553">
+								<SpellApplicator>
+									<applyTarget>AbilityOwner</applyTarget>
+									<caption>teleport pets</caption>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+									<spell href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="75635BCA-1BD0-478F-9378-5D115102FB0E">
+										<Spell>
+											<applicators>
+												<Item href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="8E373582-E173-4381-A41D-C54C57AE95E3">
+													<TeleportApplicator>
+														<appearEffect href="/Effects/General/Blink/_SmokeEnd.EFFT" />
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>teleport</caption>
+														<disappearEffect href="/Effects/General/Blink/_SmokeStart.EFFT" />
+														<enabled>
+															<compiledString>FQYAAAACAAAACwAAACEAAABJc1BldABVi+xRaAAAAACLRQyLEItNDIuCiAEAAP/Q3B1DAAAA3+D2xER6CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAA8D8=</compiledString>
+															<returnType>bool</returnType>
+															<sString>receiver.vIsPet == 1.0f</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<maxDistance>
+															<compiledString></compiledString>
+															<returnType>float</returnType>
+															<sString>0.0f</sString>
+														</maxDistance>
+														<notifyInboundDispatches>true</notifyInboundDispatches>
+														<providerName></providerName>
+														<pushUnits>false</pushUnits>
+														<teleportTarget>Hier1UpApplicatorTarget</teleportTarget>
+													</TeleportApplicator>
+												</Item>
+												<Item href="/GameLogic/GeneralApplicators/SetTeleported.APLR" />
+											</applicators>
+											<dispatch href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="CF4C9333-AEA1-4C82-AABC-9190D7F88A48">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+									<spellTarget>ApplicatorTarget</spellTarget>
+									<targetSelector href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="4103866F-1BAA-4AED-8E48-F22E4EDC3F66">
+										<SummonEnumerator>
+											<flags>1</flags>
+											<mode>Normal</mode>
+											<summonTypes>5</summonTypes>
+										</SummonEnumerator>
+									</targetSelector>
+								</SpellApplicator>
+							</Item>
+							<Item href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="3E48605D-FF82-49B0-A2A5-3870F9EADAEA">
+								<DamageApplicator>
+									<applyTarget>AbilityOwner</applyTarget>
+									<cancelInvisibility>false</cancelInvisibility>
+									<caption>Урон самому себе как цена за абилку</caption>
+									<damage>
+										<compiledString>FQ4AAAABAAAAGgAAAFRFQ0hfTGlmZUNvc3QAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+										<returnType>float</returnType>
+										<sString>cTECH_LifeCost</sString>
+									</damage>
+									<damageMode>4</damageMode>
+									<damageType>Pure</damageType>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+									<timeLimiter>-1</timeLimiter>
+									<uiEvent href="" />
+								</DamageApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="62234552-0C61-4A99-B8B8-B7D1932B764C">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="6DF54ADF-F2C4-48C5-BFC1-EFD7432F66D3">
+					<UnitPlaceCorrector>
+						<checkByRangeToRequester>true</checkByRangeToRequester>
+						<checkLineOfSight>false</checkLineOfSight>
+						<nativeTerrainOnly>false</nativeTerrainOnly>
+						<passabilityCheckMode>6</passabilityCheckMode>
+						<radius>11</radius>
+						<targetSelector href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="1890C61B-C3D7-46B6-B1C4-85CCDAADE63B">
+							<SelectApplicatorTarget>
+								<applicatorIndex>0</applicatorIndex>
+								<applicatorName></applicatorName>
+								<namedApplicatorTarget>ApplicatorTarget</namedApplicatorTarget>
+								<selectTarget>ApplicatorTarget</selectTarget>
+							</SelectApplicatorTarget>
+						</targetSelector>
+					</UnitPlaceCorrector>
+				</targetSelector>
+			</SpellApplicator>
+		</Item>
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G311: Мерцание жизни</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G311_K_Life_Energy.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G311_K_Life_Energy.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="65EA4487-A327-491B-94E2-D248497022E0">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="3FA317EB-2F20-4F1F-ADD7-646A5D39FD86">
+					<UnitConstant>
+						<name>Add_Life</name>
+						<var>
+							<compiledString>FRMAAAACAAAAIgAAADwAAABUNV9TdGF0AExpZmVCdWRnZXQAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgIAAAAi1UQiwKLTRCLUFDdXfj/0txN+Nld9NlF9IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT5_Stat * cLifeBudget</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="06F7E5DD-8DCA-4966-B286-A6D8A95E6819">
+					<UnitConstant>
+						<name>TECH_Range</name>
+						<var>
+							<compiledString>FQ0AAAABAAAAGQAAAFJhbmdlX01lZGl1bQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange_Medium</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="3E6DB6CF-F777-436C-8850-2E5F09A52D1D">
+					<UnitConstant>
+						<name>TECH_LifeCost</name>
+						<var>
+							<compiledString>FRAAAAADAAAAJAAAADsAAABhAAAATGlmZUNvc3RQZXJjZW50AFWL7IPsEItFCIsQi00IiwL/0NwlgwAAANld/NlF/FHZHCSLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlD/0ItNCIsRi00Ii0IM3V30/9DcTfTcNXsAAADZXfDZRfBR2Rwk6BcAAACDxAiL5V3DAAAAAAAAWUAAAAAAAADwP1WL7FHZRQjZRQze2d/g9sRBdQjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>min(cLifeCostPercent * sMaxLife / 100,sLife-1)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Vampiric4_ArmourBlink/const_LifeCostPercent" />
+				<Item href="/Items/Talents/TalentKits/Vampiric4_ArmourBlink/const_Cooldown" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQ4AAAABAAAAGgAAAEczMTFfQ29vbGRvd24AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cG311_Cooldown</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G311_K_Life_Energy.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="FA44FA0F-AEDC-4ED7-AF47-470A8030FD9C">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>16986</flags>
+	<forceBonus>22.7</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_311.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>4</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G311_K_Life_Energy.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="2133E37E-85AF-418F-8820-D2569D93EAC5">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Life</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9MaWZlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Life</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" id="FE6CE2C9-E1C2-416A-8173-1AF2656F981F">
+			<FlagsApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>Запрет использовать при ForbidMoveSpecial, без хитов или остальных талантов кита</caption>
+				<consumables />
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FU0AAAAKAAAAhQAAAJsAAACuAAAAxwAAAAEBAAAaAQAAVAEAAG0BAACjAQAAvAEAAFRFQ0hfTGlmZUNvc3QAAABHMzAzAAAAAEczMDMAAAAARzMwOQAAAABHMzA5AAAAAEczMTYAAAAARzMxNgAAAABHMzE5AAAAAEczMTkAVYvsg+wsaAAAAgCLRQiLEItNCItCaP/QD7bIhckPhYoBAACLVQiLAotNCIsQ/9KLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFDdXfj/0twFCAIAANxd+N/g9sRBD4RNAQAAaBAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgYAAAAi00IixGLTQiLgqgBAAD/0IlF9ItN9IsRi030i0IE/9CIRfPrBMZF8wAPtk3zhckPhPoAAABoIAAAAItVCIsCi00Ii5CoAQAA/9KFwHQqaCgAAACLRQiLEItNCIuCqAEAAP/QiUXsi03sixGLTeyLQgT/0IhF6+sExkXrAA+2TeuFyQ+EpwAAAGgwAAAAi1UIiwKLTQiLkKgBAAD/0oXAdCpoOAAAAItFCIsQi00Ii4KoAQAA/9CJReSLTeSLEYtN5ItCBP/QiEXj6wTGReMAD7ZN44XJdFhoQAAAAItVCIsCi00Ii5CoAQAA/9KFwHQqaEgAAACLRQiLEItNCIuCqAEAAP/QiUXci03cixGLTdyLQgT/0IhF2+sExkXbAA+2TduFyXQJx0XUAAAAAOsHx0XUAQAAAIpF1IvlXcMAAAAAAAAIQA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sFlag(131072) || (sLife &lt; cTECH_LifeCost + 3) || !tal("G303") || !tal("G309") || !tal("G316") || !tal("G319")</sString>
+				</enabled>
+				<flag>1024</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents>
+					<Item href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" />
+				</talents>
+				<useListAs>ListAsRule</useListAs>
+			</FlagsApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G311</persistentId>
+	<prerequisiteTalents />
+	<rarity>exclusive</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G311_K_Life_Energy.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>Life</stat>
+			<values>
+				<Item>570</Item>
+				<Item>612</Item>
+				<Item>654</Item>
+				<Item>696</Item>
+				<Item>738</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>16777216</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQsAAAABAAAAFwAAAFRFQ0hfUmFuZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cTECH_Range</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

@@ -3,16 +3,14 @@
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/Creeps/Bosses/Boss1/PvE_Coop1.CREEP" Count="2" />
 	<BackLink DBID="/Creeps/Bosses/Boss1/PvE_Coop1_DoTSummon.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Alchemist.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Alchemist.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Alchemist/_summon_Circle.APLR" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Alchemist/Ability_A4.TALENT" Count="3" />
 	<BackLink DBID="/Items/Talents/Class/Alchemist/Ability_A4_2.TALENT" Count="3" />
 	<BackLink DBID="/Items/Talents/Class/Alchemist/Ability_A4u.TALENT" Count="2" />
 	<BackLink DBID="/Items/Talents/Class/Alchemist/Ability_A4u_2.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level5/G353_AoE.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G353_AoE.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
-	<BackLink DBID="/Maps/Multiplayer/MOBA/NewYear/_.ADMP" Count="1" />
-	<BackLink DBID="/Maps/Multiplayer/MOBA/Spawners/NeutralBoss.NCSPN" Count="1" />
 	<BackLink DBID="/Test/Talents/Alchemist/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Alchemist/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Alchemist/Elite_Int.TALENTSET" Count="1" />
@@ -446,20 +444,10 @@
 				<uiEvent href="/UI/Events/ErrorMessages/CastError_Immune2Ctrl.UIEV" />
 			</ConditionCastLimitation>
 		</Item>
-		<Item href="/Items/Talents/Class/Alchemist/Ability_A4.TALENT" id="896B7A19-E90E-4F76-A4C7-16A7835A99E7">
-			<ConditionCastLimitation>
-				<condition>
-					<compiledString>FSAAAAACAAAAJQAAAD4AAABBbGNoZW1pc3RfQTRfMgAAQWxjaGVtaXN0X0E0dV8yAFWL7FFoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHUiaBAAAACLTQiLEYtNCIuCqAEAAP/QhcB1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3D</compiledString>
-					<returnType>bool</returnType>
-					<sString>!sender.GetTalent( "Alchemist_A4_2" ) &amp;&amp; !sender.GetTalent( "Alchemist_A4u_2" )</sString>
-				</condition>
-				<uiEvent href="" />
-			</ConditionCastLimitation>
-		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Alchemist/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Alchemist/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Alchemist/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Alchemist/Ability_A4.TALENT" id="FAE4B6FC-AEAA-4384-9E38-CD3717B7A57D">
 			<ConditionFormula>
@@ -669,7 +657,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>19</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Alchemist/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

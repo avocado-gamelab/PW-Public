@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProgramApplicator>
+	<BackLink DBID="/Buildings/DefaultStats/ability_AParent_AttackAbility.ATCK" Count="1" />
+	<BackLink DBID="/Buildings/DefaultStats/ability_ATier1_AttackAbility.ATCK" Count="1" />
+	<BackLink DBID="/Buildings/DefaultStats/ability_Backdoor_Protection.ABLT" Count="1" />
+	<BackLink DBID="/Buildings/DefaultStats/ability_BParent_AttackAbility.ATCK" Count="1" />
+	<BackLink DBID="/Buildings/DefaultStats/ability_BTier1_AttackAbility.ATCK" Count="1" />
+	<BackLink DBID="/Buildings/DefaultStats/DefaultMainAttack.ATCK" Count="1" />
+	<applicators>
+		<Item>
+			<applicator href="/Buildings/DefaultStats/Backdoor_Protection.APLR" id="576B045E-0C61-4EE7-8039-AFDE082EF06B">
+				<TargetsCounterApplicator>
+					<applyTarget>ApplicatorTarget</applyTarget>
+					<behaviorFlags>0</behaviorFlags>
+					<caption>Ищем крипов вокруг</caption>
+					<effect>
+						<Item href="" />
+						<Item href="" />
+					</effect>
+					<enabled>
+						<compiledString></compiledString>
+						<returnType>bool</returnType>
+						<sString>true</sString>
+					</enabled>
+					<formulaName>CreepCounter</formulaName>
+					<lifeTime>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>-1.0</sString>
+					</lifeTime>
+					<LoggingEvent>-1</LoggingEvent>
+					<providerName></providerName>
+					<startCondition>
+						<compiledString></compiledString>
+						<returnType>bool</returnType>
+						<sString>true</sString>
+					</startCondition>
+					<targetSelector href="/Buildings/DefaultStats/Backdoor_Protection.APLR" id="D22448A3-EA3D-434E-97E4-112BD8528E70">
+						<AreaTargetSelector>
+							<absolutePosition>
+								<x>0</x>
+								<y>0</y>
+							</absolutePosition>
+							<flags>0</flags>
+							<mode>Normal</mode>
+							<range>
+								<compiledString>FREAAAABAAAAHQAAAENyZWVwU2VhcmNoUmFuZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+								<returnType>float</returnType>
+								<sString>cCreepSearchRange</sString>
+							</range>
+							<targetFilter>537919512</targetFilter>
+							<targetSelector href="" />
+						</AreaTargetSelector>
+					</targetSelector>
+				</TargetsCounterApplicator>
+			</applicator>
+			<continueCondition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</continueCondition>
+			<continueEvents>1</continueEvents>
+			<delay>
+				<compiledString></compiledString>
+				<returnType>float</returnType>
+				<sString>-1.0</sString>
+			</delay>
+			<stopCondition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</stopCondition>
+			<stopEvents>0</stopEvents>
+		</Item>
+		<Item>
+			<applicator href="/Buildings/DefaultStats/Backdoor_Protection.APLR" id="5F51A02F-2E89-4313-AB3A-DC44321E5A26">
+				<TriggerApplicator>
+					<actionsCount>
+						<compiledString></compiledString>
+						<returnType>int</returnType>
+						<sString>0</sString>
+					</actionsCount>
+					<applyTarget>AbilityOwner</applyTarget>
+					<behaviorFlags>0</behaviorFlags>
+					<caption>Каждый шаг накладываем статус, отключающий бекдор, если рядом есть крипы</caption>
+					<effect>
+						<Item href="" />
+						<Item href="" />
+					</effect>
+					<enabled>
+						<compiledString></compiledString>
+						<returnType>bool</returnType>
+						<sString>true</sString>
+					</enabled>
+					<formulaName></formulaName>
+					<lifeTime>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>-1.0</sString>
+					</lifeTime>
+					<LoggingEvent>-1</LoggingEvent>
+					<playAck>false</playAck>
+					<processor href="/Buildings/DefaultStats/Backdoor_Protection.APLR" id="3F8C76AB-70C2-4F34-980B-F1B295E65E84">
+						<EventProcessorCondition>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<condition>
+								<compiledString>FR0AAAADAAAAKgAAAEIAAABVAAAAQ3JlZXBDb3VudGVyAAAAAHRhcmdldHNDb3VudABVi+yD7AhqAYtFEFBoAAAAAItNCIsRi00Ii4KcAQAA/9CJRfxoEAAAAItN/IsRi038i0JU/9DcHXcAAADf4PbEQXUJx0X4AQAAAOsHx0X4AAAAAIpF+IvlXcMAAAAAAAAAAA==</compiledString>
+								<returnType>bool</returnType>
+								<sString>sender.FindApplicator("CreepCounter", pMisc, UNIT)-&gt;GetVariable("targetsCount") &gt; 0</sString>
+							</condition>
+							<events>8192</events>
+							<onlyParent>false</onlyParent>
+							<spell href="/Buildings/DefaultStats/Backdoor_Protection.APLR" id="A6430025-7BB5-4458-8CF9-C099E9CC9FCF">
+								<Spell>
+									<applicators>
+										<Item href="/Buildings/DefaultStats/Backdoor_Protection.APLR" id="031FCD68-C558-4D64-A032-FF528DA3EB15">
+											<StatusApplicator>
+												<applicators />
+												<applyTarget>AbilityOwner</applyTarget>
+												<behaviorFlags>1</behaviorFlags>
+												<caption>Защита развеяна</caption>
+												<customCounter>
+													<compiledString></compiledString>
+													<returnType>int</returnType>
+													<sString>0</sString>
+												</customCounter>
+												<customProgress>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>-1.0</sString>
+												</customProgress>
+												<description textref="/Buildings/DefaultStats/Backdoor_Protection.APLR_031fcd68c5584d64a032ff528da3eb15_description.txt" />
+												<dispellPriority>NonDispellable</dispellPriority>
+												<effect>
+													<Item href="" />
+													<Item href="" />
+												</effect>
+												<enabled>
+													<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</enabled>
+												<flags>4</flags>
+												<formulaName>BackdoorProtectionPause</formulaName>
+												<image href="" />
+												<lifeTime>
+													<compiledString>FRIAAAABAAAAHgAAAEJhY2tkb29yRGVsYXlUaW1lAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+													<returnType>float</returnType>
+													<sString>cBackdoorDelayTime</sString>
+												</lifeTime>
+												<LoggingEvent>-1</LoggingEvent>
+												<name textref="/Buildings/DefaultStats/Backdoor_Protection.APLR_031fcd68c5584d64a032ff528da3eb15_name.txt" />
+												<power>0</power>
+												<providerName></providerName>
+												<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+												<stackCount>0</stackCount>
+												<startCondition>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</startCondition>
+												<statusPosition>0</statusPosition>
+												<stopBehaviour>StopByTime</stopBehaviour>
+												<unstackableWith href="" />
+											</StatusApplicator>
+										</Item>
+									</applicators>
+									<dispatch href="/Buildings/DefaultStats/Backdoor_Protection.APLR" id="7AC9C463-9118-4CC9-97EE-1F4A0C6683F0">
+										<DispatchImmediate>
+											<alwaysApply>false</alwaysApply>
+											<applyEffect>
+												<Item href="" />
+												<Item href="" />
+											</applyEffect>
+											<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+											<applyEffectOrientation>Default</applyEffectOrientation>
+											<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+											<dieAfterApply>true</dieAfterApply>
+											<dispatchEffect>
+												<Item href="" />
+												<Item href="" />
+											</dispatchEffect>
+											<flags>0</flags>
+											<instantApply>false</instantApply>
+										</DispatchImmediate>
+									</dispatch>
+								</Spell>
+							</spell>
+						</EventProcessorCondition>
+					</processor>
+					<providerName></providerName>
+					<startCondition>
+						<compiledString></compiledString>
+						<returnType>bool</returnType>
+						<sString>true</sString>
+					</startCondition>
+					<useAbilityCooldown>false</useAbilityCooldown>
+					<useAbilityOwnerMana>false</useAbilityOwnerMana>
+				</TriggerApplicator>
+			</applicator>
+			<continueCondition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</continueCondition>
+			<continueEvents>1</continueEvents>
+			<delay>
+				<compiledString></compiledString>
+				<returnType>float</returnType>
+				<sString>-1.0</sString>
+			</delay>
+			<stopCondition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</stopCondition>
+			<stopEvents>0</stopEvents>
+		</Item>
+		<Item>
+			<applicator href="/Buildings/DefaultStats/status_Backdoor_Protection.APLR" />
+			<continueCondition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</continueCondition>
+			<continueEvents>2</continueEvents>
+			<delay>
+				<compiledString></compiledString>
+				<returnType>float</returnType>
+				<sString>-1.0</sString>
+			</delay>
+			<stopCondition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</stopCondition>
+			<stopEvents>0</stopEvents>
+		</Item>
+	</applicators>
+	<applyTarget>AbilityOwner</applyTarget>
+	<behaviorFlags>0</behaviorFlags>
+	<caption>Backdoor Protection</caption>
+	<effect>
+		<Item href="" />
+		<Item href="" />
+	</effect>
+	<enabled>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<lifeTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>-1.0</sString>
+	</lifeTime>
+	<LoggingEvent>-1</LoggingEvent>
+	<providerName></providerName>
+	<startCondition>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</startCondition>
+</ProgramApplicator>

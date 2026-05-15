@@ -10,7 +10,7 @@
 					<sString>0.0f</sString>
 				</addValue>
 				<applyTarget>ApplicatorTarget</applyTarget>
-				<behaviorFlags>0</behaviorFlags>
+				<behaviorFlags>152</behaviorFlags>
 				<caption>уменьшить кд абилок</caption>
 				<effect>
 					<Item href="" />
@@ -46,10 +46,58 @@
 					<Item href="/Items/Talents/Class/WraithKing/Ability_A2.TALENT" />
 					<Item href="/Items/Talents/Class/WraithKing/Ability_A3.TALENT" />
 					<Item href="/Items/Talents/Class/WraithKing/Ability_A4.TALENT" />
+					<Item href="/Items/Talents/Class/WraithKing/Ability_A4_2.TALENT" />
 				</talents>
 				<targetAbilities>128</targetAbilities>
 				<useListAs>ListAsRule</useListAs>
 			</AbilityModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/WraithKing/status_A0_Arsenal.APLR" id="622EB71E-C46E-48B3-A65C-DEFFA5215F39">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>216</behaviorFlags>
+				<caption>Повышаем урон атаки</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>0.0f</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FSEAAAACAAAALgAAAEEAAABBMF9BZGRpdGlvbmFsQXR0YWNrRGFtYWdlUGVyY2VudABVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcDVsAAADZ6N7B2V382UX8i+VdwwAAAAAAAPA/AAAAQOF6hD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f + cA0_AdditionalAttackDamagePercent * 0.01f</sString>
+					</multValue>
+					<stat>BaseAttack</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
 		</Item>
 	</applicators>
 	<applyTarget>AbilityOwner</applyTarget>
@@ -72,9 +120,9 @@
 		<Item href="" />
 	</effect>
 	<enabled>
-		<compiledString>FREAAAACAAAAHgAAADEAAABBMF9BcnNlbmFsU3R1Y2tzAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twdUwAAAN/g9sQBdQnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAPA/</compiledString>
+		<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
 		<returnType>bool</returnType>
-		<sString>cA0_ArsenalStucks &gt;= 1</sString>
+		<sString>true</sString>
 	</enabled>
 	<flags>64</flags>
 	<formulaName></formulaName>

@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/Group_RedOperSet1" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset7_3_Panopticon/Redset7_3_Panopticon.TALKIT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Artist_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/BladeDancer_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Bomber_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Crusader_A_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Crusader_B_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Demonolog_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Dryad_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/FallenAngel_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Freeze_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/IronKnight_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Katana_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/PinkGirl_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Shadow_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Shaman_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Stalker_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Unicorn_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Warlord_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Wendigo_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Witch_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/WraithKing_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Zealot_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="4" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NormTal.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NY2020_MediocreList.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season13_GoodList.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season9_Mediocre.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Quests/TalentQuests/_Settings" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet7_11.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet13.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet14.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet15.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G575: Дух резвости</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/TalentKits/Redset7_3_Panopticon/condition_Bonus2Active" />
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" id="4331F896-B99F-466C-9D0E-995C4CA90D71">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" id="F7A74C8E-A53F-418D-8349-10AB63AD1EDD">
+					<UnitConstant>
+						<name>Add_EnergyRegAbs</name>
+						<var>
+							<compiledString>FSgAAAADAAAANwAAAFEAAABxAAAAVDNfU3RhdABBZGRfTW92ZVNwZWVkAAAARW5lcmd5UmVnQnVkZ2V0AFWL7IPsFItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoCAAAAItVEIsCi00Qi1BQ3V34/9LcbfiLRQxQi00IUWgYAAAAi1UQiwKLTRCLUFDdXfD/0txN8Nld7NlF7IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>(cT3_Stat - cAdd_MoveSpeed) * cEnergyRegBudget</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" id="A1C9BF93-A4C5-4F71-BBC3-1D74E8F8CFD7">
+					<UnitConstant>
+						<name>Add_MoveSpeed</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" id="AB158C36-49A0-4B6A-BADA-2EF4D6607622">
+					<UnitConstant>
+						<name>NotNTSpeedBoost</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" id="DF3EADA3-647F-461F-8638-DC50C594CC5E">
+					<UnitConstant>
+						<name>TECH_NonNTSpeed</name>
+						<var>
+							<compiledString>FSAAAAACAAAALwAAAEkAAABBZGRfTW92ZVNwZWVkAAAATm90TlRTcGVlZEJvb3N0AFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoEAAAAItVEIsCi00Qi1BQ3V34/9LcRfjZXfTZRfSL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cAdd_MoveSpeed + cNotNTSpeedBoost</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" id="65150FB9-972E-43C6-A7A3-BC3A6EB71149">
+					<UnitConstant>
+						<name>TECH_NotNTSpeedBoost</name>
+						<var>
+							<compiledString>FSAAAAACAAAALwAAAEEAAABURUNIX05vbk5UU3BlZWQAQWRkZWRfTW92ZVNwZWVkAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SaBAAAACLRQiLEItNCIuCiAEAAN1d+P/Q3G342V302UX0i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cTECH_NonNTSpeed - sender.vAdded_MoveSpeed</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" id="FB17410A-AF2A-4FC7-A63E-B8904138CEEE">
+					<UnitConstant>
+						<name>Add_MoveSpeed_NotNT</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset7_3_Panopticon/const_Add_Stat_RedSet" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>5</flags>
+	<forceBonus>13.21</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_575.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>2</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" id="998D792B-63A2-4334-8992-686CC4EE85E7">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_EnergyRegAbs</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FREAAAABAAAAHQAAAEFkZF9FbmVyZ3lSZWdBYnMAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_EnergyRegAbs</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>EnergyRegenerationAbsolute</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/_commonData/parent_MoveChange.APLR" />
+		<Item href="/Items/Talents/_commonData/AddedMoveSpeed.APLR" />
+		<Item href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" id="B6A07AEC-FEF8-40D0-891D-3C2A9C1265A7">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Установить G575_BonusSpeed на новую величину</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true; //comment for TGS</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FRUAAAABAAAAIQAAAFRFQ0hfTm90TlRTcGVlZEJvb3N0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cTECH_NotNTSpeedBoost</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>0.0f</sString>
+					</multValue>
+					<stat>Energy</stat>
+					<topModifier>false</topModifier>
+					<variable>G575_BonusSpeed</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" id="839EA40A-CFFE-4075-9867-6BB9F348A9F0">
+			<StatusApplicator>
+				<applicators />
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>УИшный Статус "Я не на РЗ!"</caption>
+				<customCounter>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</customCounter>
+				<customProgress>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</customProgress>
+				<description textref="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT_839ea40acffe407598676bb9f348a9f0_description.txt" />
+				<dispellPriority>NonDispellable</dispellPriority>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FSEAAAAEAAAAJgAAADwAAABQAAAAYwAAAEc1NzVfSXNPbgAAAFRFQ0hfTm90TlRTcGVlZEJvb3N0AFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHYUAAADf4PbERHswi00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ/9DcHYUAAADf4PbEQXUJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG575_IsOn != 0 &amp;&amp; cTECH_NotNTSpeedBoost &gt; 0</sString>
+				</enabled>
+				<flags>0</flags>
+				<formulaName></formulaName>
+				<image href="/UI/Styles/Icons/Talents/_575.ITEX" />
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<name textref="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT_839ea40acffe407598676bb9f348a9f0_name.txt" />
+				<power>0</power>
+				<providerName></providerName>
+				<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+				<stackCount>0</stackCount>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statusPosition>0</statusPosition>
+				<stopBehaviour>StopByTime</stopBehaviour>
+				<unstackableWith href="" />
+			</StatusApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" id="8B3FFFA7-64C1-417A-AE91-1E70D2E5E424">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>216</behaviorFlags>
+				<caption>Триггер "Я купил талант на Скорость!"</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQgAAAABAAAAEgAAAFRocm93VXAAVYvsagCLRRBQaAAAAACLTQiLEYtNCIuCnAEAAP/QM8k7RRAPlMGKwV3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.applThrowUp(GLOBAL) == pMisc</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" id="F2D4C79A-5196-4B1C-ACD6-4E0B1B7C10B5">
+					<EventProcessorCondition>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<condition>
+							<compiledString>FSUAAAACAAAALAAAAEkAAABHNTc1X0JvbnVzU3BlZWQAVEVDSF9Ob3ROVFNwZWVkQm9vc3QAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Qi00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ3V34/9DcXfjf4PbEBXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+							<returnType>bool</returnType>
+							<sString>sender.vG575_BonusSpeed &gt; cTECH_NotNTSpeedBoost</sString>
+						</condition>
+						<events>8192</events>
+						<onlyParent>false</onlyParent>
+						<spell href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" id="C813DD45-CB02-43FD-BDDF-FA182E5CE1A2">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" id="F487EFA3-D804-4DD1-86F5-1F8747FF9435">
+										<PermanentStatModApplicator>
+											<applyTarget>AbilityOwner</applyTarget>
+											<caption>Add_MoveSpeed</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString>FQoAAAACAAAADwAAACUAAABHNTc1X0lzT24AVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdRwAAAN/g9sREewnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+												<returnType>bool</returnType>
+												<sString>sender.vG575_IsOn != 0</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FSUAAAACAAAALAAAAEkAAABHNTc1X0JvbnVzU3BlZWQAVEVDSF9Ob3ROVFNwZWVkQm9vc3QAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Qi00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ3V34/9DcbfjZ4Nld9NlF9IvlXcM=</compiledString>
+													<returnType>float</returnType>
+													<sString>-(sender.vG575_BonusSpeed - cTECH_NotNTSpeedBoost)</sString>
+												</addValue>
+												<multValue>
+													<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+													<returnType>float</returnType>
+													<sString>1</sString>
+												</multValue>
+												<stat>MoveSpeed</stat>
+												<topModifier>false</topModifier>
+												<variable></variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" id="8C3C96E0-0259-4551-BE95-E4FED218F128">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>Установить G575_BonusSpeed на новую величину</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FRUAAAABAAAAIQAAAFRFQ0hfTm90TlRTcGVlZEJvb3N0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+													<returnType>float</returnType>
+													<sString>cTECH_NotNTSpeedBoost</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>0.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>G575_BonusSpeed</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" id="10E91461-C847-4767-B0FF-513CBDDF7B8E">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>true</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+					</EventProcessorCondition>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Applicators/trigger_G575_NotNT.APLR" />
+		<Item href="/Items/Talents/TalentKits/Redset7_3_Panopticon/program_Program_Redset7_3_AllStats.APLR" />
+	</passiveApplicators>
+	<persistentId>G575</persistentId>
+	<prerequisiteTalents />
+	<rarity>magnificent</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>16</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>EnergyRegenerationAbsolute</stat>
+			<values>
+				<Item>2.75</Item>
+				<Item>3.19</Item>
+				<Item>3.63</Item>
+				<Item>4.07</Item>
+				<Item>4.51</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>136258047</targetType>
+	<type>Simple</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Brewer.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Brewer_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Brewer.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Brewer_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Brewer_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Brewer/Ability_A1.TALENT" Count="3" />
 	<BackLink DBID="/Items/Talents/Class/Brewer/Ability_A1_SUP.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Brewer/Ability_A1u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Brewer/appl_A3u_CDReduction.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Brewer_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Brewer/Brewer.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
@@ -771,7 +771,7 @@
 																<SpellPeriodicallyApplicator>
 																	<applyTarget>ApplicatorTarget</applyTarget>
 																	<behaviorFlags>0</behaviorFlags>
-																	<caption>Collision_A1_SUP</caption>
+																	<caption>(ОТКЛЮЧЕНО) Collision_A1_SUP</caption>
 																	<effect>
 																		<Item href="" />
 																		<Item href="" />
@@ -797,9 +797,9 @@
 																	<scaleMode>ScaleIsCount</scaleMode>
 																	<spell href="/Items/Talents/Class/Brewer/spell_SpreadHoney.SPLL" />
 																	<startCondition>
-																		<compiledString>FR4AAAACAAAAJQAAAD4AAABCcmV3ZXJfQTFfU1VQAAAAQnJld2VyX0ExX1NVUABVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AIpF+4vlXcM=</compiledString>
+																		<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
 																		<returnType>bool</returnType>
-																		<sString>tal("Brewer_A1_SUP")</sString>
+																		<sString>false; //tal("Brewer_A1_SUP")</sString>
 																	</startCondition>
 																	<startOffset>
 																		<compiledString></compiledString>
@@ -1133,15 +1133,15 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Brewer/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Brewer/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Brewer/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Brewer/Ability_A1.TALENT" id="E2FEB2B8-3A67-46FD-823F-065A54B74209">
 			<ConditionFormula>
 				<condition>
-					<compiledString>FR4AAAACAAAAJQAAAD4AAABCcmV3ZXJfQTFfU1VQAAAAQnJld2VyX0ExX1NVUABVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
 					<returnType>bool</returnType>
-					<sString>tal("Brewer_A1_SUP") == false</sString>
+					<sString>true; //tal("Brewer_A1_SUP") == false</sString>
 				</condition>
 				<name>NotBrewer_A1_SUP</name>
 			</ConditionFormula>
@@ -1255,6 +1255,7 @@
 				<Item href="/Items/Talents/Class/Brewer/const_Honey_TTAddStaOrWill" />
 				<Item href="/Items/Talents/Class/Brewer/const_Honey_TTDec_StrOrInt" />
 				<Item href="/Items/Talents/Class/Brewer/const_Honey_TTStaOrWill" />
+				<Item href="/Items/Talents/Class/Brewer/const_A1_SUP_CDR" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -1263,9 +1264,9 @@
 		<percent>0</percent>
 	</consumptionBonus>
 	<cooldownTime>
-		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAQQ==</compiledString>
+		<compiledString>FSsAAAAEAAAAMgAAAEsAAACLAAAApAAAAEJyZXdlcl9BMV9TVVAAAABCcmV3ZXJfQTFfU1VQAAAAQTFfU1VQX0NEUgBVi+yD7BhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuJTfTbRfSLVQxSi0UIUGggAAAAi00QixGLTRCLQlDdXez/0NxN7NwtsgAAANld6NlF6IvlXcMAAAAAAAAwQA==</compiledString>
 		<returnType>float</returnType>
-		<sString>16.0f</sString>
+		<sString>16.0f - tal("Brewer_A1_SUP") * cA1_SUP_CDR</sString>
 	</cooldownTime>
 	<cooldownTimeSecondState>
 		<compiledString></compiledString>
@@ -1294,7 +1295,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>599</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Brewer/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

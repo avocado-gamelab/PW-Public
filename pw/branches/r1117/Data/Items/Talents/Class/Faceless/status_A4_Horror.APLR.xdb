@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
 	<BackLink DBID="/Heroes/DefaultStatus/_SILENCE_Status.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Faceless/Ability4.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Faceless/Ability_A4.TALENT" Count="2" />
 	<BackLink DBID="/Summons/Spear/_Mowgli.SUMMONED" Count="1" />
 	<applicators>
 		<Item href="/Items/Talents/Class/Faceless/status_A4_Horror.APLR" id="A6257968-9220-4772-9416-541D80A179E2">
@@ -79,6 +79,57 @@
 							<Spell>
 								<applicators>
 									<Item href="/Items/Talents/Class/Faceless/status_A4_bonus.APLR" />
+									<Item href="/Items/Talents/Class/Faceless/status_A4_Horror.APLR" id="A7269DD7-1C2C-42CD-A736-279F574D3A3A">
+										<StatusApplicator>
+											<applicators />
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<behaviorFlags>0</behaviorFlags>
+											<caption>Статус, чтобы стаки критов не сбивались, если ульта действует на нескольких героев, но не все умерли</caption>
+											<customCounter>
+												<compiledString></compiledString>
+												<returnType>int</returnType>
+												<sString>0</sString>
+											</customCounter>
+											<customProgress>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</customProgress>
+											<description textref="" />
+											<dispellPriority>NonDispellable</dispellPriority>
+											<effect>
+												<Item href="" />
+												<Item href="" />
+											</effect>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<flags>0</flags>
+											<formulaName>Faceless_SaveCrits</formulaName>
+											<image href="" />
+											<lifeTime>
+												<compiledString>FQsAAAABAAAAFwAAAEE0RHVyYXRpb24AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+												<returnType>float</returnType>
+												<sString>cA4Duration</sString>
+											</lifeTime>
+											<LoggingEvent>-1</LoggingEvent>
+											<name textref="" />
+											<power>0</power>
+											<providerName></providerName>
+											<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+											<stackCount>0</stackCount>
+											<startCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</startCondition>
+											<statusPosition>0</statusPosition>
+											<stopBehaviour>StopByTime</stopBehaviour>
+											<unstackableWith href="" />
+										</StatusApplicator>
+									</Item>
 								</applicators>
 								<dispatch href="/Items/Talents/Class/Faceless/status_A4_Horror.APLR" id="3020A658-BD07-48E0-9453-139362A3F3D3">
 									<DispatchImmediate>
@@ -128,7 +179,7 @@
 		<sString>-1.0</sString>
 	</customProgress>
 	<description textref="/Items/Talents/Class/Faceless/status_A4_Horror.APLR_description.txt" />
-	<dispellPriority>Low</dispellPriority>
+	<dispellPriority>NonDispellable</dispellPriority>
 	<effect>
 		<Item href="/Effects/Debuffs/Mask/_.EFFT" />
 		<Item href="" />

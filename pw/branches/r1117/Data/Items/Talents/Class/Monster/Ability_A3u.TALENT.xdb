@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Monster.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Monster_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Monster_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Monster.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Monster_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Monster_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Monster/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Monster/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Monster/Elite_Aspd.TALENTSET" Count="1" />
@@ -34,7 +34,7 @@
 	<askId>0</askId>
 	<autoTargetSelector href="" />
 	<budget>-1</budget>
-	<caption>А3у Твари</caption>
+	<caption>А3у Подавляющий натиск</caption>
 	<castAllowRange>
 		<compiledString></compiledString>
 		<returnType>float</returnType>
@@ -42,8 +42,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Monster/Ability_A3u.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Monster/Ability_A3u.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Monster/Ability_A3u.TALENT" id="27F18DEE-E42F-467D-8F7C-380F158FF7C2">
 			<ConditionFormula>
@@ -89,7 +89,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>0</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Monster/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

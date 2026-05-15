@@ -275,9 +275,9 @@
 												<cancelInvisibility>false</cancelInvisibility>
 												<caption>Урон по зданию</caption>
 												<damage>
-													<compiledString>FQAAAAAAAAAAVYvsi0UIixCLTQiLgjABAAD/0F3D</compiledString>
+													<compiledString>FRUAAAABAAAAIQAAAEE0XzJfRGFtYWdlQnVpbGRpbmdzAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
 													<returnType>float</returnType>
-													<sString>sStrength</sString>
+													<sString>cA4_2_DamageBuildings</sString>
 												</damage>
 												<damageMode>0</damageMode>
 												<damageType>Material</damageType>
@@ -447,12 +447,12 @@
 																						<Item href="/Creeps/A/SuperHeavy/InventorSummon.CREEP" id="35BBDCFD-F053-41DC-97C5-110D110FECCB">
 																							<PermanentStatModApplicator>
 																								<applyTarget>ApplicatorTarget</applyTarget>
-																								<caption>Обнуляем нафту на крипе</caption>
+																								<caption>(Отключено) Обнуляем нафту на крипе (Зачем?)</caption>
 																								<customApplyType>None</customApplyType>
 																								<enabled>
-																									<compiledString></compiledString>
+																									<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
 																									<returnType>bool</returnType>
-																									<sString>true</sString>
+																									<sString>false</sString>
 																								</enabled>
 																								<formulaName></formulaName>
 																								<LoggingEvent>-1</LoggingEvent>
@@ -514,9 +514,9 @@
 																	<cancelInvisibility>false</cancelInvisibility>
 																	<caption>damage</caption>
 																	<damage>
-																		<compiledString>FQAAAAABAAAAFgAAAFWL7FGLRQiLEItNCIuCMAEAAP/Q3A0kAAAA2V382UX8i+VdwwAAAEAzM/M/</compiledString>
+																		<compiledString>FRIAAAABAAAAHgAAAEE0XzJfRGFtYWdlQ3JlZXBzAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
 																		<returnType>float</returnType>
-																		<sString>sStrength * 1.2f</sString>
+																		<sString>cA4_2_DamageCreeps</sString>
 																	</damage>
 																	<damageMode>0</damageMode>
 																	<damageType>Material</damageType>
@@ -702,6 +702,9 @@
 								</var>
 							</UnitConstant>
 						</Item>
+						<Item href="/Items/Talents/Class/Inventor/const_A4_2_StatMultiplier" />
+						<Item href="/Items/Talents/Class/Inventor/const_A4_2_DamageBuildings" />
+						<Item href="/Items/Talents/Class/Inventor/const_A4_2_DamageCreeps" />
 					</vars>
 				</UnitConstantsContainer>
 			</constants>
@@ -800,7 +803,7 @@
 				<Item href="/Creeps/A/SuperHeavy/InventorSummon.CREEP" id="E20C1BB3-F810-449E-BDD1-A344D5A2D6FD">
 					<SpellApplicator>
 						<applyTarget>ApplicatorTarget</applyTarget>
-						<caption>Ставим параметры от Силы/Разума мастера</caption>
+						<caption>Ставим параметры от параметров мастера</caption>
 						<enabled>
 							<compiledString></compiledString>
 							<returnType>bool</returnType>
@@ -826,9 +829,9 @@
 											<LoggingEvent>-1</LoggingEvent>
 											<modifier>
 												<addValue>
-													<compiledString>FQ8AAAADAAAAFgAAACsAAABxAAAAVGFyZ2V0AABUYXJnZXQAVYvsg+wMaAAAAACLRRCLEItNEItCTP/QiUX8aAgAAACLTRCLEYtNEItCTP/QiUX4i038ixGLTfyLgjQBAAD/0FHZHCSLTfiLEYtN+IuCMAEAAP/QUdkcJOgbAAAAg8QI3A1/AAAA2V302UX0i+Vdw5qZmZmZmfE/VYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+													<compiledString>FSQAAAADAAAAKwAAAEAAAABdAAAAVGFyZ2V0AABUYXJnZXQAAEE0XzJfU3RhdE11bHRpcGxpZXIAVYvsg+wUaAAAAACLRRCLEItNEItCTP/QiUX8aAgAAACLTRCLEYtNEItCTP/QiUX4i00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ/9CLTfyLEYtN/IuCNAEAAN1d8P/QUdkcJItN+IsRi034i4IwAQAA/9BR2Rwk6BAAAACDxAjcTfDZXezZReyL5V3DVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
 													<returnType>float</returnType>
-													<sString>max (appl.oTarget.Strength, appl.oTarget.Intellect) *1.1</sString>
+													<sString>max (appl.oTarget.Strength, appl.oTarget.Intellect) * cA4_2_StatMultiplier</sString>
 												</addValue>
 												<multValue>
 													<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
@@ -905,7 +908,7 @@
 									<Item href="/Creeps/A/SuperHeavy/InventorSummon.CREEP" id="BC2E8990-36BD-4346-A0AD-3E968FF81E0E">
 										<PermanentStatModApplicator>
 											<applyTarget>AbilityOwner</applyTarget>
-											<caption>Ставим скорость атаки 50</caption>
+											<caption>Ставим уровень</caption>
 											<customApplyType>None</customApplyType>
 											<enabled>
 												<compiledString></compiledString>
@@ -958,6 +961,66 @@
 												<stat>Life</stat>
 												<topModifier>true</topModifier>
 												<variable>ExplicitAttacksPerSecond</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Creeps/A/SuperHeavy/InventorSummon.CREEP" id="F61E63C2-89FD-4B01-8CDF-5AD1D71E3DCF">
+										<PermanentStatModApplicator>
+											<applyTarget>AbilityOwner</applyTarget>
+											<caption>Ставим Стойкость</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FQ8AAAACAAAAFgAAACsAAABUYXJnZXQAAFRhcmdldABVi+yD7AhoAAAAAItFEIsQi00Qi0JM/9CJRfxoCAAAAItNEIsRi00Qi0JM/9CJRfiLTfyLEYtN/IuCRAEAAP/QUdkcJItN+IsRi034i4JAAQAA/9BR2Rwk6AcAAACDxAiL5V3DVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+													<returnType>float</returnType>
+													<sString>max (appl.oTarget.Stamina, appl.oTarget.Will)</sString>
+												</addValue>
+												<multValue>
+													<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+													<returnType>float</returnType>
+													<sString>0.0f</sString>
+												</multValue>
+												<stat>Stamina</stat>
+												<topModifier>false</topModifier>
+												<variable></variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Creeps/A/SuperHeavy/InventorSummon.CREEP" id="D16027A7-9CBD-4C56-A14A-1BBDC828E4A6">
+										<PermanentStatModApplicator>
+											<applyTarget>AbilityOwner</applyTarget>
+											<caption>Ставим Волю</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FQ8AAAACAAAAFgAAACsAAABUYXJnZXQAAFRhcmdldABVi+yD7AhoAAAAAItFEIsQi00Qi0JM/9CJRfxoCAAAAItNEIsRi00Qi0JM/9CJRfiLTfyLEYtN/IuCRAEAAP/QUdkcJItN+IsRi034i4JAAQAA/9BR2Rwk6AcAAACDxAiL5V3DVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+													<returnType>float</returnType>
+													<sString>max (appl.oTarget.Stamina, appl.oTarget.Will)</sString>
+												</addValue>
+												<multValue>
+													<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+													<returnType>float</returnType>
+													<sString>0.0f</sString>
+												</multValue>
+												<stat>Will</stat>
+												<topModifier>false</topModifier>
+												<variable></variable>
 											</modifier>
 											<providerName></providerName>
 										</PermanentStatModApplicator>
@@ -1200,7 +1263,7 @@
 		<y1>0</y1>
 		<y2>0</y2>
 	</collision>
-	<creepType>FactionalSiege</creepType>
+	<creepType>FactionalChampion</creepType>
 	<deathParameters href="/GameLogic/SiegeCreep.UNDP" />
 	<description textref="/Creeps/A/SuperHeavy/InventorSummon.CREEP_description.txt" />
 	<heightObject>false</heightObject>
@@ -1278,9 +1341,9 @@
 					<levelUpgrades />
 					<statId>Strength</statId>
 					<value>
-						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABIQg==</compiledString>
+						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQg==</compiledString>
 						<returnType>float</returnType>
-						<sString>50.0f</sString>
+						<sString>100.0f</sString>
 					</value>
 				</Item>
 				<Item>

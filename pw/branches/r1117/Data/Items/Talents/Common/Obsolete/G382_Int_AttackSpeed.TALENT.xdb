@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar5_Set4" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Archeress_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Artist_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Trickster_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/WraithKing_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_AtkSpd_Upg" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_AtkSpd_Upg2" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Life_AtkSpd_Upg2" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Sta_Upg" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Upg" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Will_Upg" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="4" />
+	<BackLink DBID="/Social/Lootboxes/LB_G382" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_OrangeSet4.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/OrangeSet4.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/SpeedBoots.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Archeress/Epic_AspdVamp.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Archeress/Epic_AspdVamp_Ult2.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/BladeDancer/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Demonolog/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Ent/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/FallenAngel/Epic_IntSpeed.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Freeze/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Gunslinger/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mowgli/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Night/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Prince/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Reaper/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Witch/Epic_Int.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G382: Интуиция зверя</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G382_Int_AttackSpeed.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G382_Int_AttackSpeed.TALENT" id="FA60B9F9-855A-4B4B-927D-83246472FCB5">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G382_Int_AttackSpeed.TALENT" id="836BC7E2-523B-4724-ACB3-738BE59DFAF8">
+					<UnitConstant>
+						<name>Add_Intellect</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUNV9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcMzMzMzMzPTPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT5_Stat * 0.3</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G382_Int_AttackSpeed.TALENT" id="21B2036E-D1BA-43BD-8B8D-59044A1D3D81">
+					<UnitConstant>
+						<name>Add_AttackSpeed</name>
+						<var>
+							<compiledString>FRsAAAAEAAAAKgAAAD0AAABKAAAAYAAAAFQ1X1N0YXQAQWRkX0F0dGFja1NwZWVkX05UAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3A15AAAAi0UMUItNCFFoCAAAAItVEIsCi00Qi1BQ3V34/9LcNXEAAADcbfjZXfTZRfSL5V3DAAAAAAAAAEBmZmZmZmbmPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT5_Stat * 0.7 - cAdd_AttackSpeed_NT / 2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G382_Int_AttackSpeed.TALENT" id="C97D8C50-ECF9-444A-8439-C9925313D666">
+					<UnitConstant>
+						<name>Add_AttackSpeed_NT</name>
+						<var>
+							<compiledString>FRUAAAACAAAAJAAAAD4AAABUNV9TdGF0AFRlcnJhaW5WYWx1ZQBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaAgAAACLVRCLAotNEItQUN1d+P/S3E342V302UX0i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT5_Stat * cTerrainValue</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G382_Int_AttackSpeed.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>22.7</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_382.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>4</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G382_Int_AttackSpeed.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/Obsolete/G382_Int_AttackSpeed.TALENT" id="AE59956D-5842-4449-A8F6-E53E7211DDBC">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Intellect</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQ4AAAABAAAAGgAAAEFkZF9JbnRlbGxlY3QAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Intellect</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Intellect</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G382_Int_AttackSpeed.TALENT" id="BE333917-95F5-469F-A65F-38D40E1380BF">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_AttackSpeed</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FRAAAAABAAAAHAAAAEFkZF9BdHRhY2tTcGVlZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_AttackSpeed</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>AttackSpeed</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G382_Int_AttackSpeed.TALENT" id="E7BC8D8C-2C4E-4691-8200-A31994A443AD">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Add_AttackSpeed_NT</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FRMAAAABAAAARAAAAEFkZF9BdHRhY2tTcGVlZF9OVABVi+xRVotFCIsQi00Ii0JM/9CL8ItNCIsRi00Ii4KQAQAA/9A78HUfi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ/9DZXfzrBdnu2V382UX8XovlXcMAAAAA</compiledString>
+						<returnType>float</returnType>
+						<sString>nt(cAdd_AttackSpeed_NT, 0)</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>AttackSpeed</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G382</persistentId>
+	<prerequisiteTalents />
+	<rarity>excellent</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/Obsolete/G382_Int_AttackSpeed.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>Intellect</stat>
+			<values>
+				<Item>5.7</Item>
+				<Item>6.12</Item>
+				<Item>6.54</Item>
+				<Item>6.96</Item>
+				<Item>7.38</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName></addValueName>
+			<stat>AttackSpeed</stat>
+			<values>
+				<Item>8.55</Item>
+				<Item>9.179999</Item>
+				<Item>9.809999</Item>
+				<Item>10.44</Item>
+				<Item>11.07</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>136258047</targetType>
+	<type>Simple</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

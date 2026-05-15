@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Dryad.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Dryad.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Dryad_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Dryad/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Dryad/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Dryad/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Dryad/Ability_A4u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Dryad/status_A3_Tree.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Dryad_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -213,8 +213,8 @@
 		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Dryad/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Dryad/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Dryad/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Dryad/Ability_A4.TALENT" id="C0198297-DCF6-4CC1-AE9B-9FC85958A592">
 			<ConditionFormula>
@@ -304,9 +304,9 @@
 		<percent>0</percent>
 	</consumptionBonus>
 	<cooldownTime>
-		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACWQg==</compiledString>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABIQg==</compiledString>
 		<returnType>float</returnType>
-		<sString>75</sString>
+		<sString>50</sString>
 	</cooldownTime>
 	<cooldownTimeSecondState>
 		<compiledString></compiledString>
@@ -335,7 +335,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>3</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Dryad/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -343,9 +343,9 @@
 	<isUltimateTalent>true</isUltimateTalent>
 	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
 	<manaCost>
-		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABcQw==</compiledString>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAWQw==</compiledString>
 		<returnType>float</returnType>
-		<sString>220</sString>
+		<sString>150</sString>
 	</manaCost>
 	<marker>doCast4</marker>
 	<microAI href="/Items/Talents/Class/Dryad/Ability_A4.TALENT" id="0218F68F-39FF-42C6-A50C-ECED646ADD8A">

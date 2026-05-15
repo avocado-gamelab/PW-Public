@@ -21,6 +21,7 @@
 	<applicators>
 		<Item href="/Heroes/Stalker/MeleeHero.APLR" />
 		<Item href="/GameLogic/GeneralApplicators/BaseAttackDmg_Hero_material.APLR" />
+		<Item href="/Heroes/status_TowerMultiplayerDamage.APLR" />
 	</applicators>
 	<autoTargetSelector href="" />
 	<caption></caption>
@@ -34,7 +35,13 @@
 	<compiledDescriptionA textref="" />
 	<compiledDescriptionB textref="" />
 	<conditionFormulas />
-	<constants href="" />
+	<constants href="/Heroes/Stalker/AttackAbility.ATCK" id="FBB7EF30-964E-4B2C-B692-F7733F073D2D">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Heroes/const_TowerDamgeBuff" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
 	<cooldownTime>
 		<compiledString></compiledString>
 		<returnType>float</returnType>

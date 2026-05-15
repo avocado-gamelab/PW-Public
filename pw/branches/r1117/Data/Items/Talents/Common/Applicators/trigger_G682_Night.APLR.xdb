@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TriggerApplicator>
+	<BackLink DBID="/Items/Talents/Common/Applicators/trigger_G682_Day.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" Count="1" />
+	<actionsCount>
+		<compiledString></compiledString>
+		<returnType>int</returnType>
+		<sString>1</sString>
+	</actionsCount>
+	<applyTarget>ApplicatorTarget</applyTarget>
+	<behaviorFlags>216</behaviorFlags>
+	<caption>Триггер Ночь</caption>
+	<effect>
+		<Item href="" />
+		<Item href="" />
+	</effect>
+	<enabled>
+		<compiledString>FQoAAAACAAAADwAAACUAAABHNjgyX0lzT24AVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdRwAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+		<returnType>bool</returnType>
+		<sString>sender.vG682_IsOn == 0</sString>
+	</enabled>
+	<formulaName>G682_NightTrigger</formulaName>
+	<lifeTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>-1.0</sString>
+	</lifeTime>
+	<LoggingEvent>-1</LoggingEvent>
+	<playAck>false</playAck>
+	<processor href="/Items/Talents/Common/Applicators/trigger_G682_Night.APLR" id="95099B8A-01BC-4602-9DDC-023EF6E4AABD">
+		<EventProcessorCondition>
+			<applyTarget>ApplicatorTarget</applyTarget>
+			<condition>
+				<compiledString>FQoAAAACAAAAJgAAADwAAABHMjQ3X0lzT24AVYvsUYtFEIsQi00Qi4KQAAAA/9APtsiFyXQraAAAAACLVQiLAotNCIuQiAEAAP/S3B1eAAAA3+D2xER6CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+				<returnType>bool</returnType>
+				<sString>mIsNight &amp;&amp; sender.vG247_IsOn == 0</sString>
+			</condition>
+			<events>8192</events>
+			<onlyParent>false</onlyParent>
+			<spell href="/Items/Talents/Common/Applicators/trigger_G682_Night.APLR" id="6BF431F4-FD52-4A4C-98F6-FD99059658D2">
+				<Spell>
+					<applicators>
+						<Item href="/Items/Talents/Common/Applicators/trigger_G682_Night.APLR" id="E30A48CF-193E-4BE8-90BF-03A73C65D931">
+							<PermanentStatModApplicator parent="/Items/Talents/_commonData/parent_MoveChange.APLR">
+								<enabled>
+									<compiledString>FRUAAAACAAAAIgAAADUAAABURUNIX05pZ2h0U3BlZWRCb29zdABVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcHVcAAADf4PbEQXUJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+									<returnType>bool</returnType>
+									<sString>cTECH_NightSpeedBoost &gt; 0</sString>
+								</enabled>
+								<modifier>
+									<addValue>
+										<compiledString>FRUAAAABAAAAIQAAAFRFQ0hfTmlnaHRTcGVlZEJvb3N0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+										<returnType>float</returnType>
+										<sString>cTECH_NightSpeedBoost</sString>
+									</addValue>
+								</modifier>
+							</PermanentStatModApplicator>
+						</Item>
+						<Item href="/Items/Talents/Common/Applicators/trigger_G682_Night.APLR" id="CEA50715-DDE0-4A9F-BAFA-58C4B21139AE">
+							<PermanentStatModApplicator>
+								<applyTarget>AbilityOwner</applyTarget>
+								<caption>G682_IsOn = 1</caption>
+								<customApplyType>None</customApplyType>
+								<enabled>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</enabled>
+								<formulaName></formulaName>
+								<LoggingEvent>-1</LoggingEvent>
+								<modifier>
+									<addValue>
+										<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+										<returnType>float</returnType>
+										<sString>1</sString>
+									</addValue>
+									<multValue>
+										<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+										<returnType>float</returnType>
+										<sString>0</sString>
+									</multValue>
+									<stat>Life</stat>
+									<topModifier>false</topModifier>
+									<variable>G682_IsOn</variable>
+								</modifier>
+								<providerName></providerName>
+							</PermanentStatModApplicator>
+						</Item>
+						<Item href="/Items/Talents/Common/Applicators/trigger_G682_Day.APLR" />
+					</applicators>
+					<dispatch href="/Items/Talents/Common/Applicators/trigger_G682_Night.APLR" id="CBE8B87B-26BF-4C22-ACE7-5568F51314DC">
+						<DispatchImmediate>
+							<alwaysApply>false</alwaysApply>
+							<applyEffect>
+								<Item href="" />
+								<Item href="" />
+							</applyEffect>
+							<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+							<applyEffectOrientation>Default</applyEffectOrientation>
+							<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+							<dieAfterApply>true</dieAfterApply>
+							<dispatchEffect>
+								<Item href="" />
+								<Item href="" />
+							</dispatchEffect>
+							<flags>0</flags>
+							<instantApply>true</instantApply>
+						</DispatchImmediate>
+					</dispatch>
+				</Spell>
+			</spell>
+		</EventProcessorCondition>
+	</processor>
+	<providerName></providerName>
+	<startCondition>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</startCondition>
+	<useAbilityCooldown>false</useAbilityCooldown>
+	<useAbilityOwnerMana>false</useAbilityOwnerMana>
+</TriggerApplicator>

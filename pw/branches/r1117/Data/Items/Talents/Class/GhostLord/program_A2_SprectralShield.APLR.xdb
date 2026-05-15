@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProgramApplicator>
+	<BackLink DBID="/Items/Talents/Class/GhostLord/Ability_A2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" Count="1" />
+	<applicators>
+		<Item>
+			<applicator href="/Items/Talents/Class/GhostLord/program_A2_SprectralShield.APLR" id="70C3F986-A654-4E05-9CD9-AF27DD4A4A93">
+				<StatusApplicator>
+					<applicators />
+					<applyTarget>ApplicatorTarget</applyTarget>
+					<behaviorFlags>0</behaviorFlags>
+					<caption>метка "увеличить скорость" для Щита</caption>
+					<customCounter>
+						<compiledString></compiledString>
+						<returnType>int</returnType>
+						<sString>0</sString>
+					</customCounter>
+					<customProgress>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>-1.0</sString>
+					</customProgress>
+					<description textref="" />
+					<dispellPriority>NonDispellable</dispellPriority>
+					<effect>
+						<Item href="" />
+						<Item href="" />
+					</effect>
+					<enabled>
+						<compiledString></compiledString>
+						<returnType>bool</returnType>
+						<sString>true</sString>
+					</enabled>
+					<flags>0</flags>
+					<formulaName>GhostLordNTMark</formulaName>
+					<image href="" />
+					<lifeTime>
+						<compiledString>FQwAAAABAAAAGAAAAEEyX0R1cmF0aW9uAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cA2_Duration</sString>
+					</lifeTime>
+					<LoggingEvent>-1</LoggingEvent>
+					<name textref="" />
+					<power>0</power>
+					<providerName></providerName>
+					<stackableAcrossUnits>FullyStackable</stackableAcrossUnits>
+					<stackCount>0</stackCount>
+					<startCondition>
+						<compiledString>FQAAAAAAAAAAVYvsVotFCIsQi00Ii0JM/9CL8ItNCIsRi00Ii4KQAQAA/9A78A+UwF5dww==</compiledString>
+						<returnType>bool</returnType>
+						<sString>nt( true, false )</sString>
+					</startCondition>
+					<statusPosition>0</statusPosition>
+					<stopBehaviour>StopByTime</stopBehaviour>
+					<unstackableWith href="" />
+				</StatusApplicator>
+			</applicator>
+			<continueCondition>
+				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</continueCondition>
+			<continueEvents>0</continueEvents>
+			<delay>
+				<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+				<returnType>float</returnType>
+				<sString>-1</sString>
+			</delay>
+			<stopCondition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</stopCondition>
+			<stopEvents>0</stopEvents>
+		</Item>
+		<Item>
+			<applicator href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" />
+			<continueCondition>
+				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</continueCondition>
+			<continueEvents>0</continueEvents>
+			<delay>
+				<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+				<returnType>float</returnType>
+				<sString>-1</sString>
+			</delay>
+			<stopCondition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</stopCondition>
+			<stopEvents>0</stopEvents>
+		</Item>
+		<Item>
+			<applicator href="/Items/Talents/Class/GhostLord/program_A2_SprectralShield.APLR" id="9B4D8C20-58AC-4F8F-9F72-D968DEE3EF0E">
+				<ProgramApplicator>
+					<applicators>
+						<Item>
+							<applicator href="/Items/Talents/Class/GhostLord/program_A2_SprectralShield.APLR" id="23E7AAA2-8A3E-4AC1-AC62-0696C82A2409">
+								<StatusApplicator>
+									<applicators>
+										<Item href="/Heroes/DefaultStatus/_HASTE_status.APLR" />
+									</applicators>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<behaviorFlags>0</behaviorFlags>
+									<caption>техстатус для отключения ускорения при отключении статуса А2</caption>
+									<customCounter>
+										<compiledString></compiledString>
+										<returnType>int</returnType>
+										<sString>0</sString>
+									</customCounter>
+									<customProgress>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</customProgress>
+									<description textref="" />
+									<dispellPriority>NonDispellable</dispellPriority>
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString>FRQAAAABAAAAHgAAAEdob3N0TG9yZF9BMl9TdGF0dXMAVYvsagGLRRBQaAAAAACLTQyLEYtNDIuCnAEAAP/QM8k7RRAPlcGKwV3D</compiledString>
+										<returnType>bool</returnType>
+										<sString>receiver.applGhostLord_A2_Status(UNIT) != pMisc</sString>
+									</enabled>
+									<flags>0</flags>
+									<formulaName></formulaName>
+									<image href="" />
+									<lifeTime>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<name textref="" />
+									<power>0</power>
+									<providerName></providerName>
+									<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+									<stackCount>0</stackCount>
+									<startCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</startCondition>
+									<statusPosition>0</statusPosition>
+									<stopBehaviour>StopByChild</stopBehaviour>
+									<unstackableWith href="" />
+								</StatusApplicator>
+							</applicator>
+							<continueCondition>
+								<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+								<returnType>bool</returnType>
+								<sString>0</sString>
+							</continueCondition>
+							<continueEvents>1</continueEvents>
+							<delay>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</delay>
+							<stopCondition>
+								<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+								<returnType>bool</returnType>
+								<sString>0</sString>
+							</stopCondition>
+							<stopEvents>0</stopEvents>
+						</Item>
+					</applicators>
+					<applyTarget>ApplicatorTarget</applyTarget>
+					<behaviorFlags>0</behaviorFlags>
+					<caption>(Ter) увеличить скорость</caption>
+					<effect>
+						<Item href="" />
+						<Item href="" />
+					</effect>
+					<enabled>
+						<compiledString>FQAAAAAAAAAAVYvsVotFCIsQi00Ii0JM/9CL8ItNCIsRi00Ii4KQAQAA/9A78A+UwF5dww==</compiledString>
+						<returnType>bool</returnType>
+						<sString>nt( true, false )</sString>
+					</enabled>
+					<formulaName></formulaName>
+					<lifeTime>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>-1.0</sString>
+					</lifeTime>
+					<LoggingEvent>-1</LoggingEvent>
+					<providerName></providerName>
+					<startCondition>
+						<compiledString></compiledString>
+						<returnType>bool</returnType>
+						<sString>true</sString>
+					</startCondition>
+				</ProgramApplicator>
+			</applicator>
+			<continueCondition>
+				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</continueCondition>
+			<continueEvents>0</continueEvents>
+			<delay>
+				<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+				<returnType>float</returnType>
+				<sString>-1</sString>
+			</delay>
+			<stopCondition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</stopCondition>
+			<stopEvents>0</stopEvents>
+		</Item>
+	</applicators>
+	<applyTarget>ApplicatorTarget</applyTarget>
+	<behaviorFlags>136</behaviorFlags>
+	<caption>Программа Щита призрака</caption>
+	<effect>
+		<Item href="" />
+		<Item href="" />
+	</effect>
+	<enabled>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<lifeTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>-1.0</sString>
+	</lifeTime>
+	<LoggingEvent>-1</LoggingEvent>
+	<providerName></providerName>
+	<startCondition>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</startCondition>
+</ProgramApplicator>

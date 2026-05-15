@@ -23,79 +23,7 @@
 			<ProgramApplicator>
 				<applicators>
 					<Item>
-						<applicator href="/Glyphs/PrimeRune.GLPH" id="B0C06D98-7C50-4ED8-87CF-EE70E137CEF0">
-							<SpellApplicator>
-								<applyTarget>ApplicatorTarget</applyTarget>
-								<caption>спелл в гз</caption>
-								<enabled>
-									<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
-									<returnType>bool</returnType>
-									<sString>true</sString>
-								</enabled>
-								<formulaName></formulaName>
-								<LoggingEvent>-1</LoggingEvent>
-								<providerName></providerName>
-								<spell href="/Glyphs/PrimeRune.GLPH" id="0AE9BA4D-22DD-42FC-A3C6-F40B24CC18AB">
-									<Spell>
-										<applicators>
-											<Item href="/Glyphs/PrimeRune.GLPH" id="F97E50C7-1AF5-491C-9C77-FDDC05F395BB">
-												<PermanentStatModApplicator>
-													<applyTarget>AbilityOwner</applyTarget>
-													<caption>сколько времени не подскажете</caption>
-													<customApplyType>None</customApplyType>
-													<enabled>
-														<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
-														<returnType>bool</returnType>
-														<sString>true</sString>
-													</enabled>
-													<formulaName>DayDuration1</formulaName>
-													<LoggingEvent>-1</LoggingEvent>
-													<modifier>
-														<addValue>
-															<compiledString>FRUAAAACAAAAGgAAAC8AAABUYXJnZXQAAEdhbWVEdXJhdGlvbgBVi+xRaAAAAACLRRCLEItNEItCTP/QiUX8aAgAAACLTfyLEYtN/IuCiAEAAP/Qi+Vdww==</compiledString>
-															<returnType>float</returnType>
-															<sString>$ApplTarget-&gt;GetVariable("GameDuration")</sString>
-														</addValue>
-														<multValue>
-															<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
-															<returnType>float</returnType>
-															<sString>0.0f</sString>
-														</multValue>
-														<stat>Life</stat>
-														<topModifier>false</topModifier>
-														<variable>GameDuration</variable>
-													</modifier>
-													<providerName></providerName>
-												</PermanentStatModApplicator>
-											</Item>
-										</applicators>
-										<dispatch href="/Glyphs/PrimeRune.GLPH" id="2463E9C5-816F-462F-80F6-C7D647E0B1A7">
-											<DispatchImmediate>
-												<alwaysApply>false</alwaysApply>
-												<applyEffect>
-													<Item href="" />
-													<Item href="" />
-												</applyEffect>
-												<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
-												<applyEffectOrientation>Default</applyEffectOrientation>
-												<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
-												<dieAfterApply>true</dieAfterApply>
-												<dispatchEffect>
-													<Item href="" />
-													<Item href="" />
-												</dispatchEffect>
-												<flags>0</flags>
-												<instantApply>true</instantApply>
-											</DispatchImmediate>
-										</dispatch>
-									</Spell>
-								</spell>
-								<spellTarget>ApplicatorTarget</spellTarget>
-								<targetSelector href="/Glyphs/PrimeRune.GLPH" id="7FBBC115-A160-4A85-8252-2DE8C5D2CD68">
-									<MainBuildingTargetSelector />
-								</targetSelector>
-							</SpellApplicator>
-						</applicator>
+						<applicator href="/Glyphs/spell_GameDuration.APLR" />
 						<continueCondition>
 							<compiledString></compiledString>
 							<returnType>bool</returnType>
@@ -254,9 +182,9 @@
 					<UnitConstant>
 						<name>PrimeAmount_Base</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACMQg==</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABIQg==</compiledString>
 							<returnType>float</returnType>
-							<sString>70</sString>
+							<sString>50</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -264,9 +192,9 @@
 					<UnitConstant>
 						<name>Prime_Additional</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACMQg==</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQQ==</compiledString>
 							<returnType>float</returnType>
-							<sString>70</sString>
+							<sString>20</sString>
 						</var>
 					</UnitConstant>
 				</Item>

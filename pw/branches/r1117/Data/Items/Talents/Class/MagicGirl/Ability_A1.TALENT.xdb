@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/MagicGirl.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/MagicGirl_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/MagicGirl.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/MagicGirl_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/MagicGirl_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/MagicGirl/Ability_A1_SUP.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/MagicGirl/Ability_A1u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/MagicGirl_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/LostLegacy.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/MagicGirl/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/MagicGirl/Epic_Str.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/MagicGirl/Ability_A1_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -301,8 +302,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/MagicGirl/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/MagicGirl/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/MagicGirl/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/MagicGirl/Ability_A1.TALENT" id="DC1AFAE8-B46D-4A60-BCCC-2261208AE497">
 			<ConditionFormula>
@@ -461,7 +462,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>71</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/MagicGirl/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Monster_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Monster_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Monster/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Monster/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Monster/Ability_A4u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
 	<BackLink DBID="/Test/Talents/Monster/Epic_Int_Ult2.TALENTSET" Count="1" />
 	<activationConditions />
@@ -220,7 +220,7 @@
 														<sString>-1.0</sString>
 													</customProgress>
 													<description textref="/Items/Talents/Class/Monster/Ability_A4_2.TALENT_9cf2e097ec5d4b519a8d2900e7b709b5_description.txt" />
-													<dispellPriority>High</dispellPriority>
+													<dispellPriority>NonDispellable</dispellPriority>
 													<effect>
 														<Item href="" />
 														<Item href="" />
@@ -411,8 +411,8 @@
 		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Monster/Ability_A4_2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Monster/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Monster/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Monster/Ability_A4_2.TALENT" id="2B791EBE-DCE3-4316-A553-3C45B5AC3E2E">
 			<ConditionFormula>
@@ -558,7 +558,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>7</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Monster/A5.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -566,9 +566,9 @@
 	<isUltimateTalent>true</isUltimateTalent>
 	<isUnitFreeAfterCast>false</isUnitFreeAfterCast>
 	<manaCost>
-		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAB6Qw==</compiledString>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABhQw==</compiledString>
 		<returnType>float</returnType>
-		<sString>250</sString>
+		<sString>225</sString>
 	</manaCost>
 	<marker>doCast4</marker>
 	<microAI href="" />

@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
 	<BackLink DBID="/Items/Talents/Class/GhostLord/A4_Targets.TGSL" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/GhostLord/Ability_A2.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/GhostLord/program_A2_SprectralShield.APLR" Count="1" />
 	<applicators>
-		<Item href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="C5753CAB-AD89-4276-AA8B-FEFE9C692D0F">
+		<Item href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="BAD5BF65-B3C6-486B-8804-86896FCD866E">
 			<AbsorbShieldApplicator>
 				<applyTarget>ApplicatorTarget</applyTarget>
 				<behaviorFlags>144</behaviorFlags>
@@ -38,7 +37,7 @@
 				</startCondition>
 			</AbsorbShieldApplicator>
 		</Item>
-		<Item href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="8CA2338D-0C72-4954-B413-92E43503A369">
+		<Item href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="0C88A478-9866-40E2-A0FE-EF47127EBDE4">
 			<TriggerApplicator>
 				<actionsCount>
 					<compiledString></compiledString>
@@ -65,7 +64,7 @@
 				</lifeTime>
 				<LoggingEvent>-1</LoggingEvent>
 				<playAck>false</playAck>
-				<processor href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="E9A29206-B2D4-4E70-8D73-778238943BE0">
+				<processor href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="3915D112-D4D6-46FA-A167-DFFD478BBE5A">
 					<EventProcessorDamageTransformer>
 						<abilityFilter>
 							<abilitiesList />
@@ -96,10 +95,10 @@
 						</mul>
 						<objectFilter>2040319</objectFilter>
 						<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
-						<spell href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="48C0E7E8-E99F-402C-A650-B1BEC40DDB66">
+						<spell href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="55659508-6532-43E9-BB32-AAA6350A0FCC">
 							<Spell>
 								<applicators>
-									<Item href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="8179C48B-F502-42F9-B936-5310A3C64FBA">
+									<Item href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="37910FB5-1A0E-4516-B9D7-D9CDBFF78C97">
 										<HealApplicator>
 											<amount>
 												<compiledString>FRMAAAABAAAAHwAAAEEydV9FbmVyZ3lGZWVkYmFjawBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
@@ -122,7 +121,7 @@
 										</HealApplicator>
 									</Item>
 								</applicators>
-								<dispatch href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="458B72A9-8D66-4160-9294-86C5E2068788">
+								<dispatch href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="48B65862-BCF6-45CC-857F-43669E21A75F">
 									<DispatchImmediate>
 										<alwaysApply>false</alwaysApply>
 										<applyEffect>
@@ -156,7 +155,7 @@
 				<useAbilityOwnerMana>false</useAbilityOwnerMana>
 			</TriggerApplicator>
 		</Item>
-		<Item href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="5134CB13-40F4-47FE-970D-EC344A3B0481">
+		<Item href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="07AEEE17-FCCC-441E-A06F-EE827306657B">
 			<TriggerApplicator>
 				<actionsCount>
 					<compiledString></compiledString>
@@ -165,15 +164,15 @@
 				</actionsCount>
 				<applyTarget>ApplicatorTarget</applyTarget>
 				<behaviorFlags>144</behaviorFlags>
-				<caption>(Upg_SUP) триггер на урон с хилом</caption>
+				<caption>(Отключено, Upg_SUP) триггер на урон с хилом</caption>
 				<effect>
 					<Item href="" />
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString>FSUAAAACAAAALAAAAEUAAABHaG9zdExvcmRfQTJfU1VQAAAAAEdob3N0TG9yZF9BMl9TVVAAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgUAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCKRfuL5V3D</compiledString>
+					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
 					<returnType>bool</returnType>
-					<sString>tal("GhostLord_A2_SUP")</sString>
+					<sString>false &amp;&amp; tal("GhostLord_A2_SUP")</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<lifeTime>
@@ -183,7 +182,7 @@
 				</lifeTime>
 				<LoggingEvent>-1</LoggingEvent>
 				<playAck>false</playAck>
-				<processor href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="6A6284D6-B8E5-4D47-916F-34760C15E213">
+				<processor href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="1FF7F430-E20E-4A28-85F9-DCEF99F925CD">
 					<EventProcessorDamageTransformer>
 						<abilityFilter>
 							<abilitiesList />
@@ -214,15 +213,15 @@
 						</mul>
 						<objectFilter>2040319</objectFilter>
 						<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
-						<spell href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="909BA0EB-9615-472C-BC79-4BC6AB973E2D">
+						<spell href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="62A13FF1-2111-40C1-97F9-CCA19DAD4FB9">
 							<Spell>
 								<applicators>
-									<Item href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="72E62A7F-986F-4605-A2C2-0042F7266B59">
+									<Item href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="2D5B573E-2246-44E0-8D98-384FCDF17D7E">
 										<HealApplicator>
 											<amount>
-												<compiledString>FRAAAAABAAAAHAAAAEEyX0xpZmVGZWVkYmFjawBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+												<compiledString>FQwAAAABAAAAGAAAAEEyX1NVUF9IZWFsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
 												<returnType>float</returnType>
-												<sString>cA2_LifeFeedback</sString>
+												<sString>cA2_SUP_Heal</sString>
 											</amount>
 											<applyTarget>ApplicatorTarget</applyTarget>
 											<caption>дать здоровья</caption>
@@ -240,7 +239,7 @@
 										</HealApplicator>
 									</Item>
 								</applicators>
-								<dispatch href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="1B3F9C81-D0D6-49C8-8D02-478D831E281B">
+								<dispatch href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="EB33635F-6BE0-42C5-8E12-5EC45AA8706C">
 									<DispatchImmediate>
 										<alwaysApply>false</alwaysApply>
 										<applyEffect>
@@ -274,7 +273,7 @@
 				<useAbilityOwnerMana>false</useAbilityOwnerMana>
 			</TriggerApplicator>
 		</Item>
-		<Item href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="22F8CF69-18B7-49DA-8CD9-4B80496CBD51">
+		<Item href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" id="89B468D9-9510-4C47-A775-88A36FC4200E">
 			<FlagsApplicator>
 				<applyTarget>ApplicatorTarget</applyTarget>
 				<behaviorFlags>144</behaviorFlags>
@@ -309,7 +308,7 @@
 		</Item>
 	</applicators>
 	<applyTarget>ApplicatorTarget</applyTarget>
-	<behaviorFlags>144</behaviorFlags>
+	<behaviorFlags>152</behaviorFlags>
 	<caption>статус Щит призраков</caption>
 	<customCounter>
 		<compiledString></compiledString>

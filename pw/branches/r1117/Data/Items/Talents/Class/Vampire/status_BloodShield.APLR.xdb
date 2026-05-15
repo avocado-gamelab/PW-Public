@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StatusApplicator>
+	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" Count="2" />
+	<applicators>
+		<Item href="/Items/Talents/Class/Vampire/status_BloodShield.APLR" id="A17110B3-E8B9-406C-95E9-AD7443DEEEC3">
+			<AbsorbShieldApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Накладываем щит</caption>
+				<damageToAbsorb>
+					<compiledString>FRYAAAABAAAAIgAAAEEwX1NVUF9TaGllbGRDYXBhY2l0eQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+					<returnType>float</returnType>
+					<sString>cA0_SUP_ShieldCapacity</sString>
+				</damageToAbsorb>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName>Vampire_BloodShield</formulaName>
+				<lifeTime>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+					<returnType>float</returnType>
+					<sString>-1</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+			</AbsorbShieldApplicator>
+		</Item>
+	</applicators>
+	<applyTarget>ApplicatorTarget</applyTarget>
+	<behaviorFlags>0</behaviorFlags>
+	<caption>Статус Щита</caption>
+	<customCounter>
+		<compiledString></compiledString>
+		<returnType>int</returnType>
+		<sString>0</sString>
+	</customCounter>
+	<customProgress>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+		<returnType>float</returnType>
+		<sString>-1.0</sString>
+	</customProgress>
+	<description textref="/Items/Talents/Class/Vampire/status_BloodShield.APLR_description.txt" />
+	<dispellPriority>Medium</dispellPriority>
+	<effect>
+		<Item href="/Effects/Buffs/Defence/_BloodySphere.EFFT" />
+		<Item href="" />
+	</effect>
+	<enabled>
+		<compiledString>FTAAAAAEAAAAPQAAAFAAAABcAAAAcgAAAEN1cnJlbnRCbG9vZFNoaWVsZENhcGFjaXR5AABWYW1waXJlX0Jsb29kU2hpZWxkAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twdlAAAAN/g9sRBdCtoHAAAAItFCIsQi00Ii4KIAQAA/9DcHZQAAADf4PbEQXQJx0X8AAAAAOsHx0X8AQAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+		<returnType>bool</returnType>
+		<sString>cCurrentBloodShieldCapacity &gt; 0 || sender.vVampire_BloodShield &gt; 0</sString>
+	</enabled>
+	<flags>5</flags>
+	<formulaName></formulaName>
+	<image href="/UI/Styles/Icons/Statuses/Neutral/heal_shield.ITEX" />
+	<lifeTime>
+		<compiledString>FRYAAAABAAAAIgAAAEEwX1NVUF9TaGllbGREdXJhdGlvbgBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+		<returnType>float</returnType>
+		<sString>cA0_SUP_ShieldDuration</sString>
+	</lifeTime>
+	<LoggingEvent>-1</LoggingEvent>
+	<name textref="/Items/Talents/Class/Vampire/status_BloodShield.APLR_name.txt" />
+	<power>0</power>
+	<providerName></providerName>
+	<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+	<stackCount>0</stackCount>
+	<startCondition>
+		<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</startCondition>
+	<statusPosition>0</statusPosition>
+	<stopBehaviour>StopByTime</stopBehaviour>
+	<unstackableWith href="" />
+</StatusApplicator>

@@ -1,0 +1,805 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StatusApplicator>
+	<BackLink DBID="/Items/Talents/Class/Prince/Ability_A4_2.TALENT" Count="1" />
+	<applicators>
+		<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="60BC51F7-7A27-4283-BF53-1AAA2162B82E">
+			<TauntApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Таунтим врага на Дуэлянта</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<strongTarget>true</strongTarget>
+				<tauntTarget>AbilityOwner</tauntTarget>
+			</TauntApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="EC6E900A-DCB2-4A08-8225-343AE33A6C5A">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Герой затаунчен</caption>
+				<constraint>None</constraint>
+				<dontUpdate>true</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>Taunted</variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="2AAFCE17-8E80-442F-9CBE-77895AB84E93">
+			<TauntApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Таунтим Дуэлянта на врага</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<strongTarget>true</strongTarget>
+				<tauntTarget>ApplicatorTarget</tauntTarget>
+			</TauntApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="B2D482B2-7B56-45A9-B6A3-F494026DD983">
+			<StatModApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Дуэлянт затаунчен</caption>
+				<constraint>None</constraint>
+				<dontUpdate>true</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>Taunted</variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="C4948BD7-69CF-4B69-9201-843EBAEDCAB3">
+			<FlagsApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Запрещаем действия герою</caption>
+				<consumables />
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flag>8914554</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents />
+				<useListAs>ListAsException</useListAs>
+			</FlagsApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="CCA335F4-AA25-4A31-B407-769B7CB48130">
+			<FlagsApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Запрещаем действия Дуэлянту</caption>
+				<consumables />
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flag>8914554</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents />
+				<useListAs>ListAsException</useListAs>
+			</FlagsApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="5BD4C9A5-48E8-4510-8700-32FB3203A19B">
+			<StatusApplicator>
+				<applicators />
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Фейк статус Дуэль на Дуэлянте</caption>
+				<customCounter>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</customCounter>
+				<customProgress>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</customProgress>
+				<description textref="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR_5bd4c9a548e84510870032fb3203a19b_description.txt" />
+				<dispellPriority>NonDispellable</dispellPriority>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flags>64</flags>
+				<formulaName></formulaName>
+				<image href="/UI/Styles/Icons/Heroes/Prince/A5.ITEX" />
+				<lifeTime>
+					<compiledString>FQkAAAABAAAAFQAAAER1cmF0aW9uAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+					<returnType>float</returnType>
+					<sString>cDuration</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<name textref="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR_5bd4c9a548e84510870032fb3203a19b_name.txt" />
+				<power>0</power>
+				<providerName></providerName>
+				<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+				<stackCount>0</stackCount>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statusPosition>5</statusPosition>
+				<stopBehaviour>StopByTime</stopBehaviour>
+				<unstackableWith href="" />
+			</StatusApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="32EBFDAE-1E85-4815-9824-DF323C1B16F8">
+			<UIMessageApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<caption>Текст на Дуэлянта</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<message textref="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR_32ebfdae1e8548159824df323c1b16f8_message.txt" />
+				<providerName></providerName>
+				<uiEvent href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="728DB0FC-4CCE-488E-91DC-52FA7B508907">
+					<UIEvent>
+						<signRecipients>ALL_PLAYERS</signRecipients>
+						<UISigns>
+							<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="135A6FDE-EDB1-41ED-A638-454387AAC520">
+								<UISignFlyOffText>
+									<signRecipients>USE_FROM_PARENT</signRecipients>
+									<text>
+										<acceleration>
+											<x>0</x>
+											<y>0</y>
+										</acceleration>
+										<align>Center</align>
+										<endOpacity>0.1</endOpacity>
+										<layout>fly_custom_text</layout>
+										<lifeTime>3</lifeTime>
+										<offset>
+											<x>0</x>
+											<y>-30</y>
+										</offset>
+										<startOpacity>1</startOpacity>
+										<velocity>
+											<x>0</x>
+											<y>-45</y>
+										</velocity>
+									</text>
+								</UISignFlyOffText>
+							</Item>
+						</UISigns>
+					</UIEvent>
+				</uiEvent>
+				<value>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</value>
+			</UIMessageApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="054C56DA-E616-4494-B25E-EBB815F41537">
+			<UIMessageApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Текст на врага</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<message textref="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR_054c56dae6164494b25eebb815f41537_message.txt" />
+				<providerName></providerName>
+				<uiEvent href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="74A46306-54CC-4B96-9A9A-D8A39A274F41">
+					<UIEvent>
+						<signRecipients>ALL_PLAYERS</signRecipients>
+						<UISigns>
+							<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="A25FDD3C-6C46-4411-9436-D9935D596A2B">
+								<UISignFlyOffText>
+									<signRecipients>USE_FROM_PARENT</signRecipients>
+									<text>
+										<acceleration>
+											<x>0</x>
+											<y>0</y>
+										</acceleration>
+										<align>Center</align>
+										<endOpacity>0.1</endOpacity>
+										<layout>fly_custom_text</layout>
+										<lifeTime>3</lifeTime>
+										<offset>
+											<x>0</x>
+											<y>0</y>
+										</offset>
+										<startOpacity>1</startOpacity>
+										<velocity>
+											<x>0</x>
+											<y>-45</y>
+										</velocity>
+									</text>
+								</UISignFlyOffText>
+							</Item>
+						</UISigns>
+					</UIEvent>
+				</uiEvent>
+				<value>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</value>
+			</UIMessageApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="924B4A40-C953-4A7A-8A58-68351E9E7B1E">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>1</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Триггер на смерть врага</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+					<returnType>float</returnType>
+					<sString>-1</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="99AA2442-1F46-431E-9901-3A5ED11A7120">
+					<EventProcessorOnDeath>
+						<applyTarget>AbilityOwner</applyTarget>
+						<castSpellDelay>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</castSpellDelay>
+						<checkSender>0</checkSender>
+						<objectFilter>2040319</objectFilter>
+						<senderMatchTarget>AbilityOwner</senderMatchTarget>
+						<spell href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="77B32609-F2C9-4D15-8DE9-4A84C7D8C855">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="5EE4E8E3-CE72-4A7E-8A55-A13E9FE9B860">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>Записываем победу в дуэли</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>Prince_DuelVictory</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="3D360E63-85C4-4D00-B542-16632E622401">
+										<UIMessageApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>Текст для победителя</caption>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<message textref="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR_3d360e6385c44d00b54216632e622401_message.txt" />
+											<providerName></providerName>
+											<uiEvent href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="F4C8FE3B-FEA3-4F57-A3E6-DB70D493F384">
+												<UIEvent>
+													<signRecipients>ALL_PLAYERS</signRecipients>
+													<UISigns>
+														<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="9F552EBC-E793-4A98-A0FD-F2938B10E39C">
+															<UISignFlyOffText>
+																<signRecipients>USE_FROM_PARENT</signRecipients>
+																<text>
+																	<acceleration>
+																		<x>0</x>
+																		<y>0</y>
+																	</acceleration>
+																	<align>Center</align>
+																	<endOpacity>0.1</endOpacity>
+																	<layout>fly_custom_text</layout>
+																	<lifeTime>3</lifeTime>
+																	<offset>
+																		<x>0</x>
+																		<y>0</y>
+																	</offset>
+																	<startOpacity>1</startOpacity>
+																	<velocity>
+																		<x>0</x>
+																		<y>-45</y>
+																	</velocity>
+																</text>
+															</UISignFlyOffText>
+														</Item>
+													</UISigns>
+												</UIEvent>
+											</uiEvent>
+											<value>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</value>
+										</UIMessageApplicator>
+									</Item>
+									<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="982A3751-07D1-46E4-95F1-D4C0452E3B48">
+										<FlagsApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<behaviorFlags>208</behaviorFlags>
+											<caption>Эффект для победителя</caption>
+											<consumables />
+											<effect>
+												<Item href="/Effects/Buffs/Retaliation/_.EFFT" />
+												<Item href="" />
+											</effect>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<flag>0</flag>
+											<formulaName></formulaName>
+											<lifeTime>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</lifeTime>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<startCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</startCondition>
+											<talents />
+											<useListAs>ListAsRule</useListAs>
+										</FlagsApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="4318CC73-B7B2-49EF-B363-128E0AC11DCE">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>false</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+					</EventProcessorOnDeath>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="11D5D7B7-82E1-426C-A2C3-529897F0828D">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>1</sString>
+				</actionsCount>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Триггер на смерть Дуэлянта</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+					<returnType>float</returnType>
+					<sString>-1</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="CCA5C1E6-F898-4D9E-8FDE-46F73D358BEB">
+					<EventProcessorOnDeath>
+						<applyTarget>AbilityTarget</applyTarget>
+						<castSpellDelay>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</castSpellDelay>
+						<checkSender>0</checkSender>
+						<objectFilter>2040319</objectFilter>
+						<senderMatchTarget>AbilityOwner</senderMatchTarget>
+						<spell href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="D1135C8D-B3C9-4A10-BF4D-554DA4F07C93">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="3924EEB7-0C2A-468A-B89E-132C80D0865D">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>Записываем победу в дуэли</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>Prince_DuelVictory</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="AA797CC3-336F-4B5C-A923-8DC27257CE2D">
+										<UIMessageApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>Текст для победителя</caption>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<message textref="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR_aa797cc3336f4b5ca9238dc27257ce2d_message.txt" />
+											<providerName></providerName>
+											<uiEvent href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="57E72143-3E13-4636-9B47-03148B1501CC">
+												<UIEvent>
+													<signRecipients>ALL_PLAYERS</signRecipients>
+													<UISigns>
+														<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="61BCE0C5-36A0-44AD-B5B0-5FAE5EA8657C">
+															<UISignFlyOffText>
+																<signRecipients>USE_FROM_PARENT</signRecipients>
+																<text>
+																	<acceleration>
+																		<x>0</x>
+																		<y>0</y>
+																	</acceleration>
+																	<align>Center</align>
+																	<endOpacity>0.1</endOpacity>
+																	<layout>fly_custom_text</layout>
+																	<lifeTime>3</lifeTime>
+																	<offset>
+																		<x>0</x>
+																		<y>0</y>
+																	</offset>
+																	<startOpacity>1</startOpacity>
+																	<velocity>
+																		<x>0</x>
+																		<y>-45</y>
+																	</velocity>
+																</text>
+															</UISignFlyOffText>
+														</Item>
+													</UISigns>
+												</UIEvent>
+											</uiEvent>
+											<value>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</value>
+										</UIMessageApplicator>
+									</Item>
+									<Item href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="E38E2281-8DFA-41B8-9C96-A3C7D033C7C5">
+										<FlagsApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<behaviorFlags>208</behaviorFlags>
+											<caption>Эффект для победителя</caption>
+											<consumables />
+											<effect>
+												<Item href="/Effects/Buffs/Retaliation/_.EFFT" />
+												<Item href="" />
+											</effect>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<flag>0</flag>
+											<formulaName></formulaName>
+											<lifeTime>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</lifeTime>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<startCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</startCondition>
+											<talents />
+											<useListAs>ListAsRule</useListAs>
+										</FlagsApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR" id="48ADB32D-7EB7-4A97-B7CD-88B1C8FB4923">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>false</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+					</EventProcessorOnDeath>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+	</applicators>
+	<applyTarget>ApplicatorTarget</applyTarget>
+	<behaviorFlags>2</behaviorFlags>
+	<caption>Статус Дуэль на противнике</caption>
+	<customCounter>
+		<compiledString></compiledString>
+		<returnType>int</returnType>
+		<sString>0</sString>
+	</customCounter>
+	<customProgress>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>-1.0</sString>
+	</customProgress>
+	<description textref="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR_description.txt" />
+	<dispellPriority>NonDispellable</dispellPriority>
+	<effect>
+		<Item href="" />
+		<Item href="" />
+	</effect>
+	<enabled>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</enabled>
+	<flags>2</flags>
+	<formulaName></formulaName>
+	<image href="/UI/Styles/Icons/Heroes/Prince/A5.ITEX" />
+	<lifeTime>
+		<compiledString>FQkAAAABAAAAFQAAAER1cmF0aW9uAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<returnType>float</returnType>
+		<sString>cDuration</sString>
+	</lifeTime>
+	<LoggingEvent>-1</LoggingEvent>
+	<name textref="/Items/Talents/Class/Prince/status_A4_2_Duel.APLR_name.txt" />
+	<power>0</power>
+	<providerName></providerName>
+	<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+	<stackCount>0</stackCount>
+	<startCondition>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</startCondition>
+	<statusPosition>5</statusPosition>
+	<stopBehaviour>StopByTime</stopBehaviour>
+	<unstackableWith href="" />
+</StatusApplicator>

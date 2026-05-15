@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/ThunderGod.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/ThunderGod_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/ThunderGod_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/Tutorial/Talents/M2_ThunderGod.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/Tutorial/Talents/ThunderM1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Elite_Str_1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Epic_Str.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>A1y2. Электро финишер</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/ThunderGod/Ability_A1_Upg2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/ThunderGod/Ability_A1_Upg2.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/ThunderGod/Ability_A1_Upg2.TALENT" id="D4FB05A5-1115-41E2-9011-C5D940014E76">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR4AAAACAAAAJQAAAD4AAABUaHVuZGVyR29kX0ExAAAAVGh1bmRlckdvZF9BMQBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("ThunderGod_A1") == false</sString>
+				</condition>
+				<name>ThunderGod_A1</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/ThunderGod/Ability_A1_Upg2.TALENT" id="0A95560E-3A02-4566-B023-E39644503234">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/ThunderGod/Ability_A1_Upg2.TALENT" id="FB4A0E67-6977-449D-B857-306FC3BC08C6">
+					<UnitConstant>
+						<name>A1u_Damage_TT</name>
+						<var>
+							<compiledString>FS4AAAADAAAAPQAAAFcAAABtAAAAQTFkYW1hZ2VNAAAAQTFfRGFtYWdlTXVsdGlwbGllcl9Cb251c1BlclN0YWNrAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoDAAAAItVEIsCi00Qi1BQ3V34/9LcNX4AAADcTfjZXfTZRfSL5V3DAAAAAAAAWUA=</compiledString>
+							<returnType>float</returnType>
+							<sString>cA1damageM * (cA1_DamageMultiplier_BonusPerStack/100)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/ThunderGod/const_A1AddDamageMult" />
+				<Item href="/Items/Talents/Class/ThunderGod/const_A1baseDamage" />
+				<Item href="/Items/Talents/Class/ThunderGod/const_A1_CDPerSec" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/ThunderGod/Ability_A1_Upg2.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>13.21</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/ThunderGod/A1.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>2</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>440</naftaCost>
+	<name textref="/Items/Talents/Class/ThunderGod/Ability_A1_Upg2.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators />
+	<persistentId>ThunderGod_A1_Upg2</persistentId>
+	<prerequisiteTalents>
+		<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" />
+	</prerequisiteTalents>
+	<rarity>Class</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>2040319</targetType>
+	<type>Passive</type>
+	<upgradeLevel>2</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

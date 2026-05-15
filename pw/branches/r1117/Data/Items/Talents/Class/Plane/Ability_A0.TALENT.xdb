@@ -1,11 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Plane.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Plane_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Plane.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Plane_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Plane/Ability_A0_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Plane_A_Mighty.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Plane_B_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -36,8 +34,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Plane/Ability_A0.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Plane/Ability_A0.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Plane/Ability_A0.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Plane/Ability_A0.TALENT" id="22A40FF6-BC46-4EC1-9373-C413400D8C41">
 			<ConditionFormula>
@@ -88,7 +86,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>5</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Plane/A0.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

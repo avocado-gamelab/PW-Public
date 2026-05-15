@@ -9,9 +9,12 @@
 	<cancelInvisibility>false</cancelInvisibility>
 	<caption> -- Стандартный урон автоатаки башни</caption>
 	<damage>
-		<compiledString>FSQAAAAEAAAAlwAAAMcAAADdAAAA7QAAAEJvbnVzRGFtYWdlUGVyY2VudAAATG93RG1nVnNTb2xkZXJzAFWL7IPsFItFCIsQi00Ii0Jg/9CFwHQVi00IixGLTQiLgjQBAAD/0Nld/OsTi00IixGLTQiLgjABAAD/0Nld/ItNDIsRi00Mi0JQ/9CD+AN0GYtNDIsRi00Mi0JQ/9CD+AR0B9no2V346x2LTQxRi1UIUmgUAAAAi0UQixCLTRCLQlD/0Nld+ItNCIsRi00Ii4I8AQAA/9DYTfyLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlDdXfD/0Nw1CwEAANno3sHcTfDYTfjcDfsAAADZXezZReyL5V3DAAAAAAAA4D8AAAAAAADwPwAAAAAAAFlAAACAPw==</compiledString>
+		<compiledString>FXcAAAAMAAAA6gAAAAcBAAAaAQAATwEAAGIBAABvAQAApAEAALcBAAC9AQAA5wEAAP0BAAANAgAAQm9udXNEYW1hZ2VQZXJjZW50AABMb3dEbWdWc1NvbGRlcnMARGFtYWdlTXVsdGlwbGllckVuZW15SGVyb051bWJlcgBEYW1hZ2VNdWx0aXBsaWVyRW5lbXlIZXJvTnVtYmVyAEJvbnVzRGFtYWdlUGVyY2VudABVi+yD7DCLRQiLEItNCItCYP/QhcB0FYtNCIsRi00Ii4I0AQAA/9DZXfzrE4tNCIsRi00Ii4IwAQAA/9DZXfyLTQyLEYtNDItCUP/Qg/gDdBmLTQyLEYtNDItCUP/Qg/gEdAfZ6Nld+Osdi00MUYtVCFJoFAAAAItFEIsQi00Qi0JQ/9DZXfiLTQxRi1UIUmgkAAAAi0UQixCLTRCLQlD/0NwdXAIAAN/g9sREegnHRfQCAAAA6wfHRfQBAAAAi00MixGLTQyLQlD/0IXAdT+LTQxRi1UIUmhEAAAAi0UQixCLTRCLQlD/0NwdVAIAAN/g9sQFegvdBUwCAADdXezrBdno3V3s3UXs3V3k6wXZ6N1d5ItNDIsRi00Mi0JQ/9CFwHUri00MUYtVCFJoZAAAAItFEIsQi00Qi0JQ/9DcNVwCAADcDTwCAADdXdzrBdnu3V3ci00IixGLTQiLgjwBAAD/0NhN/ItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d1P/Q3DUsAgAA2ejewdxN1NhN+NwNJAIAANpN9NxN5NxF3Nld0NlF0IvlXcMAAAAAAADgPwAAAAAAAFlAAAAAAAAAAAAAAAAAAAA5QAAAAAAAAPA/H4XrUbge1T8AAAAAAAAAQAAAAAAAABRAAACAPw==</compiledString>
 		<returnType>float</returnType>
-		<sString>((sBaseAttack *( sNativeAttackIndex ? sIntellect : sStrength )) * (1 + cBonusDamagePercent / 100) * ((rUnitKind == 3 || rUnitKind == 4) ? cLowDmgVsSolders : 1)) * 0.5</sString>
+		<sString>((sBaseAttack *( sNativeAttackIndex ? sIntellect : sStrength )) * (1 + cBonusDamagePercent / 100) * ((rUnitKind == 3 || rUnitKind == 4) ? cLowDmgVsSolders : 1)) * 0.5 *
+(cDamageMultiplierEnemyHeroNumber == 5 ? 2 : 1) *
+(rUnitKind == 0 ? (cDamageMultiplierEnemyHeroNumber &lt; 2 ? 0.33 : 1) : 1) +
+(rUnitKind == 0 ? (cBonusDamagePercent/5 * 25) : 0) </sString>
 	</damage>
 	<damageMode>4</damageMode>
 	<damageType>Material</damageType>

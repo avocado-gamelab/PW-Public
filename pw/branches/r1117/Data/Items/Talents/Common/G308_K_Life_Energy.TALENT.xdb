@@ -1,0 +1,912 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/GameLogic/TalentGroup.TGRP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar5_Set1" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G308_K_Life_Energy.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Vampiric6_CasterBoost/V6_CasterBoost.TALKIT" Count="2" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Life_Energy" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSetKits.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Elite_Life.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Elite.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Highlander/Elite_StrLife.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mage/Elite_PvE.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Rockman/Elite_Life.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="4" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_OrangeSet1.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/Test_Satanic.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="B5F8938F-777D-4317-8F1B-1BE8A0D6682F">
+			<DamageApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<cancelInvisibility>false</cancelInvisibility>
+				<caption>- наносим урон абилкой</caption>
+				<damage>
+					<compiledString>FRQAAAACAAAAIwAAADUAAABEYW1hZ2UAAEJsb29kRGFtYWdlAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SaAgAAACLRQiLEItNCIuCiAEAAN1d+P/Q3E342V302UX0i+Vdww==</compiledString>
+					<returnType>float</returnType>
+					<sString>cDamage * sender.vBloodDamage</sString>
+				</damage>
+				<damageMode>4</damageMode>
+				<damageType>Pure</damageType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<timeLimiter>-1</timeLimiter>
+				<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed.UIEV" />
+			</DamageApplicator>
+		</Item>
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G308: Темный секрет</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G308_K_Life_Energy.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G308_K_Life_Energy.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="EB449355-C865-40F3-9A30-F253E7E59BCD">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ0AAAACAAAAEgAAACgAAABCbG9vZENvdW50ZXIAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdSgAAAN/g9sRBdQnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vBloodCounter &gt; 0</sString>
+				</condition>
+				<name>EnoughPoints</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="3EAF2391-1EAB-46DB-A351-8B1C18714047">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ4AAAACAAAAEwAAACkAAABHMzA4X1N0ck9ySW50AFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUsAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAADwPw==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG308_StrOrInt==1</sString>
+				</condition>
+				<name>StrOrInt</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="96F1ED4E-CDFC-408F-B2FD-A1329BC24C55">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="CAF7F8C6-4F5A-4829-B3D8-427C2F1ABFE9">
+					<UnitConstant>
+						<name>Add_Stat</name>
+						<var>
+							<compiledString>FQgAAAABAAAAFAAAAFQ0X1N0YXQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT4_Stat</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Vampiric6_CasterBoost/const_Cooldown" />
+				<Item href="/Items/Talents/TalentKits/Vampiric6_CasterBoost/const_MaxStacks" />
+				<Item href="/Items/Talents/TalentKits/Vampiric6_CasterBoost/const_StacksPerCast" />
+				<Item href="/Items/Talents/TalentKits/Vampiric6_CasterBoost/const_NeedCosts" />
+				<Item href="/Items/Talents/TalentKits/Vampiric6_CasterBoost/const_Damage" />
+				<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="74EE3D55-7CFD-4F16-A866-88E509559B66">
+					<UnitConstant>
+						<name>TT_Damage</name>
+						<var>
+							<compiledString>FRUAAAACAAAAJAAAADYAAABEYW1hZ2UAAEJsb29kQ291bnRlcgBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0mgIAAAAi0UIixCLTQiLgogBAADdXfj/0NxN+Nld9NlF9IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cDamage * sender.vBloodCounter</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="2FB1E887-E46C-4EFA-AA7F-2931C43FA6A9">
+					<UnitConstant>
+						<name>TECH_LifeModAddPercent</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="624345A9-CCD1-49A8-AC26-E8AC35704652">
+					<UnitConstant>
+						<name>TECH_EnergyModAddPercent</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>9</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQ4AAAABAAAAGgAAAEczMDhfQ29vbGRvd24AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cG308_Cooldown</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G308_K_Life_Energy.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="1A4D7D33-150B-4FA6-B6B1-ED522EA1DA03">
+		<DispatchLinearWithLink>
+			<aiming>Straight</aiming>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="/Effects/Shots/Bat/_Hit.EFFT" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="/Effects/Shots/Bat/_.EFFT" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<flyMode>Linear</flyMode>
+			<fromLocator>Body</fromLocator>
+			<height>0</height>
+			<killEffect>true</killEffect>
+			<links />
+			<locatorOrient>false</locatorOrient>
+			<maxDeviation>180</maxDeviation>
+			<maxDistance>-1</maxDistance>
+			<maxRise>0</maxRise>
+			<minRise>0</minRise>
+			<persistentApplicators>
+				<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="4F3EE3F2-0FE5-48C3-872B-EBDD9BB13A01">
+					<PermanentStatModApplicator>
+						<applyTarget>AbilityOwner</applyTarget>
+						<caption>Сбрасываем урон, который должны нанести</caption>
+						<customApplyType>None</customApplyType>
+						<enabled>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</enabled>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<modifier>
+							<addValue>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>0.0f</sString>
+							</addValue>
+							<multValue>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>0.0f</sString>
+							</multValue>
+							<stat>Life</stat>
+							<topModifier>false</topModifier>
+							<variable>BloodDamage</variable>
+						</modifier>
+						<providerName></providerName>
+					</PermanentStatModApplicator>
+				</Item>
+				<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="C6618F1B-6ABD-4255-A07E-1D325FA8F53D">
+					<PermanentStatModApplicator>
+						<applyTarget>AbilityOwner</applyTarget>
+						<caption>Запоминаем урон, который мы должны нанести</caption>
+						<customApplyType>None</customApplyType>
+						<enabled>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</enabled>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<modifier>
+							<addValue>
+								<compiledString>FQ0AAAABAAAAEQAAAEJsb29kQ291bnRlcgBVi+xoAAAAAItFCIsQi00Ii4KIAQAA/9Bdww==</compiledString>
+								<returnType>float</returnType>
+								<sString>sender.vBloodCounter</sString>
+							</addValue>
+							<multValue>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>1.0f</sString>
+							</multValue>
+							<stat>Life</stat>
+							<topModifier>false</topModifier>
+							<variable>BloodDamage</variable>
+						</modifier>
+						<providerName></providerName>
+					</PermanentStatModApplicator>
+				</Item>
+				<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="6BEEE414-7BCA-46BD-948C-B115FE9546BB">
+					<PermanentStatModApplicator>
+						<applyTarget>AbilityOwner</applyTarget>
+						<caption>Сбрасываем стеки</caption>
+						<customApplyType>None</customApplyType>
+						<enabled>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</enabled>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<modifier>
+							<addValue>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>0.0f</sString>
+							</addValue>
+							<multValue>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>0.0f</sString>
+							</multValue>
+							<stat>Life</stat>
+							<topModifier>false</topModifier>
+							<variable>BloodCounter</variable>
+						</modifier>
+						<providerName></providerName>
+					</PermanentStatModApplicator>
+				</Item>
+			</persistentApplicators>
+			<speed>20</speed>
+			<suspendTime>0</suspendTime>
+			<toLocator>Body</toLocator>
+		</DispatchLinearWithLink>
+	</dispatch>
+	<flags>3</flags>
+	<forceBonus>16.15</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_308.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>3</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G308_K_Life_Energy.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="36CEBB07-DB7A-4D03-B26D-D7546495F1D4">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>StrOrInt</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&gt;=sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G308_StrOrIn</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="29912CF8-D1A6-4DB0-AA1C-2FE967810FF1">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Strength</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&gt;=sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9TdGF0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Strength</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="6FA32FBE-0764-4C46-9C9D-9AC519E5AD74">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Intellect</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&lt;sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9TdGF0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Intellect</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="1C587A8B-0E76-46CC-BCE1-357433DA1EC1">
+			<FlagsApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Запрет использовать без стеков и без остальных талантов кита</caption>
+				<consumables />
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FS0AAAAGAAAANAAAAEoAAABaAAAAcwAAAKkAAADCAAAAQmxvb2RDb3VudGVyAAAAAEcyOTYAAAAARzI5NgAAAABHMzAyAAAAAEczMDIAVYvsg+wUaAAAAACLRQiLEItNCIuCiAEAAP/Q3B0OAQAA3+D2xEEPi6cAAABoEAAAAItNCIsRi00Ii4KoAQAA/9CFwHQqaBgAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXRYaCAAAACLVQiLAotNCIuQqAEAAP/ShcB0KmgoAAAAi0UIixCLTQiLgqgBAAD/0IlF9ItN9IsRi030i0IE/9CIRfPrBMZF8wAPtk3zhcl0CcdF7AAAAADrB8dF7AEAAACKReyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vBloodCounter &lt;= 0 || !tal("G296") || !tal("G302")</sString>
+				</enabled>
+				<flag>1024</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents>
+					<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" />
+				</talents>
+				<useListAs>ListAsRule</useListAs>
+			</FlagsApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="A50E0A06-9ADE-434E-89CA-8011EF5D3336">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>триггер на использование таланта за энергию</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FR0AAAAEAAAAJAAAAD0AAABzAAAAjAAAAEcyOTYAAAAARzI5NgAAAABHMzAyAAAAAEczMDIAVYvsg+wUaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgIAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0WGgQAAAAi1UIiwKLTQiLkKgBAAD/0oXAdCpoGAAAAItFCIsQi00Ii4KoAQAA/9CJRfSLTfSLEYtN9ItCBP/QiEXz6wTGRfMAD7ZN84XJdAnHRewBAAAA6wfHRewAAAAAikXsi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("G296") &amp;&amp; tal("G302")</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="99F9A0D1-8FF0-4FF5-A9A4-8B73FAA8D942">
+					<EventProcessorAbilityManacostTransformer>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<filter>
+							<abilitiesList />
+							<abilityCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</abilityCondition>
+							<abilityCostMode>Energy</abilityCostMode>
+							<exceptThis>false</exceptThis>
+							<flags>671088830</flags>
+							<onlySingleTarget>false</onlySingleTarget>
+						</filter>
+						<spell href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="9ED56C2E-3A14-4893-93D6-F44F14D41B21">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="5C1D4478-CA11-4D25-866B-8D7E2FED8E14">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>Сколько маны или здоровья затратили на абилки</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FSkAAAACAAAASAAAAF4AAABCYXNlTWFuYUNvc3QAAAAAVEVDSF9FbmVyZ3lNb2RBZGRQZXJjZW50AFWL7IPsEItFEIsQi00Qi0JI/9CJRfyLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlD/0Nno3sFoAAAAAItN/IsRi038i0JU3V30/9DcTfTZXfDZRfCL5V3DAAAAAAAA8D8=</compiledString>
+													<returnType>float</returnType>
+													<sString>appl.parent.vBaseManaCost * (1 + cTECH_EnergyModAddPercent) </sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>AddBloodCost</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="0AC5EE58-ABE0-4AE4-BA0E-AD4540DF5643">
+										<SpellApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>Проверяем, сколько мы затратили маны</caption>
+											<enabled>
+												<compiledString>FSoAAAAEAAAAMQAAAEcAAABTAAAAcAAAAEJsb29kQ291bnRlcgAAAABBZGRCbG9vZENvc3QAAAAATmVlZENvc3RzAFWL7IPsEGgAAAAAi0UIixCLTQiLgogBAAD/0NwdtAAAAN/g9sRBelRoEAAAAItNCIsRi00Ii4KIAQAA/9CLTQxRi1UIUmggAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBegnHRfQBAAAA6wfHRfQAAAAAi030iU3w6wfHRfABAAAAikXwi+VdwwAAAAAAAAAA</compiledString>
+												<returnType>bool</returnType>
+												<sString>sender.vBloodCounter&lt;=0 ? sender.vAddBloodCost&gt;=cNeedCosts : true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<spell href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="62EFD005-6B0C-4EA1-A73B-41447860FC62">
+												<Spell>
+													<applicators>
+														<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="A847BAC7-7DB5-4D47-B849-FEC1E0721278">
+															<PermanentStatModApplicator>
+																<applyTarget>AbilityOwner</applyTarget>
+																<caption>Увеличиваем счётчик</caption>
+																<customApplyType>None</customApplyType>
+																<enabled>
+																	<compiledString>FRoAAAACAAAAIQAAAD4AAABCbG9vZENvdW50ZXIAAAAATWF4U3RhY2tzAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaBAAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xEF1CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+																	<returnType>bool</returnType>
+																	<sString>sender.vBloodCounter &lt; cMaxStacks</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<modifier>
+																	<addValue>
+																		<compiledString>FTYAAAAEAAEARQAAAFcAAAB8AAAAmQAAAPAAAABNYXhTdGFja3MAAABCbG9vZENvdW50ZXIAAAAAQWRkQmxvb2RDb3N0AAAAAE5lZWRDb3N0cwBVi+yD7BiLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0mgMAAAAi0UIixCLTQiLgogBAADdXfj/0Nxt+Nld9NlF9FHZHCRoHAAAAItNCIsRi00Ii4KIAQAA/9CLTQxRi1UIUmgsAAAAi0UQixCLTRCLQlDdXez/0Nx97Nld6NlF6FHZHCToDwAAANkcJOg6AAAAg8QIi+Vdw1WL7FHZRQjZHCToBQAAAIPEBF3DVYvsUdlFCIPsCN0cJOgA////g8QI2V382UX8i+Vdw1WL7FHZRQjZRQze2d/g9sRBdQjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+																		<returnType>float</returnType>
+																		<sString>min( floor( sender.vAddBloodCost / cNeedCosts ), cMaxStacks - sender.vBloodCounter)</sString>
+																	</addValue>
+																	<multValue>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>1.0f</sString>
+																	</multValue>
+																	<stat>Life</stat>
+																	<topModifier>false</topModifier>
+																	<variable>BloodCounter</variable>
+																</modifier>
+																<providerName></providerName>
+															</PermanentStatModApplicator>
+														</Item>
+														<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="0B4D80B2-D10C-4B34-B357-35180674A0A4">
+															<PermanentStatModApplicator>
+																<applyTarget>ApplicatorTarget</applyTarget>
+																<caption>cost update</caption>
+																<customApplyType>None</customApplyType>
+																<enabled>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>true</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<modifier>
+																	<addValue>
+																		<compiledString>FRkAAAACAAEAJQAAADsAAACPAAAATmVlZENvc3RzAAAAQWRkQmxvb2RDb3N0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SUdkcJGgMAAAAi0UIixCLTQiLgogBAAD/0FHZHCToBQAAAIPECF3DVYvsUdlFDNkcJFHZRQjZHCToBQAAAIPECF3DVYvsUdlFDIPsCN0cJNlFCIPsCN0cJOhV////g8QQ2V382UX8i+Vdww==</compiledString>
+																		<returnType>float</returnType>
+																		<sString>fmod(sender.vAddBloodCost,cNeedCosts)</sString>
+																	</addValue>
+																	<multValue>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>0.0f</sString>
+																	</multValue>
+																	<stat>Life</stat>
+																	<topModifier>false</topModifier>
+																	<variable>AddBloodCost</variable>
+																</modifier>
+																<providerName></providerName>
+															</PermanentStatModApplicator>
+														</Item>
+													</applicators>
+													<dispatch href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="089BC491-FDDD-4593-884E-B5A86F999D1F">
+														<DispatchImmediate>
+															<alwaysApply>false</alwaysApply>
+															<applyEffect>
+																<Item href="" />
+																<Item href="" />
+															</applyEffect>
+															<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+															<applyEffectOrientation>Default</applyEffectOrientation>
+															<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+															<dieAfterApply>true</dieAfterApply>
+															<dispatchEffect>
+																<Item href="" />
+																<Item href="" />
+															</dispatchEffect>
+															<flags>0</flags>
+															<instantApply>false</instantApply>
+														</DispatchImmediate>
+													</dispatch>
+												</Spell>
+											</spell>
+											<spellTarget>ApplicatorTarget</spellTarget>
+											<targetSelector href="" />
+										</SpellApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="D1B94FCF-07FF-4772-90F6-50C9BC5A45A7">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="/Effects/Buffs/Regen/_Time.EFFT" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>false</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+					</EventProcessorAbilityManacostTransformer>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="735BB1B2-4D02-46B5-AB64-1E5172D3714F">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>триггер на использование таланта за здоровье</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FR0AAAAEAAAAJAAAAD0AAABzAAAAjAAAAEcyOTYAAAAARzI5NgAAAABHMzAyAAAAAEczMDIAVYvsg+wUaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgIAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0WGgQAAAAi1UIiwKLTQiLkKgBAAD/0oXAdCpoGAAAAItFCIsQi00Ii4KoAQAA/9CJRfSLTfSLEYtN9ItCBP/QiEXz6wTGRfMAD7ZN84XJdAnHRewBAAAA6wfHRewAAAAAikXsi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("G296") &amp;&amp; tal("G302")</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="F193BA6A-912C-4EAB-B259-002B6E6BA868">
+					<EventProcessorAbilityManacostTransformer>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<filter>
+							<abilitiesList />
+							<abilityCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</abilityCondition>
+							<abilityCostMode>Life</abilityCostMode>
+							<exceptThis>false</exceptThis>
+							<flags>671088830</flags>
+							<onlySingleTarget>false</onlySingleTarget>
+						</filter>
+						<spell href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="A75752FA-28A6-4E04-A722-EEAB884CE422">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="F560ACF2-E00D-477F-8197-6F2DED111CF6">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>Сколько маны или здоровья затратили на абилки</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FScAAAACAAAARgAAAFwAAABCYXNlTWFuYUNvc3QAAAAAVEVDSF9MaWZlTW9kQWRkUGVyY2VudABVi+yD7BCLRRCLEItNEItCSP/QiUX8i00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ/9DZ6N7BaAAAAACLTfyLEYtN/ItCVN1d9P/Q3E302V3w2UXwi+VdwwAAAAAAAPA/</compiledString>
+													<returnType>float</returnType>
+													<sString>appl.parent.vBaseManaCost  * (1 + cTECH_LifeModAddPercent) </sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>AddBloodCost</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="A0DDB191-4F87-4BCF-B943-9E31868D4940">
+										<SpellApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>Проверяем, сколько мы затратили маны</caption>
+											<enabled>
+												<compiledString>FSoAAAAEAAAAMQAAAEcAAABTAAAAcAAAAEJsb29kQ291bnRlcgAAAABBZGRCbG9vZENvc3QAAAAATmVlZENvc3RzAFWL7IPsEGgAAAAAi0UIixCLTQiLgogBAAD/0NwdtAAAAN/g9sRBelRoEAAAAItNCIsRi00Ii4KIAQAA/9CLTQxRi1UIUmggAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBegnHRfQBAAAA6wfHRfQAAAAAi030iU3w6wfHRfABAAAAikXwi+VdwwAAAAAAAAAA</compiledString>
+												<returnType>bool</returnType>
+												<sString>sender.vBloodCounter&lt;=0 ? sender.vAddBloodCost&gt;=cNeedCosts : true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<spell href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="6CB14289-112A-47F8-991E-3A9AD06E2423">
+												<Spell>
+													<applicators>
+														<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="3662B2C9-003F-446D-A92A-F44792E6E607">
+															<PermanentStatModApplicator>
+																<applyTarget>AbilityOwner</applyTarget>
+																<caption>Увеличиваем счётчик</caption>
+																<customApplyType>None</customApplyType>
+																<enabled>
+																	<compiledString>FRoAAAACAAAAIQAAAD4AAABCbG9vZENvdW50ZXIAAAAATWF4U3RhY2tzAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaBAAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xEF1CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+																	<returnType>bool</returnType>
+																	<sString>sender.vBloodCounter &lt; cMaxStacks</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<modifier>
+																	<addValue>
+																		<compiledString>FTYAAAAEAAEARQAAAFcAAAB8AAAAmQAAAPAAAABNYXhTdGFja3MAAABCbG9vZENvdW50ZXIAAAAAQWRkQmxvb2RDb3N0AAAAAE5lZWRDb3N0cwBVi+yD7BiLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0mgMAAAAi0UIixCLTQiLgogBAADdXfj/0Nxt+Nld9NlF9FHZHCRoHAAAAItNCIsRi00Ii4KIAQAA/9CLTQxRi1UIUmgsAAAAi0UQixCLTRCLQlDdXez/0Nx97Nld6NlF6FHZHCToDwAAANkcJOg6AAAAg8QIi+Vdw1WL7FHZRQjZHCToBQAAAIPEBF3DVYvsUdlFCIPsCN0cJOgA////g8QI2V382UX8i+Vdw1WL7FHZRQjZRQze2d/g9sRBdQjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+																		<returnType>float</returnType>
+																		<sString>min( floor( sender.vAddBloodCost / cNeedCosts ), cMaxStacks - sender.vBloodCounter)</sString>
+																	</addValue>
+																	<multValue>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>1.0f</sString>
+																	</multValue>
+																	<stat>Life</stat>
+																	<topModifier>false</topModifier>
+																	<variable>BloodCounter</variable>
+																</modifier>
+																<providerName></providerName>
+															</PermanentStatModApplicator>
+														</Item>
+														<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="253E19C0-6C0A-4C6B-B38A-63EC516624A2">
+															<PermanentStatModApplicator>
+																<applyTarget>ApplicatorTarget</applyTarget>
+																<caption>cost update</caption>
+																<customApplyType>None</customApplyType>
+																<enabled>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>true</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<modifier>
+																	<addValue>
+																		<compiledString>FRkAAAACAAEAJQAAADsAAACPAAAATmVlZENvc3RzAAAAQWRkQmxvb2RDb3N0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SUdkcJGgMAAAAi0UIixCLTQiLgogBAAD/0FHZHCToBQAAAIPECF3DVYvsUdlFDNkcJFHZRQjZHCToBQAAAIPECF3DVYvsUdlFDIPsCN0cJNlFCIPsCN0cJOhV////g8QQ2V382UX8i+Vdww==</compiledString>
+																		<returnType>float</returnType>
+																		<sString>fmod(sender.vAddBloodCost,cNeedCosts)</sString>
+																	</addValue>
+																	<multValue>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>0.0f</sString>
+																	</multValue>
+																	<stat>Life</stat>
+																	<topModifier>false</topModifier>
+																	<variable>AddBloodCost</variable>
+																</modifier>
+																<providerName></providerName>
+															</PermanentStatModApplicator>
+														</Item>
+													</applicators>
+													<dispatch href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="DDE3E43C-CD7A-4550-AF3A-CDD25F156657">
+														<DispatchImmediate>
+															<alwaysApply>false</alwaysApply>
+															<applyEffect>
+																<Item href="" />
+																<Item href="" />
+															</applyEffect>
+															<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+															<applyEffectOrientation>Default</applyEffectOrientation>
+															<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+															<dieAfterApply>true</dieAfterApply>
+															<dispatchEffect>
+																<Item href="" />
+																<Item href="" />
+															</dispatchEffect>
+															<flags>0</flags>
+															<instantApply>false</instantApply>
+														</DispatchImmediate>
+													</dispatch>
+												</Spell>
+											</spell>
+											<spellTarget>ApplicatorTarget</spellTarget>
+											<targetSelector href="" />
+										</SpellApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" id="D6DA2141-98D5-4CCF-AC83-878ADFE9749F">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="/Effects/Buffs/Regen/_Time.EFFT" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>false</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+					</EventProcessorAbilityManacostTransformer>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Applicators/status_G308_BloodDmgStack.APLR" />
+	</passiveApplicators>
+	<persistentId>G308</persistentId>
+	<prerequisiteTalents />
+	<rarity>outstanding</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G308_K_Life_Energy.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>672989247</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Long</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats>
+		<Item>
+			<addValueName>Add_Stat</addValueName>
+			<stat>Strength</stat>
+			<values>
+				<Item>13</Item>
+				<Item>14</Item>
+				<Item>15</Item>
+				<Item>16</Item>
+				<Item>17</Item>
+				<Item>18</Item>
+				<Item>19</Item>
+				<Item>20</Item>
+				<Item>21</Item>
+				<Item>22</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_Stat</addValueName>
+			<stat>Intellect</stat>
+			<values>
+				<Item>13</Item>
+				<Item>14</Item>
+				<Item>15</Item>
+				<Item>16</Item>
+				<Item>17</Item>
+				<Item>18</Item>
+				<Item>19</Item>
+				<Item>20</Item>
+				<Item>21</Item>
+				<Item>22</Item>
+			</values>
+		</Item>
+	</variativeMaxTalentStats>
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

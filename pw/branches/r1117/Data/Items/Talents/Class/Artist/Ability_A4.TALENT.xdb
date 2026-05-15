@@ -2,13 +2,13 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Artist.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Artist.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Artist/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Artist/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Artist/Ability_A4u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Artist/status_A0_Mastery.APLR" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Artist_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Artist_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Artist/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Artist/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Artist/Elite_Int.TALENTSET" Count="1" />
@@ -148,8 +148,8 @@
 		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Artist/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Artist/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Artist/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Artist/Ability_A4.TALENT" id="84A73E04-FB0A-47EA-998F-02F6922813CF">
 			<ConditionFormula>
@@ -255,7 +255,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>1</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Artist/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

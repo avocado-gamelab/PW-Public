@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Vampire_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Vampire_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Vampire_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Vampire_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A3_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -34,8 +35,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Vampire/Ability_A1_SUP.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Vampire/Ability_A1_SUP.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Vampire/Ability_A1_SUP.TALENT" id="55CC47A8-35DA-40B6-A6AD-BE67716DA287">
 			<ConditionFormula>
@@ -50,6 +51,7 @@
 	</conditionFormulas>
 	<conflictingTalents>
 		<Item href="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" />
+		<Item href="/Items/Talents/Class/Vampire/Ability_A3_SUP.TALENT" />
 	</conflictingTalents>
 	<constants href="/Items/Talents/Class/Vampire/Ability_A1_SUP.TALENT" id="B2B1CC04-D46F-4B87-B506-1E5A5DEF1497">
 		<UnitConstantsContainer>
@@ -65,6 +67,7 @@
 					</UnitConstant>
 				</Item>
 				<Item href="/Items/Talents/Class/Vampire/const_A1_BonusCD" />
+				<Item href="/Items/Talents/Class/Vampire/const_A1_SUP_BonusDamagePercent" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -86,7 +89,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>0</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>22.7</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Vampire/A1_SUP.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

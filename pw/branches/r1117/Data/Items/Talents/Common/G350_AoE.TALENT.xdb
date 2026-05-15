@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="3" />
+	<BackLink DBID="/GameLogic/TalentGroup.TGRP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar5_Set3" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="2" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_OrangeSet3.ROLLCONT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Ent_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Faceless_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/BunchOfMisfortunes.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/OrangeSet3.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/SourceOfShackles.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="7658033A-4525-4649-BBB9-45805AB176F0">
+			<ProgramApplicator>
+				<applicators>
+					<Item>
+						<applicator href="/Items/Talents/Common/G350_AoE.TALENT" id="2A81D0B2-AB5A-4EF9-A292-6EDFBA8F452D">
+							<FlagsApplicator>
+								<applyTarget>AbilityOwner</applyTarget>
+								<behaviorFlags>248</behaviorFlags>
+								<caption>FX</caption>
+								<consumables />
+								<effect>
+									<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="46B8373E-F4A7-4BF3-B5DD-35E7E249FF27">
+										<EffectList>
+											<deathType>Manual</deathType>
+											<effects>
+												<Item href="/Effects/Debuffs/ShockWave/_Swords.EFFT" />
+												<Item href="/Effects/Debuffs/ShockWave/_Swords_Up1.EFFT" />
+												<Item href="/Effects/Debuffs/ShockWave/_Swords_Up2.EFFT" />
+												<Item href="/Effects/Debuffs/ShockWave/_Swords_Up3.EFFT" />
+											</effects>
+											<enableCondition href="" />
+											<lifeTime>0</lifeTime>
+										</EffectList>
+									</Item>
+									<Item href="" />
+								</effect>
+								<enabled>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</enabled>
+								<flag>0</flag>
+								<formulaName></formulaName>
+								<lifeTime>
+									<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPg==</compiledString>
+									<returnType>float</returnType>
+									<sString>0.2</sString>
+								</lifeTime>
+								<LoggingEvent>-1</LoggingEvent>
+								<providerName></providerName>
+								<startCondition>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</startCondition>
+								<talents />
+								<useListAs>ListAsRule</useListAs>
+							</FlagsApplicator>
+						</applicator>
+						<continueCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>1</continueEvents>
+						<delay>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0</sString>
+						</delay>
+						<stopCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+					<Item>
+						<applicator href="/Items/Talents/Common/G350_AoE.TALENT" id="8F5F939D-EE93-4AFC-B33E-1319C66E1257">
+							<FlagsApplicator>
+								<applyTarget>AbilityOwner</applyTarget>
+								<behaviorFlags>216</behaviorFlags>
+								<caption>FX Wait</caption>
+								<consumables />
+								<effect>
+									<Item href="" />
+									<Item href="" />
+								</effect>
+								<enabled>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</enabled>
+								<flag>0</flag>
+								<formulaName></formulaName>
+								<lifeTime>
+									<compiledString>FQ8AAAABAAAAGwAAAEZYX1RpbWVQcmVwYXJlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+									<returnType>float</returnType>
+									<sString>cFX_TimePrepare</sString>
+								</lifeTime>
+								<LoggingEvent>-1</LoggingEvent>
+								<providerName></providerName>
+								<startCondition>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</startCondition>
+								<talents />
+								<useListAs>ListAsRule</useListAs>
+							</FlagsApplicator>
+						</applicator>
+						<continueCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>2</continueEvents>
+						<delay>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0</sString>
+						</delay>
+						<stopCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+					<Item>
+						<applicator href="/Items/Talents/Common/G350_AoE.TALENT" id="C25ECEAF-69DB-4B54-B284-2357E056C6AD">
+							<SpellApplicator>
+								<applyTarget>ApplicatorTarget</applyTarget>
+								<caption>АоЕ Спелл</caption>
+								<enabled>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</enabled>
+								<formulaName></formulaName>
+								<LoggingEvent>-1</LoggingEvent>
+								<providerName></providerName>
+								<spell href="/Items/Talents/Common/G350_AoE.TALENT" id="478BD267-CB6C-4A61-B284-9AFFAC098761">
+									<Spell>
+										<applicators>
+											<Item href="/Heroes/DefaultStatus/_TAUNT_status.APLR" />
+											<Item href="/Heroes/DefaultStatus/_MORTALSTRIKE_Status.APLR" />
+											<Item href="/Heroes/DefaultStatus/_SLOW_MOVE.APLR" />
+											<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="5290E664-FAB2-4E54-974E-A6AC701A12BC">
+												<DamageApplicator>
+													<applyTarget>ApplicatorTarget</applyTarget>
+													<cancelInvisibility>false</cancelInvisibility>
+													<caption>Урон</caption>
+													<damage>
+														<compiledString>FRQAAAABAAAAIAAAAFBoeXNEb1RfVG90YWxEYW1hZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+														<returnType>float</returnType>
+														<sString>cPhysDoT_TotalDamage</sString>
+													</damage>
+													<damageMode>4</damageMode>
+													<damageType>Pure</damageType>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<timeLimiter>-1</timeLimiter>
+													<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed.UIEV" />
+												</DamageApplicator>
+											</Item>
+										</applicators>
+										<dispatch href="/Items/Talents/Common/G350_AoE.TALENT" id="11DE54A0-510E-434F-919A-97F1BAA7C4D4">
+											<DispatchImmediate>
+												<alwaysApply>false</alwaysApply>
+												<applyEffect>
+													<Item href="" />
+													<Item href="" />
+												</applyEffect>
+												<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+												<applyEffectOrientation>Default</applyEffectOrientation>
+												<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+												<dieAfterApply>true</dieAfterApply>
+												<dispatchEffect>
+													<Item href="" />
+													<Item href="" />
+												</dispatchEffect>
+												<flags>0</flags>
+												<instantApply>true</instantApply>
+											</DispatchImmediate>
+										</dispatch>
+									</Spell>
+								</spell>
+								<spellTarget>ApplicatorTarget</spellTarget>
+								<targetSelector href="/Items/Talents/Common/G350_AoE.TALENT" id="082123A6-ED1C-40C1-9330-451F48310ADA">
+									<AreaTargetSelector>
+										<absolutePosition>
+											<x>0</x>
+											<y>0</y>
+										</absolutePosition>
+										<flags>0</flags>
+										<mode>Normal</mode>
+										<range>
+											<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+											<returnType>float</returnType>
+											<sString>cRange</sString>
+										</range>
+										<targetFilter>538771519</targetFilter>
+										<targetSelector href="/Items/Talents/Common/G350_AoE.TALENT" id="33056C37-828D-4A7C-972B-641268EBF39F">
+											<SelectApplicatorTarget>
+												<applicatorIndex>0</applicatorIndex>
+												<applicatorName></applicatorName>
+												<namedApplicatorTarget>ApplicatorTarget</namedApplicatorTarget>
+												<selectTarget>CastPosition</selectTarget>
+											</SelectApplicatorTarget>
+										</targetSelector>
+									</AreaTargetSelector>
+								</targetSelector>
+							</SpellApplicator>
+						</applicator>
+						<continueCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>1</continueEvents>
+						<delay>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0</sString>
+						</delay>
+						<stopCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+				</applicators>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>Программа с оберткой</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+			</ProgramApplicator>
+		</Item>
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G350: Скопище напастей</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G350_AoE.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G350_AoE.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="A72D25AA-4DC0-4961-9E9C-14843DB847E0">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHMzU5X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG359_Active &gt; 0</sString>
+				</condition>
+				<name>Slow</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="D9BD6352-2AD4-4DD3-BC89-6609D0BF8CFB">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHMzU4X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG358_Active &gt; 0</sString>
+				</condition>
+				<name>MortalStrike</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="9EEA90A0-9C75-435D-8BEC-AA8BA20503BF">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHMzYxX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG361_Active &gt; 0</sString>
+				</condition>
+				<name>Taunt</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="972B5DA1-E8DB-4DE2-952D-EEE4F2FEFF21">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSEAAAAEAAAAMAAAAEMAAABPAAAAaAAAAEczNTBfa2l0Q291bnRlcl9UVAAARzM1MAAAAABHMzUwAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3B20AAAA3+D2xEF1WGgUAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoHAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdAnHRfQAAAAA6wfHRfQBAAAAikX0i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(cG350_kitCounter_TT&gt;0&amp;&amp;(tal("G350")))</sString>
+				</condition>
+				<name>FormNotActiveSession</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="2F88BEB8-AA60-4705-9772-C4396CCD6B6A">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSEAAAACAAAAMAAAAEoAAABHMzUwX2tpdENvdW50ZXJfVFQAAEczNTBfTWF4Rm9ybQBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBQAAACLVRCLAotNEItQUN1d+P/S3F343+D2xAV6CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG350_kitCounter_TT&gt;cG350_MaxForm</sString>
+				</condition>
+				<name>FormOverChargedSession</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="CF315713-A91D-46CE-802D-2A1CB45EBDB9">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSkAAAAEAAAAOAAAAEsAAABXAAAAcAAAAEczNTBfa2l0Q291bnRlcl9UVF9DYXN0bGUAAABHMzUwAAAAAEczNTAAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcHbwAAADf4PbEQXVYaBwAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgkAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0CcdF9AAAAADrB8dF9AEAAACKRfSL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(cG350_kitCounter_TT_Castle&gt;0&amp;&amp;(tal("G350")))</sString>
+				</condition>
+				<name>FormNotActiveCastle</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="D59FF622-2534-44FF-B04E-DA13E905795B">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRoAAAACAAAAJwAAADoAAABHMzUwX2tpdENvdW50ZXJfVFRfQ2FzdGxlAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twdXAAAAN/g9sRBdQnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAABA</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG350_kitCounter_TT_Castle&gt;2</sString>
+				</condition>
+				<name>FormOverChargedCastle</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/TalentSet3/conditionFormula_G350_1" />
+		<Item href="/Items/Talents/TalentKits/TalentSet3/conditionFormula_G350_2" />
+		<Item href="/Items/Talents/TalentKits/TalentSet3/conditionFormula_G350_3" />
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G350_AoE.TALENT" id="6608D781-3E5C-4542-8E87-9402D309DF34">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="ECC5882B-FD28-4865-AD74-FEADDBF97139">
+					<UnitConstant>
+						<name>PhysDoT_TotalDamage</name>
+						<var>
+							<compiledString>FSwAAAAEAAAAMwAAAEkAAABnAAAAhwAAAERhbWFnZUJhc2UAAE1hZ0RvVF9Ub3RhbERhbWFnZQAARzM2MF9BY3RpdmUAVYvsg+wQaCAAAACLRQiLEItNCIuCiAEAAP/Q3B29AAAA3+D2xEF1BsZF/wHrBMZF/wCLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlD/0FHZ7tkcJItNDFGLVQhSaAwAAACLRRCLEItNEItCUN1d9P/QUdkcJA+2Tf9R6BwAAACDxAzcRfTZXfDZRfCL5V3DAAAAAAAAAAAAAAAAVYvsUQ+2RQiFwHQI2UUM2V386wbZRRDZXfzZRfyL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cDamageBase+s(sender.vG360_Active &gt; 0,cMagDoT_TotalDamage,0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="7A768F9C-822E-48F1-8948-CAA4B77C0984">
+					<UnitConstant>
+						<name>Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>7</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="4C794C2B-BE36-44E7-B46C-4A23679CFA20">
+					<UnitConstant>
+						<name>Range</name>
+						<var>
+							<compiledString>FQwAAAABAAAAGAAAAFJhbmdlX1Nob3J0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange_Short</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/TalentSet3/const_G350_MagDoT_TotalDamage" />
+				<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="60EA3EDD-453D-43F4-A7BA-89D6C54D4865">
+					<UnitConstant>
+						<name>MagDmg_Condition</name>
+						<var>
+							<compiledString>FQwAAAACAAAAEQAAACcAAABHMzYwX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAADbRfyL5V3DAAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG360_Active &gt; 0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/TalentSet3/const_G350_Taunt_Duration" />
+				<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="D62C01E0-8617-48F8-A60D-8FEA81B6E271">
+					<UnitConstant>
+						<name>Taunt_StartCondition</name>
+						<var>
+							<compiledString>FQwAAAACAAAAEQAAACcAAABHMzYxX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAADbRfyL5V3DAAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG361_Active &gt; 0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="5331981A-90E8-4F75-8911-D44FD37A46AC">
+					<UnitConstant>
+						<name>MortalStrike_StartCondition</name>
+						<var>
+							<compiledString>FQwAAAACAAAAEQAAACcAAABHMzU4X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAADbRfyL5V3DAAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG358_Active &gt; 0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/TalentSet3/const_G350_MortalStrike_Duration" />
+				<Item href="/Items/Talents/TalentKits/TalentSet3/const_G350_MortalStrike_Amount" />
+				<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="FF2A0810-97BA-430D-A6E3-D935E9C7891B">
+					<UnitConstant>
+						<name>Slow_StartCondition</name>
+						<var>
+							<compiledString>FQwAAAACAAAAEQAAACcAAABHMzU5X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAADbRfyL5V3DAAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG359_Active &gt; 0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/TalentSet3/const_G350_Slow_Duration" />
+				<Item href="/Items/Talents/TalentKits/TalentSet3/const_G350_Dec_MoveSpeed" />
+				<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="B22F4A94-88A8-490D-BEDB-956114A01CAE">
+					<UnitConstant>
+						<name>G350_kitCounter_TT</name>
+						<var>
+							<compiledString>FQ0AAAACAAAAFAAAAC0AAABHMzUwAAAAAEczNTAAVYvsg+wYaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgIAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCLTRCLEYtNEItCeP/QiUX020X0Udnu2RwkUdno2RwkD7ZN+1HdXezoGAAAAIPEDNxt7Nld6NlF6IvlXcMAAIA/AAAAAFWL7FEPtkUIhcB0CNlFDNld/OsG2UUQ2V382UX8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>mActivatedWithinKit - s(tal("G350"), 1 , 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="7DE48143-FBA5-42B9-8E5A-9D9836669003">
+					<UnitConstant>
+						<name>G350_kitCounter_TT_Castle</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvsUVHZ7tkcJItFEIsQi00Qi0J4/9CD6AGJRfzbRfxR2Rwk6AsAAACDxAiL5V3DAAAAAFWL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>max(mActivatedWithinKit - 1, 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/TalentSet3/const_G350_MaxForm" />
+				<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="D918BBB1-6FFC-4827-ABD5-E837F74ADF50">
+					<UnitConstant>
+						<name>FX_TimePrepare</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>0.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="EA4890F7-6BFA-4426-9890-57C55560BD53">
+					<UnitConstant>
+						<name>DamageBase</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUMl9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcMAAAAAAAA5QA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT2_Stat * 25</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G350_AoE.TALENT" id="DB451EC2-3879-4917-922F-352B6B91CA5F">
+					<UnitConstant>
+						<name>TECH_FormCapacity</name>
+						<var>
+							<compiledString>FQ0AAAABAAAAGQAAAEczNTBfTWF4Rm9ybQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cG350_MaxForm</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABwQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>60</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G350_AoE.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/G350_AoE.TALENT" id="C9F51918-B505-4DBC-87CA-4679A713BBB9">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>true</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>7</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_350.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G350_AoE.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators />
+	<persistentId>G350</persistentId>
+	<prerequisiteTalents />
+	<rarity>outstanding</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G350_AoE.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Circle.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

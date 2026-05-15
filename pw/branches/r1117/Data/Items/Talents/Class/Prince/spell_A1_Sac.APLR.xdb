@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SpellApplicator>
+	<BackLink DBID="/Items/Talents/Class/Prince/Ability_A1.TALENT" Count="4" />
+	<BackLink DBID="/Items/Talents/Class/Prince/spell_A1_SUP_RandomSac.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Prince/spell_A1_DirectedSac.APLR" Count="1" />
+	<applyTarget>ApplicatorTarget</applyTarget>
+	<caption>Бросаем мешочек с песком</caption>
+	<enabled>
+		<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<LoggingEvent>-1</LoggingEvent>
+	<providerName></providerName>
+	<spell href="/Items/Talents/Class/Prince/spell_A1_Sac.APLR" id="142B2F8C-14F5-4361-9A0F-933F5680A5AF">
+		<Spell>
+			<applicators>
+				<Item href="/Items/Talents/Class/Prince/spell_A1_Sac.APLR" id="DE01B34C-AEE5-46EB-8CCE-05A43BDC8E57">
+					<SpellApplicator>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<caption>Урон, стан, ослепление</caption>
+						<enabled>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</enabled>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<providerName></providerName>
+						<spell href="/Items/Talents/Class/Prince/spell_A1_Sac.APLR" id="CA6C0EED-D836-4A20-A2B3-D7F2D63C4817">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Class/Prince/spell_A1_Sac.APLR" id="38181305-BB8E-4D21-818C-7F873CAEAE90">
+										<DamageApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<cancelInvisibility>false</cancelInvisibility>
+											<caption>урон</caption>
+											<damage>
+												<compiledString>FQoAAAABAAAAFgAAAEExX0RhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+												<returnType>float</returnType>
+												<sString>cA1_Damage</sString>
+											</damage>
+											<damageMode>0</damageMode>
+											<damageType>Energy</damageType>
+											<enabled>
+												<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<timeLimiter>-1</timeLimiter>
+											<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
+										</DamageApplicator>
+									</Item>
+									<Item href="/Heroes/DefaultStatus/_BLIND_status.APLR" />
+									<Item href="/Heroes/DefaultStatus/_STUN_Status.APLR" />
+								</applicators>
+								<dispatch href="/Items/Talents/Class/Prince/spell_A1_Sac.APLR" id="C32055AB-0C5B-41A5-A34D-3EBD23F184B5">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>1</flags>
+										<instantApply>false</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+						<spellTarget>ApplicatorTarget</spellTarget>
+						<targetSelector href="/Items/Talents/Class/Prince/spell_A1_Sac.APLR" id="18030B0A-39A6-4D74-85A9-2B3D618A9E07">
+							<AreaTargetSelector>
+								<absolutePosition>
+									<x>0</x>
+									<y>0</y>
+								</absolutePosition>
+								<flags>0</flags>
+								<mode>Normal</mode>
+								<range>
+									<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAQA==</compiledString>
+									<returnType>float</returnType>
+									<sString>4</sString>
+								</range>
+								<targetFilter>538705983</targetFilter>
+								<targetSelector href="" />
+							</AreaTargetSelector>
+						</targetSelector>
+					</SpellApplicator>
+				</Item>
+			</applicators>
+			<dispatch href="/Items/Talents/Class/Prince/spell_A1_Sac.APLR" id="53614F63-0462-496C-A901-34AB2F18905F">
+				<DispatchLinear>
+					<aiming>Straight</aiming>
+					<alwaysApply>false</alwaysApply>
+					<applyEffect>
+						<Item href="/Effects/Shots/Salt/_Hit2.EFFT" />
+						<Item href="" />
+					</applyEffect>
+					<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+					<applyEffectOrientation>Default</applyEffectOrientation>
+					<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+					<dieAfterApply>true</dieAfterApply>
+					<dispatchEffect>
+						<Item href="/Effects/Shots/Salt/_.EFFT" />
+						<Item href="" />
+					</dispatchEffect>
+					<flags>0</flags>
+					<flyMode>Parabolic</flyMode>
+					<fromLocator>Ability1</fromLocator>
+					<height>0</height>
+					<killEffect>true</killEffect>
+					<locatorOrient>true</locatorOrient>
+					<maxDeviation>180</maxDeviation>
+					<maxDistance>-1</maxDistance>
+					<maxRise>0</maxRise>
+					<minRise>0</minRise>
+					<persistentApplicators />
+					<speed>30</speed>
+					<suspendTime>0</suspendTime>
+					<toLocator></toLocator>
+				</DispatchLinear>
+			</dispatch>
+		</Spell>
+	</spell>
+	<spellTarget>ApplicatorTarget</spellTarget>
+	<targetSelector href="" />
+</SpellApplicator>

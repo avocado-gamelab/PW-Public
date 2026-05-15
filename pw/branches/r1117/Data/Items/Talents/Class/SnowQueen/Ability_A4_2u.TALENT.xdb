@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/SnowQueen_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/SnowQueen_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A4u.TALENT" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Epic_IntLife_Ult2.TALENTSET" Count="1" />
@@ -35,8 +35,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/SnowQueen/Ability_A4_2u.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/SnowQueen/Ability_A4_2u.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/SnowQueen/Ability_A4_2u.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/SnowQueen/Ability_A4_2u.TALENT" id="AAB42DF7-A9D8-49C2-AC5C-F24A6042F85E">
 			<ConditionFormula>
@@ -56,7 +56,7 @@
 	<constants href="/Items/Talents/Class/SnowQueen/Ability_A4_2u.TALENT" id="47739C5C-4C2E-40BE-83D0-5F612E0DE870">
 		<UnitConstantsContainer>
 			<vars>
-				<Item href="/Items/Talents/Class/SnowQueen/const_A5_Damage" />
+				<Item href="/Items/Talents/Class/SnowQueen/const_A5_BaseDamage" />
 				<Item href="/Items/Talents/Class/SnowQueen/Ability_A4_2u.TALENT" id="39AB4FE8-1D09-4882-82BA-816C879AC823">
 					<UnitConstant>
 						<name>A4_2_Duration</name>
@@ -89,7 +89,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>18</flags>
-	<forceBonus>16</forceBonus>
+	<forceBonus>16.15</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/SnowQueen/A4_2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

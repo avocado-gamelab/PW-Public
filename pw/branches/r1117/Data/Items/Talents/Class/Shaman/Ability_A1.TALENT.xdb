@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
-	<BackLink DBID="/Items/Talents/Shaman.TALENTSET" Count="1" />
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Shaman.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Shaman_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Shaman_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Shaman/Ability_A1u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Shaman_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Shaman_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -212,8 +213,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Shaman/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Shaman/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Shaman/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Shaman/Ability_A1.TALENT" id="B3C388C6-A150-4048-8C57-3F025DDA5846">
 			<ConditionFormula>
@@ -240,18 +241,36 @@
 						</var>
 					</UnitConstant>
 				</Item>
-				<Item href="/Items/Talents/Class/SnowQueen/const_A1_Duration" />
 				<Item href="/Items/Talents/Class/Shaman/Ability_A1.TALENT" id="4FF77F7D-200A-496F-8A8F-235E6E7D2E1D">
 					<UnitConstant>
 						<name>A1_Damage</name>
 						<var>
-							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAACIQQAAA0M=</compiledString>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAACIQQAAKkM=</compiledString>
 							<returnType>float</returnType>
-							<sString>damageScale( sIntellect, 17, 131 )</sString>
+							<sString>damageScale( sIntellect, 17, 170 )</sString>
 						</var>
 					</UnitConstant>
 				</Item>
-				<Item href="/Items/Talents/Class/SnowQueen/const_A1_Period" />
+				<Item href="/Items/Talents/Class/Shaman/Ability_A1.TALENT" id="FB3E5E92-5AC6-446A-B72F-5885C39A4F2F">
+					<UnitConstant>
+						<name>A1_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>6</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Shaman/Ability_A1.TALENT" id="619215BD-3A15-4B2E-AD43-9DB448F9098A">
+					<UnitConstant>
+						<name>A1_Period</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
 				<Item href="/Items/Talents/Class/Shaman/const_A1_Slow_Duration" />
 				<Item href="/Items/Talents/Class/Shaman/const_A1_DecMoveSpeed" />
 				<Item href="/Items/Talents/Class/Shaman/Ability_A1.TALENT" id="C96A7885-7193-4246-9CE0-BD4F256ECBDF">
@@ -272,9 +291,9 @@
 		<percent>0</percent>
 	</consumptionBonus>
 	<cooldownTime>
-		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQQ==</compiledString>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABAQQ==</compiledString>
 		<returnType>float</returnType>
-		<sString>8.0f</sString>
+		<sString>12.0f</sString>
 	</cooldownTime>
 	<cooldownTimeSecondState>
 		<compiledString></compiledString>
@@ -303,7 +322,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>3</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Shaman/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

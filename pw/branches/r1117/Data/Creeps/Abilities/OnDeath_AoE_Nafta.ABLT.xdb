@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Ability>
+	<BackLink DBID="/Creeps/A/Heavy/PVP.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/A/Melee1/PvP.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/A/Melee2/PvP.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/A/Range/PvP.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/B/Heavy/PVE1.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/B/Heavy/PVP.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/B/Melee1/PvP.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/B/Melee2/PVP.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/B/Range/PvP.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/A/Melee1/PvP_MidOnly.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/B/Melee1/PvP_MidOnly.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/B/Melee2/PVP_MidOnly.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/A/Melee2/PvP_MidOnly.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/A/Range/PvP_MidOnly.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/A/Heavy/PVP_MidOnly.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/B/Range/PvP_MidOnly.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/B/Heavy/PVP_MidOnly.CREEP" Count="1" />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<autoTargetSelector href="" />
+	<caption></caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<constants href="/Creeps/Abilities/OnDeath_AoE_Nafta.ABLT" id="97C0C2AB-10BE-4B97-B5B1-24123C212E0F">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Creeps/Abilities/OnDeath_AoE_Nafta.ABLT" id="05D5CFB6-8DCE-4FB3-9B35-A4A8502D93ED">
+					<UnitConstant>
+						<name>Range</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAC4QQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>23.0f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Creeps/Abilities/OnDeath_AoE_Nafta.ABLT" id="835C019E-56C0-47D2-AD36-5AA8802C328C">
+					<UnitConstant>
+						<name>Targets</name>
+						<var>
+							<compiledString>FR0AAAACAAAAKAAAAEAAAABFbmVteUNvdW50ZXIAAAAAdGFyZ2V0c0NvdW50AFWL7FFqAYtFEFBoAAAAAItNCIsRi00Ii4KcAQAA/9CJRfxoEAAAAItN/IsRi038i0JU/9CL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.FindApplicator("EnemyCounter", pMisc, UNIT)-&gt;GetVariable("targetsCount")</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Creeps/Abilities/OnDeath_AoE_Nafta.ABLT" id="1A0A7DB4-53EB-407C-86A3-40093B1E9E7D">
+					<UnitConstant>
+						<name>OneHeroRewardMultiplier</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1.0f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Creeps/Abilities/OnDeath_AoE_Nafta.ABLT" id="1CBA8F0D-A413-4CBA-A1DF-2FE359C527F2">
+					<UnitConstant>
+						<name>TwoHeroesRewardMultiplier</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DZmZmPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>0.9f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Creeps/Abilities/OnDeath_AoE_Nafta.ABLT" id="7BAED96E-98A9-4838-80E9-8120D6F6FDE1">
+					<UnitConstant>
+						<name>ThreeHeroesRewardMultiplier</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>0.8f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Creeps/Abilities/OnDeath_AoE_Nafta.ABLT" id="8524515B-A20A-4AA5-A33A-518892F843C3">
+					<UnitConstant>
+						<name>FourHeroesRewardMultiplier</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DMzMzPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>0.7f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Creeps/Abilities/OnDeath_AoE_Nafta.ABLT" id="34619447-AD2B-4334-A9DA-3D5D38AD2FAA">
+					<UnitConstant>
+						<name>FiveHeroesRewardMultiplier</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DMzMzPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>0.7f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<cooldownTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Creeps/Abilities/OnDeath_AoE_Nafta.ABLT_description.txt" />
+	<dispatch href="" />
+	<flags>5</flags>
+	<image href="" />
+	<imageSecondState href="" />
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<name textref="/Creeps/Abilities/OnDeath_AoE_Nafta.ABLT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Creeps/Abilities/appl_AoE_Prime_For_Enemies.APLR" />
+	</passiveApplicators>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<targetType>136258047</targetType>
+	<type>Passive</type>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Ability>

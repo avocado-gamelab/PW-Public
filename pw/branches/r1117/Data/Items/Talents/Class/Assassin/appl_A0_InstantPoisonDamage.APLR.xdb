@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DamageApplicator>
+	<BackLink DBID="/Items/Talents/Class/Assassin/appl_A0_Poison.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Assassin/appl_A0_PoisonWithoutAddDamage.APLR" Count="1" />
+	<applyTarget>ApplicatorTarget</applyTarget>
+	<cancelInvisibility>false</cancelInvisibility>
+	<caption>Мгновенный урон против крипов</caption>
+	<damage>
+		<compiledString>FQ8AAAABAAAAGwAAAEEwX1RvdGFsRGFtYWdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<returnType>float</returnType>
+		<sString>cA0_TotalDamage</sString>
+	</damage>
+	<damageMode>4</damageMode>
+	<damageType>Pure</damageType>
+	<enabled>
+		<compiledString>FRAAAAADAAAAPQAAAGUAAAC6AAAAV2FyZAAAAABBbmNpZW50AFWL7FFR2ejZHCRR2e7ZHCRqAYtFDIsQi00Mi0JY/9APtshR6MIAAACDxAzcHeoAAADf4PbERA+LkAAAAItVDIsCi00Mi1BQ/9KD+BF0fmoAi0UQUGgAAAAAi00MixGLTQyLgpwBAAD/0DtFEHVei00MixGLTQyLQlD/0IXAdE2LTQyLEYtNDItCUP/Qg/gBdDuLTQyLEYtNDItCUP/Qg/gCdClqAItNEFFoCAAAAItVDIsCi00Mi5CcAQAA/9I7RRB1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAAAAAAAAACAP1WL7FEPtkUIhcB0CNlFDNld/OsG2UUQ2V382UX8i+Vdww==</compiledString>
+		<returnType>bool</returnType>
+		<sString>ut_bldg(false, true) &amp;&amp; rUnitKind != 17 &amp;&amp; receiver.applWard(GLOBAL) == pMisc &amp;&amp; rUnitKind != 0 &amp;&amp; rUnitKind != 1 &amp;&amp; rUnitKind != 2 &amp;&amp; receiver.applAncient(GLOBAL) == pMisc</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<LoggingEvent>-1</LoggingEvent>
+	<providerName></providerName>
+	<timeLimiter>-1</timeLimiter>
+	<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed.UIEV" />
+</DamageApplicator>

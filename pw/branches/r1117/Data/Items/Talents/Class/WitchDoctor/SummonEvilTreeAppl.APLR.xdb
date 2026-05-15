@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <SummonApplicator>
-	<BackLink DBID="/Items/Talents/Class/WitchDoctor/Ability4.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/WitchDoctor/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/WitchDoctor/Ability4.TALENT" Count="1" />
 	<applicators>
 		<Item href="/Heroes/DefaultStatus/_MasterStatConnect_Life.APLR" />
@@ -79,9 +79,9 @@
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString>FTkAAAAEAAEAQAAAAFkAAACPAAAArwAAAKEBAABWZWR1bl9BMAAAAABWZWR1bl9BMAAAAABWZWR1bl9BMAAAAABBMF9UcmVlc1NlYXJjaFJhZGl1cwBVi+yD7CRoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAwAAACLTQiLEYtNCIuCqAEAAP/QiUXsi03sixGLTeyLQgT/0IhF6+sExkXrAA+2TeuFyXQ3aBgAAACLVQiLAotNCIuQqAEAAP/SiUXki0UMUItNCFFoJAAAAItV5IsCi03ki1BQ/9LZXeDrBdnu2V3gjUX4UItNDIsRi00Mi4KMAQAA/9BQjU3wUYtVCIsCi00Ii5CMAQAA/9JQ6CoAAACDxAjZReDe2d/g9sRBdQnHRdwBAAAA6wfHRdwAAAAAikXci+VdwwAAAABVi+yD7BSLRQjZQASLTQzYYQTZXfTZRfRR2Rwki1UI2QKLRQzYINld8NlF8FHZHCSNTfjoVwAAANlF+NhN+NlF/NhN/N7B2V3s2UXsUdkcJOgHAAAAg8QEi+Vdw1WL7FHZRQjZHCToBQAAAIPEBF3DVYvsUdlFCIPsCN0cJOg3/v//g8QI2V382UX8i+Vdw1WL7FGJTfyLRfzZRQjZGItN/NlFDNlZBItF/IvlXcIIAA==</compiledString>
+					<compiledString>FUUAAAAEAAEATAAAAGUAAACbAAAAuwAAAK0BAABXaXRjaERvY3Rvcl9BMAAAV2l0Y2hEb2N0b3JfQTAAAFdpdGNoRG9jdG9yX0EwAABBMF9UcmVlc1NlYXJjaFJhZGl1cwBVi+yD7CRoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUXsi03sixGLTeyLQgT/0IhF6+sExkXrAA+2TeuFyXQ3aCAAAACLVQiLAotNCIuQqAEAAP/SiUXki0UMUItNCFFoMAAAAItV5IsCi03ki1BQ/9LZXeDrBdnu2V3gjUX4UItNDIsRi00Mi4KMAQAA/9BQjU3wUYtVCIsCi00Ii5CMAQAA/9JQ6CoAAACDxAjZReDe2d/g9sRBdQnHRdwBAAAA6wfHRdwAAAAAikXci+VdwwAAAABVi+yD7BSLRQjZQASLTQzYYQTZXfTZRfRR2Rwki1UI2QKLRQzYINld8NlF8FHZHCSNTfjoVwAAANlF+NhN+NlF/NhN/N7B2V3s2UXsUdkcJOgHAAAAg8QEi+Vdw1WL7FHZRQjZHCToBQAAAIPEBF3DVYvsUdlFCIPsCN0cJOgr/v//g8QI2V382UX8i+Vdw1WL7FGJTfyLRfzZRQjZGItN/NlFDNlZBItF/IvlXcIIAA==</compiledString>
 					<returnType>bool</returnType>
-					<sString>d(sPos, rPos) &lt;talconst("Vedun_A0", "A0_TreesSearchRadius")</sString>
+					<sString>d(sPos, rPos) &lt;talconst("WitchDoctor_A0", "A0_TreesSearchRadius")</sString>
 				</enabled>
 				<flags>0</flags>
 				<formulaName></formulaName>
@@ -331,9 +331,9 @@
 				<LoggingEvent>-1</LoggingEvent>
 				<modifier>
 					<addValue>
-						<compiledString>FRMAAAABAAAAHwAAAEV2aWxUcmVlQ2F0Y2hSYW5nZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<compiledString>FRYAAAABAAAAIgAAAEE0X0V2aWxUcmVlQ2F0Y2hSYW5nZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
 						<returnType>float</returnType>
-						<sString>cEvilTreeCatchRange</sString>
+						<sString>cA4_EvilTreeCatchRange</sString>
 					</addValue>
 					<multValue>
 						<compiledString></compiledString>
@@ -379,6 +379,88 @@
 				<talents />
 				<useListAs>ListAsRule</useListAs>
 			</FlagsApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/WitchDoctor/SummonEvilTreeAppl.APLR" id="9047A54E-9505-4DE5-8D7C-759CC9A5CD52">
+			<SpellPeriodicallyApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>144</behaviorFlags>
+				<caption>Убиваем дерево, если не осталось маны</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAABAAAAEwAAAFWL7FGLRQyLEItNDItCBP/Q3B01AAAA3+D2xAV6CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAA8D8=</compiledString>
+					<returnType>bool</returnType>
+					<sString>rEnergy &lt; 1</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<period>
+					<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+					<returnType>float</returnType>
+					<sString>0</sString>
+				</period>
+				<providerName></providerName>
+				<scaleMode>ScaleIsCount</scaleMode>
+				<spell href="/Items/Talents/Class/WitchDoctor/SummonEvilTreeAppl.APLR" id="9AA8F68F-472B-4665-ACA2-4AAEAEC2580A">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Class/WitchDoctor/SummonEvilTreeAppl.APLR" id="750FB98A-7D7A-4EFC-B7E0-EB4805C3E04B">
+								<KillApplicator>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<caption>Убить</caption>
+									<dontGiveRewards>true</dontGiveRewards>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<flag>None</flag>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+								</KillApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Class/WitchDoctor/SummonEvilTreeAppl.APLR" id="39CECB0C-390F-4D9A-8BE7-CE76611797F2">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<startOffset>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</startOffset>
+				<targetSelector href="" />
+			</SpellPeriodicallyApplicator>
 		</Item>
 	</applicators>
 	<applyTarget>AbilityOwner</applyTarget>

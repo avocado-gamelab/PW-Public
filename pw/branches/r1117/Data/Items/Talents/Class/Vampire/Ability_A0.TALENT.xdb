@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Vampire.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Vampire_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Vampire_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Vampire.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Vampire_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Vampire_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Vampire/Duel_Asp.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Vampire/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Vampire/Duel_Str.TALENTSET" Count="1" />
@@ -42,8 +42,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Vampire/Ability_A0.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Vampire/Ability_A0.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Vampire/Ability_A0.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Vampire/Ability_A0.TALENT" id="6DE5A1A4-FC49-410A-9574-EF292FB7803A">
 			<ConditionFormula>
@@ -60,18 +60,9 @@
 	<constants href="/Items/Talents/Class/Vampire/Ability_A0.TALENT" id="F995D082-74E7-49CE-AFCE-46CD254BF41B">
 		<UnitConstantsContainer>
 			<vars>
+				<Item href="/Items/Talents/Class/Vampire/const_A0_BaseLifeDrainPercent" />
 				<Item href="/Items/Talents/Class/Vampire/const_A0_LifeDrainPercent" />
 				<Item href="/Items/Talents/Class/Vampire/const_A0_TerrainLifeCostModifier" />
-				<Item href="/Items/Talents/Class/Vampire/Ability_A0.TALENT" id="25A1E8F5-C3DC-4E72-87A9-9F55C4DD3E66">
-					<UnitConstant>
-						<name>A0_TT_TerrainLifeCostDecreasePercent</name>
-						<var>
-							<compiledString>FRsAAAACAAAAKAAAADsAAABBMF9UZXJyYWluTGlmZUNvc3RNb2RpZmllcgBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcDUkAAADZXfzZRfyL5V3DAAAAAAAAWUA=</compiledString>
-							<returnType>float</returnType>
-							<sString>cA0_TerrainLifeCostModifier * 100</sString>
-						</var>
-					</UnitConstant>
-				</Item>
 				<Item href="/Items/Talents/Class/Vampire/Ability_A0.TALENT" id="72619F54-B89E-4DC9-827C-3B455EA22969">
 					<UnitConstant>
 						<name>EnergyPercent</name>
@@ -82,26 +73,18 @@
 						</var>
 					</UnitConstant>
 				</Item>
-				<Item href="/Items/Talents/Class/Vampire/Ability_A0.TALENT" id="86A80417-A759-4F92-B6F0-F0AC16991AE1">
+				<Item href="/Items/Talents/Class/Vampire/Ability_A0.TALENT" id="DFFE43F8-E7F9-46ED-8F88-F5C872BCF796">
 					<UnitConstant>
-						<name>A0_LifeDrainPercentNight</name>
+						<name>EnemyHealthThresholdForVisionPercent</name>
 						<var>
-							<compiledString>FR8AAAADAAAAJgAAAD8AAACBAAAAVmFtcGlyZV9BMF9TVVAAAFZhbXBpcmVfQTBfU1VQAFWL7IPsEGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+/fZG8n32YPBAYlN9NtF9NwNjwAAANld8NlF8IvlXcMAAAAAAAAUQA==</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQQ==</compiledString>
 							<returnType>float</returnType>
-							<sString>(tal("Vampire_A0_SUP") ? 2 : 1) * 5.0f</sString>
+							<sString>30</sString>
 						</var>
 					</UnitConstant>
 				</Item>
-				<Item href="/Items/Talents/Class/Vampire/Ability_A0.TALENT" id="5A1DEF5B-7D35-4352-976B-67FC7DFCFBC8">
-					<UnitConstant>
-						<name>A0_LifeDrainPercentTT</name>
-						<var>
-							<compiledString>FR8AAAAEAAAAJgAAAD8AAAB2AAAAiQAAAFZhbXBpcmVfQTBfU1VQAABWYW1waXJlX0EwX1NVUABVi+yD7BRoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQL3QWnAAAA3V3w6wXZ6N1d8N1F8NwNlwAAANld7NlF7IvlXcMAAAAAAAAqQAAAAAAAAPA/zczMzMzM/D8=</compiledString>
-							<returnType>float</returnType>
-							<sString>(tal("Vampire_A0_SUP") ? 1.8 : 1) * 13.0f</sString>
-						</var>
-					</UnitConstant>
-				</Item>
+				<Item href="/Items/Talents/Class/Vampire/const_A0_SUP_LifeDrainMultiplier" />
+				<Item href="/Items/Talents/Class/Vampire/const_A0_SUP_AdditionalLifeDrainPercent" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -123,7 +106,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Vampire/A0.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -191,6 +174,151 @@
 			</StatModApplicator>
 		</Item>
 		<Item href="/Heroes/DefaultStatus/_ManalessHero.APLR" />
+		<Item href="/Items/Talents/Class/Vampire/Ability_A0.TALENT" id="7E1EBD0C-528E-4B0A-AE12-AD135779FDB1">
+			<AuraApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Class/Vampire/Ability_A0.TALENT" id="64500648-B232-47C7-8700-6D2509AA1F5E">
+						<StatusApplicator>
+							<applicators>
+								<Item href="/Items/Talents/Class/Vampire/Ability_A0.TALENT" id="41441341-D313-4CE3-A205-C426ECF889A1">
+									<EyeApplicator>
+										<applyTarget>ApplicatorTarget</applyTarget>
+										<behaviorFlags>1</behaviorFlags>
+										<cancelObstacles>false</cancelObstacles>
+										<caption>Открываем область вокруг цели</caption>
+										<effect>
+											<Item href="" />
+											<Item href="" />
+										</effect>
+										<enabled>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</enabled>
+										<eyeTarget>ApplicatorTarget</eyeTarget>
+										<flags>8</flags>
+										<formulaName></formulaName>
+										<lifeTime>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>-1.0</sString>
+										</lifeTime>
+										<LoggingEvent>-1</LoggingEvent>
+										<providerName></providerName>
+										<startCondition>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</startCondition>
+										<visRange>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>1.0f</sString>
+										</visRange>
+									</EyeApplicator>
+								</Item>
+							</applicators>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>3</behaviorFlags>
+							<caption>Статус, что Вампир видит цель</caption>
+							<customCounter>
+								<compiledString></compiledString>
+								<returnType>int</returnType>
+								<sString>0</sString>
+							</customCounter>
+							<customProgress>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</customProgress>
+							<description textref="/Items/Talents/Class/Vampire/Ability_A0.TALENT_64500648b23247c787006d2509aa1f5e_description.txt" />
+							<dispellPriority>NonDispellable</dispellPriority>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString>FSUAAAACAAAAUAAAAGkAAABFbmVteUhlYWx0aFRocmVzaG9sZEZvclZpc2lvblBlcmNlbnQAVYvsg+wUi0UMixCLTQyLAv/Qi00MixGLTQyLQgzdXfj/0ItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d8P/Q3E3w3A2OAAAA3F343+D2xEF1CcdF7AEAAADrB8dF7AAAAACKReyL5V3DexSuR+F6hD8=</compiledString>
+								<returnType>bool</returnType>
+								<sString>rLife &lt; rMaxLife * cEnemyHealthThresholdForVisionPercent * 0.01</sString>
+							</enabled>
+							<flags>0</flags>
+							<formulaName>VampireEnemyVision</formulaName>
+							<image href="/UI/Styles/Icons/Heroes/Vampire/A0.ITEX" />
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<name textref="/Items/Talents/Class/Vampire/Ability_A0.TALENT_64500648b23247c787006d2509aa1f5e_name.txt" />
+							<power>0</power>
+							<providerName></providerName>
+							<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+							<stackCount>0</stackCount>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<statusPosition>0</statusPosition>
+							<stopBehaviour>StopByTime</stopBehaviour>
+							<unstackableWith href="" />
+						</StatusApplicator>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Аура вижена врагов без хп ночью</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLgpAAAAD/0F3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>mIsNight</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<range>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DADwcRg==</compiledString>
+					<returnType>float</returnType>
+					<sString>9999</sString>
+				</range>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<targets>570425347</targets>
+				<targetSelector href="/Items/Talents/Class/Vampire/Ability_A0.TALENT" id="1A8EBF36-C17D-4BBE-80F8-2DC08711DD6C">
+					<ConditionTargetSelector>
+						<condition>
+							<compiledString>FSUAAAACAAAAUAAAAGkAAABFbmVteUhlYWx0aFRocmVzaG9sZEZvclZpc2lvblBlcmNlbnQAVYvsg+wUi0UMixCLTQyLAv/Qi00MixGLTQyLQgzdXfj/0ItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d8P/Q3E3w3A2OAAAA3F343+D2xEF1CcdF7AEAAADrB8dF7AAAAACKReyL5V3DexSuR+F6hD8=</compiledString>
+							<returnType>bool</returnType>
+							<sString>rLife &lt; rMaxLife * cEnemyHealthThresholdForVisionPercent * 0.01</sString>
+						</condition>
+						<flags>0</flags>
+						<mode>Normal</mode>
+						<targetSelector href="/Items/Talents/Class/Vampire/Ability_A0.TALENT" id="32B3B1AF-27BC-408A-8781-12696557E697">
+							<HeroEnumerator>
+								<flags>0</flags>
+								<mode>Normal</mode>
+								<targetFilter>536870915</targetFilter>
+							</HeroEnumerator>
+						</targetSelector>
+					</ConditionTargetSelector>
+				</targetSelector>
+				<type>Enemy</type>
+			</AuraApplicator>
+		</Item>
 	</passiveApplicators>
 	<persistentId>Vampire_A0</persistentId>
 	<prerequisiteTalents />

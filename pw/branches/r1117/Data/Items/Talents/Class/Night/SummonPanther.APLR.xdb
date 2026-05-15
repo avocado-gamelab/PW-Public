@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <SummonApplicator>
 	<BackLink DBID="/Items/Talents/Class/Night/A0Trigger.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Night/Ability0.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Night/Ability4.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Night/Ability_A0.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Night/Ability_A4.TALENT" Count="1" />
 	<applicators>
 		<Item href="/Items/Talents/Class/Night/status_techPantersIsAlive.APLR" />
 		<Item href="/Items/Talents/Class/Night/SummonPanther.APLR" id="16E6DAA4-C1C6-4E17-8216-247F1D549298">
@@ -331,6 +331,36 @@
 				<statModName></statModName>
 			</StatModApplicator>
 		</Item>
+		<Item href="/Items/Talents/Class/Night/SummonPanther.APLR" id="00971C8A-91DA-447D-BA76-CCF5EFC8F1E2">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Не действуют топоры</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>Immune2Axe</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
 	</applicators>
 	<applyTarget>ApplicatorTarget</applyTarget>
 	<behaviour href="/Items/Talents/Class/Night/PantherBehaviour" />
@@ -379,9 +409,9 @@
 			<sString>-1</sString>
 		</energy>
 		<life>
-			<compiledString>FR0AAAABAAAAKQAAAFBhbnRoZXJIZWFsX3BlcmNlbnRPZk1heExpZmUAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+			<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
 			<returnType>float</returnType>
-			<sString>cPantherHeal_percentOfMaxLife</sString>
+			<sString>-1; //cPantherHeal_percentOfMaxLife</sString>
 		</life>
 	</spawnStats>
 	<summonedUnitIndex>

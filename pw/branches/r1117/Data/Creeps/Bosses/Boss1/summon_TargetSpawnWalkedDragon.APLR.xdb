@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SummonApplicator>
+	<BackLink DBID="/Items/Consumables/DragonEgg.ARCT" Count="1" />
+	<applicators>
+		<Item href="/Creeps/Bosses/Boss1/summon_TargetSpawnWalkedDragon.APLR" id="270C8D50-ED2F-4588-89EF-65195AFA9E56">
+			<ProgramApplicator>
+				<applicators>
+					<Item>
+						<applicator href="/Creeps/Bosses/Boss1/summon_TargetSpawnWalkedDragon.APLR" id="8C8E5EA1-A56A-425E-8CA0-6490FC9B89EB">
+							<StatModApplicator>
+								<applyTarget>ApplicatorTarget</applyTarget>
+								<behaviorFlags>0</behaviorFlags>
+								<caption>- Boss_Dragon</caption>
+								<constraint>None</constraint>
+								<dontUpdate>false</dontUpdate>
+								<effect>
+									<Item href="" />
+									<Item href="" />
+								</effect>
+								<enabled>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</enabled>
+								<formulaName></formulaName>
+								<lifeTime>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>-1.0</sString>
+								</lifeTime>
+								<LoggingEvent>-1</LoggingEvent>
+								<modifier>
+									<addValue>
+										<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+										<returnType>float</returnType>
+										<sString>1</sString>
+									</addValue>
+									<multValue>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>1.0f</sString>
+									</multValue>
+									<stat>Life</stat>
+									<topModifier>false</topModifier>
+									<variable>Boss_Dragon</variable>
+								</modifier>
+								<providerName></providerName>
+								<startCondition>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</startCondition>
+								<statModName></statModName>
+							</StatModApplicator>
+						</applicator>
+						<continueCondition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>2</continueEvents>
+						<delay>
+							<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>0</sString>
+						</delay>
+						<stopCondition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+					<Item>
+						<applicator href="/Creeps/Bosses/Boss1/summon_TargetSpawnWalkedDragon.APLR" id="F8CB5EAA-A1E1-4020-80F2-E71B51F4E503">
+							<KillApplicator>
+								<applyTarget>ApplicatorTarget</applyTarget>
+								<caption>- Убиваем саммона с переменной Boss_Dragon, чтобы возродить Ходячего Дракона, ухахаха</caption>
+								<dontGiveRewards>false</dontGiveRewards>
+								<enabled>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</enabled>
+								<flag>None</flag>
+								<formulaName></formulaName>
+								<LoggingEvent>-1</LoggingEvent>
+								<providerName></providerName>
+							</KillApplicator>
+						</applicator>
+						<continueCondition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>2</continueEvents>
+						<delay>
+							<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>0</sString>
+						</delay>
+						<stopCondition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>- Программа возрождения Ходячего Дракона через жертвоприношение саммона</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+			</ProgramApplicator>
+		</Item>
+	</applicators>
+	<applyTarget>AbilityOwner</applyTarget>
+	<behaviour href="" />
+	<caption>- Саммон от которого спавнится Ходячий Дракон</caption>
+	<enabled>
+		<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+		<returnType>bool</returnType>
+		<sString>true;</sString>
+	</enabled>
+	<flags>129</flags>
+	<formulaName></formulaName>
+	<lifeTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+		<returnType>float</returnType>
+		<sString>-1</sString>
+	</lifeTime>
+	<LoggingEvent>-1</LoggingEvent>
+	<openWarFog>true</openWarFog>
+	<placeMode>ByTargetSelector</placeMode>
+	<placeSelector href="/Creeps/Bosses/Boss1/summon_TargetSpawnWalkedDragon.APLR" id="87279830-FC97-4428-8335-2151CB852C04">
+		<UnitPlaceCorrector>
+			<checkByRangeToRequester>false</checkByRangeToRequester>
+			<checkLineOfSight>false</checkLineOfSight>
+			<nativeTerrainOnly>true</nativeTerrainOnly>
+			<passabilityCheckMode>7</passabilityCheckMode>
+			<radius>5</radius>
+			<targetSelector href="/Creeps/Bosses/Boss1/summon_TargetSpawnWalkedDragon.APLR" id="E51008FA-F26D-4E42-959B-3C9C9D4BA455">
+				<SelectApplicatorTarget>
+					<applicatorIndex>0</applicatorIndex>
+					<applicatorName></applicatorName>
+					<namedApplicatorTarget>ApplicatorTarget</namedApplicatorTarget>
+					<selectTarget>AbilityTarget</selectTarget>
+				</SelectApplicatorTarget>
+			</targetSelector>
+		</UnitPlaceCorrector>
+	</placeSelector>
+	<providerName></providerName>
+	<spawnStats>
+		<energy>
+			<compiledString></compiledString>
+			<returnType>float</returnType>
+			<sString>-1.0</sString>
+		</energy>
+		<life>
+			<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAEAcRg==</compiledString>
+			<returnType>float</returnType>
+			<sString>10000</sString>
+		</life>
+	</spawnStats>
+	<summonedUnitIndex>
+		<compiledString></compiledString>
+		<returnType>int</returnType>
+		<sString>0</sString>
+	</summonedUnitIndex>
+	<summonedUnits>
+		<Item href="/Creeps/Bosses/Boss1/summon_TargetSpawnWalkedDragon.APLR" id="7A01A99F-2D4A-4DAA-A8D5-491EA941DD93">
+			<Summoned>
+				<abilities>
+					<Item href="" />
+					<Item href="" />
+					<Item href="" />
+					<Item href="" />
+					<Item href="" />
+				</abilities>
+				<attackAbility href="/Creeps/Bosses/Boss1/summon_TargetSpawnWalkedDragon.APLR" id="9803468A-0A74-40D3-A847-02FF369A2B98">
+					<BaseAttack>
+						<activeCustomTrigger>true</activeCustomTrigger>
+						<allowChase>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</allowChase>
+						<alternativeTargets />
+						<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+						<aoeHeight>0</aoeHeight>
+						<aoeMaterial href="" />
+						<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+						<aoeSize>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</aoeSize>
+						<aoeType>None</aoeType>
+						<applicators />
+						<autoTargetSelector href="" />
+						<caption></caption>
+						<castAllowRange>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</castAllowRange>
+						<castLimitations />
+						<commonDescription textref="" />
+						<compiledDescriptionA textref="" />
+						<compiledDescriptionB textref="" />
+						<conditionFormulas />
+						<constants href="" />
+						<cooldownTime>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</cooldownTime>
+						<cooldownTimeSecondState>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</cooldownTimeSecondState>
+						<description textref="" />
+						<dispatch href="" />
+						<flags>1</flags>
+						<image href="" />
+						<imageSecondState href="" />
+						<isMelee>false</isMelee>
+						<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+						<manaCost>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</manaCost>
+						<marker></marker>
+						<microAI href="" />
+						<minUseRangeCorrection>0</minUseRangeCorrection>
+						<name textref="" />
+						<node></node>
+						<passiveApplicators>
+							<Item href="/Creeps/Bosses/Boss1/summon_TargetSpawnWalkedDragon.APLR" id="3C224B00-917B-4C2F-9F96-6B383D969DAA">
+								<FlagsApplicator>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<behaviorFlags>0</behaviorFlags>
+									<caption>- Запреты и невидимость</caption>
+									<consumables />
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<flag>71962623</flag>
+									<formulaName></formulaName>
+									<lifeTime>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+									<startCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</startCondition>
+									<talents />
+									<useListAs>ListAsRule</useListAs>
+								</FlagsApplicator>
+							</Item>
+						</passiveApplicators>
+						<requireLineOfSight>true</requireLineOfSight>
+						<shortDescription textref="" />
+						<targetType>136258047</targetType>
+						<type>Passive</type>
+						<useRange>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</useRange>
+						<useRangeMaterial href="" />
+						<warFogRemoveRadius>0</warFogRemoveRadius>
+						<warFogRemoveTime>0</warFogRemoveTime>
+					</BaseAttack>
+				</attackAbility>
+				<collision>
+					<x1>0</x1>
+					<x2>0</x2>
+					<y1>0</y1>
+					<y2>0</y2>
+				</collision>
+				<creepSkins />
+				<deathParameters href="/Creeps/Bosses/Boss1/summon_TargetSpawnWalkedDragon.APLR" id="D5B1DF28-A373-4800-955E-4B62E2EFAD49">
+					<UnitDeathParameters>
+						<deathTime>5</deathTime>
+						<effect href="" />
+						<effectOffset>0.5</effectOffset>
+						<fallOffset>4.5</fallOffset>
+						<fallSpeed>0.5</fallSpeed>
+						<observeOffset>5</observeOffset>
+						<unsummonTime>0.5</unsummonTime>
+					</UnitDeathParameters>
+				</deathParameters>
+				<description textref="" />
+				<heightObject>false</heightObject>
+				<image href="/UI/Textures_default/FrameTest.ITEX" />
+				<interaction href="" />
+				<lockMask>
+					<mask />
+					<tileSize>0.5</tileSize>
+				</lockMask>
+				<minimapIcon>None</minimapIcon>
+				<minLockScale>0</minLockScale>
+				<nativeAttack>Material</nativeAttack>
+				<nativeDefence>Material</nativeDefence>
+				<normalLevelling>0</normalLevelling>
+				<overtipBarsWidth>0</overtipBarsWidth>
+				<overtipVerticalOffset>0</overtipVerticalOffset>
+				<pathFindingSteps>1</pathFindingSteps>
+				<recolor>
+					<A>0</A>
+					<B>0</B>
+					<G>0</G>
+					<R>0</R>
+				</recolor>
+				<rounded>false</rounded>
+				<sceneObject href="/Summons/Fake/_.SOBJ" />
+				<selectionAoe>
+					<Item href="" />
+					<Item href="" />
+				</selectionAoe>
+				<size>1</size>
+				<sizeDynamic>-1</sizeDynamic>
+				<stats href="/Creeps/Bosses/Boss1/summon_TargetSpawnWalkedDragon.APLR" id="0578415B-8878-4CF1-AFF7-7A3C761E7650">
+					<StatsContainer>
+						<stats>
+							<Item>
+								<calcIncrement>0</calcIncrement>
+								<calcValue>0</calcValue>
+								<increment>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>0.0f</sString>
+								</increment>
+								<levelUpgrades />
+								<statId>Life</statId>
+								<value>
+									<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAEAcRg==</compiledString>
+									<returnType>float</returnType>
+									<sString>10000</sString>
+								</value>
+							</Item>
+							<Item>
+								<calcIncrement>0</calcIncrement>
+								<calcValue>0</calcValue>
+								<increment>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>0.0f</sString>
+								</increment>
+								<levelUpgrades />
+								<statId>NaftaForKill</statId>
+								<value>
+									<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+									<returnType>float</returnType>
+									<sString>1</sString>
+								</value>
+							</Item>
+							<Item>
+								<calcIncrement>0</calcIncrement>
+								<calcValue>0</calcValue>
+								<increment>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>0.0f</sString>
+								</increment>
+								<levelUpgrades />
+								<statId>TeamNaftaForKill</statId>
+								<value>
+									<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+									<returnType>float</returnType>
+									<sString>1</sString>
+								</value>
+							</Item>
+							<Item>
+								<calcIncrement>0</calcIncrement>
+								<calcValue>0</calcValue>
+								<increment>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>0.0f</sString>
+								</increment>
+								<levelUpgrades />
+								<statId>Level</statId>
+								<value>
+									<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+									<returnType>float</returnType>
+									<sString>1</sString>
+								</value>
+							</Item>
+							<Item>
+								<calcIncrement>0</calcIncrement>
+								<calcValue>0</calcValue>
+								<increment>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>0.0f</sString>
+								</increment>
+								<levelUpgrades />
+								<statId>NaftaForAssist</statId>
+								<value>
+									<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+									<returnType>float</returnType>
+									<sString>1</sString>
+								</value>
+							</Item>
+							<Item>
+								<calcIncrement>0</calcIncrement>
+								<calcValue>0</calcValue>
+								<increment>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>0.0f</sString>
+								</increment>
+								<levelUpgrades />
+								<statId>NaftaSpecForKill</statId>
+								<value>
+									<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+									<returnType>float</returnType>
+									<sString>1</sString>
+								</value>
+							</Item>
+							<Item>
+								<calcIncrement>0</calcIncrement>
+								<calcValue>0</calcValue>
+								<increment>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>0.0f</sString>
+								</increment>
+								<levelUpgrades />
+								<statId>TeamNaftaForPresence</statId>
+								<value>
+									<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+									<returnType>float</returnType>
+									<sString>1</sString>
+								</value>
+							</Item>
+						</stats>
+					</StatsContainer>
+				</stats>
+				<targetingParams href="" />
+			</Summoned>
+		</Item>
+	</summonedUnits>
+	<summonedUnitsCount>
+		<compiledString></compiledString>
+		<returnType>int</returnType>
+		<sString>1</sString>
+	</summonedUnitsCount>
+	<summonGroupName></summonGroupName>
+	<summonSource>ByApplicator</summonSource>
+	<takeModDmg>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</takeModDmg>
+	<takeTypeUnit>1024</takeTypeUnit>
+	<unsummonSortCriterion>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</unsummonSortCriterion>
+</SummonApplicator>

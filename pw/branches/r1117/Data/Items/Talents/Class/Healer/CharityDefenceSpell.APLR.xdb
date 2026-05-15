@@ -1,13 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <SpellProbabilityApplicator>
 	<BackLink DBID="/Items/Talents/Class/Healer/A4HealSpell.SPLL" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Healer/Ability1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/A4PeriodSpell.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/AreaHeal.APLR" Count="4" />
+	<BackLink DBID="/Items/Talents/Class/Healer/CharityDefenceSpell_AoE.APLR" Count="2" />
 	<applyTarget>ApplicatorTarget</applyTarget>
 	<caption>положить Защиту</caption>
 	<enabled>
-		<compiledString>FRYAAAACAAAAHQAAADYAAABIZWFsZXJfQTIAAABIZWFsZXJfQTIAVYvsg+wMaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgMAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0EYtVCDtVDHQJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+		<compiledString>FRYAAAACAAAAHQAAADYAAABIZWFsZXJfQTIAAABIZWFsZXJfQTIAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgMAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCKRfuL5V3D</compiledString>
 		<returnType>bool</returnType>
-		<sString>tal("Healer_A2") &amp;&amp; pFirst != pSecond</sString>
+		<sString>tal("Healer_A2")</sString>
 	</enabled>
 	<formulaName></formulaName>
 	<LoggingEvent>-1</LoggingEvent>

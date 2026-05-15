@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StatsContainer parent="/Creeps/DefaultStats/PvP/Faction_Melee.STCN">
+	<BackLink DBID="/Creeps/A/Melee1/PvP_MidOnly.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/B/Melee1/PvP_MidOnly.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/DefaultStats/PvP/Faction_MegaMelee_MidOnly.STCN" Count="1" />
+	<BackLink DBID="/Creeps/A/Melee2/PvP_MidOnly.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/B/Melee2/PVP_MidOnly.CREEP" Count="1" />
+	<stats>
+		<Item>
+			<increment>
+				<compiledString>FRIAAAACAAAAHwAAADIAAABNaWRPbmx5U3BlZWRDb2VmZgBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcDUAAAADZXfzZRfyL5V3DAAAAAAAAQkA=</compiledString>
+				<returnType>float</returnType>
+				<sString>36 * cMidOnlySpeedCoeff</sString>
+			</increment>
+			<value>
+				<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACQQw==</compiledString>
+				<returnType>float</returnType>
+				<sString>288</sString>
+			</value>
+		</Item>
+		<Item>
+			<increment>
+				<compiledString>FRIAAAACAAAAHwAAADIAAABNaWRPbmx5U3BlZWRDb2VmZgBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcDUAAAADZXfzZRfyL5V3DH4XrUbge5T8=</compiledString>
+				<returnType>float</returnType>
+				<sString>0.66 * cMidOnlySpeedCoeff</sString>
+			</increment>
+		</Item>
+		<Item skip="1" />
+		<Item skip="1" />
+		<Item skip="1" />
+		<Item>
+			<value>
+				<compiledString>FRIAAAACAAAAHwAAADIAAABNaWRPbmx5U3BlZWRDb2VmZgBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcDUAAAADZXfzZRfyL5V3DAAAAAAAALkA=</compiledString>
+				<returnType>float</returnType>
+				<sString>15 * cMidOnlySpeedCoeff</sString>
+			</value>
+		</Item>
+		<Item skip="1" />
+		<Item skip="1" />
+		<Item skip="1" />
+	</stats>
+</StatsContainer>

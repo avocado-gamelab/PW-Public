@@ -6,7 +6,7 @@
 	<BackLink DBID="/Items/Talents/Class/Monster/Ability_A1.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/PlagueDoctor/Ability_A1.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A2.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Wendigo/Ability1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Wendigo/Ability_A1.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/WraithKing/Ability_A1.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/appl_G766_RefreshAndNotify.APLR" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/trigger_G766_RefreshAndNotify.APLR" Count="1" />
@@ -28,67 +28,273 @@
 				<providerName></providerName>
 				<reduceByPercent>false</reduceByPercent>
 				<reductionAmount>
-					<compiledString></compiledString>
+					<compiledString>FRAAAAACAAAAFQAAADUAAABHNzY2AAAAAENERmluYWwAVYvsUWgAAAAAi0UIixCLTQiLgqgBAAD/0IlF/ItNDFGLVQhSaAgAAACLRfyLEItN/ItCUP/Qi+Vdww==</compiledString>
 					<returnType>float</returnType>
-					<sString>-1.0f</sString>
+					<sString>pFirst-&gt;GetTalent("G766")-&gt;GetConstant("CDFinal", pFirst, pSecond)</sString>
 				</reductionAmount>
 				<refreshThis>true</refreshThis>
 				<talents />
 				<useListAs>ListAsRule</useListAs>
 			</RefreshCooldownApplicator>
 		</Item>
-		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/spell_G766_RefreshAndNotify.SPLL" id="9B659836-E790-4315-B4D6-3D7541D87F2B">
-			<HealApplicator>
-				<amount>
-					<compiledString>FRgAAAACAAAAHQAAAD0AAABHNzY2AAAAAEc3NjhfSGVhbEFtb3VudABVi+xRaAAAAACLRQiLEItNCIuCqAEAAP/QiUX8i00MUYtVCFJoCAAAAItF/IsQi038i0JQ/9CL5V3D</compiledString>
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/spell_G766_RefreshAndNotify.SPLL" id="0F21F85D-D0DB-49C7-8361-2FEF67E45DBA">
+			<StatusApplicator>
+				<applicators>
+					<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/spell_G766_RefreshAndNotify.SPLL" id="B3CC4549-FD9E-4D6B-AB40-E5F7D8B3266C">
+						<StatModApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption>Add_MaterialDamageDecrease</caption>
+							<constraint>None</constraint>
+							<dontUpdate>false</dontUpdate>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<modifier>
+								<addValue>
+									<compiledString>FRcAAAACAAAAHAAAADwAAABHNzY2AAAAAERhbWFnZURlY3JlYXNlAFWL7FFoAAAAAItFCIsQi00Ii4KoAQAA/9CJRfyLTQxRi1UIUmgIAAAAi0X8ixCLTfyLQlD/0IvlXcM=</compiledString>
+									<returnType>float</returnType>
+									<sString>pFirst-&gt;GetTalent("G766")-&gt;GetConstant("DamageDecrease", pFirst, pSecond)</sString>
+								</addValue>
+								<multValue>
+									<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+									<returnType>float</returnType>
+									<sString>1.0f</sString>
+								</multValue>
+								<stat>MaterialDamageDecrease</stat>
+								<topModifier>false</topModifier>
+								<variable></variable>
+							</modifier>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<statModName></statModName>
+						</StatModApplicator>
+					</Item>
+					<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/spell_G766_RefreshAndNotify.SPLL" id="489029E1-D12F-4287-98E9-C7C206AC811B">
+						<StatModApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption>Add_EnergyDamageDecrease</caption>
+							<constraint>None</constraint>
+							<dontUpdate>false</dontUpdate>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<modifier>
+								<addValue>
+									<compiledString>FRcAAAACAAAAHAAAADwAAABHNzY2AAAAAERhbWFnZURlY3JlYXNlAFWL7FFoAAAAAItFCIsQi00Ii4KoAQAA/9CJRfyLTQxRi1UIUmgIAAAAi0X8ixCLTfyLQlD/0IvlXcM=</compiledString>
+									<returnType>float</returnType>
+									<sString>pFirst-&gt;GetTalent("G766")-&gt;GetConstant("DamageDecrease", pFirst, pSecond)</sString>
+								</addValue>
+								<multValue>
+									<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+									<returnType>float</returnType>
+									<sString>1.0f</sString>
+								</multValue>
+								<stat>EnergyDamageDecrease</stat>
+								<topModifier>false</topModifier>
+								<variable></variable>
+							</modifier>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<statModName></statModName>
+						</StatModApplicator>
+					</Item>
+				</applicators>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>2</behaviorFlags>
+				<caption>Снижение урона</caption>
+				<customCounter>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</customCounter>
+				<customProgress>
+					<compiledString></compiledString>
 					<returnType>float</returnType>
-					<sString>pFirst-&gt;GetTalent("G766")-&gt;GetConstant("G768_HealAmount", pFirst, pSecond)</sString>
-				</amount>
-				<applyTarget>ApplicatorTarget</applyTarget>
-				<caption>heal if applicable</caption>
+					<sString>-1.0</sString>
+				</customProgress>
+				<description textref="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/spell_G766_RefreshAndNotify.SPLL_0f21f85dd0db49c783612fef67e45dba_description.txt" />
+				<dispellPriority>Medium</dispellPriority>
+				<effect>
+					<Item href="/Effects/Buffs/Defence/_Prime.EFFT" />
+					<Item href="" />
+				</effect>
 				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flags>64</flags>
+				<formulaName></formulaName>
+				<image href="/UI/Styles/Icons/Talents/_766.ITEX" />
+				<lifeTime>
+					<compiledString>FR8AAAACAAAAJAAAAEQAAABHNzY2AAAAAERhbWFnZURlY3JlYXNlRHVyYXRpb24AVYvsUWgAAAAAi0UIixCLTQiLgqgBAAD/0IlF/ItNDFGLVQhSaAgAAACLRfyLEItN/ItCUP/Qi+Vdww==</compiledString>
+					<returnType>float</returnType>
+					<sString>pFirst-&gt;GetTalent("G766")-&gt;GetConstant("DamageDecreaseDuration", pFirst, pSecond)</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<name textref="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/spell_G766_RefreshAndNotify.SPLL_0f21f85dd0db49c783612fef67e45dba_name.txt" />
+				<power>0</power>
+				<providerName></providerName>
+				<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+				<stackCount>0</stackCount>
+				<startCondition>
 					<compiledString>FQwAAAACAAAAEQAAACcAAABHNzY4X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
 					<returnType>bool</returnType>
 					<sString>sender.vG768_Active &gt; 0</sString>
-				</enabled>
-				<formulaName></formulaName>
-				<healTarget>Health</healTarget>
-				<ignoreHealingMods>false</ignoreHealingMods>
-				<LoggingEvent>-1</LoggingEvent>
-				<providerName></providerName>
-				<uiEvent href="/UI/Events/CommonEvents/EventHeal.UIEV" />
-			</HealApplicator>
+				</startCondition>
+				<statusPosition>0</statusPosition>
+				<stopBehaviour>StopByTime</stopBehaviour>
+				<unstackableWith href="" />
+			</StatusApplicator>
 		</Item>
-		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/spell_G766_RefreshAndNotify.SPLL" id="76130EAA-4604-437B-BF5C-07513969B2C1">
-			<HealApplicator>
-				<amount>
-					<compiledString>FR8AAAADAAAAJgAAAEYAAABpAAAARzc2NgAAAABHNzY3X01hbmFSZWZ1bmRQZXJjZW50AFWL7IPsEGgAAAAAi0UIixCLTQiLgqgBAAD/0IlF/ItNDFGLVQhSaAgAAACLRfyLEItN/ItCUP/Qi00QixGLTRCLQhjdXfT/0NwNegAAANxN9Nld8NlF8IvlXcMAAABA4XqEPw==</compiledString>
-					<returnType>float</returnType>
-					<sString>pMisc-&gt;GetManaCost() * 0.01f * pFirst-&gt;GetTalent("G766")-&gt;GetConstant("G767_ManaRefundPercent", pFirst, pSecond)</sString>
-				</amount>
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/spell_G766_RefreshAndNotify.SPLL" id="B7945457-4E7D-4207-8500-38A9707922C3">
+			<RefreshCooldownApplicator>
+				<allowCdIncrease>true</allowCdIncrease>
 				<applyTarget>ApplicatorTarget</applyTarget>
-				<caption>refund mana if applicable</caption>
+				<caption>КД за триггер на себя</caption>
 				<enabled>
-					<compiledString>FQwAAAACAAAAEQAAACcAAABHNzY3X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<compiledString></compiledString>
 					<returnType>bool</returnType>
-					<sString>sender.vG767_Active &gt; 0</sString>
+					<sString>true</sString>
 				</enabled>
+				<flags>128</flags>
 				<formulaName></formulaName>
-				<healTarget>Energy</healTarget>
-				<ignoreHealingMods>false</ignoreHealingMods>
 				<LoggingEvent>-1</LoggingEvent>
 				<providerName></providerName>
-				<uiEvent href="/UI/Events/CommonEvents/EventEnergy.UIEV" />
-			</HealApplicator>
+				<reduceByPercent>false</reduceByPercent>
+				<reductionAmount>
+					<compiledString>FRYAAAACAAAAGwAAADsAAABHNzY2AAAAAEc3NjZfQ29vbGRvd24AVYvsUWgAAAAAi0UIixCLTQiLgqgBAAD/0IlF/ItNDFGLVQhSaAgAAACLRfyLEItN/ItCUP/Q2eCL5V3D</compiledString>
+					<returnType>float</returnType>
+					<sString>-(pFirst-&gt;GetTalent("G766")-&gt;GetConstant("G766_Cooldown", pFirst, pSecond))</sString>
+				</reductionAmount>
+				<refreshThis>true</refreshThis>
+				<talents>
+					<Item href="/Items/Talents/Common/G766_MiniRefresher.TALENT" />
+				</talents>
+				<useListAs>ListAsRule</useListAs>
+			</RefreshCooldownApplicator>
 		</Item>
-		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/spell_G766_RefreshAndNotify.SPLL" id="0FB9D5A9-0DBF-4055-98F6-535528B32437">
-			<VariableProxyApplicator parent="/GameLogic/GeneralApplicators/DispellWEffects.APLR">
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/spell_G766_RefreshAndNotify.SPLL" id="621B3BDE-6F81-44C1-9DC9-8B4F456092A7">
+			<StatusApplicator>
+				<applicators>
+					<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/spell_G766_RefreshAndNotify.SPLL" id="8508AEC6-FCF4-4969-8889-37538F7C50E9">
+						<AbsorbShieldApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>1</behaviorFlags>
+							<caption>Простой щит</caption>
+							<damageToAbsorb>
+								<compiledString>FRQAAAACAAAAGQAAADkAAABHNzY2AAAAAEFkc29yYkZpbmFsAFWL7FFoAAAAAItFCIsQi00Ii4KoAQAA/9CJRfyLTQxRi1UIUmgIAAAAi0X8ixCLTfyLQlD/0IvlXcM=</compiledString>
+								<returnType>float</returnType>
+								<sString>pFirst-&gt;GetTalent("G766")-&gt;GetConstant("AdsorbFinal", pFirst, pSecond)</sString>
+							</damageToAbsorb>
+							<effect>
+								<Item href="/Effects/Buffs/Defence/_Note.EFFT" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString>FQwAAAACAAAAEQAAACcAAABHNzY3X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+								<returnType>bool</returnType>
+								<sString>sender.vG767_Active &gt; 0</sString>
+							</enabled>
+							<formulaName>G767_AbsorbDamage</formulaName>
+							<lifeTime>
+								<compiledString>FRcAAAACAAAAHAAAADwAAABHNzY2AAAAAEFkc29yYkR1cmF0aW9uAFWL7FFoAAAAAItFCIsQi00Ii4KoAQAA/9CJRfyLTQxRi1UIUmgIAAAAi0X8ixCLTfyLQlD/0IvlXcM=</compiledString>
+								<returnType>float</returnType>
+								<sString>pFirst-&gt;GetTalent("G766")-&gt;GetConstant("AdsorbDuration", pFirst, pSecond)</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+						</AbsorbShieldApplicator>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>144</behaviorFlags>
+				<caption>Щит энергии</caption>
+				<customCounter>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</customCounter>
+				<customProgress>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</customProgress>
+				<description textref="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/spell_G766_RefreshAndNotify.SPLL_621b3bde6f8144c19dc98b4f456092a7_description.txt" />
+				<dispellPriority>Medium</dispellPriority>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
 				<enabled>
-					<compiledString>FQwAAAACAAAAEQAAACcAAABHNzcwX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<compiledString></compiledString>
 					<returnType>bool</returnType>
-					<sString>sender.vG770_Active &gt; 0</sString>
+					<sString>true</sString>
 				</enabled>
-			</VariableProxyApplicator>
+				<flags>0</flags>
+				<formulaName></formulaName>
+				<image href="/UI/Styles/Icons/Talents/_767.ITEX" />
+				<lifeTime>
+					<compiledString>FRcAAAACAAAAHAAAADwAAABHNzY2AAAAAEFkc29yYkR1cmF0aW9uAFWL7FFoAAAAAItFCIsQi00Ii4KoAQAA/9CJRfyLTQxRi1UIUmgIAAAAi0X8ixCLTfyLQlD/0IvlXcM=</compiledString>
+					<returnType>float</returnType>
+					<sString>pFirst-&gt;GetTalent("G766")-&gt;GetConstant("AdsorbDuration", pFirst, pSecond)</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<name textref="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/spell_G766_RefreshAndNotify.SPLL_621b3bde6f8144c19dc98b4f456092a7_name.txt" />
+				<power>0</power>
+				<providerName></providerName>
+				<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+				<stackCount>0</stackCount>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statusPosition>0</statusPosition>
+				<stopBehaviour>StopByChild</stopBehaviour>
+				<unstackableWith href="" />
+			</StatusApplicator>
 		</Item>
 	</applicators>
 	<dispatch href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/spell_G766_RefreshAndNotify.SPLL" id="BEC5A08C-8A02-44D0-B265-E8ADA2EA3124">

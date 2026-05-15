@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <UnitConstant>
-	<BackLink DBID="/Items/Talents/Level4/G645_Str.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level3/G644_StrOrInt_Life.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level5/G647_SpdOrDex_Life.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level4/G646_Int.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G645_Str.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G644_StrOrInt_Life.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G647_SpdOrDex_Life.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G646_Int.TALENT" Count="1" />
 	<name>TowerCooldown</name>
 	<var>
-		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABwQw==</compiledString>
+		<compiledString>FScAAAAFAAAALgAAAEQAAABYAAAAawAAAHYAAABSZWRzZXQ2XzVfVG9vbHRpcENvdW50ZXIAAAAAQWN0aXZlX0NEUgBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9DcHZIAAADf4PbEAXUli00MUYtVCFJoHAAAAItFEIsQi00Qi0JQ/9DcLYoAAADdXfjrCd0FigAAAN1d+N1F+Nld9NlF9IvlXcMAAAAAAABuQAAAAAAAAAhA</compiledString>
 		<returnType>float</returnType>
-		<sString>240</sString>
+		<sString>sender.vRedset6_5_TooltipCounter &gt;= 3 ? 240 - cActive_CDR : 240</sString>
 	</var>
 </UnitConstant>

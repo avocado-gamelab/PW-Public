@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
-	<BackLink DBID="/Items/Talents/Gunner.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Gunner/Ability_A0_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Gunner_Mighty.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Gunner1_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Gunner.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Gunner_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Gunner/Ability_A0_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -27,7 +26,7 @@
 	<askId>0</askId>
 	<autoTargetSelector href="" />
 	<budget>-1</budget>
-	<caption>А1. Взрывной пуск!</caption>
+	<caption>А1_SUP. Разрушительный аргумент!</caption>
 	<castAllowRange>
 		<compiledString></compiledString>
 		<returnType>float</returnType>
@@ -35,8 +34,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Gunner/Ability_A1_SUP.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Gunner/Ability_A1_SUP.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Gunner/Ability_A1_SUP.TALENT" id="22184123-1997-4689-BACF-68F694A3352C">
 			<ConditionFormula>
@@ -77,7 +76,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>22.7</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Gunner/A1_SUP.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

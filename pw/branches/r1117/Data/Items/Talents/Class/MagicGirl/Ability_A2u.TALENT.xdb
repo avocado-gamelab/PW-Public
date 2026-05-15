@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/MagicGirl.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/MagicGirl_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/MagicGirl_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/MagicGirl.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/MagicGirl_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/MagicGirl_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/MagicGirl/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/MagicGirl/Epic_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/LostLegacy.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -36,8 +37,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/MagicGirl/Ability_A2u.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/MagicGirl/Ability_A2u.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/MagicGirl/Ability_A2u.TALENT" id="94EB19B5-AE66-4D41-8818-4C2DED7879F5">
 			<ConditionFormula>
@@ -78,7 +79,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>0</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/MagicGirl/A2_1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

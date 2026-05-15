@@ -1,0 +1,697 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Items/Talents/Class/Night/Ability_A0_SUP.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Night_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Night/status_A4_2_ChangeToPanther.APLR" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="8EC55C35-A775-4DFE-B638-D85902E667D8">
+			<SpellSwitchApplicator>
+				<activeSpellIndex>
+					<compiledString>FQwAAAABAAAAFgAAAFBhbnRoZXJUaW1lAFWL7GoBi0UQUGgAAAAAi00IixGLTQiLgpwBAAD/0DPJO0UQD5XBi8Fdww==</compiledString>
+					<returnType>int</returnType>
+					<sString>sender.applPantherTime(UNIT) != pMisc ? 1 : 0</sString>
+				</activeSpellIndex>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>в ульте А4_2 или нет</caption>
+				<dontUseDispatches>false</dontUseDispatches>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spells>
+					<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="4D3E76B6-9D60-4852-8334-A3CC2CE8F5A9">
+						<Spell>
+							<applicators>
+								<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="E256DEF4-38AD-4C31-997F-1A2FEA7332C3">
+									<SpellApplicator>
+										<applyTarget>ApplicatorTarget</applyTarget>
+										<caption>спелл пантере с программой</caption>
+										<enabled>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</enabled>
+										<formulaName></formulaName>
+										<LoggingEvent>-1</LoggingEvent>
+										<providerName></providerName>
+										<spell href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="0BA457C0-0F12-4F86-8EA0-E4BF89ADF282">
+											<Spell>
+												<applicators>
+													<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="C6BBABBC-F4C7-4826-A874-D9C47BE35AD2">
+														<ProgramApplicator>
+															<applicators>
+																<Item>
+																	<applicator href="/Items/Talents/Class/Night/PantherIsBusy.APLR" />
+																	<continueCondition>
+																		<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>0</sString>
+																	</continueCondition>
+																	<continueEvents>1</continueEvents>
+																	<delay>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>-1.0</sString>
+																	</delay>
+																	<stopCondition>
+																		<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>0</sString>
+																	</stopCondition>
+																	<stopEvents>0</stopEvents>
+																</Item>
+																<Item>
+																	<applicator href="/Items/Talents/Class/Night/DisablePantherAI.APLR" />
+																	<continueCondition>
+																		<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>0</sString>
+																	</continueCondition>
+																	<continueEvents>1</continueEvents>
+																	<delay>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>-1.0</sString>
+																	</delay>
+																	<stopCondition>
+																		<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>0</sString>
+																	</stopCondition>
+																	<stopEvents>0</stopEvents>
+																</Item>
+																<Item>
+																	<applicator href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="54054EEC-4EDB-4934-B281-F94FFA50C094">
+																		<SpellApplicator>
+																			<applyTarget>ApplicatorTarget</applyTarget>
+																			<caption>fear + slow</caption>
+																			<enabled>
+																				<compiledString></compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</enabled>
+																			<formulaName></formulaName>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<providerName></providerName>
+																			<spell href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="CE1380E8-0BAE-4A03-B477-71DA52E0AFF2">
+																				<Spell>
+																					<applicators>
+																						<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="2C5535B7-F20F-4D51-A717-44E5E1DC63FA">
+																							<ProgramApplicator>
+																								<applicators>
+																									<Item>
+																										<applicator href="/Heroes/DefaultStatus/_PANIC_status.APLR" />
+																										<continueCondition>
+																											<compiledString></compiledString>
+																											<returnType>bool</returnType>
+																											<sString>0</sString>
+																										</continueCondition>
+																										<continueEvents>2</continueEvents>
+																										<delay>
+																											<compiledString></compiledString>
+																											<returnType>float</returnType>
+																											<sString>-1.0</sString>
+																										</delay>
+																										<stopCondition>
+																											<compiledString></compiledString>
+																											<returnType>bool</returnType>
+																											<sString>0</sString>
+																										</stopCondition>
+																										<stopEvents>0</stopEvents>
+																									</Item>
+																									<Item>
+																										<applicator href="/Heroes/DefaultStatus/_SLOW_MOVE.APLR" />
+																										<continueCondition>
+																											<compiledString></compiledString>
+																											<returnType>bool</returnType>
+																											<sString>0</sString>
+																										</continueCondition>
+																										<continueEvents>2</continueEvents>
+																										<delay>
+																											<compiledString></compiledString>
+																											<returnType>float</returnType>
+																											<sString>-1.0</sString>
+																										</delay>
+																										<stopCondition>
+																											<compiledString></compiledString>
+																											<returnType>bool</returnType>
+																											<sString>0</sString>
+																										</stopCondition>
+																										<stopEvents>0</stopEvents>
+																									</Item>
+																								</applicators>
+																								<applyTarget>ApplicatorTarget</applyTarget>
+																								<behaviorFlags>0</behaviorFlags>
+																								<caption>программа с фиром, потом слоу</caption>
+																								<effect>
+																									<Item href="" />
+																									<Item href="" />
+																								</effect>
+																								<enabled>
+																									<compiledString></compiledString>
+																									<returnType>bool</returnType>
+																									<sString>true</sString>
+																								</enabled>
+																								<formulaName></formulaName>
+																								<lifeTime>
+																									<compiledString></compiledString>
+																									<returnType>float</returnType>
+																									<sString>-1.0</sString>
+																								</lifeTime>
+																								<LoggingEvent>-1</LoggingEvent>
+																								<providerName></providerName>
+																								<startCondition>
+																									<compiledString></compiledString>
+																									<returnType>bool</returnType>
+																									<sString>true</sString>
+																								</startCondition>
+																							</ProgramApplicator>
+																						</Item>
+																					</applicators>
+																					<dispatch href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="5B96DAE7-0F5C-40AA-8C63-8E0EE64B4D57">
+																						<DispatchImmediate>
+																							<alwaysApply>false</alwaysApply>
+																							<applyEffect>
+																								<Item href="" />
+																								<Item href="" />
+																							</applyEffect>
+																							<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																							<applyEffectOrientation>Default</applyEffectOrientation>
+																							<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																							<dieAfterApply>true</dieAfterApply>
+																							<dispatchEffect>
+																								<Item href="" />
+																								<Item href="" />
+																							</dispatchEffect>
+																							<flags>0</flags>
+																							<instantApply>false</instantApply>
+																						</DispatchImmediate>
+																					</dispatch>
+																				</Spell>
+																			</spell>
+																			<spellTarget>ApplicatorTarget</spellTarget>
+																			<targetSelector href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="C947DA66-B850-4562-92BD-7E8DDD7E548F">
+																				<AreaTargetSelector>
+																					<absolutePosition>
+																						<x>0</x>
+																						<y>0</y>
+																					</absolutePosition>
+																					<flags>0</flags>
+																					<mode>Normal</mode>
+																					<range>
+																						<compiledString>FQsAAAABAAAAFwAAAEZlYXJSYWRpdXMAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+																						<returnType>float</returnType>
+																						<sString>cFearRadius</sString>
+																					</range>
+																					<targetFilter>538771519</targetFilter>
+																					<targetSelector href="" />
+																				</AreaTargetSelector>
+																			</targetSelector>
+																		</SpellApplicator>
+																	</applicator>
+																	<continueCondition>
+																		<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>0</sString>
+																	</continueCondition>
+																	<continueEvents>1</continueEvents>
+																	<delay>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>-1.0</sString>
+																	</delay>
+																	<stopCondition>
+																		<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>0</sString>
+																	</stopCondition>
+																	<stopEvents>0</stopEvents>
+																</Item>
+																<Item>
+																	<applicator href="/Items/Talents/Class/Night/FX_A3_SUP.APLR" />
+																	<continueCondition>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>0</sString>
+																	</continueCondition>
+																	<continueEvents>1</continueEvents>
+																	<delay>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>-1.0</sString>
+																	</delay>
+																	<stopCondition>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>0</sString>
+																	</stopCondition>
+																	<stopEvents>0</stopEvents>
+																</Item>
+																<Item>
+																	<applicator href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="BA3A7246-B7D5-4B81-97FE-2691135F2E47">
+																		<FlagsApplicator>
+																			<applyTarget>ApplicatorTarget</applyTarget>
+																			<behaviorFlags>32</behaviorFlags>
+																			<caption>задержка и запреты + анимация Happy</caption>
+																			<consumables />
+																			<effect>
+																				<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="13FB5701-22D5-462E-AC47-BDA83F0C7EB1">
+																					<PlayAnimationEffect>
+																						<animGraphNode>happy</animGraphNode>
+																						<deathType>Manual</deathType>
+																						<enableCondition href="" />
+																						<goToOtherNodeOnStop>false</goToOtherNodeOnStop>
+																						<lifeTime>0</lifeTime>
+																						<marker></marker>
+																						<markerReachTime>0</markerReachTime>
+																						<returnAnimGraphNode></returnAnimGraphNode>
+																					</PlayAnimationEffect>
+																				</Item>
+																				<Item href="" />
+																			</effect>
+																			<enabled>
+																				<compiledString></compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</enabled>
+																			<flag>127</flag>
+																			<formulaName></formulaName>
+																			<lifeTime>
+																				<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DMzMzPw==</compiledString>
+																				<returnType>float</returnType>
+																				<sString>0.7f</sString>
+																			</lifeTime>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<providerName></providerName>
+																			<startCondition>
+																				<compiledString></compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</startCondition>
+																			<talents />
+																			<useListAs>ListAsRule</useListAs>
+																		</FlagsApplicator>
+																	</applicator>
+																	<continueCondition>
+																		<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>0</sString>
+																	</continueCondition>
+																	<continueEvents>2</continueEvents>
+																	<delay>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>-1.0</sString>
+																	</delay>
+																	<stopCondition>
+																		<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>0</sString>
+																	</stopCondition>
+																	<stopEvents>0</stopEvents>
+																</Item>
+															</applicators>
+															<applyTarget>ApplicatorTarget</applyTarget>
+															<behaviorFlags>2</behaviorFlags>
+															<caption>программа рыка</caption>
+															<effect>
+																<Item href="" />
+																<Item href="" />
+															</effect>
+															<enabled>
+																<compiledString></compiledString>
+																<returnType>bool</returnType>
+																<sString>true</sString>
+															</enabled>
+															<formulaName></formulaName>
+															<lifeTime>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</lifeTime>
+															<LoggingEvent>-1</LoggingEvent>
+															<providerName></providerName>
+															<startCondition>
+																<compiledString>FQgAAAACAAAADQAAACMAAABUYXVudGVkAFWL7FFoAAAAAItFDIsQi00Mi4KIAQAA/9DcHUUAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+																<returnType>bool</returnType>
+																<sString>receiver.vTaunted  == 0</sString>
+															</startCondition>
+														</ProgramApplicator>
+													</Item>
+												</applicators>
+												<dispatch href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="54E537AF-C81D-4FB5-AB0F-39010C726807">
+													<DispatchImmediate>
+														<alwaysApply>false</alwaysApply>
+														<applyEffect>
+															<Item href="" />
+															<Item href="" />
+														</applyEffect>
+														<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+														<applyEffectOrientation>Default</applyEffectOrientation>
+														<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+														<dieAfterApply>true</dieAfterApply>
+														<dispatchEffect>
+															<Item href="" />
+															<Item href="" />
+														</dispatchEffect>
+														<flags>0</flags>
+														<instantApply>false</instantApply>
+													</DispatchImmediate>
+												</dispatch>
+											</Spell>
+										</spell>
+										<spellTarget>ApplicatorTarget</spellTarget>
+										<targetSelector href="/Items/Talents/Class/Night/PantherSelector.TGSL" />
+									</SpellApplicator>
+								</Item>
+								<Item href="/GameLogic/GeneralApplicators/StopMC.APLR" />
+							</applicators>
+							<dispatch href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="35C75BB5-81EC-4F1E-BFEE-5C3CCC9C28E8">
+								<DispatchImmediate>
+									<alwaysApply>false</alwaysApply>
+									<applyEffect>
+										<Item href="" />
+										<Item href="" />
+									</applyEffect>
+									<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+									<applyEffectOrientation>Default</applyEffectOrientation>
+									<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+									<dieAfterApply>true</dieAfterApply>
+									<dispatchEffect>
+										<Item href="" />
+										<Item href="" />
+									</dispatchEffect>
+									<flags>0</flags>
+									<instantApply>false</instantApply>
+								</DispatchImmediate>
+							</dispatch>
+						</Spell>
+					</Item>
+					<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="E0EDC005-4A75-4725-93E3-A579BBEB655A">
+						<Spell>
+							<applicators>
+								<Item href="/Items/Talents/Class/Night/FX_A3_SUP.APLR" />
+								<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="A1ADA969-4ADF-435B-8E96-C2BACA3FF450">
+									<SpellApplicator>
+										<applyTarget>ApplicatorTarget</applyTarget>
+										<caption>AoE stun</caption>
+										<enabled>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</enabled>
+										<formulaName></formulaName>
+										<LoggingEvent>-1</LoggingEvent>
+										<providerName></providerName>
+										<spell href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="E0ADA9F8-5608-4DFD-B492-60DDC5B63BED">
+											<Spell>
+												<applicators>
+													<Item href="/Heroes/DefaultStatus/_STUN_Status.APLR" />
+												</applicators>
+												<dispatch href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="DD555238-D71B-4FB4-AEAD-F8B59E87302F">
+													<DispatchImmediate>
+														<alwaysApply>false</alwaysApply>
+														<applyEffect>
+															<Item href="" />
+															<Item href="" />
+														</applyEffect>
+														<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+														<applyEffectOrientation>Default</applyEffectOrientation>
+														<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+														<dieAfterApply>true</dieAfterApply>
+														<dispatchEffect>
+															<Item href="" />
+															<Item href="" />
+														</dispatchEffect>
+														<flags>0</flags>
+														<instantApply>false</instantApply>
+													</DispatchImmediate>
+												</dispatch>
+											</Spell>
+										</spell>
+										<spellTarget>ApplicatorTarget</spellTarget>
+										<targetSelector href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="80CACA2F-8DCF-47B9-ADAF-8C97FA630872">
+											<AreaTargetSelector>
+												<absolutePosition>
+													<x>0</x>
+													<y>0</y>
+												</absolutePosition>
+												<flags>0</flags>
+												<mode>Normal</mode>
+												<range>
+													<compiledString>FQsAAAABAAAAFwAAAEZlYXJSYWRpdXMAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+													<returnType>float</returnType>
+													<sString>cFearRadius</sString>
+												</range>
+												<targetFilter>673128959</targetFilter>
+												<targetSelector href="" />
+											</AreaTargetSelector>
+										</targetSelector>
+									</SpellApplicator>
+								</Item>
+							</applicators>
+							<dispatch href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="BFADB3B7-E6DE-48A3-8B8C-057DC6F10C93">
+								<DispatchImmediate>
+									<alwaysApply>false</alwaysApply>
+									<applyEffect>
+										<Item href="" />
+										<Item href="" />
+									</applyEffect>
+									<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+									<applyEffectOrientation>Default</applyEffectOrientation>
+									<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+									<dieAfterApply>true</dieAfterApply>
+									<dispatchEffect>
+										<Item href="" />
+										<Item href="" />
+									</dispatchEffect>
+									<flags>0</flags>
+									<instantApply>false</instantApply>
+								</DispatchImmediate>
+							</dispatch>
+						</Spell>
+					</Item>
+				</spells>
+			</SpellSwitchApplicator>
+		</Item>
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А3_SUP. Утробный рев</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations>
+		<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="409640EA-D44F-473C-8C32-34C529159DC6">
+			<ConditionCastLimitation>
+				<condition>
+					<compiledString>FRwAAAADAAAAIQAAADcAAABJAAAAUGFudGhlcklzQWxpdmUAAFBhbnRoZXJUaW1lAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHXkAAADf4PbERHopagGLTRBRaBAAAACLVQiLAotNCIuQnAEAAP/SO0UQdQnHRfwAAAAA6wfHRfwBAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vPantherIsAlive || sender.applPantherTime(UNIT) != pMisc</sString>
+				</condition>
+				<uiEvent href="/UI/Events/ErrorMessages/CastError_NoValidTargets.UIEV" />
+			</ConditionCastLimitation>
+		</Item>
+	</castLimitations>
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="51814642-244E-4597-89B3-10601F13A91E">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRUAAAACAAAAHAAAADUAAABOaWdodF9BMwAAAABOaWdodF9BMwBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Night_A3") == false</sString>
+				</condition>
+				<name>Night_A3</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="9A417EF7-B1DD-4BE3-B71A-D203242C513E">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRcAAAACAAAAHgAAADcAAABOaWdodF9BNF8yAABOaWdodF9BNF8yAFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoDAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCLP/QiUX46wfHRfgAAAAAM8CDffgAD5/Ai+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString> getTalentRefineRate("Night_A4_2", 0)  &gt; 0</sString>
+				</condition>
+				<name>Night_A4_2</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents>
+		<Item href="/Items/Talents/Class/Night/Ability_A0_SUP.TALENT" />
+	</conflictingTalents>
+	<constants href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="02932390-0667-44C7-9027-5C0635665227">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="E929D781-4D2C-4F0C-B357-841AFCA03E38">
+					<UnitConstant>
+						<name>Fear_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADAPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>1.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="065A86A4-752E-4CC5-A73F-E5200A863FB7">
+					<UnitConstant>
+						<name>Dec_MoveSpeed</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>40</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="008C58DA-1C83-45F0-BC8B-9E0CA15DE94B">
+					<UnitConstant>
+						<name>Slow_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="C61F62FB-0521-421E-8CD3-BF6865F38062">
+					<UnitConstant>
+						<name>Stun_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADAPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>1.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="3903B33D-2979-4CEA-ACD4-898350C58AFB">
+					<UnitConstant>
+						<name>FearRadius</name>
+						<var>
+							<compiledString>FQwAAAABAAAAGAAAAFJhbmdlX1Nob3J0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange_Short</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="0994DE16-2D45-4F01-8E1E-545AFA1A98CA">
+					<UnitConstant>
+						<name>Panic_Duration</name>
+						<var>
+							<compiledString>FQ4AAAABAAAAGgAAAEZlYXJfRHVyYXRpb24AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cFear_Duration</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>40.0f</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT" id="F3D55433-EEBC-416C-AFD1-BF4573B7330F">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>2</flags>
+	<forceBonus>22.7</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Night/A3_SUP.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAWQw==</compiledString>
+		<returnType>float</returnType>
+		<sString>150.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>4</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>800</naftaCost>
+	<name textref="/Items/Talents/Class/Night/Ability_A3_SUP.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/trigger_G766_RefreshAndNotify.APLR" />
+	</passiveApplicators>
+	<persistentId>Night_A3_SUP</persistentId>
+	<prerequisiteTalents>
+		<Item href="/Items/Talents/Class/Night/Ability_A3.TALENT" />
+	</prerequisiteTalents>
+	<rarity>Class</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

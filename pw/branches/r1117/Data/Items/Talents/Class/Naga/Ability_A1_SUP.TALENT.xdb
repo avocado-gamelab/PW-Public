@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
-	<BackLink DBID="/Items/Talents/Class/Naga/Ability_A3_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Naga.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Naga_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Naga.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Naga_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Naga/Ability_A3_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -34,8 +34,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Naga/Ability_A1_SUP.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Naga/Ability_A1_SUP.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Naga/Ability_A1_SUP.TALENT" id="336EA58B-F67B-47B9-AC6C-7823EFCF313C">
 			<ConditionFormula>
@@ -86,7 +86,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>22.7</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Naga/A1_SUP.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -108,7 +108,7 @@
 	<passiveApplicators />
 	<persistentId>Naga_A1_SUP</persistentId>
 	<prerequisiteTalents>
-		<Item href="/Items/Talents/Class/Naga/Ability1.TALENT" />
+		<Item href="/Items/Talents/Class/Naga/Ability_A1.TALENT" />
 	</prerequisiteTalents>
 	<rarity>Class</rarity>
 	<requireLineOfSight>true</requireLineOfSight>

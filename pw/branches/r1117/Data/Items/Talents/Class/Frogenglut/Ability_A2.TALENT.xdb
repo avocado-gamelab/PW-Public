@@ -1,0 +1,1093 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Frogenglut.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Frogenglut_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Frogenglut/Ability_A2_SUP.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Frogenglut/Ability_A2u.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Frogenglut_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Elite_Life.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Epic_Life.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Epic_Str.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="/Effects/UI/AOESelection/CorridorNarrow.MTRL" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString>FQkAAAACAAAAFgAAACkAAABBMl9XaWR0aABVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcDTcAAADZXfzZRfyL5V3DAAAAAAAA+D8=</compiledString>
+		<returnType>float</returnType>
+		<sString>cA2_Width * 1.5f</sString>
+	</aoeSize>
+	<aoeType>CorridorMax</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="8DC7EA5A-6B0A-4356-98EA-75F26309BFAA">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Внешний спелл на цель</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="FF538FBA-C012-437E-A78E-AB0C074F4C7A">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="71B1F927-4DE3-4901-9026-60A6B775B71E">
+								<ProgramApplicator>
+									<applicators>
+										<Item>
+											<applicator href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="AD826E51-699F-497D-9646-8B2CE39978D4">
+												<ProgramApplicator>
+													<applicators>
+														<Item>
+															<applicator href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="43DF6555-6FA8-4D04-A699-D0F5749B9384">
+																<FlagsApplicator>
+																	<applyTarget>ApplicatorTarget</applyTarget>
+																	<behaviorFlags>0</behaviorFlags>
+																	<caption>запреты</caption>
+																	<consumables />
+																	<effect>
+																		<Item href="" />
+																		<Item href="" />
+																	</effect>
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<flag>1029</flag>
+																	<formulaName></formulaName>
+																	<lifeTime>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>-1.0</sString>
+																	</lifeTime>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<startCondition>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</startCondition>
+																	<talents />
+																	<useListAs>ListAsException</useListAs>
+																</FlagsApplicator>
+															</applicator>
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>1</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="E4348CAE-9198-4B27-AD9E-A982ABA97713">
+																<FlagsApplicator>
+																	<applyTarget>ApplicatorTarget</applyTarget>
+																	<behaviorFlags>0</behaviorFlags>
+																	<caption>задержка</caption>
+																	<consumables />
+																	<effect>
+																		<Item href="" />
+																		<Item href="" />
+																	</effect>
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<flag>0</flag>
+																	<formulaName></formulaName>
+																	<lifeTime>
+																		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPg==</compiledString>
+																		<returnType>float</returnType>
+																		<sString>0.2</sString>
+																	</lifeTime>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<startCondition>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</startCondition>
+																	<talents />
+																	<useListAs>ListAsRule</useListAs>
+																</FlagsApplicator>
+															</applicator>
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>2</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/Items/Talents/Class/Frogenglut/TongueShotTerrain.APLR" />
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>6</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="68B95E1C-9ED8-4690-B49E-1235596FE66F">
+																<SpellApplicator>
+																	<applyTarget>PrevApplicatorTarget</applyTarget>
+																	<caption>FX при хите в землю</caption>
+																	<enabled>
+																		<compiledString>FQcAAAABAAAAHAAAAFRhcmdldABVi+xRi0UQixCLTRCLQkj/0IlF/GgAAAAAi038ixGLTfyLQkz/0DPJO0UID5TBisGL5V3D</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>appl.parent.GetObject("Target") == pFirst</sString>
+																	</enabled>
+																	<formulaName></formulaName>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<spell href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="FC381DD8-F8E1-44F4-81CB-03970174BB61">
+																		<Spell>
+																			<applicators>
+																				<Item href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="9F9C0AC9-7CD4-4E98-AF30-D9BAC61194ED">
+																					<AbilityEndApplicator parent="/GameLogic/GeneralApplicators/EndOfAbility.APLR">
+																						<applyTarget>AbilityOwner</applyTarget>
+																					</AbilityEndApplicator>
+																				</Item>
+																			</applicators>
+																			<dispatch href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="31930A79-AE7D-4635-A518-4DFE8166AB2C">
+																				<DispatchImmediate>
+																					<alwaysApply>false</alwaysApply>
+																					<applyEffect>
+																						<Item href="/Effects/Debuffs/Tongue/_HitA.EFFT" />
+																						<Item href="/Effects/Debuffs/Tongue/_HitB.EFFT" />
+																					</applyEffect>
+																					<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																					<applyEffectOrientation>Default</applyEffectOrientation>
+																					<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																					<dieAfterApply>true</dieAfterApply>
+																					<dispatchEffect>
+																						<Item href="" />
+																						<Item href="" />
+																					</dispatchEffect>
+																					<flags>0</flags>
+																					<instantApply>true</instantApply>
+																				</DispatchImmediate>
+																			</dispatch>
+																		</Spell>
+																	</spell>
+																	<spellTarget>ApplicatorTarget</spellTarget>
+																	<targetSelector href="" />
+																</SpellApplicator>
+															</applicator>
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>1</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQcAAAABAAAACwAAAFRhcmdldABVi+xoAAAAAItFEIsQi00Qi0JM/9AzyTtFCA+UwYrBXcM=</compiledString>
+																<returnType>bool</returnType>
+																<sString>appl.GetObject("Target") == pFirst</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="46F0C808-F59B-4C14-B528-080C6740043C">
+																<StatModApplicator parent="/GameLogic/GeneralApplicators/SetTossed.APLR">
+																	<applyTarget>PrevApplicatorTarget</applyTarget>
+																</StatModApplicator>
+															</applicator>
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>1</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="83A53396-6273-45DB-9F84-441D8BC7B44F">
+																<SpellApplicator>
+																	<applyTarget>PrevApplicatorTarget</applyTarget>
+																	<caption>(Upg) застунить</caption>
+																	<enabled>
+																		<compiledString>FSwAAAADAAEAXgAAAHcAAADnAAAAtAEAAEZyb2dlbmdsdXRfQTJ1AABGcm9nZW5nbHV0X0EydQAAQTJfTWF4UmFuZ2UAVYvsg+wkVotFDIsQi00Mi4KQAQAA/9CL8ItNCIsRi00Ii4KQAQAA/9A78A+EygAAAGgAAAAAi00IixGLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJReyLTeyLEYtN7ItCBP/QiEXr6wTGResAD7ZN64XJdHuNVfhSi0UMixCLTQyLgowBAAD/0FCNTfBRi1UIiwKLTQiLkIwBAAD/0lDoWwAAAIPECItFDFCLTQhRaCAAAACLVRCLAotNEItQUN1d4P/S3F3g3+D2xAF1ImgAAAAQi0UMixCLTQyLQmj/0A+2yIXJdQnHRdwBAAAA6wfHRdwAAAAAikXcXovlXcNVi+yD7BSLRQjZQASLTQzYYQTZXfTZRfRR2Rwki1UI2QKLRQzYINld8NlF8FHZHCSNTfjoVwAAANlF+NhN+NlF/NhN/N7B2V3s2UXsUdkcJOgHAAAAg8QEi+Vdw1WL7FHZRQjZHCToBQAAAIPEBF3DVYvsUdlFCIPsCN0cJOgk/v//g8QI2V382UX8i+Vdw1WL7FGJTfyLRfzZRQjZGItN/NlFDNlZBItF/IvlXcIIAA==</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>(rFctn != sFctn &amp;&amp; tal("Frogenglut_A2u"))&amp;&amp;(d( sPos, rPos ) &lt;= cA2_MaxRange)&amp;&amp;!rFlag(268435456)</sString>
+																	</enabled>
+																	<formulaName></formulaName>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<spell href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="3CD96124-DD9D-4384-9617-13887356688B">
+																		<Spell>
+																			<applicators>
+																				<Item href="/Heroes/DefaultStatus/_STUN_Status.APLR" />
+																			</applicators>
+																			<dispatch href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="147B983F-868B-4AA9-8D9B-C8A722582062">
+																				<DispatchImmediate>
+																					<alwaysApply>false</alwaysApply>
+																					<applyEffect>
+																						<Item href="" />
+																						<Item href="" />
+																					</applyEffect>
+																					<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																					<applyEffectOrientation>Default</applyEffectOrientation>
+																					<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																					<dieAfterApply>true</dieAfterApply>
+																					<dispatchEffect>
+																						<Item href="" />
+																						<Item href="" />
+																					</dispatchEffect>
+																					<flags>0</flags>
+																					<instantApply>false</instantApply>
+																				</DispatchImmediate>
+																			</dispatch>
+																		</Spell>
+																	</spell>
+																	<spellTarget>ApplicatorTarget</spellTarget>
+																	<targetSelector href="" />
+																</SpellApplicator>
+															</applicator>
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>1</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="27BC2ABE-9B08-4FA3-B689-A1E85DA620B4">
+																<DamageApplicator parent="/Heroes/DefaultStatus/FakeDamage.APLR">
+																	<applyTarget>PrevApplicatorTarget</applyTarget>
+																</DamageApplicator>
+															</applicator>
+															<continueCondition>
+																<compiledString></compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>1</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString></compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="E1527703-6510-4682-ACA0-81A5A1D2F969">
+																<SpellApplicator>
+																	<applyTarget>PrevApplicatorTarget</applyTarget>
+																	<caption>Спелл для флага для таунта</caption>
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<formulaName></formulaName>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<spell href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="431F1643-2C50-424F-ACE5-217F7E5EF020">
+																		<Spell>
+																			<applicators>
+																				<Item href="/Items/Talents/Class/Frogenglut/A2_TauntMark.APLR" />
+																			</applicators>
+																			<dispatch href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="12C86837-C1BF-47B0-8464-16BBB5776F29">
+																				<DispatchImmediate>
+																					<alwaysApply>false</alwaysApply>
+																					<applyEffect>
+																						<Item href="" />
+																						<Item href="" />
+																					</applyEffect>
+																					<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																					<applyEffectOrientation>Default</applyEffectOrientation>
+																					<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																					<dieAfterApply>true</dieAfterApply>
+																					<dispatchEffect>
+																						<Item href="" />
+																						<Item href="" />
+																					</dispatchEffect>
+																					<flags>0</flags>
+																					<instantApply>true</instantApply>
+																				</DispatchImmediate>
+																			</dispatch>
+																		</Spell>
+																	</spell>
+																	<spellTarget>ApplicatorTarget</spellTarget>
+																	<targetSelector href="" />
+																</SpellApplicator>
+															</applicator>
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>1</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="876E973F-849B-412E-83AB-8543698BCFCB">
+																<FlagsApplicator>
+																	<applyTarget>PrevApplicatorTarget</applyTarget>
+																	<behaviorFlags>0</behaviorFlags>
+																	<caption>игнор невидимости</caption>
+																	<consumables />
+																	<effect>
+																		<Item href="" />
+																		<Item href="" />
+																	</effect>
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<flag>65536</flag>
+																	<formulaName></formulaName>
+																	<lifeTime>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>-1.0</sString>
+																	</lifeTime>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<startCondition>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</startCondition>
+																	<talents />
+																	<useListAs>ListAsRule</useListAs>
+																</FlagsApplicator>
+															</applicator>
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>1</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="FE5758D9-A13C-4EE4-8C3E-FFB77B50BB9B">
+																<ThrowApplicator>
+																	<angle>0</angle>
+																	<applyTarget>PrevApplicatorTarget</applyTarget>
+																	<behaviorFlags>0</behaviorFlags>
+																	<caption>throw</caption>
+																	<collisionFlags>7</collisionFlags>
+																	<enabled>
+																		<compiledString>FRgAAAACAAEAWQAAALIAAAB+AQAAQTJfTWluUmFuZ2UAQTJfTWF4UmFuZ2UAVYvsg+w0jUX4UItNDIsRi00Mi4KMAQAA/9BQjU3wUYtVCIsCi00Ii5CMAQAA/9JQ6LMAAACDxAiLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFDdXdj/0txd2N/g9sQFenuNRehQi00MixGLTQyLgowBAAD/0FCNTeBRi1UIiwKLTQiLkIwBAAD/0lDoWgAAAIPECItFDFCLTQhRaAwAAACLVRCLAotNEItQUN1d0P/S3F3Q3+D2xAF1ImgAAAAQi0UMixCLTQyLQmj/0A+2yIXJdQnHRcwBAAAA6wfHRcwAAAAAikXMi+Vdw1WL7IPsFItFCNlABItNDNhhBNld9NlF9FHZHCSLVQjZAotFDNgg2V3w2UXwUdkcJI1N+OhXAAAA2UX42E342UX82E383sHZXezZRexR2Rwk6AcAAACDxASL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6Fr+//+DxAjZXfzZRfyL5V3DVYvsUYlN/ItF/NlFCNkYi0382UUM2VkEi0X8i+VdwggA</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>(d( sPos, rPos ) &gt; cA2_MinRange)&amp;&amp;(d( sPos, rPos ) &lt;= cA2_MaxRange)&amp;&amp;!rFlag(268435456)</sString>
+																	</enabled>
+																	<firstTargetToHit href="" />
+																	<flightType>Throw</flightType>
+																	<flipTime>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>1.0</sString>
+																	</flipTime>
+																	<flyEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</flyEffect>
+																	<formulaName>Throw_Jump</formulaName>
+																	<landTime>0</landTime>
+																	<lockRotation>false</lockRotation>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<maxDistance>14</maxDistance>
+																	<maxHeight>4</maxHeight>
+																	<moveSpeed>
+																		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQQ==</compiledString>
+																		<returnType>float</returnType>
+																		<sString>30</sString>
+																	</moveSpeed>
+																	<providerName></providerName>
+																	<startSpell href="" />
+																	<stopSpell href="" />
+																	<surfaceSpeedFromAG>false</surfaceSpeedFromAG>
+																	<takeOffTime>0</takeOffTime>
+																	<targetSelector href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="F8BB8FEC-05BC-466C-89E0-63262146F4C8">
+																		<PointTargetSelector>
+																			<checkMinRange>true</checkMinRange>
+																			<mode>RangeFromOwner</mode>
+																			<offset>
+																				<x>0</x>
+																				<y>1</y>
+																			</offset>
+																			<paralleledTarget>false</paralleledTarget>
+																			<range>
+																				<compiledString>FQwAAAABAAAAGAAAAEEyX01pblJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+																				<returnType>float</returnType>
+																				<sString>cA2_MinRange</sString>
+																			</range>
+																			<targetSelector href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="669405A0-F81A-4621-86D9-0CE93B177F98">
+																				<ConvertTargetToLand>
+																					<aggregateMode>First</aggregateMode>
+																					<targetSelector href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="A5F7DB3E-09E4-4D46-B597-F7ED51226672">
+																						<SelectApplicatorTarget>
+																							<applicatorIndex>0</applicatorIndex>
+																							<applicatorName></applicatorName>
+																							<namedApplicatorTarget>ApplicatorTarget</namedApplicatorTarget>
+																							<selectTarget>PrevApplicatorTarget</selectTarget>
+																						</SelectApplicatorTarget>
+																					</targetSelector>
+																				</ConvertTargetToLand>
+																			</targetSelector>
+																			<traceMode>0</traceMode>
+																		</PointTargetSelector>
+																	</targetSelector>
+																	<trackTargetUnit>false</trackTargetUnit>
+																	<trajectory Animated="True">
+																		<Tracks>
+																			<Item>
+																				<Item>
+																					<Key>0</Key>
+																					<Value>0</Value>
+																				</Item>
+																				<Item>
+																					<Key>0.7663264</Key>
+																					<Value>4.678275</Value>
+																				</Item>
+																				<Item>
+																					<Key>2.057143</Key>
+																					<Value>8.030991</Value>
+																				</Item>
+																				<Item>
+																					<Key>3.37602</Key>
+																					<Value>9.656549</Value>
+																				</Item>
+																				<Item>
+																					<Key>5</Key>
+																					<Value>10</Value>
+																				</Item>
+																				<Item>
+																					<Key>6.631122</Key>
+																					<Value>9.588819</Value>
+																				</Item>
+																				<Item>
+																					<Key>7.837755</Key>
+																					<Value>7.929393</Value>
+																				</Item>
+																				<Item>
+																					<Key>9.072449</Key>
+																					<Value>4.779872</Value>
+																				</Item>
+																				<Item>
+																					<Key>10</Key>
+																					<Value>0</Value>
+																				</Item>
+																			</Item>
+																		</Tracks>
+																		<Type>Clamp</Type>
+																		<Values>
+																			<Item>
+																				<Key>0</Key>
+																				<Value>0</Value>
+																			</Item>
+																			<Item>
+																				<Key>0.7663264</Key>
+																				<Value>4.678275</Value>
+																			</Item>
+																			<Item>
+																				<Key>2.057143</Key>
+																				<Value>8.030991</Value>
+																			</Item>
+																			<Item>
+																				<Key>3.37602</Key>
+																				<Value>9.656549</Value>
+																			</Item>
+																			<Item>
+																				<Key>5</Key>
+																				<Value>10</Value>
+																			</Item>
+																			<Item>
+																				<Key>6.631122</Key>
+																				<Value>9.588819</Value>
+																			</Item>
+																			<Item>
+																				<Key>7.837755</Key>
+																				<Value>7.929393</Value>
+																			</Item>
+																			<Item>
+																				<Key>9.072449</Key>
+																				<Value>4.779872</Value>
+																			</Item>
+																			<Item>
+																				<Key>10</Key>
+																				<Value>0</Value>
+																			</Item>
+																		</Values>
+																	</trajectory>
+																</ThrowApplicator>
+															</applicator>
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>2</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+													</applicators>
+													<applyTarget>ApplicatorTarget</applyTarget>
+													<behaviorFlags>3</behaviorFlags>
+													<caption>программа</caption>
+													<effect>
+														<Item href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="3352281C-3D50-49B6-9B80-A1822D720552">
+															<PlayAnimationEffect>
+																<animGraphNode>ability2Loop</animGraphNode>
+																<deathType>Manual</deathType>
+																<enableCondition href="" />
+																<goToOtherNodeOnStop>true</goToOtherNodeOnStop>
+																<lifeTime>0</lifeTime>
+																<marker></marker>
+																<markerReachTime>0</markerReachTime>
+																<returnAnimGraphNode>idle</returnAnimGraphNode>
+															</PlayAnimationEffect>
+														</Item>
+														<Item href="" />
+													</effect>
+													<enabled>
+														<compiledString>FQwAAAABAAAAFgAAAFN0YXR1c0hleGVkAFWL7GoAi0UQUGgAAAAAi00IixGLTQiLgpwBAAD/0DPJO0UQD5TBisFdww==</compiledString>
+														<returnType>bool</returnType>
+														<sString>sender.applStatusHexed(GLOBAL) == pMisc</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<lifeTime>
+														<compiledString></compiledString>
+														<returnType>float</returnType>
+														<sString>-1.0</sString>
+													</lifeTime>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<startCondition>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</startCondition>
+												</ProgramApplicator>
+											</applicator>
+											<continueCondition>
+												<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</continueCondition>
+											<continueEvents>2</continueEvents>
+											<delay>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</delay>
+											<stopCondition>
+												<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</stopCondition>
+											<stopEvents>0</stopEvents>
+										</Item>
+										<Item>
+											<applicator href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="FA61E8CE-28B7-4A93-B52F-74D224E158DF">
+												<SpellApplicator>
+													<applyTarget>ApplicatorTarget</applyTarget>
+													<caption>Спелл для таунта</caption>
+													<enabled>
+														<compiledString>FRMAAAACAAAAIAAAADoAAABTdGF0dXNIZXhlZABUYXJnZXQAVYvsg+wIagCLRRBQaAAAAACLTQiLEYtNCIuCnAEAAP/QO0UQdUNoDAAAAItNEIsRi00Qi0JM/9CJRfyLTQiLEYtNCIuCkAEAAP/QUItN/IsRi038i0J0/9APtsiFyXQJx0X4AQAAAOsHx0X4AAAAAIpF+IvlXcM=</compiledString>
+														<returnType>bool</returnType>
+														<sString>sender.applStatusHexed(GLOBAL) == pMisc &amp;&amp; appl.oTarget.IsVisibleForEnemy(sender.Fctn)</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<spell href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="D76DD657-90C1-4F2F-BC18-9849EC146A20">
+														<Spell>
+															<applicators>
+																<Item href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="65D60E3C-6BC8-438E-AC8B-C283C5EAC960">
+																	<TauntApplicator>
+																		<applyTarget>AbilityOwner</applyTarget>
+																		<behaviorFlags>0</behaviorFlags>
+																		<caption>Таунтим себя на цель</caption>
+																		<effect>
+																			<Item href="" />
+																			<Item href="" />
+																		</effect>
+																		<enabled>
+																			<compiledString></compiledString>
+																			<returnType>bool</returnType>
+																			<sString>true</sString>
+																		</enabled>
+																		<formulaName></formulaName>
+																		<lifeTime>
+																			<compiledString></compiledString>
+																			<returnType>float</returnType>
+																			<sString>0.1</sString>
+																		</lifeTime>
+																		<LoggingEvent>-1</LoggingEvent>
+																		<providerName></providerName>
+																		<startCondition>
+																			<compiledString></compiledString>
+																			<returnType>bool</returnType>
+																			<sString>true</sString>
+																		</startCondition>
+																		<strongTarget>true</strongTarget>
+																		<tauntTarget>ApplicatorTarget</tauntTarget>
+																	</TauntApplicator>
+																</Item>
+															</applicators>
+															<dispatch href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="CF124A78-1E95-4ACD-A8D8-2F3B7E9DEE26">
+																<DispatchImmediate>
+																	<alwaysApply>false</alwaysApply>
+																	<applyEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</applyEffect>
+																	<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																	<applyEffectOrientation>Default</applyEffectOrientation>
+																	<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																	<dieAfterApply>true</dieAfterApply>
+																	<dispatchEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</dispatchEffect>
+																	<flags>0</flags>
+																	<instantApply>false</instantApply>
+																</DispatchImmediate>
+															</dispatch>
+														</Spell>
+													</spell>
+													<spellTarget>ApplicatorTarget</spellTarget>
+													<targetSelector href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="12C63EDF-FAC0-4416-924C-09B691D4593D">
+														<ApplicatorRecipientsTargetSelector>
+															<applicator href="/Items/Talents/Class/Frogenglut/A2_TauntMark.APLR" />
+															<flags>0</flags>
+															<mode>Normal</mode>
+														</ApplicatorRecipientsTargetSelector>
+													</targetSelector>
+												</SpellApplicator>
+											</applicator>
+											<continueCondition>
+												<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</continueCondition>
+											<continueEvents>2</continueEvents>
+											<delay>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</delay>
+											<stopCondition>
+												<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</stopCondition>
+											<stopEvents>0</stopEvents>
+										</Item>
+										<Item>
+											<applicator href="/GameLogic/GeneralApplicators/EndOfAbility.APLR" />
+											<continueCondition>
+												<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</continueCondition>
+											<continueEvents>2</continueEvents>
+											<delay>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</delay>
+											<stopCondition>
+												<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</stopCondition>
+											<stopEvents>0</stopEvents>
+										</Item>
+									</applicators>
+									<applyTarget>AbilityOwner</applyTarget>
+									<behaviorFlags>3</behaviorFlags>
+									<caption>Внешняя программа</caption>
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<lifeTime>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+									<startCondition>
+										<compiledString>FQAAAAAAAAAAVYvsaAAAABCLRQiLEItNCItCaP/QD7bA99gbwIPAAV3D</compiledString>
+										<returnType>bool</returnType>
+										<sString>!sFlag(268435456)</sString>
+									</startCondition>
+								</ProgramApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="76C95C6C-2845-4E14-8FC2-BCAB63BD56E0">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>true</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="8668DA07-69AA-4CC9-B7F9-31B150578317">
+					<PointTargetSelector>
+						<checkMinRange>true</checkMinRange>
+						<mode>RangeFromOwner</mode>
+						<offset>
+							<x>0</x>
+							<y>1</y>
+						</offset>
+						<paralleledTarget>false</paralleledTarget>
+						<range>
+							<compiledString>FQkAAAABAAAAFQAAAEEyX1JhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cA2_Range</sString>
+						</range>
+						<targetSelector href="" />
+						<traceMode>0</traceMode>
+					</PointTargetSelector>
+				</targetSelector>
+			</SpellApplicator>
+		</Item>
+	</applicators>
+	<askId>2</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А2. Хватай!</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="7AF2569B-7B76-4399-A108-137EE9C6247D">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR8AAAACAAAAJgAAAD8AAABGcm9nZW5nbHV0X0EydQAARnJvZ2VuZ2x1dF9BMnUAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwIPAAYvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Frogenglut_A2u") == false</sString>
+				</condition>
+				<name>Frogenglut_A2u</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="3C14ADDB-F100-479A-BC8B-83D1EF1D4C55">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSYAAAACAAAALQAAAEYAAABGcm9nZW5nbHV0X0EyX1NVUAAAAEZyb2dlbmdsdXRfQTJfU1VQAFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoFAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZF+/fYG8CDwAGL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Frogenglut_A2_SUP") == false</sString>
+				</condition>
+				<name>Frogenglut_A2_SUP</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="D86938C6-4B01-46C7-B913-88BC2729FE30">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="B04D64A1-A636-47B7-B132-88795137D879">
+					<UnitConstant>
+						<name>Stun_Duration</name>
+						<var>
+							<compiledString>FT4AAAAEAAAARQAAAF4AAACUAAAAtAAAAEZyb2dlbmdsdXRfQTJ1AABGcm9nZW5nbHV0X0EydQAARnJvZ2VuZ2x1dF9BMnUAAFN0dW5fRHVyYXRpb24AVYvsg+wQaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0N2ggAAAAi1UIiwKLTQiLkKgBAAD/0olF9ItFDFCLTQhRaDAAAACLVfSLAotN9ItQUP/S2V3w6wXZ7tld8NlF8IvlXcMAAAAA</compiledString>
+							<returnType>float</returnType>
+							<sString>talconst("Frogenglut_A2u","Stun_Duration")</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="879EB5A0-8535-41DC-AD23-B4D8F4994170">
+					<UnitConstant>
+						<name>A2_Width</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DmpnZPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>1.7</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="0A83AE15-0288-4EE3-B890-DF940D423361">
+					<UnitConstant>
+						<name>A2_Range</name>
+						<var>
+							<compiledString>FQsAAAACAAAAGAAAACsAAABSYW5nZV9Mb25nAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twFOQAAANld/NlF/IvlXcMAAAAAAAAcQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange_Long+7</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="D728C52F-258E-4C38-85E0-EE119DA4BD0C">
+					<UnitConstant>
+						<name>A2_MinRange</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="B8C5BC1D-96B7-4B84-9D89-143D2857D537">
+					<UnitConstant>
+						<name>A2_MaxRange</name>
+						<var>
+							<compiledString>FQkAAAACAAAAFgAAACkAAABBMl9SYW5nZQBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcBTcAAADZXfzZRfyL5V3DAAAAAAAACEA=</compiledString>
+							<returnType>float</returnType>
+							<sString>cA2_Range+3</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACQQQ==</compiledString>
+		<returnType>float</returnType>
+		<sString>18</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="CB47DA19-C13C-4955-89B3-C5DDC3BC4DFA">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>true</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>73</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Frogenglut/A2.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>false</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>100</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="63005228-2371-4A79-BAB8-449CACE1557E">
+		<TargetSelectorMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</condition>
+			<targetSelector href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="95D891D7-5E6F-4F01-815F-A54FC5E1DC28">
+				<ConvertTargetToLand>
+					<aggregateMode>First</aggregateMode>
+					<targetSelector href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="A0775CEF-EF7E-42D6-9E61-939B1D70B58F">
+						<FirstTargetSelector>
+							<nearestTarget>false</nearestTarget>
+							<targetSelector href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" id="BDC02757-8287-4357-A6C4-C77640F5D390">
+								<AreaTargetSelector>
+									<absolutePosition>
+										<x>0</x>
+										<y>0</y>
+									</absolutePosition>
+									<flags>0</flags>
+									<mode>Normal</mode>
+									<range>
+										<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+										<returnType>float</returnType>
+										<sString>cRange_Long</sString>
+									</range>
+									<targetFilter>679477251</targetFilter>
+									<targetSelector href="" />
+								</AreaTargetSelector>
+							</targetSelector>
+						</FirstTargetSelector>
+					</targetSelector>
+				</ConvertTargetToLand>
+			</targetSelector>
+		</TargetSelectorMicroAI>
+	</microAI>
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>18</minUseRangeCorrection>
+	<naftaCost>390</naftaCost>
+	<name textref="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/trigger_G766_RefreshAndNotify.APLR" />
+	</passiveApplicators>
+	<persistentId>Frogenglut_A2</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>16777216</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQkAAAABAAAAFQAAAEEyX1JhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<returnType>float</returnType>
+		<sString>cA2_Range</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

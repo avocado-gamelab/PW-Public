@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Crusader_A.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Crusader_A_US.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Crusader_B.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Crusader_B_US.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Crusader_A.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Crusader_A_US.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Crusader_B.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Crusader_B_US.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Crusader_A_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Crusader_B_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Crusader/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Crusader/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Crusader/Ability_A4u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Crusader_A_Mighty.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Crusader_B_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Crusader/Duel_A_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Crusader/Duel_A_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Crusader/Duel_B_Int.TALENTSET" Count="1" />
@@ -532,8 +532,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Crusader/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Crusader/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Crusader/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Crusader/Ability_A4.TALENT" id="6ED4613E-0626-4B93-9857-8CC9C1A9B596">
 			<ConditionFormula>
@@ -567,9 +567,9 @@
 					<UnitConstant>
 						<name>A4_Range</name>
 						<var>
-							<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<compiledString>FQsAAAACAAAAGAAAACsAAABSYW5nZV9Mb25nAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twFOQAAANld/NlF/IvlXcMAAAAAAAAQQA==</compiledString>
 							<returnType>float</returnType>
-							<sString>cRange_Long</sString>
+							<sString>cRange_Long + 4</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -786,7 +786,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>75</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Crusader/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

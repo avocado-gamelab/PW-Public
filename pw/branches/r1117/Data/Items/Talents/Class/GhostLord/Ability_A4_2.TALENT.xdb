@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/GhostLord_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/GhostLord_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/GhostLord/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/GhostLord/Ability_A4_2U.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/GhostLord/Ability_A4u.TALENT" Count="1" />
@@ -28,202 +28,11 @@
 	</aoeSize>
 	<aoeType>None</aoeType>
 	<applicators>
-		<Item href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="ED905260-5D63-4545-A7CC-B3E8FDEFF8EF">
-			<PermanentStatModApplicator>
-				<applyTarget>ApplicatorTarget</applyTarget>
-				<caption> - обнуляем счетчик "A5_IncDurationCount"</caption>
-				<customApplyType>None</customApplyType>
-				<enabled>
-					<compiledString></compiledString>
-					<returnType>bool</returnType>
-					<sString>true</sString>
-				</enabled>
-				<formulaName></formulaName>
-				<LoggingEvent>-1</LoggingEvent>
-				<modifier>
-					<addValue>
-						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
-						<returnType>float</returnType>
-						<sString>0</sString>
-					</addValue>
-					<multValue>
-						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
-						<returnType>float</returnType>
-						<sString>0</sString>
-					</multValue>
-					<stat>Life</stat>
-					<topModifier>false</topModifier>
-					<variable>A5_IncDurationCount</variable>
-				</modifier>
-				<providerName></providerName>
-			</PermanentStatModApplicator>
-		</Item>
-		<Item href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="5D590DCB-7DBF-4524-9C17-AFD5CB2992AD">
-			<SpellApplicator>
-				<applyTarget>ApplicatorTarget</applyTarget>
-				<caption>раздаем щиты</caption>
-				<enabled>
-					<compiledString></compiledString>
-					<returnType>bool</returnType>
-					<sString>true</sString>
-				</enabled>
-				<formulaName></formulaName>
-				<LoggingEvent>-1</LoggingEvent>
-				<providerName></providerName>
-				<spell href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="DABAE596-F2E0-471B-819A-FAB5E2E349AC">
-					<Spell>
-						<applicators>
-							<Item href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" />
-							<Item href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="26657BCD-1E5E-40BB-8981-14D955791B99">
-								<ProgramApplicator>
-									<applicators>
-										<Item>
-											<applicator href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="18D9143C-F6DE-4D0E-8228-B1B2B6B6D7DA">
-												<StatusApplicator>
-													<applicators>
-														<Item href="/Heroes/DefaultStatus/_HASTE_status.APLR" />
-													</applicators>
-													<applyTarget>ApplicatorTarget</applyTarget>
-													<behaviorFlags>0</behaviorFlags>
-													<caption>техстатус для отключения ускорения при отключении статуса А2</caption>
-													<customCounter>
-														<compiledString></compiledString>
-														<returnType>int</returnType>
-														<sString>0</sString>
-													</customCounter>
-													<customProgress>
-														<compiledString></compiledString>
-														<returnType>float</returnType>
-														<sString>-1.0</sString>
-													</customProgress>
-													<description textref="" />
-													<dispellPriority>NonDispellable</dispellPriority>
-													<effect>
-														<Item href="" />
-														<Item href="" />
-													</effect>
-													<enabled>
-														<compiledString>FRQAAAABAAAAHgAAAEdob3N0TG9yZF9BMl9TdGF0dXMAVYvsagGLRRBQaAAAAACLTQyLEYtNDIuCnAEAAP/QM8k7RRAPlcGKwV3D</compiledString>
-														<returnType>bool</returnType>
-														<sString>receiver.applGhostLord_A2_Status(UNIT) != pMisc</sString>
-													</enabled>
-													<flags>0</flags>
-													<formulaName></formulaName>
-													<image href="" />
-													<lifeTime>
-														<compiledString></compiledString>
-														<returnType>float</returnType>
-														<sString>-1.0</sString>
-													</lifeTime>
-													<LoggingEvent>-1</LoggingEvent>
-													<name textref="" />
-													<power>0</power>
-													<providerName></providerName>
-													<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
-													<stackCount>0</stackCount>
-													<startCondition>
-														<compiledString></compiledString>
-														<returnType>bool</returnType>
-														<sString>true</sString>
-													</startCondition>
-													<statusPosition>0</statusPosition>
-													<stopBehaviour>StopByChild</stopBehaviour>
-													<unstackableWith href="" />
-												</StatusApplicator>
-											</applicator>
-											<continueCondition>
-												<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
-												<returnType>bool</returnType>
-												<sString>0</sString>
-											</continueCondition>
-											<continueEvents>1</continueEvents>
-											<delay>
-												<compiledString></compiledString>
-												<returnType>float</returnType>
-												<sString>-1.0</sString>
-											</delay>
-											<stopCondition>
-												<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
-												<returnType>bool</returnType>
-												<sString>0</sString>
-											</stopCondition>
-											<stopEvents>0</stopEvents>
-										</Item>
-									</applicators>
-									<applyTarget>ApplicatorTarget</applyTarget>
-									<behaviorFlags>0</behaviorFlags>
-									<caption>(Ter) увеличить скорость</caption>
-									<effect>
-										<Item href="" />
-										<Item href="" />
-									</effect>
-									<enabled>
-										<compiledString>FQAAAAAAAAAAVYvsVotFCIsQi00Ii0JM/9CL8ItNCIsRi00Ii4KQAQAA/9A78A+UwF5dww==</compiledString>
-										<returnType>bool</returnType>
-										<sString>nt( true, false )</sString>
-									</enabled>
-									<formulaName></formulaName>
-									<lifeTime>
-										<compiledString></compiledString>
-										<returnType>float</returnType>
-										<sString>-1.0</sString>
-									</lifeTime>
-									<LoggingEvent>-1</LoggingEvent>
-									<providerName></providerName>
-									<startCondition>
-										<compiledString></compiledString>
-										<returnType>bool</returnType>
-										<sString>true</sString>
-									</startCondition>
-								</ProgramApplicator>
-							</Item>
-						</applicators>
-						<dispatch href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="7CFB746E-C375-4BF3-9D62-E7DA78000EBC">
-							<DispatchImmediate>
-								<alwaysApply>false</alwaysApply>
-								<applyEffect>
-									<Item href="" />
-									<Item href="" />
-								</applyEffect>
-								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
-								<applyEffectOrientation>Default</applyEffectOrientation>
-								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
-								<dieAfterApply>true</dieAfterApply>
-								<dispatchEffect>
-									<Item href="" />
-									<Item href="" />
-								</dispatchEffect>
-								<flags>0</flags>
-								<instantApply>false</instantApply>
-							</DispatchImmediate>
-						</dispatch>
-					</Spell>
-				</spell>
-				<spellTarget>ApplicatorTarget</spellTarget>
-				<targetSelector href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="A439A8D1-25F8-4613-8738-9DEB4BE13DD3">
-					<AreaTargetSelector>
-						<absolutePosition>
-							<x>0</x>
-							<y>0</y>
-						</absolutePosition>
-						<flags>0</flags>
-						<mode>SendOnce</mode>
-						<range>
-							<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
-							<returnType>float</returnType>
-							<sString>cRange</sString>
-						</range>
-						<targetFilter>1342177283</targetFilter>
-						<targetSelector href="" />
-					</AreaTargetSelector>
-				</targetSelector>
-			</SpellApplicator>
-		</Item>
 		<Item href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="05BE53BB-AABB-46D9-A600-4DB05A72D71E">
 			<StatModApplicator>
 				<applyTarget>ApplicatorTarget</applyTarget>
 				<behaviorFlags>0</behaviorFlags>
-				<caption></caption>
+				<caption>Статус ульта активна</caption>
 				<constraint>None</constraint>
 				<dontUpdate>false</dontUpdate>
 				<effect>
@@ -266,6 +75,94 @@
 				<statModName></statModName>
 			</StatModApplicator>
 		</Item>
+		<Item href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="ED905260-5D63-4545-A7CC-B3E8FDEFF8EF">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption> - обнуляем счетчик "A5_IncDurationCount"</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>A5_IncDurationCount</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="E69B4C36-970E-496F-A8A5-1DE618E3237F">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Накладываем плети на союзников</caption>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>false</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="96DBB6BE-ABB0-479D-BBD5-92796E06C8FB">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Class/GhostLord/status_A1_SpectralLashAlly.APLR" />
+						</applicators>
+						<dispatch href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="2C74CD33-466F-49AD-9ED4-248DB87DD49D">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="6C3663C1-929F-4FD0-B745-D525B84EB5DA">
+					<AreaTargetSelector>
+						<absolutePosition>
+							<x>0</x>
+							<y>0</y>
+						</absolutePosition>
+						<flags>0</flags>
+						<mode>SendOnce</mode>
+						<range>
+							<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange</sString>
+						</range>
+						<targetFilter>268435459</targetFilter>
+						<targetSelector href="" />
+					</AreaTargetSelector>
+				</targetSelector>
+			</SpellApplicator>
+		</Item>
 		<Item href="/Items/Talents/Class/GhostLord/status_A4u_2_DeathSpectre.APLR" />
 		<Item href="/Items/Talents/Class/GhostLord/A4_SetNewA1Duration.APLR" />
 		<Item href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="1D6B8218-C934-4FEC-805D-E90916391535">
@@ -295,6 +192,64 @@
 				<useListAs>ListAsRule</useListAs>
 			</RefreshCooldownApplicator>
 		</Item>
+		<Item href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="5D590DCB-7DBF-4524-9C17-AFD5CB2992AD">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>раздаем щиты</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="DABAE596-F2E0-471B-819A-FAB5E2E349AC">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Class/GhostLord/program_A2_SprectralShield.APLR" />
+						</applicators>
+						<dispatch href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="7CFB746E-C375-4BF3-9D62-E7DA78000EBC">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="A439A8D1-25F8-4613-8738-9DEB4BE13DD3">
+					<AreaTargetSelector>
+						<absolutePosition>
+							<x>0</x>
+							<y>0</y>
+						</absolutePosition>
+						<flags>0</flags>
+						<mode>SendOnce</mode>
+						<range>
+							<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange</sString>
+						</range>
+						<targetFilter>1342177283</targetFilter>
+						<targetSelector href="" />
+					</AreaTargetSelector>
+				</targetSelector>
+			</SpellApplicator>
+		</Item>
 	</applicators>
 	<askId>4</askId>
 	<autoTargetSelector href="" />
@@ -305,21 +260,10 @@
 		<returnType>float</returnType>
 		<sString>0.0f</sString>
 	</castAllowRange>
-	<castLimitations>
-		<Item href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="A7EB7B00-2EBF-41A0-8F7E-A9BBBB51D98E">
-			<ConditionCastLimitation>
-				<condition>
-					<compiledString>FR4AAAACAAAAIwAAADwAAABHaG9zdExvcmRfQTQAAAAAR2hvc3RMb3JkX0E0dQBVi+xRaAAAAACLRQiLEItNCIuCqAEAAP/QhcB1ImgQAAAAi00IixGLTQiLgqgBAAD/0IXAdQnHRfwBAAAA6wfHRfwAAAAAikX8i+Vdww==</compiledString>
-					<returnType>bool</returnType>
-					<sString>!sender.GetTalent( "GhostLord_A4" ) &amp;&amp; !sender.GetTalent( "GhostLord_A4u" )</sString>
-				</condition>
-				<uiEvent href="" />
-			</ConditionCastLimitation>
-		</Item>
-	</castLimitations>
+	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="712F35FF-ACF4-4556-B981-C9429D910426">
 			<ConditionFormula>
@@ -415,6 +359,8 @@
 				</Item>
 				<Item href="/Items/Talents/Class/GhostLord/const_A4_A3cd" />
 				<Item href="/Items/Talents/Class/GhostLord/const_A2u_EnergyFeedback" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A2_SUP_LifeFeedback" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A2_SUP_Heal" />
 				<Item href="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" id="122215AA-1AB3-41FA-9172-99284C5715D1">
 					<UnitConstant>
 						<name>Haste_Percent</name>
@@ -445,6 +391,19 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_DamagePerTick" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_DamagePerTick_TT" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_DmgHeal" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_DmgHeal_TT" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_DropRange" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_Duration" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_HeailngPerTick_TT" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_HealPerTick" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_Period" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_TotalDamage" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_TotalHeal" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1u_IncHealing" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1u_IncHealingPerTick" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -484,7 +443,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>19</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/GhostLord/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

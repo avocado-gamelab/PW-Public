@@ -3,6 +3,7 @@
 	<BackLink DBID="/Creeps/B/Range/PvE.CREEP" Count="1" />
 	<BackLink DBID="/Creeps/B/Range/PvP.CREEP" Count="1" />
 	<BackLink DBID="/Creeps/B/Range/Tutorial.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/B/Range/PvP_MidOnly.CREEP" Count="1" />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
 		<compiledString></compiledString>
@@ -22,7 +23,7 @@
 	<aoeType>None</aoeType>
 	<applicators>
 		<Item href="/Effects/Shots/HitsApplicators/Range.APLR" />
-		<Item href="/Creeps/DefaultStats/PvP/BaseAttackDmg_Creep.APLR" />
+		<Item href="/Creeps/DefaultStats/PvP/BaseAttackDmg_CreepRange.APLR" />
 	</applicators>
 	<autoTargetSelector href="" />
 	<caption></caption>
@@ -98,7 +99,7 @@
 	<passiveApplicators>
 		<Item href="/Creeps/Abilities/Units_BaseAttackMod.APLR" />
 		<Item href="/Creeps/Abilities/Units_FixAttackSpeed.APLR" />
-		<Item href="/Items/Talents/TalentKits/Redset5_1_Push/status_redset5_1_CreepBuffStatus.APLR" />
+		<Item href="/Creeps/Abilities/SpellDamageReduction/status_SpellDamageReduction.APLR" />
 	</passiveApplicators>
 	<requireLineOfSight>true</requireLineOfSight>
 	<shortDescription textref="" />

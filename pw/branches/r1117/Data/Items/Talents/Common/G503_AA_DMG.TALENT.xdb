@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set2" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set2_kit6" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/RedSet2_6_AAMod/RedSet2_6_AADmg.TALKIT" Count="2" />
+	<BackLink DBID="/Social/TalentsCollection" Count="2" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_LosTal7.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_RedSet2.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet2_2.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season9_Mediocre.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NY2020_MediocreList.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season13_MediocreList.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/Test_Satanic.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet2_8_HeroOffAA_test.TALENTSET" Count="2" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G503: Смертельное касание</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G503_AA_DMG.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G503_AA_DMG.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="3EE66576-C3D9-4FF5-8DE4-A931BE63EFD9">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSEAAAAEAAAAMAAAAEMAAABPAAAAaAAAAEc1MDNfa2l0Q291bnRlcl9UVAAARzUwMwAAAABHNTAzAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3B20AAAA3+D2xEF1WGgUAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoHAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdAnHRfQAAAAA6wfHRfQBAAAAikX0i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(cG503_kitCounter_TT&gt;0&amp;&amp;(tal("G503")))</sString>
+				</condition>
+				<name>FormNotActiveSession</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="83AB9F6E-84FD-470F-8118-B124E5D243E5">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSEAAAACAAAAMAAAAEoAAABHNTAzX2tpdENvdW50ZXJfVFQAAEc1MDNfTWF4Rm9ybQBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBQAAACLVRCLAotNEItQUN1d+P/S3F343+D2xAV6CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG503_kitCounter_TT&gt;cG503_MaxForm</sString>
+				</condition>
+				<name>FormOverChargedSession</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="DDDBCF11-8169-498B-8D1B-BD905F433149">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSkAAAAEAAAAOAAAAEsAAABXAAAAcAAAAEc1MDNfa2l0Q291bnRlcl9UVF9DYXN0bGUAAABHNTAzAAAAAEc1MDMAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcHbwAAADf4PbEQXVYaBwAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgkAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0CcdF9AAAAADrB8dF9AEAAACKRfSL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(cG503_kitCounter_TT_Castle&gt;0&amp;&amp;(tal("G503")))</sString>
+				</condition>
+				<name>FormNotActiveCastle</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="AC1032FE-2D4E-4629-84C4-54B349A57C7E">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSkAAAACAAAAOAAAAFIAAABHNTAzX2tpdENvdW50ZXJfVFRfQ2FzdGxlAAAARzUwM19NYXhGb3JtAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoHAAAAItVEIsCi00Qi1BQ3V34/9LcXfjf4PbEBXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG503_kitCounter_TT_Castle&gt;cG503_MaxForm</sString>
+				</condition>
+				<name>FormOverChargedCastle</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="35959BB3-F9A9-49E4-AE8D-8C9703B12ABF">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAQAAAAFYAAABHNTA1X0FjdGl2ZQBVi+yD7AyLRQiLEItNCIuCMAEAAP/Qi00IixGLTQiLgjQBAADdXfj/0Nxd+N/g9sRBeytoAAAAAItNCIsRi00Ii4KIAQAA/9DcHXgAAADf4PbEQXQJx0X0AAAAAOsHx0X0AQAAAIpF9IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sStrength &gt;= sIntellect || sender.vG505_Active&gt;0</sString>
+				</condition>
+				<name>G505_PhysDmg</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="A5F66FFB-A00C-4A96-8D82-D3EFC545A431">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAQAAAAFYAAABHNTA2X0FjdGl2ZQBVi+yD7AyLRQiLEItNCIuCMAEAAP/Qi00IixGLTQiLgjQBAADdXfj/0Nxd+N/g9sRBdCtoAAAAAItNCIsRi00Ii4KIAQAA/9DcHXgAAADf4PbEQXQJx0X0AAAAAOsHx0X0AQAAAIpF9IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sStrength &lt; sIntellect || sender.vG506_Active&gt;0</sString>
+				</condition>
+				<name>G506_MagDmg</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="92641EDA-AE73-4280-8210-F430F1E2B920">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRgAAAAEAAAATAAAAGIAAACbAAAAsQAAAEc1MDVfQWN0aXZlAEc1MDZfQWN0aXZlAFWL7IPsFItFCIsQi00Ii4IwAQAA/9CLTQiLEYtNCIuCNAEAAN1d+P/Q3F343+D2xEF7ImgAAAAAi00IixGLTQiLgogBAAD/0Nwd0wAAAN/g9sRBdViLTQiLEYtNCIuCMAEAAP/Qi00IixGLTQiLgjQBAADdXfD/0Nxd8N/g9sRBdCJoDAAAAItNCIsRi00Ii4KIAQAA/9DcHdMAAADf4PbEQXUJx0XsAQAAAOsHx0XsAAAAAIpF7IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>(sStrength &gt;= sIntellect || sender.vG505_Active&gt;0) &amp;&amp; (sStrength &lt; sIntellect || sender.vG506_Active&gt;0)</sString>
+				</condition>
+				<name>PhysAndMagDmg</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="5D2280BD-5076-4933-83D8-D25AB2A7CBFF">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTA3X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG507_Active&gt;0</sString>
+				</condition>
+				<name>G507_ArmorWillCut</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="96EFA999-4E95-4FC6-905C-676F468EA1A2">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgjABAAD/0ItNCIsRi00Ii4I0AQAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sStrength &gt;= sIntellect</sString>
+				</condition>
+				<name>G507_StaminaCut</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="58E003B6-0D99-4A8F-AD2A-0BC2A14750F4">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTA4X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG508_Active&gt;0</sString>
+				</condition>
+				<name>G508_Slow</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="45B947CE-DC3C-43B9-B46C-369327491C77">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTA0X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG504_Active&gt;0</sString>
+				</condition>
+				<name>G504_SectorDamage</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="8244A1E9-62CA-4B9D-A830-9B1694F99C63">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="5B8C407F-43B4-4F8C-9956-C41845C5D449">
+					<UnitConstant>
+						<name>G503_kitCounter_TT</name>
+						<var>
+							<compiledString>FQ0AAAACAAAAFAAAAC0AAABHNTAzAAAAAEc1MDMAVYvsg+wYaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgIAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCLTRCLEYtNEItCeP/QiUX020X0Udnu2RwkUdno2RwkD7ZN+1HdXezoGAAAAIPEDNxt7Nld6NlF6IvlXcMAAIA/AAAAAFWL7FEPtkUIhcB0CNlFDNld/OsG2UUQ2V382UX8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>mActivatedWithinKit - s(tal("G503"), 1 , 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="BA5E195C-5BAF-4256-9EF3-32530BA95303">
+					<UnitConstant>
+						<name>G503_kitCounter_TT_Castle</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvsUVHZ7tkcJItFEIsQi00Qi0J4/9CD6AGJRfzbRfxR2Rwk6AsAAACDxAiL5V3DAAAAAFWL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>max(mActivatedWithinKit - 1, 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="05EFD533-1867-4AD8-BE22-E7CEF633348B">
+					<UnitConstant>
+						<name>TECH_FormCapacity</name>
+						<var>
+							<compiledString>FQ0AAAABAAAAGQAAAEc1MDNfTWF4Rm9ybQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cG503_MaxForm</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/RedSet2_6_AAMod/const_G503_MaxForm" />
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="18B0E86A-52EB-4801-8CE2-D999E1E857E1">
+					<UnitConstant>
+						<name>BaseDamage</name>
+						<var>
+							<compiledString>FQgAAAABAAAAFQAAAFQyX1N0YXQAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3MDZXfzZRfyL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cT2_Stat * 2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="67748EE0-9787-467F-84C3-5B8E609F2E74">
+					<UnitConstant>
+						<name>MagDmg</name>
+						<var>
+							<compiledString>FT8AAAAIAAAAewAAAJcAAACtAAAAwQAAANQAAADnAAAA/QAAABEBAABCYXNlRGFtYWdlAABHNTA0X0FjdGl2ZQBHNTA0X0JvbnVzAABHNTA2X0FjdGl2ZQBHNTA2X0FkZERhbWFnZQBVi+yD7ByLRQiLEItNCIuCMAEAAP/Qi00IixGLTQiLgjQBAADdXfj/0Nxd+N/g9sRBdR+LTQxRi1UIUmgAAAAAi0UQixCLTRCLQlD/0Nld9OsF2e7ZXfRoDAAAAItNCIsRi00Ii4KIAQAA/9DcHU8BAADf4PbEQXUpi00MUYtVCFJoGAAAAItFEIsQi00Qi0JQ/9DcNUcBAADZ6N7B3V3s6wXZ6N1d7GgkAAAAi00IixGLTQiLgogBAAD/0NwdTwEAAN/g9sRBdR+LTQxRi1UIUmgwAAAAi0UQixCLTRCLQlD/0Nld6OsF2e7ZXejZRfTcTezYRejZXeTZReSL5V3DAAAAAAAA8D8AAAAAAABZQAAAAAAAAAAAAAAAAA==</compiledString>
+							<returnType>float</returnType>
+							<sString>(sStrength &lt; sIntellect ? cBaseDamage : 0) * (sender.vG504_Active &gt; 0 ? (1 + cG504_Bonus/100) : 1) + (sender.vG506_Active &gt; 0 ? cG506_AddDamage : 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="0D9FA715-72B4-4AAF-AFA0-BF07554497C3">
+					<UnitConstant>
+						<name>PhysDmg</name>
+						<var>
+							<compiledString>FT8AAAAIAAAAewAAAJcAAACtAAAAwQAAANQAAADnAAAA/QAAABEBAABCYXNlRGFtYWdlAABHNTA0X0FjdGl2ZQBHNTA0X0JvbnVzAABHNTA1X0FjdGl2ZQBHNTA1X0FkZERhbWFnZQBVi+yD7ByLRQiLEItNCIuCMAEAAP/Qi00IixGLTQiLgjQBAADdXfj/0Nxd+N/g9sRBeh+LTQxRi1UIUmgAAAAAi0UQixCLTRCLQlD/0Nld9OsF2e7ZXfRoDAAAAItNCIsRi00Ii4KIAQAA/9DcHU8BAADf4PbEQXUpi00MUYtVCFJoGAAAAItFEIsQi00Qi0JQ/9DcNUcBAADZ6N7B3V3s6wXZ6N1d7GgkAAAAi00IixGLTQiLgogBAAD/0NwdTwEAAN/g9sRBdR+LTQxRi1UIUmgwAAAAi0UQixCLTRCLQlD/0Nld6OsF2e7ZXejZRfTcTezYRejZXeTZReSL5V3DAAAAAAAA8D8AAAAAAABZQAAAAAAAAAAAAAAAAA==</compiledString>
+							<returnType>float</returnType>
+							<sString>(sStrength &gt;= sIntellect ? cBaseDamage : 0) * (sender.vG504_Active &gt; 0 ? (1 + cG504_Bonus/100) : 1) + (sender.vG505_Active &gt; 0 ? cG505_AddDamage : 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="FC872E2B-F9FE-47C3-A893-F97B33BF9A7F">
+					<UnitConstant>
+						<name>G504Condition</name>
+						<var>
+							<compiledString>FQwAAAACAAAAEQAAACcAAABHNTA0X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAADbRfyL5V3DAAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG504_Active &gt; 0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/RedSet2_6_AAMod/const_G505_AddDamage" />
+				<Item href="/Items/Talents/TalentKits/RedSet2_6_AAMod/const_G506_AddDamage" />
+				<Item href="/Items/Talents/TalentKits/RedSet2_6_AAMod/const_G507_DecDefTime" />
+				<Item href="/Items/Talents/TalentKits/RedSet2_6_AAMod/const_G507_DecDefAmount" />
+				<Item href="/Items/Talents/TalentKits/RedSet2_6_AAMod/const_G508_SlowDuration" />
+				<Item href="/Items/Talents/TalentKits/RedSet2_6_AAMod/const_G508_DecMoveSpeed" />
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="1C3055CF-EC87-4D6B-8855-BB31CDF3A48F">
+					<UnitConstant>
+						<name>ArmorCut_StartCondition</name>
+						<var>
+							<compiledString>FQwAAAACAAAAEwAAACkAAABHNTA3X0FjdGl2ZQBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9DcHXgAAADf4PbEQXU2i00IixGLTQiLgjABAAD/0ItNCIsRi00Ii4I0AQAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAANtF9IvlXcMAAAAAAAAAAA==</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG507_Active &gt; 0 &amp;&amp; sStrength &gt;= sIntellect</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="1CEE6BE7-1361-4126-828A-31F1E9353E29">
+					<UnitConstant>
+						<name>ArmorCut_Duration</name>
+						<var>
+							<compiledString>FRAAAAABAAAAHAAAAEc1MDdfRGVjRGVmVGltZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cG507_DecDefTime</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="F5C45B43-DEAE-4F6F-9D90-AB9F93A190AC">
+					<UnitConstant>
+						<name>ArmorCut_Amount</name>
+						<var>
+							<compiledString>FRIAAAABAAAAHgAAAEc1MDdfRGVjRGVmQW1vdW50AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cG507_DecDefAmount</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="4AA2DA97-B91B-4BFE-B564-64259CB49E8A">
+					<UnitConstant>
+						<name>WillCut_StartCondition</name>
+						<var>
+							<compiledString>FQwAAAACAAAAEwAAACkAAABHNTA3X0FjdGl2ZQBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9DcHXgAAADf4PbEQXU2i00IixGLTQiLgjABAAD/0ItNCIsRi00Ii4I0AQAA3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAANtF9IvlXcMAAAAAAAAAAA==</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG507_Active &gt; 0 &amp;&amp; sStrength &lt; sIntellect</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="BFA6E990-4816-417A-87BF-17BE12BBF76A">
+					<UnitConstant>
+						<name>WillCut_Duration</name>
+						<var>
+							<compiledString>FRAAAAABAAAAHAAAAEc1MDdfRGVjRGVmVGltZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cG507_DecDefTime</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="A6378709-8E8D-4B16-88E1-D9018E82162F">
+					<UnitConstant>
+						<name>WillCut_Amount</name>
+						<var>
+							<compiledString>FRIAAAABAAAAHgAAAEc1MDdfRGVjRGVmQW1vdW50AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cG507_DecDefAmount</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="52BBB1F8-38F8-4379-B8CA-A7A004FA9F22">
+					<UnitConstant>
+						<name>Slow_StartCondition</name>
+						<var>
+							<compiledString>FQwAAAACAAAAEQAAACcAAABHNTA4X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAADbRfyL5V3DAAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG508_Active &gt; 0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="2A15E098-5A09-454F-8A54-B9FBD4D5C917">
+					<UnitConstant>
+						<name>Slow_Duration</name>
+						<var>
+							<compiledString>FRIAAAABAAAAHgAAAEc1MDhfU2xvd0R1cmF0aW9uAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cG508_SlowDuration</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="713A796E-9667-4CB0-9A92-9F1742B3803A">
+					<UnitConstant>
+						<name>Dec_MoveSpeed</name>
+						<var>
+							<compiledString>FRIAAAABAAAAHgAAAEc1MDhfRGVjTW92ZVNwZWVkAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cG508_DecMoveSpeed</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="6161D6E8-275E-4486-AF75-DD19D6422B15">
+					<UnitConstant>
+						<name>MortalStrike_StartCondition</name>
+						<var>
+							<compiledString>FQwAAAACAAAAEQAAACcAAABHNTA4X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAADbRfyL5V3DAAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG508_Active &gt; 0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="8FF2B8D1-97EC-4254-BC0F-9BB9EBA83105">
+					<UnitConstant>
+						<name>MortalStrike_Amount</name>
+						<var>
+							<compiledString>FRcAAAAFAAAAHgAAADQAAABIAAAAWwAAAG8AAABHNTA0X0FjdGl2ZQBHNTA0X0JvbnVzAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0NwdmAAAAN/g9sRBdSmLTQxRi1UIUmgMAAAAi0UQixCLTRCLQlD/0Nw1kAAAANno3sHdXfjrBdno3V343QWAAAAA3E342V302UX0i+VdwwAAAAAAADRAAAAAAAAA8D8AAAAAAABZQAAAAAAAAAAA</compiledString>
+							<returnType>float</returnType>
+							<sString>20 * (sender.vG504_Active &gt; 0 ? (1 + cG504_Bonus/100) : 1)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="9E5247C5-58B1-410A-A4AF-49B60637CCD5">
+					<UnitConstant>
+						<name>MortalStrike_Duration</name>
+						<var>
+							<compiledString>FRIAAAABAAAAHgAAAEc1MDhfU2xvd0R1cmF0aW9uAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cG508_SlowDuration</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/RedSet2_6_AAMod/const_G504_Bonus" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G503_AA_DMG.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>5</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_503.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G503_AA_DMG.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="386A131D-8E2F-41EF-B293-4D80986311DA">
+			<AbilityUpgradeApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="12CCB64F-33C7-438B-B028-814B26A1B8E7">
+						<SpellApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<caption>улучшение автоатаки</caption>
+							<enabled>
+								<compiledString>FQUAAAACAAAAMgAAAFYAAABXYXJkAFWL7FFR2ejZHCRR2e7ZHCRqAYtFDIsQi00Mi0JY/9APtshR6GkAAACDxAzcHYYAAADf4PbERHs7i1UMiwKLTQyLUFD/0oP4EXQpagCLRRBQaAAAAACLTQyLEYtNDIuCnAEAAP/QO0UQdQnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAAAAAAAAAAgD9Vi+xRD7ZFCIXAdAjZRQzZXfzrBtlFENld/NlF/IvlXcM=</compiledString>
+								<returnType>bool</returnType>
+								<sString>ut_bldg(false, true) &amp;&amp; rUnitKind != 17 &amp;&amp; receiver.applWard(GLOBAL) == pMisc</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<LoggingEvent>-1</LoggingEvent>
+							<providerName></providerName>
+							<spell href="/Items/Talents/Common/G503_AA_DMG.TALENT" id="3411CA6E-710A-44FC-AA50-F179E02BCCBD">
+								<Spell parent="/Items/Talents/TalentKits/RedSet2_6_AAMod/spell_G503_AAMod.SPLL" />
+							</spell>
+							<spellTarget>ApplicatorTarget</spellTarget>
+							<targetSelector href="" />
+						</SpellApplicator>
+					</Item>
+				</applicators>
+				<applyCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</applyCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>16</behaviorFlags>
+				<caption>улучшение автоатаки</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flags>0</flags>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<persistentApplicators />
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents />
+				<targetAbility>BaseAttack</targetAbility>
+				<useListAs>ListAsRule</useListAs>
+			</AbilityUpgradeApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G503</persistentId>
+	<prerequisiteTalents />
+	<rarity>outstanding</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G503_AA_DMG.TALENT_shortDescription.txt" />
+	<talentRollGroups>16</talentRollGroups>
+	<talentStats />
+	<targetType>136258047</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

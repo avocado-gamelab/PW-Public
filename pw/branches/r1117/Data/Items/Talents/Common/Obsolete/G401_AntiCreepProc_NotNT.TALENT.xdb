@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar5_Set4" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="2" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_OrangeSet4.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/SpeedBoots.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet14.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet15.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSetNewUltimates1.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G401: Превосходство лазутчика</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G401_AntiCreepProc_NotNT.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/Obsolete/G401_AntiCreepProc_NotNT.TALENT" id="8B8F4365-6595-4256-B606-A6FE4DD966CF">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRMAAAACAAAAGAAAAC4AAABBbnRpQ3JlZXBUYWtlUHJpbWUAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdUAAAAN/g9sRBdQnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vAntiCreepTakePrime&gt;0</sString>
+				</condition>
+				<name>AntiCreepTakePrime</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G401_AntiCreepProc_NotNT.TALENT" id="F5A87212-A64A-4753-BB97-A81AFF034B88">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G401_AntiCreepProc_NotNT.TALENT" id="6CB26310-E4C2-41C5-9708-AA08425609BB">
+					<UnitConstant>
+						<name>AddDamage</name>
+						<var>
+							<compiledString>FSEAAAACAAAAWwAAAHgAAABHNDAxX0Jhc2VEYW1hZ2UAQWRkX0RhbWFnZV9Ob3ROVABVi+yD7AhWi0UIixCLTQiLQkz/0Ivwi00IixGLTQiLgpABAAD/0DvwdQfZ7tld/Osdi00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ/9DZXfyLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlD/0NhF/Nld+NlF+F6L5V3DAAAAAA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cG401_BaseDamage + nt(0, cAdd_Damage_NotNT)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G401_AntiCreepProc_NotNT.TALENT" id="CE3920E5-4130-4371-A641-F3FC793733F5">
+					<UnitConstant>
+						<name>AbilityChance</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>100</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G401_AntiCreepProc_NotNT.TALENT" id="ECF26D27-246B-4452-B1E4-7B6C6CED42BD">
+					<UnitConstant>
+						<name>TECH_AbilityProc</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G401_AntiCreepProc_NotNT.TALENT" id="3A39AA6D-0DCD-4A74-B221-8D6E30ED8786">
+					<UnitConstant>
+						<name>Add_LifeRegAbs_NotNT</name>
+						<var>
+							<compiledString>FQAAAAAEAAEACQAAABMAAAApAAAAQQAAAIEAAABVi+yD7AhR2QVbAAAA2RwkUdkFVwAAANkcJItFEIsQi00Qi0Js/9DcDU8AAADZXfzZRfxR2Rwk6CMAAACDxATcNU8AAADZXfjZRfiL5V3DAAAAAAAAJEBmZmY/zcxMPVWL7FHZRQjZHCToBQAAAIPEBF3DVYvsUdlFCIPsCN0cJOhv////g8QI2V382UX8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>floor(refineScale(0.9, 0.05)*10)/10</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G401_AntiCreepProc_NotNT.TALENT" id="95798B4F-5471-4C8A-88CB-07F91C28A6FF">
+					<UnitConstant>
+						<name>Add_Damage_NotNT</name>
+						<var>
+							<compiledString>FQAAAAACAAEABgAAABAAAABcAAAAVYvsUdkFNgAAANkcJFHZBTIAAADZHCSLRRCLEItNEItCbP/QUdkcJOgNAAAAg8QEXcMAAKBAAAAAP1WL7FHZRQjZHCToBQAAAIPEBF3DVYvsUdlFCIPsCN0cJOiU////g8QI2V382UX8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>floor(refineScale(5, 0.5))</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G401_AntiCreepProc_NotNT.TALENT" id="36B5586A-5A3F-4658-9929-AF0487F83194">
+					<UnitConstant>
+						<name>G401_BaseDamage</name>
+						<var>
+							<compiledString>FQAAAAABAAEADAAAAFgAAABVi+xR2ejZHCRR2QUuAAAA2Rwki0UQixCLTRCLQmz/0FHZHCToDQAAAIPEBF3DAABAQQAAgD9Vi+xR2UUI2Rwk6AUAAACDxARdw1WL7FHZRQiD7AjdHCTomP///4PECNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>floor(refineScale(12, 1))</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G401_AntiCreepProc_NotNT.TALENT" id="0EE551BC-D99F-4531-8D46-1B68DED13079">
+					<UnitConstant>
+						<name>NaftaBonus</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G401_AntiCreepProc_NotNT.TALENT" id="1ED3CEE6-CF18-4170-94FA-622A396A877D">
+					<UnitConstant>
+						<name>NaftaCap</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAMAoRA==</compiledString>
+							<returnType>float</returnType>
+							<sString>675</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G401_AntiCreepProc_NotNT.TALENT" id="38CDFE0C-E7DC-48CA-96E4-39E4CEB264FB">
+					<UnitConstant>
+						<name>TT_AntiCreepTakePrime</name>
+						<var>
+							<compiledString>FRMAAAABAAAAFwAAAEFudGlDcmVlcFRha2VQcmltZQBVi+xoAAAAAItFCIsQi00Ii4KIAQAA/9Bdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vAntiCreepTakePrime</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G401_AntiCreepProc_NotNT.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_401.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G401_AntiCreepProc_NotNT.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/Obsolete/G401_AntiCreepProc_NotNT.TALENT" id="7852ED27-0341-4E66-8CFF-5FE4C09F8095">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>G401_Add_Damage_Variable</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName>G401_Add_Damage</formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQoAAAABAAAAFgAAAEFkZERhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<returnType>float</returnType>
+						<sString>cAddDamage</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G401_Add_Damage</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Applicators/status_G401_AntiCreepProc.APLR" />
+	</passiveApplicators>
+	<persistentId>G401</persistentId>
+	<prerequisiteTalents />
+	<rarity>ordinary</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>136258047</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

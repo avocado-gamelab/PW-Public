@@ -112,6 +112,7 @@
 			</SpellSwitchApplicator>
 		</Item>
 		<Item href="/GameLogic/GeneralApplicators/BaseAttackDmg_Hero.APLR" />
+		<Item href="/Heroes/status_TowerMultiplayerDamage.APLR" />
 	</applicators>
 	<autoTargetSelector href="" />
 	<caption></caption>
@@ -125,7 +126,13 @@
 	<compiledDescriptionA textref="" />
 	<compiledDescriptionB textref="" />
 	<conditionFormulas />
-	<constants href="" />
+	<constants href="/Heroes/MagicGirl/_.ATCK" id="C70270D7-72D8-4433-A405-066834DD4CCD">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Heroes/const_TowerDamgeBuff" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
 	<cooldownTime>
 		<compiledString></compiledString>
 		<returnType>float</returnType>

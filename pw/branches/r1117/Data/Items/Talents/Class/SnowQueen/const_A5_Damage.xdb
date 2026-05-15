@@ -1,13 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <UnitConstant>
-	<BackLink DBID="/Heroes/SnowQueen/_.HROB" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A4_2.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A5.TALENT" Count="1" />
+	<BackLink DBID="/Heroes/SnowQueen/_.HROB" Count="1" />
 	<name>A5_Damage</name>
 	<var>
-		<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCMAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAADIQQAAOEM=</compiledString>
+		<compiledString>FUEAAAAEAAAAUAAAAGgAAACWAAAArwAAAEE1X0Jhc2VEYW1hZ2UAAABTbm93UXVlZW5fQTMAAAAAQTNfU3Ryb25nQXR0YWNrRGFtYWdlTXVsdFBlcmNlbnQAVYvsg+wYi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JqAYtFEFBoEAAAAItNDIsRi00Mi4KcAQAA3V34/9AzyTtFEA+VwYlN9NtF9ItVDFKLRQhQaCAAAACLTRCLEYtNEItCUN1d7P/Q3E3s3DXMAAAA2ejewdxN+Nld6NlF6IvlXcMAAAAAAADwPwAAAAAAAFlA</compiledString>
 		<returnType>float</returnType>
-		<sString>damageScale( sStrength, 25, 184 )</sString>
+		<sString>cA5_BaseDamage * (1 + (receiver.applSnowQueen_A3(UNIT) != pMisc) * cA3_StrongAttackDamageMultPercent / 100)</sString>
 	</var>
 </UnitConstant>

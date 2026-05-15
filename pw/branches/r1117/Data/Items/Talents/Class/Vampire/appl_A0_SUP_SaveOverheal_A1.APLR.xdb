@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PermanentStatModApplicator>
+	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A1.TALENT" Count="1" />
+	<applyTarget>AbilityOwner</applyTarget>
+	<caption>Запоминаем оверхил от росчерка</caption>
+	<customApplyType>None</customApplyType>
+	<enabled>
+		<compiledString>FRYAAAABAAAAIAAAAFZhbXBpcmVfRXRlcm5hbEh1bmdlcgBVi+xqAYtFEFBoAAAAAItNCIsRi00Ii4KcAQAA/9AzyTtFEA+VwYrBXcM=</compiledString>
+		<returnType>bool</returnType>
+		<sString>sender.applVampire_EternalHunger(UNIT) != pMisc</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<LoggingEvent>-1</LoggingEvent>
+	<modifier>
+		<addValue>
+			<compiledString>FY8AAAAIAAAAlgAAAK8AAAD1AAAAKQEAAGsBAACDAQAApAEAAMIBAABWYW1waXJlQTFEYW1hZ2U6ZGFtYWdlRGVhbGVkAAAAAFZhbXBpcmVfQTF1AFZhbXBpcmVfQTF1AFZhbXBpcmVBMXVEYW1hZ2U6ZGFtYWdlRGVhbGVkAAAAQTBfTGlmZURyYWluUGVyY2VudABBMF9TVVBfSGVhbFNoaWVsZENvbnZlcnNpb25QZXJjZW50AFWL7IPsRGggAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoLAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdCeLVRCLAotNEItQSP/SiUX0aDgAAACLRfSLEItN9ItCVP/Q2V3w6wXZ7tld8ItNEIsRi00Qi0JI/9CJReyLTQxRi1UIUmhsAAAAi0UQixCLTRCLQlD/0FHZ7tkcJItNDIsRi00MiwLdXeT/0ItNDIsRi00Mi0IM3V3c/9DcZdyLTQxRi1UIUmhYAAAAi0UQixCLTRCLQlDdXdT/0NlF8GgAAAAAi03sixGLTeyLQlTZyd1dzN1dxP/Q3EXE3E3M3DXYAQAA3GXU2V3A2UXAUdkcJOgqAAAAg8QI3E3k3A3QAQAA2V282UW8i+Vdw3sUrkfheoQ/AAAAAAAAWUAAAAAAVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+			<returnType>float</returnType>
+			<sString>max((appl.parent.GetVariable("VampireA1Damage:damageDealed") + (tal("Vampire_A1u") ? appl.parent.GetVariable("VampireA1uDamage:damageDealed") : 0)) * cA0_LifeDrainPercent / 100 - (rMaxLife - rLife), 0) * cA0_SUP_HealShieldConversionPercent * 0.01</sString>
+		</addValue>
+		<multValue>
+			<compiledString></compiledString>
+			<returnType>float</returnType>
+			<sString>1.0f</sString>
+		</multValue>
+		<stat>Life</stat>
+		<topModifier>false</topModifier>
+		<variable>Vampire_BloodShield</variable>
+	</modifier>
+	<providerName></providerName>
+</PermanentStatModApplicator>

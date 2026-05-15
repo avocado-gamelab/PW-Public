@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Vampire.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Vampire_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Vampire.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Vampire_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Vampire_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A3u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Vampire_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/TestSetKits.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Vampire/Duel_Asp.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Vampire/Duel_Int.TALENTSET" Count="1" />
@@ -16,6 +16,7 @@
 	<BackLink DBID="/Test/Talents/Vampire/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Vampire/Epic_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Vampire/Epic_Str_Ult2.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A3_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -359,6 +360,7 @@
 																</targetSelector>
 															</SpellApplicator>
 														</Item>
+														<Item href="/Items/Talents/Class/Vampire/appl_A0_SUP_SaveOverheal_A3.APLR" />
 														<Item href="/Items/Talents/Class/Vampire/Ability_A3.TALENT" id="7039DFA0-B5EC-477A-9868-3F75A0F4C042">
 															<HealApplicator>
 																<amount>
@@ -450,7 +452,7 @@
 										<SpellPeriodicallyApplicator>
 											<applyTarget>ApplicatorTarget</applyTarget>
 											<behaviorFlags>2</behaviorFlags>
-											<caption>Периодически вешаем статус на себя</caption>
+											<caption>Периодически вешаем статус на союзников</caption>
 											<effect>
 												<Item href="" />
 												<Item href="" />
@@ -483,9 +485,9 @@
 																	<Item href="/Items/Talents/Class/Vampire/Ability_A3.TALENT" id="19E12D09-04BB-4A65-A506-C2DAC5C8DBB1">
 																		<InvisibilityApplicator parent="/GameLogic/GeneralApplicators/Invisibility.APLR">
 																			<enabled>
-																				<compiledString>FQ8AAAABAAEATgAAADABAABBM19JbnZpc1JhZGl1cwBVi+yD7CiLRRCLEItNEItCSP/QiUXsi03sixGLTeyLQkj/0IlF6ItN6IsRi03oi0JI/9CJReSLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlD/0I1N+FGLVeSLAotN5ItQWN1d3P/SUI1F8FCLTQiLEYtNCIuCjAEAAP/QUOgkAAAAg8QI3F3c3+D2xEF6CcdF2AEAAADrB8dF2AAAAACKRdiL5V3DVYvsg+wUi0UI2UAEi00M2GEE2V302UX0UdkcJItVCNkCi0UM2CDZXfDZRfBR2RwkjU346FcAAADZRfjYTfjZRfzYTfzewdld7NlF7FHZHCToBwAAAIPEBIvlXcNVi+xR2UUI2Rwk6AUAAACDxARdw1WL7FHZRQiD7AjdHCToqP7//4PECNld/NlF/IvlXcNVi+xRiU38i0X82UUI2RiLTfzZRQzZWQSLRfyL5V3CCAA=</compiledString>
+																				<compiledString>FQ8AAAABAAEATgAAADABAABBM19JbnZpc1JhZGl1cwBVi+yD7CiLRRCLEItNEItCSP/QiUXsi03sixGLTeyLQkj/0IlF6ItN6IsRi03oi0JI/9CJReSLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlD/0I1N+FGLVeSLAotN5ItQWN1d3P/SUI1F8FCLTQyLEYtNDIuCjAEAAP/QUOgkAAAAg8QI3F3c3+D2xEF6CcdF2AEAAADrB8dF2AAAAACKRdiL5V3DVYvsg+wUi0UI2UAEi00M2GEE2V302UX0UdkcJItVCNkCi0UM2CDZXfDZRfBR2RwkjU346FcAAADZRfjYTfjZRfzYTfzewdld7NlF7FHZHCToBwAAAIPEBIvlXcNVi+xR2UUI2Rwk6AUAAACDxARdw1WL7FHZRQiD7AjdHCToqP7//4PECNld/NlF/IvlXcNVi+xRiU38i0X82UUI2RiLTfzZRQzZWQSLRfyL5V3CCAA=</compiledString>
 																				<returnType>bool</returnType>
-																				<sString>d(sPos, appl.parent.parent.parent.TargetPos) &lt;= cA3_InvisRadius</sString>
+																				<sString>d(rPos, appl.parent.parent.parent.TargetPos) &lt;= cA3_InvisRadius</sString>
 																			</enabled>
 																			<onBecomeInvisible href="" />
 																		</InvisibilityApplicator>
@@ -493,14 +495,13 @@
 																	<Item skip="1" />
 																	<Item delete="1" />
 																</applicators>
-																<applyTarget>AbilityOwner</applyTarget>
 																<behaviorFlags>147</behaviorFlags>
 																<caption>Нестандартный статус "Невидимость" (Invisibility_Duration)</caption>
 																<description textref="" />
 																<enabled>
-																	<compiledString>FRkAAAADAAEASAAAAJYAAACsAAAAVAEAAEEzX0ludmlzUmFkaXVzAABWYW1wQTNPbgBVi+yD7CSLRRCLEItNEItCSP/QiUXsi03sixGLTeyLQkj/0IlF6ItNDFGLVQhSaAAAAACLRRCLEItNEItCUP/QjU34UYtV6IsCi03oi1BY3V3g/9JQjUXwUItNCIsRi00Ii4KMAQAA/9BQ6E4AAACDxAjcXeDf4PbEQXoraBAAAACLTQiLEYtNCIuCiAEAAP/Q3B3OAAAA3+D2xAF1CcdF3AEAAADrB8dF3AAAAACKRdyL5V3DAAAAAAAA8D9Vi+yD7BSLRQjZQASLTQzYYQTZXfTZRfRR2Rwki1UI2QKLRQzYINld8NlF8FHZHCSNTfjoVwAAANlF+NhN+NlF/NhN/N7B2V3s2UXsUdkcJOgHAAAAg8QEi+Vdw1WL7FHZRQjZHCToBQAAAIPEBF3DVYvsUdlFCIPsCN0cJOiE/v//g8QI2V382UX8i+Vdw1WL7FGJTfyLRfzZRQjZGItN/NlFDNlZBItF/IvlXcIIAA==</compiledString>
+																	<compiledString>FRkAAAADAAEAOAAAAIYAAACcAAAARAEAAEEzX0ludmlzUmFkaXVzAABWYW1wQTNPbgBVi+yD7CCLRRCLEItNEItCSP/QiUXsi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ/9CNTfhRi1XsiwKLTeyLUFjdXeT/0lCNRfBQi00MixGLTQyLgowBAAD/0FDoTgAAAIPECNxd5N/g9sRBeitoEAAAAItNCIsRi00Ii4KIAQAA/9DcHb4AAADf4PbEAXUJx0XgAQAAAOsHx0XgAAAAAIpF4IvlXcMAAAAAAADwP1WL7IPsFItFCNlABItNDNhhBNld9NlF9FHZHCSLVQjZAotFDNgg2V3w2UXwUdkcJI1N+OhXAAAA2UX42E342UX82E383sHZXezZRexR2Rwk6AcAAACDxASL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6JT+//+DxAjZXfzZRfyL5V3DVYvsUYlN/ItF/NlFCNkYi0382UUM2VkEi0X8i+VdwggA</compiledString>
 																	<returnType>bool</returnType>
-																	<sString>d(sPos, appl.parent.parent.TargetPos) &lt;= cA3_InvisRadius &amp;&amp; sender.vVampA3On &gt;= 1</sString>
+																	<sString>d(rPos, appl.parent.TargetPos) &lt;= cA3_InvisRadius &amp;&amp; sender.vVampA3On &gt;= 1</sString>
 																</enabled>
 																<formulaName>VampireA3Invisibility</formulaName>
 																<image href="" />
@@ -536,7 +537,7 @@
 												</Spell>
 											</spell>
 											<startCondition>
-												<compiledString></compiledString>
+												<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
 												<returnType>bool</returnType>
 												<sString>true</sString>
 											</startCondition>
@@ -545,7 +546,24 @@
 												<returnType>float</returnType>
 												<sString>0.0f</sString>
 											</startOffset>
-											<targetSelector href="" />
+											<targetSelector href="/Items/Talents/Class/Vampire/Ability_A3.TALENT" id="DD761F7B-3367-4B41-B6F8-3C42FD787DC9">
+												<ConditionTargetSelector>
+													<condition>
+														<compiledString>FSkAAAAEAAAAMAAAAEkAAACIAAAAngAAAFZhbXBpcmVfQTNfU1VQAABWYW1waXJlX0EzX1NVUAAAVmFtcEEzT24AVYvsg+wQaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0CcdF9AEAAADrOGggAAAAi1UMiwKLTQyLkIgBAAD/0twdxgAAAN/g9sQBdQnHRfABAAAA6wfHRfAAAAAAi0XwiUX0ikX0i+VdwwAAAAAAAPA/</compiledString>
+														<returnType>bool</returnType>
+														<sString>tal("Vampire_A3_SUP") ? true : receiver.vVampA3On &gt;= 1</sString>
+													</condition>
+													<flags>0</flags>
+													<mode>Normal</mode>
+													<targetSelector href="/Items/Talents/Class/Vampire/Ability_A3.TALENT" id="711BAA3F-C6E8-46A5-8F51-4894737BB01D">
+														<HeroEnumerator>
+															<flags>0</flags>
+															<mode>Normal</mode>
+															<targetFilter>268435459</targetFilter>
+														</HeroEnumerator>
+													</targetSelector>
+												</ConditionTargetSelector>
+											</targetSelector>
 										</SpellPeriodicallyApplicator>
 									</Item>
 								</persistentApplicators>
@@ -569,8 +587,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Vampire/Ability_A3.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Vampire/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Vampire/Ability_A3.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Vampire/Ability_A3.TALENT" id="066B67AB-0984-40B0-9007-FC4B39E12D9B">
 			<ConditionFormula>
@@ -582,11 +600,23 @@
 				<name>Vampire_A3u</name>
 			</ConditionFormula>
 		</Item>
+		<Item href="/Items/Talents/Class/Vampire/Ability_A3.TALENT" id="D9C508ED-D762-4B35-B974-2AD22F2BC1D9">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR8AAAACAAAAJgAAAD8AAABWYW1waXJlX0EzX1NVUAAAVmFtcGlyZV9BM19TVVAAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwIPAAYvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Vampire_A3_SUP") == false</sString>
+				</condition>
+				<name>Vampire_A3_SUP</name>
+			</ConditionFormula>
+		</Item>
 	</conditionFormulas>
 	<conflictingTalents />
 	<constants href="/Items/Talents/Class/Vampire/Ability_A3.TALENT" id="14594664-3FCB-488A-91B6-432BFE35BD08">
 		<UnitConstantsContainer>
 			<vars>
+				<Item href="/Items/Talents/Class/Vampire/const_A0_BaseLifeDrainPercent" />
+				<Item href="/Items/Talents/Class/Vampire/const_A0_SUP_AdditionalLifeDrainPercent" />
 				<Item href="/Items/Talents/Class/Vampire/const_A0_LifeDrainPercent" />
 				<Item href="/Items/Talents/Class/Vampire/const_A0_TerrainLifeCostModifier" />
 				<Item href="/Items/Talents/Class/Vampire/Ability_A3.TALENT" id="23E0A225-32D8-4FC2-B792-7AB3C0D70729">
@@ -603,9 +633,9 @@
 					<UnitConstant>
 						<name>A3_Cooldown</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQQ==</compiledString>
+							<compiledString>FTMAAAAEAAAAOgAAAFMAAACTAAAArAAAAFZhbXBpcmVfQTNfU1VQAABWYW1waXJlX0EzX1NVUAAAQTNfU1VQX0NEUmVkdWN0aW9uAFWL7IPsGGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4lN9NtF9ItVDFKLRQhQaCAAAACLTRCLEYtNEItCUN1d7P/Q3E3s3C26AAAA2V3o2UXoi+VdwwAAAAAAADlA</compiledString>
 							<returnType>float</returnType>
-							<sString>25</sString>
+							<sString>25 - (tal("Vampire_A3_SUP") * cA3_SUP_CDReduction)</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -633,9 +663,9 @@
 					<UnitConstant>
 						<name>A3_DamagePerSecond</name>
 						<var>
-							<compiledString>FQwAAAADAAAAFwAAACEAAABWAAAAQTNfRHVyYXRpb24AVYvsg+wMagFR2QV7AAAA2RwkUdkFdwAAANkcJGoAi0UIixCLTQiLgjQBAAD/0FHZHCRqAYtNEIsRi00Qi0Jg/9CLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlDdXfj/0Nx9+Nld9NlF9IvlXcMAALpCAAAvRA==</compiledString>
+							<compiledString>FQwAAAADAAAAFwAAACEAAABWAAAAQTNfRHVyYXRpb24AVYvsg+wMagFR2QV7AAAA2RwkUdkFdwAAANkcJGoAi0UIixCLTQiLgjQBAAD/0FHZHCRqAYtNEIsRi00Qi0Jg/9CLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlDdXfj/0Nx9+Nld9NlF9IvlXcMAANxCAABcRA==</compiledString>
 							<returnType>float</returnType>
-							<sString>damageScale(sIntellect, 93, 700)/cA3_Duration</sString>
+							<sString>damageScale(sIntellect, 110, 880)/cA3_Duration</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -700,6 +730,9 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/Vampire/const_A0_SUP_HealShieldConversionPercent" />
+				<Item href="/Items/Talents/Class/Vampire/const_A0_SUP_LifeDrainMultiplier" />
+				<Item href="/Items/Talents/Class/Vampire/const_A3_SUP_CDReduction" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -739,7 +772,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>16387</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Vampire/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

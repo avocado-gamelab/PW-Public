@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Warlord_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Warlord/Ability_A4.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Warlord/Ability_A4_2u.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Warlord/Ability_A4u.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Warlord_Mighty.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="7821C60C-EB79-41BB-8318-44C10B178F2F">
+			<SummonApplicator>
+				<applicators>
+					<Item href="/Heroes/DefaultStatus/_MasterStatConnect_Life.APLR" />
+					<Item href="/Heroes/DefaultStatus/_MasterStatConnect_Strength.APLR" />
+					<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="5E1D3491-E39C-455B-9176-BBDA11C873A1">
+						<StatModApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption> -- connection to master: Dexterity</caption>
+							<constraint>None</constraint>
+							<dontUpdate>false</dontUpdate>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<modifier>
+								<addValue>
+									<compiledString>FR4AAAABAAAAKgAAAE1hc3RlclN0YXRDb25uZWN0ZWRfRGV4dGVyaXR5AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+									<returnType>float</returnType>
+									<sString>cMasterStatConnected_Dexterity</sString>
+								</addValue>
+								<multValue>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>1.0f</sString>
+								</multValue>
+								<stat>Dexterity</stat>
+								<topModifier>false</topModifier>
+								<variable></variable>
+							</modifier>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<statModName></statModName>
+						</StatModApplicator>
+					</Item>
+					<Item href="/Heroes/DefaultStatus/_MasterStatConnect_AttackSpeed.APLR" />
+					<Item href="/Heroes/DefaultStatus/_MasterStatConnect_Stamina.APLR" />
+					<Item href="/Heroes/DefaultStatus/_MasterStatConnect_Will.APLR" />
+					<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="AAE82303-54D9-4E5B-9BAE-B1E4CED7279D">
+						<StatModApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>152</behaviorFlags>
+							<caption> -- connection to master: MoveSpeed</caption>
+							<constraint>None</constraint>
+							<dontUpdate>false</dontUpdate>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+								<returnType>bool</returnType>
+								<sString>false</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<modifier>
+								<addValue>
+									<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+									<returnType>float</returnType>
+									<sString>0</sString>
+								</addValue>
+								<multValue>
+									<compiledString>FQAAAAAAAAAAVYvsi0UIixCLTQiLQhj/0FHZHCSLTQiLEYtNCIuCiAAAAP/QUdkcJOgFAAAAg8QIXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+									<returnType>float</returnType>
+									<sString>max(sBaseMoveSpeed, sMoveSpeed)</sString>
+								</multValue>
+								<stat>MoveSpeed</stat>
+								<topModifier>false</topModifier>
+								<variable></variable>
+							</modifier>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<statModName></statModName>
+						</StatModApplicator>
+					</Item>
+					<Item href="/Heroes/DefaultStatus/_MasterStatConnect_Level.APLR" />
+					<Item href="/Heroes/DefaultStatus/SummonsInvisible.APLR" />
+					<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="65DA757C-1895-4333-BFD5-0023CE4C0A6E">
+						<GhostMoveApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>1</behaviorFlags>
+							<caption>Ghost mode</caption>
+							<collisionFlags>1</collisionFlags>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<providerName></providerName>
+							<pushUnits>true</pushUnits>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+						</GhostMoveApplicator>
+					</Item>
+					<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="953DA63B-C6A8-4140-9BA7-5EED030F785D">
+						<PermanentStatModApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<caption>Записывалка параметра IsUncontrollable</caption>
+							<customApplyType>None</customApplyType>
+							<enabled>
+								<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<LoggingEvent>-1</LoggingEvent>
+							<modifier>
+								<addValue>
+									<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+									<returnType>float</returnType>
+									<sString>1.0f</sString>
+								</addValue>
+								<multValue>
+									<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+									<returnType>float</returnType>
+									<sString>0.0f</sString>
+								</multValue>
+								<stat>Life</stat>
+								<topModifier>false</topModifier>
+								<variable>IsUncontrollable</variable>
+							</modifier>
+							<providerName></providerName>
+						</PermanentStatModApplicator>
+					</Item>
+					<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="EAF93641-35A9-4663-8710-CF4C1913183F">
+						<StatusApplicator>
+							<applicators />
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption>Tech статус для таунта А2</caption>
+							<customCounter>
+								<compiledString></compiledString>
+								<returnType>int</returnType>
+								<sString>0</sString>
+							</customCounter>
+							<customProgress>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</customProgress>
+							<description textref="" />
+							<dispellPriority>Medium</dispellPriority>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<flags>0</flags>
+							<formulaName>Warlords_Summon</formulaName>
+							<image href="" />
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<name textref="" />
+							<power>0</power>
+							<providerName></providerName>
+							<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+							<stackCount>0</stackCount>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<statusPosition>0</statusPosition>
+							<stopBehaviour>StopByTime</stopBehaviour>
+							<unstackableWith href="" />
+						</StatusApplicator>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviour href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="F73AA51F-E849-452C-A51B-A3FBBF5C2EB7">
+					<SummonBehaviourCommon parent="/GameLogic/SummonBehaviourMelee">
+						<lashRange>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>5</sString>
+						</lashRange>
+						<maxCount>
+							<compiledString>FQAAAAAAAAAAVYvsuAQAAABdww==</compiledString>
+							<returnType>int</returnType>
+							<sString>4</sString>
+						</maxCount>
+						<responseRange>8</responseRange>
+					</SummonBehaviourCommon>
+				</behaviour>
+				<caption>Призвать крипов</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flags>16</flags>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString>FRMAAAABAAAAHwAAAEE0XzJfQ3JlZXBMaWZlVGltZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+					<returnType>float</returnType>
+					<sString>cA4_2_CreepLifeTime</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<openWarFog>true</openWarFog>
+				<placeMode>ByBehaviour</placeMode>
+				<placeSelector href="" />
+				<providerName></providerName>
+				<spawnStats>
+					<energy>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>-1.0</sString>
+					</energy>
+					<life>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>-1.0</sString>
+					</life>
+				</spawnStats>
+				<summonedUnitIndex>
+					<compiledString>FQAAAAAAAAAAVYvsi0UIixCLTQiLgpABAAD/0LkCAAAAK8iLwV3D</compiledString>
+					<returnType>int</returnType>
+					<sString>2 - sFctn</sString>
+				</summonedUnitIndex>
+				<summonedUnits>
+					<Item href="/Summons/Warlords_summon/_B.SUMMONED" />
+					<Item href="/Summons/Warlords_summon/_A.SUMMONED" />
+				</summonedUnits>
+				<summonedUnitsCount>
+					<compiledString>FRgAAAABAAAAJAAAAEE0XzJfU3VtbW9uZWRVbml0c0NvdW50AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SUdkcJOgFAAAAg8QEXcO4AQAAAA+i98IAAAAEdAfzDyxEJATD6QAAAABVi+yD7AzZRQjZffwPt0X8DQAMAACJRfjZbfjbXfTZbfyLRfSL5V3D</compiledString>
+					<returnType>int</returnType>
+					<sString>f2l(cA4_2_SummonedUnitsCount)</sString>
+				</summonedUnitsCount>
+				<summonGroupName></summonGroupName>
+				<summonSource>ByApplicator</summonSource>
+				<takeModDmg>
+					<compiledString>FRUAAAABAAAAIQAAAE1vZERhbWFnZUZyb21OZXV0cmFsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+					<returnType>float</returnType>
+					<sString>cModDamageFromNeutral</sString>
+				</takeModDmg>
+				<takeTypeUnit>839647712</takeTypeUnit>
+				<unsummonSortCriterion>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</unsummonSortCriterion>
+			</SummonApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Warlord/status_A4_2_CreepStatus.APLR" />
+	</applicators>
+	<askId>4</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А4_2. Братья по оружию</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="9411696F-2051-4C24-9259-9EDE745C4F48">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR4AAAACAAAAJQAAAD4AAABXYXJsb3JkX0E0XzJ1AAAAV2FybG9yZF9BNF8ydQBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Warlord_A4_2u") == false</sString>
+				</condition>
+				<name>Warlord_A4_2u</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents>
+		<Item href="/Items/Talents/Class/Warlord/Ability_A4.TALENT" />
+		<Item href="/Items/Talents/Class/Warlord/Ability_A4u.TALENT" />
+	</conflictingTalents>
+	<constants href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="BB462082-B920-4FF4-A64F-907C40B3609F">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="B46975B4-6889-45A6-8FD2-C1C4C3C59C1A">
+					<UnitConstant>
+						<name>A4_2_CreepLifeTime</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>25</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="3558502D-4EFA-4447-86AF-A7531BFFB910">
+					<UnitConstant>
+						<name>MasterStatConnected_Life</name>
+						<var>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCQAEAAP/QUdkcJGoAi00QixGLTRCLQmD/0F3DAABIQwCAu0Q=</compiledString>
+							<returnType>float</returnType>
+							<sString>abilityScale(sStamina, 200, 1500 )</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="F8B79FAC-4073-48CA-B2DF-E4794CE17E69">
+					<UnitConstant>
+						<name>MasterStatConnected_Power</name>
+						<var>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCMAEAAP/QUdkcJGoAi00QixGLTRCLQmD/0F3DMzOjQJqZGUI=</compiledString>
+							<returnType>float</returnType>
+							<sString>abilityScale(sStrength, 5.1, 38.4)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="15CB4760-E0B2-4C23-9F8A-97ED4CF4AA9F">
+					<UnitConstant>
+						<name>MasterStatConnected_Dexterity</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvsi0UIixCLTQiLgjgBAAD/0F3D</compiledString>
+							<returnType>float</returnType>
+							<sString>sDexterity</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="3EE7083A-D413-4ADD-BAE2-72A8A97C5100">
+					<UnitConstant>
+						<name>MasterStatConnected_AttackSpeed</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvsi0UIixCLTQiLQhz/0F3D</compiledString>
+							<returnType>float</returnType>
+							<sString>sAttackSpeed</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="EC3617D3-1D78-4430-9332-ADFDF445B92A">
+					<UnitConstant>
+						<name>MasterStatConnected_Stamina</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvsi0UIixCLTQiLgkABAAD/0F3D</compiledString>
+							<returnType>float</returnType>
+							<sString>sStamina</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="1F456C68-913B-45DB-B12E-3E4D8B4759D3">
+					<UnitConstant>
+						<name>MasterStatConnected_Will</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvsi0UIixCLTQiLgkQBAAD/0F3D</compiledString>
+							<returnType>float</returnType>
+							<sString>sWill</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="F56B0F03-C3FE-4198-B17D-F67BDDD5A425">
+					<UnitConstant>
+						<name>A4_2_SummonedUnitsCount</name>
+						<var>
+							<compiledString>FTMAAAAEAAAAOgAAAFMAAACRAAAAsQAAAFdhcmxvcmRfQTRfMnUAAABXYXJsb3JkX0E0XzJ1AAAAQTRfMnVfQWRkVW5pdENvdW50AFWL7IPsEGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdB+LVQxSi0UIUGggAAAAi00QixGLTRCLQlD/0Nld9OsF2e7ZXfTZRfTcBb8AAADZXfDZRfCL5V3DAAAAAAAAAEAAAAAA</compiledString>
+							<returnType>float</returnType>
+							<sString>2 + ( tal("Warlord_A4_2u") ? cA4_2u_AddUnitCount: 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Warlord/const_A4_2u_AddUnitCount" />
+				<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="1C8193BB-DE9F-4D55-A368-EBCDC14CDB1B">
+					<UnitConstant>
+						<name>TT_MasterStatConnected_Power</name>
+						<var>
+							<compiledString>FRoAAAACAAAAJwAAADoAAABNYXN0ZXJTdGF0Q29ubmVjdGVkX1Bvd2VyAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twFSAAAANld/NlF/IvlXcMAAAAAAAAUQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cMasterStatConnected_Power + 5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="A7642490-EAE5-46BB-AE71-846C57352F79">
+					<UnitConstant>
+						<name>TT_MasterStatConnected_Life</name>
+						<var>
+							<compiledString>FRkAAAACAAAAJgAAADkAAABNYXN0ZXJTdGF0Q29ubmVjdGVkX0xpZmUAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3AVHAAAA2V382UX8i+VdwwAAAAAAAHlA</compiledString>
+							<returnType>float</returnType>
+							<sString>cMasterStatConnected_Life + 400</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="2667035B-0D9D-4C29-8564-07C3DE4D1630">
+					<UnitConstant>
+						<name>UltimateConstant</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>80</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT" id="C5092166-7D16-418D-994C-85CAFFD4571C">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>3</flags>
+	<forceBonus>13.21</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Warlord/A4_2.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>true</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQw==</compiledString>
+		<returnType>float</returnType>
+		<sString>320</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>2</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>540</naftaCost>
+	<name textref="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators />
+	<persistentId>Warlord_A4_2</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Class/Warlord/Ability_A4_2.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

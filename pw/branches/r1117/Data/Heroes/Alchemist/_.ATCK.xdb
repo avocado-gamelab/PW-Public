@@ -3,7 +3,7 @@
 	<BackLink DBID="/Heroes/Alchemist/_.HROB" Count="1" />
 	<BackLink DBID="/Summons/Clone/_Parent.SUMMONED" Count="1" />
 	<BackLink DBID="/Summons/Clone/Intellect.SUMMONED" Count="1" />
-	<BackLink DBID="/Summons/Clone/Strength.SUMMONED" Count="1" />
+	<BackLink DBID="/Summons/Clone/Strength.SUMMONED" Count="4" />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
 		<compiledString></compiledString>
@@ -87,6 +87,7 @@
 				<providerName></providerName>
 			</VariableProxyApplicator>
 		</Item>
+		<Item href="/Heroes/status_TowerMultiplayerDamage.APLR" />
 	</applicators>
 	<autoTargetSelector href="" />
 	<caption></caption>
@@ -104,6 +105,7 @@
 		<UnitConstantsContainer>
 			<vars>
 				<Item href="/Items/Talents/Class/Alchemist/const_A4_BonusDamage" />
+				<Item href="/Heroes/const_TowerDamgeBuff" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>

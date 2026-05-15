@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/GameLogic/TalentGroup.TGRP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set2" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set2_kit3" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/RedSet2_4_Blow/RedSet2_4_Blow.TALKIT" Count="2" />
+	<BackLink DBID="/Social/TalentsCollection" Count="2" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_LosTal7.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_RedSet2.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet2_1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet4.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet4Add.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NY2020_BadList.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season13_BadList.ROLLCONT" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="/Effects/UI/AOESelection/Circle.MTRL" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString>FQoAAAABAAAAFgAAAEJsb3dSYW5nZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+		<returnType>float</returnType>
+		<sString>cBlowRange</sString>
+	</aoeSize>
+	<aoeType>Disk</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/TalentKits/RedSet2_4_Blow/status_G487_MarkDmg.APLR" />
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G487: Азарт подрывника</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G487_MarkAOEDMG.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G487_MarkAOEDMG.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="0D95F58D-8476-489F-ACD4-7A3E5DA8328E">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSEAAAAEAAAAMAAAAEMAAABPAAAAaAAAAEc0ODdfa2l0Q291bnRlcl9UVAAARzQ4NwAAAABHNDg3AFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3B20AAAA3+D2xEF1WGgUAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoHAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdAnHRfQAAAAA6wfHRfQBAAAAikX0i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(cG487_kitCounter_TT&gt;0&amp;&amp;(tal("G487")))</sString>
+				</condition>
+				<name>FormNotActiveSession</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="F159DF9F-5245-4220-B344-E4408608FEB8">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSEAAAACAAAAMAAAAEoAAABHNDg3X2tpdENvdW50ZXJfVFQAAEc0ODdfTWF4Rm9ybQBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBQAAACLVRCLAotNEItQUN1d+P/S3F343+D2xAV6CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG487_kitCounter_TT&gt;cG487_MaxForm</sString>
+				</condition>
+				<name>FormOverChargedSession</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="F17B4351-6763-4752-83B3-0C8CC8FEC09C">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSkAAAAEAAAAOAAAAEsAAABXAAAAcAAAAEc0ODdfa2l0Q291bnRlcl9UVF9DYXN0bGUAAABHNDg3AAAAAEc0ODcAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcHbwAAADf4PbEQXVYaBwAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgkAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0CcdF9AAAAADrB8dF9AEAAACKRfSL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(cG487_kitCounter_TT_Castle&gt;0&amp;&amp;(tal("G487")))</sString>
+				</condition>
+				<name>FormNotActiveCastle</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="D7B32977-016C-4056-BC85-BAEC88E9878F">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSkAAAACAAAAOAAAAFIAAABHNDg3X2tpdENvdW50ZXJfVFRfQ2FzdGxlAAAARzQ4N19NYXhGb3JtAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoHAAAAItVEIsCi00Qi1BQ3V34/9LcXfjf4PbEBXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG487_kitCounter_TT_Castle&gt;cG487_MaxForm</sString>
+				</condition>
+				<name>FormOverChargedCastle</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="C6819C07-EFF5-4C4A-AF54-F0D7B7594725">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRgAAAAEAAAAHQAAADMAAAA/AAAAVQAAAEc0ODhfQWN0aXZlAEc0OTBfQWN0aXZlAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHXcAAADf4PbEQXQraAwAAACLTQiLEYtNCIuCiAEAAP/Q3B13AAAA3+D2xEF0CcdF/AAAAADrB8dF/AEAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG488_Active&gt;0 || sender.vG490_Active&gt;0</sString>
+				</condition>
+				<name>G488_Blow</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="79B73E08-385B-453A-9DB5-A14CEF8EF081">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNDkxX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG491_Active&gt;0</sString>
+				</condition>
+				<name>G491_Damage</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="353CE7CD-980B-4CEF-A16A-252DFE8FA8C3">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNDkwX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG490_Active&gt;0</sString>
+				</condition>
+				<name>G490_Cooldown</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="80B12F2E-EE25-438B-BB40-A222AF0A5A65">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="30A509F4-105D-4F19-A6F8-0402A24B8EFA">
+					<UnitConstant>
+						<name>G487_kitCounter_TT</name>
+						<var>
+							<compiledString>FQ0AAAACAAAAFAAAAC0AAABHNDg3AAAAAEc0ODcAVYvsg+wYaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgIAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCLTRCLEYtNEItCeP/QiUX020X0Udnu2RwkUdno2RwkD7ZN+1HdXezoGAAAAIPEDNxt7Nld6NlF6IvlXcMAAIA/AAAAAFWL7FEPtkUIhcB0CNlFDNld/OsG2UUQ2V382UX8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>mActivatedWithinKit - s(tal("G487"), 1 , 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="454F2E33-AC5F-4082-BD5C-D6DEEB0F0425">
+					<UnitConstant>
+						<name>G487_kitCounter_TT_Castle</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvsUVHZ7tkcJItFEIsQi00Qi0J4/9CD6AGJRfzbRfxR2Rwk6AsAAACDxAiL5V3DAAAAAFWL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>max(mActivatedWithinKit - 1, 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="5F55B0CD-BC95-4FA8-A639-10964378F1EF">
+					<UnitConstant>
+						<name>TECH_FormCapacity</name>
+						<var>
+							<compiledString>FQ0AAAABAAAAGQAAAEc0ODdfTWF4Rm9ybQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cG487_MaxForm</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/RedSet2_4_Blow/const_G487_MaxForm" />
+				<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="0341DF92-0785-4359-A4E9-4E298DCC4FAA">
+					<UnitConstant>
+						<name>Delay</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="A334E174-B687-4A20-A2E3-56B6A44D2D2B">
+					<UnitConstant>
+						<name>Damage</name>
+						<var>
+							<compiledString>FScAAAADAAAANgAAAEgAAABoAAAARzQ4N19EYW1hZ2UARzQ4OV9BY3RpdmUARzQ4OV9BZGREYW1hZ2UAVYvsg+wUi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JoDAAAAItFCIsQi00Ii4KIAQAA3V34/9CLTQxRi1UIUmgYAAAAi0UQixCLTRCLQlDdXfD/0NxN8NxF+Nld7NlF7IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cG487_Damage + sender.vG489_Active * cG489_AddDamage</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/RedSet2_4_Blow/const_G489_AddDamage" />
+				<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="D2596BF2-40C0-4A8D-9FBA-97756E7E6583">
+					<UnitConstant>
+						<name>G487_Damage</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUMl9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcMAAAAAAAAxQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT2_Stat * 17</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/RedSet2_4_Blow/const_G491_ResTimeInc" />
+				<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="3A6D58D6-7986-4C4E-B5C3-AFDF6BD95B36">
+					<UnitConstant>
+						<name>MarkCondition</name>
+						<var>
+							<compiledString>FRgAAAAEAAAAHQAAADMAAAA/AAAAVQAAAEc0ODhfQWN0aXZlAEc0OTBfQWN0aXZlAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHXcAAADf4PbEQXQraAwAAACLTQiLEYtNCIuCiAEAAP/Q3B13AAAA3+D2xEF0CcdF/AAAAADrB8dF/AEAAADbRfyL5V3DAAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG488_Active &gt; 0 || sender.vG490_Active &gt; 0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/RedSet2_4_Blow/const_G488_MaxCount" />
+				<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="F336DF89-CD06-47EA-97EE-2416B9D34659">
+					<UnitConstant>
+						<name>RefreshCDCondition</name>
+						<var>
+							<compiledString>FQwAAAACAAAAEQAAACcAAABHNDkwX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAADbRfyL5V3DAAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG490_Active &gt; 0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="AD2ABF53-4AB8-4F59-82BA-086EC1A8E84D">
+					<UnitConstant>
+						<name>BlowRange</name>
+						<var>
+							<compiledString>FQwAAAABAAAAGAAAAFJhbmdlX1Nob3J0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange_Short</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="86C41CA4-D2A3-46A2-8BD8-A495E6563FDF">
+					<UnitConstant>
+						<name>G487_MaxCount</name>
+						<var>
+							<compiledString>FTYAAAAGAAAAPQAAAFMAAABnAAAAgwAAAJkAAACtAAAARzQ4OF9BY3RpdmUARzQ4OF9NYXhDb3VudAAAAEc0OTBfQWN0aXZlAEc0OTBfTWF4Q291bnQAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Q3B3cAAAA3+D2xEF1H4tNDFGLVQhSaAwAAACLRRCLEItNEItCUP/Q2V386wXZ7tld/GgcAAAAi00IixGLTQiLgogBAAD/0Nwd3AAAAN/g9sRBdR+LTQxRi1UIUmgoAAAAi0UQixCLTRCLQlD/0Nld+OsF2e7ZXfjZRfzYRfjZXfTZRfSL5V3DAAAAAAAAAAAAAAAA</compiledString>
+							<returnType>float</returnType>
+							<sString>(sender.vG488_Active &gt; 0 ? cG488_MaxCount : 0) + (sender.vG490_Active&gt;0 ? cG490_MaxCount : 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/RedSet2_4_Blow/const_G490_MaxCount" />
+				<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="5F7B5216-8233-42E9-A19D-770EC0583C17">
+					<UnitConstant>
+						<name>Dec_MoveSpeed</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>30</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="E74DAA57-B2E1-4A71-82E5-DFD897CBB67F">
+					<UnitConstant>
+						<name>Slow_Duration</name>
+						<var>
+							<compiledString>FQYAAAABAAAAEgAAAERlbGF5AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cDelay</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>80</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G487_MarkAOEDMG.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" id="74D88D2E-D826-488D-9251-4F6FFAE262AD">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>true</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>7</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_487.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G487_MarkAOEDMG.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators />
+	<persistentId>G487</persistentId>
+	<prerequisiteTalents />
+	<rarity>outstanding</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G487_MarkAOEDMG.TALENT_shortDescription.txt" />
+	<talentRollGroups>16</talentRollGroups>
+	<talentStats />
+	<targetType>672989247</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Long</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

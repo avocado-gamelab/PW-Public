@@ -12,7 +12,8 @@
 	<BackLink DBID="/Maps/Multiplayer/MOBA/Shops/Mod9_N.SHOP" Count="1" />
 	<BackLink DBID="/Maps/PvE/Series/Episode1/buildings/Shop.SHOP" Count="1" />
 	<BackLink DBID="/Maps/Test/BalanseTest/Shops/_N.SHOP" Count="1" />
-	<BackLink DBID="/Items/Talents/Level1/G722_RegEnergy.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G722_RegEnergy.TALENT" Count="1" />
+	<BackLink DBID="/Buildings/DefaultStats/Training.CNSH" Count="1" />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
 		<compiledString></compiledString>
@@ -173,7 +174,7 @@
 		</Item>
 	</applicators>
 	<autoTargetSelector href="" />
-	<caption></caption>
+	<caption>Зелье энергии</caption>
 	<castAllowRange>
 		<compiledString></compiledString>
 		<returnType>float</returnType>
@@ -191,9 +192,9 @@
 					<UnitConstant>
 						<name>Energy_restore_amount_per_tick</name>
 						<var>
-							<compiledString>FQsAAAACAAAAQAAAAE0AAABBZGRSZXN0b3JlAFWL7IPsFItFEIsQi00Qi0JI/9CJRfyLTfyLEYtN/ItCSP/QiUX4i034ixGLTfiLQhD/0NwNbgAAAItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d8P/Q3EXw2V3s2UXsi+VdwwAAAAAAAERA</compiledString>
+							<compiledString>FQsAAAACAAAAQAAAAE0AAABBZGRSZXN0b3JlAFWL7IPsFItFEIsQi00Qi0JI/9CJRfyLTfyLEYtN/ItCSP/QiUX4i034ixGLTfiLQhD/0NwNbgAAAItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d8P/Q3EXw2V3s2UXsi+VdwwAAAAAAAD5A</compiledString>
 							<returnType>float</returnType>
-							<sString>40 * mObjectParent-&gt;GetObjectParent()-&gt;GetScale() + cAddRestore</sString>
+							<sString>30 * mObjectParent-&gt;GetObjectParent()-&gt;GetScale() + cAddRestore</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -303,10 +304,10 @@
 		<sString>0</sString>
 	</manaCost>
 	<marker></marker>
-	<maxQuantity>5</maxQuantity>
+	<maxQuantity>100</maxQuantity>
 	<microAI href="" />
 	<minUseRangeCorrection>0</minUseRangeCorrection>
-	<naftaCost>70</naftaCost>
+	<naftaCost>50</naftaCost>
 	<name textref="/Items/Consumables/EnergyPotion.ARCT_name.txt" />
 	<node></node>
 	<passiveApplicators />

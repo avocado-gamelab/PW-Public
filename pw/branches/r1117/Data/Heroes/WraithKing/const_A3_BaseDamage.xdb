@@ -5,8 +5,8 @@
 	<BackLink DBID="/Items/Talents/Class/WraithKing/Ability_A3u.TALENT" Count="1" />
 	<name>A3_BaseDamage</name>
 	<var>
-		<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAABAQQAAtEI=</compiledString>
+		<compiledString>FSEAAAAEAAAALAAAADYAAABrAAAAgQAAAEEwX0FkZGl0aW9uYWxBdHRhY2tEYW1hZ2VQZXJjZW50AFWL7IPsDGoBUdkFqgAAANkcJFHZBaYAAADZHCRqAItFCIsQi00Ii4I0AQAA/9BR2RwkagGLTRCLEYtNEItCYP/Qi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ3V34/9DcDZ4AAADZ6N7B3E342V302UX0i+VdwwAAAAAAAPA/AAAAQOF6hD8AAEBBAAC0Qg==</compiledString>
 		<returnType>float</returnType>
-		<sString>damageScale(sIntellect, 12, 90)</sString>
+		<sString>damageScale(sIntellect, 12, 90) * (1.0f + cA0_AdditionalAttackDamagePercent * 0.01f)</sString>
 	</var>
 </UnitConstant>

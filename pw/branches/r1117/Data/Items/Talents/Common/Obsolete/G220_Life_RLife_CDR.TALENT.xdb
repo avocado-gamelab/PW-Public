@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar3" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Fairy.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Fairy/Fairy.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Episode1/heroes/ally/_.HROB" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="4" />
+	<BackLink DBID="/Test/Talents/TestSet7.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSetHealer.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Crusader/Duel_A_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Crusader/Duel_A_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Crusader/Duel_B_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Crusader/Duel_B_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Firefox/Duel_HpInt.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Firefox/Elite_StrInt.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Freeze/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Freeze/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Elite_Life.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Ghostlord/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Highlander/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mage/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mage/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Monster/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Night/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Ratcatcher/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Ratcatcher/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Unicorn/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Vampire/Duel_Asp.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Vampire/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Vampire/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Warlord/Duel.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G220: Мистерия жизни</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G220_Life_RLife_CDR.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G220_Life_RLife_CDR.TALENT" id="442305B9-99AB-4CE8-AA2A-1498AE7902B0">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G220_Life_RLife_CDR.TALENT" id="7C153564-B34E-4FBC-92CA-4CA105E3E32D">
+					<UnitConstant>
+						<name>Add_Life</name>
+						<var>
+							<compiledString>FScAAAAEAAAANgAAAEkAAABWAAAAdgAAAFQ0X1N0YXQAQ29vbGRvd25SZWR1Y3Rpb24AAABMaWZlQnVkZ2V0AFWL7IPsFItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3A2XAAAAi0UMUItNCFFoCAAAAItVEIsCi00Qi1BQ3V34/9LcbfiLRQxQi00IUWgcAAAAi1UQiwKLTRCLUFDdXfD/0txN8Nld7NlF7IvlXcNmZmZmZmbmPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>(cT4_Stat * 0.7 - cCooldownReduction) * cLifeBudget</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G220_Life_RLife_CDR.TALENT" id="665BE04D-6AF7-4082-9888-05A6BCB80C16">
+					<UnitConstant>
+						<name>Add_LifeRegAbs</name>
+						<var>
+							<compiledString>FRYAAAADAAAAJQAAAD8AAABYAAAAVDRfU3RhdABMaWZlUmVnQnVkZ2V0AFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoCAAAAItVEIsCi00Qi1BQ3V34/9LcTfjcDWYAAADZXfTZRfSL5V3DMzMzMzMz0z8=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT4_Stat * cLifeRegBudget * 0.3</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G220_Life_RLife_CDR.TALENT" id="670E4980-BCFB-48F7-B4F9-19AAC399F3D7">
+					<UnitConstant>
+						<name>CooldownReduction</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G220_Life_RLife_CDR.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>5</flags>
+	<forceBonus>16.15</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_220.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>3</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G220_Life_RLife_CDR.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/Obsolete/G220_Life_RLife_CDR.TALENT" id="23EA3D6C-10BE-4610-A084-8747FB34AD77">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>+Life</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9MaWZlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Life</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G220_Life_RLife_CDR.TALENT" id="16F32F3D-C948-490F-A2EE-4D57CB77C85D">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_LifeRegAbs</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQ8AAAABAAAAGwAAAEFkZF9MaWZlUmVnQWJzAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_LifeRegAbs</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>LifeRegenerationAbsolute</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/_commonData/Total_CDR.APLR" />
+		<Item href="/GameLogic/GeneralApplicators/CooldownReduction.APLR" />
+	</passiveApplicators>
+	<persistentId>G220</persistentId>
+	<prerequisiteTalents />
+	<rarity>excellent</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>Life</stat>
+			<values>
+				<Item>123</Item>
+				<Item>144</Item>
+				<Item>165</Item>
+				<Item>186</Item>
+				<Item>207</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName></addValueName>
+			<stat>LifeRegenerationAbsolute</stat>
+			<values>
+				<Item>3.51</Item>
+				<Item>3.78</Item>
+				<Item>4.05</Item>
+				<Item>4.32</Item>
+				<Item>4.59</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>0</targetType>
+	<type>Simple</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

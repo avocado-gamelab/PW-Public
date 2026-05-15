@@ -2,12 +2,12 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Invisible.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Invisible_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Invisible.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Invisible_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A2_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A2u.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A2u2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Invisible_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Invisible_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Elite_Int.TALENTSET" Count="1" />
@@ -260,8 +260,8 @@
 		<Item href="/GameLogic/GeneralApplicators/CastLimitations/ForbiddenInvis.ABCL" />
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Invisible/Ability_A2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Invisible/Ability_A2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Invisible/Ability_A2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Invisible/condition_Invisible_A2u" />
 		<Item href="/Items/Talents/Class/Invisible/condition_InvisibleTrue" />
@@ -402,7 +402,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>32795</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Invisible/A2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

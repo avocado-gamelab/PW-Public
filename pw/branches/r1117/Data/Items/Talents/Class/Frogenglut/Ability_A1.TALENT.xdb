@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Frogenglut.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Frogenglut_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Frogenglut_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Frogenglut/Ability_A1u.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Elite_Life.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Epic_Life.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Epic_Str.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" id="7A8AC920-6637-41D3-A9FD-E5F4720CED35">
+			<DamageApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<cancelInvisibility>false</cancelInvisibility>
+				<caption>урон</caption>
+				<damage>
+					<compiledString>FQoAAAABAAAAFgAAAEExX0RhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+					<returnType>float</returnType>
+					<sString>cA1_Damage</sString>
+				</damage>
+				<damageMode>4</damageMode>
+				<damageType>Material</damageType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<timeLimiter>-1</timeLimiter>
+				<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
+			</DamageApplicator>
+		</Item>
+		<Item href="/Heroes/DefaultStatus/_INTERRUPT.APLR" />
+		<Item href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" id="4ADE7A41-63B2-4C62-BE5E-9C0ED16211EB">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>(Upg) повесить статус уменьшения стойкости</caption>
+				<enabled>
+					<compiledString>FR8AAAACAAAAJgAAAD8AAABGcm9nZW5nbHV0X0ExdQAARnJvZ2VuZ2x1dF9BMXUAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCKRfuL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Frogenglut_A1u")</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" id="0AF50DAE-1BE7-46EE-BE04-C53F6E5AD019">
+					<Spell>
+						<applicators>
+							<Item href="/Heroes/DefaultStatus/_ARMORCUT_status.APLR" />
+						</applicators>
+						<dispatch href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" id="2660B13C-B946-41F2-98D5-BD66ACF82140">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="" />
+			</SpellApplicator>
+		</Item>
+	</applicators>
+	<askId>1</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А1. Получи!</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations>
+		<Item href="/Heroes/DefaultStatus/CheckTheWard.ABCL" />
+	</castLimitations>
+	<commonDescription textref="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" id="24CAE7D8-09F5-4E04-A76C-21A6A5D5E6F1">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR8AAAACAAAAJgAAAD8AAABGcm9nZW5nbHV0X0ExdQAARnJvZ2VuZ2x1dF9BMXUAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwIPAAYvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Frogenglut_A1u") == false</sString>
+				</condition>
+				<name>Frogenglut_A1u</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" id="DE004119-BA92-4782-81F7-9D8482F9EAE0">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" id="959B1B00-E911-4EAC-A246-BBE9089ADA56">
+					<UnitConstant>
+						<name>A1_Damage</name>
+						<var>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCMAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAAC6QgAAL0Q=</compiledString>
+							<returnType>float</returnType>
+							<sString>damageScale( sStrength, 93 , 700)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" id="27565727-A9B6-43A6-8CC9-4AF86233F662">
+					<UnitConstant>
+						<name>ArmorCut_Amount</name>
+						<var>
+							<compiledString>FS8AAAADAAAANgAAAE8AAABvAAAARnJvZ2VuZ2x1dF9BMXUAAEZyb2dlbmdsdXRfQTF1AABBMXVfRGVjU3RhbWluYQBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQ3aBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i00MUYtVCFJoIAAAAItF/IsQi038i0JQ/9DZXfjrBdnu2V342UX4i+VdwwAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>talconstNoCheck("Frogenglut_A1u","A1u_DecStamina")</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" id="1EB9865A-6896-4146-A207-D418473B501C">
+					<UnitConstant>
+						<name>ArmorCut_Duration</name>
+						<var>
+							<compiledString>FS0AAAADAAAANAAAAE0AAABtAAAARnJvZ2VuZ2x1dF9BMXUAAEZyb2dlbmdsdXRfQTF1AABBMXVfRHVyYXRpb24AVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0N2gQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItNDFGLVQhSaCAAAACLRfyLEItN/ItCUP/Q2V346wXZ7tld+NlF+IvlXcMAAAAA</compiledString>
+							<returnType>float</returnType>
+							<sString>talconstNoCheck("Frogenglut_A1u","A1u_Duration")</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" id="8F3A5B4E-1C58-4F0A-A307-ADA707EC974E">
+					<UnitConstant>
+						<name>A1u_DecStamina_TT</name>
+						<var>
+							<compiledString>FTIAAAADAAAAOQAAAFIAAAByAAAARnJvZ2VuZ2x1dF9BMXUAAEZyb2dlbmdsdXRfQTF1AABBMXVfRGVjU3RhbWluYV9UVABVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQ3aBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i00MUYtVCFJoIAAAAItF/IsQi038i0JQ/9DZXfjrBdnu2V342UX4i+VdwwAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>talconstNoCheck("Frogenglut_A1u","A1u_DecStamina_TT")</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" id="CC21492F-4DD7-40C1-8212-D42B3C885A03">
+					<UnitConstant>
+						<name>A1_CdReduction</name>
+						<var>
+							<compiledString>FQoAAAACAAAAFwAAACoAAABURVJSQk9OVVMAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3A04AAAA2V382UX8i+VdwwAAAAAAAAhA</compiledString>
+							<returnType>float</returnType>
+							<sString>3 * cTERRBONUS</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" id="488CA1E8-D7D3-4CDE-A8B7-EA2FC0E7476C">
+					<UnitConstant>
+						<name>Interrupt_StartCondition</name>
+						<var>
+							<compiledString>FQ8AAAACAAAAFAAAACoAAABJbW11bmUyQ29udHJvbABVi+xRaAAAAACLRQyLEItNDIuCiAEAAP/Q3B1MAAAA3+D2xER6CcdF/AEAAADrB8dF/AAAAADbRfyL5V3DAAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>receiver.vImmune2Control == 0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQ8AAAACAAAAQgAAAGQAAABBMV9DZFJlZHVjdGlvbgBVi+yD7AhWi0UIixCLTQiLQkz/0Ivwi00IixGLTQiLgpABAAD/0DvwdSGLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlD/0Nng2V386wXZ7tld/NlF/NwFcwAAANld+NlF+F6L5V3DAAAAAAAAJEAAAAAA</compiledString>
+		<returnType>float</returnType>
+		<sString>10 + nt( -cA1_CdReduction , 0 )</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" id="43F0998A-54E1-4313-B1AB-B7BB6B5745B6">
+		<DispatchLinear>
+			<aiming>Straight</aiming>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="/Effects/Shots/MeleeHit/_HeroASound.EFFT" />
+				<Item href="/Effects/Shots/MeleeHit/_HeroBSound.EFFT" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="/Effects/Shots/PoleAxe/_A.EFFT" />
+				<Item href="/Effects/Shots/PoleAxe/_B.EFFT" />
+			</dispatchEffect>
+			<flags>1</flags>
+			<flyMode>Parabolic</flyMode>
+			<fromLocator>PoleAxe</fromLocator>
+			<height>0</height>
+			<killEffect>true</killEffect>
+			<locatorOrient>true</locatorOrient>
+			<maxDeviation>180</maxDeviation>
+			<maxDistance>-1</maxDistance>
+			<maxRise>0</maxRise>
+			<minRise>0</minRise>
+			<persistentApplicators />
+			<speed>30</speed>
+			<suspendTime>0</suspendTime>
+			<toLocator>Body</toLocator>
+		</DispatchLinear>
+	</dispatch>
+	<flags>11</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Frogenglut/A1.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADmQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>115</sString>
+	</manaCost>
+	<marker>doCast1</marker>
+	<microAI href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" id="2F9EDD75-ABFF-43C8-9D17-46E44E45DC8F">
+		<TargetSelectorMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</condition>
+			<targetSelector href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" id="885F8A6B-79D2-42D0-95D0-9E7037EA5BA4">
+				<FirstTargetSelector>
+					<nearestTarget>false</nearestTarget>
+					<targetSelector href="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT" id="89E2F629-415E-45DF-B25F-67155B00961C">
+						<AreaTargetSelector>
+							<absolutePosition>
+								<x>0</x>
+								<y>0</y>
+							</absolutePosition>
+							<flags>0</flags>
+							<mode>Normal</mode>
+							<range>
+								<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+								<returnType>float</returnType>
+								<sString>cRange_Long</sString>
+							</range>
+							<targetFilter>679477279</targetFilter>
+							<targetSelector href="" />
+						</AreaTargetSelector>
+					</targetSelector>
+				</FirstTargetSelector>
+			</targetSelector>
+		</TargetSelectorMicroAI>
+	</microAI>
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>300</naftaCost>
+	<name textref="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT_name.txt" />
+	<node>ability1</node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/trigger_G766_RefreshAndNotify.APLR" />
+	</passiveApplicators>
+	<persistentId>Frogenglut_A1</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Class/Frogenglut/Ability_A1.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>672923711</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Long</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

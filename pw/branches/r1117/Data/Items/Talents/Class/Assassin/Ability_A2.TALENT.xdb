@@ -2,18 +2,19 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Assassin.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Assassin_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Assassin.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Assassin_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Assassin/A0_RefreshCd.APLR" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A0.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A2u1.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A2u2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Assassin_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Assassin_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Duel.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Elite_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Epic_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Assassin/New_SUP.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -33,6 +34,36 @@
 	</aoeSize>
 	<aoeType>None</aoeType>
 	<applicators>
+		<Item href="/Items/Talents/Class/Assassin/Ability_A2.TALENT" id="8AC70E0E-DF86-4934-8E39-E278A18D9D91">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Сохраняем изначальную длительность невидимости</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FUkAAAAEAAAAVgAAAHYAAACQAAAAsgAAAEludmlzaWJpbGl0eV9EdXJhdGlvbgAAAEEyX0FmdGVyRHVyYXRpb24AAAAAQXNzYXNzaW5HaG9zdFJ1bgAAAABkdXJhdGlvbgBVi+yD7BBqAYtFEFBoLAAAAItNDIsRi00Mi4KcAQAA/9CJRfyLTQxRi1UIUmgYAAAAi0UQixCLTRCLQlD/0ItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d9P/Q3EX02V3w2UXwUdkcJGhAAAAAi038ixGLTfyLQlT/0FHZHCToBwAAAIPECIvlXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+						<returnType>float</returnType>
+						<sString>max(receiver.FindApplicator("AssassinGhostRun", pMisc, UNIT)-&gt;GetVariable("duration"), cInvisibility_Duration + cA2_AfterDuration)</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>Assassin_CurrentInvisibilityDuration</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
 		<Item href="/Items/Talents/Class/Assassin/status_A2_GhostRun.APLR" />
 	</applicators>
 	<askId>2</askId>
@@ -48,8 +79,8 @@
 		<Item href="/GameLogic/GeneralApplicators/CastLimitations/ForbiddenInvis.ABCL" />
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Assassin/Ability_A2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Assassin/Ability_A2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Assassin/Ability_A2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Assassin/Ability_A2.TALENT" id="006B28C5-6B9F-4D73-A8A2-E088730D643F">
 			<ConditionFormula>
@@ -69,6 +100,16 @@
 					<sString>tal("Assassin_A2u2") == false</sString>
 				</condition>
 				<name>Assassin_A2u2</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Assassin/Ability_A2.TALENT" id="38A5B915-FEBA-4AD0-968D-69AB3450D2E6">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRAAAAACAAAAHQAAADAAAABDdXJyZW50X0V2YXNpb24AVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3B1SAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>cCurrent_Evasion &gt; 0</sString>
+				</condition>
+				<name>Assassin_A2u2_Evasion</name>
 			</ConditionFormula>
 		</Item>
 	</conditionFormulas>
@@ -132,9 +173,9 @@
 					<UnitConstant>
 						<name>Haste_Percent</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQQ==</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQQ==</compiledString>
 							<returnType>float</returnType>
-							<sString>20</sString>
+							<sString>30</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -158,6 +199,48 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/Assassin/const_A2u2_EvasionDecreasePercent" />
+				<Item href="/Items/Talents/Class/Assassin/const_A2u2_EvastionPercent" />
+				<Item href="/Items/Talents/Class/Assassin/Ability_A2.TALENT" id="2619981B-97A7-49EE-BC38-91A079384532">
+					<UnitConstant>
+						<name>Current_Evasion</name>
+						<var>
+							<compiledString>FXgAAAAFAAAAhQAAAKsAAAC9AAAA0gAAAPgAAABBMnUyX0V2YXNpb25QZXJjZW50AEFzc2Fzc2luX0N1cnJlbnRJbnZpc2liaWxpdHlEdXJhdGlvbgAAAABBc3Nhc3Npbkdob3N0UnVuAAAAAGR1cmF0aW9uAAAAAEEydTJfRXZhc2lvbkRlY3JlYXNlUGVyY2VudABVi+yD7CBqAYtFEFBoPAAAAItNDIsRi00Mi4KcAQAA/9CJRfxR2e7ZHCSLTQxRi1UIUmhcAAAAi0UQixCLTRCLQlD/0GhQAAAAi038ixGLTfyLQlTdXfT/0GgUAAAAi00IixGLTQiLgogBAADdXez/0Nxl7NxN9ItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d5P/Q3GXk2V3g2UXgUdkcJOgLAAAAg8QIi+VdwwAAAABVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>max(cA2u2_EvasionPercent - (sender.vAssassin_CurrentInvisibilityDuration - receiver.FindApplicator("AssassinGhostRun", pMisc, UNIT)-&gt;GetVariable("duration")) * cA2u2_EvasionDecreasePercent, 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Assassin/Ability_A2.TALENT" id="6A721114-C1ED-4073-BBD5-361D59B1110B">
+					<UnitConstant>
+						<name>CD_NightDecrease</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>20.0f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Assassin/Ability_A2.TALENT" id="7B90FD48-0C51-4E2D-A435-EE2ADDFB6189">
+					<UnitConstant>
+						<name>BaseCD</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>25.0f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Assassin/Ability_A2.TALENT" id="36CBE4FB-3B5B-4ED6-BF42-D3D595113CF3">
+					<UnitConstant>
+						<name>TT_NightCD</name>
+						<var>
+							<compiledString>FRkAAAACAAAAKAAAAEIAAABCYXNlQ0QAAENEX05pZ2h0RGVjcmVhc2UAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgIAAAAi1UQiwKLTRCLUFDdXfj/0txt+Nld9NlF9IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cBaseCD - cCD_NightDecrease</sString>
+						</var>
+					</UnitConstant>
+				</Item>
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -166,9 +249,9 @@
 		<percent>0</percent>
 	</consumptionBonus>
 	<cooldownTime>
-		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQQ==</compiledString>
+		<compiledString>FRkAAAACAAAAKAAAAF4AAABCYXNlQ0QAAENEX05pZ2h0RGVjcmVhc2UAVYvsg+wYi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRRCLEItNEIuCkAAAAN1d+P/QD7bIiU3020X0i1UMUotFCFBoCAAAAItNEIsRi00Qi0JQ3V3s/9DcTezcbfjZXejZReiL5V3D</compiledString>
 		<returnType>float</returnType>
-		<sString>25</sString>
+		<sString>cBaseCD - mIsNight * cCD_NightDecrease</sString>
 	</cooldownTime>
 	<cooldownTimeSecondState>
 		<compiledString></compiledString>
@@ -197,7 +280,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>27</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Assassin/A2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

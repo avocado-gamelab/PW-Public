@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StatusApplicator parent="/Items/Talents/Class/Banshee/status_A0_Enemy.APLR">
+	<BackLink DBID="/Items/Talents/Class/Banshee/Ability_A1.TALENT" Count="1" />
+	<BackLink DBID="/Heroes/Banshee/_.HROB" Count="1" />
+	<caption>Статус А0 - дереген ХП (бесконечный)</caption>
+	<enabled>
+		<compiledString>FR8AAAACAAAAJgAAAD8AAABCYW5zaGVlX0EwX1NVUAAAQmFuc2hlZV9BMF9TVVAAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX7g+gB99gbwIPAAYvlXcM=</compiledString>
+		<returnType>bool</returnType>
+		<sString>tal("Banshee_A0_SUP") == true</sString>
+	</enabled>
+	<providerName></providerName>
+	<stackCount>99999</stackCount>
+	<startCondition>
+		<compiledString>FTMAAAAEAAAAQgAAAFUAAABhAAAAegAAAEEwX1N0YXJ0Q29uZGl0aW9uAAAAQmFuc2hlZV9BMF9TVVAAAEJhbnNoZWVfQTBfU1VQAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3B3HAAAA3+D2xER7WWgUAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoJAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4P5AXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcMAAAAAAAAAAA==</compiledString>
+		<returnType>bool</returnType>
+		<sString>cA0_StartCondition &amp;&amp; tal("Banshee_A0_SUP") == true</sString>
+	</startCondition>
+</StatusApplicator>

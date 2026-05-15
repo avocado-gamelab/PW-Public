@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ProgramApplicator>
-	<BackLink DBID="/Items/Talents/Level1/G461_StrOrInt.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level4/G464_Life_StaOrWill.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level5/G463_Life_StrOrInt.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G462_Life.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G461_StrOrInt.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G464_Life_StaOrWill.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G463_Life_StrOrInt.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G462_Life.TALENT" Count="1" />
 	<applicators>
 		<Item>
 			<applicator href="/Items/Talents/TalentKits/Redset1_3_Armor/Programm_Redset1_3_Armor.APLR" id="AFA53DCB-0FFD-4CAA-8D99-7DCEB977C18C">
@@ -103,7 +103,7 @@
 							</add>
 							<applyTarget>AbilityOwner</applyTarget>
 							<checkSender>0</checkSender>
-							<damageTypeFilter>31</damageTypeFilter>
+							<damageTypeFilter>15</damageTypeFilter>
 							<flags>0</flags>
 							<matchTargetInverted>false</matchTargetInverted>
 							<mul>
@@ -213,9 +213,9 @@
 								<onlySingleTarget>false</onlySingleTarget>
 							</abilityFilter>
 							<add>
-								<compiledString>FRIAAAABAAAAHgAAAFB1cmVEZWZlbmNlQW1vdW50AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S2eBdww==</compiledString>
+								<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
 								<returnType>float</returnType>
-								<sString>-cPureDefenceAmount</sString>
+								<sString>0</sString>
 							</add>
 							<applyTarget>ApplicatorSelectedTarget</applyTarget>
 							<checkSender>0</checkSender>

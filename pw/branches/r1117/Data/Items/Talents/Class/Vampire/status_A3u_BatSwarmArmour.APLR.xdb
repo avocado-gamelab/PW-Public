@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
-	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A3.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A3.TALENT" Count="2" />
 	<applicators>
 		<Item href="/Items/Talents/Class/Vampire/status_A3u_BatSwarmArmour.APLR" id="76F5B127-9564-4A86-877D-51EBCA7CDF54">
 			<TriggerApplicator>
@@ -17,9 +17,9 @@
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString>FTEAAAAFAAEAOAAAAFEAAADCAAAA4QAAAPcAAACfAQAAVmFtcGlyZV9BM3UAVmFtcGlyZV9BM3UAQTNfSW52aXNSYWRpdXMAAFZhbXBBM09uAFWL7IPsJGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoDAAAAItNCIsRi00Ii4KoAQAA/9CJReyLTeyLEYtN7ItCBP/QiEXr6wTGResAD7ZN64XJD4SBAAAAjVX4UotFEIsQi00Qi0JY/9BQjU3wUYtVCIsCi00Ii5CMAQAA/9JQ6GsAAACDxAiLRQxQi00IUWgYAAAAi1UQiwKLTRCLUFDdXeD/0txd4N/g9sQBdStoKAAAAItFCIsQi00Ii4KIAQAA/9DcHRkBAADf4PbEAXUJx0XcAQAAAOsHx0XcAAAAAIpF3IvlXcMAAAAAAADwP1WL7IPsFItFCNlABItNDNhhBNld9NlF9FHZHCSLVQjZAotFDNgg2V3w2UXwUdkcJI1N+OhXAAAA2UX42E342UX82E383sHZXezZRexR2Rwk6AcAAACDxASL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6Dn+//+DxAjZXfzZRfyL5V3DVYvsUYlN/ItF/NlFCNkYi0382UUM2VkEi0X8i+VdwggA</compiledString>
+					<compiledString>FTEAAAAFAAEAOAAAAFEAAADCAAAA4QAAAPcAAACfAQAAVmFtcGlyZV9BM3UAVmFtcGlyZV9BM3UAQTNfSW52aXNSYWRpdXMAAFZhbXBBM09uAFWL7IPsJGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoDAAAAItNCIsRi00Ii4KoAQAA/9CJReyLTeyLEYtN7ItCBP/QiEXr6wTGResAD7ZN64XJD4SBAAAAjVX4UotFEIsQi00Qi0JY/9BQjU3wUYtVDIsCi00Mi5CMAQAA/9JQ6GsAAACDxAiLRQxQi00IUWgYAAAAi1UQiwKLTRCLUFDdXeD/0txd4N/g9sQBdStoKAAAAItFCIsQi00Ii4KIAQAA/9DcHRkBAADf4PbEAXUJx0XcAQAAAOsHx0XcAAAAAIpF3IvlXcMAAAAAAADwP1WL7IPsFItFCNlABItNDNhhBNld9NlF9FHZHCSLVQjZAotFDNgg2V3w2UXwUdkcJI1N+OhXAAAA2UX42E342UX82E383sHZXezZRexR2Rwk6AcAAACDxASL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6Dn+//+DxAjZXfzZRfyL5V3DVYvsUYlN/ItF/NlFCNkYi0382UUM2VkEi0X8i+VdwggA</compiledString>
 					<returnType>bool</returnType>
-					<sString>tal("Vampire_A3u") &amp;&amp; d(sPos, mTargetPos) &lt;= cA3_InvisRadius &amp;&amp; sender.vVampA3On &gt;= 1</sString>
+					<sString>tal("Vampire_A3u") &amp;&amp; d(rPos, mTargetPos) &lt;= cA3_InvisRadius &amp;&amp; sender.vVampA3On &gt;= 1</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<lifeTime>
@@ -75,7 +75,7 @@
 			</TriggerApplicator>
 		</Item>
 	</applicators>
-	<applyTarget>AbilityOwner</applyTarget>
+	<applyTarget>ApplicatorTarget</applyTarget>
 	<behaviorFlags>3</behaviorFlags>
 	<caption>Статус про иконку и (Upg) уменьшение урона</caption>
 	<customCounter>
@@ -95,9 +95,9 @@
 		<Item href="" />
 	</effect>
 	<enabled>
-		<compiledString>FRkAAAADAAEAOAAAAIYAAACcAAAARAEAAEEzX0ludmlzUmFkaXVzAABWYW1wQTNPbgBVi+yD7CCLRRCLEItNEItCSP/QiUXsi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ/9CNTfhRi1XsiwKLTeyLUFjdXeT/0lCNRfBQi00IixGLTQiLgowBAAD/0FDoTgAAAIPECNxd5N/g9sRBeitoEAAAAItNCIsRi00Ii4KIAQAA/9DcHb4AAADf4PbEAXUJx0XgAQAAAOsHx0XgAAAAAIpF4IvlXcMAAAAAAADwP1WL7IPsFItFCNlABItNDNhhBNld9NlF9FHZHCSLVQjZAotFDNgg2V3w2UXwUdkcJI1N+OhXAAAA2UX42E342UX82E383sHZXezZRexR2Rwk6AcAAACDxASL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6JT+//+DxAjZXfzZRfyL5V3DVYvsUYlN/ItF/NlFCNkYi0382UUM2VkEi0X8i+VdwggA</compiledString>
+		<compiledString>FRkAAAADAAEAOAAAAIYAAACcAAAARAEAAEEzX0ludmlzUmFkaXVzAABWYW1wQTNPbgBVi+yD7CCLRRCLEItNEItCSP/QiUXsi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ/9CNTfhRi1XsiwKLTeyLUFjdXeT/0lCNRfBQi00MixGLTQyLgowBAAD/0FDoTgAAAIPECNxd5N/g9sRBeitoEAAAAItNCIsRi00Ii4KIAQAA/9DcHb4AAADf4PbEAXUJx0XgAQAAAOsHx0XgAAAAAIpF4IvlXcMAAAAAAADwP1WL7IPsFItFCNlABItNDNhhBNld9NlF9FHZHCSLVQjZAotFDNgg2V3w2UXwUdkcJI1N+OhXAAAA2UX42E342UX82E383sHZXezZRexR2Rwk6AcAAACDxASL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6JT+//+DxAjZXfzZRfyL5V3DVYvsUYlN/ItF/NlFCNkYi0382UUM2VkEi0X8i+VdwggA</compiledString>
 		<returnType>bool</returnType>
-		<sString>d(sPos, appl.parent.TargetPos) &lt;= cA3_InvisRadius &amp;&amp; sender.vVampA3On &gt;= 1</sString>
+		<sString>d(rPos, appl.parent.TargetPos) &lt;= cA3_InvisRadius &amp;&amp; sender.vVampA3On &gt;= 1</sString>
 	</enabled>
 	<flags>64</flags>
 	<formulaName>VampireA3Armour</formulaName>

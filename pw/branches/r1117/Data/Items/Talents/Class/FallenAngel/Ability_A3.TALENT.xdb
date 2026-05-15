@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/FallenAngel.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/FallenAngel_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/FallenAngel.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/FallenAngel_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/FallenAngel/Ability_A3u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/FallenAngel_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/FallenAngel_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/FallenAngel/Epic_IntDex.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/FallenAngel/Epic_IntSpeed.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/FallenAngel/Ability_A3_SUP.TALENT" Count="1" />
@@ -38,8 +38,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/FallenAngel/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/FallenAngel/Ability_A3.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/FallenAngel/Ability_A3.TALENT" id="1EA2FC98-486D-4E70-AEB8-F998826D203F">
 			<ConditionFormula>
@@ -72,6 +72,7 @@
 				<Item href="/Items/Talents/Class/FallenAngel/const_A3u_Damage" />
 				<Item href="/Items/Talents/Class/FallenAngel/const_A3_Range" />
 				<Item href="/Items/Talents/Class/FallenAngel/const_A3_DamagePerSecond" />
+				<Item href="/Items/Talents/Class/FallenAngel/const_A3_SUP_DamageMultiplier" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -93,7 +94,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/FallenAngel/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

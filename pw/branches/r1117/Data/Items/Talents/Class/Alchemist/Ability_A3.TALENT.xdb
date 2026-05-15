@@ -3,17 +3,15 @@
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/Creeps/Bosses/Boss1/PvE_Coop1.CREEP" Count="2" />
 	<BackLink DBID="/Creeps/Bosses/Boss1/PvE_Coop1_DoTSummon.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Alchemist.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Alchemist_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Alchemist.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Alchemist_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Alchemist_Mighty.TALENTSET" Count="2" />
 	<BackLink DBID="/Items/Talents/Class/Alchemist/_summon_Circle.APLR" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Alchemist/Ability_A3.TALENT" Count="2" />
 	<BackLink DBID="/Items/Talents/Class/Alchemist/Ability_A3_SUP.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Alchemist/Ability_A3u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level5/G353_AoE.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G353_AoE.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Alchemist_Mighty.TALENTSET" Count="1" />
-	<BackLink DBID="/Maps/Multiplayer/MOBA/NewYear/_.ADMP" Count="1" />
-	<BackLink DBID="/Maps/Multiplayer/MOBA/Spawners/NeutralBoss.NCSPN" Count="1" />
 	<BackLink DBID="/Test/Talents/Alchemist/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Alchemist/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Alchemist/Elite_Int.TALENTSET" Count="1" />
@@ -862,8 +860,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Alchemist/Ability_A3.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Alchemist/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Alchemist/Ability_A3.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Alchemist/Ability_A3.TALENT" id="2707EE08-0B1E-4539-AFBD-CF5C53788106">
 			<ConditionFormula>
@@ -1147,7 +1145,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>8209</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Alchemist/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

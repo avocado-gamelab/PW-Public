@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_AtkSpd" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_Sta" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Naga.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Werewolf.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet14.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet2.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet3.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSetNewUltimates1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Angel/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Duel_En.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Marine/Duel_Cat.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G016: Превосходство</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G016_AntiCreep-Proc.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G016_AntiCreep-Proc.TALENT" id="402A1AA6-1953-422E-8504-BE35FFE46913">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G016_AntiCreep-Proc.TALENT" id="1D94A5AB-6EE2-4EF2-8BA8-A2BD7B3E1C4F">
+					<UnitConstant>
+						<name>AddDamage</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUMV9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcMAAAAAAAA5QA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT1_Stat * 25</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G016_AntiCreep-Proc.TALENT" id="D93DCDFC-51B4-49EB-B27B-B1CEBE534B53">
+					<UnitConstant>
+						<name>ProcChance</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>25</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G016_AntiCreep-Proc.TALENT" id="10CEFBC5-03AB-4173-96B0-5E18968C6AA6">
+					<UnitConstant>
+						<name>RollChance</name>
+						<var>
+							<compiledString>FQsAAAACAAAAJgAAADkAAABQcm9jQ2hhbmNlAFWL7IPsCItFDFCLTQhRagJqBItVDFKLRQhQaAAAAACLTRCLEYtNEItCUP/Q3A1hAAAA2V382UX8UdkcJItNEIsRi00Qi0Jk/9APtsiJTfjbRfiL5V3DexSuR+F6hD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>smartRoll(cProcChance * 0.01, 4 , 2) </sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G016_AntiCreep-Proc.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_016.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G016_AntiCreep-Proc.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/Obsolete/G016_AntiCreep-Proc.TALENT" id="3E83C1F4-815F-434E-8CAF-FD9842DD1DC9">
+			<AbilityUpgradeApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Common/Obsolete/G016_AntiCreep-Proc.TALENT" id="F9952C91-684D-44B1-93A2-ECC4DEE697C0">
+						<SpellApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<caption>Спелл действует только на солдат и саммонов</caption>
+							<enabled>
+								<compiledString>FQsAAAACAAAASAAAAF4AAABJbW11bmUyQXhlAFWL7IPsCItFDIsQi00Mi0JQ/9CD+AJ0JItNDIsRi00Mi0JQ/9CD+AN0EotNDIsRi00Mi0JQ/9CD+AR1QWgAAAAAi00MixGLTQyLgogBAAD/0NwdlgAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAg338AXUJx0X4AQAAAOsHx0X4AAAAAIpF+IvlXcMAAAAAAAAAAA==</compiledString>
+								<returnType>bool</returnType>
+								<sString>(rUnitKind == 2 || rUnitKind == 3 || rUnitKind == 4) &amp;&amp; (!receiver.vImmune2Axe==1)</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<LoggingEvent>-1</LoggingEvent>
+							<providerName></providerName>
+							<spell href="/Items/Talents/Common/Obsolete/G016_AntiCreep-Proc.TALENT" id="BC6A2939-99B3-4610-BD10-0B0739C9494D">
+								<Spell>
+									<applicators>
+										<Item href="/Items/Talents/Common/Obsolete/G016_AntiCreep-Proc.TALENT" id="DDA1A0B0-EA46-4BD2-8302-0F6B9BE61A21">
+											<SpellApplicator>
+												<applyTarget>ApplicatorTarget</applyTarget>
+												<caption>Прок с уроном</caption>
+												<enabled>
+													<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</enabled>
+												<formulaName></formulaName>
+												<LoggingEvent>-1</LoggingEvent>
+												<providerName></providerName>
+												<spell href="/Items/Talents/Common/Obsolete/G016_AntiCreep-Proc.TALENT" id="9C8E85FD-416B-4BFB-A187-5AFE7EF4B4B4">
+													<Spell>
+														<applicators>
+															<Item href="/Items/Talents/Common/Obsolete/G016_AntiCreep-Proc.TALENT" id="DD756F58-2DFF-4255-BF07-EC8AF566354F">
+																<DamageApplicator>
+																	<applyTarget>ApplicatorTarget</applyTarget>
+																	<cancelInvisibility>false</cancelInvisibility>
+																	<caption>Damage</caption>
+																	<damage>
+																		<compiledString>FRcAAAACAAAAJgAAAEAAAABBZGREYW1hZ2UAAABSb2xsQ2hhbmNlAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoDAAAAItVEIsCi00Qi1BQ3V34/9LcTfjZXfTZRfSL5V3D</compiledString>
+																		<returnType>float</returnType>
+																		<sString>cAddDamage * cRollChance</sString>
+																	</damage>
+																	<damageMode>0</damageMode>
+																	<damageType>Pure</damageType>
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<formulaName></formulaName>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<timeLimiter>-1</timeLimiter>
+																	<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
+																</DamageApplicator>
+															</Item>
+														</applicators>
+														<dispatch href="/Items/Talents/Common/Obsolete/G016_AntiCreep-Proc.TALENT" id="C9489225-BFF6-4935-A021-DA7EE1C94687">
+															<DispatchImmediate>
+																<alwaysApply>false</alwaysApply>
+																<applyEffect>
+																	<Item href="" />
+																	<Item href="" />
+																</applyEffect>
+																<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																<applyEffectOrientation>Default</applyEffectOrientation>
+																<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																<dieAfterApply>true</dieAfterApply>
+																<dispatchEffect>
+																	<Item href="" />
+																	<Item href="" />
+																</dispatchEffect>
+																<flags>0</flags>
+																<instantApply>false</instantApply>
+															</DispatchImmediate>
+														</dispatch>
+													</Spell>
+												</spell>
+												<spellTarget>ApplicatorTarget</spellTarget>
+												<targetSelector href="" />
+											</SpellApplicator>
+										</Item>
+									</applicators>
+									<dispatch href="/Items/Talents/Common/Obsolete/G016_AntiCreep-Proc.TALENT" id="E2AB88C4-8177-4B99-B917-5181E54EAEE8">
+										<DispatchImmediate>
+											<alwaysApply>false</alwaysApply>
+											<applyEffect>
+												<Item href="" />
+												<Item href="" />
+											</applyEffect>
+											<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+											<applyEffectOrientation>Default</applyEffectOrientation>
+											<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+											<dieAfterApply>true</dieAfterApply>
+											<dispatchEffect>
+												<Item href="" />
+												<Item href="" />
+											</dispatchEffect>
+											<flags>0</flags>
+											<instantApply>true</instantApply>
+										</DispatchImmediate>
+									</dispatch>
+								</Spell>
+							</spell>
+							<spellTarget>ApplicatorTarget</spellTarget>
+							<targetSelector href="" />
+						</SpellApplicator>
+					</Item>
+				</applicators>
+				<applyCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</applyCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>улучшение автоатаки</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flags>0</flags>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<persistentApplicators />
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents />
+				<targetAbility>BaseAttack</targetAbility>
+				<useListAs>ListAsRule</useListAs>
+			</AbilityUpgradeApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G016</persistentId>
+	<prerequisiteTalents />
+	<rarity>excellent</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>0</talentRollGroups>
+	<talentStats />
+	<targetType>136258047</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

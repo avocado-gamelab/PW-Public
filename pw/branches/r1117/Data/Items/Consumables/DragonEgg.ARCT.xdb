@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Consumable>
+	<BackLink DBID="/Glyphs/Dragon_Egg.GLPH" Count="1" />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABgQQ==</compiledString>
+		<returnType>float</returnType>
+		<sString>14</sString>
+	</aoeSize>
+	<aoeType>Disk</aoeType>
+	<applicators>
+		<Item href="/Creeps/Bosses/Boss1/summon_TargetSpawnWalkedDragon.APLR" />
+		<Item href="/Items/Consumables/DragonEgg.ARCT" id="0F1DA36B-5FC4-4DAD-93CC-EFB5C71D55AF">
+			<SummonApplicator>
+				<applicators>
+					<Item href="/Items/Consumables/DragonEgg.ARCT" id="C4B79D7C-B1E0-4048-AB74-F7258CE36BD8">
+						<FlagsApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption></caption>
+							<consumables />
+							<effect>
+								<Item href="/Effects/Debuffs/Explosion/_DragonSummon.EFFT" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<flag>0</flag>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<talents />
+							<useListAs>ListAsRule</useListAs>
+						</FlagsApplicator>
+					</Item>
+				</applicators>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviour href="" />
+				<caption>Эффект</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flags>129</flags>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+					<returnType>float</returnType>
+					<sString>5.0f</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<openWarFog>true</openWarFog>
+				<placeMode>ByTargetSelector</placeMode>
+				<placeSelector href="/Items/Consumables/DragonEgg.ARCT" id="2AA18C14-77DE-44D7-905F-A59EC5D8F423">
+					<UnitPlaceCorrector>
+						<checkByRangeToRequester>false</checkByRangeToRequester>
+						<checkLineOfSight>false</checkLineOfSight>
+						<nativeTerrainOnly>true</nativeTerrainOnly>
+						<passabilityCheckMode>7</passabilityCheckMode>
+						<radius>5</radius>
+						<targetSelector href="/Items/Consumables/DragonEgg.ARCT" id="E9CBD75C-08BD-4876-846F-8F5626EB592F">
+							<SelectApplicatorTarget>
+								<applicatorIndex>0</applicatorIndex>
+								<applicatorName></applicatorName>
+								<namedApplicatorTarget>ApplicatorTarget</namedApplicatorTarget>
+								<selectTarget>AbilityTarget</selectTarget>
+							</SelectApplicatorTarget>
+						</targetSelector>
+					</UnitPlaceCorrector>
+				</placeSelector>
+				<providerName></providerName>
+				<spawnStats>
+					<energy>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>-1.0</sString>
+					</energy>
+					<life>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>-1.0</sString>
+					</life>
+				</spawnStats>
+				<summonedUnitIndex>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</summonedUnitIndex>
+				<summonedUnits>
+					<Item href="/Items/Consumables/DragonEgg.ARCT" id="EF1DD882-E355-47DD-9219-3BB14AF10AF7">
+						<Summoned>
+							<abilities>
+								<Item href="" />
+								<Item href="" />
+								<Item href="" />
+								<Item href="" />
+								<Item href="" />
+							</abilities>
+							<attackAbility href="/Items/Consumables/DragonEgg.ARCT" id="A69385CB-4EE6-408A-B2F6-5BCC6D4FF391">
+								<BaseAttack>
+									<activeCustomTrigger>true</activeCustomTrigger>
+									<allowChase>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</allowChase>
+									<alternativeTargets />
+									<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+									<aoeHeight>0</aoeHeight>
+									<aoeMaterial href="" />
+									<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+									<aoeSize>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</aoeSize>
+									<aoeType>None</aoeType>
+									<applicators />
+									<autoTargetSelector href="" />
+									<caption></caption>
+									<castAllowRange>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</castAllowRange>
+									<castLimitations />
+									<commonDescription textref="" />
+									<compiledDescriptionA textref="" />
+									<compiledDescriptionB textref="" />
+									<conditionFormulas />
+									<constants href="" />
+									<cooldownTime>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</cooldownTime>
+									<cooldownTimeSecondState>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</cooldownTimeSecondState>
+									<description textref="" />
+									<dispatch href="" />
+									<flags>1</flags>
+									<image href="" />
+									<imageSecondState href="" />
+									<isMelee>false</isMelee>
+									<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+									<manaCost>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</manaCost>
+									<marker></marker>
+									<microAI href="" />
+									<minUseRangeCorrection>0</minUseRangeCorrection>
+									<name textref="" />
+									<node></node>
+									<passiveApplicators>
+										<Item href="/Items/Consumables/DragonEgg.ARCT" id="BA0932E3-F6D5-4964-A4AF-0067FF4980F6">
+											<FlagsApplicator>
+												<applyTarget>ApplicatorTarget</applyTarget>
+												<behaviorFlags>0</behaviorFlags>
+												<caption>- Запреты и невидимость</caption>
+												<consumables />
+												<effect>
+													<Item href="" />
+													<Item href="" />
+												</effect>
+												<enabled>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</enabled>
+												<flag>71962623</flag>
+												<formulaName></formulaName>
+												<lifeTime>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>-1.0</sString>
+												</lifeTime>
+												<LoggingEvent>-1</LoggingEvent>
+												<providerName></providerName>
+												<startCondition>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</startCondition>
+												<talents />
+												<useListAs>ListAsRule</useListAs>
+											</FlagsApplicator>
+										</Item>
+									</passiveApplicators>
+									<requireLineOfSight>true</requireLineOfSight>
+									<shortDescription textref="" />
+									<targetType>136258047</targetType>
+									<type>Passive</type>
+									<useRange>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</useRange>
+									<useRangeMaterial href="" />
+									<warFogRemoveRadius>0</warFogRemoveRadius>
+									<warFogRemoveTime>0</warFogRemoveTime>
+								</BaseAttack>
+							</attackAbility>
+							<collision>
+								<x1>0</x1>
+								<x2>0</x2>
+								<y1>0</y1>
+								<y2>0</y2>
+							</collision>
+							<creepSkins />
+							<deathParameters href="/Items/Consumables/DragonEgg.ARCT" id="29B56CC6-3038-4C62-8AD1-CFDBDECF064D">
+								<UnitDeathParameters>
+									<deathTime>5</deathTime>
+									<effect href="" />
+									<effectOffset>0.5</effectOffset>
+									<fallOffset>4.5</fallOffset>
+									<fallSpeed>0.5</fallSpeed>
+									<observeOffset>5</observeOffset>
+									<unsummonTime>0.5</unsummonTime>
+								</UnitDeathParameters>
+							</deathParameters>
+							<description textref="" />
+							<heightObject>false</heightObject>
+							<image href="/UI/Textures_default/FrameTest.ITEX" />
+							<interaction href="" />
+							<lockMask>
+								<mask />
+								<tileSize>0.5</tileSize>
+							</lockMask>
+							<minimapIcon>None</minimapIcon>
+							<minLockScale>0</minLockScale>
+							<nativeAttack>Material</nativeAttack>
+							<nativeDefence>Material</nativeDefence>
+							<normalLevelling>0</normalLevelling>
+							<overtipBarsWidth>0</overtipBarsWidth>
+							<overtipVerticalOffset>0</overtipVerticalOffset>
+							<pathFindingSteps>1</pathFindingSteps>
+							<recolor>
+								<A>0</A>
+								<B>0</B>
+								<G>0</G>
+								<R>0</R>
+							</recolor>
+							<rounded>false</rounded>
+							<sceneObject href="/Summons/Fake/_.SOBJ" />
+							<selectionAoe>
+								<Item href="" />
+								<Item href="" />
+							</selectionAoe>
+							<size>1</size>
+							<sizeDynamic>-1</sizeDynamic>
+							<stats href="/Items/Consumables/DragonEgg.ARCT" id="76F390FD-B29D-423D-B677-4652830A1F1E">
+								<StatsContainer>
+									<stats>
+										<Item>
+											<calcIncrement>0</calcIncrement>
+											<calcValue>0</calcValue>
+											<increment>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>0.0f</sString>
+											</increment>
+											<levelUpgrades />
+											<statId>Life</statId>
+											<value>
+												<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAEAcRg==</compiledString>
+												<returnType>float</returnType>
+												<sString>10000</sString>
+											</value>
+										</Item>
+										<Item>
+											<calcIncrement>0</calcIncrement>
+											<calcValue>0</calcValue>
+											<increment>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>0.0f</sString>
+											</increment>
+											<levelUpgrades />
+											<statId>NaftaForKill</statId>
+											<value>
+												<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1</sString>
+											</value>
+										</Item>
+										<Item>
+											<calcIncrement>0</calcIncrement>
+											<calcValue>0</calcValue>
+											<increment>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>0.0f</sString>
+											</increment>
+											<levelUpgrades />
+											<statId>TeamNaftaForKill</statId>
+											<value>
+												<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1</sString>
+											</value>
+										</Item>
+										<Item>
+											<calcIncrement>0</calcIncrement>
+											<calcValue>0</calcValue>
+											<increment>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>0.0f</sString>
+											</increment>
+											<levelUpgrades />
+											<statId>Level</statId>
+											<value>
+												<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1</sString>
+											</value>
+										</Item>
+										<Item>
+											<calcIncrement>0</calcIncrement>
+											<calcValue>0</calcValue>
+											<increment>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>0.0f</sString>
+											</increment>
+											<levelUpgrades />
+											<statId>NaftaForAssist</statId>
+											<value>
+												<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1</sString>
+											</value>
+										</Item>
+										<Item>
+											<calcIncrement>0</calcIncrement>
+											<calcValue>0</calcValue>
+											<increment>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>0.0f</sString>
+											</increment>
+											<levelUpgrades />
+											<statId>NaftaSpecForKill</statId>
+											<value>
+												<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1</sString>
+											</value>
+										</Item>
+										<Item>
+											<calcIncrement>0</calcIncrement>
+											<calcValue>0</calcValue>
+											<increment>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>0.0f</sString>
+											</increment>
+											<levelUpgrades />
+											<statId>TeamNaftaForPresence</statId>
+											<value>
+												<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1</sString>
+											</value>
+										</Item>
+									</stats>
+								</StatsContainer>
+							</stats>
+							<targetingParams href="" />
+						</Summoned>
+					</Item>
+				</summonedUnits>
+				<summonedUnitsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>1</sString>
+				</summonedUnitsCount>
+				<summonGroupName></summonGroupName>
+				<summonSource>ByApplicator</summonSource>
+				<takeModDmg>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>1.0f</sString>
+				</takeModDmg>
+				<takeTypeUnit>1024</takeTypeUnit>
+				<unsummonSortCriterion>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</unsummonSortCriterion>
+			</SummonApplicator>
+		</Item>
+	</applicators>
+	<autoTargetSelector href="" />
+	<caption></caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations>
+		<Item href="/Items/Consumables/DragonEgg.ARCT" id="E647A7D9-9432-42B0-BE8C-7963756009A3">
+			<TargetCastLimitation>
+				<targetSelector href="/Items/Consumables/DragonEgg.ARCT" id="0D13B99B-9A14-4DE0-AE3C-86C62A8A878B">
+					<UnitPlaceCorrector>
+						<checkByRangeToRequester>false</checkByRangeToRequester>
+						<checkLineOfSight>false</checkLineOfSight>
+						<nativeTerrainOnly>true</nativeTerrainOnly>
+						<passabilityCheckMode>0</passabilityCheckMode>
+						<radius>5</radius>
+						<targetSelector href="/Items/Consumables/DragonEgg.ARCT" id="6A9B1760-EEC9-48ED-8046-2FDECD1888A7">
+							<ConvertTargetToLand>
+								<aggregateMode>First</aggregateMode>
+								<targetSelector href="" />
+							</ConvertTargetToLand>
+						</targetSelector>
+					</UnitPlaceCorrector>
+				</targetSelector>
+				<uiEvent href="/UI/Events/ErrorMessages/CastError_UnsuitablePlace.UIEV" />
+			</TargetCastLimitation>
+		</Item>
+	</castLimitations>
+	<commonDescription textref="/Items/Consumables/DragonEgg.ARCT_commonDescription.txt" />
+	<compiledDescriptionA textref="" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<constants href="/Items/Consumables/DragonEgg.ARCT" id="14702951-E595-4BEC-87B9-5A00D3B1ADFF">
+		<UnitConstantsContainer>
+			<vars />
+		</UnitConstantsContainer>
+	</constants>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACWQw==</compiledString>
+		<returnType>float</returnType>
+		<sString>300</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Consumables/DragonEgg.ARCT_description.txt" />
+	<dispatch href="/Items/Consumables/DragonEgg.ARCT" id="3C2E6CF0-6E8D-4F5A-9888-D2657BB9D6F7">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>19</flags>
+	<gameObject href="" />
+	<image href="/UI/Styles/Icons/Statuses/Neutral/egg.ITEX" />
+	<imageSecondState href="" />
+	<isPotion>false</isPotion>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<maxQuantity>1</maxQuantity>
+	<microAI href="" />
+	<minUseRangeCorrection>5</minUseRangeCorrection>
+	<naftaCost>0</naftaCost>
+	<name textref="/Items/Consumables/DragonEgg.ARCT_name.txt" />
+	<node></node>
+	<passiveApplicators />
+	<persistentId></persistentId>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Consumables/DragonEgg.ARCT_shortDescription.txt" />
+	<targetType>16777216</targetType>
+	<type>Active</type>
+	<useRange>
+		<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Long</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Consumable>

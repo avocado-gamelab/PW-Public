@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Items/Talents/Class/Banshee/Ability_A1u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Banshee.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Banshee_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Banshee_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Banshee.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Banshee_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Banshee_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Banshee/status_A0_Enemy.APLR" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Banshee/status_A0_Enemy_SUP.APLR" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -95,9 +97,9 @@
 											</lifeTime>
 											<LoggingEvent>-1</LoggingEvent>
 											<period>
-												<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzczMPQ==</compiledString>
+												<compiledString>FQoAAAABAAAAFgAAAEExX1BlcmlvZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
 												<returnType>float</returnType>
-												<sString>0.1f; //period is in TS condition</sString>
+												<sString>cA1_Period; //0.1</sString>
 											</period>
 											<providerName></providerName>
 											<scaleMode>ScaleIsCount</scaleMode>
@@ -105,6 +107,7 @@
 												<Spell>
 													<applicators>
 														<Item href="/Items/Talents/Class/Banshee/status_A0_Enemy.APLR" />
+														<Item href="/Items/Talents/Class/Banshee/status_A0_Enemy_SUP.APLR" />
 													</applicators>
 													<dispatch href="/Items/Talents/Class/Banshee/Ability_A1.TALENT" id="D6FD1815-2B15-4BB6-9E54-6DA31D640FDE">
 														<DispatchImmediate>
@@ -133,16 +136,16 @@
 												<sString>true</sString>
 											</startCondition>
 											<startOffset>
-												<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzczMPQ==</compiledString>
+												<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
 												<returnType>float</returnType>
-												<sString>0.1f</sString>
+												<sString>0</sString>
 											</startOffset>
 											<targetSelector href="/Items/Talents/Class/Banshee/Ability_A1.TALENT" id="7E04B70A-55F5-4074-93BF-194CED2220EE">
 												<ConditionTargetSelector>
 													<condition>
-														<compiledString>FUIAAAAFAAAATwAAAHMAAACTAAAArQAAAMUAAABCYW5zaGVlQTBfRW5lbXkAQmFuc2hlZUEwX0VuZW15AGR1cmF0aW9uAAAAAEEwX0R1cmF0aW9uAEExX1BlcmlvZABVi+yD7BhqAYtFEFBoAAAAAItNDIsRi00Mi4KcAQAA/9A7RRAPhIAAAABqAYtNEFFoEAAAAItVDIsCi00Mi5CcAQAA/9KJRfyLRQxQi00IUWg4AAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaCwAAACLVRCLAotNEItQUN1d9P/S3GX0aCAAAACLRfyLEItN/ItCVN1d7P/Q3F3s3+D2xAV7CcdF6AAAAADrB8dF6AEAAACKReiL5V3D</compiledString>
+														<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
 														<returnType>bool</returnType>
-														<sString>pSecond-&gt;FindApplicator("BansheeA0_Enemy", pMisc, UNIT) == pMisc || pSecond-&gt;FindApplicator("BansheeA0_Enemy", pMisc, UNIT)-&gt;GetVariable("duration") &lt; (cA0_Duration - cA1_Period)</sString>
+														<sString>true; //pSecond-&gt;FindApplicator("BansheeA0_Enemy", pMisc, UNIT) == pMisc || pSecond-&gt;FindApplicator("BansheeA0_Enemy", pMisc, UNIT)-&gt;GetVariable("duration") &lt; (cA0_Duration - cA1_Period)</sString>
 													</condition>
 													<flags>0</flags>
 													<mode>Normal</mode>
@@ -357,8 +360,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Banshee/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Banshee/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Banshee/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Banshee/Ability_A1.TALENT" id="E747C20C-0D25-4815-A7FC-425DB4AA9F92">
 			<ConditionFormula>
@@ -432,19 +435,18 @@
 					<UnitConstant>
 						<name>A1_Period</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADAPw==</compiledString>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
 							<returnType>float</returnType>
-							<sString>1.5f</sString>
+							<sString>1</sString>
 						</var>
 					</UnitConstant>
 				</Item>
 				<Item href="/Items/Talents/Class/Banshee/const_A1u_Duration" />
 				<Item href="/Items/Talents/Class/Banshee/const_A1u_Regen" />
 				<Item href="/Items/Talents/Class/Banshee/const_A1u_HastePercent" />
-				<Item href="/Items/Talents/Class/Banshee/const_A0sup_WillCutStartCondition" />
-				<Item href="/Items/Talents/Class/Banshee/const_A0sup_WillCutPerA0" />
-				<Item href="/Items/Talents/Class/Banshee/const_A0sup_WillCutTotal" />
-				<Item href="/Items/Talents/Class/Banshee/const_A0sup_WillCutDuration" />
+				<Item href="/Items/Talents/Class/Banshee/const_A0sup_Multiplier" />
+				<Item href="/Items/Talents/Class/Banshee/const_A0_TotalDeregen" />
+				<Item href="/Items/Talents/Class/Banshee/const_A0_TotalRegen" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -484,7 +486,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>71</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Banshee/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

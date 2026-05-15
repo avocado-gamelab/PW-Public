@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Banshee.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Banshee_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Banshee/Ability_A3_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Banshee.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Banshee_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -33,8 +34,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Banshee/Ability_A0_SUP.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Banshee/Ability_A0_SUP.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Banshee/Ability_A0_SUP.TALENT" id="6CFE1799-2211-43C9-AED0-F271574694AA">
 			<ConditionFormula>
@@ -53,7 +54,17 @@
 	<constants href="/Items/Talents/Class/Banshee/Ability_A0_SUP.TALENT" id="56880431-9556-4CB5-8E3E-A0B54CFB94FA">
 		<UnitConstantsContainer>
 			<vars>
-				<Item href="/Items/Talents/Class/Banshee/const_A0sup_WillCutPerA0" />
+				<Item href="/Items/Talents/Class/Banshee/const_A0sup_Multiplier" />
+				<Item href="/Items/Talents/Class/Banshee/Ability_A0_SUP.TALENT" id="5969980E-2C90-41A4-ADB1-58FA804FD4B9">
+					<UnitConstant>
+						<name>TT_Regen_Percent</name>
+						<var>
+							<compiledString>FREAAAACAAAAHgAAADEAAABBMHN1cF9NdWx0aXBsaWVyAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNPwAAANld/NlF/IvlXcMAAAAAAABZQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cA0sup_Multiplier * 100</sString>
+						</var>
+					</UnitConstant>
+				</Item>
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -75,7 +86,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>0</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>22.7</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Banshee/A0_SUP.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

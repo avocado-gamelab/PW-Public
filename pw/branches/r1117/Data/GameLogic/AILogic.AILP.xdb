@@ -4,8 +4,8 @@
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
 	<BackLink DBID="/GameLogic/SessionLogic.ROOT" Count="1" />
 	<abilityAndDamageScalingParams>
-		<abilityScaleEnergyLeft>600</abilityScaleEnergyLeft>
-		<abilityScaleEnergyRight>3625</abilityScaleEnergyRight>
+		<abilityScaleEnergyLeft>1400</abilityScaleEnergyLeft>
+		<abilityScaleEnergyRight>4425</abilityScaleEnergyRight>
 		<abilityScaleLifeLeft>600</abilityScaleLifeLeft>
 		<abilityScaleLifeRight>4212</abilityScaleLifeRight>
 		<abilityScaleStatLeft>50</abilityScaleStatLeft>
@@ -1510,6 +1510,16 @@
 				<name>AttackSpeedGeqDexterity</name>
 			</ConditionFormula>
 		</Item>
+		<Item href="/GameLogic/AILogic.AILP" id="36E91B7A-7BF9-4248-BB01-5A0A14C394B3">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLQnz/0ItNCIsRi00Ii4KAAAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseLife &gt;= sBaseEnergy</sString>
+				</condition>
+				<name>LifeGeqEnergy</name>
+			</ConditionFormula>
+		</Item>
 		<Item href="/GameLogic/AILogic.AILP" id="72DF73AB-FBC3-4D88-87F9-66499D364C2D">
 			<ConditionFormula>
 				<condition>
@@ -1558,6 +1568,26 @@
 					<sString>sBaseWill &gt;= max(sBaseIntellect, max(sBaseStamina, sBaseStrength)) </sString>
 				</condition>
 				<name>MaxWill</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/GameLogic/AILogic.AILP" id="C16818A8-E269-4291-A7F6-EF9E473B388F">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgowAAAD/0ItNCIsRi00Ii4LMAAAA3V34/9BR2Rwki00IixGLTQiLgsgAAAD/0FHZHCToQwAAAIPEBNkcJItNCIsRi00Ii4LAAAAA/9BR2Rwk6CQAAACDxAjcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseAttackSpeed &gt;= max(sBaseDexterity, max(sBaseStamina, sBaseWill)) </sString>
+				</condition>
+				<name>MaxAttackSpeed</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/GameLogic/AILogic.AILP" id="46AC7465-521B-446A-B870-28A9E69BBF02">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgsAAAAD/0ItNCIsRi00Ii4LMAAAA3V34/9BR2Rwki00IixGLTQiLgsgAAAD/0FHZHCToQwAAAIPEBNkcJItNCIsRi00Ii4KMAAAA/9BR2Rwk6CQAAACDxAjcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseDexterity &gt;= max(sBaseAttackSpeed, max(sBaseStamina, sBaseWill)) </sString>
+				</condition>
+				<name>MaxDexterity</name>
 			</ConditionFormula>
 		</Item>
 		<Item href="/GameLogic/AILogic.AILP" id="E967EA3E-1238-419F-8D65-53E976AE179F">
@@ -1620,6 +1650,26 @@
 				<name>BonusActive4</name>
 			</ConditionFormula>
 		</Item>
+		<Item href="/GameLogic/AILogic.AILP" id="CB98ACBC-225E-45DD-8C2C-A44378CA23D8">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLQnj/0DPJg/gFD53BisFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>mActivatedWithinKit &gt;= 5</sString>
+				</condition>
+				<name>BonusActive5</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/GameLogic/AILogic.AILP" id="650DDE3C-12B4-49A0-8AB2-B631FF3359E7">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLQnj/0DPJg/gGD53BisFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>mActivatedWithinKit &gt;= 6</sString>
+				</condition>
+				<name>BonusActive6</name>
+			</ConditionFormula>
+		</Item>
 		<Item href="/GameLogic/AILogic.AILP" id="AEF61CC3-8569-45AD-BBAF-8C85E3FB9FFF">
 			<ConditionFormula>
 				<condition>
@@ -1677,18 +1727,22 @@
 		<happyCreaturesPercent>0.5</happyCreaturesPercent>
 		<minRestTime>0.5</minRestTime>
 	</creatureHappyStateParams>
-	<creepLevelCap>30</creepLevelCap>
+	<creepLevelCap>15</creepLevelCap>
 	<creepsLevelUpInfo>
 		<increment>1</increment>
-		<interval>45</interval>
+		<interval>300</interval>
 	</creepsLevelUpInfo>
 	<creepsWavesDelay>30</creepsWavesDelay>
 	<defaultTalentsSet href="" />
 	<derivativeStats href="/GameLogic/DerivateStats.DSTCN" />
 	<energyDamageReduction>
-		<compiledString>FTMAAAADAAAAQAAAAHIAAACGAAAAZGFtYWdlRGVhbGVkAAAAAERhbWFnZVBlbmV0cmF0aW9uTXVsdGlwbGllcl9TcGlyaXQAVYvsg+wUUdnu2RwkaAAAAACLRRCLEItNEItCVP/QUdkcJOhhAAAAg8QIi00MixGLTQyLgnABAADdXfj/0NwNrwAAANno3uHcTfiLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlDdXfD/0NxN8Nld7NlF7IvlXcMAAAAAAADwPwAAAEDheoQ/AAAAAFWL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+		<compiledString>FXMAAAAMAAAAugAAANgAAAAdAQAAMAEAAD0BAAB9AQAAlgEAAKUBAAC+AQAA1QEAAAcCAAAbAgAAQmFzZUF0dGFja0RtZ19IZXJvAABkYW1hZ2VEZWFsZWQAAAAAaXNDcml0aWNhbAAAVG93ZXJEYW1nZUJ1ZmYAAGRhbWFnZURlYWxlZAAAAABEYW1hZ2VQZW5ldHJhdGlvbk11bHRpcGxpZXJfU3Bpcml0AFWL7IPsQItFDIsQi00Mi0JQ/9CD+AZ0KItNDIsRi00Mi0JQ/9CD+Ad0FotNDIsRi00Mi0JQ/9CD+AgPhRsBAABqAYtNEFFoAAAAAItVCIsCi00Ii5CcAQAA/9I7RRAPhfcAAABoFAAAAItFEIsQi00Qi0JU/9CLTQiLEYtNCIuCAAEAAN1d+P/QUdkcJOiRAQAAg8QEiUX020X03F343+D2xEEPirIAAABoJAAAAItNEIsRi00Qi0JU/9DcHWYCAADf4PbERHoL3QVeAgAA3V3s6wXZ6N1d7ItNCIsRi00Ii4IwAQAA/9BR2Rwki00IixGLTQiLgjQBAAD/0FHZHCTo9gAAAIPECNwNVgIAAItNDIsRi00Mi4JwAQAA3V3k/9DcDU4CAADZ6N7h3E3k3E3saDAAAACLTQiLEYtNCIuCiAEAAN1d3P/Q3DVGAgAA2ejewdxN3N1d1OtnUdnu2RwkaEAAAACLTRCLEYtNEItCVP/QUdkcJOh/AAAAg8QIi00MixGLTQyLgnABAADdXcz/0NwNTgIAANno3uHcTcyLTQxRi1UIUmhQAAAAi0UQixCLTRCLQlDdXcT/0NxNxN1d1N1F1NldwNlFwIvlXcMAAAAAAAAAAAAAWUAAAABA4XqEPwAAAAAAAOg/MzMzMzMzA0AAAAAAAADwP1WL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcO4AQAAAA+i98IAAAAEdAfzDyxEJATD6QAAAABVi+yD7AzZRQjZffwPt0X8DQAMAACJRfjZbfjbXfTZbfyLRfSL5V3D</compiledString>
 		<returnType>float</returnType>
-		<sString>max( pMisc-&gt;GetVariable("damageDealed"), 0 ) * (1.0f - rEnergyDamageDecrease * 0.01f) * cDamagePenetrationMultiplier_Spirit</sString>
+		<sString>(rUnitKind == 6 || rUnitKind == 7 || rUnitKind == 8) 
+&amp;&amp; sender.applBaseAttackDmg_Hero(UNIT)==pMisc 
+&amp;&amp; pMisc-&gt;GetVariable("damageDealed")&gt;= f2l(sDamageMin)?
+	max( sIntellect , sStrength ) *0.75 * (1.0f - rEnergyDamageDecrease * 0.01f) * (pMisc-&gt;GetVariable("isCritical") == 1.0f ? 2.4 : 1) * (1 + sender.vTowerDamgeBuff/100) :
+	max( pMisc-&gt;GetVariable("damageDealed"), 0 ) * (1.0f - rEnergyDamageDecrease * 0.01f) * cDamagePenetrationMultiplier_Spirit</sString>
 	</energyDamageReduction>
 	<expandNatureGlyphGameObject href="/GameLogic/AILogic.AILP" id="73B7E684-D3E4-4E76-B510-513F3885F3A2">
 		<SingleStateObject>
@@ -1778,7 +1832,7 @@
 	<forceParameters href="/GameLogic/AILogic.AILP" id="6EBD4EF4-3FEB-431D-B040-45A29D88A088">
 		<ForceParameters>
 			<baseHeroForce>0</baseHeroForce>
-			<classTalentForceBonusPerStar>25</classTalentForceBonusPerStar>
+			<classTalentForceBonusPerStar>0</classTalentForceBonusPerStar>
 			<classTalentLevelForceModifiers>
 				<Item>400</Item>
 				<Item>400</Item>
@@ -1794,15 +1848,15 @@
 			<maxHeroForce>9999</maxHeroForce>
 			<seriesMapHabitantsStatsMultiplier>0.75</seriesMapHabitantsStatsMultiplier>
 			<statBonusByForce>3</statBonusByForce>
-			<talentForceBonusPerStar>7.5</talentForceBonusPerStar>
+			<talentForceBonusPerStar>0</talentForceBonusPerStar>
 			<talentForceModifier>1.1</talentForceModifier>
 			<talentLevelBonusPercent>
-				<Item>6</Item>
-				<Item>9</Item>
-				<Item>13</Item>
-				<Item>16</Item>
-				<Item>23</Item>
-				<Item>33</Item>
+				<Item>6.85</Item>
+				<Item>9.78</Item>
+				<Item>13.21</Item>
+				<Item>16.15</Item>
+				<Item>22.7</Item>
+				<Item>31.31</Item>
 			</talentLevelBonusPercent>
 			<talentLevelForceModifiers>
 				<Item>6</Item>
@@ -1813,13 +1867,13 @@
 				<Item>479.1</Item>
 			</talentLevelForceModifiers>
 			<talentRarityForceModifiers>
-				<Item>188</Item>
-				<Item>120</Item>
-				<Item>132</Item>
-				<Item>150</Item>
-				<Item>180</Item>
-				<Item>196</Item>
-				<Item>221</Item>
+				<Item>330</Item>
+				<Item>330</Item>
+				<Item>330</Item>
+				<Item>330</Item>
+				<Item>330</Item>
+				<Item>330</Item>
+				<Item>330</Item>
 			</talentRarityForceModifiers>
 			<talentRarityForceSummand>
 				<Item>0</Item>
@@ -1831,12 +1885,32 @@
 				<Item>0</Item>
 			</talentRarityForceSummand>
 			<teamForceCalcMethod>Average</teamForceCalcMethod>
-			<trainingBotsStatsMultiplier>0.8</trainingBotsStatsMultiplier>
+			<trainingBotsStatsMultiplier>0</trainingBotsStatsMultiplier>
 		</ForceParameters>
 	</forceParameters>
 	<globalConstants href="/GameLogic/AILogic.AILP" id="D05B858C-9B16-42A5-8BD1-62DB15F7E23E">
 		<UnitConstantsContainer>
 			<vars>
+				<Item href="/GameLogic/AILogic.AILP" id="12AC5649-BB87-4EA8-875B-60BAE6229A34">
+					<UnitConstant>
+						<name>BaseAttackSpeedFormula</name>
+						<var>
+							<compiledString>FQAAAAAFAAAACQAAABMAAAApAAAARwAAAE0AAABVi+yD7AhR2QWSAAAA2RwkUdkFjgAAANkcJItFCIsQi00Ii0Ic/9DcJYYAAADZXfzZRfxR2RwkUdnu2Rwk6HwAAACDxAjcDXoAAADcBXIAAADZXfjZRfhR2Rwk6F4AAACDxATZHCToKwAAAIPECIvlXcMAAAAAKVzfPwAAAMDGLnE/AAAAAAAAAAAAAERACtcjPAAAIEBVi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3DVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>clamp(0.004195f * max(0, sAttackSpeed - 40) + 0.49f, 0.01f, 2.5f)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="91F6AC79-2A28-4B2B-A359-D5EAB524D362">
+					<UnitConstant>
+						<name>BaseCritChanceFormula</name>
+						<var>
+							<compiledString>FQAAAAADAAAACQAAACgAAABGAAAAVYvsg+wQUdkFlQAAANkcJFHZ7tkcJItFCIsQi00Ii4I4AQAA/9DcJYkAAADZXfzZRfxR2RwkUdnu2Rwk6IAAAACDxAjcDYEAAACLTQiLEYtNCIuCbAEAAN1d9P/Q3EX02V3w2UXwUdkcJOhSAAAAg8QE2Rwk6B8AAACDxAiL5V3DmpmZmZmZuT8AAAAAAABJQAAAAAAAAMhCVYvsUdlFCNlFDN7Z3+D2xEF1CNlFCNld/OsG2UUM2V382UX8i+Vdw1WL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>clamp(0.1 * max(0, sDexterity - 50) + sCritChanceBonus, 0, 100)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="875D43F5-FF50-4948-8CCC-D1BBFDDF13DE">
 					<UnitConstant>
 						<name>rank</name>
@@ -1971,9 +2045,19 @@
 					<UnitConstant>
 						<name>CreepBuildingMod</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADAPw==</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPg==</compiledString>
 							<returnType>float</returnType>
-							<sString>1.5f</sString>
+							<sString>0.2f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="5F96087C-5507-4CA2-8848-5A765533E13C">
+					<UnitConstant>
+						<name>CreepDamageCreepMod</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1.0f</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -2104,6 +2188,16 @@
 							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQQ==</compiledString>
 							<returnType>float</returnType>
 							<sString>25</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="AC1BB89B-E30B-438C-A4F5-5A9C783EBBDC">
+					<UnitConstant>
+						<name>DispellCondition</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>true</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -2681,9 +2775,9 @@
 					<UnitConstant>
 						<name>PrimeForVictimPrime</name>
 						<var>
-							<compiledString>FQAAAAACAAAACQAAADMAAABVi+yD7AhR2QVkAAAA2RwkUdnu2Rwki0UMixCLTQyLgmgBAAD/0C0sAQAAiUX820X83A1YAAAA2V342UX4UdkcJOhKAAAAg8QE2Rwk6BcAAACDxAiL5V3D2/l+arx0kz8AAAAAAABwQ1WL7FHZRQjZRQze2d/g9sRBdQjZRQjZXfzrBtlFDNld/NlF/IvlXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+							<compiledString>FQAAAAACAAAACQAAADMAAABVi+yD7AhR2QVkAAAA2RwkUdnu2Rwki0UMixCLTQyLgmgBAAD/0C0sAQAAiUX820X83A1YAAAA2V342UX4UdkcJOhKAAAAg8QE2Rwk6BcAAACDxAiL5V3D2/l+arx0kz8AAAAAAADwQlWL7FHZRQjZRQze2d/g9sRBdQjZRQjZXfzrBtlFDNld/NlF/IvlXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
 							<returnType>float</returnType>
-							<sString>clamp((rTotalNaftaEarned - 300) * 0.019, 0, 240)</sString>
+							<sString>clamp((rTotalNaftaEarned - 300) * 0.019, 0, 120)</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -2691,9 +2785,9 @@
 					<UnitConstant>
 						<name>PrimeToKiller</name>
 						<var>
-							<compiledString>FRQAAAAEAAAAOQAAAHEAAAB4AAAApQAAAFByaW1lRm9yVmljdGltUHJpbWUAVYvsg+wsi0UMixCLTQyLgkwBAAD/0IlF/NtF/ItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d9P/Q3EX0i00MixGLTQyLguABAADdXez/0IPAAYlF6NtF6Nx97NwF4wAAAFHZBd8AAADZHCRR2e7ZHCSLTQyLEYtNDIuCaAEAAN1d4P/QLSwBAACJRdzbRdzcDdMAAADZXdjZRdhR2Rwk6FsAAACDxATZHCToKAAAAIPECNxF4Nld1NlF1IvlXcM5tMh2vp+KPwAAAAAAABxDAAAAAAAAWUBVi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3DVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+							<compiledString>FRQAAAADAAAAOQAAAHIAAACfAAAAUHJpbWVGb3JWaWN0aW1QcmltZQBVi+yD7CyLRQyLEItNDIuCTAEAAP/QiUX820X8i00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ3V30/9DcRfSLTQyLEYtNDIuC4AEAAN1d7P/Qg8ABiUXo20Xo3H3sUdkF2QAAANkcJFHZ7tkcJItNDIsRi00Mi4JoAQAA3V3g/9AtLAEAAIlF3NtF3NwNzQAAANld2NlF2FHZHCToUwAAAIPEBNkcJOggAAAAg8QI3EXg2V3U2UXUi+Vdw1pkO99PjZc/AAAAAAAAYEJVi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3DVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
 							<returnType>float</returnType>
-							<sString>(rNaftaSpecForKill + cPrimeForVictimPrime) / (rSpecCount + 1) + 100 + clamp((rTotalNaftaEarned - 300) * 0.013, 0, 156)</sString>
+							<sString>(rNaftaSpecForKill + cPrimeForVictimPrime) / (rSpecCount + 1) + clamp((rTotalNaftaEarned - 300) * 0.023, 0, 56)</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -2701,9 +2795,9 @@
 					<UnitConstant>
 						<name>HeroPrimeDif</name>
 						<var>
-							<compiledString>FQAAAAADAAAACgAAABQAAABeAAAAVYvsg+wIVlHZBXkAAADZHCRR2QV1AAAA2Rwki0UMixCLTQyLgmgBAAD/0Ivwi00IixGLTQiLgmgBAAD/0CvwiXX820X8UdkcJOgvAAAAg8QE2Rwk6EwAAACDxAjcNW0AAADZXfjZRfhei+VdwwAAAAAAQI9AAAB6RQAAesVVi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3DVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+							<compiledString>FQAAAAADAAAACgAAABQAAABeAAAAVYvsg+wIVlHZBXkAAADZHCRR2QV1AAAA2Rwki0UMixCLTQyLgmgBAAD/0Ivwi00IixGLTQiLgmgBAAD/0CvwiXX820X8UdkcJOgvAAAAg8QE2Rwk6EwAAACDxAjcNW0AAADZXfjZRfhei+VdwwAAAAAAQH9AAAB6RQAAesVVi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3DVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
 							<returnType>float</returnType>
-							<sString>max(min((rTotalNaftaEarned - sTotalNaftaEarned), 4000), -4000)/1000</sString>
+							<sString>max(min((rTotalNaftaEarned - sTotalNaftaEarned), 4000), -4000)/500</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -2721,9 +2815,9 @@
 					<UnitConstant>
 						<name>ModVictimDeathStreak</name>
 						<var>
-							<compiledString>FQAAAAABAAAANwAAAFWL7FGLRQyLEItNDIuC2AEAAP/Qg/gBfwfZ6Nld/Ospi00MixGLTQyLgtgBAAD/0IPoAVBR2QVQAAAA2Rwk6BUAAACDxAjZXfzZRfyL5V3DMzMzPwAAgD9Vi+yLRQxQUdlFCNkcJOgFAAAAg8QIXcNVi+yD7BSDfQwAfAiLRQyJRfzrCItNDPfZiU382ejZXfjrCdlFCNhNCNldCItV/IPiAXQJ2UX42E0I2V34i0X80eiJRfx1I4N9DAB9DNlF+Nno3vHdXfDrBtlF+N1d8N1F8Nld7NlF7OsC67eL5V3DAAAAAAAA8D8=</compiledString>
+							<compiledString>FQAAAAABAAAANwAAAFWL7FGLRQyLEItNDIuC2AEAAP/Qg/hkfwfZ6Nld/Ospi00MixGLTQyLgtgBAAD/0IPoAVBR2QVQAAAA2Rwk6BUAAACDxAjZXfzZRfyL5V3DMzMzPwAAgD9Vi+yLRQxQUdlFCNkcJOgFAAAAg8QIXcNVi+yD7BSDfQwAfAiLRQyJRfzrCItNDPfZiU382ejZXfjrCdlFCNhNCNldCItV/IPiAXQJ2UX42E0I2V34i0X80eiJRfx1I4N9DAB9DNlF+Nno3vHdXfDrBtlF+N1d8N1F8Nld7NlF7OsC67eL5V3DAAAAAAAA8D8=</compiledString>
 							<returnType>float</returnType>
-							<sString>rDeathStreak &lt;= 1 ? 1 : pow(0.7f, rDeathStreak-1 )</sString>
+							<sString>rDeathStreak &lt;= 100 ? 1 : pow(0.7f, rDeathStreak-1 )</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -2731,9 +2825,9 @@
 					<UnitConstant>
 						<name>DamagePenetrationMultiplier_Body</name>
 						<var>
-							<compiledString>FUAAAAAKAAAAXwAAAJIAAACuAAAAwQAAANQAAADoAAAA+AAAAAIBAAAiAQAAVQEAAFNwZWxsRGVmAAAAAFNwZWxsUGllcmNlAGlzQXV0b0F0dGFjawAAAABTcGVsbERlZgAAAABTcGVsbFBpZXJjZQBVi+yD7ECLRQyLEItNDIuCGAEAAP/Qi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ3V34/9DcRfiLTQiLEYtNCIuCKAEAAN1d8P/Qi00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ3V3o/9DcRejcbfDcHbEBAADf4PbEQXUH2ejZXeTrNWgYAAAAi00QixGLTRCLQlT/0NwdpQEAAN/g9sREegfZ6Nld4OsJ2QWhAQAA2V3g2UXg2V3kUdkFoQEAANkcJFHZBZ0BAADZHCSLTQyLEYtNDIuCGAEAAP/Qi00MUYtVCFJoKAAAAItFEIsQi00Qi0JQ3V3Y/9DcRdiLTQiLEYtNCIuCKAEAAN1d0P/Qi00MUYtVCFJoNAAAAItFEIsQi00Qi0JQ3V3I/9DcRcjcbdDZXcTZRcRR2Rwk6GMAAACDxATZHCToMAAAAIPECNhN5Nno3uHZXcDZRcCL5V3DAABAvwAAQD8AAAAAAADwPwAAgD8AAAAAAAAAAFWL7FHZRQjZRQze2d/g9sRBdQjZRQjZXfzrBtlFDNld/NlF/IvlXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+							<compiledString>FVgAAAAKAAAAdwAAAK0AAADGAAAA1gAAAOkAAAD2AAAAHQEAAFMBAACTAQAAyQEAAFNwZWxsUGllcmNlAFNwZWxsRGVmAAAAAFNwZWxsUGllcmNlAFNwZWxsRGVmAAAAAGlzQXV0b0F0dGFjawAAAABTcGVsbERlZgAAAABTcGVsbFBpZXJjZQBVi+yD7FyLRQiLEItNCIuCKAEAAP/Qi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ3V34/9DcRfiLTQyLEYtNDIuCGAEAAN1d8P/Q3G3wi00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ3V3o/9DcbejcHQQCAADf4PbEQQ+FoQAAAGgwAAAAi00QixGLTRCLQlT/0NwdBAIAAN/g9sREegvdBfwBAADdXeDrBdno3V3gi00IixGLTQiLgigBAAD/0ItNDFGLVQhSaBgAAACLRRCLEItNEItCUN1d2P/Q3EXYi00MixGLTQyLghgBAADdXdD/0Nxt0ItNDFGLVQhSaCQAAACLRRCLEItNEItCUN1dyP/Q3G3I3E3g2ejewd1dwOtxi00MixGLTQyLghgBAAD/0Nno3sGLTQxRi1UIUmhAAAAAi0UQixCLTRCLQlDdXbj/0NxFuItNCIsRi00Ii4IoAQAA3V2w/9DcbbCLTQxRi1UIUmhMAAAAi0UQixCLTRCLQlDdXaj/0NxtqNno3vHdXcDdRcDZXaTZRaSL5V3DAAAAAAAA8D8AAAAAAADoPwAAAAAAAAAA</compiledString>
 							<returnType>float</returnType>
-							<sString>1.0f - ((((rBodyDefence + cSpellDef) - (sPenetrationTotal + cSpellPierce)) &gt; 0.0f) ? 1.0f : ((pMisc-&gt;GetVariable("isAutoAttack") == 1.0f) ? 1.0f : 0.75f)) * min(max((rBodyDefence + cSpellDef) - (sPenetrationTotal + cSpellPierce), -0.75f ) , 0.75f)</sString>
+							<sString>(sPenetrationTotal + cSpellPierce - rBodyDefence - cSpellDef) &gt; 0 ? (1 + (sPenetrationTotal + cSpellPierce - rBodyDefence - cSpellDef) * ((pMisc-&gt;GetVariable("isAutoAttack") == false) ? 0.75 : 1)) : (1 / (1 + rBodyDefence + cSpellDef - sPenetrationTotal - cSpellPierce))</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -2741,9 +2835,9 @@
 					<UnitConstant>
 						<name>DamagePenetrationMultiplier_Spirit</name>
 						<var>
-							<compiledString>FUAAAAAKAAAAXwAAAJIAAACuAAAAwQAAANQAAADoAAAA+AAAAAIBAAAiAQAAVQEAAFNwZWxsRGVmAAAAAFNwZWxsUGllcmNlAGlzQXV0b0F0dGFjawAAAABTcGVsbERlZgAAAABTcGVsbFBpZXJjZQBVi+yD7ECLRQyLEItNDIuCHAEAAP/Qi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ3V34/9DcRfiLTQiLEYtNCIuCKAEAAN1d8P/Qi00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ3V3o/9DcRejcbfDcHbEBAADf4PbEQXUH2ejZXeTrNWgYAAAAi00QixGLTRCLQlT/0NwdpQEAAN/g9sREegfZ6Nld4OsJ2QWhAQAA2V3g2UXg2V3kUdkFoQEAANkcJFHZBZ0BAADZHCSLTQyLEYtNDIuCHAEAAP/Qi00MUYtVCFJoKAAAAItFEIsQi00Qi0JQ3V3Y/9DcRdiLTQiLEYtNCIuCKAEAAN1d0P/Qi00MUYtVCFJoNAAAAItFEIsQi00Qi0JQ3V3I/9DcRcjcbdDZXcTZRcRR2Rwk6GMAAACDxATZHCToMAAAAIPECNhN5Nno3uHZXcDZRcCL5V3DAABAvwAAQD8AAAAAAADwPwAAgD8AAAAAAAAAAFWL7FHZRQjZRQze2d/g9sRBdQjZRQjZXfzrBtlFDNld/NlF/IvlXcNVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+							<compiledString>FVgAAAAKAAAAdwAAAK0AAADGAAAA1gAAAOkAAAD2AAAAHQEAAFMBAACTAQAAyQEAAFNwZWxsUGllcmNlAFNwZWxsRGVmAAAAAFNwZWxsUGllcmNlAFNwZWxsRGVmAAAAAGlzQXV0b0F0dGFjawAAAABTcGVsbERlZgAAAABTcGVsbFBpZXJjZQBVi+yD7FyLRQiLEItNCIuCKAEAAP/Qi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ3V34/9DcRfiLTQyLEYtNDIuCHAEAAN1d8P/Q3G3wi00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ3V3o/9DcbejcHQQCAADf4PbEQQ+FoQAAAGgwAAAAi00QixGLTRCLQlT/0NwdBAIAAN/g9sREegvdBfwBAADdXeDrBdno3V3gi00IixGLTQiLgigBAAD/0ItNDFGLVQhSaBgAAACLRRCLEItNEItCUN1d2P/Q3EXYi00MixGLTQyLghwBAADdXdD/0Nxt0ItNDFGLVQhSaCQAAACLRRCLEItNEItCUN1dyP/Q3G3I3E3g2ejewd1dwOtxi00MixGLTQyLghwBAAD/0Nno3sGLTQxRi1UIUmhAAAAAi0UQixCLTRCLQlDdXbj/0NxFuItNCIsRi00Ii4IoAQAA3V2w/9DcbbCLTQxRi1UIUmhMAAAAi0UQixCLTRCLQlDdXaj/0NxtqNno3vHdXcDdRcDZXaTZRaSL5V3DAAAAAAAA8D8AAAAAAADoPwAAAAAAAAAA</compiledString>
 							<returnType>float</returnType>
-							<sString>1.0f - ((((rSpiritDefence + cSpellDef) - (sPenetrationTotal + cSpellPierce)) &gt; 0.0f) ? 1.0f : ((pMisc-&gt;GetVariable("isAutoAttack") == 1.0f) ? 1.0f : 0.75f)) * min(max((rSpiritDefence + cSpellDef) - (sPenetrationTotal + cSpellPierce), -0.75f ) , 0.75f)</sString>
+							<sString>(sPenetrationTotal + cSpellPierce - rSpiritDefence - cSpellDef) &gt; 0 ? (1 + (sPenetrationTotal + cSpellPierce - rSpiritDefence - cSpellDef) * ((pMisc-&gt;GetVariable("isAutoAttack") == false) ? 0.75 : 1)) : (1 / (1 + rSpiritDefence + cSpellDef - sPenetrationTotal - cSpellPierce))</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -2911,19 +3005,9 @@
 					<UnitConstant>
 						<name>Night_Duration</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAA0Qw==</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACWQw==</compiledString>
 							<returnType>float</returnType>
-							<sString>180</sString>
-						</var>
-					</UnitConstant>
-				</Item>
-				<Item href="/GameLogic/AILogic.AILP" id="0998859C-C6DF-43D3-A54E-4880721A9BB9">
-					<UnitConstant>
-						<name>LifeBudget</name>
-						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQQ==</compiledString>
-							<returnType>float</returnType>
-							<sString>30.0f</sString>
+							<sString>300</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -2977,10 +3061,190 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="FB2837B4-5B75-470F-AC19-0BF4A3470EA9">
+					<UnitConstant>
+						<name>BackdoorDelayTime</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>10.0f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="0998859C-C6DF-43D3-A54E-4880721A9BB9">
+					<UnitConstant>
+						<name>LifeBudget</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>30.0f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="44EAADE5-DE2E-4143-AF23-D32506FEF511">
+					<UnitConstant>
+						<name>EnergyBudget</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>30.0f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="8AA1A7BB-696E-46B8-88C3-5F02AE866D30">
+					<UnitConstant>
+						<name>LifeRegBudget</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DZmZmPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>0.9f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="D3A00E6A-021B-49F9-894D-5A6D6D2D8D17">
+					<UnitConstant>
+						<name>EnergyRegBudget</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcwMPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>0.55f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="89A1EE13-27A6-42E2-87B0-327EB1DE955F">
+					<UnitConstant>
+						<name>LifeStealBudget</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="A2A21CF8-07C0-479A-9B20-094D41D30598">
+					<UnitConstant>
+						<name>T1_Stat</name>
+						<var>
+							<compiledString>FQAAAAACAAAABgAAABAAAABVi+xR2QUqAAAA2RwkUdkFJgAAANkcJItFEIsQi00Qi0Js/9BdwwAAoEDNzMw+</compiledString>
+							<returnType>float</returnType>
+							<sString>refineScale(5, 0.4)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="5B871D3D-0D6A-4D09-BBA1-F55DF6EAB8C8">
+					<UnitConstant>
+						<name>T2_Stat</name>
+						<var>
+							<compiledString>FQAAAAACAAAABgAAABAAAABVi+xR2QUqAAAA2RwkUdkFJgAAANkcJItFEIsQi00Qi0Js/9Bdw2Zm5kAAAAA/</compiledString>
+							<returnType>float</returnType>
+							<sString>refineScale(7.2, 0.5)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="6742ABD2-9E59-4225-BA42-6E664821EDB5">
+					<UnitConstant>
+						<name>T3_Stat</name>
+						<var>
+							<compiledString>FQAAAAACAAAABgAAABAAAABVi+xR2QUqAAAA2RwkUdkFJgAAANkcJItFEIsQi00Qi0Js/9BdwwAAIEHNzEw/</compiledString>
+							<returnType>float</returnType>
+							<sString>refineScale(10, 0.8)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="A8F4AA43-3EDB-4FB3-81B0-6F7557FD5F29">
+					<UnitConstant>
+						<name>T4_Stat</name>
+						<var>
+							<compiledString>FQAAAAABAAAADAAAAFWL7FHZ6NkcJFHZBSIAAADZHCSLRRCLEItNEItCbP/QXcMAAFBBAACAPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>refineScale(13, 1)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="C363161A-4F0F-4F6C-9B1F-0F76F291F560">
+					<UnitConstant>
+						<name>T5_Stat</name>
+						<var>
+							<compiledString>FQAAAAACAAAABgAAABAAAABVi+xR2QUqAAAA2RwkUdkFJgAAANkcJItFEIsQi00Qi0Js/9BdwwAAmEEzM7M/</compiledString>
+							<returnType>float</returnType>
+							<sString>refineScale(19, 1.4)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="CAB4E9D9-02DB-424C-AAD0-7E4500CB9CD7">
+					<UnitConstant>
+						<name>T6_Stat</name>
+						<var>
+							<compiledString>FQAAAAACAAAABgAAABAAAABVi+xR2QUqAAAA2RwkUdkFJgAAANkcJItFEIsQi00Qi0Js/9BdwwAA2EEAAABA</compiledString>
+							<returnType>float</returnType>
+							<sString>refineScale(27, 2)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="F2E9A75E-7854-4E2E-91E4-CC1659E259B7">
+					<UnitConstant>
+						<name>FullStat</name>
+						<var>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="284B05C3-7D59-4D85-862E-67ADD92FD8E5">
+					<UnitConstant>
+						<name>StackValue</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="95D905FE-BC19-42E7-A27F-6D61EE268523">
+					<UnitConstant>
+						<name>TerrainValue</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>0.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="47DBD3D7-8592-40F9-95C8-A1D0488C81E7">
+					<UnitConstant>
+						<name>FullStackHeroKill</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>10</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="6878C99B-7BDE-48FE-BCC8-85AEE19FB146">
+					<UnitConstant>
+						<name>FullStackCreepKill</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABIQw==</compiledString>
+							<returnType>float</returnType>
+							<sString>200</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/GameLogic/AILogic.AILP" id="F47338B4-E591-40BF-A9CF-62BA8F29DD1C">
+					<UnitConstant>
+						<name>MidOnlySpeedCoeff</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>3</sString>
+						</var>
+					</UnitConstant>
+				</Item>
 			</vars>
 		</UnitConstantsContainer>
 	</globalConstants>
-	<globalCooldownTime>0.2</globalCooldownTime>
+	<globalCooldownTime>0</globalCooldownTime>
 	<glyphSettings>
 		<maxAfterPickupSpawnDelay>240</maxAfterPickupSpawnDelay>
 		<maxInstances>2</maxInstances>
@@ -3195,12 +3459,12 @@
 	</heroRanks>
 	<heroRespawnParams href="/GameLogic/AILogic.AILP" id="669684CD-D2DD-4BEB-BA17-8C3FD1E409F2">
 		<HeroRespawnParams>
-			<heroBaseRespawnTime>5</heroBaseRespawnTime>
+			<heroBaseRespawnTime>3</heroBaseRespawnTime>
 			<heroMinRespawnTime>5</heroMinRespawnTime>
 			<heroRespawnDelayMultiplier>2</heroRespawnDelayMultiplier>
 			<overtimeRespawnParams>
-				<overtime>25</overtime>
-				<respawnDelayForOvertime>1.5</respawnDelayForOvertime>
+				<overtime>10</overtime>
+				<respawnDelayForOvertime>0.5</respawnDelayForOvertime>
 			</overtimeRespawnParams>
 		</HeroRespawnParams>
 	</heroRespawnParams>
@@ -3211,7 +3475,7 @@
 	<killAwardPartyMultiplier>1</killAwardPartyMultiplier>
 	<killTimeIntervals>
 		<buildingKillInterval>2</buildingKillInterval>
-		<creepKillInterval>0.5</creepKillInterval>
+		<creepKillInterval>0.2</creepKillInterval>
 		<heroKillDamageInterval>10</heroKillDamageInterval>
 		<heroKillerDeadInterval>5</heroKillerDeadInterval>
 	</killTimeIntervals>
@@ -3233,11 +3497,16 @@
 	<maxCreepsCount>256</maxCreepsCount>
 	<maxTrueSightRange>16</maxTrueSightRange>
 	<movingTimerBlock>3</movingTimerBlock>
-	<pauseSeconds>150</pauseSeconds>
+	<pauseSeconds>15</pauseSeconds>
 	<physicalDamageReduction>
-		<compiledString>FTEAAAADAAAAPgAAAHAAAACEAAAAZGFtYWdlRGVhbGVkAAAAAERhbWFnZVBlbmV0cmF0aW9uTXVsdGlwbGllcl9Cb2R5AFWL7IPsFFHZ7tkcJGgAAAAAi0UQixCLTRCLQlT/0FHZHCToYQAAAIPECItNDIsRi00Mi4J0AQAA3V34/9DcDa0AAADZ6N7h3E34i00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ3V3w/9DcTfDZXezZReyL5V3DAAAAAAAA8D8AAABA4XqEPwAAAABVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+		<compiledString>FXkAAAAMAAAAwAAAAN4AAAAjAQAANgEAAEMBAACDAQAAnAEAAKsBAADEAQAA2wEAAA0CAAAhAgAAQmFzZUF0dGFja0RtZ19IZXJvX21hdGVyaWFsAGRhbWFnZURlYWxlZAAAAABpc0NyaXRpY2FsAABUb3dlckRhbWdlQnVmZgAAZGFtYWdlRGVhbGVkAAAAAERhbWFnZVBlbmV0cmF0aW9uTXVsdGlwbGllcl9Cb2R5AFWL7IPsQItFDIsQi00Mi0JQ/9CD+AZ0KItNDIsRi00Mi0JQ/9CD+Ad0FotNDIsRi00Mi0JQ/9CD+AgPhRsBAABqAYtNEFFoAAAAAItVCIsCi00Ii5CcAQAA/9I7RRAPhfcAAABoHAAAAItFEIsQi00Qi0JU/9CLTQiLEYtNCIuCAAEAAN1d+P/QUdkcJOiRAQAAg8QEiUX020X03F343+D2xEEPirIAAABoLAAAAItNEIsRi00Qi0JU/9DcHWwCAADf4PbERHoL3QVkAgAA3V3s6wXZ6N1d7ItNCIsRi00Ii4IwAQAA/9BR2Rwki00IixGLTQiLgjQBAAD/0FHZHCTo9gAAAIPECNwNXAIAAItNDIsRi00Mi4J0AQAA3V3k/9DcDVQCAADZ6N7h3E3k3E3saDgAAACLTQiLEYtNCIuCiAEAAN1d3P/Q3DVMAgAA2ejewdxN3N1d1OtnUdnu2RwkaEgAAACLTRCLEYtNEItCVP/QUdkcJOh/AAAAg8QIi00MixGLTQyLgnQBAADdXcz/0NwNVAIAANno3uHcTcyLTQxRi1UIUmhYAAAAi0UQixCLTRCLQlDdXcT/0NxNxN1d1N1F1NldwNlFwIvlXcMAAAAAAAAAAAAAWUAAAABA4XqEPwAAAAAAAOg/MzMzMzMzA0AAAAAAAADwP1WL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcO4AQAAAA+i98IAAAAEdAfzDyxEJATD6QAAAABVi+yD7AzZRQjZffwPt0X8DQAMAACJRfjZbfjbXfTZbfyLRfSL5V3D</compiledString>
 		<returnType>float</returnType>
-		<sString>max( pMisc-&gt;GetVariable("damageDealed"), 0 ) * (1.0f - rMaterialDamageDecrease * 0.01f) * cDamagePenetrationMultiplier_Body</sString>
+		<sString>(rUnitKind == 6 || rUnitKind == 7 || rUnitKind == 8) 
+&amp;&amp; sender.applBaseAttackDmg_Hero_material(UNIT)==pMisc 
+&amp;&amp; pMisc-&gt;GetVariable("damageDealed")&gt;= f2l(sDamageMin)?
+	max( sIntellect , sStrength ) *0.75 * (1.0f - rMaterialDamageDecrease * 0.01f) * (pMisc-&gt;GetVariable("isCritical") == 1.0f ? 2.4 : 1) * (1 + sender.vTowerDamgeBuff/100) :
+	max( pMisc-&gt;GetVariable("damageDealed"), 0 ) * (1.0f - rMaterialDamageDecrease * 0.01f) * cDamagePenetrationMultiplier_Body
+</sString>
 	</physicalDamageReduction>
 	<pickupItemRange>2</pickupItemRange>
 	<portal href="/Items/Talents/_commonData/Portal.TALENT" />
@@ -3269,7 +3538,7 @@
 		<Item>1</Item>
 		<Item>1</Item>
 		<Item>1</Item>
-		<Item>1</Item>
+		<Item>0.7</Item>
 		<Item>1</Item>
 		<Item>1</Item>
 		<Item>1</Item>
@@ -3289,85 +3558,85 @@
 			<kits>
 				<Item href="/Items/Talents/TalentKits/Vampiric1_Resurrection/V1_Resurrection.TALKIT" />
 				<Item href="/Items/Talents/TalentKits/Vampiric2_ArmourPush/V2_ArmourPush.TALKIT" />
-				<Item href="/Items/Talents/TalentKits/Vampiric3_StunProc/V3_StunProc.TALKIT" />
+				<Item href="/Items/Talents/TalentKits/Vampiric3_Satanic/V3_Satanic.TALKIT" />
 				<Item href="/Items/Talents/TalentKits/Vampiric4_ArmourBlink/V4_ArmourBlink.TALKIT" />
 				<Item href="/Items/Talents/TalentKits/Vampiric5_CloneWall/V5_CloneWall.TALKIT" />
 				<Item href="/Items/Talents/TalentKits/Vampiric6_CasterBoost/V6_CasterBoost.TALKIT" />
 				<Item href="/GameLogic/AILogic.AILP" id="CAAB2104-63BD-46F6-AEDD-80B0CC6DEAE4">
 					<TalentKit>
-						<caption>G349</caption>
+						<caption>G349: Грань шансов</caption>
 						<kitCapacity>2</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_caab210463bd46f6aedd80b0cc6deae4_name.txt" />
-						<special href="/Items/Talents/Level2/G349_SelfHeal.TALENT" />
+						<special href="/Items/Talents/Common/G349_SelfHeal.TALENT" />
 						<talents>
-							<Item href="/Items/Talents/Level2/G349_SelfHeal.TALENT" />
-							<Item href="/Items/Talents/Level2/G354_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G355_Str_Int_Life.TALENT" />
-							<Item href="/Items/Talents/Level5/G356_Life_Stamina.TALENT" />
-							<Item href="/Items/Talents/Level5/G357_Life_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G349_SelfHeal.TALENT" />
+							<Item href="/Items/Talents/Common/G354_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G355_Str_Int_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G356_Life_Stamina.TALENT" />
+							<Item href="/Items/Talents/Common/G357_Life_Will.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="ECF4D157-D54F-4E65-A617-3E7579484584">
 					<TalentKit>
-						<caption>G350</caption>
+						<caption>G350: Скопище напастей</caption>
 						<kitCapacity>2</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_ecf4d157d54f4e65a6173e7579484584_name.txt" />
-						<special href="/Items/Talents/Level3/G350_AoE.TALENT" />
+						<special href="/Items/Talents/Common/G350_AoE.TALENT" />
 						<talents>
-							<Item href="/Items/Talents/Level3/G350_AoE.TALENT" />
-							<Item href="/Items/Talents/Level1/G358_Int_Str.TALENT" />
-							<Item href="/Items/Talents/Level3/G359_Stamina_Will.TALENT" />
-							<Item href="/Items/Talents/Level4/G360_AttackSpeed_CDR.TALENT" />
-							<Item href="/Items/Talents/Level6/G361_AttackSpeed_Dex_Stamina_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G350_AoE.TALENT" />
+							<Item href="/Items/Talents/Common/G358_Int_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G359_Stamina_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G360_AttackSpeed_CDR.TALENT" />
+							<Item href="/Items/Talents/Common/G361_AttackSpeed_Dex_Stamina_Will.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="78E34C20-5B5E-4BA2-B3A7-1CB6AEBCD2D1">
 					<TalentKit>
-						<caption>G351</caption>
+						<caption>G351: Чувство мгновений</caption>
 						<kitCapacity>2</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_78e34c205b5e4ba2b3a71cb6aebcd2d1_name.txt" />
-						<special href="/Items/Talents/Level4/G351_MoveSpeed_Shield.TALENT" />
+						<special href="/Items/Talents/Common/G351_MoveSpeed_Shield.TALENT" />
 						<talents>
-							<Item href="/Items/Talents/Level4/G351_MoveSpeed_Shield.TALENT" />
-							<Item href="/Items/Talents/Level2/G362_Str.TALENT" />
-							<Item href="/Items/Talents/Level2/G363_Int.TALENT" />
-							<Item href="/Items/Talents/Level3/G364_Life_Str_Int.TALENT" />
-							<Item href="/Items/Talents/Level5/G365_Will_Str_Int.TALENT" />
-							<Item href="/Items/Talents/Level5/G366_Stamina_Str_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G351_MoveSpeed_Shield.TALENT" />
+							<Item href="/Items/Talents/Common/G362_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G363_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G364_Life_Str_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G365_Will_Str_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G366_Stamina_Str_Int.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="A92DDA7C-A889-41C6-B82A-FF0C591FF93C">
 					<TalentKit>
-						<caption>G352</caption>
+						<caption>G352: Путь карателя</caption>
 						<kitCapacity>3</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_a92dda7ca88941c6b82aff0c591ff93c_name.txt" />
-						<special href="/Items/Talents/Level4/G352_Dmg.TALENT" />
+						<special href="/Items/Talents/Common/G352_Dmg.TALENT" />
 						<talents>
-							<Item href="/Items/Talents/Level4/G352_Dmg.TALENT" />
-							<Item href="/Items/Talents/Level3/G367_Str.TALENT" />
-							<Item href="/Items/Talents/Level3/G368_Int.TALENT" />
-							<Item href="/Items/Talents/Level5/G369_Dex_Str_Int.TALENT" />
-							<Item href="/Items/Talents/Level6/G370_Str_Int.TALENT" />
-							<Item href="/Items/Talents/Level6/G371_Str_Int_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G352_Dmg.TALENT" />
+							<Item href="/Items/Talents/Common/G367_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G368_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G369_Dex_Str_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G370_Str_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G371_Str_Int_Life.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="0C7252A2-6468-4FEB-BE36-FB6B97D88EB2">
 					<TalentKit>
-						<caption>G353</caption>
+						<caption>G353: Исток уз</caption>
 						<kitCapacity>3</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_0c7252a264684febbe36fb6b97d88eb2_name.txt" />
-						<special href="/Items/Talents/Level5/G353_AoE.TALENT" />
+						<special href="/Items/Talents/Common/G353_AoE.TALENT" />
 						<talents>
-							<Item href="/Items/Talents/Level5/G353_AoE.TALENT" />
-							<Item href="/Items/Talents/Level1/G372_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G373_AttackSpeed_Dex_Stamina_Will.TALENT" />
-							<Item href="/Items/Talents/Level4/G374_AttackSpeed_Dex_Stamina_Will.TALENT" />
-							<Item href="/Items/Talents/Level6/G375_Str_Stamina_Will.TALENT" />
-							<Item href="/Items/Talents/Level6/G376_Int_Stamina_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G353_AoE.TALENT" />
+							<Item href="/Items/Talents/Common/G372_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G373_AttackSpeed_Dex_Stamina_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G374_AttackSpeed_Dex_Stamina_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G375_Str_Stamina_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G376_Int_Stamina_Will.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
@@ -3386,107 +3655,107 @@
 				<Item href="/Items/Talents/TalentKits/RedSet2_7_FireWard/RedSet2_7_FireWard.TALKIT" />
 				<Item href="/GameLogic/AILogic.AILP" id="12DB6014-1C1F-474A-8D3F-A4B56885F24C">
 					<TalentKit>
-						<caption>G328</caption>
+						<caption>G328: Предзнаменование</caption>
 						<kitCapacity>3</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_12db60141c1f474a8d3fa4b56885f24c_name.txt" />
-						<special href="/Items/Talents/Level3/G328_AoERegEnergy.TALENT" />
+						<special href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" />
 						<talents>
-							<Item href="/Items/Talents/Level2/G343_EnergyDrain.TALENT" />
-							<Item href="/Items/Talents/Level3/G328_AoERegEnergy.TALENT" />
-							<Item href="/Items/Talents/Level6/G329_Aspd_WillOrStmn.TALENT" />
-							<Item href="/Items/Talents/Level5/G332_AspdStmn.TALENT" />
+							<Item href="/Items/Talents/Common/G343_EnergyDrain.TALENT" />
+							<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" />
+							<Item href="/Items/Talents/Common/G329_Aspd_WillOrStmn.TALENT" />
+							<Item href="/Items/Talents/Common/G332_AspdStmn.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="4E62F943-F46A-4DB3-A063-5CD55476BF8B">
 					<TalentKit>
-						<caption>G323</caption>
+						<caption>G323: Искажение мысли</caption>
 						<kitCapacity>2</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_4e62f943f46a4db3a0635cd55476bf8b_name.txt" />
-						<special href="/Items/Talents/Level6/G323_IntAspd_Arena.TALENT" />
+						<special href="/Items/Talents/Common/G323_IntAspd_Arena.TALENT" />
 						<talents>
-							<Item href="/Items/Talents/Level6/G323_IntAspd_Arena.TALENT" />
-							<Item href="/Items/Talents/Level5/G335_DexWill.TALENT" />
-							<Item href="/Items/Talents/Level4/G327_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G323_IntAspd_Arena.TALENT" />
+							<Item href="/Items/Talents/Common/G335_DexWill.TALENT" />
+							<Item href="/Items/Talents/Common/G327_StrOrInt.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="94E8AC14-42AF-418D-AE49-FB9880EA1251">
 					<TalentKit>
-						<caption>G330</caption>
+						<caption>G330: Агрессивная позиция</caption>
 						<kitCapacity>2</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_94e8ac1442af418dae49fb9880ea1251_name.txt" />
-						<special href="/Items/Talents/Level5/G330_Dex_WillOrStmn.TALENT" />
+						<special href="/Items/Talents/Common/G330_Dex_WillOrStmn.TALENT" />
 						<talents>
-							<Item href="/Items/Talents/Level5/G330_Dex_WillOrStmn.TALENT" />
-							<Item href="/Items/Talents/Level1/G344_Life_LifeReg.TALENT" />
-							<Item href="/Items/Talents/Level6/G326_Dex_WillOrStrmn.TALENT" />
+							<Item href="/Items/Talents/Common/G330_Dex_WillOrStmn.TALENT" />
+							<Item href="/Items/Talents/Common/G344_Life_LifeReg.TALENT" />
+							<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="C955A9F9-D1BB-46A7-95AA-D7E8F0DBA3A3">
 					<TalentKit>
-						<caption>G331</caption>
+						<caption>G331: Неумолимое присутствие</caption>
 						<kitCapacity>2</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_c955a9f9d1bb46a795aad7e8f0dba3a3_name.txt" />
-						<special href="/Items/Talents/Level5/G331_Aspd_WillOrStmn.TALENT" />
+						<special href="/Items/Talents/Common/G331_Aspd_WillOrStmn.TALENT" />
 						<talents>
-							<Item href="/Items/Talents/Level5/G331_Aspd_WillOrStmn.TALENT" />
-							<Item href="/Items/Talents/Level6/G325_IntAspd.TALENT" />
-							<Item href="/Items/Talents/Level4/G337_IntAspd.TALENT" />
+							<Item href="/Items/Talents/Common/G331_Aspd_WillOrStmn.TALENT" />
+							<Item href="/Items/Talents/Common/G325_IntAspd.TALENT" />
+							<Item href="/Items/Talents/Common/G337_IntAspd.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="A8EF2BEF-4E05-41AB-9F2D-4E6FE1FD0AE8">
 					<TalentKit>
-						<caption>G334</caption>
+						<caption>G334: Хищная натура</caption>
 						<kitCapacity>2</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_a8ef2bef4e0541ab9f2d4e6fe1fd0ae8_name.txt" />
-						<special href="/Items/Talents/Level5/G334_DexStm_Root.TALENT" />
+						<special href="/Items/Talents/Common/G334_DexStm_Root.TALENT" />
 						<talents>
-							<Item href="/Items/Talents/Level5/G334_DexStm_Root.TALENT" />
-							<Item href="/Items/Talents/Level6/G322_StrDex.TALENT" />
-							<Item href="/Items/Talents/Level4/G338_StrDex.TALENT" />
+							<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" />
+							<Item href="/Items/Talents/Common/G322_StrDex.TALENT" />
+							<Item href="/Items/Talents/Common/G338_StrDex.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="0C2DDD02-B93B-4B2A-A35C-2661D3AF5511">
 					<TalentKit>
-						<caption>G339</caption>
+						<caption>G339: Изощренный ум</caption>
 						<kitCapacity>2</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_0c2ddd02b93b4b2aa35c2661d3af5511_name.txt" />
-						<special href="/Items/Talents/Level4/G339_IntDex_Slow.TALENT" />
+						<special href="/Items/Talents/Common/G339_IntDex_Slow.TALENT" />
 						<talents>
-							<Item href="/Items/Talents/Level4/G339_IntDex_Slow.TALENT" />
-							<Item href="/Items/Talents/Level2/G342_Dex.TALENT" />
-							<Item href="/Items/Talents/Level1/G345_RegEnergy.TALENT" />
+							<Item href="/Items/Talents/Common/G339_IntDex_Slow.TALENT" />
+							<Item href="/Items/Talents/Common/G342_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G345_RegEnergy.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="8DCFB27A-8379-4A2A-B52C-D20E8D6E6628">
 					<TalentKit>
-						<caption>G336</caption>
+						<caption>G336: Необузданная ярость</caption>
 						<kitCapacity>2</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_8dcfb27a83794a2ab52cd20e8d6e6628_name.txt" />
-						<special href="/Items/Talents/Level4/G336_StrAspd_TelBlock.TALENT" />
+						<special href="/Items/Talents/Common/G336_StrAspd_TelBlock.TALENT" />
 						<talents>
-							<Item href="/Items/Talents/Level4/G336_StrAspd_TelBlock.TALENT" />
-							<Item href="/Items/Talents/Level5/G312_LifeDrain_maxStrInt.TALENT" />
-							<Item href="/Items/Talents/Level6/G324_StrAspd.TALENT" />
+							<Item href="/Items/Talents/Common/G336_StrAspd_TelBlock.TALENT" />
+							<Item href="/Items/Talents/Common/G312_LifeDrain_maxStrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G324_StrAspd.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="79B70CFD-41B6-4E43-AFA1-25989C541B8C">
 					<TalentKit>
-						<caption>G341</caption>
+						<caption>G341: Призрачные обьятия</caption>
 						<kitCapacity>3</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_79b70cfd41b64e43afa125989c541b8c_name.txt" />
-						<special href="/Items/Talents/Level2/G341_Aspd_CreateWard.TALENT" />
+						<special href="/Items/Talents/Common/G341_Aspd_CreateWard.TALENT" />
 						<talents>
-							<Item href="/Items/Talents/Level2/G341_Aspd_CreateWard.TALENT" />
-							<Item href="/Items/Talents/Level5/G333_AspdWill_TowerDestr.TALENT" />
-							<Item href="/Items/Talents/Level3/G340_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level1/G346_EnergyDrain.TALENT" />
+							<Item href="/Items/Talents/Common/G341_Aspd_CreateWard.TALENT" />
+							<Item href="/Items/Talents/Common/G333_AspdWill_TowerDestr.TALENT" />
+							<Item href="/Items/Talents/Common/G340_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G346_EnergyDrain.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
@@ -3502,134 +3771,134 @@
 				<Item href="/Items/Talents/TalentKits/Redset4_5_CasterDot/Redset4_5_CasterDot.TALKIT" />
 				<Item href="/GameLogic/AILogic.AILP" id="89219C60-7FFA-4E0D-B6A7-62EE98F9631A">
 					<TalentKit>
-						<caption>G582</caption>
+						<caption>G582: Опытный воин</caption>
 						<kitCapacity>3</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_89219c607ffa4e0db6a762ee98f9631a_name.txt" />
 						<special href="" />
 						<talents>
-							<Item href="/Items/Talents/Level1/G582_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level3/G583_Life.TALENT" />
-							<Item href="/Items/Talents/Level2/G584_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level2/G585_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G582_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G583_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G584_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G585_Dex.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="342B1DEF-47D6-4704-8921-61088C1A76B6">
 					<TalentKit>
-						<caption>G586</caption>
+						<caption>G586: Непробиваемый оплот</caption>
 						<kitCapacity>3</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_342b1def47d64704892161088c1a76b6_name.txt" />
 						<special href="" />
 						<talents>
-							<Item href="/Items/Talents/Level4/G586_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G587_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level5/G588_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G589_LifeStaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G586_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G587_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G588_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G589_LifeStaOrWill.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="DEB8C0F9-7232-40D7-9A15-A30D38637211">
 					<TalentKit>
-						<caption>G590</caption>
+						<caption>G590: Знания чародея  </caption>
 						<kitCapacity>3</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_deb8c0f9723240d79a15a30d38637211_name.txt" />
 						<special href="" />
 						<talents>
-							<Item href="/Items/Talents/Level4/G590_Int.TALENT" />
-							<Item href="/Items/Talents/Level5/G591_AtSpd.TALENT" />
-							<Item href="/Items/Talents/Level5/G592_Dex.TALENT" />
-							<Item href="/Items/Talents/Level6/G593_IntDexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G590_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G591_AtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G592_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G593_IntDexOrAtSpd.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="75725B45-47FA-4BF4-B544-4F99D1F1B729">
 					<TalentKit>
-						<caption>G594</caption>
+						<caption>G594: Животная сила  </caption>
 						<kitCapacity>3</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_75725b4547fa4bf4b5444f99d1f1b729_name.txt" />
 						<special href="" />
 						<talents>
-							<Item href="/Items/Talents/Level4/G594_Str.TALENT" />
-							<Item href="/Items/Talents/Level5/G595_AtSpd.TALENT" />
-							<Item href="/Items/Talents/Level5/G596_Dex.TALENT" />
-							<Item href="/Items/Talents/Level6/G597_StrDexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G594_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G595_AtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G596_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G597_StrDexOrAtSpd.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/Items/Talents/TalentKits/Redset5_5_Caster/Redset5_5_Caster.TALKIT" />
 				<Item href="/GameLogic/AILogic.AILP" id="5A492FBF-DC69-4E06-96BE-3DA5C919E51D">
 					<TalentKit>
-						<caption>G602</caption>
+						<caption>G602: Боевое искусство</caption>
 						<kitCapacity>3</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_5a492fbfdc694e0696be3da5c919e51d_name.txt" />
 						<special href="" />
 						<talents>
-							<Item href="/Items/Talents/Level1/G602_LifeDrain.TALENT" />
-							<Item href="/Items/Talents/Level4/G603_Str.TALENT" />
-							<Item href="/Items/Talents/Level2/G604_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level3/G605_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G602_LifeDrain.TALENT" />
+							<Item href="/Items/Talents/Common/G603_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G604_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G605_AttackSpeed.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="51D25570-533B-4509-9DDB-99A352FAA9D0">
 					<TalentKit>
-						<caption>G606</caption>
+						<caption>G606: Спиннеры</caption>
 						<kitCapacity>2</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_51d25570533b45099ddb99a352faa9d0_name.txt" />
 						<special href="" />
 						<talents>
-							<Item href="/Items/Talents/Level1/G610_Sta.TALENT" />
-							<Item href="/Items/Talents/Level1/G611_Will.TALENT" />
-							<Item href="/Items/Talents/Level2/G608_AtSpd.TALENT" />
-							<Item href="/Items/Talents/Level2/G609_Dex.TALENT" />
-							<Item href="/Items/Talents/Level2/G612_EndergyRegen.TALENT" />
-							<Item href="/Items/Talents/Level3/G606_Str.TALENT" />
-							<Item href="/Items/Talents/Level3/G607_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G610_Sta.TALENT" />
+							<Item href="/Items/Talents/Common/G611_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G608_AtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G609_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" />
+							<Item href="/Items/Talents/Common/G606_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G607_Int.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="54D981FA-59E8-49BA-A951-3558B1912019">
 					<TalentKit>
-						<caption>G613</caption>
+						<caption>G613: Горячее время</caption>
 						<kitCapacity>4</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_54d981fa59e849baa9513558b1912019_name.txt" />
 						<special href="" />
 						<talents>
-							<Item href="/Items/Talents/Level1/G613_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G614_Int_DexOrAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level5/G615_Str_DexOrAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level4/G616_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level6/G617_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G613_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G614_Int_DexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G615_Str_DexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G616_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G617_StrOrInt.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="C4D501AF-64E4-4F72-89AF-D8F5EEA91E7C">
 					<TalentKit>
-						<caption>Жуткая пора</caption>
+						<caption>G618: Жуткая пора</caption>
 						<kitCapacity>4</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_c4d501af64e44f7289afd8f5eea91e7c_name.txt" />
 						<special href="" />
 						<talents>
-							<Item href="/Items/Talents/Level6/G618_Str.TALENT" />
-							<Item href="/Items/Talents/Level6/G620_Int.TALENT" />
-							<Item href="/Items/Talents/Level4/G621_Dex.TALENT" />
-							<Item href="/Items/Talents/Level4/G622_AtSpd.TALENT" />
-							<Item href="/Items/Talents/Level5/G619_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G618_Str.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G620_Int.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G621_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G622_AtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G619_StaOrWill.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
 				<Item href="/GameLogic/AILogic.AILP" id="943954F1-F967-4A96-BA6B-2CAFC84BD2A8">
 					<TalentKit>
-						<caption>G623</caption>
+						<caption>G623: Жизненный путь</caption>
 						<kitCapacity>2</kitCapacity>
 						<name textref="/GameLogic/AILogic.AILP_943954f1f9674a96ba6b2cafc84bd2a8_name.txt" />
 						<special href="" />
 						<talents>
-							<Item href="/Items/Talents/Level2/G623_SelfHeal.TALENT" />
-							<Item href="/Items/Talents/Level1/G624_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G627_StrOrInt_Life.TALENT" />
-							<Item href="/Items/Talents/Level3/G625_Str.TALENT" />
-							<Item href="/Items/Talents/Level3/G626_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G623_SelfHeal.TALENT" />
+							<Item href="/Items/Talents/Common/G624_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G627_StrOrInt_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G625_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G626_Int.TALENT" />
 						</talents>
 					</TalentKit>
 				</Item>
@@ -3663,6 +3932,8 @@
 				<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/Redset7_11_MiniRefresher.TALKIT" />
 				<Item href="/Items/Talents/TalentKits/Redset7_12_SuperMove/Redset7_12_SuperMove.TALKIT" />
 				<Item href="/Items/Talents/TalentKits/Redset_RessurectTime/Redset_RessurectTime.TALKIT" />
+				<Item href="/Items/Talents/TalentKits/RedSet2_8_AAOff/RedSet2_8_AAOff.TALKIT" />
+				<Item href="/Items/Talents/TalentKits/LostLegacy/LostLegacy.TALKIT" />
 			</kits>
 		</TalentKitList>
 	</talentKits>
@@ -3685,33 +3956,33 @@
 						<isRedPack>false</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_9ec4e10089304d4a91b9d142d9735e23_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level1/G295_LifeDrain.TALENT" />
-							<Item href="/Items/Talents/Level2/G296_LifeRegen.TALENT" />
-							<Item href="/Items/Talents/Level2/G297_maxStrInt.TALENT" />
-							<Item href="/Items/Talents/Level2/G298_EnergyRegen.TALENT" />
-							<Item href="/Items/Talents/Level3/G299_LifeRegen_Stamina.TALENT" />
-							<Item href="/Items/Talents/Level3/G300_LifeRegen_Will.TALENT" />
-							<Item href="/Items/Talents/Level3/G301_Life_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level3/G302_Life_Dexterity.TALENT" />
-							<Item href="/Items/Talents/Level4/G303_Str_CDR.TALENT" />
-							<Item href="/Items/Talents/Level4/G304_Int_CDR.TALENT" />
-							<Item href="/Items/Talents/Level4/G305_K_Dex_CDR.TALENT" />
-							<Item href="/Items/Talents/Level4/G306_K_LifeDrain_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level4/G307_Dex_maxStaWill.TALENT" />
-							<Item href="/Items/Talents/Level4/G308_K_Life_Energy.TALENT" />
-							<Item href="/Items/Talents/Level5/G309_AttackSpeed_Life.TALENT" />
-							<Item href="/Items/Talents/Level5/G310_Dexterity_Life.TALENT" />
-							<Item href="/Items/Talents/Level5/G311_K_Life_Energy.TALENT" />
-							<Item href="/Items/Talents/Level5/G313_K_maxStrInt_LifeDrain.TALENT" />
-							<Item href="/Items/Talents/Level5/G314_Aura_LifeDrain.TALENT" />
-							<Item href="/Items/Talents/Level6/G315_Stamina_maxStrInt.TALENT" />
-							<Item href="/Items/Talents/Level6/G316_Will_maxStrInt.TALENT" />
-							<Item href="/Items/Talents/Level6/G317_K_Life_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level1/G318_Energy.TALENT" />
-							<Item href="/Items/Talents/Level3/G319_MoveSpeed_EnergyRegen.TALENT" />
-							<Item href="/Items/Talents/Level3/G606_Str.TALENT" />
-							<Item href="/Items/Talents/Level3/G607_Int.TALENT" />
-							<Item href="/Items/Talents/Level6/G618_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G295_LifeDrain.TALENT" />
+							<Item href="/Items/Talents/Common/G296_LifeRegen.TALENT" />
+							<Item href="/Items/Talents/Common/G297_maxStrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G298_EnergyRegen.TALENT" />
+							<Item href="/Items/Talents/Common/G299_LifeRegen_Stamina.TALENT" />
+							<Item href="/Items/Talents/Common/G300_LifeRegen_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G301_Life_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G302_Life_Dexterity.TALENT" />
+							<Item href="/Items/Talents/Common/G303_Str_CDR.TALENT" />
+							<Item href="/Items/Talents/Common/G304_Int_CDR.TALENT" />
+							<Item href="/Items/Talents/Common/G305_K_Dex_CDR.TALENT" />
+							<Item href="/Items/Talents/Common/G306_K_LifeDrain_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G307_Dex_maxStaWill.TALENT" />
+							<Item href="/Items/Talents/Common/G308_K_Life_Energy.TALENT" />
+							<Item href="/Items/Talents/Common/G309_AttackSpeed_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G310_Dexterity_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G311_K_Life_Energy.TALENT" />
+							<Item href="/Items/Talents/Common/G313_K_maxStrInt_LifeDrain.TALENT" />
+							<Item href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" />
+							<Item href="/Items/Talents/Common/G315_Stamina_maxStrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G316_Will_maxStrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G317_K_Life_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G318_Energy.TALENT" />
+							<Item href="/Items/Talents/Common/G319_MoveSpeed_EnergyRegen.TALENT" />
+							<Item href="/Items/Talents/Common/G606_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G607_Int.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G618_Str.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>
@@ -3723,35 +3994,35 @@
 						<isRedPack>false</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_2bd195a20ac14cfdad6c7f2627abef29_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level1/G344_Life_LifeReg.TALENT" />
-							<Item href="/Items/Talents/Level1/G345_RegEnergy.TALENT" />
-							<Item href="/Items/Talents/Level1/G346_EnergyDrain.TALENT" />
-							<Item href="/Items/Talents/Level2/G341_Aspd_CreateWard.TALENT" />
-							<Item href="/Items/Talents/Level2/G342_Dex.TALENT" />
-							<Item href="/Items/Talents/Level2/G343_EnergyDrain.TALENT" />
-							<Item href="/Items/Talents/Level3/G328_AoERegEnergy.TALENT" />
-							<Item href="/Items/Talents/Level3/G340_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G327_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G336_StrAspd_TelBlock.TALENT" />
-							<Item href="/Items/Talents/Level4/G337_IntAspd.TALENT" />
-							<Item href="/Items/Talents/Level4/G338_StrDex.TALENT" />
-							<Item href="/Items/Talents/Level4/G339_IntDex_Slow.TALENT" />
-							<Item href="/Items/Talents/Level5/G312_LifeDrain_maxStrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G330_Dex_WillOrStmn.TALENT" />
-							<Item href="/Items/Talents/Level5/G331_Aspd_WillOrStmn.TALENT" />
-							<Item href="/Items/Talents/Level5/G332_AspdStmn.TALENT" />
-							<Item href="/Items/Talents/Level5/G333_AspdWill_TowerDestr.TALENT" />
-							<Item href="/Items/Talents/Level5/G334_DexStm_Root.TALENT" />
-							<Item href="/Items/Talents/Level5/G335_DexWill.TALENT" />
-							<Item href="/Items/Talents/Level6/G322_StrDex.TALENT" />
-							<Item href="/Items/Talents/Level6/G323_IntAspd_Arena.TALENT" />
-							<Item href="/Items/Talents/Level6/G324_StrAspd.TALENT" />
-							<Item href="/Items/Talents/Level6/G325_IntAspd.TALENT" />
-							<Item href="/Items/Talents/Level6/G326_Dex_WillOrStrmn.TALENT" />
-							<Item href="/Items/Talents/Level6/G329_Aspd_WillOrStmn.TALENT" />
-							<Item href="/Items/Talents/Level2/G509_SelfHeal.TALENT" />
-							<Item href="/Items/Talents/Level2/G608_AtSpd.TALENT" />
-							<Item href="/Items/Talents/Level6/G620_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G344_Life_LifeReg.TALENT" />
+							<Item href="/Items/Talents/Common/G345_RegEnergy.TALENT" />
+							<Item href="/Items/Talents/Common/G346_EnergyDrain.TALENT" />
+							<Item href="/Items/Talents/Common/G341_Aspd_CreateWard.TALENT" />
+							<Item href="/Items/Talents/Common/G342_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G343_EnergyDrain.TALENT" />
+							<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" />
+							<Item href="/Items/Talents/Common/G340_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G327_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G336_StrAspd_TelBlock.TALENT" />
+							<Item href="/Items/Talents/Common/G337_IntAspd.TALENT" />
+							<Item href="/Items/Talents/Common/G338_StrDex.TALENT" />
+							<Item href="/Items/Talents/Common/G339_IntDex_Slow.TALENT" />
+							<Item href="/Items/Talents/Common/G312_LifeDrain_maxStrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G330_Dex_WillOrStmn.TALENT" />
+							<Item href="/Items/Talents/Common/G331_Aspd_WillOrStmn.TALENT" />
+							<Item href="/Items/Talents/Common/G332_AspdStmn.TALENT" />
+							<Item href="/Items/Talents/Common/G333_AspdWill_TowerDestr.TALENT" />
+							<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" />
+							<Item href="/Items/Talents/Common/G335_DexWill.TALENT" />
+							<Item href="/Items/Talents/Common/G322_StrDex.TALENT" />
+							<Item href="/Items/Talents/Common/G323_IntAspd_Arena.TALENT" />
+							<Item href="/Items/Talents/Common/G324_StrAspd.TALENT" />
+							<Item href="/Items/Talents/Common/G325_IntAspd.TALENT" />
+							<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" />
+							<Item href="/Items/Talents/Common/G329_Aspd_WillOrStmn.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G509_SelfHeal.TALENT" />
+							<Item href="/Items/Talents/Common/G608_AtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G620_Int.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>
@@ -3763,36 +4034,36 @@
 						<isRedPack>false</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_cefefb7de05041b5b2cf387455b86acb_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level1/G358_Int_Str.TALENT" />
-							<Item href="/Items/Talents/Level1/G372_Life.TALENT" />
-							<Item href="/Items/Talents/Level2/G349_SelfHeal.TALENT" />
-							<Item href="/Items/Talents/Level2/G354_Life.TALENT" />
-							<Item href="/Items/Talents/Level2/G362_Str.TALENT" />
-							<Item href="/Items/Talents/Level2/G363_Int.TALENT" />
-							<Item href="/Items/Talents/Level3/G350_AoE.TALENT" />
-							<Item href="/Items/Talents/Level4/G351_MoveSpeed_Shield.TALENT" />
-							<Item href="/Items/Talents/Level3/G359_Stamina_Will.TALENT" />
-							<Item href="/Items/Talents/Level3/G367_Str.TALENT" />
-							<Item href="/Items/Talents/Level3/G368_Int.TALENT" />
-							<Item href="/Items/Talents/Level4/G352_Dmg.TALENT" />
-							<Item href="/Items/Talents/Level4/G355_Str_Int_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G360_AttackSpeed_CDR.TALENT" />
-							<Item href="/Items/Talents/Level3/G364_Life_Str_Int.TALENT" />
-							<Item href="/Items/Talents/Level4/G373_AttackSpeed_Dex_Stamina_Will.TALENT" />
-							<Item href="/Items/Talents/Level4/G374_AttackSpeed_Dex_Stamina_Will.TALENT" />
-							<Item href="/Items/Talents/Level5/G353_AoE.TALENT" />
-							<Item href="/Items/Talents/Level5/G356_Life_Stamina.TALENT" />
-							<Item href="/Items/Talents/Level5/G357_Life_Will.TALENT" />
-							<Item href="/Items/Talents/Level5/G365_Will_Str_Int.TALENT" />
-							<Item href="/Items/Talents/Level5/G366_Stamina_Str_Int.TALENT" />
-							<Item href="/Items/Talents/Level5/G369_Dex_Str_Int.TALENT" />
-							<Item href="/Items/Talents/Level6/G361_AttackSpeed_Dex_Stamina_Will.TALENT" />
-							<Item href="/Items/Talents/Level6/G370_Str_Int.TALENT" />
-							<Item href="/Items/Talents/Level6/G371_Str_Int_Life.TALENT" />
-							<Item href="/Items/Talents/Level6/G375_Str_Stamina_Will.TALENT" />
-							<Item href="/Items/Talents/Level6/G376_Int_Stamina_Will.TALENT" />
-							<Item href="/Items/Talents/Level2/G609_Dex.TALENT" />
-							<Item href="/Items/Talents/Level4/G622_AtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G358_Int_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G372_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G349_SelfHeal.TALENT" />
+							<Item href="/Items/Talents/Common/G354_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G362_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G363_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G350_AoE.TALENT" />
+							<Item href="/Items/Talents/Common/G351_MoveSpeed_Shield.TALENT" />
+							<Item href="/Items/Talents/Common/G359_Stamina_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G367_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G368_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G352_Dmg.TALENT" />
+							<Item href="/Items/Talents/Common/G355_Str_Int_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G360_AttackSpeed_CDR.TALENT" />
+							<Item href="/Items/Talents/Common/G364_Life_Str_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G373_AttackSpeed_Dex_Stamina_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G374_AttackSpeed_Dex_Stamina_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G353_AoE.TALENT" />
+							<Item href="/Items/Talents/Common/G356_Life_Stamina.TALENT" />
+							<Item href="/Items/Talents/Common/G357_Life_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G365_Will_Str_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G366_Stamina_Str_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G369_Dex_Str_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G361_AttackSpeed_Dex_Stamina_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G370_Str_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G371_Str_Int_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G375_Str_Stamina_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G376_Int_Stamina_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G609_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G622_AtSpd.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>
@@ -3804,45 +4075,43 @@
 						<isRedPack>false</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_bff8e4b7f91f41c9b6e87dee0cf95004_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level1/G397_Life_HoT.TALENT" />
-							<Item href="/Items/Talents/Level1/G398_Energy_HoT.TALENT" />
-							<Item href="/Items/Talents/Level1/G399_AntiCreepProc_NT.TALENT" />
-							<Item href="/Items/Talents/Level1/G400_LifeReg.TALENT" />
-							<Item href="/Items/Talents/Level1/G401_AntiCreepProc_NotNT.TALENT" />
-							<Item href="/Items/Talents/Level2/G394_Str_LifeDrain.TALENT" />
-							<Item href="/Items/Talents/Level2/G395_Int_LifeDrain.TALENT" />
-							<Item href="/Items/Talents/Level2/G396_BurnLand.TALENT" />
-							<Item href="/Items/Talents/Level3/G386_EnergyReg_MoveSpeed.TALENT" />
-							<Item href="/Items/Talents/Level3/G387_MyTerrain_Life.TALENT" />
-							<Item href="/Items/Talents/Level3/G392_Dex.TALENT" />
-							<Item href="/Items/Talents/Level3/G393_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level4/G379_MaxStaWill_CDR.TALENT" />
-							<Item href="/Items/Talents/Level4/G383_Life_CDR.TALENT" />
-							<Item href="/Items/Talents/Level4/G389_Str_Str.TALENT" />
-							<Item href="/Items/Talents/Level4/G390_Int_Int.TALENT" />
-							<Item href="/Items/Talents/Level4/G391_LifeDrain_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level5/G381_Str_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level5/G382_Int_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level5/G384_Str_Life.TALENT" />
-							<Item href="/Items/Talents/Level5/G385_Int_Life.TALENT" />
-							<Item href="/Items/Talents/Level6/G377_Stamina_Life.TALENT" />
-							<Item href="/Items/Talents/Level6/G378_Will_Life.TALENT" />
-							<Item href="/Items/Talents/Level6/G380_Dex_Life.TALENT" />
-							<Item href="/Items/Talents/Level6/G388_AttackSpeed_Life.TALENT" />
-							<Item href="/Items/Talents/Level1/G402_Dex_Dex.TALENT" />
-							<Item href="/Items/Talents/Level1/G403_AttackSpd_AttackSpd.TALENT" />
-							<Item href="/Items/Talents/Level2/G404_Int_RegE_RegE.TALENT" />
-							<Item href="/Items/Talents/Level2/G405_Str_RegE_RegE.TALENT" />
-							<Item href="/Items/Talents/Level5/G406_Life_Str_Str.TALENT" />
-							<Item href="/Items/Talents/Level3/G407_Life_RegLife_RegLife.TALENT" />
-							<Item href="/Items/Talents/Level5/G408_Life_Int_Int.TALENT" />
-							<Item href="/Items/Talents/Level3/G409_Int_Dex_Dex.TALENT" />
-							<Item href="/Items/Talents/Level3/G410_Str_Dex_Dex.TALENT" />
-							<Item href="/Items/Talents/Level4/G411_Str_StaWill_StaWill.TALENT" />
-							<Item href="/Items/Talents/Level4/G412_Int_StaWill_StaWill.TALENT" />
-							<Item href="/Items/Talents/Level6/G413_AttackSpd_Vamp_Vamp.TALENT" />
-							<Item href="/Items/Talents/Level2/G612_EndergyRegen.TALENT" />
-							<Item href="/Items/Talents/Level4/G621_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G397_Life_HoT.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G398_Energy_HoT.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G399_AntiCreepProc_NT.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G400_LifeReg.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G401_AntiCreepProc_NotNT.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G394_Str_LifeDrain.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G395_Int_LifeDrain.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G396_BurnLand.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G386_EnergyReg_MoveSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G387_MyTerrain_Life.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G392_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G393_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G389_Str_Str.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G390_Int_Int.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G391_LifeDrain_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G381_Str_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G382_Int_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G384_Str_Life.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G385_Int_Life.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G377_Stamina_Life.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G378_Will_Life.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G380_Dex_Life.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G388_AttackSpeed_Life.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G402_Dex_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G403_AttackSpd_AttackSpd.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G404_Int_RegE_RegE.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G405_Str_RegE_RegE.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G406_Life_Str_Str.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G407_Life_RegLife_RegLife.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G408_Life_Int_Int.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G409_Int_Dex_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G410_Str_Dex_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G411_Str_StaWill_StaWill.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G412_Int_StaWill_StaWill.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G413_AttackSpd_Vamp_Vamp.TALENT" />
+							<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G621_Dex.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>
@@ -3854,13 +4123,13 @@
 						<isRedPack>false</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_b2025bd94a914108b0821b504d440ebb_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level6/G291_GuildPortal.TALENT" />
-							<Item href="/Items/Talents/Level6/G292_GuildBuffDex.TALENT" />
-							<Item href="/Items/Talents/Level5/G294_GuildHeroOff.TALENT" />
-							<Item href="/Items/Talents/Level4/G293_GuildAllyDispell.TALENT" />
-							<Item href="/Items/Talents/Level3/G289_GuildLifeReg_MoveSpeed.TALENT" />
-							<Item href="/Items/Talents/Level2/G290_GuildGlyphSave.TALENT" />
-							<Item href="/Items/Talents/Level4/G217-StoneStun.TALENT" />
+							<Item href="/Items/Talents/Common/G291_GuildPortal.TALENT" />
+							<Item href="/Items/Talents/Common/G292_GuildBuffDex.TALENT" />
+							<Item href="/Items/Talents/Common/G294_GuildHeroOff.TALENT" />
+							<Item href="/Items/Talents/Common/G293_GuildAllyDispell.TALENT" />
+							<Item href="/Items/Talents/Common/G289_GuildLifeReg_MoveSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G290_GuildGlyphSave.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G217-StoneStun.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>
@@ -3872,34 +4141,34 @@
 						<isRedPack>false</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_b5e415db011b455f8abb7c63b90d3741_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level1/G421_EnergyRegen_inc.TALENT" />
-							<Item href="/Items/Talents/Level2/G422_Life_inc.TALENT" />
-							<Item href="/Items/Talents/Level1/G423_LifeDrain_inc.TALENT" />
-							<Item href="/Items/Talents/Level1/G424_Str_inc.TALENT" />
-							<Item href="/Items/Talents/Level1/G425_Int_inc.TALENT" />
-							<Item href="/Items/Talents/Level3/G426_Life_afterRess.TALENT" />
-							<Item href="/Items/Talents/Level2/G427_Int_inc.TALENT" />
-							<Item href="/Items/Talents/Level2/G428_Str_inc.TALENT" />
-							<Item href="/Items/Talents/Level2/G429_Heal_perKill.TALENT" />
-							<Item href="/Items/Talents/Level6/G430_Int_inc_Aspd_Dex.TALENT" />
-							<Item href="/Items/Talents/Level6/G431_Str_inc_Aspd_Dex.TALENT" />
-							<Item href="/Items/Talents/Level4/G432_Int_inc_Life.TALENT" />
-							<Item href="/Items/Talents/Level6/G433_Str_inc_Life.TALENT" />
-							<Item href="/Items/Talents/Level6/G434_Int_inc_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G435_Dex_inc_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G436_Aspd_inc_Life.TALENT" />
-							<Item href="/Items/Talents/Level3/G437_Aspd_inc_int.TALENT" />
-							<Item href="/Items/Talents/Level3/G438_Aspd_inc_str.TALENT" />
-							<Item href="/Items/Talents/Level3/G439_Life_inc_int_str.TALENT" />
-							<Item href="/Items/Talents/Level4/G440_Str_inc_Life.TALENT" />
-							<Item href="/Items/Talents/Level6/G441_Life_inc_Will_Stamina.TALENT" />
-							<Item href="/Items/Talents/Level5/G442_Stamina_inc_Life.TALENT" />
-							<Item href="/Items/Talents/Level5/G443_Will_inc_Life.TALENT" />
-							<Item href="/Items/Talents/Level5/G444_Dex_inc_Str_Int.TALENT" />
-							<Item href="/Items/Talents/Level5/G445_Aspd_inc_DrainLife.TALENT" />
-							<Item href="/Items/Talents/Level1/G610_Sta.TALENT" />
-							<Item href="/Items/Talents/Level1/G611_Will.TALENT" />
-							<Item href="/Items/Talents/Level5/G619_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G421_EnergyRegen_inc.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G422_Life_inc.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G423_LifeDrain_inc.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G424_Str_inc.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G425_Int_inc.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G426_Life_afterRess.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G427_Int_inc.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G428_Str_inc.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G430_Int_inc_Aspd_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G431_Str_inc_Aspd_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G432_Int_inc_Life.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G433_Str_inc_Life.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G434_Int_inc_Life.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G435_Dex_inc_Life.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G436_Aspd_inc_Life.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G437_Aspd_inc_int.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G438_Aspd_inc_str.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G439_Life_inc_int_str.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G440_Str_inc_Life.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G442_Stamina_inc_Life.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G443_Will_inc_Life.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G444_Dex_inc_Str_Int.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G445_Aspd_inc_DrainLife.TALENT" />
+							<Item href="/Items/Talents/Common/G610_Sta.TALENT" />
+							<Item href="/Items/Talents/Common/G611_Will.TALENT" />
+							<Item href="/Items/Talents/Common/Obsolete/G619_StaOrWill.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>
@@ -3911,37 +4180,37 @@
 						<isRedPack>true</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_2041810bccc34e74a2f9e12ddb187ad4_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level1/G456_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level1/G461_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level1/G469_RegEnergy.TALENT" />
-							<Item href="/Items/Talents/Level4/G474_Dex.TALENT" />
-							<Item href="/Items/Talents/Level2/G451_Str_int_Life.TALENT" />
-							<Item href="/Items/Talents/Level2/G457_AtSpdOrDex.TALENT" />
-							<Item href="/Items/Talents/Level2/G462_Life.TALENT" />
-							<Item href="/Items/Talents/Level2/G465_RegLife.TALENT" />
-							<Item href="/Items/Talents/Level2/G470_Str_Int.TALENT" />
-							<Item href="/Items/Talents/Level3/G458_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level3/G471_Dex.TALENT" />
-							<Item href="/Items/Talents/Level3/G475_MoveSpeed_RegEnergy.TALENT" />
-							<Item href="/Items/Talents/Level3/G476_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G452_AttackSpeed_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G459_MoveSpeed_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G464_Life_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level4/G466_CDR_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G472_Dex_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G473_Life_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G453_Dex_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level5/G460_Life_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G463_Life_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G467_Life_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level6/G454_AttackSpeed_Life.TALENT" />
-							<Item href="/Items/Talents/Level6/G455_Life_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level6/G468_Dex_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level5/G572_SlowProc-Dex.TALENT" />
-							<Item href="/Items/Talents/Level4/G573_CDRforKill.TALENT" />
-							<Item href="/Items/Talents/Level6/G574_StatViaHighestStat.TALENT" />
-							<Item href="/Items/Talents/Level3/G575_EnergyReg_MoveSpeed.TALENT" />
-							<Item href="/Items/Talents/Level1/G576_HealForHeroKill.TALENT" />
+							<Item href="/Items/Talents/Common/G456_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G461_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G469_RegEnergy.TALENT" />
+							<Item href="/Items/Talents/Common/G474_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G451_Str_int_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G457_AtSpdOrDex.TALENT" />
+							<Item href="/Items/Talents/Common/G462_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G465_RegLife.TALENT" />
+							<Item href="/Items/Talents/Common/G470_Str_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G458_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G471_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G475_MoveSpeed_RegEnergy.TALENT" />
+							<Item href="/Items/Talents/Common/G476_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G452_AttackSpeed_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G459_MoveSpeed_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G464_Life_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G466_CDR_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G472_Dex_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G473_Life_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G453_Dex_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G460_Life_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G463_Life_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G454_AttackSpeed_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G455_Life_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G468_Dex_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G572_SlowProc-Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G573_CDRforKill.TALENT" />
+							<Item href="/Items/Talents/Common/G574_StatViaHighestStat.TALENT" />
+							<Item href="/Items/Talents/Common/G575_EnergyReg_MoveSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G576_HealForHeroKill.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>
@@ -3953,43 +4222,48 @@
 						<isRedPack>true</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_e488c7ecc8434bb7ad78476f7b4bed73_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level3/G477_AOE_DMG.TALENT" />
-							<Item href="/Items/Talents/Level4/G478_Str.TALENT" />
-							<Item href="/Items/Talents/Level5/G479_StrOrInt_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level5/G480_Vamp_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level6/G481_AttackSpeed_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level1/G482_SelfHeal.TALENT" />
-							<Item href="/Items/Talents/Level1/G483_Life.TALENT" />
-							<Item href="/Items/Talents/Level2/G484_EnergyRegen.TALENT" />
-							<Item href="/Items/Talents/Level4/G485_Int.TALENT" />
-							<Item href="/Items/Talents/Level5/G486_Stamina_Life.TALENT" />
-							<Item href="/Items/Talents/Level2/G487_MarkAOEDMG.TALENT" />
-							<Item href="/Items/Talents/Level3/G488_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level3/G489_Life_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G490_Will_Life.TALENT" />
-							<Item href="/Items/Talents/Level6/G491_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level2/G492_DMG.TALENT" />
-							<Item href="/Items/Talents/Level1/G493_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level1/G494_LifeDrain.TALENT" />
-							<Item href="/Items/Talents/Level4/G495_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level5/G496_StrOrInt_Dex.TALENT" />
-							<Item href="/Items/Talents/Level6/G497_Life_Dex.TALENT" />
-							<Item href="/Items/Talents/Level4/G498_Blink.TALENT" />
-							<Item href="/Items/Talents/Level3/G499_Int_Dex.TALENT" />
-							<Item href="/Items/Talents/Level3/G500_Str_Dex.TALENT" />
-							<Item href="/Items/Talents/Level5/G501_StaOrWill_Dex.TALENT" />
-							<Item href="/Items/Talents/Level6/G502_Life_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level2/G503_AA_DMG.TALENT" />
-							<Item href="/Items/Talents/Level1/G504_LifeRegen.TALENT" />
-							<Item href="/Items/Talents/Level4/G505_AttackSpeed_Str.TALENT" />
-							<Item href="/Items/Talents/Level4/G506_AttackSpeed_Int.TALENT" />
-							<Item href="/Items/Talents/Level5/G507_Dex_Life.TALENT" />
-							<Item href="/Items/Talents/Level5/G508_AttackSpeed_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level1/G511_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level2/G510_FireWard.TALENT" />
-							<Item href="/Items/Talents/Level3/G512_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G513_Str_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G514_Int_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G477_AOE_DMG.TALENT" />
+							<Item href="/Items/Talents/Common/G478_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G479_StrOrInt_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G480_Vamp_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G481_AttackSpeed_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G482_SelfHeal.TALENT" />
+							<Item href="/Items/Talents/Common/G483_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G484_EnergyRegen.TALENT" />
+							<Item href="/Items/Talents/Common/G485_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G486_Stamina_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G487_MarkAOEDMG.TALENT" />
+							<Item href="/Items/Talents/Common/G488_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G489_Life_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G490_Will_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G491_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G492_DMG.TALENT" />
+							<Item href="/Items/Talents/Common/G493_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G494_LifeDrain.TALENT" />
+							<Item href="/Items/Talents/Common/G495_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G496_StrOrInt_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G497_Life_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G498_Blink.TALENT" />
+							<Item href="/Items/Talents/Common/G499_Int_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G500_Str_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G501_StaOrWill_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G502_Life_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G503_AA_DMG.TALENT" />
+							<Item href="/Items/Talents/Common/G504_LifeRegen.TALENT" />
+							<Item href="/Items/Talents/Common/G505_AttackSpeed_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G506_AttackSpeed_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G507_Dex_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G508_AttackSpeed_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G511_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G510_FireWard.TALENT" />
+							<Item href="/Items/Talents/Common/G512_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G513_Str_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G514_Int_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G787_HeroOffAA.TALENT" />
+							<Item href="/Items/Talents/Common/G788_StrOrInt_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G789_Life_GreaterSpdOrDexOrStaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G790_SpdOrDex.TALENT" />
+							<Item href="/Items/Talents/Common/G791_StaOrWill.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>
@@ -4001,38 +4275,38 @@
 						<isRedPack>true</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_eaac5f389b45465a8da90d19d891943c_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level1/G516_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level1/G520_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level1/G521_EnergyRegen.TALENT" />
-							<Item href="/Items/Talents/Level1/G527_Life.TALENT" />
-							<Item href="/Items/Talents/Level1/G528_Dex.TALENT" />
-							<Item href="/Items/Talents/Level1/G537_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level2/G522_Life_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level2/G526_Shield.TALENT" />
-							<Item href="/Items/Talents/Level2/G532_Dex.TALENT" />
-							<Item href="/Items/Talents/Level3/G515_Life_MoveSpeed.TALENT" />
-							<Item href="/Items/Talents/Level3/G517_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level3/G531_Dot_Root.TALENT" />
-							<Item href="/Items/Talents/Level4/G518_AttackSpeed_VampLife.TALENT" />
-							<Item href="/Items/Talents/Level4/G523_MoveSpeed.TALENT" />
-							<Item href="/Items/Talents/Level4/G529_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G533_Dex_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level4/G536_AOE_maxLife.TALENT" />
-							<Item href="/Items/Talents/Level5/G524_Sta_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G525_Will_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G534_Dex_Life.TALENT" />
-							<Item href="/Items/Talents/Level5/G538_Aura_Sta.TALENT" />
-							<Item href="/Items/Talents/Level5/G539_Aura_Will.TALENT" />
-							<Item href="/Items/Talents/Level6/G519_Dex_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level6/G530_Life_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level6/G535_Dex_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level6/G540_Aura_Str.TALENT" />
-							<Item href="/Items/Talents/Level6/G541_Aura_Int.TALENT" />
-							<Item href="/Items/Talents/Level4/G542_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level6/G543_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level2/G544_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G545_AttackSpeed_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G546_Life_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G516_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G521_EnergyRegen.TALENT" />
+							<Item href="/Items/Talents/Common/G527_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G528_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G537_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G522_Life_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G526_Shield.TALENT" />
+							<Item href="/Items/Talents/Common/G532_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G515_Life_MoveSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G517_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G531_Dot_Root.TALENT" />
+							<Item href="/Items/Talents/Common/G518_AttackSpeed_VampLife.TALENT" />
+							<Item href="/Items/Talents/Common/G523_MoveSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G529_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G533_Dex_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G536_AOE_maxLife.TALENT" />
+							<Item href="/Items/Talents/Common/G524_Sta_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G525_Will_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G534_Dex_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G538_Aura_Sta.TALENT" />
+							<Item href="/Items/Talents/Common/G539_Aura_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G519_Dex_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G530_Life_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G535_Dex_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G540_Aura_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G541_Aura_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G542_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G543_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G544_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G545_AttackSpeed_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G546_Life_StaOrWill.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>
@@ -4044,36 +4318,36 @@
 						<isRedPack>true</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_e0d0c748cd9040d784001ad4b7ab272b_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level1/G562_AxesBase.TALENT" />
-							<Item href="/Items/Talents/Level2/G563_AxesEngReg.TALENT" />
-							<Item href="/Items/Talents/Level3/G564_AxesInt.TALENT" />
-							<Item href="/Items/Talents/Level3/G565_AxesStr.TALENT" />
-							<Item href="/Items/Talents/Level3/G566_AxesStrInt.TALENT" />
-							<Item href="/Items/Talents/Level1/G580_AxesLifeDrain.TALENT" />
-							<Item href="/Items/Talents/Level2/G567_CasterBase.TALENT" />
-							<Item href="/Items/Talents/Level4/G568_CasterDamagePlus.TALENT" />
-							<Item href="/Items/Talents/Level5/G569_CasterDex_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level5/G570_CasterDexWill.TALENT" />
-							<Item href="/Items/Talents/Level6/G571_CasterDexStaWill.TALENT" />
-							<Item href="/Items/Talents/Level5/G581_CasterStrOrIntDex.TALENT" />
-							<Item href="/Items/Talents/Level3/G547_SilenceDamageBase.TALENT" />
-							<Item href="/Items/Talents/Level4/G548_CasterDex.TALENT" />
-							<Item href="/Items/Talents/Level4/G549_CasterAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level5/G550_CasterStrIntAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level6/G551_SilenceStrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G577_CasterDexAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level3/G552_PhantomBase.TALENT" />
-							<Item href="/Items/Talents/Level2/G553_PhantomInt.TALENT" />
-							<Item href="/Items/Talents/Level2/G554_PhantomStr.TALENT" />
-							<Item href="/Items/Talents/Level4/G555_PhantomDex.TALENT" />
-							<Item href="/Items/Talents/Level6/G556_PhantomDexLife.TALENT" />
-							<Item href="/Items/Talents/Level4/G578_PhantomAttSpd.TALENT" />
-							<Item href="/Items/Talents/Level4/G557_EnemyAoeDmg.TALENT" />
-							<Item href="/Items/Talents/Level4/G558_EnemyAoeDmgInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G559_EnemyAoeDmgDexWil.TALENT" />
-							<Item href="/Items/Talents/Level5/G560_EnemyAoeDmgDexStr.TALENT" />
-							<Item href="/Items/Talents/Level6/G561_EnemyAoeDmgStrIntDex.TALENT" />
-							<Item href="/Items/Talents/Level6/G579_EnemyAoeDmgIntDex.TALENT" />
+							<Item href="/Items/Talents/Common/G562_AxesBase.TALENT" />
+							<Item href="/Items/Talents/Common/G563_AxesEngReg.TALENT" />
+							<Item href="/Items/Talents/Common/G564_AxesInt.TALENT" />
+							<Item href="/Items/Talents/Common/G565_AxesStr.TALENT" />
+							<Item href="/Items/Talents/Common/G566_AxesStrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G580_AxesLifeDrain.TALENT" />
+							<Item href="/Items/Talents/Common/G567_CasterBase.TALENT" />
+							<Item href="/Items/Talents/Common/G568_CasterDamagePlus.TALENT" />
+							<Item href="/Items/Talents/Common/G569_CasterDex_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G570_CasterDexWill.TALENT" />
+							<Item href="/Items/Talents/Common/G571_CasterDexStaWill.TALENT" />
+							<Item href="/Items/Talents/Common/G581_CasterStrOrIntDex.TALENT" />
+							<Item href="/Items/Talents/Common/G547_SilenceDamageBase.TALENT" />
+							<Item href="/Items/Talents/Common/G548_CasterDex.TALENT" />
+							<Item href="/Items/Talents/Common/G549_CasterAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G550_CasterStrIntAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G551_SilenceStrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G577_CasterDexAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G552_PhantomBase.TALENT" />
+							<Item href="/Items/Talents/Common/G553_PhantomInt.TALENT" />
+							<Item href="/Items/Talents/Common/G554_PhantomStr.TALENT" />
+							<Item href="/Items/Talents/Common/G555_PhantomDex.TALENT" />
+							<Item href="/Items/Talents/Common/G556_PhantomDexLife.TALENT" />
+							<Item href="/Items/Talents/Common/G578_PhantomAttSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G557_EnemyAoeDmg.TALENT" />
+							<Item href="/Items/Talents/Common/G558_EnemyAoeDmgInt.TALENT" />
+							<Item href="/Items/Talents/Common/G559_EnemyAoeDmgDexWil.TALENT" />
+							<Item href="/Items/Talents/Common/G560_EnemyAoeDmgDexStr.TALENT" />
+							<Item href="/Items/Talents/Common/G561_EnemyAoeDmgStrIntDex.TALENT" />
+							<Item href="/Items/Talents/Common/G579_EnemyAoeDmgIntDex.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>
@@ -4085,40 +4359,40 @@
 						<isRedPack>true</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_ec9799d2d99d4378842e76482a05bb36_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level1/G582_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level3/G583_Life.TALENT" />
-							<Item href="/Items/Talents/Level2/G584_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level2/G585_Dex.TALENT" />
-							<Item href="/Items/Talents/Level4/G586_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G587_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level5/G588_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G589_LifeStaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level4/G590_Int.TALENT" />
-							<Item href="/Items/Talents/Level5/G591_AtSpd.TALENT" />
-							<Item href="/Items/Talents/Level5/G592_Dex.TALENT" />
-							<Item href="/Items/Talents/Level6/G593_IntDexOrAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level4/G594_Str.TALENT" />
-							<Item href="/Items/Talents/Level5/G595_AtSpd.TALENT" />
-							<Item href="/Items/Talents/Level5/G596_Dex.TALENT" />
-							<Item href="/Items/Talents/Level6/G597_StrDexOrAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level1/G598_RegEnergy.TALENT" />
-							<Item href="/Items/Talents/Level4/G599_Dex.TALENT" />
-							<Item href="/Items/Talents/Level2/G600_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level3/G601_DexStrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level1/G602_LifeDrain.TALENT" />
-							<Item href="/Items/Talents/Level4/G603_Str.TALENT" />
-							<Item href="/Items/Talents/Level2/G604_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level3/G605_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level1/G613_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G614_Int_DexOrAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level5/G615_Str_DexOrAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level4/G616_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level6/G617_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level2/G623_SelfHeal.TALENT" />
-							<Item href="/Items/Talents/Level1/G624_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G627_StrOrInt_Life.TALENT" />
-							<Item href="/Items/Talents/Level3/G625_Str.TALENT" />
-							<Item href="/Items/Talents/Level3/G626_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G582_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G583_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G584_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G585_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G586_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G587_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G588_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G589_LifeStaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G590_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G591_AtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G592_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G593_IntDexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G594_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G595_AtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G596_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G597_StrDexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G598_RegEnergy.TALENT" />
+							<Item href="/Items/Talents/Common/G599_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G600_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G601_DexStrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G602_LifeDrain.TALENT" />
+							<Item href="/Items/Talents/Common/G603_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G604_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G605_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G613_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G614_Int_DexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G615_Str_DexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G616_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G617_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G623_SelfHeal.TALENT" />
+							<Item href="/Items/Talents/Common/G624_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G627_StrOrInt_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G625_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G626_Int.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>
@@ -4130,26 +4404,26 @@
 						<isRedPack>true</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_3bf5bf0958ca43c5bf468a4947e47a35_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level2/G628_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level3/G629_StrOrInt_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G630_Str.TALENT" />
-							<Item href="/Items/Talents/Level4/G631_Int.TALENT" />
-							<Item href="/Items/Talents/Level4/G632_Dex.TALENT" />
-							<Item href="/Items/Talents/Level5/G633_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level6/G634_Str_Dex.TALENT" />
-							<Item href="/Items/Talents/Level6/G635_Int_Dex.TALENT" />
-							<Item href="/Items/Talents/Level4/G636_Life.TALENT" />
-							<Item href="/Items/Talents/Level5/G637_StrOrInt_Life.TALENT" />
-							<Item href="/Items/Talents/Level6/G638_Stamina_DexOrAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level6/G639_Will_DexOrAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level4/G640_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level5/G641_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level6/G642_Int_AtSpd.TALENT" />
-							<Item href="/Items/Talents/Level6/G643_Str_AtSpd.TALENT" />
-							<Item href="/Items/Talents/Level3/G644_StrOrInt_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G645_Str.TALENT" />
-							<Item href="/Items/Talents/Level4/G646_Int.TALENT" />
-							<Item href="/Items/Talents/Level5/G647_SpdOrDex_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G628_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G629_StrOrInt_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G630_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G631_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G632_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G633_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G634_Str_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G635_Int_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G636_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G637_StrOrInt_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G638_Stamina_DexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G639_Will_DexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G640_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G641_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G642_Int_AtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G643_Str_AtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G644_StrOrInt_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G645_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G646_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G647_SpdOrDex_Life.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>
@@ -4161,12 +4435,12 @@
 						<isRedPack>true</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_10d798b94f844a1ca00cf641765c746f_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level5/G656_ShieldAOE_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level3/G657_TeleportCDR_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G658_InvisibilityStrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G659_StoneStun_Red.TALENT" />
-							<Item href="/Items/Talents/Level4/G660_GuildAllyDispell_Red.TALENT" />
-							<Item href="/Items/Talents/Level5/G661_GuildHeroOff_Red.TALENT" />
+							<Item href="/Items/Talents/Common/G656_ShieldAOE_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G657_TeleportCDR_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G658_InvisibilityStrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G659_StoneStun_Red.TALENT" />
+							<Item href="/Items/Talents/Common/G660_GuildAllyDispell_Red.TALENT" />
+							<Item href="/Items/Talents/Common/G661_GuildHeroOff_Red.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>
@@ -4178,29 +4452,29 @@
 						<isRedPack>true</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_19c5e7529d2c455091c2eda8a1048e3c_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level3/G663_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G664_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level4/G665_Dex.TALENT" />
-							<Item href="/Items/Talents/Level5/G666_EnemyAoeDmg_StrOrInt_Life.TALENT" />
-							<Item href="/Items/Talents/Level3/G667_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G668_Sta.TALENT" />
-							<Item href="/Items/Talents/Level4/G669_Will.TALENT" />
-							<Item href="/Items/Talents/Level5/G670_Life_DexOrAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level3/G671_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G672_Str.TALENT" />
-							<Item href="/Items/Talents/Level4/G673_Int.TALENT" />
-							<Item href="/Items/Talents/Level5/G674_Life_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level6/G675_TriggerShield_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level6/G676_TriggerShield_DexOrAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level6/G677_TriggerShield_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level3/G678_StrOrInt_EReg.TALENT" />
-							<Item href="/Items/Talents/Level4/G679_Str.TALENT" />
-							<Item href="/Items/Talents/Level4/G680_Int.TALENT" />
-							<Item href="/Items/Talents/Level5/G681_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level3/G682_MoveSpeed_Night.TALENT" />
-							<Item href="/Items/Talents/Level4/G683_AttackSpeed.TALENT" />
-							<Item href="/Items/Talents/Level4/G684_Dex.TALENT" />
-							<Item href="/Items/Talents/Level5/G685_InvisibilityStrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G663_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G664_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G665_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G666_EnemyAoeDmg_StrOrInt_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G667_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G668_Sta.TALENT" />
+							<Item href="/Items/Talents/Common/G669_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G670_Life_DexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G671_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G672_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G673_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G674_Life_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G675_TriggerShield_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G676_TriggerShield_DexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G677_TriggerShield_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G678_StrOrInt_EReg.TALENT" />
+							<Item href="/Items/Talents/Common/G679_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G680_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G681_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" />
+							<Item href="/Items/Talents/Common/G683_AttackSpeed.TALENT" />
+							<Item href="/Items/Talents/Common/G684_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G685_InvisibilityStrOrInt.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>
@@ -4212,30 +4486,30 @@
 						<isRedPack>true</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_b839fc6a3d20453786bcb1e3a347b27a_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level4/G698_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G699_AtSpd.TALENT" />
-							<Item href="/Items/Talents/Level5/G700_Dex.TALENT" />
-							<Item href="/Items/Talents/Level6/G701_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G702_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G703_Dex.TALENT" />
-							<Item href="/Items/Talents/Level6/G704_Str_Dex.TALENT" />
-							<Item href="/Items/Talents/Level6/G705_Int_Dex.TALENT" />
-							<Item href="/Items/Talents/Level2/G706_Str.TALENT" />
-							<Item href="/Items/Talents/Level2/G707_Int.TALENT" />
-							<Item href="/Items/Talents/Level3/G708_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G709_DexOrAtSpd_Life.TALENT" />
-							<Item href="/Items/Talents/Level4/G710_StrOrInt_SummonBuff.TALENT" />
-							<Item href="/Items/Talents/Level5/G711_SpdOrDex_SummonBuff.TALENT" />
-							<Item href="/Items/Talents/Level6/G712_Str_DexOrAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level6/G713_Int_DexOrAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level3/G714_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G715_AtSpd.TALENT" />
-							<Item href="/Items/Talents/Level4/G716_Dex.TALENT" />
-							<Item href="/Items/Talents/Level5/G717_WillOrStamina.TALENT" />
-							<Item href="/Items/Talents/Level1/G718_Str.TALENT" />
-							<Item href="/Items/Talents/Level1/G719_Int.TALENT" />
-							<Item href="/Items/Talents/Level2/G720_MoveSpeed_Life.TALENT" />
-							<Item href="/Items/Talents/Level3/G721_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G698_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G699_AtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G700_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G701_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G702_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G703_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G704_Str_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G705_Int_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G706_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G707_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G708_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G709_DexOrAtSpd_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G710_StrOrInt_SummonBuff.TALENT" />
+							<Item href="/Items/Talents/Common/G711_SpdOrDex_SummonBuff.TALENT" />
+							<Item href="/Items/Talents/Common/G712_Str_DexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G713_Int_DexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G714_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G715_AtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G716_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G717_WillOrStamina.TALENT" />
+							<Item href="/Items/Talents/Common/G718_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G719_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G720_MoveSpeed_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G721_StrOrInt.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>
@@ -4247,37 +4521,37 @@
 						<isRedPack>true</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_d9a02d492ba547c9800593b50c8a8816_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level4/G649_BlindStrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G650_Int.TALENT" />
-							<Item href="/Items/Talents/Level5/G651_Str.TALENT" />
-							<Item href="/Items/Talents/Level6/G652_AtSpd.TALENT" />
-							<Item href="/Items/Talents/Level6/G653_Dex.TALENT" />
-							<Item href="/Items/Talents/Level6/G654_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level3/G686_Int.TALENT" />
-							<Item href="/Items/Talents/Level3/G687_Str.TALENT" />
-							<Item href="/Items/Talents/Level4/G688_AtSpd.TALENT" />
-							<Item href="/Items/Talents/Level4/G689_Dex.TALENT" />
-							<Item href="/Items/Talents/Level5/G690_Stamina.TALENT" />
-							<Item href="/Items/Talents/Level5/G691_Will.TALENT" />
-							<Item href="/Items/Talents/Level3/G692_Int.TALENT" />
-							<Item href="/Items/Talents/Level3/G693_Str.TALENT" />
-							<Item href="/Items/Talents/Level4/G694_AtSpd.TALENT" />
-							<Item href="/Items/Talents/Level4/G695_Dex.TALENT" />
-							<Item href="/Items/Talents/Level5/G696_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level6/G697_WillOrStamina.TALENT" />
-							<Item href="/Items/Talents/Level1/G722_RegEnergy.TALENT" />
-							<Item href="/Items/Talents/Level1/G723_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level2/G724_AtSpdOrDex.TALENT" />
-							<Item href="/Items/Talents/Level2/G725_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G726_Life_StaOrWill.TALENT" />
-							<Item href="/Items/Talents/Level5/G727_SpdOrDex.TALENT" />
-							<Item href="/Items/Talents/Level6/G728_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G729_Str.TALENT" />
-							<Item href="/Items/Talents/Level4/G730_Int.TALENT" />
-							<Item href="/Items/Talents/Level5/G731_Dex_AtSpd.TALENT" />
-							<Item href="/Items/Talents/Level5/G732_Life.TALENT" />
-							<Item href="/Items/Talents/Level6/G733_Stamina.TALENT" />
-							<Item href="/Items/Talents/Level6/G734_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G649_BlindStrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G650_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G651_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G652_AtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G653_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G654_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G686_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G687_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G688_AtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G689_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G690_Stamina.TALENT" />
+							<Item href="/Items/Talents/Common/G691_Will.TALENT" />
+							<Item href="/Items/Talents/Common/G692_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G693_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G694_AtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G695_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G696_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G697_WillOrStamina.TALENT" />
+							<Item href="/Items/Talents/Common/G722_RegEnergy.TALENT" />
+							<Item href="/Items/Talents/Common/G723_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G724_AtSpdOrDex.TALENT" />
+							<Item href="/Items/Talents/Common/G725_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G726_Life_StaOrWill.TALENT" />
+							<Item href="/Items/Talents/Common/G727_SpdOrDex.TALENT" />
+							<Item href="/Items/Talents/Common/G728_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G729_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G730_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G731_Dex_AtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G732_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G733_Stamina.TALENT" />
+							<Item href="/Items/Talents/Common/G734_Will.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>
@@ -4289,41 +4563,41 @@
 						<isRedPack>true</isRedPack>
 						<name textref="/GameLogic/AILogic.AILP_df4b6afe36814f2a8c0fd37e6b19b7f2_name.txt" />
 						<talents>
-							<Item href="/Items/Talents/Level1/G736_Str.TALENT" />
-							<Item href="/Items/Talents/Level1/G737_Int.TALENT" />
-							<Item href="/Items/Talents/Level2/G738_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G739_CDR_Health.TALENT" />
-							<Item href="/Items/Talents/Level5/G740_WillOrStamina.TALENT" />
-							<Item href="/Items/Talents/Level6/G741_DexOrAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level2/G742_MoveSpeed_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level3/G743_EnergyRegen.TALENT" />
-							<Item href="/Items/Talents/Level4/G744_Dex_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G745_AtSpd_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G746_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G747_Energy.TALENT" />
-							<Item href="/Items/Talents/Level6/G748_Str_DexOrAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level6/G749_Int_DexOrAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level2/G751_AtSpdOrDex.TALENT" />
-							<Item href="/Items/Talents/Level4/G752_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level5/G753_StrOrIntAtSpd.TALENT" />
-							<Item href="/Items/Talents/Level5/G754_StrOrIntDex.TALENT" />
-							<Item href="/Items/Talents/Level6/G755_StaminaLife.TALENT" />
-							<Item href="/Items/Talents/Level6/G756_WillLife.TALENT" />
-							<Item href="/Items/Talents/Level3/G758_SrtOrInt.TALENT" />
-							<Item href="/Items/Talents/Level1/G759_Str.TALENT" />
-							<Item href="/Items/Talents/Level1/G760_Int.TALENT" />
-							<Item href="/Items/Talents/Level4/G761_AA_Str.TALENT" />
-							<Item href="/Items/Talents/Level4/G762_AA_Int.TALENT" />
-							<Item href="/Items/Talents/Level5/G763_Life_AttackSpeedOrDex.TALENT" />
-							<Item href="/Items/Talents/Level6/G764_WillOrSta.TALENT" />
-							<Item href="/Items/Talents/Level3/G766_MiniRefresher.TALENT" />
-							<Item href="/Items/Talents/Level1/G767_RegEnergy.TALENT" />
-							<Item href="/Items/Talents/Level2/G768_StrOrInt.TALENT" />
-							<Item href="/Items/Talents/Level4/G769_Move_AtSpdOrDex.TALENT" />
-							<Item href="/Items/Talents/Level4/G770_Life.TALENT" />
-							<Item href="/Items/Talents/Level5/G771_Str_CDR.TALENT" />
-							<Item href="/Items/Talents/Level5/G772_Int_CDR.TALENT" />
-							<Item href="/Items/Talents/Level6/G773_StrOrInt_Dex.TALENT" />
+							<Item href="/Items/Talents/Common/G736_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G737_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G738_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G739_CDR_Health.TALENT" />
+							<Item href="/Items/Talents/Common/G740_WillOrStamina.TALENT" />
+							<Item href="/Items/Talents/Common/G741_DexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G742_MoveSpeed_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G743_EnergyRegen.TALENT" />
+							<Item href="/Items/Talents/Common/G744_Dex_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G745_AtSpd_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G746_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G747_Energy.TALENT" />
+							<Item href="/Items/Talents/Common/G748_Str_DexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G749_Int_DexOrAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G751_AtSpdOrDex.TALENT" />
+							<Item href="/Items/Talents/Common/G752_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G753_StrOrIntAtSpd.TALENT" />
+							<Item href="/Items/Talents/Common/G754_StrOrIntDex.TALENT" />
+							<Item href="/Items/Talents/Common/G755_StaminaLife.TALENT" />
+							<Item href="/Items/Talents/Common/G756_WillLife.TALENT" />
+							<Item href="/Items/Talents/Common/G758_SrtOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G759_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G760_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G761_AA_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G762_AA_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G763_Life_AttackSpeedOrDex.TALENT" />
+							<Item href="/Items/Talents/Common/G764_WillOrSta.TALENT" />
+							<Item href="/Items/Talents/Common/G766_MiniRefresher.TALENT" />
+							<Item href="/Items/Talents/Common/G767_RegEnergy.TALENT" />
+							<Item href="/Items/Talents/Common/G768_Life.TALENT" />
+							<Item href="/Items/Talents/Common/G769_Move_AtSpdOrDex.TALENT" />
+							<Item href="/Items/Talents/Common/G770_StrOrInt.TALENT" />
+							<Item href="/Items/Talents/Common/G771_Str.TALENT" />
+							<Item href="/Items/Talents/Common/G772_Int.TALENT" />
+							<Item href="/Items/Talents/Common/G773_StrOrInt_GreaterSpdOrDexOrStaOrWill.TALENT" />
 						</talents>
 					</TalentPack>
 				</Item>

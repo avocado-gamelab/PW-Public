@@ -2,9 +2,9 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/SnowQueen.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/SnowQueen_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/SnowQueen_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/SnowQueen.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/SnowQueen_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/SnowQueen_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Duel.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Elite_IntLife.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Elite_StrInt.TALENTSET" Count="1" />
@@ -40,8 +40,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/SnowQueen/Ability_A1u.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/SnowQueen/Ability_A1u.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/SnowQueen/Ability_A1u.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/SnowQueen/Ability_A1u.TALENT" id="05F4928D-5AB0-4B56-96E6-CF5D7A078288">
 			<ConditionFormula>
@@ -59,8 +59,10 @@
 		<UnitConstantsContainer>
 			<vars>
 				<Item href="/Items/Talents/Class/SnowQueen/const_A1u_BonusDamage" />
-				<Item href="/Items/Talents/Class/SnowQueen/const_A1_Period" />
-				<Item href="/Items/Talents/Class/SnowQueen/const_A1_Duration" />
+				<Item href="/Items/Talents/Class/SnowQueen/const_A1u_CD" />
+				<Item href="/Items/Talents/Class/SnowQueen/const_A1u_RootDuration" />
+				<Item href="/Items/Talents/Class/SnowQueen/const_A1u_StacksForProc" />
+				<Item href="/Items/Talents/Class/SnowQueen/const_A1_NightDamageMultiplierPercent" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -82,7 +84,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/SnowQueen/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Ability>
+	<BackLink DBID="/Summons/Portal/_.SUMMONED" Count="1" />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="60587975-5BC9-4E25-8F16-AFE03CAC5B2C">
+			<ChannellingApplicator>
+				<applicatorsOnSelf />
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>1</behaviorFlags>
+				<cancelOnDisable>false</cancelOnDisable>
+				<cancelOnInterrupt>true</cancelOnInterrupt>
+				<cancelSpell href="" />
+				<caption>Teleport Chanelling</caption>
+				<channelingType>Creation</channelingType>
+				<effect>
+					<Item href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="926377E7-0E76-4A5F-A98C-E5AE3A7E4C63">
+						<EffectList>
+							<deathType>Manual</deathType>
+							<effects>
+								<Item href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="00F7FAF0-DDA7-47D3-BC2A-0E6D2AB8DFD0">
+									<PlayAnimationEffect>
+										<animGraphNode>channeling</animGraphNode>
+										<deathType>Manual</deathType>
+										<enableCondition href="" />
+										<goToOtherNodeOnStop>false</goToOtherNodeOnStop>
+										<lifeTime>0</lifeTime>
+										<marker></marker>
+										<markerReachTime>0</markerReachTime>
+										<returnAnimGraphNode></returnAnimGraphNode>
+									</PlayAnimationEffect>
+								</Item>
+								<Item href="/Effects/General/Portal/_Entry.EFFT" />
+							</effects>
+							<enableCondition href="" />
+							<lifeTime>0</lifeTime>
+						</EffectList>
+					</Item>
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName>TeleportChannel</formulaName>
+				<interruptEvents>6820319</interruptEvents>
+				<lifeTime>
+					<compiledString>FRMAAAABAAAAHwAAAENoYW5lbGxpbmdUaW1lQWxseQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+					<returnType>float</returnType>
+					<sString>cChanellingTimeAlly</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<period>0</period>
+				<periodicalSpell href="" />
+				<providerName></providerName>
+				<removeStartSpellEffectOnInterrupt>true</removeStartSpellEffectOnInterrupt>
+				<scaleWhenInterrupted>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>1.0f</sString>
+				</scaleWhenInterrupted>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvsaAAAABCLRQiLEItNCItCaP/QD7bA99gbwIPAAV3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>!sFlag(268435456)</sString>
+				</startCondition>
+				<startSpell href="" />
+				<stopSpell href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="B0243E46-DC9F-4575-BC85-44AC740CBEBE">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="EFA99DBB-C32D-4C17-91A4-D5C00BCF8828">
+								<SpellApplicator>
+									<applyTarget>AbilityOwner</applyTarget>
+									<caption>Цель определеяем в момент завершения ченнелинга</caption>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+									<spell href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="326E4DA7-45F7-4BA9-8187-861A65720291">
+										<Spell>
+											<applicators>
+												<Item href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="A6445C88-D41A-4826-BB72-DA07E53BECE4">
+													<ProgramApplicator>
+														<applicators>
+															<Item>
+																<applicator href="/GameLogic/GeneralApplicators/Teleport.APLR" />
+																<continueCondition>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>0</sString>
+																</continueCondition>
+																<continueEvents>1</continueEvents>
+																<delay>
+																	<compiledString></compiledString>
+																	<returnType>float</returnType>
+																	<sString>-1.0</sString>
+																</delay>
+																<stopCondition>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>0</sString>
+																</stopCondition>
+																<stopEvents>0</stopEvents>
+															</Item>
+															<Item>
+																<applicator href="/GameLogic/GeneralApplicators/SetTeleported.APLR" />
+																<continueCondition>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>0</sString>
+																</continueCondition>
+																<continueEvents>1</continueEvents>
+																<delay>
+																	<compiledString></compiledString>
+																	<returnType>float</returnType>
+																	<sString>-1.0</sString>
+																</delay>
+																<stopCondition>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>0</sString>
+																</stopCondition>
+																<stopEvents>0</stopEvents>
+															</Item>
+															<Item>
+																<applicator href="/GameLogic/GeneralApplicators/Teleport_SummonsAndPets.APLR" />
+																<continueCondition>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>0</sString>
+																</continueCondition>
+																<continueEvents>1</continueEvents>
+																<delay>
+																	<compiledString></compiledString>
+																	<returnType>float</returnType>
+																	<sString>-1.0</sString>
+																</delay>
+																<stopCondition>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>0</sString>
+																</stopCondition>
+																<stopEvents>0</stopEvents>
+															</Item>
+															<Item>
+																<applicator href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="8ED922D2-C42D-4D0D-A1BE-D139F9DFADC9">
+																	<KillApplicator>
+																		<applyTarget>Hier3UpApplicatorTarget</applyTarget>
+																		<caption>После телепорта убиваем портал</caption>
+																		<dontGiveRewards>true</dontGiveRewards>
+																		<enabled>
+																			<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																			<returnType>bool</returnType>
+																			<sString>true</sString>
+																		</enabled>
+																		<flag>Unsummon</flag>
+																		<formulaName></formulaName>
+																		<LoggingEvent>-1</LoggingEvent>
+																		<providerName></providerName>
+																	</KillApplicator>
+																</applicator>
+																<continueCondition>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>0</sString>
+																</continueCondition>
+																<continueEvents>1</continueEvents>
+																<delay>
+																	<compiledString></compiledString>
+																	<returnType>float</returnType>
+																	<sString>-1.0</sString>
+																</delay>
+																<stopCondition>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>0</sString>
+																</stopCondition>
+																<stopEvents>0</stopEvents>
+															</Item>
+															<Item>
+																<applicator href="/GameLogic/GeneralApplicators/EndOfAbility.APLR" />
+																<continueCondition>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>0</sString>
+																</continueCondition>
+																<continueEvents>2</continueEvents>
+																<delay>
+																	<compiledString></compiledString>
+																	<returnType>float</returnType>
+																	<sString>-1.0</sString>
+																</delay>
+																<stopCondition>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>0</sString>
+																</stopCondition>
+																<stopEvents>0</stopEvents>
+															</Item>
+														</applicators>
+														<applyTarget>AbilityOwner</applyTarget>
+														<behaviorFlags>2</behaviorFlags>
+														<caption>Программа</caption>
+														<effect>
+															<Item href="" />
+															<Item href="" />
+														</effect>
+														<enabled>
+															<compiledString></compiledString>
+															<returnType>bool</returnType>
+															<sString>true</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<lifeTime>
+															<compiledString></compiledString>
+															<returnType>float</returnType>
+															<sString>-1.0</sString>
+														</lifeTime>
+														<LoggingEvent>-1</LoggingEvent>
+														<providerName></providerName>
+														<startCondition>
+															<compiledString></compiledString>
+															<returnType>bool</returnType>
+															<sString>true</sString>
+														</startCondition>
+													</ProgramApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="81A9265E-F6BF-4221-8985-70B797B70B88">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>true</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+									<spellTarget>ApplicatorTarget</spellTarget>
+									<targetSelector href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="A7CEDC36-0879-4E85-8AE4-F85E3BFB84F3">
+										<PointTargetSelector>
+											<checkMinRange>false</checkMinRange>
+											<mode>RangeFromTarget</mode>
+											<offset>
+												<x>0</x>
+												<y>1</y>
+											</offset>
+											<paralleledTarget>false</paralleledTarget>
+											<range>
+												<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAQA==</compiledString>
+												<returnType>float</returnType>
+												<sString>4</sString>
+											</range>
+											<targetSelector href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="C3ED1D2C-C8FA-4D10-9388-46EB57AE54FA">
+												<UnitPlaceCorrector>
+													<checkByRangeToRequester>false</checkByRangeToRequester>
+													<checkLineOfSight>false</checkLineOfSight>
+													<nativeTerrainOnly>false</nativeTerrainOnly>
+													<passabilityCheckMode>0</passabilityCheckMode>
+													<radius>7</radius>
+													<targetSelector href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="C442D79F-C35B-4434-B1CB-5E4AE4617807">
+														<ConvertTargetToLand>
+															<aggregateMode>First</aggregateMode>
+															<targetSelector href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="2E9DB0F8-BADB-4325-B634-FE387E7E3953">
+																<ConditionTargetSelector>
+																	<condition>
+																		<compiledString>FToAAAAFAAAARwAAAHoAAACUAAAAqgAAALwAAABHMjkxX0NoYW5uZWxpbmcARzI5MV9DaGFubmVsaW5nAExpa2VIZXJvAAAAAE5pZ2h0SHVudGVyQTQAVYvsg+wIagCLRRBQaAAAAACLTQyLEYtNDIuCnAEAAP/QO0UQdX6LTQyLEYtNDIuCfAEAAP/QiUX8agCLTRBRaBAAAACLVfyLAotN/IuQnAEAAP/SO0UQdEJoIAAAAItFDIsQi00Mi4KIAQAA/9DcHewAAADf4PbERHogagCLTRBRaCwAAACLVQyLAotNDIuQnAEAAP/SO0UQdQnHRfgAAAAA6wfHRfgBAAAAikX4i+VdwwAAAAAAAPA/</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>receiver.applG291_Channeling(GLOBAL) != pMisc || (receiver.master.applG291_Channeling(GLOBAL) != pMisc &amp;&amp; receiver.vLikeHero == 1 &amp;&amp; receiver.applNightHunterA4(GLOBAL) != pMisc)</sString>
+																	</condition>
+																	<flags>0</flags>
+																	<mode>Normal</mode>
+																	<targetSelector href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="9FFB2334-52CF-4172-8BEE-27079BEAD828">
+																		<AreaTargetSelector>
+																			<absolutePosition>
+																				<x>0</x>
+																				<y>0</y>
+																			</absolutePosition>
+																			<flags>0</flags>
+																			<mode>Normal</mode>
+																			<range>
+																				<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAB6RA==</compiledString>
+																				<returnType>float</returnType>
+																				<sString>1000</sString>
+																			</range>
+																			<targetFilter>268435459</targetFilter>
+																			<targetSelector href="" />
+																		</AreaTargetSelector>
+																	</targetSelector>
+																</ConditionTargetSelector>
+															</targetSelector>
+														</ConvertTargetToLand>
+													</targetSelector>
+												</UnitPlaceCorrector>
+											</targetSelector>
+											<traceMode>0</traceMode>
+										</PointTargetSelector>
+									</targetSelector>
+								</SpellApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="03EF856C-9DF9-41F8-AA51-8A25317BD518">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</stopSpell>
+				<targetSelector href="" />
+			</ChannellingApplicator>
+		</Item>
+	</applicators>
+	<autoTargetSelector href="" />
+	<caption>Телепорт к кастеру</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations>
+		<Item href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="B0D809B2-61C9-42A4-8328-954F6F5A0BCC">
+			<ConditionCastLimitation>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsi0UMixCLTQyLgnwBAAD/0DtFCA+VwF3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>rObjectMaster == pFirst ? false :  true </sString>
+				</condition>
+				<uiEvent href="/UI/Events/ErrorMessages/CastError_NoValidCurrentTarget.UIEV" />
+			</ConditionCastLimitation>
+		</Item>
+	</castLimitations>
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<constants href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="8AE45EA3-BA67-4085-AD40-0BD3833CF5D0">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Applicators/const_G291_ChannelingTime" />
+				<Item href="/Items/Talents/Common/Applicators/const_G291_ChannelingToAlly" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAPw==</compiledString>
+		<returnType>float</returnType>
+		<sString>0.5</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="" />
+	<dispatch href="/Items/Talents/Common/Applicators/G291_TeleportBackToCaster.ABLT" id="EAF5BD58-2276-4704-B1B2-6CEF5B20D4F4">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>2097</flags>
+	<image href="" />
+	<imageSecondState href="" />
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<name textref="" />
+	<node></node>
+	<passiveApplicators />
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="" />
+	<targetType>4</targetType>
+	<type>Channelling</type>
+	<useRange>
+		<compiledString>FQwAAAABAAAAGAAAAFJhbmdlX01lbGVlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Melee</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Ability>

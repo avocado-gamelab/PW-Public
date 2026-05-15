@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Faceless.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Faceless_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Faceless_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Faceless/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Faceless/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Faceless/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Faceless/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Faceless/Epic_Int_Ult2.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Faceless/Ability_A2_SUP.TALENT" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>2</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А0. Добивающий удар</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Faceless/Ability_A2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Faceless/Ability_A2.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Faceless/Ability_A2.TALENT" id="C2188E6E-3AC0-40FB-8915-5CAD1035C386">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSAAAAACAAAAJwAAAEAAAABGYWNlbGVzc19BMl9TVVAARmFjZWxlc3NfQTJfU1VQAFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZF+/fYG8CDwAGL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Faceless_A2_SUP") == false</sString>
+				</condition>
+				<name>Faceless_A2_SUP</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/Faceless/Ability_A2.TALENT" id="CD1FFB61-C245-4746-858E-171375DFA8D7">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Faceless/Ability_A2.TALENT" id="8F5F5E0E-5152-4F4F-96FC-029C5D38D250">
+					<UnitConstant>
+						<name>A2HealAmount</name>
+						<var>
+							<compiledString>FQoAAAAEAAAAFQAAAB8AAACLAAAAmAAAAFRFUlJCT05VUwBVi+yD7AxqAVHZBcUAAADZHCRR2QXBAAAA2RwkagCLRQiLEItNCIuCOAEAAP/QUdkcJItNCIsRi00Ii4I0AQAA/9BR2Rwk6HQAAACDxATZHCSLTQiLEYtNCIuCMAEAAP/QUdkcJOhVAAAAg8QE2RwkagCLTRCLEYtNEItCYP/Q3AW5AAAAi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ3V34/9DcTfjZXfTZRfSL5V3DAAAAAAAAIUBmZg5BAACEQlWL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>(8.5 + abilityScale(max(sStrength, max(sIntellect, sDexterity)), 8.9,  66) ) * cTERRBONUS</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Faceless/Ability_A2.TALENT" id="EA3E1D96-32A1-47C3-94EE-A0871668520A">
+					<UnitConstant>
+						<name>A2MinLife</name>
+						<var>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBYIAAADZHCRR2QV+AAAA2RwkagCLRQiLEItNCIuCOAEAAP/QUdkcJItNCIsRi00Ii4IwAQAA/9BR2Rwk6D4AAACDxATZHCSLTQiLEYtNCIuCNAEAAP/QUdkcJOgfAAAAg8QE2RwkagGLTRCLEYtNEItCYP/QXcMAAARCAAB6Q1WL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>damageScale(max(sIntellect, max(sStrength, sDexterity)), 33, 250)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Faceless/const_A2_SUP_CritChance" />
+				<Item href="/Items/Talents/Class/Faceless/const_A2_SUP_RefreshAuto" />
+				<Item href="/Items/Talents/Class/Faceless/const_A2_HealthThresholdPercent" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Faceless/Ability_A2.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>0</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Faceless/A2.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>true</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>0</naftaCost>
+	<name textref="/Items/Talents/Class/Faceless/Ability_A2.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators />
+	<persistentId>Faceless_A2</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

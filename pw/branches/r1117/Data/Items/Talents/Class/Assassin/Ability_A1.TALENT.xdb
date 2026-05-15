@@ -2,21 +2,22 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Assassin.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Assassin_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Assassin.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Assassin_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Assassin_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Assassin/A0_RefreshCd.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A0.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A0.TALENT" Count="3" />
 	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A1u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A3.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Assassin_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/RedSet4.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/RedSet4Add.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Duel.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Elite_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Epic_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Assassin/New_SUP.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -140,14 +141,13 @@
 														<spell href="/Items/Talents/Class/Assassin/Ability_A1.TALENT" id="C95262F4-933B-49F5-ADD6-EAE4C3720037">
 															<Spell>
 																<applicators>
-																	<Item href="/Items/Talents/Class/Assassin/appl_A0_SUP_2_ApplyOrUpdate.APLR" />
 																	<Item href="/Items/Talents/Class/Assassin/StopGhostRun.APLR" />
 																	<Item href="/Items/Talents/Class/Assassin/Ability_A1.TALENT" id="58959CDE-2B40-45BC-AD20-3E098B8CF8F3">
 																		<DamageApplicator parent="/GameLogic/GeneralApplicators/CommonDamage.APLR">
 																			<damage>
-																				<compiledString>FQoAAAABAAAAFgAAAEExX0RhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+																				<compiledString>FQ4AAAABAAAAGgAAAEExX0Jhc2VEYW1hZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
 																				<returnType>float</returnType>
-																				<sString>cA1_Damage</sString>
+																				<sString>cA1_BaseDamage</sString>
 																			</damage>
 																			<damageType>Material</damageType>
 																			<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
@@ -163,6 +163,8 @@
 																			</enabled>
 																		</StatusApplicator>
 																	</Item>
+																	<Item href="/Items/Talents/Class/Assassin/appl_A0_PoisonDamage.APLR" />
+																	<Item href="/Items/Talents/Class/Assassin/appl_A0_PoisonCounter.APLR" />
 																</applicators>
 																<dispatch href="/Items/Talents/Class/Assassin/Ability_A1.TALENT" id="29FDB3F1-128B-4F8C-B529-6549619FF073">
 																	<DispatchImmediate>
@@ -294,8 +296,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Assassin/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Assassin/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Assassin/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Assassin/Ability_A1.TALENT" id="18FC8E46-9125-4B9D-BE06-A53AF707627B">
 			<ConditionFormula>
@@ -312,16 +314,6 @@
 	<constants href="/Items/Talents/Class/Assassin/Ability_A1.TALENT" id="89293FA5-1EB7-4955-BF37-64274E32FE78">
 		<UnitConstantsContainer>
 			<vars>
-				<Item href="/Items/Talents/Class/Assassin/Ability_A1.TALENT" id="D838867F-DF79-46B8-B196-F8F27B5B991F">
-					<UnitConstant>
-						<name>A1_Damage</name>
-						<var>
-							<compiledString>FToAAAAEAAAAQQAAAFoAAACYAAAAtwAAAEFzc2Fzc2luX0ExdQAAAABBc3Nhc3Npbl9BMXUAAAAAQTF1X0RhbWFnZQAAQTFfQmFzZURhbWFnZQBVi+yD7AxoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQfi1UMUotFCFBoIAAAAItNEIsRi00Qi0JQ/9DZXfTrHYtNDFGLVQhSaCwAAACLRRCLEItNEItCUP/Q2V302UX0i+Vdww==</compiledString>
-							<returnType>float</returnType>
-							<sString>tal("Assassin_A1u") ? cA1u_Damage : cA1_BaseDamage</sString>
-						</var>
-					</UnitConstant>
-				</Item>
 				<Item href="/Items/Talents/Class/Assassin/cosnt_A1_BaseDamage" />
 				<Item href="/Items/Talents/Class/Assassin/Ability_A1.TALENT" id="82E1E4D6-09F7-4393-8471-F8B41135004A">
 					<UnitConstant>
@@ -368,8 +360,35 @@
 				<Item href="/Items/Talents/Class/Assassin/const_A3_Duration" />
 				<Item href="/Items/Talents/Class/Assassin/const_A3_MaxDamagePercent" />
 				<Item href="/Items/Talents/Class/Assassin/const_A3_DamageMul" />
+				<Item href="/Items/Talents/Class/Assassin/const_A3_SUP_Damage_Increase_Rate" />
 				<Item href="/Items/Talents/Class/Assassin/const_A0_SUP_2_Appl_Duration" />
-				<Item href="/Items/Talents/Class/Assassin/const_A0_SUP_2_Inc_Resp_Time" />
+				<Item href="/Items/Talents/Class/Assassin/const_A0_SUP_2_IncreasePoisonDamage" />
+				<Item href="/Items/Talents/Class/Assassin/Ability_A1.TALENT" id="9BB7348A-4BB9-4A01-8D4D-163DEDE3F09B">
+					<UnitConstant>
+						<name>PoisonDamage</name>
+						<var>
+							<compiledString>FQsAAAABAAAAFwAAAEExdV9EYW1hZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cA1u_Damage</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Assassin/Ability_A1.TALENT" id="156CB8AD-B999-434D-8569-A4642780C834">
+					<UnitConstant>
+						<name>PoisonCondition</name>
+						<var>
+							<compiledString>FR0AAAACAAAAJAAAAD0AAABBc3Nhc3Npbl9BMXUAAAAAQXNzYXNzaW5fQTF1AFWL7IPsDGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4lN9NtF9IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>tal("Assassin_A1u")</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Assassin/const_A0_PoisonDelay" />
+				<Item href="/Items/Talents/Class/Assassin/const_A0_PoisonDamagePercent" />
+				<Item href="/Items/Talents/Class/Assassin/const_A0_AdditionalPoisonDamagePerStackPercent" />
+				<Item href="/Items/Talents/Class/Assassin/const_A0_PoisonDamageToMonsterMultiplier" />
+				<Item href="/Items/Talents/Class/Assassin/const_A0_TotalDamage" />
+				<Item href="/Items/Talents/Class/Assassin/const_A4_IncreaseAdditionalPoisonDamagePerStackPercent" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -409,7 +428,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>75</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Assassin/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -439,9 +458,9 @@
 							<targetSelector href="/Items/Talents/Class/Assassin/Ability_A1.TALENT" id="6C81F2E8-1CB3-4FB3-86C0-22486D1458ED">
 								<ConditionTargetSelector>
 									<condition>
-										<compiledString>FW0AAAAKAAAAegAAALgAAADQAAAA3QAAAPoAAAAdAQAAQQEAAEkBAAB2AQAAkAEAAEEzX0R1cmF0aW9uAEEzX01heERhbWFnZVBlcmNlbnQAQTNfQWRkRGFtYWdlUGVyY2VudABBc3Nhc3Npbl9NYXJrT2ZQcmV5AGR1cmF0aW9uAAAAAEExX0RhbWFnZQAAAEEzX0RhbWFnZU11bABVi+yD7EBqAYtFEFBoNAAAAItNDIsRi00Mi4KcAQAA/9CJRfxR2e7ZHCSLTQiLEYtNCItCDP/Qi00IixGLTQiLAt1d9P/Q3HX03CXjAQAA2V3w2UXwUdkcJOgkAQAAg8QI3DXbAQAAi00MUYtVCFJoIAAAAItFEIsQi00Qi0JQ3V3o/9CLTQxRi1UIUmgMAAAAi0UQixCLTRCLQlDdXeD/0Nx14NxN6ItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d2P/Q3GXY2V3U2UXUUdkcJFHZBdcBAADZHCRoSAAAAItN/IsRi038i0JU/9BR2Rwk6LQAAACDxAwPtsiFyXVci1UMUotFCFBoVAAAAItNEIsRi00Qi0JQ/9CLTQxRi1UIUmhgAAAAi0UQixCLTRCLQlDdXcz/0NxNzItNDIsRi00MiwLdXcT/0NxdxN/g9sRBewnHRcAAAAAA6wfHRcABAAAAikXAi+VdwwAAAD9mZmZmZmbmPzMzMzMzM9M/AAAAAFWL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcNVi+xR2UUM2UUI3tnf4PbEAXUY2UUI2UUQ3tnf4PbEAXUJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcM=</compiledString>
+										<compiledString>FXEAAAAKAAAAfgAAALwAAADUAAAA4QAAAP4AAAAhAQAARQEAAE0BAAB6AQAAlAEAAEEzX0R1cmF0aW9uAEEzX01heERhbWFnZVBlcmNlbnQAQTNfQWRkRGFtYWdlUGVyY2VudABBc3Nhc3Npbl9NYXJrT2ZQcmV5AGR1cmF0aW9uAAAAAEExX0Jhc2VEYW1hZ2UAAABBM19EYW1hZ2VNdWwAVYvsg+xAagGLRRBQaDQAAACLTQyLEYtNDIuCnAEAAP/QiUX8Udnu2Rwki00IixGLTQiLQgz/0ItNCIsRi00IiwLdXfT/0Nx19Nwl5wEAANld8NlF8FHZHCToJAEAAIPECNw13wEAAItNDFGLVQhSaCAAAACLRRCLEItNEItCUN1d6P/Qi00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ3V3g/9DcdeDcTeiLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlDdXdj/0Nxl2Nld1NlF1FHZHCRR2QXbAQAA2RwkaEgAAACLTfyLEYtN/ItCVP/QUdkcJOi0AAAAg8QMD7bIhcl1XItVDFKLRQhQaFQAAACLTRCLEYtNEItCUP/Qi00MUYtVCFJoZAAAAItFEIsQi00Qi0JQ3V3M/9DcTcyLTQyLEYtNDIsC3V3E/9DcXcTf4PbEQXsJx0XAAAAAAOsHx0XAAQAAAIpFwIvlXcMAAAA/ZmZmZmZm5j8zMzMzMzPTPwAAAABVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3DVYvsUdlFDNlFCN7Z3+D2xAF1GNlFCNlFEN7Z3+D2xAF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3D</compiledString>
 										<returnType>bool</returnType>
-										<sString>isinbounds( receiver.applAssassin_MarkOfPrey(UNIT)-&gt;GetVariable("duration") , 0.5, cA3_Duration - ( cA3_MaxDamagePercent / cA3_AddDamagePercent * ( max( sLife / sMaxLife - 0.3, 0.0 ) / 0.7 ) ) ) || ( cA1_Damage * cA3_DamageMul &gt;= rLife )</sString>
+										<sString>isinbounds( receiver.applAssassin_MarkOfPrey(UNIT)-&gt;GetVariable("duration") , 0.5, cA3_Duration - ( cA3_MaxDamagePercent / cA3_AddDamagePercent * ( max( sLife / sMaxLife - 0.3, 0.0 ) / 0.7 ) ) ) || ( cA1_BaseDamage * cA3_DamageMul &gt;= rLife )</sString>
 									</condition>
 									<flags>0</flags>
 									<mode>Normal</mode>

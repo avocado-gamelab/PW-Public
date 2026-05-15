@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
-	<BackLink DBID="/Items/Talents/Bomber_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Bomber.TALENTSET" Count="1" />
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Bomber.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Bomber_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Bomber_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Bomber/Ability_A1_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Bomber_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Bomber/Ability_A1u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Bomber/status_A4_Self.APLR" Count="2" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Test/Talents/Bomber/Test.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
@@ -121,8 +122,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Bomber/Ability_A1u.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Bomber/Ability_A1u.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Bomber/Ability_A1u.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Bomber/Ability_A1u.TALENT" id="5631FB71-E974-4546-A986-AC8A978E2337">
 			<ConditionFormula>
@@ -183,9 +184,9 @@
 					<UnitConstant>
 						<name>A1u_BaseDmg</name>
 						<var>
-							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAACMQgBAA0Q=</compiledString>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAACoQgCAHUQ=</compiledString>
 							<returnType>float</returnType>
-							<sString>damageScale( sIntellect, 70, 525)</sString>
+							<sString>damageScale( sIntellect, 84, 630)</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -296,7 +297,7 @@
 		</DispatchLinear>
 	</dispatch>
 	<flags>3</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Bomber/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

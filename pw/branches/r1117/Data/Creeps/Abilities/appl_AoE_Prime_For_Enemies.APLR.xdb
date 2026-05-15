@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TriggerApplicator>
+	<BackLink DBID="/Creeps/Abilities/OnDeath_AoE_Nafta.ABLT" Count="1" />
+	<actionsCount>
+		<compiledString></compiledString>
+		<returnType>int</returnType>
+		<sString>0</sString>
+	</actionsCount>
+	<applyTarget>ApplicatorTarget</applyTarget>
+	<behaviorFlags>24</behaviorFlags>
+	<caption>Раздаём прайм вражеским героям после своей смерти</caption>
+	<effect>
+		<Item href="" />
+		<Item href="" />
+	</effect>
+	<enabled>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<lifeTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>-1.0</sString>
+	</lifeTime>
+	<LoggingEvent>-1</LoggingEvent>
+	<playAck>false</playAck>
+	<processor href="/Creeps/Abilities/appl_AoE_Prime_For_Enemies.APLR" id="B7366A10-4579-4C7D-9463-C6D7B5D033A8">
+		<EventProcessorOnDeath>
+			<applyTarget>ApplicatorTarget</applyTarget>
+			<castSpellDelay>
+				<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPg==</compiledString>
+				<returnType>float</returnType>
+				<sString>0.2</sString>
+			</castSpellDelay>
+			<checkSender>0</checkSender>
+			<objectFilter>1342177280</objectFilter>
+			<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+			<spell href="/Creeps/Abilities/appl_AoE_Prime_For_Enemies.APLR" id="2FBCDC3D-580C-4CE8-99C3-604B76DB7041">
+				<Spell>
+					<applicators>
+						<Item href="/Creeps/Abilities/appl_AoE_Prime_For_Enemies.APLR" id="272ADB20-7ABC-4B11-A964-727B676AB1EC">
+							<TargetsCounterApplicator>
+								<applyTarget>ApplicatorTarget</applyTarget>
+								<behaviorFlags>0</behaviorFlags>
+								<caption>Определяем число вражеских героев рядом для расчёта награды</caption>
+								<effect>
+									<Item href="" />
+									<Item href="" />
+								</effect>
+								<enabled>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</enabled>
+								<formulaName>EnemyCounter</formulaName>
+								<lifeTime>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>-1.0</sString>
+								</lifeTime>
+								<LoggingEvent>-1</LoggingEvent>
+								<providerName></providerName>
+								<startCondition>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</startCondition>
+								<targetSelector href="/Creeps/Abilities/appl_AoE_Prime_For_Enemies.APLR" id="297F66EA-4CEC-46CD-B0C8-DCA4FEB6473B">
+									<AreaTargetSelector>
+										<absolutePosition>
+											<x>0</x>
+											<y>0</y>
+										</absolutePosition>
+										<flags>0</flags>
+										<mode>Normal</mode>
+										<range>
+											<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+											<returnType>float</returnType>
+											<sString>cRange</sString>
+										</range>
+										<targetFilter>536870915</targetFilter>
+										<targetSelector href="" />
+									</AreaTargetSelector>
+								</targetSelector>
+							</TargetsCounterApplicator>
+						</Item>
+						<Item href="/Creeps/Abilities/appl_AoE_Prime_For_Enemies.APLR" id="C22D209B-4739-4C0E-8EC8-FE4256BCCCA2">
+							<SpellApplicator>
+								<applyTarget>ApplicatorTarget</applyTarget>
+								<caption>Спелл с выбором целей и раздачей прайма</caption>
+								<enabled>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</enabled>
+								<formulaName></formulaName>
+								<LoggingEvent>-1</LoggingEvent>
+								<providerName></providerName>
+								<spell href="/Creeps/Abilities/appl_AoE_Prime_For_Enemies.APLR" id="8B112D6B-D0AB-4171-A9C8-3B47F7B59E4E">
+									<Spell>
+										<applicators>
+											<Item href="/Creeps/Abilities/appl_AoE_Prime_For_Enemies.APLR" id="243B904C-CAA0-4B1E-97BD-031D4360FCA5">
+												<AddNaftaApplicator>
+													<applyTarget>ApplicatorTarget</applyTarget>
+													<caption>Добавляем прайм</caption>
+													<enabled>
+														<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<isFromImpulseBuff>false</isFromImpulseBuff>
+													<LoggingEvent>-1</LoggingEvent>
+													<nafta>
+														<compiledString>Fa8AAAAPAAAAvgAAANEAAADpAAAA/AAAABQBAAAnAQAAUQEAAHkBAACMAQAAtgEAAN4BAADxAQAAGwIAAFYCAACjAgAAVGFyZ2V0cwBUYXJnZXRzAE9uZUhlcm9SZXdhcmRNdWx0aXBsaWVyAFRhcmdldHMAVHdvSGVyb2VzUmV3YXJkTXVsdGlwbGllcgAAAFRhcmdldHMAVGhyZWVIZXJvZXNSZXdhcmRNdWx0aXBsaWVyAFRhcmdldHMARm91ckhlcm9lc1Jld2FyZE11bHRpcGxpZXIAAEZpdmVIZXJvZXNSZXdhcmRNdWx0aXBsaWVyAFWL7IPsYItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3B3qAgAA3+D2xEQPi6QBAACLRQxQi00IUWgIAAAAi1UQiwKLTRCLUFD/0twd4gIAAN/g9sRED4t5AQAAi0UMUItNCFFoKAAAAItVEIsCi00Qi1BQ/9LcHdoCAADf4PbERHo+i0UIixCLTQiLglABAAD/0IlF/NtF/ItNDFGLVQhSaDAAAACLRRCLEItNEItCUN1d9P/Q3E303V3s6QwBAACLTQxRi1UIUmhMAAAAi0UQixCLTRCLQlD/0Nwd0gIAAN/g9sREej6LTQiLEYtNCIuCUAEAAP/QiUXo20Xoi00MUYtVCFJoVAAAAItFEIsQi00Qi0JQ3V3g/9DcTeDdXdjpoQAAAItNDFGLVQhSaHAAAACLRRCLEItNEItCUP/Q3B3KAgAA3+D2xER6O4tNCIsRi00Ii4JQAQAA/9CJRdTbRdSLTQxRi1UIUmh4AAAAi0UQixCLTRCLQlDdXcz/0NxNzN1dxOs5i00IixGLTQiLglABAAD/0IlFwNtFwItNDFGLVQhSaJQAAACLRRCLEItNEItCUN1duP/Q3E243V3E3UXE3V3Y3UXY3V3s3UXs3V2w6zmLTQiLEYtNCIuCUAEAAP/QiUWs20Wsi00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ3V2k/9DcTaTdXbDdRbDZXaDZRaCL5V3DAAAAAAAAEEAAAAAAAAAIQAAAAAAAAABAAAAAAAAA8D8AAAAAAAAAAA==</compiledString>
+														<returnType>float</returnType>
+														<sString>(cTargets == 0 || cTargets == 1) ? sNaftaForKill * cOneHeroRewardMultiplier : cTargets == 2 ? sNaftaForKill * cTwoHeroesRewardMultiplier : cTargets == 3 ? sNaftaForKill * cThreeHeroesRewardMultiplier : cTargets == 4 ? sNaftaForKill * cFourHeroesRewardMultiplier : sNaftaForKill * cFiveHeroesRewardMultiplier</sString>
+													</nafta>
+													<providerName></providerName>
+												</AddNaftaApplicator>
+											</Item>
+										</applicators>
+										<dispatch href="/Creeps/Abilities/appl_AoE_Prime_For_Enemies.APLR" id="B5B9A3F2-E2E3-40C1-928D-BAAE588FF750">
+											<DispatchImmediate>
+												<alwaysApply>false</alwaysApply>
+												<applyEffect>
+													<Item href="" />
+													<Item href="" />
+												</applyEffect>
+												<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+												<applyEffectOrientation>Default</applyEffectOrientation>
+												<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+												<dieAfterApply>true</dieAfterApply>
+												<dispatchEffect>
+													<Item href="" />
+													<Item href="" />
+												</dispatchEffect>
+												<flags>0</flags>
+												<instantApply>false</instantApply>
+											</DispatchImmediate>
+										</dispatch>
+									</Spell>
+								</spell>
+								<spellTarget>ApplicatorTarget</spellTarget>
+								<targetSelector href="/Creeps/Abilities/appl_AoE_Prime_For_Enemies.APLR" id="2BBCF7EF-2EA3-400D-BF72-5DFE1131BABD">
+									<AreaTargetSelector>
+										<absolutePosition>
+											<x>0</x>
+											<y>0</y>
+										</absolutePosition>
+										<flags>0</flags>
+										<mode>Normal</mode>
+										<range>
+											<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+											<returnType>float</returnType>
+											<sString>cRange</sString>
+										</range>
+										<targetFilter>536870915</targetFilter>
+										<targetSelector href="" />
+									</AreaTargetSelector>
+								</targetSelector>
+							</SpellApplicator>
+						</Item>
+					</applicators>
+					<dispatch href="/Creeps/Abilities/appl_AoE_Prime_For_Enemies.APLR" id="A337C5FC-F2A8-4799-A043-0E51B8E57E10">
+						<DispatchImmediate>
+							<alwaysApply>false</alwaysApply>
+							<applyEffect>
+								<Item href="" />
+								<Item href="" />
+							</applyEffect>
+							<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+							<applyEffectOrientation>Default</applyEffectOrientation>
+							<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+							<dieAfterApply>true</dieAfterApply>
+							<dispatchEffect>
+								<Item href="" />
+								<Item href="" />
+							</dispatchEffect>
+							<flags>0</flags>
+							<instantApply>false</instantApply>
+						</DispatchImmediate>
+					</dispatch>
+				</Spell>
+			</spell>
+		</EventProcessorOnDeath>
+	</processor>
+	<providerName></providerName>
+	<startCondition>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</startCondition>
+	<useAbilityCooldown>false</useAbilityCooldown>
+	<useAbilityOwnerMana>false</useAbilityOwnerMana>
+</TriggerApplicator>

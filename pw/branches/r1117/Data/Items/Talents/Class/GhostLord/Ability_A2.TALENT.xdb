@@ -2,12 +2,12 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/GhostLord.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/GhostLord_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/GhostLord.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/GhostLord_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/GhostLord/Ability_A2_SUP.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/GhostLord/Ability_A2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/GhostLord_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/GhostLord_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Ghostlord/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Ghostlord/Elite_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Ghostlord/Elite_Str.TALENTSET" Count="1" />
@@ -34,161 +34,7 @@
 	</aoeSize>
 	<aoeType>None</aoeType>
 	<applicators>
-		<Item href="/Items/Talents/Class/GhostLord/Ability_A2.TALENT" id="1C3947B6-0A00-4922-AE58-B242601B3CD6">
-			<StatusApplicator>
-				<applicators />
-				<applyTarget>ApplicatorTarget</applyTarget>
-				<behaviorFlags>0</behaviorFlags>
-				<caption>метка "увеличить скорость" для Щита</caption>
-				<customCounter>
-					<compiledString></compiledString>
-					<returnType>int</returnType>
-					<sString>0</sString>
-				</customCounter>
-				<customProgress>
-					<compiledString></compiledString>
-					<returnType>float</returnType>
-					<sString>-1.0</sString>
-				</customProgress>
-				<description textref="" />
-				<dispellPriority>NonDispellable</dispellPriority>
-				<effect>
-					<Item href="" />
-					<Item href="" />
-				</effect>
-				<enabled>
-					<compiledString></compiledString>
-					<returnType>bool</returnType>
-					<sString>true</sString>
-				</enabled>
-				<flags>0</flags>
-				<formulaName>GhostLordNTMark</formulaName>
-				<image href="" />
-				<lifeTime>
-					<compiledString>FQwAAAABAAAAGAAAAEEyX0R1cmF0aW9uAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
-					<returnType>float</returnType>
-					<sString>cA2_Duration</sString>
-				</lifeTime>
-				<LoggingEvent>-1</LoggingEvent>
-				<name textref="" />
-				<power>0</power>
-				<providerName></providerName>
-				<stackableAcrossUnits>FullyStackable</stackableAcrossUnits>
-				<stackCount>0</stackCount>
-				<startCondition>
-					<compiledString>FQAAAAAAAAAAVYvsVotFCIsQi00Ii0JM/9CL8ItNCIsRi00Ii4KQAQAA/9A78A+UwF5dww==</compiledString>
-					<returnType>bool</returnType>
-					<sString>nt( true, false )</sString>
-				</startCondition>
-				<statusPosition>0</statusPosition>
-				<stopBehaviour>StopByTime</stopBehaviour>
-				<unstackableWith href="" />
-			</StatusApplicator>
-		</Item>
-		<Item href="/Items/Talents/Class/GhostLord/status_A2_SpectralShield.APLR" />
-		<Item href="/Items/Talents/Class/GhostLord/Ability_A2.TALENT" id="5BEC4519-8992-4CF6-8859-E7A24E741C34">
-			<ProgramApplicator>
-				<applicators>
-					<Item>
-						<applicator href="/Items/Talents/Class/GhostLord/Ability_A2.TALENT" id="89CF5DCA-21B0-4AB0-B8F9-F75A376FB3D3">
-							<StatusApplicator>
-								<applicators>
-									<Item href="/Heroes/DefaultStatus/_HASTE_status.APLR" />
-								</applicators>
-								<applyTarget>ApplicatorTarget</applyTarget>
-								<behaviorFlags>0</behaviorFlags>
-								<caption>техстатус для отключения ускорения при отключении статуса А2</caption>
-								<customCounter>
-									<compiledString></compiledString>
-									<returnType>int</returnType>
-									<sString>0</sString>
-								</customCounter>
-								<customProgress>
-									<compiledString></compiledString>
-									<returnType>float</returnType>
-									<sString>-1.0</sString>
-								</customProgress>
-								<description textref="" />
-								<dispellPriority>NonDispellable</dispellPriority>
-								<effect>
-									<Item href="" />
-									<Item href="" />
-								</effect>
-								<enabled>
-									<compiledString>FRQAAAABAAAAHgAAAEdob3N0TG9yZF9BMl9TdGF0dXMAVYvsagGLRRBQaAAAAACLTQyLEYtNDIuCnAEAAP/QM8k7RRAPlcGKwV3D</compiledString>
-									<returnType>bool</returnType>
-									<sString>receiver.applGhostLord_A2_Status(UNIT) != pMisc</sString>
-								</enabled>
-								<flags>0</flags>
-								<formulaName></formulaName>
-								<image href="" />
-								<lifeTime>
-									<compiledString></compiledString>
-									<returnType>float</returnType>
-									<sString>-1.0</sString>
-								</lifeTime>
-								<LoggingEvent>-1</LoggingEvent>
-								<name textref="" />
-								<power>0</power>
-								<providerName></providerName>
-								<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
-								<stackCount>0</stackCount>
-								<startCondition>
-									<compiledString></compiledString>
-									<returnType>bool</returnType>
-									<sString>true</sString>
-								</startCondition>
-								<statusPosition>0</statusPosition>
-								<stopBehaviour>StopByChild</stopBehaviour>
-								<unstackableWith href="" />
-							</StatusApplicator>
-						</applicator>
-						<continueCondition>
-							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
-							<returnType>bool</returnType>
-							<sString>0</sString>
-						</continueCondition>
-						<continueEvents>1</continueEvents>
-						<delay>
-							<compiledString></compiledString>
-							<returnType>float</returnType>
-							<sString>-1.0</sString>
-						</delay>
-						<stopCondition>
-							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
-							<returnType>bool</returnType>
-							<sString>0</sString>
-						</stopCondition>
-						<stopEvents>0</stopEvents>
-					</Item>
-				</applicators>
-				<applyTarget>ApplicatorTarget</applyTarget>
-				<behaviorFlags>0</behaviorFlags>
-				<caption>(Ter) увеличить скорость</caption>
-				<effect>
-					<Item href="" />
-					<Item href="" />
-				</effect>
-				<enabled>
-					<compiledString>FQAAAAAAAAAAVYvsVotFCIsQi00Ii0JM/9CL8ItNCIsRi00Ii4KQAQAA/9A78A+UwF5dww==</compiledString>
-					<returnType>bool</returnType>
-					<sString>nt( true, false )</sString>
-				</enabled>
-				<formulaName></formulaName>
-				<lifeTime>
-					<compiledString></compiledString>
-					<returnType>float</returnType>
-					<sString>-1.0</sString>
-				</lifeTime>
-				<LoggingEvent>-1</LoggingEvent>
-				<providerName></providerName>
-				<startCondition>
-					<compiledString></compiledString>
-					<returnType>bool</returnType>
-					<sString>true</sString>
-				</startCondition>
-			</ProgramApplicator>
-		</Item>
+		<Item href="/Items/Talents/Class/GhostLord/program_A2_SprectralShield.APLR" />
 	</applicators>
 	<askId>2</askId>
 	<autoTargetSelector href="/Items/Talents/Class/GhostLord/Ability_A2.TALENT" id="3D7B75DA-104D-4344-B322-B15BF23EE5C6">
@@ -208,8 +54,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/GhostLord/Ability_A2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/GhostLord/Ability_A2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/GhostLord/Ability_A2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/GhostLord/Ability_A2.TALENT" id="1C114D4F-87CD-447E-8C01-A03B6FD9BEF7">
 			<ConditionFormula>
@@ -261,6 +107,7 @@
 				</Item>
 				<Item href="/Items/Talents/Class/GhostLord/const_A2_DamageCapacityCurrent" />
 				<Item href="/Items/Talents/Class/GhostLord/const_A2_SUP_LifeFeedback" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A2_SUP_Heal" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -300,7 +147,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>32787</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/GhostLord/A2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -380,15 +227,15 @@
 				</actionsCount>
 				<applyTarget>AbilityOwner</applyTarget>
 				<behaviorFlags>184</behaviorFlags>
-				<caption>Запускаем принудительно кд</caption>
+				<caption>Запускаем принудительно кд (отключено)</caption>
 				<effect>
 					<Item href="" />
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString></compiledString>
+					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
 					<returnType>bool</returnType>
-					<sString>true</sString>
+					<sString>false</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<lifeTime>

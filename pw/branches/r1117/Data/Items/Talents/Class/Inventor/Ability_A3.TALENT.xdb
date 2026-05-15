@@ -2,13 +2,13 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Inventor.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Inventor_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Inventor.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Inventor_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Inventor_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A3.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A3u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Inventor_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Inventor/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Inventor/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Inventor/Elite_Int.TALENTSET" Count="1" />
@@ -115,8 +115,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Inventor/Ability_A3.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Inventor/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Inventor/Ability_A3.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Inventor/condition_EnoughDetails" />
 		<Item href="/Items/Talents/Class/Inventor/Ability_A3.TALENT" id="17409B61-3279-4E7D-A364-CD60AC919881">
@@ -233,6 +233,7 @@
 				<Item href="/Items/Talents/Class/Inventor/const_A0_TechDetailsperHastPercent" />
 				<Item href="/Items/Talents/Class/Inventor/const_A0_BaseAttackTotal" />
 				<Item href="/Items/Talents/Class/Inventor/const_A0_BaseAttackPerDetail" />
+				<Item href="/Items/Talents/Class/Inventor/const_A0_MaxMoveSpeedPercent" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -272,7 +273,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>67</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Inventor/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

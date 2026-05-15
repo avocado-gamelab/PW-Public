@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Demonolog.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Demonolog_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Demonolog_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Demonolog/Ability_A1u1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Demonolog/Ability_A1u2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
+	<BackLink DBID="/Test/Talents/Demonolog/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Demonolog/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Demonolog/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Demonolog/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Demonolog/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Demonolog/Epic_Str.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="/Effects/UI/AOESelection/CorridorNarrow.MTRL" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString>FQYAAAACAAAAEwAAACYAAABXaWR0aABVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcDTQAAADZXfzZRfyL5V3DAAAAAAAA+D8=</compiledString>
+		<returnType>float</returnType>
+		<sString>cWidth*1.5</sString>
+	</aoeSize>
+	<aoeType>CorridorMax</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="498B4D86-0A99-4297-8B22-CF9C7402012E">
+			<ProgramApplicator>
+				<applicators>
+					<Item>
+						<applicator href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="BF9E0285-C056-4683-A2AD-0654A1E73D34">
+							<FlagsApplicator>
+								<applyTarget>ApplicatorTarget</applyTarget>
+								<behaviorFlags>0</behaviorFlags>
+								<caption>Ждем несколько доль секунд</caption>
+								<consumables />
+								<effect>
+									<Item href="" />
+									<Item href="" />
+								</effect>
+								<enabled>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</enabled>
+								<flag>0</flag>
+								<formulaName></formulaName>
+								<lifeTime>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>0.1</sString>
+								</lifeTime>
+								<LoggingEvent>-1</LoggingEvent>
+								<providerName></providerName>
+								<startCondition>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</startCondition>
+								<talents />
+								<useListAs>ListAsRule</useListAs>
+							</FlagsApplicator>
+						</applicator>
+						<continueCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>2</continueEvents>
+						<delay>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0</sString>
+						</delay>
+						<stopCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+					<Item>
+						<applicator href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="295E418F-53BF-4253-B8E7-0D71C81058DA">
+							<SpellApplicator>
+								<applyTarget>AbilityTarget</applyTarget>
+								<caption></caption>
+								<enabled>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</enabled>
+								<formulaName></formulaName>
+								<LoggingEvent>-1</LoggingEvent>
+								<providerName></providerName>
+								<spell href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="AC88CCC6-8080-4FCE-B36F-2B0C9DCE278A">
+									<Spell>
+										<applicators>
+											<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="3FE8D3EA-A4CA-4769-AD94-0062BC762714">
+												<SpellApplicator>
+													<applyTarget>ApplicatorTarget</applyTarget>
+													<caption>разослать урон</caption>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<spell href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="946D23F5-1D31-41CE-9F6A-0152BA0D9434">
+														<Spell>
+															<applicators>
+																<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="0E6B9902-6711-47EC-9D98-F8A61AA7B449">
+																	<DamageApplicator>
+																		<applyTarget>ApplicatorTarget</applyTarget>
+																		<cancelInvisibility>false</cancelInvisibility>
+																		<caption>Урон</caption>
+																		<damage>
+																			<compiledString>FQoAAAABAAAAFgAAAEExX0RhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+																			<returnType>float</returnType>
+																			<sString>cA1_Damage</sString>
+																		</damage>
+																		<damageMode>0</damageMode>
+																		<damageType>Energy</damageType>
+																		<enabled>
+																			<compiledString></compiledString>
+																			<returnType>bool</returnType>
+																			<sString>true</sString>
+																		</enabled>
+																		<formulaName></formulaName>
+																		<LoggingEvent>-1</LoggingEvent>
+																		<providerName></providerName>
+																		<timeLimiter>-1</timeLimiter>
+																		<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
+																	</DamageApplicator>
+																</Item>
+															</applicators>
+															<dispatch href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="F7ABC131-4AE0-492D-8274-C5A612D352A0">
+																<DispatchImmediate>
+																	<alwaysApply>false</alwaysApply>
+																	<applyEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</applyEffect>
+																	<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																	<applyEffectOrientation>Default</applyEffectOrientation>
+																	<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																	<dieAfterApply>true</dieAfterApply>
+																	<dispatchEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</dispatchEffect>
+																	<flags>1</flags>
+																	<instantApply>false</instantApply>
+																</DispatchImmediate>
+															</dispatch>
+														</Spell>
+													</spell>
+													<spellTarget>ApplicatorTarget</spellTarget>
+													<targetSelector href="/Items/Talents/Class/Demonolog/TargetsFor_A1.TGSL" />
+												</SpellApplicator>
+											</Item>
+											<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="E825F5A1-90BD-4006-A4F1-340B70AF716B">
+												<SpellApplicator>
+													<applyTarget>ApplicatorTarget</applyTarget>
+													<caption>улучшение демонов</caption>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<spell href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="0E70487B-4642-4978-A4B3-999A325329C2">
+														<Spell>
+															<applicators>
+																<Item href="/Items/Talents/Class/Demonolog/staus_A1u1_DemonsBurn.APLR" />
+															</applicators>
+															<dispatch href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="A97BABA0-954F-434C-9F47-F277E03673B4">
+																<DispatchImmediate>
+																	<alwaysApply>false</alwaysApply>
+																	<applyEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</applyEffect>
+																	<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																	<applyEffectOrientation>Default</applyEffectOrientation>
+																	<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																	<dieAfterApply>true</dieAfterApply>
+																	<dispatchEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</dispatchEffect>
+																	<flags>0</flags>
+																	<instantApply>false</instantApply>
+																</DispatchImmediate>
+															</dispatch>
+														</Spell>
+													</spell>
+													<spellTarget>ApplicatorTarget</spellTarget>
+													<targetSelector href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="6E6E9FED-6012-4FAC-A1BF-4128E59B7B69">
+														<ConditionTargetSelector>
+															<condition>
+																<compiledString>FSQAAAADAAAAKQAAAD8AAABRAAAARGVtb25vbG9nc0RlbW9ucwAAAABBMXUxX0J1cm5EZW1vbnMAVYvsUWgAAAAAi0UMixCLTQyLgogBAAD/0NwdgQAAAN/g9sREeylqAItNEFFoFAAAAItVDIsCi00Mi5CcAQAA/9I7RRB1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+																<returnType>bool</returnType>
+																<sString>receiver.vDemonologsDemons !=0 &amp;&amp; receiver.applA1u1_BurnDemons(GLOBAL) == pMisc</sString>
+															</condition>
+															<flags>0</flags>
+															<mode>Normal</mode>
+															<targetSelector href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="1AAC4976-5AF3-419E-AEF4-2F25CEAB1327">
+																<CapsuleTargetSelector parent="/Items/Talents/Class/Demonolog/TargetsFor_A1.TGSL">
+																	<targetFilter>268500996</targetFilter>
+																</CapsuleTargetSelector>
+															</targetSelector>
+														</ConditionTargetSelector>
+													</targetSelector>
+												</SpellApplicator>
+											</Item>
+											<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="981868C3-AC8D-407C-A4E8-156267D62DC2">
+												<SpellApplicator>
+													<applyTarget>AbilityTarget</applyTarget>
+													<caption>Вытаскиваем демонов из ловушки</caption>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<spell href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="18067200-AEB3-434F-B0C2-0FB42C5EA0F3">
+														<Spell>
+															<applicators>
+																<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="7E68DD0C-C2A8-4056-BAD1-ECE0E7EB9009">
+																	<KillApplicator>
+																		<applyTarget>ApplicatorTarget</applyTarget>
+																		<caption>Убираем ловушку</caption>
+																		<dontGiveRewards>true</dontGiveRewards>
+																		<enabled>
+																			<compiledString>FR8AAAACAAAAJgAAAD8AAABEZW1vbm9sb2dfQTF1MQAARGVtb25vbG9nX0ExdTEAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCKRfuL5V3D</compiledString>
+																			<returnType>bool</returnType>
+																			<sString>tal("Demonolog_A1u1")</sString>
+																		</enabled>
+																		<flag>InstantRemove</flag>
+																		<formulaName></formulaName>
+																		<LoggingEvent>-1</LoggingEvent>
+																		<providerName></providerName>
+																	</KillApplicator>
+																</Item>
+																<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="632A93D9-905A-430E-BB5A-8DE1D2D78E71">
+																	<SummonApplicator parent="/Items/Talents/Class/Demonolog/SummonDemons.APLR">
+																		<enabled>
+																			<compiledString>FR8AAAACAAAAJgAAAD8AAABEZW1vbm9sb2dfQTF1MQAARGVtb25vbG9nX0ExdTEAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCKRfuL5V3D</compiledString>
+																			<returnType>bool</returnType>
+																			<sString>tal("Demonolog_A1u1")</sString>
+																		</enabled>
+																		<placeMode>ByTargetSelector</placeMode>
+																		<placeSelector href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="0DC8AA5B-1FF9-48F5-9727-6481366EC472">
+																			<SelectApplicatorTarget>
+																				<applicatorIndex>0</applicatorIndex>
+																				<applicatorName></applicatorName>
+																				<namedApplicatorTarget>ApplicatorTarget</namedApplicatorTarget>
+																				<selectTarget>ApplicatorTarget</selectTarget>
+																			</SelectApplicatorTarget>
+																		</placeSelector>
+																		<summonedUnitsCount>
+																			<compiledString></compiledString>
+																			<returnType>int</returnType>
+																			<sString>1</sString>
+																		</summonedUnitsCount>
+																	</SummonApplicator>
+																</Item>
+															</applicators>
+															<dispatch href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="294DB49D-C679-428E-9CBB-DCB2F7AEFA43">
+																<DispatchImmediate>
+																	<alwaysApply>false</alwaysApply>
+																	<applyEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</applyEffect>
+																	<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																	<applyEffectOrientation>Default</applyEffectOrientation>
+																	<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																	<dieAfterApply>true</dieAfterApply>
+																	<dispatchEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</dispatchEffect>
+																	<flags>0</flags>
+																	<instantApply>false</instantApply>
+																</DispatchImmediate>
+															</dispatch>
+														</Spell>
+													</spell>
+													<spellTarget>ApplicatorTarget</spellTarget>
+													<targetSelector href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="B2FBA1A1-AFFA-4A52-B954-6BA3717C3488">
+														<ConditionTargetSelector>
+															<condition>
+																<compiledString>FQ4AAAABAAAAGAAAAEl0c0RlbW9uc1RyYXAAVYvsagCLRRBQaAAAAACLTQyLEYtNDIuCnAEAAP/QM8k7RRAPlcGKwV3D</compiledString>
+																<returnType>bool</returnType>
+																<sString>receiver.applItsDemonsTrap(GLOBAL) != pMisc</sString>
+															</condition>
+															<flags>0</flags>
+															<mode>Normal</mode>
+															<targetSelector href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="7472B37C-AAB6-46E9-87BD-EC769C21C215">
+																<CapsuleTargetSelector parent="/Items/Talents/Class/Demonolog/TargetsFor_A1.TGSL">
+																	<targetFilter>268500996</targetFilter>
+																</CapsuleTargetSelector>
+															</targetSelector>
+														</ConditionTargetSelector>
+													</targetSelector>
+												</SpellApplicator>
+											</Item>
+										</applicators>
+										<dispatch href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="DCD5AE17-834E-41DC-95FC-70B1DD9DA4BC">
+											<DispatchImmediate>
+												<alwaysApply>false</alwaysApply>
+												<applyEffect>
+													<Item href="" />
+													<Item href="" />
+												</applyEffect>
+												<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+												<applyEffectOrientation>Default</applyEffectOrientation>
+												<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+												<dieAfterApply>true</dieAfterApply>
+												<dispatchEffect>
+													<Item href="" />
+													<Item href="" />
+												</dispatchEffect>
+												<flags>0</flags>
+												<instantApply>true</instantApply>
+											</DispatchImmediate>
+										</dispatch>
+									</Spell>
+								</spell>
+								<spellTarget>ApplicatorTarget</spellTarget>
+								<targetSelector href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="07BF24A6-A750-40CB-98DB-E8289A970DF2">
+									<PointTargetSelector>
+										<checkMinRange>true</checkMinRange>
+										<mode>RangeFromOwner</mode>
+										<offset>
+											<x>0</x>
+											<y>1</y>
+										</offset>
+										<paralleledTarget>false</paralleledTarget>
+										<range>
+											<compiledString>FQkAAAABAAAAFQAAAEExX1JhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+											<returnType>float</returnType>
+											<sString>cA1_Range</sString>
+										</range>
+										<targetSelector href="" />
+										<traceMode>0</traceMode>
+									</PointTargetSelector>
+								</targetSelector>
+							</SpellApplicator>
+						</applicator>
+						<continueCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>1</continueEvents>
+						<delay>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0</sString>
+						</delay>
+						<stopCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+					<Item>
+						<applicator href="/GameLogic/GeneralApplicators/EndOfAbility.APLR" />
+						<continueCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>1</continueEvents>
+						<delay>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0</sString>
+						</delay>
+						<stopCondition>
+							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+				</applicators>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>Все это из-за того, чтобы урон приходил не сразу</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+			</ProgramApplicator>
+		</Item>
+	</applicators>
+	<askId>1</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А1. Ментальный кнут</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Class/Demonolog/Ability_A1.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Demonolog/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Demonolog/Ability_A1.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="3F1772DF-07D5-45AE-B15E-2FAE6CAB094E">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR8AAAACAAAAJgAAAD8AAABEZW1vbm9sb2dfQTF1MQAARGVtb25vbG9nX0ExdTEAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwIPAAYvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Demonolog_A1u1") == false</sString>
+				</condition>
+				<name>Demonolog_A1u1</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="85195D06-041F-4FAF-BAA0-EE4E7D3C266A">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR8AAAACAAAAJgAAAD8AAABEZW1vbm9sb2dfQTF1MgAARGVtb25vbG9nX0ExdTIAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwIPAAYvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Demonolog_A1u2") == false</sString>
+				</condition>
+				<name>Demonolog_A1u2</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="40539593-9B7A-40AC-A273-9CD080D15583">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="C1DE7428-C541-4E20-BD0E-59C17FCF8209">
+					<UnitConstant>
+						<name>A1_Damage</name>
+						<var>
+							<compiledString>FQ4AAAABAAAAGgAAAEExX0RhbWFnZUJhc2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cA1_DamageBase</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="53B2E2F5-0C3B-4183-8E74-94E5DF5DAF3C">
+					<UnitConstant>
+						<name>A1_DamageBase</name>
+						<var>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBWMAAADZHCRR2QVfAAAA2RwkagCLRQiLEItNCIuCMAEAAP/QUdkcJItNCIsRi00Ii4I0AQAA/9BR2Rwk6B8AAACDxATZHCRqAYtNEIsRi00Qi0Jg/9BdwwAAkkIAQAlEVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>damageScale(max(sIntellect, sStrength), 73, 549)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="4D006AA0-D1FF-43BF-AD70-3F63A0BA8AB9">
+					<UnitConstant>
+						<name>Width</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="29ABC7AD-1823-459E-861F-DAC003FA478D">
+					<UnitConstant>
+						<name>A1_Range</name>
+						<var>
+							<compiledString>FQsAAAACAAAAGAAAACsAAABSYW5nZV9Mb25nAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twFOQAAANld/NlF/IvlXcMAAAAAAAAAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange_Long+2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="F57E939F-7B65-469E-8E2C-6639CBFAD66C">
+					<UnitConstant>
+						<name>A1u1_FireDuration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+							<returnType>float</returnType>
+							<sString>-1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="D920BF39-E4D4-411D-8447-9D51752556D2">
+					<UnitConstant>
+						<name>A1u2_AddStrength</name>
+						<var>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAFHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoAi00QixGLTRCLQmD/0F3DAAAgQM3MmEE=</compiledString>
+							<returnType>float</returnType>
+							<sString>abilityScale(sIntellect, 2.5 , 19.1, false)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="BD28D7BE-1684-4383-A84D-3BC746DBC946">
+					<UnitConstant>
+						<name>A1u1_MaxHealth</name>
+						<var>
+							<compiledString>FQAAAAACAAAAQgAAAEwAAABVi+yD7AyLRQiLEItNCIuCMAEAAP/Qi00IixGLTQiLgjQBAADdXfj/0Nxd+N/g9sQFegbGRfcB6wTGRfcAagFR2QWkAAAA2RwkUdkFoAAAANkcJGoAi00IixGLTQiLgjQBAAD/0FHZHCSLTQiLEYtNCIuCMAEAAP/QUdkcJA+2TfdR6CEAAACDxAjZHCRqAYtVEIsCi00Qi1Bg/9KL5V3DAACWQwCAO0RVi+xRD7ZFCIXAdAjZRQzZXfzrBtlFENld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>damageScale( s(sStrength&gt;sIntellect, sStrength, sIntellect), 300, 750)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="E28FF622-7B2D-4638-8080-B06FD18DF738">
+					<UnitConstant>
+						<name>A1u2_AddRange</name>
+						<var>
+							<compiledString>FQ0AAAACAAAAGgAAAC0AAABSYW5nZV9NZWRpdW0AVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3CU7AAAA2V382UX8i+VdwwAAAAAAABBA</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange_Medium-4</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_MaxDemons" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_DemonsLife" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_DemonsPower" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_DemonsStamina" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_DemonsWill" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_DemonsDex" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_DemonsSpeed" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_DemonDamage" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_DemonsAttackSpeed" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_HealSelf" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_CastAbsorb" />
+				<Item href="/Items/Talents/Class/Demonolog/const_A0_SUP_IncMaxDemons" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADgQA==</compiledString>
+		<returnType>float</returnType>
+		<sString>7</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Demonolog/Ability_A1.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="39CD90A0-F2E2-4217-A6E3-7EBFC26A1898">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>true</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>67</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Demonolog/A1.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABwQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>60</sString>
+	</manaCost>
+	<marker>doCast1</marker>
+	<microAI href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="22C5203D-37D8-4155-908F-87D210C3AF2D">
+		<TargetSelectorMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</condition>
+			<targetSelector href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="D19EA918-C751-4905-A3D7-670DA942F916">
+				<ConvertTargetToLand>
+					<aggregateMode>First</aggregateMode>
+					<targetSelector href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="8B7D0102-0FC2-41D1-83B8-3ACDF71A8439">
+						<FirstTargetSelector>
+							<nearestTarget>false</nearestTarget>
+							<targetSelector href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="B4B683F5-953C-4F22-942B-C876CE1EFE93">
+								<ListOfTargetSelectors>
+									<flags>0</flags>
+									<mode>Normal</mode>
+									<targetSelectors>
+										<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="001CB63A-DE77-4360-9D03-C6EF94DBF311">
+											<CountingTargetSelector>
+												<enableSorting>false</enableSorting>
+												<flags>0</flags>
+												<heroesFirst>true</heroesFirst>
+												<mode>Normal</mode>
+												<order>Decreasing</order>
+												<sortingValue>
+													<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+													<returnType>float</returnType>
+													<sString>1</sString>
+												</sortingValue>
+												<targetSelector href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="B40713F3-21B1-4A04-8634-D3FC39730A41">
+													<AreaTargetSelector>
+														<absolutePosition>
+															<x>0</x>
+															<y>0</y>
+														</absolutePosition>
+														<flags>0</flags>
+														<mode>Normal</mode>
+														<range>
+															<compiledString>FQkAAAABAAAAFQAAAEExX1JhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+															<returnType>float</returnType>
+															<sString>cA1_Range</sString>
+														</range>
+														<targetFilter>681312319</targetFilter>
+														<targetSelector href="" />
+													</AreaTargetSelector>
+												</targetSelector>
+												<targetsNumber>
+													<compiledString>FQAAAAAAAAAAVYvsuAIAAABdww==</compiledString>
+													<returnType>int</returnType>
+													<sString>2</sString>
+												</targetsNumber>
+											</CountingTargetSelector>
+										</Item>
+										<Item href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="D143F488-B1C2-48ED-BAF8-D841E49733E9">
+											<ConditionTargetSelector>
+												<condition>
+													<compiledString>FWQAAAAHAAAAawAAAIQAAAC6AAAA0wAAAAkBAAAfAQAAMQEAAERlbW9ub2xvZ19BMXUxAABEZW1vbm9sb2dfQTF1MQAARGVtb25vbG9nX0ExdTIAAERlbW9ub2xvZ19BMXUyAABEZW1vbm9sb2dzRGVtb25zAAAAAEExdTFfQnVybkRlbW9ucwBVi+yD7BRoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXVPaCAAAACLVQiLAotNCIuQqAEAAP/ShcB0KmgwAAAAi0UIixCLTQiLgqgBAAD/0IlF9ItN9IsRi030i0IE/9CIRfPrBMZF8wAPtk3zhcl0S2hAAAAAi1UMiwKLTQyLkIgBAAD/0twdYQEAAN/g9sREeylqAItFEFBoVAAAAItNDIsRi00Mi4KcAQAA/9A7RRB1CcdF7AEAAADrB8dF7AAAAACKReyL5V3DAAAAAAAAAAA=</compiledString>
+													<returnType>bool</returnType>
+													<sString>(tal("Demonolog_A1u1") || tal("Demonolog_A1u2")) &amp;&amp; receiver.vDemonologsDemons !=0 &amp;&amp; receiver.applA1u1_BurnDemons(GLOBAL) == pMisc</sString>
+												</condition>
+												<flags>0</flags>
+												<mode>Normal</mode>
+												<targetSelector href="/Items/Talents/Class/Demonolog/Ability_A1.TALENT" id="74EB193A-F971-4F68-B251-A4231852058D">
+													<SummonEnumerator>
+														<flags>0</flags>
+														<mode>Normal</mode>
+														<summonTypes>1</summonTypes>
+													</SummonEnumerator>
+												</targetSelector>
+											</ConditionTargetSelector>
+										</Item>
+									</targetSelectors>
+								</ListOfTargetSelectors>
+							</targetSelector>
+						</FirstTargetSelector>
+					</targetSelector>
+				</ConvertTargetToLand>
+			</targetSelector>
+		</TargetSelectorMicroAI>
+	</microAI>
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>300</naftaCost>
+	<name textref="/Items/Talents/Class/Demonolog/Ability_A1.TALENT_name.txt" />
+	<node>ability1</node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/trigger_G766_RefreshAndNotify.APLR" />
+	</passiveApplicators>
+	<persistentId>Demonolog_A1</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Class/Demonolog/Ability_A1.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>16777216</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQkAAAABAAAAFQAAAEExX1JhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<returnType>float</returnType>
+		<sString>cA1_Range</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

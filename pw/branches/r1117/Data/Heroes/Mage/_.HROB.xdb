@@ -688,7 +688,19 @@
 			<aoeType>None</aoeType>
 			<applicators>
 				<Item href="/Effects/Shots/HitsApplicators/Mage.APLR" />
-				<Item href="/GameLogic/GeneralApplicators/BaseAttackDmg_Hero.APLR" />
+				<Item href="/Heroes/Mage/_.HROB" id="2F9446C2-BC4E-4195-B06D-1104B9790A20">
+					<DamageApplicator parent="/GameLogic/GeneralApplicators/BaseAttackDmg_Hero.APLR">
+						<damage>
+							<compiledString>FS4AAAAFAAAAOwAAAKAAAAClAAAAGgEAAB8BAABNYWdlX0E0XzJfRGVtb24ARGFtYWdlU3VtbWFuZAAAAERhbWFnZVN1bW1hbmQAVYvsg+wsagGLRRBQaAAAAACLTQiLEYtNCIuCnAEAAP/QO0UQD4QGAQAAi00IixGLTQiLgjwBAAD/0ItNCIsRi00Ii4IwAQAA3V34/9BR2Rwki00IixGLTQiLgjQBAAD/0FHZHCToJwEAAIPECNxN+NwNtwEAAGgQAAAAi00IixGLTQiLgogBAADdXfD/0NxF8Nld7NlF7FHZHCToGQEAAIPEBFCLTQiLEYtNCIuCPAEAAP/Qi00IixGLTQiLgjABAADdXeT/0FHZHCSLTQiLEYtNCIuCNAEAAP/QUdkcJOitAAAAg8QI3E3k3A2vAQAAaCAAAACLTQiLEYtNCIuCiAEAAN1d3P/Q3EXc2V3Y2UXYUdkcJOifAAAAg8QEUItNEIsRi00Qi0Jc/9CJRdTrSotNCIsRi00Ii4IEAQAA/9BR2Rwk6HAAAACDxARQi00IixGLTQiLggABAAD/0FHZHCToUwAAAIPEBFCLTRCLEYtNEItCXP/QiUXU20XUi+VdwwAAAMDMzOw/AAAAoJmZ8T9Vi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3DuAEAAAAPovfCAAAABHQH8w8sRCQEw+kAAAAAVYvsg+wM2UUI2X38D7dF/A0ADAAAiUX42W3421302W38i0X0i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.applMage_A4_2_Demon(UNIT) != pMisc ? random ( f2l(sBaseAttack * max(sIntellect, sStrength) * 0.9f + sender.vDamageSummand), f2l(sBaseAttack * max(sIntellect, sStrength ) * 1.1f + sender.vDamageSummand)) : random ( f2l(sDamageMin), f2l(sDamageMax))</sString>
+						</damage>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<providerName></providerName>
+					</DamageApplicator>
+				</Item>
+				<Item href="/Heroes/status_TowerMultiplayerDamage.APLR" />
 			</applicators>
 			<autoTargetSelector href="" />
 			<caption></caption>
@@ -702,7 +714,13 @@
 			<compiledDescriptionA textref="" />
 			<compiledDescriptionB textref="" />
 			<conditionFormulas />
-			<constants href="" />
+			<constants href="/Heroes/Mage/_.HROB" id="871387DA-3B4C-40F8-AD61-A0330C27A52F">
+				<UnitConstantsContainer>
+					<vars>
+						<Item href="/Heroes/const_TowerDamgeBuff" />
+					</vars>
+				</UnitConstantsContainer>
+			</constants>
 			<cooldownTime>
 				<compiledString></compiledString>
 				<returnType>float</returnType>
@@ -795,8 +813,8 @@
 	</collision>
 	<deathParameters href="/GameLogic/HeroMale.UNDP" />
 	<defaultTalentsSets>
-		<Item href="/Items/Talents/Mage.TALENTSET" />
-		<Item href="/Items/Talents/Mage_Alternative.TALENTSET" />
+		<Item href="/Items/Talents/Builds/Mighty/Mage_Mighty.TALENTSET" />
+		<Item href="/Items/Talents/Builds/Default/Mage_Alternative.TALENTSET" />
 	</defaultTalentsSets>
 	<description textref="" />
 	<gender>Male</gender>
@@ -916,7 +934,7 @@
 		<mask />
 		<tileSize>0.5</tileSize>
 	</lockMask>
-	<mightyTalentSet href="/Items/Talents/TalentList_Mighty/Mage_Mighty.TALENTSET" />
+	<mightyTalentSet href="/Items/Talents/Builds/Mighty/Mage_Mighty.TALENTSET" />
 	<minimapIcon>Default</minimapIcon>
 	<minimapIconA href="/UI/Styles/Icons/Heroes/Mage/Sign.ITEX" />
 	<minimapIconB href="/UI/Styles/Icons/Heroes/Mage/Sign.ITEX" />
@@ -952,8 +970,8 @@
 		<StatsContainer>
 			<stats>
 				<Item>
-					<calcIncrement>23.75</calcIncrement>
-					<calcValue>650</calcValue>
+					<calcIncrement>28.5</calcIncrement>
+					<calcValue>1560</calcValue>
 					<increment>
 						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADkQQ==</compiledString>
 						<returnType>float</returnType>
@@ -962,9 +980,9 @@
 					<levelUpgrades />
 					<statId>Life</statId>
 					<value>
-						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABDRA==</compiledString>
+						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADDRA==</compiledString>
 						<returnType>float</returnType>
-						<sString>780</sString>
+						<sString>1560</sString>
 					</value>
 				</Item>
 				<Item>
@@ -984,8 +1002,8 @@
 					</value>
 				</Item>
 				<Item>
-					<calcIncrement>0.5</calcIncrement>
-					<calcValue>56</calcValue>
+					<calcIncrement>0.6</calcIncrement>
+					<calcValue>97</calcValue>
 					<increment>
 						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DmpkZPw==</compiledString>
 						<returnType>float</returnType>
@@ -994,14 +1012,14 @@
 					<levelUpgrades />
 					<statId>Strength</statId>
 					<value>
-						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABgQg==</compiledString>
+						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADCQg==</compiledString>
 						<returnType>float</returnType>
-						<sString>56</sString>
+						<sString>97</sString>
 					</value>
 				</Item>
 				<Item>
 					<calcIncrement>0.8</calcIncrement>
-					<calcValue>58</calcValue>
+					<calcValue>96</calcValue>
 					<increment>
 						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPw==</compiledString>
 						<returnType>float</returnType>
@@ -1010,14 +1028,14 @@
 					<levelUpgrades />
 					<statId>Intellect</statId>
 					<value>
-						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABoQg==</compiledString>
+						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADAQg==</compiledString>
 						<returnType>float</returnType>
-						<sString>58</sString>
+						<sString>96</sString>
 					</value>
 				</Item>
 				<Item>
 					<calcIncrement>0.4</calcIncrement>
-					<calcValue>54</calcValue>
+					<calcValue>92</calcValue>
 					<increment>
 						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzczMPg==</compiledString>
 						<returnType>float</returnType>
@@ -1026,14 +1044,14 @@
 					<levelUpgrades />
 					<statId>Dexterity</statId>
 					<value>
-						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABYQg==</compiledString>
+						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAC4Qg==</compiledString>
 						<returnType>float</returnType>
-						<sString>54</sString>
+						<sString>92</sString>
 					</value>
 				</Item>
 				<Item>
 					<calcIncrement>0.3</calcIncrement>
-					<calcValue>51</calcValue>
+					<calcValue>93</calcValue>
 					<increment>
 						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DmpmZPg==</compiledString>
 						<returnType>float</returnType>
@@ -1042,14 +1060,14 @@
 					<levelUpgrades />
 					<statId>AttackSpeed</statId>
 					<value>
-						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABMQg==</compiledString>
+						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAC6Qg==</compiledString>
 						<returnType>float</returnType>
-						<sString>51</sString>
+						<sString>93</sString>
 					</value>
 				</Item>
 				<Item>
-					<calcIncrement>0.5</calcIncrement>
-					<calcValue>52</calcValue>
+					<calcIncrement>0.45</calcIncrement>
+					<calcValue>71</calcValue>
 					<increment>
 						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DZmbmPg==</compiledString>
 						<returnType>float</returnType>
@@ -1058,14 +1076,14 @@
 					<levelUpgrades />
 					<statId>Stamina</statId>
 					<value>
-						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQg==</compiledString>
+						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACOQg==</compiledString>
 						<returnType>float</returnType>
-						<sString>40</sString>
+						<sString>71</sString>
 					</value>
 				</Item>
 				<Item>
-					<calcIncrement>0.7</calcIncrement>
-					<calcValue>55</calcValue>
+					<calcIncrement>0.65</calcIncrement>
+					<calcValue>72</calcValue>
 					<increment>
 						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DZmYmPw==</compiledString>
 						<returnType>float</returnType>
@@ -1074,9 +1092,9 @@
 					<levelUpgrades />
 					<statId>Will</statId>
 					<value>
-						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAsQg==</compiledString>
+						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACQQg==</compiledString>
 						<returnType>float</returnType>
-						<sString>43</sString>
+						<sString>72</sString>
 					</value>
 				</Item>
 				<Item>
@@ -1144,7 +1162,7 @@
 					</value>
 				</Item>
 				<Item>
-					<calcIncrement>0.16</calcIncrement>
+					<calcIncrement>0.26</calcIncrement>
 					<calcValue>0</calcValue>
 					<increment>
 						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DuB6FPg==</compiledString>
@@ -1169,6 +1187,6 @@
 		</Item>
 	</summonedUnits>
 	<targetingParams href="/GameLogic/TargetingParams_HeroRanged.UNTP" />
-	<totalStatsBudget>5</totalStatsBudget>
+	<totalStatsBudget>4.985</totalStatsBudget>
 	<uniqueResource href="" />
 </Hero>

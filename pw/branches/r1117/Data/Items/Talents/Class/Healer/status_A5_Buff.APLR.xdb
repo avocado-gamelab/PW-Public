@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
-	<BackLink DBID="/Items/Talents/Class/Healer/Ability5.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A5.TALENT" Count="1" />
 	<applicators>
 		<Item href="/Items/Talents/Class/Healer/status_A5_Buff.APLR" id="5DEC0939-9FED-481B-98B0-E6829C11D0AF">
 			<StatModApplicator>
@@ -253,7 +253,100 @@
 				<useListAs>ListAsRule</useListAs>
 			</FlagsApplicator>
 		</Item>
-		<Item href="/Items/Talents/Class/Healer/status_A5_SUP_Bubble.APLR" />
+		<Item href="/Items/Talents/Class/Healer/status_A5_Buff.APLR" id="F01D7E14-8027-4CCE-B2D5-A387A115A520">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>Увеличиваем BaseAttack крипов</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FRkAAAABAAAAJQAAAEE1X0NyZWVwRGFtYWdlTXVsdGlwbGllcgBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<returnType>float</returnType>
+						<sString>cA5_CreepDamageMultiplier</sString>
+					</multValue>
+					<stat>BaseAttack</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvsUYtFDIsQi00Mi0JQ/9CD+AJ0LYtNDIsRi00Mi0JQ/9CD+AN0G4tNDIsRi00Mi0JQ/9CD+AR0CcdF/AAAAADrB8dF/AEAAACKRfyL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>rUnitKind == 2 || rUnitKind == 3 || rUnitKind == 4</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Healer/status_A5_Buff.APLR" id="95363FE7-2D60-4733-A891-170D69BDD9AF">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>Увеличиваем свою BaseAttack</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FRgAAAABAAAAJAAAAEE1X1NlbGZEYW1hZ2VNdWx0aXBsaWVyAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cA5_SelfDamageMultiplier</sString>
+					</multValue>
+					<stat>BaseAttack</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvsi0UIM8k7RQwPlMGKwV3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>pFirst == pSecond</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
 	</applicators>
 	<applyTarget>ApplicatorTarget</applyTarget>
 	<behaviorFlags>152</behaviorFlags>

@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <UnitConstant>
-	<BackLink DBID="/Items/Talents/Class/Faceless/Ability4_2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Faceless/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Heroes/Faceless/_.HROB" Count="1" />
 	<name>A4_2_AttackBuff</name>
 	<var>
-		<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCMAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAAAwQQAAokI=</compiledString>
+		<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBWMAAADZHCRR2QVfAAAA2RwkagCLRQiLEItNCIuCOAEAAP/QUdkcJItNCIsRi00Ii4IwAQAA/9BR2Rwk6B8AAACDxATZHCRqAYtNEIsRi00Qi0Jg/9BdwwAAMEEAAKJCVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
 		<returnType>float</returnType>
-		<sString>damageScale(sStrength, 11, 81)</sString>
+		<sString>damageScale(max(sStrength, sDexterity), 11, 81)</sString>
 	</var>
 </UnitConstant>

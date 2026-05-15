@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PermanentStatModApplicator>
+	<BackLink DBID="/Items/Talents/Common/G118_Energy_EnergyReg.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G067_StrInt-CDR.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G383_Life_CDR.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G379_MaxStaWill_CDR.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G221_Will_Sta_CDR.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G049_LIfeMana-CDR.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G219_Int_CDR.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G218_Str_CDR.TALENT" Count="1" />
+	<applyTarget>ApplicatorTarget</applyTarget>
+	<caption>Бонусный КДР 2</caption>
+	<customApplyType>None</customApplyType>
+	<enabled>
+		<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLQnj/0DPJg/gGD5TBisFdww==</compiledString>
+		<returnType>bool</returnType>
+		<sString>mActivatedWithinKit == 6</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<LoggingEvent>-1</LoggingEvent>
+	<modifier>
+		<addValue>
+			<compiledString>FRAAAAABAAAAHAAAAEFkZF9DRFJfQm9udXNfMgBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+			<returnType>float</returnType>
+			<sString>cAdd_CDR_Bonus_2</sString>
+		</addValue>
+		<multValue>
+			<compiledString></compiledString>
+			<returnType>float</returnType>
+			<sString>1.0f</sString>
+		</multValue>
+		<stat>Life</stat>
+		<topModifier>false</topModifier>
+		<variable>Total_CooldownReduction</variable>
+	</modifier>
+	<providerName></providerName>
+</PermanentStatModApplicator>

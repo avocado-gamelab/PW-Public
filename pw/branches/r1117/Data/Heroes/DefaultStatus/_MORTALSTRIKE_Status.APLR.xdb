@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
-	<BackLink DBID="/Items/Talents/Class/Hunter/Ability1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Hunter/Ability_A1.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Hunter/appl_A1_ArrowSpell.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Mage/Ability3.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/WitchDoctor/Ability1.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level3/G350_AoE.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level4/G152_Dmg_LifeRegStop.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level4/G157_Dmg_LifeRegStop.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Mage/Ability_A3.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/WitchDoctor/Ability_A1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G350_AoE.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G503_AA_DMG.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/Obsolete/G152_Dmg_LifeRegStop.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/Obsolete/G157_Dmg_LifeRegStop.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset1_2_Dot/status_G460_MortalStrike.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/RedSet2_6_AAMod/spell_G503_AAMod.SPLL" Count="1" />
 	<applicators>
 		<Item href="/Heroes/DefaultStatus/_MORTALSTRIKE_Status.APLR" id="807806F7-2DE3-47E1-8179-5D3CD9DF1C99">
 			<UIMessageApplicator>
@@ -60,9 +62,9 @@
 						<sString>-cMortalStrike_Amount * 0.01</sString>
 					</addValue>
 					<multValue>
-						<compiledString></compiledString>
+						<compiledString>FRQAAAACAAAAIQAAADQAAABNb3J0YWxTdHJpa2VfQW1vdW50AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNQgAAANld/NlF/IvlXcN7FK5H4XqEPw==</compiledString>
 						<returnType>float</returnType>
-						<sString>1.0f</sString>
+						<sString>cMortalStrike_Amount * 0.01</sString>
 					</multValue>
 					<stat>Life</stat>
 					<topModifier>false</topModifier>

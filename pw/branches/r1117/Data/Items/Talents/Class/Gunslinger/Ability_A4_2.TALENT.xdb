@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Gunslinger_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Gunslinger_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Gunslinger/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Gunslinger/Ability_A4_2.TALENT" Count="2" />
 	<BackLink DBID="/Items/Talents/Class/Gunslinger/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Gunslinger/Ability_A4u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Gunslinger_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Gunslinger_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -1504,8 +1504,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Gunslinger/Ability_A4_2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Gunslinger/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Gunslinger/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Gunslinger/Ability_A4_2.TALENT" id="94FF154E-06BD-4E37-BF28-47CC60AE2591">
 			<ConditionFormula>
@@ -1555,13 +1555,23 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/Gunslinger/Ability_A4_2.TALENT" id="76A71BC7-706E-4021-B78B-EB6639F45A69">
+					<UnitConstant>
+						<name>A4_2_BaseDuration</name>
+						<var>
+							<compiledString>FT4AAAAFAAAARQAAAF4AAACXAAAApAAAAL0AAABHdW5zbGluZ2VyX0E0XzJ1AAAAAEd1bnNsaW5nZXJfQTRfMnUAAAAAQTRfMnVfQWRkaXRpb25hbFNob3RzAFWL7IPsGGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoFAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4lN9NtF9NwN0wAAAItVDFKLRQhQaCgAAACLTRCLEYtNEItCUN1d7P/Q3E3s3AXLAAAA2V3o2UXoi+VdwwAAAKCZmek/mpmZmZmZyT8=</compiledString>
+							<returnType>float</returnType>
+							<sString>0.8f + tal("Gunslinger_A4_2u") * 0.2 * cA4_2u_AdditionalShots</sString>
+						</var>
+					</UnitConstant>
+				</Item>
 				<Item href="/Items/Talents/Class/Gunslinger/Ability_A4_2.TALENT" id="7FCAB592-70B4-45FE-9D9D-02DD3751A25B">
 					<UnitConstant>
 						<name>A4_2Duration</name>
 						<var>
-							<compiledString>FQwAAAACAAAAGQAAACwAAABSYWdlX1JlZHVjZQBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcBToAAADZXfzZRfyL5V3DAAAAoJmZ6T8=</compiledString>
+							<compiledString>FSAAAAACAAAALwAAAEkAAABBNF8yX0Jhc2VEdXJhdGlvbgAAAFJhZ2VfUmVkdWNlAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoFAAAAItVEIsCi00Qi1BQ3V34/9LcRfjZXfTZRfSL5V3D</compiledString>
 							<returnType>float</returnType>
-							<sString>0.8f + cRage_Reduce</sString>
+							<sString>cA4_2_BaseDuration + cRage_Reduce</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -1613,9 +1623,9 @@
 					<UnitConstant>
 						<name>TT_ShootCount</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAQA==</compiledString>
+							<compiledString>FT4AAAAEAAAARQAAAF4AAACeAAAAtwAAAEd1bnNsaW5nZXJfQTRfMnUAAAAAR3Vuc2xpbmdlcl9BNF8ydQAAAABBNF8ydV9BZGRpdGlvbmFsU2hvdHMAVYvsg+wYaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgUAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37iU3020X0i1UMUotFCFBoKAAAAItNEIsRi00Qi0JQ3V3s/9DcTezcBcUAAADZXejZReiL5V3DAAAAAAAAEEA=</compiledString>
 							<returnType>float</returnType>
-							<sString>4</sString>
+							<sString>4 +  tal("Gunslinger_A4_2u") * cA4_2u_AdditionalShots</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -1661,6 +1671,7 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/Gunslinger/const_A4_2u_AdditionalShots" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -1700,7 +1711,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>2647</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Gunslinger/A4_2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -1750,7 +1761,7 @@
 					<sString>true</sString>
 				</startCondition>
 				<talents>
-					<Item href="/Items/Talents/Class/Unicorn/Ability4_2.TALENT" />
+					<Item href="/Items/Talents/Class/Unicorn/Ability_A4_2.TALENT" />
 				</talents>
 				<useListAs>ListAsRule</useListAs>
 			</FlagsApplicator>

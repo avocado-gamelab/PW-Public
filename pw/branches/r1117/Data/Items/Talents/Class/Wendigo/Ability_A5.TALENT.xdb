@@ -1,0 +1,1643 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Wendigo.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Wendigo_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Wendigo/Ability_A5_SUP.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="D044E98B-B8E0-496D-96CD-49062C6EAC3E">
+			<ProgramApplicator>
+				<applicators>
+					<Item>
+						<applicator href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="9ED917C3-02C0-4D9B-856D-D41E7CCE8AA5">
+							<SpellApplicator>
+								<applyTarget>AbilityOwner</applyTarget>
+								<caption>Считаем дистанцию</caption>
+								<enabled>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</enabled>
+								<formulaName></formulaName>
+								<LoggingEvent>-1</LoggingEvent>
+								<providerName></providerName>
+								<spell href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="28CCD949-A92D-42FC-8AE8-0FA81D5B3BE3">
+									<Spell>
+										<applicators>
+											<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="A526E30C-7B1B-4A75-837A-B69115104E09">
+												<StatModApplicator>
+													<applyTarget>AbilityOwner</applyTarget>
+													<behaviorFlags>0</behaviorFlags>
+													<caption>запомнили расстояние</caption>
+													<constraint>None</constraint>
+													<dontUpdate>true</dontUpdate>
+													<effect>
+														<Item href="" />
+														<Item href="" />
+													</effect>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<lifeTime>
+														<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
+														<returnType>float</returnType>
+														<sString>2</sString>
+													</lifeTime>
+													<LoggingEvent>-1</LoggingEvent>
+													<modifier>
+														<addValue>
+															<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLQgz/0F3D</compiledString>
+															<returnType>float</returnType>
+															<sString>appl.Dist2Target</sString>
+														</addValue>
+														<multValue>
+															<compiledString></compiledString>
+															<returnType>float</returnType>
+															<sString>1.0f</sString>
+														</multValue>
+														<stat>Life</stat>
+														<topModifier>false</topModifier>
+														<variable>Dist2Target</variable>
+													</modifier>
+													<providerName></providerName>
+													<startCondition>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</startCondition>
+													<statModName></statModName>
+												</StatModApplicator>
+											</Item>
+										</applicators>
+										<dispatch href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="383520C1-04E6-467B-9514-070CEB6B90F2">
+											<DispatchImmediate>
+												<alwaysApply>false</alwaysApply>
+												<applyEffect>
+													<Item href="" />
+													<Item href="" />
+												</applyEffect>
+												<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+												<applyEffectOrientation>Default</applyEffectOrientation>
+												<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+												<dieAfterApply>true</dieAfterApply>
+												<dispatchEffect>
+													<Item href="" />
+													<Item href="" />
+												</dispatchEffect>
+												<flags>0</flags>
+												<instantApply>true</instantApply>
+											</DispatchImmediate>
+										</dispatch>
+									</Spell>
+								</spell>
+								<spellTarget>ApplicatorTarget</spellTarget>
+								<targetSelector href="/Items/Talents/Class/Wendigo/ChannelTarget.TGSL" />
+							</SpellApplicator>
+						</applicator>
+						<continueCondition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>2</continueEvents>
+						<delay>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0</sString>
+						</delay>
+						<stopCondition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+					<Item>
+						<applicator href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="218AC7E6-7EC7-498F-97C6-C737ECBAD8C8">
+							<ChannellingApplicator>
+								<applicatorsOnSelf />
+								<applyTarget>AbilityOwner</applyTarget>
+								<behaviorFlags>1</behaviorFlags>
+								<cancelOnDisable>true</cancelOnDisable>
+								<cancelOnInterrupt>true</cancelOnInterrupt>
+								<cancelSpell href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="026E4C08-F426-4275-B8D9-E22416956337">
+									<Spell>
+										<applicators>
+											<Item href="/GameLogic/GeneralApplicators/EndOfAbility.APLR" />
+										</applicators>
+										<dispatch href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="E8E75AE6-23CD-4A23-9BFB-63C4DDDA9F3B">
+											<DispatchImmediate>
+												<alwaysApply>false</alwaysApply>
+												<applyEffect>
+													<Item href="" />
+													<Item href="" />
+												</applyEffect>
+												<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+												<applyEffectOrientation>Default</applyEffectOrientation>
+												<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+												<dieAfterApply>true</dieAfterApply>
+												<dispatchEffect>
+													<Item href="" />
+													<Item href="" />
+												</dispatchEffect>
+												<flags>0</flags>
+												<instantApply>false</instantApply>
+											</DispatchImmediate>
+										</dispatch>
+									</Spell>
+								</cancelSpell>
+								<caption>Ченнелим для телепорта</caption>
+								<channelingType>Creation</channelingType>
+								<effect>
+									<Item href="" />
+									<Item href="" />
+								</effect>
+								<enabled>
+									<compiledString>FQoAAAABAAAAFAAAAEludGVycnVwdABVi+xqAYtFEFBoAAAAAItNCIsRi00Ii4KcAQAA/9AzyTtFEA+UwYrBXcM=</compiledString>
+									<returnType>bool</returnType>
+									<sString>sender.applInterrupt(UNIT) == pMisc</sString>
+								</enabled>
+								<formulaName>A5_ChannelingOn</formulaName>
+								<interruptEvents>6820319</interruptEvents>
+								<lifeTime>
+									<compiledString>FRcAAAACAAAAHgAAADsAAABEaXN0MlRhcmdldABSYW5nZV9Mb25nAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaAwAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xAF0IItNEIsRi00Qi4KQAAAA/9APtsiFyXUJx0X0AQAAAOsHx0X0AAAAANtF9IvlXcM=</compiledString>
+									<returnType>float</returnType>
+									<sString>sender.vDist2Target &lt;= cRange_Long || mIsNight ? 0 : 1</sString>
+								</lifeTime>
+								<LoggingEvent>-1</LoggingEvent>
+								<period>0</period>
+								<periodicalSpell href="" />
+								<providerName></providerName>
+								<removeStartSpellEffectOnInterrupt>true</removeStartSpellEffectOnInterrupt>
+								<scaleWhenInterrupted>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>1.0f</sString>
+								</scaleWhenInterrupted>
+								<startCondition>
+									<compiledString>FQAAAAAAAAAAVYvsaAAAABCLRQiLEItNCItCaP/QD7bA99gbwIPAAV3D</compiledString>
+									<returnType>bool</returnType>
+									<sString>!sFlag(268435456)</sString>
+								</startCondition>
+								<startSpell href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="BA877318-A261-4351-9E71-391C5FAF238B">
+									<Spell>
+										<applicators>
+											<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="B5D87EF1-082C-4BB0-B69B-8C4FA80B07F8">
+												<SpellApplicator>
+													<applyTarget>AbilityOwner</applyTarget>
+													<caption></caption>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<spell href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="EE082612-2806-4D43-A3DD-867DA750EB20">
+														<Spell>
+															<applicators>
+																<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="43E8504E-E445-4D53-A246-75EBEA9DBBCF">
+																	<FlagsApplicator>
+																		<applyTarget>AbilityOwner</applyTarget>
+																		<behaviorFlags>0</behaviorFlags>
+																		<caption>эффекты</caption>
+																		<consumables />
+																		<effect>
+																			<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="C7BADCF0-B250-47F6-BFB7-EE825A21A9F5">
+																				<EffectList>
+																					<deathType>Manual</deathType>
+																					<effects>
+																						<Item href="/Heroes/Wendigo/_GroundHole.EFFT" />
+																						<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="AB617680-9E0E-4F5D-880B-F2AE9245674A">
+																							<PlayAnimationEffect>
+																								<animGraphNode>ability5Start</animGraphNode>
+																								<deathType>Manual</deathType>
+																								<enableCondition href="" />
+																								<goToOtherNodeOnStop>false</goToOtherNodeOnStop>
+																								<lifeTime>0</lifeTime>
+																								<marker></marker>
+																								<markerReachTime>0</markerReachTime>
+																								<returnAnimGraphNode></returnAnimGraphNode>
+																							</PlayAnimationEffect>
+																						</Item>
+																					</effects>
+																					<enableCondition href="" />
+																					<lifeTime>0</lifeTime>
+																				</EffectList>
+																			</Item>
+																			<Item href="" />
+																		</effect>
+																		<enabled>
+																			<compiledString></compiledString>
+																			<returnType>bool</returnType>
+																			<sString>true</sString>
+																		</enabled>
+																		<flag>0</flag>
+																		<formulaName></formulaName>
+																		<lifeTime>
+																			<compiledString></compiledString>
+																			<returnType>float</returnType>
+																			<sString>-1.0</sString>
+																		</lifeTime>
+																		<LoggingEvent>-1</LoggingEvent>
+																		<providerName></providerName>
+																		<startCondition>
+																			<compiledString>FRcAAAACAAAAHgAAADsAAABEaXN0MlRhcmdldABSYW5nZV9Mb25nAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaAwAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xAV6CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+																			<returnType>bool</returnType>
+																			<sString>sender.vDist2Target &gt; cRange_Long</sString>
+																		</startCondition>
+																		<talents />
+																		<useListAs>ListAsRule</useListAs>
+																	</FlagsApplicator>
+																</Item>
+															</applicators>
+															<dispatch href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="4EA39BB4-91FB-4EA2-9783-88FA3BB628FA">
+																<DispatchImmediate>
+																	<alwaysApply>false</alwaysApply>
+																	<applyEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</applyEffect>
+																	<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																	<applyEffectOrientation>Default</applyEffectOrientation>
+																	<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																	<dieAfterApply>true</dieAfterApply>
+																	<dispatchEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</dispatchEffect>
+																	<flags>0</flags>
+																	<instantApply>false</instantApply>
+																</DispatchImmediate>
+															</dispatch>
+														</Spell>
+													</spell>
+													<spellTarget>ApplicatorTarget</spellTarget>
+													<targetSelector href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="FDAE6BF0-D3C4-4F1B-9994-59B439BB2B5B">
+														<ConditionTargetSelector>
+															<condition>
+																<compiledString>FQoAAAABAAAAFAAAAFdlbmRpZ29UUABVi+xqAItFEFBoAAAAAItNDIsRi00Mi4KcAQAA/9AzyTtFEA+VwYrBXcM=</compiledString>
+																<returnType>bool</returnType>
+																<sString>receiver.applWendigoTP(GLOBAL) != pMisc</sString>
+															</condition>
+															<flags>0</flags>
+															<mode>Normal</mode>
+															<targetSelector href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="DC7B74D3-7B61-4E89-A02C-342D1F305F00">
+																<SummonEnumerator>
+																	<flags>2</flags>
+																	<mode>CaptureTargets</mode>
+																	<summonTypes>1</summonTypes>
+																</SummonEnumerator>
+															</targetSelector>
+														</ConditionTargetSelector>
+													</targetSelector>
+												</SpellApplicator>
+											</Item>
+										</applicators>
+										<dispatch href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="BE68284B-4B37-4B7E-AE23-098F069B4FB2">
+											<DispatchImmediate>
+												<alwaysApply>false</alwaysApply>
+												<applyEffect>
+													<Item href="" />
+													<Item href="" />
+												</applyEffect>
+												<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+												<applyEffectOrientation>Default</applyEffectOrientation>
+												<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+												<dieAfterApply>true</dieAfterApply>
+												<dispatchEffect>
+													<Item href="" />
+													<Item href="" />
+												</dispatchEffect>
+												<flags>0</flags>
+												<instantApply>true</instantApply>
+											</DispatchImmediate>
+										</dispatch>
+									</Spell>
+								</startSpell>
+								<stopSpell href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="177B5AF4-865A-44F6-9F54-0BE47F0BCDCD">
+									<Spell>
+										<applicators>
+											<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="3917AB80-E63B-4FA8-A463-228C79AA3E82">
+												<SpellApplicator>
+													<applyTarget>AbilityOwner</applyTarget>
+													<caption>Цель определеяем в момент завершения ченнелинга</caption>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<spell href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="FD78952E-9BC6-4265-BA0C-A4956228BC0F">
+														<Spell>
+															<applicators>
+																<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="3DC51615-3FA8-4D59-B311-E507A81C104C">
+																	<ProgramApplicator>
+																		<applicators>
+																			<Item>
+																				<applicator href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="65BC596E-D1C8-4E29-BD75-3E968D69788C">
+																					<ProgramApplicator>
+																						<applicators>
+																							<Item>
+																								<applicator href="" />
+																								<continueCondition>
+																									<compiledString></compiledString>
+																									<returnType>bool</returnType>
+																									<sString>0</sString>
+																								</continueCondition>
+																								<continueEvents>2</continueEvents>
+																								<delay>
+																									<compiledString>FQwAAAABAAAAGAAAAFRQQXZhaWxhYmxlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+																									<returnType>float</returnType>
+																									<sString>cTPAvailable</sString>
+																								</delay>
+																								<stopCondition>
+																									<compiledString></compiledString>
+																									<returnType>bool</returnType>
+																									<sString>0</sString>
+																								</stopCondition>
+																								<stopEvents>0</stopEvents>
+																							</Item>
+																							<Item>
+																								<applicator href="/GameLogic/GeneralApplicators/EndOfAbility.APLR" />
+																								<continueCondition>
+																									<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																									<returnType>bool</returnType>
+																									<sString>0</sString>
+																								</continueCondition>
+																								<continueEvents>2</continueEvents>
+																								<delay>
+																									<compiledString></compiledString>
+																									<returnType>float</returnType>
+																									<sString>-1.0</sString>
+																								</delay>
+																								<stopCondition>
+																									<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																									<returnType>bool</returnType>
+																									<sString>0</sString>
+																								</stopCondition>
+																								<stopEvents>0</stopEvents>
+																							</Item>
+																						</applicators>
+																						<applyTarget>ApplicatorTarget</applyTarget>
+																						<behaviorFlags>0</behaviorFlags>
+																						<caption>ждем</caption>
+																						<effect>
+																							<Item href="" />
+																							<Item href="" />
+																						</effect>
+																						<enabled>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</enabled>
+																						<formulaName></formulaName>
+																						<lifeTime>
+																							<compiledString>FQwAAAABAAAAGAAAAFRQQXZhaWxhYmxlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+																							<returnType>float</returnType>
+																							<sString>cTPAvailable</sString>
+																						</lifeTime>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<providerName></providerName>
+																						<startCondition>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</startCondition>
+																					</ProgramApplicator>
+																				</applicator>
+																				<continueCondition>
+																					<compiledString></compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>1</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString></compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																			<Item>
+																				<applicator href="/GameLogic/GeneralApplicators/SetTossed.APLR" />
+																				<continueCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>1</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																			<Item>
+																				<applicator href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="50FBF808-7F99-4AFB-84B9-8A617EBE28BA">
+																					<ThrowApplicator>
+																						<angle Animated="True">
+																							<Tracks>
+																								<Item>
+																									<Item>
+																										<Key>0</Key>
+																										<Value>0</Value>
+																									</Item>
+																									<Item>
+																										<Key>0.2</Key>
+																										<Value>0</Value>
+																									</Item>
+																								</Item>
+																							</Tracks>
+																							<Type>Clamp</Type>
+																							<Values>
+																								<Item>
+																									<Key>0</Key>
+																									<Value>0</Value>
+																								</Item>
+																								<Item>
+																									<Key>0.2</Key>
+																									<Value>0</Value>
+																								</Item>
+																							</Values>
+																						</angle>
+																						<applyTarget>AbilityOwner</applyTarget>
+																						<behaviorFlags>1</behaviorFlags>
+																						<caption>Fake Throw (Jump with takeOffTime)</caption>
+																						<collisionFlags>0</collisionFlags>
+																						<enabled>
+																							<compiledString>FQkAAAABAAAAEwAAAEE1X1RQRW5kAFWL7GoBi0UQUGgAAAAAi00IixGLTQiLgpwBAAD/0DPJO0UQD5TBisFdww==</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>sender.applA5_TPEnd(UNIT) == pMisc</sString>
+																						</enabled>
+																						<firstTargetToHit href="" />
+																						<flightType>Jump</flightType>
+																						<flipTime>
+																							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																							<returnType>float</returnType>
+																							<sString>1</sString>
+																						</flipTime>
+																						<flyEffect>
+																							<Item href="" />
+																							<Item href="" />
+																						</flyEffect>
+																						<formulaName></formulaName>
+																						<landTime>0</landTime>
+																						<lockRotation>false</lockRotation>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<maxDistance>0</maxDistance>
+																						<maxHeight>0</maxHeight>
+																						<moveSpeed>
+																							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																							<returnType>float</returnType>
+																							<sString>1</sString>
+																						</moveSpeed>
+																						<providerName></providerName>
+																						<startSpell href="" />
+																						<stopSpell href="" />
+																						<surfaceSpeedFromAG>false</surfaceSpeedFromAG>
+																						<takeOffTime>0.3</takeOffTime>
+																						<targetSelector href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="5B59F5ED-EE1C-4DF9-80D7-32395C25C0A6">
+																							<PointTargetSelector>
+																								<checkMinRange>false</checkMinRange>
+																								<mode>ToTarget</mode>
+																								<offset>
+																									<x>0</x>
+																									<y>1</y>
+																								</offset>
+																								<paralleledTarget>false</paralleledTarget>
+																								<range>
+																									<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																									<returnType>float</returnType>
+																									<sString>1</sString>
+																								</range>
+																								<targetSelector href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="7E77D8E3-C8D8-4EE6-8C2E-BE813CA8F9D6">
+																									<SelectApplicatorTarget>
+																										<applicatorIndex>0</applicatorIndex>
+																										<applicatorName></applicatorName>
+																										<namedApplicatorTarget>ApplicatorTarget</namedApplicatorTarget>
+																										<selectTarget>ApplicatorTarget</selectTarget>
+																									</SelectApplicatorTarget>
+																								</targetSelector>
+																								<traceMode>0</traceMode>
+																							</PointTargetSelector>
+																						</targetSelector>
+																						<trackTargetUnit>false</trackTargetUnit>
+																						<trajectory Animated="True">
+																							<Tracks>
+																								<Item>
+																									<Item>
+																										<Key>0</Key>
+																										<Value>0</Value>
+																									</Item>
+																									<Item>
+																										<Key>0.2</Key>
+																										<Value>0</Value>
+																									</Item>
+																								</Item>
+																							</Tracks>
+																							<Type>Clamp</Type>
+																							<Values>
+																								<Item>
+																									<Key>0</Key>
+																									<Value>0</Value>
+																								</Item>
+																								<Item>
+																									<Key>0.2</Key>
+																									<Value>0</Value>
+																								</Item>
+																							</Values>
+																						</trajectory>
+																					</ThrowApplicator>
+																				</applicator>
+																				<continueCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>1</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																			<Item>
+																				<applicator href="/GameLogic/GeneralApplicators/Immune2Control.APLR" />
+																				<continueCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>1</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																			<Item>
+																				<applicator href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="2E8A1A30-AA2F-4B07-980E-56526A14C6D9">
+																					<FlagsApplicator>
+																						<applyTarget>ApplicatorTarget</applyTarget>
+																						<behaviorFlags>0</behaviorFlags>
+																						<caption>эффект тп для ночи</caption>
+																						<consumables />
+																						<effect>
+																							<Item href="/Effects/Shots/Cat/_DarkTp.EFFT" />
+																							<Item href="" />
+																						</effect>
+																						<enabled>
+																							<compiledString>FRcAAAACAAAANQAAAFIAAABEaXN0MlRhcmdldABSYW5nZV9Mb25nAFWL7IPsDItFEIsQi00Qi4KQAAAA/9APtsiFyXVFaAAAAACLVQiLAotNCIuQiAEAAP/Si0UMUItNCFFoDAAAAItVEIsCi00Qi1BQ3V34/9LcXfjf4PbEAXQJx0X0AAAAAOsHx0X0AQAAAIpF9IvlXcM=</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>mIsNight || sender.vDist2Target &lt;= cRange_Long</sString>
+																						</enabled>
+																						<flag>0</flag>
+																						<formulaName></formulaName>
+																						<lifeTime>
+																							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																							<returnType>float</returnType>
+																							<sString>1</sString>
+																						</lifeTime>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<providerName></providerName>
+																						<startCondition>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</startCondition>
+																						<talents />
+																						<useListAs>ListAsRule</useListAs>
+																					</FlagsApplicator>
+																				</applicator>
+																				<continueCondition>
+																					<compiledString></compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>1</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString></compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																			<Item>
+																				<applicator href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="CC18E550-5904-418A-BF0F-FB1D81380DB4">
+																					<TeleportApplicator>
+																						<appearEffect href="" />
+																						<applyTarget>ApplicatorTarget</applyTarget>
+																						<caption>Teleport</caption>
+																						<disappearEffect href="" />
+																						<enabled>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</enabled>
+																						<formulaName></formulaName>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<maxDistance>
+																							<compiledString></compiledString>
+																							<returnType>float</returnType>
+																							<sString>0.0f</sString>
+																						</maxDistance>
+																						<notifyInboundDispatches>true</notifyInboundDispatches>
+																						<providerName></providerName>
+																						<pushUnits>false</pushUnits>
+																						<teleportTarget>Hier1UpApplicatorTarget</teleportTarget>
+																					</TeleportApplicator>
+																				</applicator>
+																				<continueCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>1</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																			<Item>
+																				<applicator href="/GameLogic/GeneralApplicators/SetTeleported.APLR" />
+																				<continueCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>1</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																			<Item>
+																				<applicator href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="14242709-9EDE-4028-ACBE-E87C1D1EF792">
+																					<FlagsApplicator>
+																						<applyTarget>ApplicatorTarget</applyTarget>
+																						<behaviorFlags>32</behaviorFlags>
+																						<caption>эффект подкопа</caption>
+																						<consumables />
+																						<effect>
+																							<Item href="/Effects/Debuffs/Digging/_Out.EFFT" />
+																							<Item href="" />
+																						</effect>
+																						<enabled>
+																							<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</enabled>
+																						<flag>0</flag>
+																						<formulaName></formulaName>
+																						<lifeTime>
+																							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
+																							<returnType>float</returnType>
+																							<sString>2</sString>
+																						</lifeTime>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<providerName></providerName>
+																						<startCondition>
+																							<compiledString>FRcAAAACAAAAHgAAADsAAABEaXN0MlRhcmdldABSYW5nZV9Mb25nAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaAwAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xAV6CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>sender.vDist2Target &gt; cRange_Long</sString>
+																						</startCondition>
+																						<talents />
+																						<useListAs>ListAsRule</useListAs>
+																					</FlagsApplicator>
+																				</applicator>
+																				<continueCondition>
+																					<compiledString></compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>1</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString></compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																			<Item>
+																				<applicator href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="E73AAC51-B2F0-42A8-9E3A-B8C2D4D38F08">
+																					<FlagsApplicator>
+																						<applyTarget>ApplicatorTarget</applyTarget>
+																						<behaviorFlags>0</behaviorFlags>
+																						<caption>эффект тп для ночи</caption>
+																						<consumables />
+																						<effect>
+																							<Item href="/Effects/Shots/Cat/_DarkTp.EFFT" />
+																							<Item href="" />
+																						</effect>
+																						<enabled>
+																							<compiledString>FRcAAAACAAAANQAAAFIAAABEaXN0MlRhcmdldABSYW5nZV9Mb25nAFWL7IPsDItFEIsQi00Qi4KQAAAA/9APtsiFyXVFaAAAAACLVQiLAotNCIuQiAEAAP/Si0UMUItNCFFoDAAAAItVEIsCi00Qi1BQ3V34/9LcXfjf4PbEAXQJx0X0AAAAAOsHx0X0AQAAAIpF9IvlXcM=</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>mIsNight || sender.vDist2Target &lt;= cRange_Long</sString>
+																						</enabled>
+																						<flag>0</flag>
+																						<formulaName></formulaName>
+																						<lifeTime>
+																							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																							<returnType>float</returnType>
+																							<sString>1</sString>
+																						</lifeTime>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<providerName></providerName>
+																						<startCondition>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</startCondition>
+																						<talents />
+																						<useListAs>ListAsRule</useListAs>
+																					</FlagsApplicator>
+																				</applicator>
+																				<continueCondition>
+																					<compiledString></compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>1</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString></compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																			<Item>
+																				<applicator href="/GameLogic/GeneralApplicators/Teleport_SummonsAndPets.APLR" />
+																				<continueCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>1</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																			<Item>
+																				<applicator href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="BB344CB9-BFF1-4A30-96B0-4BEF4D7B6268">
+																					<FlagsApplicator>
+																						<applyTarget>AbilityOwner</applyTarget>
+																						<behaviorFlags>152</behaviorFlags>
+																						<caption>Задержка на анимацию выкапывания</caption>
+																						<consumables />
+																						<effect>
+																							<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="4E908F5C-1FF8-4BCA-A871-57389DA83F5F">
+																								<PlayAnimationEffect>
+																									<animGraphNode>ability5End</animGraphNode>
+																									<deathType>Manual</deathType>
+																									<enableCondition href="" />
+																									<goToOtherNodeOnStop>false</goToOtherNodeOnStop>
+																									<lifeTime>0</lifeTime>
+																									<marker></marker>
+																									<markerReachTime>0</markerReachTime>
+																									<returnAnimGraphNode></returnAnimGraphNode>
+																								</PlayAnimationEffect>
+																							</Item>
+																							<Item href="" />
+																						</effect>
+																						<enabled>
+																							<compiledString>FRcAAAACAAAAHgAAADsAAABEaXN0MlRhcmdldABSYW5nZV9Mb25nAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaAwAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xAV6CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>sender.vDist2Target &gt; cRange_Long</sString>
+																						</enabled>
+																						<flag>5113727</flag>
+																						<formulaName>A5_WendigoEnd</formulaName>
+																						<lifeTime>
+																							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DmpmZPg==</compiledString>
+																							<returnType>float</returnType>
+																							<sString>0.3</sString>
+																						</lifeTime>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<providerName></providerName>
+																						<startCondition>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</startCondition>
+																						<talents />
+																						<useListAs>ListAsRule</useListAs>
+																					</FlagsApplicator>
+																				</applicator>
+																				<continueCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>2</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																			<Item>
+																				<applicator href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="7C9C6F81-D8AD-473A-AD41-F3F010C8D5EC">
+																					<StatModApplicator>
+																						<applyTarget>AbilityOwner</applyTarget>
+																						<behaviorFlags>152</behaviorFlags>
+																						<caption>Отключаем fake throw</caption>
+																						<constraint>None</constraint>
+																						<dontUpdate>false</dontUpdate>
+																						<effect>
+																							<Item href="" />
+																							<Item href="" />
+																						</effect>
+																						<enabled>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</enabled>
+																						<formulaName>A5_TPEnd</formulaName>
+																						<lifeTime>
+																							<compiledString></compiledString>
+																							<returnType>float</returnType>
+																							<sString>0.1</sString>
+																						</lifeTime>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<modifier>
+																							<addValue>
+																								<compiledString></compiledString>
+																								<returnType>float</returnType>
+																								<sString>0.0f</sString>
+																							</addValue>
+																							<multValue>
+																								<compiledString></compiledString>
+																								<returnType>float</returnType>
+																								<sString>1.0f</sString>
+																							</multValue>
+																							<stat>Life</stat>
+																							<topModifier>false</topModifier>
+																							<variable></variable>
+																						</modifier>
+																						<providerName></providerName>
+																						<startCondition>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</startCondition>
+																						<statModName></statModName>
+																					</StatModApplicator>
+																				</applicator>
+																				<continueCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>2</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																			<Item>
+																				<applicator href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="E06B3F4D-E2D7-471C-8851-6C2B4A33314B">
+																					<SpellApplicator>
+																						<applyTarget>AbilityOwner</applyTarget>
+																						<caption>спелл с таунтом</caption>
+																						<enabled>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</enabled>
+																						<formulaName></formulaName>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<providerName></providerName>
+																						<spell href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="2FB28C05-1331-446C-9C19-BD9FD069E54F">
+																							<Spell>
+																								<applicators>
+																									<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="BA52A96F-5412-459B-B25A-C533425F04B6">
+																										<TauntApplicator>
+																											<applyTarget>AbilityOwner</applyTarget>
+																											<behaviorFlags>0</behaviorFlags>
+																											<caption>таунтимся на цель</caption>
+																											<effect>
+																												<Item href="" />
+																												<Item href="" />
+																											</effect>
+																											<enabled>
+																												<compiledString></compiledString>
+																												<returnType>bool</returnType>
+																												<sString>true</sString>
+																											</enabled>
+																											<formulaName></formulaName>
+																											<lifeTime>
+																												<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAPw==</compiledString>
+																												<returnType>float</returnType>
+																												<sString>0.5</sString>
+																											</lifeTime>
+																											<LoggingEvent>-1</LoggingEvent>
+																											<providerName></providerName>
+																											<startCondition>
+																												<compiledString></compiledString>
+																												<returnType>bool</returnType>
+																												<sString>true</sString>
+																											</startCondition>
+																											<strongTarget>false</strongTarget>
+																											<tauntTarget>ApplicatorTarget</tauntTarget>
+																										</TauntApplicator>
+																									</Item>
+																								</applicators>
+																								<dispatch href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="D6B7AA4A-3D42-43D9-8ABC-1BA7D33B8B1A">
+																									<DispatchImmediate>
+																										<alwaysApply>false</alwaysApply>
+																										<applyEffect>
+																											<Item href="" />
+																											<Item href="" />
+																										</applyEffect>
+																										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																										<applyEffectOrientation>Default</applyEffectOrientation>
+																										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																										<dieAfterApply>true</dieAfterApply>
+																										<dispatchEffect>
+																											<Item href="" />
+																											<Item href="" />
+																										</dispatchEffect>
+																										<flags>0</flags>
+																										<instantApply>false</instantApply>
+																									</DispatchImmediate>
+																								</dispatch>
+																							</Spell>
+																						</spell>
+																						<spellTarget>ApplicatorTarget</spellTarget>
+																						<targetSelector href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="FF022734-B06B-4E36-9527-4D2D20F85DA5">
+																							<NearestInAreaTargetSelector>
+																								<flags>0</flags>
+																								<mode>Normal</mode>
+																								<range>
+																									<compiledString>FQ0AAAABAAAAGQAAAFJhbmdlX01lZGl1bQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+																									<returnType>float</returnType>
+																									<sString>cRange_Medium</sString>
+																								</range>
+																								<targetFilter>536870915</targetFilter>
+																							</NearestInAreaTargetSelector>
+																						</targetSelector>
+																					</SpellApplicator>
+																				</applicator>
+																				<continueCondition>
+																					<compiledString></compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>1</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString></compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																			<Item>
+																				<applicator href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="50DB00BC-E1DE-45E4-B354-60469675730B">
+																					<SpellApplicator>
+																						<applyTarget>ApplicatorTarget</applyTarget>
+																						<caption>спелл в саммона</caption>
+																						<enabled>
+																							<compiledString>FR8AAAACAAAAJgAAAD8AAABXZW5kaWdvX0E1X1NVUAAAV2VuZGlnb19BNV9TVVAAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCKRfuL5V3D</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>tal("Wendigo_A5_SUP")</sString>
+																						</enabled>
+																						<formulaName></formulaName>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<providerName></providerName>
+																						<spell href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="1A74D4C2-7299-4E29-A7DC-7F720E63732C">
+																							<Spell>
+																								<applicators>
+																									<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="B4975B5E-090F-4B9D-A432-7A50FEFAFB0D">
+																										<FlagsApplicator>
+																											<applyTarget>ApplicatorTarget</applyTarget>
+																											<behaviorFlags>0</behaviorFlags>
+																											<caption>эффект</caption>
+																											<consumables />
+																											<effect>
+																												<Item href="/Effects/Debuffs/Explosion/_bones.EFFT" />
+																												<Item href="" />
+																											</effect>
+																											<enabled>
+																												<compiledString></compiledString>
+																												<returnType>bool</returnType>
+																												<sString>true</sString>
+																											</enabled>
+																											<flag>0</flag>
+																											<formulaName></formulaName>
+																											<lifeTime>
+																												<compiledString></compiledString>
+																												<returnType>float</returnType>
+																												<sString>-1.0</sString>
+																											</lifeTime>
+																											<LoggingEvent>-1</LoggingEvent>
+																											<providerName></providerName>
+																											<startCondition>
+																												<compiledString></compiledString>
+																												<returnType>bool</returnType>
+																												<sString>true</sString>
+																											</startCondition>
+																											<talents />
+																											<useListAs>ListAsRule</useListAs>
+																										</FlagsApplicator>
+																									</Item>
+																									<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="B268D0DF-3C55-4BF8-A449-76B499C800BF">
+																										<SpellApplicator>
+																											<applyTarget>ApplicatorTarget</applyTarget>
+																											<caption>спелл взрыва</caption>
+																											<enabled>
+																												<compiledString></compiledString>
+																												<returnType>bool</returnType>
+																												<sString>true</sString>
+																											</enabled>
+																											<formulaName></formulaName>
+																											<LoggingEvent>-1</LoggingEvent>
+																											<providerName></providerName>
+																											<spell href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="7E841444-F3BD-47CA-B28A-E65572A2D46C">
+																												<Spell>
+																													<applicators>
+																														<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="411BCF2E-7FC7-48AF-94A2-9B55DD8D596E">
+																															<DamageApplicator>
+																																<applyTarget>ApplicatorTarget</applyTarget>
+																																<cancelInvisibility>true</cancelInvisibility>
+																																<caption>взрываемся</caption>
+																																<damage>
+																																	<compiledString>FREAAAABAAAAHQAAAEE1X1NVUF9FeHBEYW1hZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+																																	<returnType>float</returnType>
+																																	<sString>cA5_SUP_ExpDamage</sString>
+																																</damage>
+																																<damageMode>4</damageMode>
+																																<damageType>Energy</damageType>
+																																<enabled>
+																																	<compiledString></compiledString>
+																																	<returnType>bool</returnType>
+																																	<sString>true</sString>
+																																</enabled>
+																																<formulaName></formulaName>
+																																<LoggingEvent>-1</LoggingEvent>
+																																<providerName></providerName>
+																																<timeLimiter>-1</timeLimiter>
+																																<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
+																															</DamageApplicator>
+																														</Item>
+																														<Item href="/Items/Talents/Class/Wendigo/remove_A2_Bleed.APLR" />
+																														<Item href="/Items/Talents/Class/Wendigo/add_A2_Bleed.APLR" />
+																														<Item href="/Items/Talents/Class/Wendigo/status_A2_Bleed.APLR" />
+																													</applicators>
+																													<dispatch href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="B407CD95-0950-4270-BD49-56BB0BAC9ECB">
+																														<DispatchImmediate>
+																															<alwaysApply>false</alwaysApply>
+																															<applyEffect>
+																																<Item href="" />
+																																<Item href="" />
+																															</applyEffect>
+																															<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																															<applyEffectOrientation>Default</applyEffectOrientation>
+																															<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																															<dieAfterApply>true</dieAfterApply>
+																															<dispatchEffect>
+																																<Item href="" />
+																																<Item href="" />
+																															</dispatchEffect>
+																															<flags>1</flags>
+																															<instantApply>false</instantApply>
+																														</DispatchImmediate>
+																													</dispatch>
+																												</Spell>
+																											</spell>
+																											<spellTarget>ApplicatorTarget</spellTarget>
+																											<targetSelector href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="72FD19E1-7D4D-41CE-98B9-74A67A5E7208">
+																												<AreaTargetSelector>
+																													<absolutePosition>
+																														<x>0</x>
+																														<y>0</y>
+																													</absolutePosition>
+																													<flags>0</flags>
+																													<mode>Normal</mode>
+																													<range>
+																														<compiledString>FQ0AAAABAAAAGQAAAFJhbmdlX01lZGl1bQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+																														<returnType>float</returnType>
+																														<sString>cRange_Medium</sString>
+																													</range>
+																													<targetFilter>537657407</targetFilter>
+																													<targetSelector href="" />
+																												</AreaTargetSelector>
+																											</targetSelector>
+																										</SpellApplicator>
+																									</Item>
+																								</applicators>
+																								<dispatch href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="D57A0160-58C6-4C4D-A0BD-45559B04DC4B">
+																									<DispatchImmediate>
+																										<alwaysApply>false</alwaysApply>
+																										<applyEffect>
+																											<Item href="" />
+																											<Item href="" />
+																										</applyEffect>
+																										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																										<applyEffectOrientation>Default</applyEffectOrientation>
+																										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																										<dieAfterApply>true</dieAfterApply>
+																										<dispatchEffect>
+																											<Item href="" />
+																											<Item href="" />
+																										</dispatchEffect>
+																										<flags>0</flags>
+																										<instantApply>false</instantApply>
+																									</DispatchImmediate>
+																								</dispatch>
+																							</Spell>
+																						</spell>
+																						<spellTarget>ApplicatorTarget</spellTarget>
+																						<targetSelector href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="41627DF8-C74E-4794-9436-8419524538B0">
+																							<ConditionTargetSelector>
+																								<condition>
+																									<compiledString>FQoAAAABAAAAFAAAAFdlbmRpZ29UUABVi+xqAItFEFBoAAAAAItNDIsRi00Mi4KcAQAA/9AzyTtFEA+VwYrBXcM=</compiledString>
+																									<returnType>bool</returnType>
+																									<sString>receiver.applWendigoTP(GLOBAL) != pMisc</sString>
+																								</condition>
+																								<flags>0</flags>
+																								<mode>Normal</mode>
+																								<targetSelector href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="FF9A9E79-1884-4B45-B206-4B297E6AEFAE">
+																									<SummonEnumerator>
+																										<flags>2</flags>
+																										<mode>Normal</mode>
+																										<summonTypes>1</summonTypes>
+																									</SummonEnumerator>
+																								</targetSelector>
+																							</ConditionTargetSelector>
+																						</targetSelector>
+																					</SpellApplicator>
+																				</applicator>
+																				<continueCondition>
+																					<compiledString></compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>2</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString></compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																			<Item>
+																				<applicator href="/GameLogic/GeneralApplicators/EndOfAbility.APLR" />
+																				<continueCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</continueCondition>
+																				<continueEvents>2</continueEvents>
+																				<delay>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</delay>
+																				<stopCondition>
+																					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																					<returnType>bool</returnType>
+																					<sString>0</sString>
+																				</stopCondition>
+																				<stopEvents>0</stopEvents>
+																			</Item>
+																		</applicators>
+																		<applyTarget>AbilityOwner</applyTarget>
+																		<behaviorFlags>2</behaviorFlags>
+																		<caption>Программа с прыжком и телепортом</caption>
+																		<effect>
+																			<Item href="" />
+																			<Item href="" />
+																		</effect>
+																		<enabled>
+																			<compiledString></compiledString>
+																			<returnType>bool</returnType>
+																			<sString>true</sString>
+																		</enabled>
+																		<formulaName></formulaName>
+																		<lifeTime>
+																			<compiledString></compiledString>
+																			<returnType>float</returnType>
+																			<sString>-1.0</sString>
+																		</lifeTime>
+																		<LoggingEvent>-1</LoggingEvent>
+																		<providerName></providerName>
+																		<startCondition>
+																			<compiledString></compiledString>
+																			<returnType>bool</returnType>
+																			<sString>true</sString>
+																		</startCondition>
+																	</ProgramApplicator>
+																</Item>
+															</applicators>
+															<dispatch href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="C632A469-AEB3-4758-A313-27D001E9E671">
+																<DispatchImmediate>
+																	<alwaysApply>true</alwaysApply>
+																	<applyEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</applyEffect>
+																	<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																	<applyEffectOrientation>Default</applyEffectOrientation>
+																	<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																	<dieAfterApply>true</dieAfterApply>
+																	<dispatchEffect>
+																		<Item href="" />
+																		<Item href="" />
+																	</dispatchEffect>
+																	<flags>0</flags>
+																	<instantApply>true</instantApply>
+																</DispatchImmediate>
+															</dispatch>
+														</Spell>
+													</spell>
+													<spellTarget>ApplicatorTarget</spellTarget>
+													<targetSelector href="/Items/Talents/Class/Wendigo/ChannelTarget.TGSL" />
+												</SpellApplicator>
+											</Item>
+										</applicators>
+										<dispatch href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="DD597B90-8798-48ED-B528-31A510DD3B09">
+											<DispatchImmediate>
+												<alwaysApply>true</alwaysApply>
+												<applyEffect>
+													<Item href="" />
+													<Item href="" />
+												</applyEffect>
+												<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+												<applyEffectOrientation>Default</applyEffectOrientation>
+												<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+												<dieAfterApply>true</dieAfterApply>
+												<dispatchEffect>
+													<Item href="" />
+													<Item href="" />
+												</dispatchEffect>
+												<flags>0</flags>
+												<instantApply>true</instantApply>
+											</DispatchImmediate>
+										</dispatch>
+									</Spell>
+								</stopSpell>
+								<targetSelector href="" />
+							</ChannellingApplicator>
+						</applicator>
+						<continueCondition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>2</continueEvents>
+						<delay>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0</sString>
+						</delay>
+						<stopCondition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>программа ченнела</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+			</ProgramApplicator>
+		</Item>
+	</applicators>
+	<askId>2</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А5. Преследование</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Class/Wendigo/Ability_A5.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Wendigo/Ability_A5.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Wendigo/Ability_A5.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="DEA190C1-99F5-4A73-98FF-873D421976A0">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR8AAAACAAAAJgAAAD8AAABXZW5kaWdvX0E1X1NVUAAAV2VuZGlnb19BNV9TVVAAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwIPAAYvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Wendigo_A5_SUP") == false</sString>
+				</condition>
+				<name>Wendigo_A5_SUP</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="704B38D3-336F-421B-AFF0-805713795192">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="056E2C6B-DBCB-4DA5-973D-7AE1D7F3651F">
+					<UnitConstant>
+						<name>A5_ChannelingTime</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvsUYtFEIsQi00Qi4KQAAAA/9APtsj32RvJg8EBiU3820X8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>mIsNight? 0 : 1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Wendigo/const_A3_Root_Duration" />
+				<Item href="/Items/Talents/Class/Wendigo/const_A5_SUP_ExpDamage" />
+				<Item href="/Items/Talents/Class/Wendigo/const_A5_TPAvailable" />
+				<Item href="/Items/Talents/Class/Wendigo/const_A2_DamageTT" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABwQQ==</compiledString>
+		<returnType>float</returnType>
+		<sString>15</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Wendigo/Ability_A5.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="DB9EA34F-21E2-42C0-9CD4-41C728E8B7D4">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>2081</flags>
+	<forceBonus>13.21</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Wendigo/A5.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>100</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="F1EE00FD-4C22-4F0F-B18D-7737F7F2C32F">
+		<BasicMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</condition>
+		</BasicMicroAI>
+	</microAI>
+	<minLevel>2</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>540</naftaCost>
+	<name textref="/Items/Talents/Class/Wendigo/Ability_A5.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="A458D8FB-14C2-47B9-B28E-E584477155BD">
+			<FlagsApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>автозапрет таланта при отсутствии жертв</caption>
+				<consumables />
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FREAAAACAAAAFgAAACwAAABUZWxlcG9ydGFibGVQcmV5AFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHU4AAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString> sender.vTeleportablePrey == 0</sString>
+				</enabled>
+				<flag>1024</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents>
+					<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" />
+				</talents>
+				<useListAs>ListAsRule</useListAs>
+			</FlagsApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Wendigo/Ability_A5.TALENT" id="22053267-D024-4B45-9BBF-749534E42BB6">
+			<FlagsApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>эффект и звук при наличии жертвы</caption>
+				<consumables />
+				<effect>
+					<Item href="/Heroes/Wendigo/_A5_Prey.EFFT" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FREAAAACAAAAFgAAACwAAABUZWxlcG9ydGFibGVQcmV5AFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHU4AAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAADwPw==</compiledString>
+					<returnType>bool</returnType>
+					<sString> sender.vTeleportablePrey == 1</sString>
+				</enabled>
+				<flag>0</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents />
+				<useListAs>ListAsRule</useListAs>
+			</FlagsApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/trigger_G766_RefreshAndNotify.APLR" />
+	</passiveApplicators>
+	<persistentId>Wendigo_A5</persistentId>
+	<prerequisiteTalents>
+		<Item href="/Items/Talents/Class/Wendigo/Ability_A3.TALENT" />
+	</prerequisiteTalents>
+	<rarity>Class</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Class/Wendigo/Ability_A5.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAB6RA==</compiledString>
+		<returnType>float</returnType>
+		<sString>1000</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

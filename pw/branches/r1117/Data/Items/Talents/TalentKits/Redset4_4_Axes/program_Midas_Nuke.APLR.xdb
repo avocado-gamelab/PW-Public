@@ -1,37 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ProgramApplicator>
-	<BackLink DBID="/Items/Talents/Level3/G566_AxesStrInt.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level3/G565_AxesStr.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level3/G564_AxesInt.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G566_AxesStrInt.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G565_AxesStr.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G564_AxesInt.TALENT" Count="1" />
 	<applicators>
-		<Item>
-			<applicator href="/Items/Talents/TalentKits/Redset4_4_Axes/program_Midas_Nuke.APLR" id="04354009-783C-4981-846F-6DA53C282375">
-				<TriggerApplicator parent="/Items/Talents/TalentKits/Redset4_4_Axes/trigger_GiveNafta_ForAll.APLR">
-					<lifeTime>
-						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPg==</compiledString>
-						<returnType>float</returnType>
-						<sString>0.2f</sString>
-					</lifeTime>
-				</TriggerApplicator>
-			</applicator>
-			<continueCondition>
-				<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
-				<returnType>bool</returnType>
-				<sString>0</sString>
-			</continueCondition>
-			<continueEvents>1</continueEvents>
-			<delay>
-				<compiledString></compiledString>
-				<returnType>float</returnType>
-				<sString>-1.0</sString>
-			</delay>
-			<stopCondition>
-				<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
-				<returnType>bool</returnType>
-				<sString>0</sString>
-			</stopCondition>
-			<stopEvents>0</stopEvents>
-		</Item>
 		<Item>
 			<applicator href="/Effects/Shots/HitsApplicators/Hit_G566.APLR" />
 			<continueCondition>
@@ -59,9 +31,9 @@
 					<cancelInvisibility>false</cancelInvisibility>
 					<caption>урон</caption>
 					<damage>
-						<compiledString>FQwAAAABAAAAGAAAAEc1NjZfRGFtYWdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<compiledString>FRgAAAADAAAAPwAAAFYAAACBAAAARzU2Nl9EYW1hZ2UARzU2Nl9EYW1hZ2UAVYvsg+wIi0UMixCLTQyLQlD/0IP4E3VIi00MixGLTQyLQgz/0NwNnAAAANld/NlF/FHZHCSLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlD/0FHZHCToNAAAAIPECNld+Osdi00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ/9DZXfjZRfiL5V3DmpmZmZmZuT9Vi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
 						<returnType>float</returnType>
-						<sString>cG566_Damage</sString>
+						<sString>rUnitKind == 19 ? min(cG566_Damage, rMaxLife * 0.1) : cG566_Damage</sString>
 					</damage>
 					<damageMode>0</damageMode>
 					<damageType>Pure</damageType>
@@ -98,7 +70,7 @@
 	</applicators>
 	<applyTarget>ApplicatorTarget</applyTarget>
 	<behaviorFlags>216</behaviorFlags>
-	<caption>Программа с уроном и праймом</caption>
+	<caption>Наносим урон крипу</caption>
 	<effect>
 		<Item href="" />
 		<Item href="" />

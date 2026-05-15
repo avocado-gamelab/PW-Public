@@ -3,20 +3,21 @@
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/Heroes/DefaultStatus/_SILENCE.APLR" Count="1" />
 	<BackLink DBID="/Heroes/DefaultStatus/_STUN.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Shadow.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Shadow_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Shadow.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Shadow_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Shadow_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Alchemist/status_A4BlueStun.APLR" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Banshee/status_A2.APLR" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Marine/status_A4_2_stun.APLR" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Shadow/Ability_A3u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Shaman/A4_2_status.APLR" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/SnowQueen/status_A4_Eternity.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset7_4_NewYear/status_RedSet7_4_Sleep.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Shadow_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Maps/Tutorial/FlagsForbidAbility1.APLR" Count="1" />
 	<BackLink DBID="/Test/Talents/Shadow/Shadow.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/SnowQueen/status_A4_EternityAlly.APLR" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -277,8 +278,8 @@
 		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Shadow/Ability_A3.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Shadow/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Shadow/Ability_A3.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Shadow/Ability_A3.TALENT" id="349D485B-518A-4677-983F-D92936A7B3E7">
 			<ConditionFormula>
@@ -377,7 +378,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>16</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Shadow/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

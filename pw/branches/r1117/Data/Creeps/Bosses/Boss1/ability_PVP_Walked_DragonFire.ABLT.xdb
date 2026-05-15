@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Ability>
+	<BackLink DBID="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" Count="1" />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="B9102779-1A9A-4652-AD2A-2C46FCDC403A">
+			<FlagsApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Анимация и запрет менять цели и атаку</caption>
+				<consumables />
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flag>15</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DKlyfQA==</compiledString>
+					<returnType>float</returnType>
+					<sString>8.3f * 0.6f</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents />
+				<useListAs>ListAsRule</useListAs>
+			</FlagsApplicator>
+		</Item>
+		<Item href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="B26CF7F9-81C0-4F68-8EDD-33FC35274547">
+			<SpellPeriodicallyApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>40</behaviorFlags>
+				<caption>Драконий огонь</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString>FQsAAAABAAAAFwAAAERhbWFnZVRpbWUAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+					<returnType>float</returnType>
+					<sString>cDamageTime</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<period>
+					<compiledString>FQ8AAAABAAAAGwAAAERhbWFnZUludGVydmFsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+					<returnType>float</returnType>
+					<sString>cDamageInterval</sString>
+				</period>
+				<providerName></providerName>
+				<scaleMode>ScaleIsCount</scaleMode>
+				<spell href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="EEF7F0FB-3615-4AB7-B1E7-82211B3BA323">
+					<Spell>
+						<applicators>
+							<Item href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="D3044124-CB11-483C-A1D8-CFE3E7739238">
+								<DamageApplicator>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<cancelInvisibility>false</cancelInvisibility>
+									<caption>урон</caption>
+									<damage>
+										<compiledString>FQ4AAAABAAAAGgAAAERhbWFnZVBlclN0ZXAAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+										<returnType>float</returnType>
+										<sString>cDamagePerStep</sString>
+									</damage>
+									<damageMode>0</damageMode>
+									<damageType>Energy</damageType>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+									<timeLimiter>-1</timeLimiter>
+									<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
+								</DamageApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="59803724-4E9A-46B7-AA38-1EE67ED51062">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<startOffset>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</startOffset>
+				<targetSelector href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="0D6A4418-6242-4016-9C3E-6243A7B3ABC5">
+					<SectorTargetSelector>
+						<angle>60</angle>
+						<centerIsSegmentEnd>false</centerIsSegmentEnd>
+						<flags>0</flags>
+						<mode>Normal</mode>
+						<range>
+							<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange</sString>
+						</range>
+						<segmentBegin>AbilityOwner</segmentBegin>
+						<segmentDirectionOffset>0</segmentDirectionOffset>
+						<segmentEnd>OwnerDirection</segmentEnd>
+						<targetFilter>572326399</targetFilter>
+					</SectorTargetSelector>
+				</targetSelector>
+			</SpellPeriodicallyApplicator>
+		</Item>
+	</applicators>
+	<autoTargetSelector href="" />
+	<caption>Драконий огонь</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<constants href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="A3A67423-0A2B-4D18-88A7-CB0498AED407">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="0C46524D-ED27-4FE8-A3FE-B57C6DEDAFF0">
+					<UnitConstant>
+						<name>DamageAmount</name>
+						<var>
+							<compiledString>FQAAAAABAAAAFgAAAFWL7FGLRQiLEItNCIuCMAEAAP/Q3A0kAAAA2V382UX8i+VdwwAAAAAAABRA</compiledString>
+							<returnType>float</returnType>
+							<sString>sStrength * 5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="2007A244-1AD8-47C9-9864-D2ED3449FEB8">
+					<UnitConstant>
+						<name>Range</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACQQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>18</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="E18CBF90-7018-4B5B-999E-C6FD67576CBA">
+					<UnitConstant>
+						<name>DamageTime</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>4</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="476017CD-DF47-4B52-9374-72030BF27F86">
+					<UnitConstant>
+						<name>DamageInterval</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPg==</compiledString>
+							<returnType>float</returnType>
+							<sString>0.2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="D1E98DC9-4F63-4668-BC8B-8866116CE7A7">
+					<UnitConstant>
+						<name>DamagePerStep</name>
+						<var>
+							<compiledString>FSsAAAADAAAAOgAAAFQAAABxAAAARGFtYWdlQW1vdW50AAAAAERhbWFnZVRpbWUAAERhbWFnZUludGVydmFsAFWL7IPsFItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoEAAAAItVEIsCi00Qi1BQ3V34/9KLRQxQi00IUWgcAAAAi1UQiwKLTRCLUFDdXfD/0tx98Nx9+Nld7NlF7IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cDamageAmount / ( cDamageTime / cDamageInterval )</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAA0Qg==</compiledString>
+		<returnType>float</returnType>
+		<sString>45</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="" />
+	<dispatch href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="07DEECC4-4F93-42A0-B9C1-358B0A53C993">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>1</flags>
+	<image href="" />
+	<imageSecondState href="" />
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker>doCast1</marker>
+	<microAI href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="AE0E17AF-5A09-4EBE-9B0F-37AB15F10E4B">
+		<TargetSelectorMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</condition>
+			<targetSelector href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="B5E13393-0428-4395-AC85-881C669639E3">
+				<NearestTargetSelector>
+					<targetSelector href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="E396E313-1BA5-4ABE-BF38-9CA8B5E7FD05">
+						<AreaTargetSelector>
+							<absolutePosition>
+								<x>0</x>
+								<y>0</y>
+							</absolutePosition>
+							<flags>0</flags>
+							<mode>Normal</mode>
+							<range>
+								<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+								<returnType>float</returnType>
+								<sString>cRange</sString>
+							</range>
+							<targetFilter>545259968</targetFilter>
+							<targetSelector href="" />
+						</AreaTargetSelector>
+					</targetSelector>
+				</NearestTargetSelector>
+			</targetSelector>
+		</TargetSelectorMicroAI>
+	</microAI>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<name textref="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT_name.txt" />
+	<node>ability1</node>
+	<passiveApplicators>
+		<Item href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="48B04B93-0A4E-482A-8010-A6273D5D55ED">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>(подпора) запрет атаки, пока ещё не применились аппликаторы абилки</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="C33664A8-9F1D-47BF-88FB-CCA085F98FB2">
+					<EventProcessorCondition>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<condition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</condition>
+						<events>2097152</events>
+						<onlyParent>false</onlyParent>
+						<spell href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="FA1E94C4-C361-4979-A87D-51DCF2C0D5F8">
+							<Spell>
+								<applicators>
+									<Item href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="B118F7EC-5048-4DBE-84F4-98C0AED3D9B6">
+										<FlagsApplicator>
+											<applyTarget>AbilityOwner</applyTarget>
+											<behaviorFlags>0</behaviorFlags>
+											<caption>Анимация и запрет менять цели и атаку</caption>
+											<consumables />
+											<effect>
+												<Item href="" />
+												<Item href="" />
+											</effect>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<flag>7</flag>
+											<formulaName></formulaName>
+											<lifeTime>
+												<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3D4npUQA==</compiledString>
+												<returnType>float</returnType>
+												<sString>8.3f * 0.4f</sString>
+											</lifeTime>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<startCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</startCondition>
+											<talents />
+											<useListAs>ListAsRule</useListAs>
+										</FlagsApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" id="53147E20-63F8-4D0E-BB7B-252CED998AE8">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>true</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+					</EventProcessorCondition>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+	</passiveApplicators>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<targetType>0</targetType>
+	<type>Active</type>
+	<useRange>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABgQQ==</compiledString>
+		<returnType>float</returnType>
+		<sString>14</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Ability>

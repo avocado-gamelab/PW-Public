@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Stalker_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Stalker_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Stalker/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Stalker/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Stalker/Ability_A4u.TALENT" Count="1" />
@@ -172,7 +172,7 @@
 									<sString>-1.0</sString>
 								</customProgress>
 								<description textref="/Items/Talents/Class/Stalker/Ability_A4_2.TALENT_bd54f59bcde9425ca4c46735e1da10a3_description.txt" />
-								<dispellPriority>Medium</dispellPriority>
+								<dispellPriority>NonDispellable</dispellPriority>
 								<effect>
 									<Item href="/Effects/Buffs/Manoeuvre/_.EFFT" />
 									<Item href="" />
@@ -284,8 +284,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Stalker/Ability_A4_2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Stalker/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Stalker/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Stalker/Ability_A4_2.TALENT" id="AD8BD3A9-1932-4DF2-B5AF-AAFD4589E66E">
 			<ConditionFormula>
@@ -376,7 +376,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>2</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Stalker/A4_2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

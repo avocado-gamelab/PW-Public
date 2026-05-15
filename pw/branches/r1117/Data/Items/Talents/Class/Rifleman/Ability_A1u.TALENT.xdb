@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Rifleman.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Rifleman_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Rifleman_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Rifleman.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Rifleman_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Rifleman_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Rifleman/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Rifleman/Epic_Str.TALENTSET" Count="1" />
 	<activationConditions />
@@ -36,8 +36,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Rifleman/Ability_A1u.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Rifleman/Ability_A1u.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Rifleman/Ability_A1u.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Rifleman/Ability_A1u.TALENT" id="09859604-01D8-4C7A-8AA3-AFA484CCCA47">
 			<ConditionFormula>
@@ -57,7 +57,16 @@
 				<Item href="/Items/Talents/Class/Rifleman/A1_Bear_Ability_Period" />
 				<Item href="/Items/Talents/Class/Rifleman/A1y_Damage" />
 				<Item href="/Items/Talents/Class/Rifleman/A1y_Stun_Duration" />
-				<Item href="/Items/Talents/Class/Rifleman/const_A0_Mark_Duration" />
+				<Item href="/Items/Talents/Class/Rifleman/Ability_A1u.TALENT" id="E711CCE0-DB9E-4386-922B-AF85E390AE7F">
+					<UnitConstant>
+						<name>A0_Mark_Duration</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
 				<Item href="/Items/Talents/Class/Rifleman/const_TT_BearAbility_Damage" />
 			</vars>
 		</UnitConstantsContainer>
@@ -80,7 +89,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Rifleman/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Rifleman.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Rifleman_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Rifleman.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Rifleman_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Rifleman/Ability_A1.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Rifleman/Ability_A1_SUP.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Rifleman/Ability_A1u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Rifleman_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Rifleman_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Rifleman/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Rifleman/Epic_Str.TALENTSET" Count="1" />
 	<activationConditions />
@@ -118,8 +118,8 @@
 		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Rifleman/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Rifleman/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Rifleman/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Rifleman/Ability_A1.TALENT" id="2F1E373C-E130-410D-9127-86BDBAD988D7">
 			<ConditionFormula>
@@ -212,9 +212,9 @@
 					<UnitConstant>
 						<name>Bear_ResurrectTime</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQQ==</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAA0Qg==</compiledString>
 							<returnType>float</returnType>
-							<sString>30</sString>
+							<sString>45</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -251,7 +251,16 @@
 				<Item href="/Items/Talents/Class/Rifleman/A1_Bear_Ability_Period" />
 				<Item href="/Items/Talents/Class/Rifleman/A1y_Damage" />
 				<Item href="/Items/Talents/Class/Rifleman/A1y_Stun_Duration" />
-				<Item href="/Items/Talents/Class/Rifleman/const_A0_Mark_Duration" />
+				<Item href="/Items/Talents/Class/Rifleman/Ability_A1.TALENT" id="D260EAE1-04E9-40B9-8831-625B7720BAB0">
+					<UnitConstant>
+						<name>A0_Mark_Duration</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
 				<Item href="/Items/Talents/Class/Rifleman/const_TT_BearAbility_Damage" />
 				<Item href="/Items/Talents/Class/Rifleman/const_A1_BonusDefence" />
 				<Item href="/Items/Talents/Class/Rifleman/const_A1_SUP_BonusMoveSpeed" />
@@ -263,9 +272,9 @@
 		<percent>0</percent>
 	</consumptionBonus>
 	<cooldownTime>
-		<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
 		<returnType>float</returnType>
-		<sString>1</sString>
+		<sString>0.0f</sString>
 	</cooldownTime>
 	<cooldownTimeSecondState>
 		<compiledString></compiledString>
@@ -293,8 +302,8 @@
 			<instantApply>false</instantApply>
 		</DispatchImmediate>
 	</dispatch>
-	<flags>32771</flags>
-	<forceBonus>6</forceBonus>
+	<flags>32770</flags>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Rifleman/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -312,7 +321,7 @@
 	<minUseRangeCorrection>0</minUseRangeCorrection>
 	<naftaCost>300</naftaCost>
 	<name textref="/Items/Talents/Class/Rifleman/Ability_A1.TALENT_name.txt" />
-	<node>ability1</node>
+	<node></node>
 	<passiveApplicators>
 		<Item href="/Items/Talents/Class/Rifleman/Ability_A1.TALENT" id="15964584-ED06-4628-B919-8B85906CC6E9">
 			<SpellPeriodicallyApplicator>

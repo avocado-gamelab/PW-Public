@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Wendigo.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Wendigo_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Wendigo/Ability_A0_SUP.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Wendigo_Mighty.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А0. Проклятие голода</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Wendigo/Ability_A0.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Wendigo/Ability_A0.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="E42D0C1F-7E9C-4C4B-8BB7-387B419A60A6">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UMixCLTQyLgrgAAAD/0ItNDIsRi00Mi4K8AAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>rBaseStrength &gt;= rBaseIntellect</sString>
+				</condition>
+				<name>RTTStrOrInt</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="23C7158C-139D-4065-8524-26F791B06915">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ8AAAACAAAAHAAAAC8AAABTdGF0UGVuYWx0eUludABVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcHVEAAADf4PbERHsJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>cStatPenaltyInt != 0</sString>
+				</condition>
+				<name>NotNullInt</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="A66B4A8E-EA58-416B-8806-68B145985292">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ8AAAACAAAAHAAAAC8AAABTdGF0UGVuYWx0eVN0cgBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcHVEAAADf4PbERHsJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>cStatPenaltyStr != 0</sString>
+				</condition>
+				<name>NotNullStr</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="9EFDB3B8-CD8D-42B4-A720-640FD9754040">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR8AAAACAAAAJgAAAD8AAABXZW5kaWdvX0EwX1NVUAAAV2VuZGlnb19BMF9TVVAAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwIPAAYvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Wendigo_A0_SUP") == false</sString>
+				</condition>
+				<name>Wendigo_A0_SUP</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="2B16BB4A-C306-4135-B356-9C033B5B3648">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FREAAAACAAAAFgAAACwAAABTdGF0UGVuYWx0eUludFRUAFWL7FFoAAAAAItFDIsQi00Mi4KIAQAA/9DcHU4AAADf4PbERHsJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>receiver.vStatPenaltyIntTT != 0</sString>
+				</condition>
+				<name>RNotNullInt</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="BE5778E8-9AE2-4DBC-9F1D-B71A8E88D2A4">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FREAAAACAAAAFgAAACwAAABTdGF0UGVuYWx0eVN0clRUAFWL7FFoAAAAAItFDIsQi00Mi4KIAQAA/9DcHU4AAADf4PbERHsJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>receiver.vStatPenaltyStrTT != 0</sString>
+				</condition>
+				<name>RNotNullStr</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="462C01B8-CB75-4525-80BE-07B5E3835AF9">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="C4550F08-B148-405B-92A4-9A766D55C36B">
+					<UnitConstant>
+						<name>GeneralStatPenalty</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="DA420712-5249-48EA-83E0-97DC3D003D3E">
+					<UnitConstant>
+						<name>StatPenaltyInt</name>
+						<var>
+							<compiledString>FQ8AAAABAAAAEwAAAFN0YXRQZW5hbHR5SW50AFWL7GgAAAAAi0UIixCLTQiLgogBAAD/0F3D</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vStatPenaltyInt</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="8286A71E-2809-40AC-9AFB-2BBDEDF7B531">
+					<UnitConstant>
+						<name>StatPenaltyStr</name>
+						<var>
+							<compiledString>FQ8AAAABAAAAEwAAAFN0YXRQZW5hbHR5U3RyAFWL7GgAAAAAi0UIixCLTQiLgogBAAD/0F3D</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vStatPenaltyStr</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="0D83B945-AA34-4483-B939-6A074BD06E2B">
+					<UnitConstant>
+						<name>StatPenaltyStrTT</name>
+						<var>
+							<compiledString>FREAAAABAAAAFQAAAFN0YXRQZW5hbHR5U3RyVFQAVYvsaAAAAACLRQyLEItNDIuCiAEAAP/QXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>receiver.vStatPenaltyStrTT</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="6CA6E0B0-5BA1-480A-8930-D08ED6844E27">
+					<UnitConstant>
+						<name>StatPenaltyIntTT</name>
+						<var>
+							<compiledString>FREAAAABAAAAFQAAAFN0YXRQZW5hbHR5SW50VFQAVYvsaAAAAACLRQyLEItNDIuCiAEAAP/QXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>receiver.vStatPenaltyIntTT</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="553F07BD-D9FD-455D-83B2-08D424783B25">
+					<UnitConstant>
+						<name>NightAddPenalty</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>4</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Wendigo/const_A0_SUP_AddDamage" />
+				<Item href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="364AF8EC-1E60-42C0-B063-CB4554C9D066">
+					<UnitConstant>
+						<name>StatPenalty</name>
+						<var>
+							<compiledString>FSQAAAACAAAASgAAAG4AAABHZW5lcmFsU3RhdFBlbmFsdHkAAE5pZ2h0QWRkUGVuYWx0eQBVi+yD7AiLRRCLEItNEIuCkAAAAP/QD7bIhcl0H4tVDFKLRQhQaBQAAACLTRCLEYtNEItCUP/Q2V386wXZ7tld/ItNDFGLVQhSaAAAAACLRRCLEItNEItCUP/Q2EX82V342UX4i+VdwwAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>cGeneralStatPenalty + (mIsNight? cNightAddPenalty : 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Wendigo/Ability_A0.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>5</flags>
+	<forceBonus>13.21</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Wendigo/A0.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>2</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>540</naftaCost>
+	<name textref="/Items/Talents/Class/Wendigo/Ability_A0.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="273780F8-9EDA-411E-8ED7-00E6339F7208">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>64</behaviorFlags>
+				<caption>триггер на смерть от Вендиго</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="F335C342-50F7-405F-A1A4-6026A24FD125">
+					<EventProcessorUnitDieNearMe>
+						<applyTarget>ApplicatorSelectedTarget</applyTarget>
+						<checkSender>0</checkSender>
+						<killerFlags>1</killerFlags>
+						<range>
+							<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>0</sString>
+						</range>
+						<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+						<spell href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="C67AC723-53B3-49D3-BC2A-2C2F0F695045">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Class/Wendigo/status_KillPenalty.APLR" />
+								</applicators>
+								<dispatch href="/Items/Talents/Class/Wendigo/Ability_A0.TALENT" id="359814E8-DB1A-4AEF-97D0-13E542A3443E">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>false</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+						<targets>536870915</targets>
+					</EventProcessorUnitDieNearMe>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQgAAAACAAAADQAAACMAAABJc0Nsb25lAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUUAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vIsClone == 0</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>Wendigo_A0</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>2040319</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

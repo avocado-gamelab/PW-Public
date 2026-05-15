@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/BladeDancer.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/BladeDancer.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/BladeDancer/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/BladeDancer/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/BladeDancer/Ability_A4u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/BladeDancer_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/BladeDancer_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/BladeDancer/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/BladeDancer/Epic_Str.TALENTSET" Count="1" />
 	<activationConditions />
@@ -162,8 +162,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/BladeDancer/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/BladeDancer/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/BladeDancer/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/BladeDancer/Ability_A4.TALENT" id="CA9BC1AB-C572-42A1-8FBC-BDAB9B369262">
 			<ConditionFormula>
@@ -412,7 +412,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>2</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/BladeDancer/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

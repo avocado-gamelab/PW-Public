@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Freeze.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Freeze.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Freeze/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Freeze/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Freeze/Elite_IntAsp.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Freeze/Elite_LifeStr.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Freeze/Elite_LifeStrAsp.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Freeze/Epic_Str.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Freeze_Mighty.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Freeze_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Freeze_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Freeze_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Freeze/Ability_A0_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
@@ -41,8 +41,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Freeze/Ability_A0.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Freeze/Ability_A0.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas />
 	<conflictingTalents />
 	<constants href="/Items/Talents/Class/Freeze/Ability_A0.TALENT" id="69760216-B74F-4826-9805-F667F54A827C">
@@ -129,7 +129,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>5</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Freeze/A0.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

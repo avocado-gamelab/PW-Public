@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Test/Talents/OrangeSet5.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar5_Set5" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Rockman_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="3" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_OrangeSet5.ROLLCONT" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G429: Восстановление сил</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="6A1A9AEE-0A8E-4733-92D1-FA2DED3286D1">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ8AAAACAAAAFAAAACoAAABHNDI5X0luY3JlbWVudABVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1MAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG429_Increment&gt;0</sString>
+				</condition>
+				<name>G429_Increment</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="C5AB9CAC-6B2D-461C-BFDC-9DE689E42E44">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="A88767D5-E368-448A-993D-00E8A94BBAD6">
+					<UnitConstant>
+						<name>Add_LifeReg</name>
+						<var>
+							<compiledString>FSMAAAAEAAAAMgAAAEwAAABsAAAAggAAAFQyX1N0YXQATGlmZVJlZ0J1ZGdldAAAAFN0YWNrVmFsdWUAVYvsg+wUi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgIAAAAi1UQiwKLTRCLUFDdXfj/0txN+ItFDFCLTQhRaBgAAACLVRCLAotNEItQUN1d8P/S3DWfAAAA2eje4dxN8Nld7NlF7IvlXcMAAAAAAADwPwAAAAAAAABA</compiledString>
+							<returnType>float</returnType>
+							<sString>cT2_Stat * cLifeRegBudget * (1 - cStackValue / 2)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="1C3F0345-1AF3-42C4-951A-B8F3940B4B50">
+					<UnitConstant>
+						<name>Add_LifeRegForCreep</name>
+						<var>
+							<compiledString>FR8AAAACAAAALgAAAEgAAABNYXhMaWZlUmVnAABGdWxsU3RhY2tDcmVlcEtpbGwAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgMAAAAi1UQiwKLTRCLUFDdXfj/0tx9+Nld9NlF9IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cMaxLifeReg / cFullStackCreepKill</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="28D30D74-ADFC-4D05-B06C-CE2B1D37A1E1">
+					<UnitConstant>
+						<name>Add_LifeRegForHero</name>
+						<var>
+							<compiledString>FR4AAAACAAAALQAAAEcAAABNYXhMaWZlUmVnAABGdWxsU3RhY2tIZXJvS2lsbABVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaAwAAACLVRCLAotNEItQUN1d+P/S3H342V302UX0i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cMaxLifeReg / cFullStackHeroKill</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="7EAA5B6D-BC56-4697-A494-A15C91145281">
+					<UnitConstant>
+						<name>MaxLifeReg</name>
+						<var>
+							<compiledString>FSMAAAADAAAAMgAAAEwAAABsAAAAVDJfU3RhdABMaWZlUmVnQnVkZ2V0AAAAU3RhY2tWYWx1ZQBVi+yD7BSLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaAgAAACLVRCLAotNEItQUN1d+P/S3E34i0UMUItNCFFoGAAAAItVEIsCi00Qi1BQ3V3w/9LcTfDZXezZReyL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cT2_Stat * cLifeRegBudget * cStackValue</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="9D4BE4E4-ECAA-4399-9DFF-4C7CFEE9D5FE">
+					<UnitConstant>
+						<name>TECH_Add_LifeRegCreepJustified</name>
+						<var>
+							<compiledString>FTAAAAADAAAAPwAAAFEAAAB+AAAATWF4TGlmZVJlZwAARzQyOV9JbmNyZW1lbnQAAEFkZF9MaWZlUmVnRm9yQ3JlZXAAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JoDAAAAItFCIsQi00Ii4KIAQAA3V34/9DcbfjZXfTZRfRR2Rwki00MUYtVCFJoHAAAAItFEIsQi00Qi0JQ/9BR2Rwk6AcAAACDxAiL5V3DVYvsUdlFCNlFDN7Z3+D2xEF1CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>min( cAdd_LifeRegForCreep, cMaxLifeReg - sender.vG429_Increment )</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="7B88CD98-9A55-4C51-9E3D-C703FE4631D8">
+					<UnitConstant>
+						<name>TECH_Add_LifeRegHeroJustified</name>
+						<var>
+							<compiledString>FS8AAAADAAAAPgAAAFAAAAB9AAAATWF4TGlmZVJlZwAARzQyOV9JbmNyZW1lbnQAAEFkZF9MaWZlUmVnRm9ySGVybwBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0mgMAAAAi0UIixCLTQiLgogBAADdXfj/0Nxt+Nld9NlF9FHZHCSLTQxRi1UIUmgcAAAAi0UQixCLTRCLQlD/0FHZHCToBwAAAIPECIvlXcNVi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>min( cAdd_LifeRegForHero, cMaxLifeReg - sender.vG429_Increment )</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="89EE826E-1D76-478D-85CF-508E0EF7131C">
+					<UnitConstant>
+						<name>TT_G429_Increment</name>
+						<var>
+							<compiledString>FQ8AAAABAAAAEwAAAEc0MjlfSW5jcmVtZW50AFWL7GgAAAAAi0UIixCLTQiLgogBAAD/0F3D</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG429_Increment</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>5</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_429.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="AB01CC67-6B9F-4FC5-935A-C01CC9C59B76">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>+LifeReg</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQwAAAABAAAAGAAAAEFkZF9MaWZlUmVnAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_LifeReg</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>LifeRegenerationAbsolute</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="254AF1CD-7B74-41E6-AC18-A5CC9855DF79">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>153</behaviorFlags>
+				<caption>триггер на убийство</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FRsAAAACAAAAIgAAAD8AAABHNDI5X0luY3JlbWVudAAATWF4TGlmZVJlZwBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBdQnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG429_Increment &lt; cMaxLifeReg</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="0EB8AEE6-D814-4707-9DD2-6118A76C0807">
+					<EventProcessorGroup>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<processors>
+							<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="FF521EA4-7800-405B-8BBA-E141DE5474F1">
+								<EventProcessorUnitDieNearMe>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<checkSender>0</checkSender>
+									<killerFlags>9</killerFlags>
+									<range>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</range>
+									<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+									<spell href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="D1CB5396-6EB2-4C90-A158-DB1D7A3758A0">
+										<Spell>
+											<applicators>
+												<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="8045EE50-9CB7-428C-B2F0-DA7BA618B3B5">
+													<PermanentStatModApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>+LifeReg</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString>FRsAAAACAAAAIgAAAD8AAABHNDI5X0luY3JlbWVudAAATWF4TGlmZVJlZwBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBdQnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vG429_Increment &lt; cMaxLifeReg</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FR4AAAABAAAAKgAAAFRFQ0hfQWRkX0xpZmVSZWdIZXJvSnVzdGlmaWVkAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+																<returnType>float</returnType>
+																<sString>cTECH_Add_LifeRegHeroJustified</sString>
+															</addValue>
+															<multValue>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</multValue>
+															<stat>LifeRegenerationAbsolute</stat>
+															<topModifier>false</topModifier>
+															<variable></variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+												<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="5ACFD2BD-DF20-44FB-A19B-5EF47C886E10">
+													<PermanentStatModApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>G429_Increment hero</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString>FRsAAAACAAAAIgAAAD8AAABHNDI5X0luY3JlbWVudAAATWF4TGlmZVJlZwBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBdQnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vG429_Increment &lt; cMaxLifeReg</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FR4AAAABAAAAKgAAAFRFQ0hfQWRkX0xpZmVSZWdIZXJvSnVzdGlmaWVkAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+																<returnType>float</returnType>
+																<sString>cTECH_Add_LifeRegHeroJustified</sString>
+															</addValue>
+															<multValue>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</multValue>
+															<stat>Life</stat>
+															<topModifier>false</topModifier>
+															<variable>G429_Increment</variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="5E4659C5-EEA2-4A34-BC39-FAE4492DE48C">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+									<targets>536870915</targets>
+								</EventProcessorUnitDieNearMe>
+							</Item>
+							<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="F413C3B3-A781-458E-8B26-BBEA6B11D916">
+								<EventProcessorUnitDieNearMe>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<checkSender>0</checkSender>
+									<killerFlags>9</killerFlags>
+									<range>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</range>
+									<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+									<spell href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="FB96495B-7355-435C-B967-348C2F9C7D81">
+										<Spell>
+											<applicators>
+												<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="3D6B3E6E-3FCD-4D71-8CE7-A5582DF9E9E9">
+													<PermanentStatModApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>+LifeReg</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString>FRsAAAACAAAAIgAAAD8AAABHNDI5X0luY3JlbWVudAAATWF4TGlmZVJlZwBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBdQnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vG429_Increment &lt; cMaxLifeReg</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FR8AAAABAAAAKwAAAFRFQ0hfQWRkX0xpZmVSZWdDcmVlcEp1c3RpZmllZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+																<returnType>float</returnType>
+																<sString>cTECH_Add_LifeRegCreepJustified</sString>
+															</addValue>
+															<multValue>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</multValue>
+															<stat>LifeRegenerationAbsolute</stat>
+															<topModifier>false</topModifier>
+															<variable></variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+												<Item href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="906AA20D-E60D-45E6-8ED2-30255DEDB23C">
+													<PermanentStatModApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>G429_Increment creep</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString>FRsAAAACAAAAIgAAAD8AAABHNDI5X0luY3JlbWVudAAATWF4TGlmZVJlZwBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBdQnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vG429_Increment &lt; cMaxLifeReg</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FR8AAAABAAAAKwAAAFRFQ0hfQWRkX0xpZmVSZWdDcmVlcEp1c3RpZmllZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+																<returnType>float</returnType>
+																<sString>cTECH_Add_LifeRegCreepJustified</sString>
+															</addValue>
+															<multValue>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</multValue>
+															<stat>Life</stat>
+															<topModifier>false</topModifier>
+															<variable>G429_Increment</variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Items/Talents/Common/Obsolete/G429_Heal_perKill.TALENT" id="28764E45-388A-4CBF-BA9A-45FA726F32AD">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+									<targets>538705980</targets>
+								</EventProcessorUnitDieNearMe>
+							</Item>
+						</processors>
+						<spell href="" />
+					</EventProcessorGroup>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G429</persistentId>
+	<prerequisiteTalents />
+	<rarity>excellent</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>LifeRegenerationAbsolute</stat>
+			<values>
+				<Item>3.24</Item>
+				<Item>3.465</Item>
+				<Item>3.69</Item>
+				<Item>3.915</Item>
+				<Item>4.14</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>136258047</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ProgramApplicator>
 	<BackLink DBID="/Heroes/Faceless/_.HROB" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Faceless/Ability1.TALENT" Count="2" />
+	<BackLink DBID="/Items/Talents/Class/Faceless/Ability_A1.TALENT" Count="8" />
+	<BackLink DBID="/Items/Talents/Class/Faceless/A1Dagger.DSCH" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" Count="3" />
+	<BackLink DBID="/Items/Talents/Class/Faceless/A1Dagger_Target.DSCH" Count="1" />
 	<applicators>
 		<Item>
 			<applicator href="/Items/Talents/Class/Faceless/A2InstaKill.APLR" id="F4C06E89-1E93-4CEE-9FCA-EE37D83C4C02">
@@ -100,8 +103,8 @@
 	<LoggingEvent>-1</LoggingEvent>
 	<providerName></providerName>
 	<startCondition>
-		<compiledString>FWcAAAAKAAAAdgAAAIkAAACZAAAAsgAAAOgAAAAIAQAARgEAAGYBAACfAQAAxgEAAEF0a0RhbWFnZUNvbmRpdGlvbgAARmFjZWxlc3NfQTIARmFjZWxlc3NfQTIARmFjZWxlc3NfQTIAQTJNaW5MaWZlAAAAQW5jaWVudABDYW50RGVhdGgAAABHNDU1UG9seVN0YXR1cwBVi+yD7BSLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twd7AEAAN/g9sRED4tCAQAAaBQAAACLRQiLEItNCIuCqAEAAP/QhcB0KmggAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0N2gsAAAAi1UIiwKLTQiLkKgBAAD/0olF9ItFDFCLTQhRaDgAAACLVfSLAotN9ItQUP/S2V3w6wXZ7tld8ItFDIsQi00MiwL/0NlF8N7Z3+D2xEEPhZsAAABqAItNEFFoRAAAAItVDIsCi00Mi5CcAQAA/9I7RRB1e2oAi0UQUGhMAAAAi00MixGLTQyLgpwBAAD/0DtFEHVbaAAABACLTQyLEYtNDItCaP/QD7bIhcl1QmoAi1UQUmhYAAAAi0UMixCLTQyLgpwBAAD/0DtFEHUii00MixGLTQyLAv/Q3B3sAQAA3+D2xEF1CcdF7AEAAADrB8dF7AAAAACKReyL5V3DAAAAAAAAAAAAAAAA</compiledString>
+		<compiledString>FZ8AAAAOAAAArgAAAMEAAADRAAAA6gAAACABAABAAQAAeAEAAJEBAADHAQAA5wEAACYCAAA6AgAAcwIAAJoCAABBdGtEYW1hZ2VDb25kaXRpb24AAEZhY2VsZXNzX0EyAEZhY2VsZXNzX0EyAEZhY2VsZXNzX0EyAEEyTWluTGlmZQAAAEZhY2VsZXNzX0EyAEZhY2VsZXNzX0EyAEZhY2VsZXNzX0EyAEEyX0hlYWx0aFRocmVzaG9sZFBlcmNlbnQAAABDYW50RGVhdGgAAABHNDU1UG9seVN0YXR1cwBVi+yD7CyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twdyAIAAN/g9sRED4veAQAAaBQAAACLRQiLEItNCIuCqAEAAP/QhcB0KmggAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0N2gsAAAAi1UIiwKLTQiLkKgBAAD/0olF9ItFDFCLTQhRaDgAAACLVfSLAotN9ItQUP/S2V3w6wXZ7tld8ItFDIsQi00MiwL/0NlF8N7Z3+D2xEEPhLwAAABoRAAAAItNCIsRi00Ii4KoAQAA/9CFwHQqaFAAAACLTQiLEYtNCIuCqAEAAP/QiUXsi03sixGLTeyLQgT/0IhF6+sExkXrAA+2TeuFyXQ3aFwAAACLVQiLAotNCIuQqAEAAP/SiUXki0UMUItNCFFoaAAAAItV5IsCi03ki1BQ/9LZXeDrBdnu2V3gi0UMixCLTQyLAv/Qi00MixGLTQyLQgzdXdj/0Nx92NlF4Nw1vAIAAN7Z3+D2xEF1e2oAi00QUWiEAAAAi1UMiwKLTQyLkJwBAAD/0jtFEHVbaAAABACLRQyLEItNDItCaP/QD7bIhcl1QmoAi1UQUmiQAAAAi0UMixCLTQyLgpwBAAD/0DtFEHUii00MixGLTQyLAv/Q3B3IAgAA3+D2xEF1CcdF1AEAAADrB8dF1AAAAACKRdSL5V3DAAAAAAAAWUAAAAAAAAAAAAAAAAA=</compiledString>
 		<returnType>bool</returnType>
-		<sString>cAtkDamageCondition &amp;&amp; rLife &lt; talconst("Faceless_A2","A2MinLife") &amp;&amp; receiver.applAncient(GLOBAL) == pMisc &amp;&amp; receiver.applCantDeath(GLOBAL) == pMisc &amp;&amp; !rFlag(262144) &amp;&amp; receiver.applG455PolyStatus(GLOBAL) == pMisc &amp;&amp; rLife &gt; 0</sString>
+		<sString>cAtkDamageCondition &amp;&amp; (rLife &lt; talconst("Faceless_A2","A2MinLife") || rLife / rMaxLife &lt; talconst("Faceless_A2","A2_HealthThresholdPercent") / 100) &amp;&amp; receiver.applCantDeath(GLOBAL) == pMisc &amp;&amp; !rFlag(262144) &amp;&amp; receiver.applG455PolyStatus(GLOBAL) == pMisc &amp;&amp; rLife &gt; 0</sString>
 	</startCondition>
 </ProgramApplicator>

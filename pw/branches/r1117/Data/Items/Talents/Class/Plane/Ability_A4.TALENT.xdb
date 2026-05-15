@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Plane.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Plane.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Plane/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Plane/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Plane/Ability_A4u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Plane/status_A4_fly.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
@@ -968,6 +968,40 @@
 						<stopEvents>0</stopEvents>
 					</Item>
 					<Item>
+						<applicator href="/Items/Talents/Class/Plane/Ability_A4.TALENT" id="E75F6CF5-3F6E-4BE7-8F10-6C44FB10174E">
+							<AbilityEndApplicator>
+								<applyTarget>ApplicatorTarget</applyTarget>
+								<cancelApplicators>true</cancelApplicators>
+								<caption>EndOfAbility</caption>
+								<enabled>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</enabled>
+								<formulaName></formulaName>
+								<LoggingEvent>-1</LoggingEvent>
+								<providerName></providerName>
+							</AbilityEndApplicator>
+						</applicator>
+						<continueCondition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</continueCondition>
+						<continueEvents>1</continueEvents>
+						<delay>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0</sString>
+						</delay>
+						<stopCondition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>0</sString>
+						</stopCondition>
+						<stopEvents>0</stopEvents>
+					</Item>
+					<Item>
 						<applicator href="/Items/Talents/Class/Plane/Ability_A4.TALENT" id="A810EB3C-69FB-4365-86A7-AE5C0BECC784">
 							<FlagsApplicator>
 								<applyTarget>ApplicatorTarget</applyTarget>
@@ -1007,40 +1041,6 @@
 							<sString>0</sString>
 						</continueCondition>
 						<continueEvents>2</continueEvents>
-						<delay>
-							<compiledString></compiledString>
-							<returnType>float</returnType>
-							<sString>-1.0</sString>
-						</delay>
-						<stopCondition>
-							<compiledString></compiledString>
-							<returnType>bool</returnType>
-							<sString>0</sString>
-						</stopCondition>
-						<stopEvents>0</stopEvents>
-					</Item>
-					<Item>
-						<applicator href="/Items/Talents/Class/Plane/Ability_A4.TALENT" id="E75F6CF5-3F6E-4BE7-8F10-6C44FB10174E">
-							<AbilityEndApplicator>
-								<applyTarget>ApplicatorTarget</applyTarget>
-								<cancelApplicators>true</cancelApplicators>
-								<caption>EndOfAbility</caption>
-								<enabled>
-									<compiledString></compiledString>
-									<returnType>bool</returnType>
-									<sString>true</sString>
-								</enabled>
-								<formulaName></formulaName>
-								<LoggingEvent>-1</LoggingEvent>
-								<providerName></providerName>
-							</AbilityEndApplicator>
-						</applicator>
-						<continueCondition>
-							<compiledString></compiledString>
-							<returnType>bool</returnType>
-							<sString>0</sString>
-						</continueCondition>
-						<continueEvents>1</continueEvents>
 						<delay>
 							<compiledString></compiledString>
 							<returnType>float</returnType>
@@ -1105,8 +1105,8 @@
 		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Plane/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Plane/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Plane/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Plane/Ability_A4.TALENT" id="83E3A879-9F45-4CF8-AF32-9EDA4027CD5B">
 			<ConditionFormula>
@@ -1251,7 +1251,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>2</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Plane/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

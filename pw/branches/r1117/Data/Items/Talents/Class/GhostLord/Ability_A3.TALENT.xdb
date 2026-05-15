@@ -2,15 +2,16 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/GhostLord.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/GhostLord_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/GhostLord.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/GhostLord_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/GhostLord_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/GhostLord/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/GhostLord/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/GhostLord/status_A4u_2_DeathSpectre.APLR" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/GhostLord/status_A4u_DeathSpectre.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/GhostLord_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Test_Satanic.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Ghostlord/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Ghostlord/Elite_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Ghostlord/Elite_Str.TALENTSET" Count="1" />
@@ -87,6 +88,7 @@
 									<uiEvent href="" />
 								</DamageApplicator>
 							</Item>
+							<Item href="/Heroes/DefaultStatus/_SLOW_MOVE.APLR" />
 						</applicators>
 						<dispatch href="/Items/Talents/Class/GhostLord/Ability_A3.TALENT" id="9D35DA6C-7252-4B92-8F88-71F00720A3C0">
 							<DispatchImmediate>
@@ -256,8 +258,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/GhostLord/Ability_A3.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/GhostLord/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/GhostLord/Ability_A3.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas />
 	<conflictingTalents />
 	<constants href="/Items/Talents/Class/GhostLord/Ability_A3.TALENT" id="F7F8BA6B-9473-458D-B925-1F5C070A9B43">
@@ -295,6 +297,26 @@
 				</Item>
 				<Item href="/Items/Talents/Class/GhostLord/const_A4_A3cd" />
 				<Item href="/Items/Talents/Class/GhostLord/const_A4_AxeAddDamage" />
+				<Item href="/Items/Talents/Class/GhostLord/Ability_A3.TALENT" id="8809FC0F-CCC6-4241-B762-DA3510811C78">
+					<UnitConstant>
+						<name>DecMoveSpeed_WithReduction</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>20</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/GhostLord/Ability_A3.TALENT" id="814578C0-67D4-4483-82C4-79C3B5BB85DF">
+					<UnitConstant>
+						<name>Slow_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -334,7 +356,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>3</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/GhostLord/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

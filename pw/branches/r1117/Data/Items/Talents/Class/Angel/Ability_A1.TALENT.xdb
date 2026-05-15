@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Angel.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Angel_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Angel.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Angel_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Angel_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Angel/Ability_A1_SUP.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Angel/Ability_A1u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Angel/Ability_A5.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Angel/status_A5_DeathGhost.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Angel_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Angel/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Angel/Elite_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Angel/Elite_StrAsp.TALENTSET" Count="1" />
@@ -557,8 +557,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Angel/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Angel/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Angel/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Angel/Ability_A1.TALENT" id="ED03D49C-5723-451F-8CF0-5502E4FF22BF">
 			<ConditionFormula>
@@ -620,9 +620,9 @@
 					<UnitConstant>
 						<name>A1_Damage</name>
 						<var>
-							<compiledString>FQwAAAADAAAAFwAAACEAAABWAAAAQTFfRHVyYXRpb24AVYvsg+wMagFR2QV7AAAA2RwkUdkFdwAAANkcJGoAi0UIixCLTQiLgjABAAD/0FHZHCRqAYtNEIsRi00Qi0Jg/9CLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlDdXfj/0Nx9+Nld9NlF9IvlXcMAAEBCAAC0Qw==</compiledString>
+							<compiledString>FQwAAAADAAAAFwAAACEAAABWAAAAQTFfRHVyYXRpb24AVYvsg+wMagFR2QV7AAAA2RwkUdkFdwAAANkcJGoAi0UIixCLTQiLgjABAAD/0FHZHCRqAYtNEIsRi00Qi0Jg/9CLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlDdXfj/0Nx9+Nld9NlF9IvlXcMAAGhCAADYQw==</compiledString>
 							<returnType>float</returnType>
-							<sString>damageScale(sStrength, 48, 360) / cA1_Duration</sString>
+							<sString>damageScale(sStrength, 58, 432) / cA1_Duration</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -755,7 +755,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>67</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Angel/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

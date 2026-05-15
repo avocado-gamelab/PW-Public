@@ -2,7 +2,13 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Witcher.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Witcher_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Witcher/Ability_A4_2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Witcher/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Witcher/Ability_A4u.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
 	<BackLink DBID="/Maps/PvE/Series/Episode1/Talents/witcher/Ability4.TALENT" Count="1" />
 	<BackLink DBID="/Test/Talents/Witcher/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Witcher/Duel_Str.TALENTSET" Count="1" />
@@ -10,12 +16,6 @@
 	<BackLink DBID="/Test/Talents/Witcher/Elite_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Witcher/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Witcher/Epic_Str.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Witcher/Ability_A4_2u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Witcher/Ability_A4_2.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Witcher.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Witcher_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -705,8 +705,8 @@
 		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Witcher/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Witcher/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Witcher/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Witcher/Ability_A4.TALENT" id="3D42F2D0-6FC8-405C-8048-789BD90D4ADE">
 			<ConditionFormula>
@@ -848,7 +848,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>523</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Witcher/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

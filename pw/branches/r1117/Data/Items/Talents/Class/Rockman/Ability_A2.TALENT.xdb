@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Rockman.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Rockman_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Rockman/Ability_A2_Upg.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Rockman_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Episode1/Talents/DuelRockman_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Rockman/Duel_Life.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Rockman/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Rockman/Elite_Life.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Rockman/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Rockman/Epic_StrLife.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>2</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А2. Поступь гиганта / Ошеломляющие удары</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Class/Rockman/Ability_A2.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Rockman/Ability_A2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Rockman/Ability_A2.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas />
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/Rockman/Ability_A2.TALENT" id="01C9BDD6-49F9-4413-8A55-5F90729622E1">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Rockman/Ability_A2.TALENT" id="69F67D8F-A9F8-46EA-A570-586A255CFDD4">
+					<UnitConstant>
+						<name>Dec_MoveSpeed_Attack</name>
+						<var>
+							<compiledString>FVoAAAAGAAAAYQAAAHoAAACwAAAA0AAAAPQAAAARAQAAQmFzZVNsb3cAAAAAUm9ja21hbl9BMl9VcGcAAFJvY2ttYW5fQTJfVXBnAABSb2NrbWFuX0EyX1VwZwAAQTJ1X3Nsb3cAAAAAQTJfQXR0YWNrU2xvd011bHQAVYvsg+wcaAwAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgcAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0N2gsAAAAi1UIiwKLTQiLkKgBAAD/0olF9ItFDFCLTQhRaDwAAACLVfSLAotN9ItQUP/S2V3w6wXZ7tld8ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S2EXwi0UMUItNCFFoSAAAAItVEIsCi00Qi1BQ3V3o/9LcTejZXeTZReSL5V3DAAAAAA==</compiledString>
+							<returnType>float</returnType>
+							<sString>(cBaseSlow + talconst("Rockman_A2_Upg","A2u_slow")) * cA2_AttackSlowMult</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Rockman/Ability_A2.TALENT" id="42C1178A-B6DB-4242-BF29-4E1E79948265">
+					<UnitConstant>
+						<name>Dec_MoveSpeed</name>
+						<var>
+							<compiledString>FUUAAAAFAAAATAAAAGUAAACbAAAAuwAAAN8AAABCYXNlU2xvdwAAAABSb2NrbWFuX0EyX1VwZwAAUm9ja21hbl9BMl9VcGcAAFJvY2ttYW5fQTJfVXBnAABBMnVfc2xvdwBVi+yD7BRoDAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQ3aCwAAACLVQiLAotNCIuQqAEAAP/SiUX0i0UMUItNCFFoPAAAAItV9IsCi030i1BQ/9LZXfDrBdnu2V3wi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LYRfDZXezZReyL5V3DAAAAAA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cBaseSlow + talconst("Rockman_A2_Upg","A2u_slow")</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Rockman/Ability_A2.TALENT" id="37A8602A-6C38-4C68-A1F3-7EF347F40FF7">
+					<UnitConstant>
+						<name>Slow_Duration</name>
+						<var>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Rockman/Ability_A2.TALENT" id="7E44BF92-07E8-4F63-9276-FC32FDA578FB">
+					<UnitConstant>
+						<name>Slow_Duration_Attack</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DMzMzPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>0.7</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Rockman/Ability_A2.TALENT" id="C5AB6336-3014-46EB-BD5C-CCE1902C785F">
+					<UnitConstant>
+						<name>Slow_Self</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Rockman/const_A2_AttackSlowMult" />
+				<Item href="/Items/Talents/Class/Rockman/Ability_A2.TALENT" id="C4106C51-B607-42D2-A7F2-ED9BB27843AF">
+					<UnitConstant>
+						<name>BaseSlow</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>20</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Rockman/Ability_A2.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Class/Rockman/Ability_A2.TALENT" id="4AABB93E-EFD9-4566-A4B2-E4B14769A4CD">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>2</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Rockman/A2.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="/Items/Talents/Class/Rockman/Ability_A2.TALENT" id="97C73EDC-7A6D-43D2-9CFC-6AD67E015C7D">
+		<BasicMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</condition>
+		</BasicMicroAI>
+	</microAI>
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>390</naftaCost>
+	<name textref="/Items/Talents/Class/Rockman/Ability_A2.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Class/Rockman/Ability_A2.TALENT" id="FA98F277-DA3D-4F4A-A8A5-1C30754C334A">
+			<AbilityUpgradeApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Class/Rockman/Ability_A2.TALENT" id="48A713F1-D242-40CD-82B3-285271D29154">
+						<StatusApplicator parent="/Heroes/DefaultStatus/_SLOW_MOVE.APLR">
+							<applicators>
+								<Item href="/Items/Talents/Class/Rockman/Ability_A2.TALENT" id="6F8A4E5D-BC75-4A2F-B379-29B32A03A9DE">
+									<StatModApplicator>
+										<applyTarget>ApplicatorTarget</applyTarget>
+										<behaviorFlags>152</behaviorFlags>
+										<caption> -- Уменьшаем Движение</caption>
+										<constraint>None</constraint>
+										<dontUpdate>false</dontUpdate>
+										<effect>
+											<Item href="" />
+											<Item href="" />
+										</effect>
+										<enabled>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</enabled>
+										<formulaName></formulaName>
+										<lifeTime>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>-1.0</sString>
+										</lifeTime>
+										<LoggingEvent>-1</LoggingEvent>
+										<modifier>
+											<addValue>
+												<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+												<returnType>float</returnType>
+												<sString>0</sString>
+											</addValue>
+											<multValue>
+												<compiledString>FRUAAAACAAAAIgAAADUAAABEZWNfTW92ZVNwZWVkX0F0dGFjawBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcDU8AAADZ6N7h2V382UX8i+VdwwAAAAAAAPA/exSuR+F6hD8=</compiledString>
+												<returnType>float</returnType>
+												<sString>1 - cDec_MoveSpeed_Attack * 0.01</sString>
+											</multValue>
+											<stat>MoveSpeed</stat>
+											<topModifier>false</topModifier>
+											<variable></variable>
+										</modifier>
+										<providerName></providerName>
+										<startCondition>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</startCondition>
+										<statModName>Dec_MoveSpeed</statModName>
+									</StatModApplicator>
+								</Item>
+								<Item skip="1" />
+								<Item skip="1" />
+							</applicators>
+							<description textref="/Items/Talents/Class/Rockman/Ability_A2.TALENT_48a713f1d24240cd82b3285271d29154_description.txt" />
+							<lifeTime>
+								<compiledString>FRUAAAABAAAAIQAAAFNsb3dfRHVyYXRpb25fQXR0YWNrAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+								<returnType>float</returnType>
+								<sString>cSlow_Duration_Attack</sString>
+							</lifeTime>
+						</StatusApplicator>
+					</Item>
+				</applicators>
+				<applyCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</applyCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Замедляющие атаки</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLAv/QD7bA99gbwIPAAV3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>mIsAbilityOn == 0</sString>
+				</enabled>
+				<flags>0</flags>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<persistentApplicators />
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents />
+				<targetAbility>BaseAttack</targetAbility>
+				<useListAs>ListAsRule</useListAs>
+			</AbilityUpgradeApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Rockman/Ability_A2.TALENT" id="696EFED6-B988-4B0A-8059-8466400DDC48">
+			<AuraApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Class/Rockman/Ability_A2.TALENT" id="E359241B-01ED-4F2C-901E-8EE3321B523E">
+						<StatusApplicator parent="/Heroes/DefaultStatus/_SLOW_MOVE.APLR">
+							<dispellPriority>NonDispellable</dispellPriority>
+						</StatusApplicator>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>-- slowing aura + visual on hero</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLAv/QD7bAg+gB99gbwIPAAV3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>mIsAbilityOn == 1</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+					<returnType>float</returnType>
+					<sString>-1</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<range>
+					<compiledString>FQ0AAAABAAAAGQAAAFJhbmdlX01lZGl1bQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+					<returnType>float</returnType>
+					<sString>cRange_Medium</sString>
+				</range>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<targets>538705983</targets>
+				<targetSelector href="" />
+				<type>None</type>
+			</AuraApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Rockman/Ability_A2.TALENT" id="D521C7AA-3A8C-4201-B6E2-6A7355F371E4">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>Замедляем себя</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLAv/QD7bAg+gB99gbwIPAAV3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>mIsAbilityOn == 1</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQoAAAABAAAAFgAAAFNsb3dfU2VsZgBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0tngXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>-cSlow_Self</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>MoveSpeed</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Rockman/status_A2_Giants_footfall.APLR" />
+	</passiveApplicators>
+	<persistentId>Rockman_A2</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Class/Rockman/Ability_A2.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Switchable</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQ0AAAABAAAAGQAAAFJhbmdlX01lZGl1bQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Medium</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

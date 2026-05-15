@@ -2,9 +2,9 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Inventor.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Inventor_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Inventor_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Inventor.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Inventor_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Inventor_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Inventor/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Inventor/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Inventor/Elite_Int.TALENTSET" Count="1" />
@@ -42,8 +42,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Inventor/Ability_A0.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Inventor/Ability_A0.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Inventor/Ability_A0.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas />
 	<conflictingTalents />
 	<constants href="/Items/Talents/Class/Inventor/Ability_A0.TALENT" id="ED6C1445-C280-49C8-8A59-2AB3225F5ED9">
@@ -87,6 +87,8 @@
 				<Item href="/Items/Talents/Class/Inventor/const_A0_TechDetailsperHastPercent" />
 				<Item href="/Items/Talents/Class/Inventor/const_A0_Haste_Duration" />
 				<Item href="/Items/Talents/Class/Inventor/const_A0_BaseAttackPerDetail" />
+				<Item href="/Items/Talents/Class/Inventor/const_A0_MaxMoveSpeedPercent" />
+				<Item href="/Items/Talents/Class/Inventor/const_A0_BaseAttackTotal" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -108,7 +110,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>5</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Inventor/A0.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -437,6 +439,53 @@
 			</StatModApplicator>
 		</Item>
 		<Item href="/Heroes/DefaultStatus/_ManalessHero.APLR" />
+		<Item href="/Items/Talents/Class/Inventor/Ability_A0.TALENT" id="3C30EF55-88FC-46FA-98CE-B4BDA20CC9AE">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>8</behaviorFlags>
+				<caption>Увеличиваем BaseAttack героя</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FREAAAACAAAAHgAAADEAAABBMF9CYXNlQXR0YWNrTW9kAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNPwAAANld/NlF/IvlXcN7FK5H4XqEPw==</compiledString>
+						<returnType>float</returnType>
+						<sString>cA0_BaseAttackMod * 0.01</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>BaseAttack</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
 	</passiveApplicators>
 	<persistentId>Inventor_A0</persistentId>
 	<prerequisiteTalents />

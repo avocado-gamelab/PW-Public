@@ -4,10 +4,11 @@
 	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A3.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A4.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A4_2.TALENT" Count="1" />
 	<name>Haste_Percent</name>
 	<var>
-		<compiledString>FU0AAAADAAAAXAAAAG4AAACOAAAAVGVjaF9IYXN0ZVBlcmNlbnRfcGVyX2RldGFpbAAAAABEZXRhaWxzU3BlbmQAAAAAVGVjaF9kZXRhaWxzX3Blcl9IYXN0UGVyY2VudABVi+yD7BSLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0mggAAAAi0UIixCLTQiLgogBAADdXfj/0ItNDFGLVQhSaDAAAACLRRCLEItNEItCUN1d8P/Q3H3w3E342V3s2UXsi+Vdww==</compiledString>
+		<compiledString>FWUAAAAEAAAAdAAAAJIAAACkAAAAxAAAAEEwX01heE1vdmVTcGVlZFBlcmNlbnQAAFRlY2hfSGFzdGVQZXJjZW50X3Blcl9kZXRhaWwAAAAARGV0YWlsc1NwZW5kAAAAAFRlY2hfZGV0YWlsc19wZXJfSGFzdFBlcmNlbnQAVYvsg+wUi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JR2Rwki0UMUItNCFFoGAAAAItVEIsCi00Qi1BQ/9JoOAAAAItFCIsQi00Ii4KIAQAA3V34/9CLTQxRi1UIUmhIAAAAi0UQixCLTRCLQlDdXfD/0Nx98NxN+Nld7NlF7FHZHCToBwAAAIPECIvlXcNVi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
 		<returnType>float</returnType>
-		<sString>cTech_HastePercent_per_detail*(sender.vDetailsSpend/cTech_details_per_HastPercent)</sString>
+		<sString>min(cTech_HastePercent_per_detail*(sender.vDetailsSpend/cTech_details_per_HastPercent), cA0_MaxMoveSpeedPercent)</sString>
 	</var>
 </UnitConstant>

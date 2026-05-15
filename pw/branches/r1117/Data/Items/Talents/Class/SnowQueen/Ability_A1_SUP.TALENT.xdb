@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/SnowQueen.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/SnowQueen.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A2_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/SnowQueen_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A3_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -34,8 +34,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/SnowQueen/Ability_A1_SUP.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/SnowQueen/Ability_A1_SUP.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/SnowQueen/Ability_A1_SUP.TALENT" id="8C5295DA-C91E-4229-A401-4CCCF750EEC6">
 			<ConditionFormula>
@@ -50,6 +50,7 @@
 	</conditionFormulas>
 	<conflictingTalents>
 		<Item href="/Items/Talents/Class/SnowQueen/Ability_A2_SUP.TALENT" />
+		<Item href="/Items/Talents/Class/SnowQueen/Ability_A3_SUP.TALENT" />
 	</conflictingTalents>
 	<constants href="/Items/Talents/Class/SnowQueen/Ability_A1_SUP.TALENT" id="2717EE35-CC3B-4C0C-AEDD-1E6D34244B3E">
 		<UnitConstantsContainer>
@@ -66,6 +67,7 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/SnowQueen/const_A1_NightDamageMultiplierPercent" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -87,7 +89,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>22.7</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/SnowQueen/A1_SUP.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UnitConstant>
+	<BackLink DBID="/Items/Talents/Common/G626_Int.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G625_Str.TALENT" Count="1" />
+	<name>G625_G626_Add_Stat</name>
+	<var>
+		<compiledString>FU4AAAAGAAAAVQAAAG4AAACkAAAAygAAAN4AAAACAQAARzYyNV9HNjI2X0Jhc2VTdGF0Qm9udXMARzYyMwAAAABHNjIzAAAAAEc2MjMAAAAARzYyNV9HNjI2X1N0YXRCb251c011bHRpcGxpZXIAVYvsg+wUaBgAAACLRQiLEItNCIuCqAEAAP/QhcB0KmggAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0UWgoAAAAi1UIiwKLTQiLkKgBAAD/0olF9ItF9IsQi030i0Ic/9DcHSQBAADf4PbERHofi00MUYtVCFJoMAAAAItFEIsQi00Qi0JQ/9DZXfDrBdno2V3wi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ/9DYTfDZXezZReyL5V3DAACAPwAAAAAAAPA/</compiledString>
+		<returnType>float</returnType>
+		<sString>cG625_G626_BaseStatBonus * (tal("G623") &amp;&amp; pFirst-&gt;GetTalent("G623")-&gt; GetPreparedness() == 1.0f ? cG625_G626_StatBonusMultiplier : 1)</sString>
+	</var>
+</UnitConstant>

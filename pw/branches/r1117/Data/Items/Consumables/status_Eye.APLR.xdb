@@ -3,12 +3,84 @@
 	<BackLink DBID="/Items/Consumables/EyeOfSeeing.ARCT" Count="1" />
 	<BackLink DBID="/Items/Consumables/EyeOfSeeingCheap.ARCT" Count="1" />
 	<BackLink DBID="/Items/Consumables/EyeOfSeeingCheapest.ARCT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G076_Portal.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G201_Life_Portal.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G341_Aspd_CreateWard.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G510_FireWard.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/Obsolete/G076_Portal.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/Obsolete/G201_Life_Portal.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G341_Aspd_CreateWard.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G510_FireWard.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset7_7_Glyph/Summon_Glyph.APLR" Count="1" />
 	<applicators>
+		<Item href="/Items/Consumables/status_Eye.APLR" id="E16A52AD-BBEA-4FBF-AE6D-5D2453C5C57D">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>144</behaviorFlags>
+				<caption>Меняем входящий урон (герои и здания)</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName>Ward</formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Consumables/status_Eye.APLR" id="04F1E207-EAAC-4FB7-9551-9EDF3EEB5F17">
+					<EventProcessorDamageTransformer>
+						<abilityFilter>
+							<abilitiesList />
+							<abilityCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</abilityCondition>
+							<abilityCostMode>Energy</abilityCostMode>
+							<exceptThis>false</exceptThis>
+							<flags>1610614015</flags>
+							<onlySingleTarget>false</onlySingleTarget>
+						</abilityFilter>
+						<add>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>5.0f</sString>
+						</add>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<checkSender>2</checkSender>
+						<damageTypeFilter>31</damageTypeFilter>
+						<flags>0</flags>
+						<matchTargetInverted>false</matchTargetInverted>
+						<mul>
+							<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</mul>
+						<objectFilter>840696259</objectFilter>
+						<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+						<spell href="" />
+						<treatDelegatedByDelegator>false</treatDelegatedByDelegator>
+					</EventProcessorDamageTransformer>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
 		<Item href="/Items/Consumables/status_Eye.APLR" id="6A0D4EE6-43FD-42F0-8A39-7D3F1EA906EC">
 			<TriggerApplicator>
 				<actionsCount>
@@ -18,13 +90,13 @@
 				</actionsCount>
 				<applyTarget>ApplicatorTarget</applyTarget>
 				<behaviorFlags>144</behaviorFlags>
-				<caption>Меняем входящий урон </caption>
+				<caption>Меняем входящий урон (крипы и саммоны)</caption>
 				<effect>
 					<Item href="" />
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString></compiledString>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
 					<returnType>bool</returnType>
 					<sString>true</sString>
 				</enabled>
@@ -51,12 +123,12 @@
 							<onlySingleTarget>false</onlySingleTarget>
 						</abilityFilter>
 						<add>
-							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
 							<returnType>float</returnType>
-							<sString>1.0f</sString>
+							<sString>2.0f</sString>
 						</add>
 						<applyTarget>ApplicatorTarget</applyTarget>
-						<checkSender>0</checkSender>
+						<checkSender>2</checkSender>
 						<damageTypeFilter>31</damageTypeFilter>
 						<flags>0</flags>
 						<matchTargetInverted>false</matchTargetInverted>
@@ -65,7 +137,7 @@
 							<returnType>float</returnType>
 							<sString>0.0f</sString>
 						</mul>
-						<objectFilter>1901055</objectFilter>
+						<objectFilter>838860860</objectFilter>
 						<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
 						<spell href="" />
 						<treatDelegatedByDelegator>false</treatDelegatedByDelegator>

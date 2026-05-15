@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Dryad.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Dryad_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Dryad.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Dryad_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Dryad/Ability_A3.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Dryad/Ability_A3u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Dryad/status_A3_Tree.APLR" Count="2" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Dryad_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Dryad_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -367,8 +367,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Dryad/Ability_A3.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Dryad/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Dryad/Ability_A3.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Dryad/Ability_A3.TALENT" id="E270A8C8-9ED1-4920-9783-0C7226D6CAB1">
 			<ConditionFormula>
@@ -444,7 +444,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>2</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Dryad/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

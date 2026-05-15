@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AbilityUpgradeApplicator>
 	<BackLink DBID="/Items/Talents/TalentKits/Redset4_4_Axes/status_G562_AntiCreepProc.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Level1/G562_AxesBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G562_AxesBase.TALENT" Count="1" />
 	<applicators>
 		<Item href="/Items/Talents/TalentKits/Redset4_4_Axes/status_ImproveAA.APLR" id="15081736-C560-48EA-9BE8-9D874A0AA774">
 			<SpellApplicator>
 				<applyTarget>ApplicatorTarget</applyTarget>
-				<caption>Спелл действует только на существ и солдат</caption>
+				<caption>Спелл действует на солдат, саммонов и боссов</caption>
 				<enabled>
-					<compiledString>FQsAAAACAAAAbAAAAIIAAABJbW11bmUyQXhlAFWL7IPsCItFDIsQi00Mi0JQ/9CD+AN0SItNDIsRi00Mi0JQ/9CD+AR0NotNDIsRi00Mi0JQ/9CD+AV0JItNDIsRi00Mi0JQ/9CD+BJ0EotNDIsRi00Mi0JQ/9CD+BN1QWgAAAAAi00MixGLTQyLgogBAAD/0NwdugAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAg338AXUJx0X4AQAAAOsHx0X4AAAAAIpF+IvlXcMAAAAAAAAAAA==</compiledString>
+					<compiledString>FQsAAAACAAAAWgAAAHAAAABJbW11bmUyQXhlAFWL7IPsCItFDIsQi00Mi0JQ/9CD+AJ0NotNDIsRi00Mi0JQ/9CD+AN0JItNDIsRi00Mi0JQ/9CD+AR0EotNDIsRi00Mi0JQ/9CD+BN1QWgAAAAAi00MixGLTQyLgogBAAD/0NwdqAAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAg338AXUJx0X4AQAAAOsHx0X4AAAAAIpF+IvlXcMAAAAAAAAAAA==</compiledString>
 					<returnType>bool</returnType>
-					<sString>(rUnitKind == 3 || rUnitKind == 4 || rUnitKind == 5 || rUnitKind == 18 || rUnitKind == 19) &amp;&amp; (!receiver.vImmune2Axe==1)</sString>
+					<sString>(rUnitKind == 2 || rUnitKind == 3 || rUnitKind == 4 || rUnitKind == 19) &amp;&amp; (!receiver.vImmune2Axe==1)</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<LoggingEvent>-1</LoggingEvent>
@@ -44,7 +44,24 @@
 															<sString>cAddDamage</sString>
 														</damage>
 														<damageMode>0</damageMode>
-														<damageType>Material</damageType>
+														<damageType>Pure</damageType>
+														<enabled>
+															<compiledString>FQwAAAACAAAAEQAAACcAAABBeGVEYW1hZ2VDRABVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xER6CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vAxeDamageCD == 0</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<providerName></providerName>
+														<timeLimiter>-1</timeLimiter>
+														<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed.UIEV" />
+													</DamageApplicator>
+												</Item>
+												<Item href="/Items/Talents/TalentKits/Redset4_4_Axes/status_ImproveAA.APLR" id="D03567E8-7E41-455F-BD42-C0B97519704E">
+													<PermanentStatModApplicator>
+														<applyTarget>AbilityOwner</applyTarget>
+														<caption>Запрещаем в этом кадре наносить урон топором</caption>
+														<customApplyType>None</customApplyType>
 														<enabled>
 															<compiledString></compiledString>
 															<returnType>bool</returnType>
@@ -52,10 +69,23 @@
 														</enabled>
 														<formulaName></formulaName>
 														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																<returnType>float</returnType>
+																<sString>1</sString>
+															</addValue>
+															<multValue>
+																<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																<returnType>float</returnType>
+																<sString>1</sString>
+															</multValue>
+															<stat>Life</stat>
+															<topModifier>false</topModifier>
+															<variable>AxeDamageCD</variable>
+														</modifier>
 														<providerName></providerName>
-														<timeLimiter>-1</timeLimiter>
-														<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
-													</DamageApplicator>
+													</PermanentStatModApplicator>
 												</Item>
 											</applicators>
 											<dispatch href="/Items/Talents/TalentKits/Redset4_4_Axes/status_ImproveAA.APLR" id="24338FD7-77E2-4A64-85ED-4B7C27E10975">

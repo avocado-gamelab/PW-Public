@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Archeress.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Archeress.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Archeress_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Archeress/Ability_A2_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Archeress_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -34,8 +34,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Archeress/Ability_A1_SUP.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Archeress/Ability_A1_SUP.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Archeress/Ability_A1_SUP.TALENT" id="EE7EE961-6A22-4099-AE97-82C7808314C7">
 			<ConditionFormula>
@@ -57,6 +57,7 @@
 				<Item href="/Items/Talents/Class/Archeress/const_A1_SUP_ChannelTime" />
 				<Item href="/Items/Talents/Class/Archeress/const_A1_SUP_ReductionAmount" />
 				<Item href="/Items/Talents/Class/Archeress/const_A1_SUP_Damage" />
+				<Item href="/Items/Talents/Class/Archeress/const_A1_SUP_RangeMultiplier" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -78,7 +79,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>16</forceBonus>
+	<forceBonus>22.7</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Archeress/A1_SUP.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

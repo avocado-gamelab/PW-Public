@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
-	<BackLink DBID="/Items/Talents/Class/ThunderGod/Ability1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" Count="1" />
 	<BackLink DBID="/Maps/Tutorial/Talents/Tutorial_ThunderGod.TALENT" Count="1" />
 	<applicators>
 		<Item href="/Items/Talents/Class/ThunderGod/status_A1_Debuff.APLR" id="8219E502-01DD-4F89-A5BB-DC471BDD450C">
@@ -90,9 +90,9 @@
 	<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
 	<stackCount>0</stackCount>
 	<startCondition>
-		<compiledString>FTgAAAAFAAAAPwAAAFUAAABnAAAAgQAAAJoAAABBMVNhdmVTdGFjawBBMURlYnVmZgAAAABUaHVuZGVyX0ExX1VwZzIAVGh1bmRlcl9BMV9VcGcyAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0Nwd5gAAAN/g9sRBdXhqAYtNEFFoDAAAAItVCIsCi00Ii5CcAQAA/9I7RRB1WGgYAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoKAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdAnHRfQBAAAA6wfHRfQAAAAAikX0i+VdwwAAAAAAAAAA</compiledString>
+		<compiledString>FT8AAAAFAAAARgAAAFwAAABuAAAAiAAAAKEAAABBMVNhdmVTdGFjawBBMURlYnVmZgAAAABUaHVuZGVyR29kX0ExX1VwZzIAAFRodW5kZXJHb2RfQTFfVXBnMgBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9DcHe0AAADf4PbEQXV4agGLTRBRaAwAAACLVQiLAotNCIuQnAEAAP/SO0UQdVhoGAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaCwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcMAAAAAAAAAAA==</compiledString>
 		<returnType>bool</returnType>
-		<sString>(sender.vA1SaveStack&gt;0) &amp;&amp; (sender.applA1Debuff(UNIT) == pMisc)&amp;&amp;tal("Thunder_A1_Upg2")</sString>
+		<sString>(sender.vA1SaveStack&gt;0) &amp;&amp; (sender.applA1Debuff(UNIT) == pMisc)&amp;&amp;tal("ThunderGod_A1_Upg2")</sString>
 	</startCondition>
 	<statusPosition>0</statusPosition>
 	<stopBehaviour>StopByTime</stopBehaviour>

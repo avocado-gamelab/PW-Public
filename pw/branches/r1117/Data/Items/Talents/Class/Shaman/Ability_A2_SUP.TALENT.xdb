@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Shaman.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Shaman_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Shaman/Ability_A0.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Shaman.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Shaman_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Shaman/Ability_A0_SUP.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Shaman/Ability_A3_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -34,8 +36,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Shaman/Ability_A2_SUP.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Shaman/Ability_A2_SUP.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Shaman/Ability_A2_SUP.TALENT" id="B896DBE8-867E-4713-AF13-F09FBDC8E730">
 			<ConditionFormula>
@@ -50,6 +52,7 @@
 	</conditionFormulas>
 	<conflictingTalents>
 		<Item href="/Items/Talents/Class/Shaman/Ability_A0_SUP.TALENT" />
+		<Item href="/Items/Talents/Class/Shaman/Ability_A3_SUP.TALENT" />
 	</conflictingTalents>
 	<constants href="/Items/Talents/Class/Shaman/Ability_A2_SUP.TALENT" id="66E2E9DA-2A5D-4A64-AAC8-57C3E05C5889">
 		<UnitConstantsContainer>
@@ -76,7 +79,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>22.7</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Shaman/A2_SUP.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

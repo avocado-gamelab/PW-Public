@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/FireFox.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/FireFox/Ability_A4_2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/FireFox/Ability_A4_2U.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/FireFox_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/Tutorial/Talents/FireFoxM1.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/Tutorial/Talents/M2_FireFox.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Firefox/Duel_HpInt.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Firefox/Duel_StrInt.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Firefox/Elite_HpInt.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Firefox/Elite_StrInt.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Firefox/Epic_IntDex.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Firefox/Epic_StrDex.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А4у. Щит огня</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations>
+		<Item href="/Items/Talents/Class/FireFox/Ability_A4_Upg1.TALENT" id="D604DEF1-E9E3-4076-B0E2-9D2A434935B9">
+			<ConditionCastLimitation>
+				<condition>
+					<compiledString>FR4AAAACAAAAIwAAADwAAABGaXJlZm94X0E0XzIAAAAARmlyZWZveF9BNF8yVQBVi+xRaAAAAACLRQiLEItNCIuCqAEAAP/QhcB1ImgQAAAAi00IixGLTQiLgqgBAAD/0IXAdQnHRfwBAAAA6wfHRfwAAAAAikX8i+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>!sender.GetTalent( "Firefox_A4_2" ) &amp;&amp; !sender.GetTalent( "Firefox_A4_2U" )</sString>
+				</condition>
+				<uiEvent href="" />
+			</ConditionCastLimitation>
+		</Item>
+	</castLimitations>
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/FireFox/Ability_A4_Upg1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/FireFox/Ability_A4_Upg1.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/FireFox/Ability_A4_Upg1.TALENT" id="2A4EAEFD-CA47-4646-B128-D8D1D78BA4A3">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRcAAAACAAAAHgAAADcAAABGaXJlZm94X0E0AABGaXJlZm94X0E0AFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoDAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZF+/fYG8CDwAGL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Firefox_A4") == false</sString>
+				</condition>
+				<name>Firefox_A4</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents>
+		<Item href="/Items/Talents/Class/FireFox/Ability_A4_2.TALENT" />
+		<Item href="/Items/Talents/Class/FireFox/Ability_A4_2U.TALENT" />
+	</conflictingTalents>
+	<constants href="/Items/Talents/Class/FireFox/Ability_A4_Upg1.TALENT" id="A1961E18-B2F7-48F4-9342-82EB362F6C96">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/FireFox/const_A4u_DamageReductionPercent" />
+				<Item href="/Items/Talents/Class/FireFox/const_A4u_DamRedPercentBase" />
+				<Item href="/Items/Talents/Class/FireFox/const_A4u_DamRedPercentTerrain" />
+				<Item href="/Items/Talents/Class/FireFox/const_A4u_DamRedPercentMaxTT" />
+				<Item href="/Items/Talents/Class/FireFox/const_A4u_HealthRecovery" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/FireFox/Ability_A4_Upg1.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>13.21</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Firefox/A4.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>2</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>440</naftaCost>
+	<name textref="/Items/Talents/Class/FireFox/Ability_A4_Upg1.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators />
+	<persistentId>Firefox_A4_Upg1</persistentId>
+	<prerequisiteTalents>
+		<Item href="/Items/Talents/Class/FireFox/Ability_A4.TALENT" />
+	</prerequisiteTalents>
+	<rarity>Class</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>2040319</targetType>
+	<type>Passive</type>
+	<upgradeLevel>1</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

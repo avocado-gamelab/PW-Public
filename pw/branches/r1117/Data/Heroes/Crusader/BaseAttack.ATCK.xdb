@@ -22,6 +22,7 @@
 	<applicators>
 		<Item href="/Effects/Shots/HitsApplicators/MeleeHeroGreen.APLR" />
 		<Item href="/GameLogic/GeneralApplicators/BaseAttackDmg_Hero.APLR" />
+		<Item href="/Heroes/status_TowerMultiplayerDamage.APLR" />
 	</applicators>
 	<autoTargetSelector href="" />
 	<caption></caption>
@@ -35,7 +36,14 @@
 	<compiledDescriptionA textref="" />
 	<compiledDescriptionB textref="" />
 	<conditionFormulas />
-	<constants href="" />
+	<constants href="/Heroes/Crusader/BaseAttack.ATCK" id="05600A59-C334-46F0-B2B0-0E0C1601D5C1">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Heroes/const_TowerDamgeBuff" />
+				<Item href="" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
 	<cooldownTime>
 		<compiledString></compiledString>
 		<returnType>float</returnType>

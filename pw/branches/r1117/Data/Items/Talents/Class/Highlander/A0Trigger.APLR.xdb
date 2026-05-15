@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TriggerApplicator>
-	<BackLink DBID="/Items/Talents/Class/Highlander/Ability0.TALENT" Count="2" />
+	<BackLink DBID="/Items/Talents/Class/Highlander/Ability_A0.TALENT" Count="2" />
 	<actionsCount>
 		<compiledString></compiledString>
 		<returnType>int</returnType>
@@ -66,6 +66,36 @@
 									<stat>Life</stat>
 									<topModifier>false</topModifier>
 									<variable></variable>
+								</modifier>
+								<providerName></providerName>
+							</PermanentStatModApplicator>
+						</Item>
+						<Item href="/Items/Talents/Class/Highlander/A0Trigger.APLR" id="D8DA1BAB-DDAB-4CB3-B91F-29150DB6E865">
+							<PermanentStatModApplicator>
+								<applyTarget>ApplicatorTarget</applyTarget>
+								<caption>Запоминаем повышение здоровья</caption>
+								<customApplyType>None</customApplyType>
+								<enabled>
+									<compiledString></compiledString>
+									<returnType>bool</returnType>
+									<sString>true</sString>
+								</enabled>
+								<formulaName></formulaName>
+								<LoggingEvent>-1</LoggingEvent>
+								<modifier>
+									<addValue>
+										<compiledString>FQ0AAAABAAAAGQAAAEEwQWRkTWF4TGlmZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+										<returnType>float</returnType>
+										<sString>cA0AddMaxLife</sString>
+									</addValue>
+									<multValue>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>1.0f</sString>
+									</multValue>
+									<stat>Life</stat>
+									<topModifier>false</topModifier>
+									<variable>A0_AdditionalLife</variable>
 								</modifier>
 								<providerName></providerName>
 							</PermanentStatModApplicator>

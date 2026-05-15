@@ -2,12 +2,12 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Bard.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Bard_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Bard.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Bard_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Bard/Ability_A3u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Bard/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Bard_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Bard_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Bard/Duel_Dex.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Bard/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Bard/Elite_Dex.TALENTSET" Count="1" />
@@ -369,8 +369,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Bard/Ability_A3.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Bard/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Bard/Ability_A3.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Bard/Ability_A3.TALENT" id="8922E550-E0F4-409A-AAEA-C0D0B5200216">
 			<ConditionFormula>
@@ -539,7 +539,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>2</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Bard/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

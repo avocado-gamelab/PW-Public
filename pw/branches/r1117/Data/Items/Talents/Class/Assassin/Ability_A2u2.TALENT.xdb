@@ -2,13 +2,14 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Assassin_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Assassin_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Duel.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Elite_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Epic_Str.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Assassin_Mighty.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Assassin.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Assassin_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Assassin.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Assassin/New_SUP.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -39,8 +40,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Assassin/Ability_A2u2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Assassin/Ability_A2u2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Assassin/Ability_A2u2.TALENT" id="BCCCD458-2DA8-4381-A784-8D9EAC8669D9">
 			<ConditionFormula>
@@ -58,6 +59,8 @@
 		<UnitConstantsContainer>
 			<vars>
 				<Item href="/Items/Talents/Class/Assassin/const_A2u2_AddRegenAbs" />
+				<Item href="/Items/Talents/Class/Assassin/const_A2u2_EvasionDecreasePercent" />
+				<Item href="/Items/Talents/Class/Assassin/const_A2u2_EvastionPercent" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -79,7 +82,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Assassin/A2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -93,9 +96,9 @@
 	</manaCost>
 	<marker></marker>
 	<microAI href="" />
-	<minLevel>1</minLevel>
+	<minLevel>2</minLevel>
 	<minUseRangeCorrection>0</minUseRangeCorrection>
-	<naftaCost>290</naftaCost>
+	<naftaCost>440</naftaCost>
 	<name textref="/Items/Talents/Class/Assassin/Ability_A2u2.TALENT_name.txt" />
 	<node></node>
 	<passiveApplicators />

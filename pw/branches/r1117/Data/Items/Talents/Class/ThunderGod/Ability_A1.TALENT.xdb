@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/ThunderGod.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/ThunderGod_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/ThunderGod_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/ThunderGod/Ability_A1_Upg.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/ThunderGod/Ability_A1_Upg2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
+	<BackLink DBID="/Maps/Tutorial/Talents/Tutorial_ThunderGod.TALENT" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Elite_Str_1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Epic_Str.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="6FD9FF73-A422-42E6-A2FA-016E403EAD15">
+			<DamageApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<cancelInvisibility>false</cancelInvisibility>
+				<caption>(M) damage</caption>
+				<damage>
+					<compiledString>FQoAAAABAAAAFgAAAEExZGFtYWdlTQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+					<returnType>float</returnType>
+					<sString>cA1damageM</sString>
+				</damage>
+				<damageMode>0</damageMode>
+				<damageType>Material</damageType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<timeLimiter>-1</timeLimiter>
+				<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
+			</DamageApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="A657F5BC-10E0-466A-87AB-09B6F0A79886">
+			<DamageApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<cancelInvisibility>false</cancelInvisibility>
+				<caption>(UPG) Доп.урон (М) от стеков А0.</caption>
+				<damage>
+					<compiledString>FTwAAAAEAAAASwAAAGUAAAB7AAAAgwAAAEExZGFtYWdlTQAAAEExX0RhbWFnZU11bHRpcGxpZXJfQm9udXNQZXJTdGFjawAAAEExU2F2ZVN0YWNrAFWL7IPsFItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoDAAAAItVEIsCi00Qi1BQ3V34/9LcNacAAADcTfhoMAAAAItFCIsQi00Ii4KIAQAA3V3w/9DcTfDZXezZReyL5V3DAAAAAAAAWUA=</compiledString>
+					<returnType>float</returnType>
+					<sString>cA1damageM * (cA1_DamageMultiplier_BonusPerStack/100)*sender.vA1SaveStack</sString>
+				</damage>
+				<damageMode>0</damageMode>
+				<damageType>Material</damageType>
+				<enabled>
+					<compiledString>FTQAAAAEAAAAOwAAAFQAAACKAAAAoAAAAFRodW5kZXJHb2RfQTFfVXBnMgAAVGh1bmRlckdvZF9BMV9VcGcyAABBMVNhdmVTdGFjawBVi+yD7AxoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBQAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQraCgAAACLVQiLAotNCIuQiAEAAP/S3B3CAAAA3+D2xEF1CcdF9AEAAADrB8dF9AAAAACKRfSL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("ThunderGod_A1_Upg2")&amp;&amp;sender.vA1SaveStack&gt;0</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<timeLimiter>-1</timeLimiter>
+				<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
+			</DamageApplicator>
+		</Item>
+		<Item href="/Heroes/DefaultStatus/_INTERRUPT.APLR" />
+		<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="C3FB5E82-8CDE-4CED-A0D2-D9372E934EA6">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Шок</caption>
+				<enabled>
+					<compiledString>FSYAAAACAAAALQAAAEYAAABUaHVuZGVyR29kX0ExX1VwZwAAAFRodW5kZXJHb2RfQTFfVXBnAFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoFAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAikX7i+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("ThunderGod_A1_Upg")</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="E82C3460-02BA-4BF1-BF4F-B4DF8E3EDCDE">
+					<Spell>
+						<applicators>
+							<Item href="/Heroes/DefaultStatus/_SLOW_MOVE.APLR" />
+							<Item href="/Heroes/DefaultStatus/_SILENCE_Status.APLR" />
+						</applicators>
+						<dispatch href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="290490B7-E18E-4FD0-A122-9FBD948AFFFD">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="" />
+			</SpellApplicator>
+		</Item>
+	</applicators>
+	<askId>1</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А1. Удар грома</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="78E785B0-1623-4276-BFFC-C0DE33468555">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSYAAAACAAAALQAAAEYAAABUaHVuZGVyR29kX0ExX1VwZwAAAFRodW5kZXJHb2RfQTFfVXBnAFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoFAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZF+/fYG8CDwAGL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("ThunderGod_A1_Upg") == false</sString>
+				</condition>
+				<name>ThunderGod_A1_Upg</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="F35064AC-6CC9-460E-9298-C90CC49E151F">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FScAAAACAAAALgAAAEcAAABUaHVuZGVyR29kX0ExX1VwZzIAAFRodW5kZXJHb2RfQTFfVXBnMgBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBQAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("ThunderGod_A1_Upg2") == false</sString>
+				</condition>
+				<name>ThunderGod_A1_Upg2</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="27022F42-CBF1-464C-ADD8-0F80129DB8DA">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/ThunderGod/const_A1baseDamage" />
+				<Item href="/Items/Talents/Class/ThunderGod/const_A1AddDamage" />
+				<Item href="/Items/Talents/Class/ThunderGod/const_A1AddDamageMult" />
+				<Item href="/Items/Talents/Class/ThunderGod/const_A1_ShockDuration" />
+				<Item href="/Items/Talents/Class/ThunderGod/const_Dec_MoveSpeed" />
+				<Item href="/Items/Talents/Class/ThunderGod/const_Silence_Duration" />
+				<Item href="/Items/Talents/Class/ThunderGod/const_Slow_Duration" />
+				<Item href="/Items/Talents/Class/ThunderGod/const_A1_BonusPerStack_TT" />
+				<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="C127B9C9-7ED2-44AB-BB6F-70FC26DE91C7">
+					<UnitConstant>
+						<name>CoolDownA1</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>16</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/ThunderGod/const_A1_CDPerSec" />
+				<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="1843ABC5-862A-4CCB-8A86-CFD2DF529E56">
+					<UnitConstant>
+						<name>Interrupt_StartCondition</name>
+						<var>
+							<compiledString>FTcAAAAEAAAAPgAAAFcAAACNAAAAowAAAFRodW5kZXJHb2RfQTFfVXBnAAAAVGh1bmRlckdvZF9BMV9VcGcAAABJbW11bmUyQ29udHJvbABVi+yD7AxoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBQAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQraCgAAACLVQyLAotNDIuQiAEAAP/S3B3FAAAA3+D2xER6CcdF9AEAAADrB8dF9AAAAADbRfSL5V3DAAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>tal("ThunderGod_A1_Upg") &amp;&amp; receiver.vImmune2Control == 0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="F608EC2C-39DE-4158-9F8B-BC5D228DA370">
+					<UnitConstant>
+						<name>CoolDownA1Reducted</name>
+						<var>
+							<compiledString>FVwAAAAHAAAAYwAAAHwAAAC4AAAAygAAAP0AAAACAQAAGwEAAENvb2xEb3duUGVyU2VjAABBMVNhdmVTdGFjawBUaHVuZGVyR29kX0ExX1VwZzIAAFRodW5kZXJHb2RfQTFfVXBnMgAAVG90YWxfQ29vbGRvd25SZWR1Y3Rpb24AVYvsg+wgaBwAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgwAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wBR2e7ZHCSLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlD/0GgQAAAAi00IixGLTQiLgogBAADdXfD/0NxN8Nld7NlF7FHZHCQPtk37UehUAAAAg8QM3AVAAQAAaEQAAACLVQiLAotNCIuQiAEAAN1d5P/S3A04AQAA2eje4dxN5Nld4NlF4IvlXcMAAAAAAADwPwAAAEDheoQ/AAAAAAAAMEAAAAAAVYvsUQ+2RQiFwHQI2UUM2V386wbZRRDZXfzZRfyL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>(16 + s( tal("ThunderGod_A1_Upg2"), cCoolDownPerSec *sender.vA1SaveStack, 0))*(1.0f - sender.vTotal_CooldownReduction * 0.01f)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="601CE77C-C071-407B-9969-1C0E96B7F6A7">
+					<UnitConstant>
+						<name>TT_TotalA1Damage</name>
+						<var>
+							<compiledString>FU8AAAAGAAAAVgAAAGwAAACHAAAAnAAAALUAAADrAAAAQTFkYW1hZ2VNAAAAQTFEZWJ1ZmYAAAAAQTFfQWRkRGFtYWdlAAAAAFRodW5kZXJHb2RfQTFfVXBnMgAAVGh1bmRlckdvZF9BMV9VcGcyAFWL7IPsFGgMAAAAi0UIixCLTQiLgogBAAD/0NwdIwEAAN/g9sREegfZ7tld/Osdi00MUYtVCFJoGAAAAItFEIsQi00Qi0JQ/9DZXfxoKAAAAItNCIsRi00Ii4KoAQAA/9CFwHQqaDwAAACLTQiLEYtNCIuCqAEAAP/QiUX4i034ixGLTfiLQgT/0IhF9+sExkX3AItNDFGLVQhSaAAAAACLRRCLEItNEItCUP/QD7ZN94PpAffZG8mDwQGJTfDbRfDYTfzewdld7NlF7IvlXcMAAAAAAAAAAAAA8D8=</compiledString>
+							<returnType>float</returnType>
+							<sString>cA1damageM + (sender.vA1Debuff == 1 ? 0 : cA1_AddDamage)* (tal("ThunderGod_A1_Upg2") == 1 ? 1 : 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/ThunderGod/const_A0_AddDamage" />
+				<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="CF45A2FD-1432-49EC-B322-CD8EB1FB2885">
+					<UnitConstant>
+						<name>Silence_StartCondition</name>
+						<var>
+							<compiledString>FQ0AAAACAAAAEgAAACgAAABBbGxvd0NvbnRyb2wAVYvsUWgAAAAAi0UMixCLTQyLgogBAAD/0NwdSgAAAN/g9sREewnHRfwBAAAA6wfHRfwAAAAA20X8i+VdwwAAAAAAAPA/</compiledString>
+							<returnType>float</returnType>
+							<sString>receiver.vAllowControl != 1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQsAAAABAAAAFwAAAENvb2xEb3duQTEAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cCoolDownA1</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="8FB221F3-8112-45B9-9F50-26153BD6DD9F">
+		<DispatchLinear>
+			<aiming>Pursue</aiming>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="/Effects/Shots/Gear/_TowerHit.EFFT" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="/Effects/Shots/Hammer/_A.EFFT" />
+				<Item href="/Effects/Shots/Hammer/_B.EFFT" />
+			</dispatchEffect>
+			<flags>1</flags>
+			<flyMode>Parabolic</flyMode>
+			<fromLocator>Hammer</fromLocator>
+			<height>0</height>
+			<killEffect>true</killEffect>
+			<locatorOrient>false</locatorOrient>
+			<maxDeviation>180</maxDeviation>
+			<maxDistance>-1</maxDistance>
+			<maxRise>0</maxRise>
+			<minRise>0</minRise>
+			<persistentApplicators>
+				<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="D88A6350-B929-40A7-BB28-6ABABC71806B">
+					<PermanentStatModApplicator>
+						<applyTarget>AbilityOwner</applyTarget>
+						<caption>(UPG) - переменная A1SaveStack = 0</caption>
+						<customApplyType>None</customApplyType>
+						<enabled>
+							<compiledString>FScAAAACAAAALgAAAEcAAABUaHVuZGVyR29kX0ExX1VwZzIAAFRodW5kZXJHb2RfQTFfVXBnMgBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBQAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AIpF+4vlXcM=</compiledString>
+							<returnType>bool</returnType>
+							<sString>tal("ThunderGod_A1_Upg2")</sString>
+						</enabled>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<modifier>
+							<addValue>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>0.0f</sString>
+							</addValue>
+							<multValue>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>0.0f</sString>
+							</multValue>
+							<stat>Life</stat>
+							<topModifier>false</topModifier>
+							<variable>A1SaveStack</variable>
+						</modifier>
+						<providerName></providerName>
+					</PermanentStatModApplicator>
+				</Item>
+				<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="39EA3DC1-60F1-4BC4-BDE0-6082D6120315">
+					<PermanentStatModApplicator>
+						<applyTarget>AbilityOwner</applyTarget>
+						<caption>(UPG) - переменная A1SaveStack = ElectroStack</caption>
+						<customApplyType>None</customApplyType>
+						<enabled>
+							<compiledString>FTEAAAADAAAAOAAAAFEAAACNAAAAVGh1bmRlckdvZF9BMV9VcGcyAABUaHVuZGVyR29kX0ExX1VwZzIAAEExRGVidWZmAFWL7IPsDGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoFAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdClqAYtVEFJoKAAAAItFCIsQi00Ii4KcAQAA/9A7RRB1CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+							<returnType>bool</returnType>
+							<sString>tal("ThunderGod_A1_Upg2")&amp;&amp;sender.applA1Debuff(UNIT) == pMisc</sString>
+						</enabled>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<modifier>
+							<addValue>
+								<compiledString>FQ0AAAABAAAAEQAAAEVsZWN0cm9TdGFjawBVi+xoAAAAAItFCIsQi00Ii4KIAQAA/9Bdww==</compiledString>
+								<returnType>float</returnType>
+								<sString>sender.vElectroStack</sString>
+							</addValue>
+							<multValue>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>1.0f</sString>
+							</multValue>
+							<stat>Life</stat>
+							<topModifier>false</topModifier>
+							<variable>A1SaveStack</variable>
+						</modifier>
+						<providerName></providerName>
+					</PermanentStatModApplicator>
+				</Item>
+				<Item href="/Items/Talents/Class/ThunderGod/_ElectroStack_ModeOff.APLR" />
+				<Item href="/Items/Talents/Class/ThunderGod/status_ElectroStack_Off.APLR" />
+				<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="9BF753FC-A834-494F-BB8B-45D84D7DADFB">
+					<SpellApplicator>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<caption>Статус - отсутствие дополнительного урона</caption>
+						<enabled>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</enabled>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<providerName></providerName>
+						<spell href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="0832BEED-FB2B-421B-819F-B62D24918571">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Class/ThunderGod/status_A1_Debuff.APLR" />
+								</applicators>
+								<dispatch href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="15A4678E-69A4-45DB-A2C1-FFD6F3842CFC">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>false</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+						<spellTarget>AbilityOwner</spellTarget>
+						<targetSelector href="" />
+					</SpellApplicator>
+				</Item>
+			</persistentApplicators>
+			<speed>20</speed>
+			<suspendTime>0</suspendTime>
+			<toLocator>Body</toLocator>
+		</DispatchLinear>
+	</dispatch>
+	<flags>3</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/ThunderGod/A1.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAA+Qw==</compiledString>
+		<returnType>float</returnType>
+		<sString>190</sString>
+	</manaCost>
+	<marker>doCast1</marker>
+	<microAI href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="BBEBD3DD-D24C-4245-BE1B-92CD8034E8F8">
+		<TargetSelectorMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</condition>
+			<targetSelector href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="A9873008-7230-42DA-9BFA-5A28D41108F8">
+				<FirstTargetSelector>
+					<nearestTarget>true</nearestTarget>
+					<targetSelector href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="11F689D0-A7F0-43A8-8074-4834B730682D">
+						<AreaTargetSelector>
+							<absolutePosition>
+								<x>0</x>
+								<y>0</y>
+							</absolutePosition>
+							<flags>0</flags>
+							<mode>Normal</mode>
+							<range>
+								<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+								<returnType>float</returnType>
+								<sString>cRange_Long</sString>
+							</range>
+							<targetFilter>681312315</targetFilter>
+							<targetSelector href="" />
+						</AreaTargetSelector>
+					</targetSelector>
+				</FirstTargetSelector>
+			</targetSelector>
+		</TargetSelectorMicroAI>
+	</microAI>
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>300</naftaCost>
+	<name textref="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT_name.txt" />
+	<node>ability1</node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="82E8724D-3199-4B9B-BCC9-B6523B056406">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>Сбрасываем стеки после возрождения</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="E31F1DD6-99C7-4EA7-BF67-8BF2C107E123">
+					<EventProcessorCondition>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<condition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</condition>
+						<events>1048576</events>
+						<onlyParent>false</onlyParent>
+						<spell href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="57530DF2-C735-452C-A146-3935E381E59B">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="9AA91823-7687-47D7-A70A-4F95C71FE223">
+										<PermanentStatModApplicator>
+											<applyTarget>AbilityOwner</applyTarget>
+											<caption>(UPG) - переменная A1SaveStack = 0</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString>FScAAAACAAAALgAAAEcAAABUaHVuZGVyR29kX0ExX1VwZzIAAFRodW5kZXJHb2RfQTFfVXBnMgBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBQAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AIpF+4vlXcM=</compiledString>
+												<returnType>bool</returnType>
+												<sString>tal("ThunderGod_A1_Upg2")</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>0.0f</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>0.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>A1SaveStack</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT" id="A5702B05-D478-4FD1-B798-EC9B2A6F6C4C">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>true</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+					</EventProcessorCondition>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/trigger_G766_RefreshAndNotify.APLR" />
+	</passiveApplicators>
+	<persistentId>ThunderGod_A1</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Class/ThunderGod/Ability_A1.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>681312319</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Long</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

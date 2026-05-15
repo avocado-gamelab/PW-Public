@@ -2,14 +2,14 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Witcher.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Witcher_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Witcher.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Witcher_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Witcher_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Witcher/Ability_A1.TALENT" Count="2" />
 	<BackLink DBID="/Items/Talents/Class/Witcher/Ability_A1u1.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Witcher/Ability_A1u2.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Witcher_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Maps/PvE/Series/Episode1/Talents/witcher/Ability1.TALENT" Count="3" />
 	<BackLink DBID="/Test/Talents/Witcher/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Witcher/Duel_Str.TALENTSET" Count="1" />
@@ -1236,8 +1236,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Witcher/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Witcher/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Witcher/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Witcher/Ability_A1.TALENT" id="3B3B563A-1C63-462F-BB57-0D7AFCD74F01">
 			<ConditionFormula>
@@ -1419,7 +1419,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>4679</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Witcher/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <UnitConstant>
-	<BackLink DBID="/Items/Talents/Level5/G467_Life_StaOrWill.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G467_Life_StaOrWill.TALENT" Count="1" />
 	<name>G467_Cooldown</name>
 	<var>
-		<compiledString>FRoAAAAEAAAAIQAAADcAAABLAAAAawAAAEc0NjZfQWN0aXZlAEc0NjZfQ29vbGRvd24AVYvsg+wIaAAAAACLRQiLEItNCIuCiAEAAP/Q3B2FAAAA3+D2xEF1H4tNDFGLVQhSaAwAAACLRRCLEItNEItCUP/Q2V386wXZ7tld/NlF/NwteQAAANld+NlF+IvlXcMAAAAAAMBiQAAAAAAAAAAAAAAAAA==</compiledString>
+		<compiledString>FRoAAAADAAAAIQAAAD4AAABXAAAARzQ2Nl9BY3RpdmUARzQ2Nl9Db29sZG93bgBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgMAAAAi0UQixCLTRCLQlDdXfj/0NxN+NwtZQAAANld9NlF9IvlXcMAAAAAAIBmQA==</compiledString>
 		<returnType>float</returnType>
-		<sString>150 - (sender.vG466_Active &gt; 0 ? cG466_Cooldown : 0)</sString>
+		<sString>180 - sender.vG466_Active * cG466_Cooldown</sString>
 	</var>
 </UnitConstant>

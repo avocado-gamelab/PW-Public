@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar4" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_AtkSpd_Upg" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_AtkSpd_Upg" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_Sta_AtkSpd_Upg" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_Will" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_Will_AtkSpd_Upg" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="2" />
+	<BackLink DBID="/Test/Talents/Archeress/Duel_Vamp.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Archeress/Elite_Stat.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Archeress/Elite_Stat_1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Archeress/Elite_Vamp.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Ghostlord/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Highlander/Elite_AspVamp.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/IronKnight/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Naga/Duel_Vamp.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Naga/Elite_PvE.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Naga/Elite_Vamp.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Naga/Elite_Will.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Prince/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Prince/Elite_Str.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G202: Кровавый голод</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="E857E41D-B038-47A0-8E3C-26AC98CBC6B5">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ8AAAACAAAAFAAAACoAAABHMjAyX0luY3JlbWVudABVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1MAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG202_Increment&gt;0</sString>
+				</condition>
+				<name>G202_Increment</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="C915EF07-E015-4825-B824-21419681F942">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="AD40248A-7993-4AC2-AA30-2DD821057629">
+					<UnitConstant>
+						<name>Add_LifeDrain</name>
+						<var>
+							<compiledString>FSMAAAAEAAAAMgAAAEwAAABsAAAAggAAAFQ1X1N0YXQATGlmZVN0ZWFsQnVkZ2V0AFN0YWNrVmFsdWUAVYvsg+wUi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgIAAAAi1UQiwKLTRCLUFDdXfj/0txN+ItFDFCLTQhRaBgAAACLVRCLAotNEItQUN1d8P/S3DWfAAAA2eje4dxN8Nld7NlF7IvlXcMAAAAAAADwPwAAAAAAAABA</compiledString>
+							<returnType>float</returnType>
+							<sString>cT5_Stat * cLifeStealBudget * (1 - cStackValue / 2)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="02BC08CB-9D1A-4AD2-B5F7-263E0F56195A">
+					<UnitConstant>
+						<name>Add_LifeDrainForCreep</name>
+						<var>
+							<compiledString>FQ0AAAACAAAAGgAAAC0AAABNYXhMaWZlRHJhaW4AVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3DU7AAAA2V382UX8i+VdwwAAAAAAAHlA</compiledString>
+							<returnType>float</returnType>
+							<sString>cMaxLifeDrain / 400</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="1A1CB080-2D39-46C5-87EA-35EEFB7988EC">
+					<UnitConstant>
+						<name>Add_LifeDrainForHero</name>
+						<var>
+							<compiledString>FQ0AAAACAAAAGgAAAC0AAABNYXhMaWZlRHJhaW4AVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3DU7AAAA2V382UX8i+VdwwAAAAAAAERA</compiledString>
+							<returnType>float</returnType>
+							<sString>cMaxLifeDrain / 40</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="7C3721F9-912B-45B1-AB2B-B9F2B947C322">
+					<UnitConstant>
+						<name>MaxLifeDrain</name>
+						<var>
+							<compiledString>FSMAAAADAAAAMgAAAEwAAABsAAAAVDVfU3RhdABMaWZlU3RlYWxCdWRnZXQAU3RhY2tWYWx1ZQBVi+yD7BSLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaAgAAACLVRCLAotNEItQUN1d+P/S3E34i0UMUItNCFFoGAAAAItVEIsCi00Qi1BQ3V3w/9LcTfDZXezZReyL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cT5_Stat * cLifeStealBudget * cStackValue</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="DC06641A-F19B-4261-B4F9-3FD3A897314B">
+					<UnitConstant>
+						<name>TECH_Add_LifeDrainCreepJustified</name>
+						<var>
+							<compiledString>FTYAAAADAAAARQAAAFcAAACEAAAATWF4TGlmZURyYWluAAAAAEcyMDJfSW5jcmVtZW50AABBZGRfTGlmZURyYWluRm9yQ3JlZXAAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JoEAAAAItFCIsQi00Ii4KIAQAA3V34/9DcbfjZXfTZRfRR2Rwki00MUYtVCFJoIAAAAItFEIsQi00Qi0JQ/9BR2Rwk6AcAAACDxAiL5V3DVYvsUdlFCNlFDN7Z3+D2xEF1CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>min( cAdd_LifeDrainForCreep, cMaxLifeDrain - sender.vG202_Increment )</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="7B336F04-C22B-4824-A412-C4258BF4E197">
+					<UnitConstant>
+						<name>TECH_Add_LifeDrainHeroJustified</name>
+						<var>
+							<compiledString>FTUAAAADAAAARAAAAFYAAACDAAAATWF4TGlmZURyYWluAAAAAEcyMDJfSW5jcmVtZW50AABBZGRfTGlmZURyYWluRm9ySGVybwBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0mgQAAAAi0UIixCLTQiLgogBAADdXfj/0Nxt+Nld9NlF9FHZHCSLTQxRi1UIUmggAAAAi0UQixCLTRCLQlD/0FHZHCToBwAAAIPECIvlXcNVi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>min( cAdd_LifeDrainForHero, cMaxLifeDrain - sender.vG202_Increment )</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="5935D1D4-B649-4217-B41D-577D17717531">
+					<UnitConstant>
+						<name>TT_G202_Increment</name>
+						<var>
+							<compiledString>FQ8AAAABAAAAEwAAAEcyMDJfSW5jcmVtZW50AFWL7GgAAAAAi0UIixCLTQiLgogBAAD/0F3D</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG202_Increment</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>22.7</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_202.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>4</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="991BCD5F-826E-4966-A2B6-3FE00E10E5F7">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Vamp</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQ4AAAABAAAAGgAAAEFkZF9MaWZlRHJhaW4AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_LifeDrain</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>LifeDrain</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="08DD72DC-0D85-416E-AF5F-5046A5559744">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>153</behaviorFlags>
+				<caption>DeathTrigger</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FR0AAAACAAAAJAAAAEEAAABHMjAyX0luY3JlbWVudAAATWF4TGlmZURyYWluAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaBAAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xEF1CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG202_Increment &lt; cMaxLifeDrain</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="631A11C2-A1E0-44FA-9708-1B4E2B3CC811">
+					<EventProcessorGroup>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<processors>
+							<Item href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="6CB20009-51E7-4DF9-A05D-7E376D34194D">
+								<EventProcessorUnitDieNearMe>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<checkSender>0</checkSender>
+									<killerFlags>9</killerFlags>
+									<range>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</range>
+									<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+									<spell href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="EFE51F0E-173E-4749-A497-CC5ACB6ED3E4">
+										<Spell>
+											<applicators>
+												<Item href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="092E3923-1D14-4B00-AEB1-B77C94D8A138">
+													<PermanentStatModApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>Vamp</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString>FR0AAAACAAAAJAAAAEEAAABHMjAyX0luY3JlbWVudAAATWF4TGlmZURyYWluAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaBAAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xEF1CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vG202_Increment &lt; cMaxLifeDrain</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FSAAAAABAAAALAAAAFRFQ0hfQWRkX0xpZmVEcmFpbkhlcm9KdXN0aWZpZWQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+																<returnType>float</returnType>
+																<sString>cTECH_Add_LifeDrainHeroJustified</sString>
+															</addValue>
+															<multValue>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</multValue>
+															<stat>LifeDrain</stat>
+															<topModifier>false</topModifier>
+															<variable></variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+												<Item href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="DE075EA2-8020-45E7-9F1E-AA2E9F029ECE">
+													<PermanentStatModApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>G202_Increment hero</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString>FR0AAAACAAAAJAAAAEEAAABHMjAyX0luY3JlbWVudAAATWF4TGlmZURyYWluAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaBAAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xEF1CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vG202_Increment &lt; cMaxLifeDrain</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FSAAAAABAAAALAAAAFRFQ0hfQWRkX0xpZmVEcmFpbkhlcm9KdXN0aWZpZWQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+																<returnType>float</returnType>
+																<sString>cTECH_Add_LifeDrainHeroJustified</sString>
+															</addValue>
+															<multValue>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</multValue>
+															<stat>LifeDrain</stat>
+															<topModifier>false</topModifier>
+															<variable>G202_Increment</variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="D256264A-375F-4E1F-921E-E13E2854DDF6">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+									<targets>536870915</targets>
+								</EventProcessorUnitDieNearMe>
+							</Item>
+							<Item href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="31136854-CD57-46A2-974B-71ACCE8C596C">
+								<EventProcessorUnitDieNearMe>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<checkSender>0</checkSender>
+									<killerFlags>9</killerFlags>
+									<range>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</range>
+									<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+									<spell href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="81B23C4B-77DF-4AB4-8A4A-B03750448129">
+										<Spell>
+											<applicators>
+												<Item href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="EDF06990-2CC1-47C4-AE96-BC4309381550">
+													<PermanentStatModApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>Vamp</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString>FR0AAAACAAAAJAAAAEEAAABHMjAyX0luY3JlbWVudAAATWF4TGlmZURyYWluAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaBAAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xEF1CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vG202_Increment &lt; cMaxLifeDrain</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FSEAAAABAAAALQAAAFRFQ0hfQWRkX0xpZmVEcmFpbkNyZWVwSnVzdGlmaWVkAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+																<returnType>float</returnType>
+																<sString>cTECH_Add_LifeDrainCreepJustified</sString>
+															</addValue>
+															<multValue>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</multValue>
+															<stat>LifeDrain</stat>
+															<topModifier>false</topModifier>
+															<variable></variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+												<Item href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="DFB7F8E1-B96A-425B-8C39-82F84F95201F">
+													<PermanentStatModApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>G202_Increment creep</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString>FR0AAAACAAAAJAAAAEEAAABHMjAyX0luY3JlbWVudAAATWF4TGlmZURyYWluAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaBAAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xEF1CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vG202_Increment &lt; cMaxLifeDrain</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FSEAAAABAAAALQAAAFRFQ0hfQWRkX0xpZmVEcmFpbkNyZWVwSnVzdGlmaWVkAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+																<returnType>float</returnType>
+																<sString>cTECH_Add_LifeDrainCreepJustified</sString>
+															</addValue>
+															<multValue>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</multValue>
+															<stat>LifeDrain</stat>
+															<topModifier>false</topModifier>
+															<variable>G202_Increment</variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Items/Talents/Common/Obsolete/G202_Vamp_IncVamp.TALENT" id="54473634-5A6A-44A2-A028-F688F80E913D">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+									<targets>538705980</targets>
+								</EventProcessorUnitDieNearMe>
+							</Item>
+						</processors>
+						<spell href="" />
+					</EventProcessorGroup>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G202</persistentId>
+	<prerequisiteTalents />
+	<rarity>excellent</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>16</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>LifeDrain</stat>
+			<values>
+				<Item>19</Item>
+				<Item>20.4</Item>
+				<Item>21.8</Item>
+				<Item>23.2</Item>
+				<Item>24.6</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>0</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

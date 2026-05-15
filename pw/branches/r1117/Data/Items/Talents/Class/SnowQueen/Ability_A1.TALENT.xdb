@@ -2,17 +2,24 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/SnowQueen.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/SnowQueen_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/SnowQueen.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/SnowQueen_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/SnowQueen_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A1_SUP.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A1u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/SnowQueen_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/RedSet4Add.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/RedSet5.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/RedSet6.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet7_10.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet7_11.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/RedSet7_4.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet7_5.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet7_6.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet7_7.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet7_8.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet7_9.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/RedSet8.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/RedSet8Add.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/RedSet9.TALENTSET" Count="1" />
@@ -22,13 +29,7 @@
 	<BackLink DBID="/Test/Talents/SnowQueen/Elite_StrInt.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Epic_IntLife.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Epic_IntLife_Ult2.TALENTSET" Count="1" />
-	<BackLink DBID="/Test/Talents/RedSet7_5.TALENTSET" Count="1" />
-	<BackLink DBID="/Test/Talents/RedSet7_6.TALENTSET" Count="1" />
-	<BackLink DBID="/Test/Talents/RedSet7_7.TALENTSET" Count="1" />
-	<BackLink DBID="/Test/Talents/RedSet7_8.TALENTSET" Count="1" />
-	<BackLink DBID="/Test/Talents/RedSet7_9.TALENTSET" Count="1" />
-	<BackLink DBID="/Test/Talents/RedSet7_10.TALENTSET" Count="1" />
-	<BackLink DBID="/Test/Talents/RedSet7_11.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -83,9 +84,9 @@
 				<applyTarget>ApplicatorTarget</applyTarget>
 				<caption>Лужа</caption>
 				<enabled>
-					<compiledString></compiledString>
+					<compiledString>FSUAAAACAAAALAAAAEUAAABTbm93UXVlZW5fQTFfU1VQAAAAAFNub3dRdWVlbl9BMV9TVVAAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgUAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwIPAAYvlXcM=</compiledString>
 					<returnType>bool</returnType>
-					<sString>true</sString>
+					<sString>tal("SnowQueen_A1_SUP") == false</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<LoggingEvent>-1</LoggingEvent>
@@ -106,7 +107,7 @@
 								<cancelOnSenderDeath>false</cancelOnSenderDeath>
 								<dieAfterApply>true</dieAfterApply>
 								<dispatchEffect>
-									<Item href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="933B5348-CC04-4A4B-9CA1-7A252D55C06C">
+									<Item href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="39D30427-F54F-4897-B853-2C06C7BF0EDD">
 										<EffectSwitcher>
 											<deathType>Manual</deathType>
 											<effectOnInvisible href="/Effects/Debuffs/Snowstorm/_Enemy.EFFT" />
@@ -126,122 +127,65 @@
 									<sString>0.0f</sString>
 								</lifeTime>
 								<persistentApplicators>
-									<Item href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="1B189F07-9E58-41C4-B67E-076FDD42D867">
-										<SpellPeriodicallyApplicator>
-											<applyTarget>ApplicatorTarget</applyTarget>
-											<behaviorFlags>152</behaviorFlags>
-											<caption>период спелл</caption>
-											<effect>
-												<Item href="" />
-												<Item href="" />
-											</effect>
-											<enabled>
-												<compiledString></compiledString>
-												<returnType>bool</returnType>
-												<sString>true</sString>
-											</enabled>
-											<formulaName></formulaName>
-											<lifeTime>
-												<compiledString>FQwAAAABAAAAGAAAAEExX0R1cmF0aW9uAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
-												<returnType>float</returnType>
-												<sString>cA1_Duration</sString>
-											</lifeTime>
-											<LoggingEvent>-1</LoggingEvent>
-											<period>
-												<compiledString>FQoAAAABAAAAFgAAAEExX1BlcmlvZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
-												<returnType>float</returnType>
-												<sString>cA1_Period</sString>
-											</period>
-											<providerName></providerName>
-											<scaleMode>ScaleIsCount</scaleMode>
-											<spell href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="851AC435-4822-4D8E-8A6B-7C2EC3E20EA1">
-												<Spell>
-													<applicators>
-														<Item href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="E4A41B2B-1B49-410F-B31C-F763DA2907CD">
-															<VariableProxyApplicator parent="/Items/Talents/Class/SnowQueen/damageWithA0.APLR">
-																<applicators>
-																	<Item>
-																		<applicator href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="088209AA-3634-403F-9556-4196D8B46E35">
-																			<DamageApplicator parent="/GameLogic/GeneralApplicators/CommonDamage.APLR">
-																				<damage>
-																					<compiledString>FTwAAAAEAAAAQwAAAFwAAACaAAAAvgAAAEExX0RhbWFnZQAAAFNub3dRdWVlbl9BMXUAAABTbm93UXVlZW5fQTF1AAAAQTF1X0JvbnVzRGFtYWdlAFWL7IPsEGgMAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoHAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdB+LVQxSi0UIUGgsAAAAi00QixGLTRCLQlD/0Nld9OsF2e7ZXfSLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlD/0NhF9Nld8NlF8IvlXcMAAAAA</compiledString>
-																					<returnType>float</returnType>
-																					<sString>cA1_Damage + (tal("SnowQueen_A1u") ? cA1u_BonusDamage : 0)</sString>
-																				</damage>
-																				<damageType>Energy</damageType>
-																				<enabled>
-																					<compiledString></compiledString>
-																				</enabled>
-																				<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
-																			</DamageApplicator>
-																		</applicator>
-																	</Item>
-																	<Item skip="1" />
-																</applicators>
-															</VariableProxyApplicator>
-														</Item>
-													</applicators>
-													<dispatch href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="A2271CA1-CB38-416A-AE30-31C24946C111">
-														<DispatchImmediate>
-															<alwaysApply>false</alwaysApply>
-															<applyEffect>
-																<Item href="" />
-																<Item href="" />
-															</applyEffect>
-															<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
-															<applyEffectOrientation>Default</applyEffectOrientation>
-															<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
-															<dieAfterApply>true</dieAfterApply>
-															<dispatchEffect>
-																<Item href="" />
-																<Item href="" />
-															</dispatchEffect>
-															<flags>1</flags>
-															<instantApply>false</instantApply>
-														</DispatchImmediate>
-													</dispatch>
-												</Spell>
-											</spell>
-											<startCondition>
-												<compiledString></compiledString>
-												<returnType>bool</returnType>
-												<sString>true</sString>
-											</startCondition>
-											<startOffset>
-												<compiledString>FQUAAAABAAAAEQAAAFNURVAAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
-												<returnType>float</returnType>
-												<sString>cSTEP</sString>
-											</startOffset>
-											<targetSelector href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="02E0C8C2-BC6C-4B84-8552-4F4B8A46E276">
-												<ConditionTargetSelector>
-													<condition>
-														<compiledString>FQUAAAABAAAADwAAAFdhcmQAVYvsagCLRRBQaAAAAACLTQyLEYtNDIuCnAEAAP/QM8k7RRAPlMGKwV3D</compiledString>
-														<returnType>bool</returnType>
-														<sString>receiver.applWard(GLOBAL) == pMisc</sString>
-													</condition>
-													<flags>0</flags>
-													<mode>Normal</mode>
-													<targetSelector href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="DC3FA096-7548-4D8E-9783-53BA928E2B35">
-														<AreaTargetSelector>
-															<absolutePosition>
-																<x>0</x>
-																<y>0</y>
-															</absolutePosition>
-															<flags>0</flags>
-															<mode>Normal</mode>
-															<range>
-																<compiledString>FQkAAAABAAAAFQAAAEExX1JhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
-																<returnType>float</returnType>
-																<sString>cA1_Range</sString>
-															</range>
-															<targetFilter>538771519</targetFilter>
-															<targetSelector href="" />
-														</AreaTargetSelector>
-													</targetSelector>
-												</ConditionTargetSelector>
-											</targetSelector>
-										</SpellPeriodicallyApplicator>
+									<Item href="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR" />
+								</persistentApplicators>
+							</DispatchByTime>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="" />
+			</SpellApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="CA9C88B1-4D30-4540-ABD1-9D18FB89C850">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Маленькая лужа</caption>
+				<enabled>
+					<compiledString>FSUAAAACAAAALAAAAEUAAABTbm93UXVlZW5fQTFfU1VQAAAAAFNub3dRdWVlbl9BMV9TVVAAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgUAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX7g+gB99gbwIPAAYvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("SnowQueen_A1_SUP") == true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="700EAB20-5954-4A7A-AD7A-B45678C8AB1C">
+					<Spell>
+						<applicators />
+						<dispatch href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="9994A6D5-5C00-4C4A-B928-8EF1DD252F4A">
+							<DispatchByTime>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<cancelOnSenderDeath>false</cancelOnSenderDeath>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="1AD248D6-4DE6-4CD2-950B-6912D93A1BB2">
+										<EffectSwitcher>
+											<deathType>Manual</deathType>
+											<effectOnInvisible href="/Effects/Debuffs/Snowstorm/_EnemySmall.EFFT" />
+											<effectOnVisible href="/Effects/Debuffs/Snowstorm/_Small.EFFT" />
+											<enableCondition href="" />
+											<isVisibleUnderWarfog>false</isVisibleUnderWarfog>
+											<lifeTime>0</lifeTime>
+											<logic>FactionVisibility</logic>
+										</EffectSwitcher>
 									</Item>
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<lifeTime>
+									<compiledString></compiledString>
+									<returnType>float</returnType>
+									<sString>0.0f</sString>
+								</lifeTime>
+								<persistentApplicators>
+									<Item href="/Items/Talents/Class/SnowQueen/spell_A1_AoE.APLR" />
 								</persistentApplicators>
 							</DispatchByTime>
 						</dispatch>
@@ -722,8 +666,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="CD75912B-8F7B-4B4B-AAC5-310A675722EB">
 			<ConditionFormula>
@@ -755,9 +699,19 @@
 					<UnitConstant>
 						<name>A1_Range</name>
 						<var>
-							<compiledString>FQ0AAAACAAAAGgAAAC0AAABSYW5nZV9NZWRpdW0AVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3CU7AAAA2V382UX8i+VdwwAAAAAAAABA</compiledString>
+							<compiledString>FSUAAAACAAAALAAAAEUAAABTbm93UXVlZW5fQTFfU1VQAAAAAFNub3dRdWVlbl9BMV9TVVAAVYvsg+wMaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgUAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk370eG6CQAAACvRiVX020X0i+Vdww==</compiledString>
 							<returnType>float</returnType>
-							<sString>cRange_Medium - 2</sString>
+							<sString>9 - tal("SnowQueen_A1_SUP") * 2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="BFBC3BB7-D614-46DE-BE3A-214C938F9022">
+					<UnitConstant>
+						<name>A1_BaseDamage</name>
+						<var>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAAAAQQAAfEI=</compiledString>
+							<returnType>float</returnType>
+							<sString>damageScale( sIntellect, 8, 63 )</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -765,9 +719,9 @@
 					<UnitConstant>
 						<name>A1_Damage</name>
 						<var>
-							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAAAAQQAAfEI=</compiledString>
+							<compiledString>FS0AAAADAAAAPAAAAHIAAACLAAAAQTFfQmFzZURhbWFnZQAAAE5pZ2h0RGFtYWdlTXVsdGlwbGllclBlcmNlbnQAVYvsg+wYi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRRCLEItNEIuCkAAAAN1d+P/QD7bIiU3020X0i1UMUotFCFBoEAAAAItNEIsRi00Qi0JQ3V3s/9DcTezcNagAAADZ6N7B3E342V3o2UXoi+VdwwAAAAAAAPA/AAAAAAAAWUA=</compiledString>
 							<returnType>float</returnType>
-							<sString>damageScale( sIntellect, 8, 63 )</sString>
+							<sString>cA1_BaseDamage * (1 + mIsNight * cNightDamageMultiplierPercent / 100)</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -822,6 +776,30 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/SnowQueen/const_A1_NightDamageMultiplierPercent" />
+				<Item href="/Items/Talents/Class/SnowQueen/const_A1u_StacksForProc" />
+				<Item href="/Items/Talents/Class/SnowQueen/const_A1u_RootDuration" />
+				<Item href="/Items/Talents/Class/SnowQueen/const_A1u_CD" />
+				<Item href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="B1A19C6E-E2A3-4E72-91F4-1FECDBE517D1">
+					<UnitConstant>
+						<name>Root_Duration</name>
+						<var>
+							<compiledString>FREAAAABAAAAHQAAAEExdV9Sb290RHVyYXRpb24AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cA1u_RootDuration</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/SnowQueen/Ability_A1.TALENT" id="3B4C8035-10DA-48D2-A3D2-60929A8ACCDA">
+					<UnitConstant>
+						<name>Root_StartCondition</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvsUYtFDIsQi00Mi0JQ/9CFwHQbi00MixGLTQyLQlD/0IP4AnQJx0X8AAAAAOsHx0X8AQAAANtF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>rUnitKind == 0 || rUnitKind == 2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -861,7 +839,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>11</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/SnowQueen/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

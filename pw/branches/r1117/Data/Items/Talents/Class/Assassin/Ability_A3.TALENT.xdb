@@ -2,7 +2,7 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Assassin.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Assassin.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Assassin/A0_RefreshCd.APLR" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A0.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A3u.TALENT" Count="1" />
@@ -10,10 +10,11 @@
 	<BackLink DBID="/Test/Talents/Assassin/Elite_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Epic_Str.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Assassin_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Assassin_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A3_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A3_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A3_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -33,14 +34,13 @@
 	</aoeSize>
 	<aoeType>None</aoeType>
 	<applicators>
-		<Item href="/Items/Talents/Class/Assassin/appl_A0_SUP_2_ApplyOrUpdate.APLR" />
 		<Item href="/Items/Talents/Class/Assassin/Ability_A3.TALENT" id="E599C691-5060-4C4E-A396-A420A378FEF6">
 			<StatusApplicator>
 				<applicators>
 					<Item href="/Items/Talents/Class/Assassin/Ability_A3.TALENT" id="C736264C-AB11-4689-887C-F8BA82AA57B9">
 						<StatModApplicator>
 							<applyTarget>ApplicatorTarget</applyTarget>
-							<behaviorFlags>0</behaviorFlags>
+							<behaviorFlags>152</behaviorFlags>
 							<caption>(A3u) Add Energy Regen</caption>
 							<constraint>None</constraint>
 							<dontUpdate>true</dontUpdate>
@@ -116,7 +116,7 @@
 											<sString>1</sString>
 										</actionsCount>
 										<applyTarget>AbilityTarget</applyTarget>
-										<behaviorFlags>0</behaviorFlags>
+										<behaviorFlags>144</behaviorFlags>
 										<caption>Триггер на увеличение урона</caption>
 										<effect>
 											<Item href="" />
@@ -140,7 +140,6 @@
 												<abilityFilter>
 													<abilitiesList>
 														<Item href="/Items/Talents/Class/Assassin/Ability_A1.TALENT" />
-														<Item href="/Heroes/Assassin/AttackAbility.ATCK" />
 													</abilitiesList>
 													<abilityCondition>
 														<compiledString></compiledString>
@@ -213,7 +212,7 @@
 								<Item href="/Items/Talents/Class/Assassin/status_fake_A3_2.APLR" />
 							</applicators>
 							<applyTarget>AbilityTarget</applyTarget>
-							<behaviorFlags>1</behaviorFlags>
+							<behaviorFlags>145</behaviorFlags>
 							<caption>статус Метка жертвы</caption>
 							<customCounter>
 								<compiledString></compiledString>
@@ -264,7 +263,7 @@
 					<Item href="/Items/Talents/Class/Assassin/status_fake_self_A3_2.APLR" />
 				</applicators>
 				<applyTarget>AbilityOwner</applyTarget>
-				<behaviorFlags>0</behaviorFlags>
+				<behaviorFlags>152</behaviorFlags>
 				<caption>статус Намечена жертва для Убийцы</caption>
 				<customCounter>
 					<compiledString></compiledString>
@@ -339,8 +338,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Assassin/Ability_A3.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Assassin/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Assassin/Ability_A3.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Assassin/Ability_A3.TALENT" id="953805D9-CCD2-460D-9AA6-67D39ED44790">
 			<ConditionFormula>
@@ -361,15 +360,15 @@
 		<UnitConstantsContainer>
 			<vars>
 				<Item href="/Items/Talents/Class/Assassin/const_A3_MaxDamagePercent" />
-				<Item href="/Items/Talents/Class/Assassin/const_A3_AddDamagePercent" />
 				<Item href="/Items/Talents/Class/Assassin/const_A3_Duration" />
+				<Item href="/Items/Talents/Class/Assassin/const_A3_AddDamagePercent" />
 				<Item href="/Items/Talents/Class/Assassin/Ability_A3.TALENT" id="7DD6F9B3-21BE-415F-BA6A-1E122A6AB108">
 					<UnitConstant>
 						<name>A3_IncrementTime</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADAQA==</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAQA==</compiledString>
 							<returnType>float</returnType>
-							<sString>6</sString>
+							<sString>4</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -407,18 +406,9 @@
 				</Item>
 				<Item href="/Items/Talents/Class/Assassin/const_A3u_Haste_Duration" />
 				<Item href="/Items/Talents/Class/Assassin/const_A3u_Haste_Percent" />
-				<Item href="/Items/Talents/Class/Assassin/Ability_A3.TALENT" id="97D8A277-C40A-4ABA-B9BC-259ECA48330D">
-					<UnitConstant>
-						<name>UltimateConstant</name>
-						<var>
-							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
-							<returnType>float</returnType>
-							<sString>1</sString>
-						</var>
-					</UnitConstant>
-				</Item>
-				<Item href="/Items/Talents/Class/Assassin/const_A0_SUP_2_Inc_Resp_Time" />
+				<Item href="/Items/Talents/Class/Assassin/const_A0_SUP_2_IncreasePoisonDamage" />
 				<Item href="/Items/Talents/Class/Assassin/const_A0_SUP_2_Appl_Duration" />
+				<Item href="/Items/Talents/Class/Assassin/const_A3_SUP_Damage_Increase_Rate" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -458,12 +448,12 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>27</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Assassin/A3_1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>true</isGenderTalent>
 	<isTakenOnStart>false</isTakenOnStart>
-	<isUltimateTalent>true</isUltimateTalent>
+	<isUltimateTalent>false</isUltimateTalent>
 	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
 	<manaCost>
 		<compiledString>FQAAAAAAAAAAVYvsUVaLRQiLEItNCItCTP/Qi/CLTQiLEYtNCIuCkAEAAP/QK/D33hv2g+ZQiXX820X8XovlXcM=</compiledString>
@@ -519,7 +509,9 @@
 	<naftaCost>390</naftaCost>
 	<name textref="/Items/Talents/Class/Assassin/Ability_A3.TALENT_name.txt" />
 	<node>ability3</node>
-	<passiveApplicators />
+	<passiveApplicators>
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/trigger_G766_RefreshAndNotify.APLR" />
+	</passiveApplicators>
 	<persistentId>Assassin_A3</persistentId>
 	<prerequisiteTalents />
 	<rarity>Class</rarity>

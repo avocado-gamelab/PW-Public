@@ -14,7 +14,8 @@
 	<BackLink DBID="/Maps/PvE/Series/Episode1/buildings/Shop.SHOP" Count="1" />
 	<BackLink DBID="/Maps/Test/BalanseTest/Shops/_N.SHOP" Count="1" />
 	<BackLink DBID="/Maps/Tutorial/_.DICT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level1/G723_StrOrInt.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G723_StrOrInt.TALENT" Count="1" />
+	<BackLink DBID="/Buildings/DefaultStats/Training.CNSH" Count="1" />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
 		<compiledString></compiledString>
@@ -330,7 +331,7 @@
 		</Item>
 	</applicators>
 	<autoTargetSelector href="" />
-	<caption></caption>
+	<caption>Зелье исцеления</caption>
 	<castAllowRange>
 		<compiledString></compiledString>
 		<returnType>float</returnType>
@@ -348,9 +349,9 @@
 					<UnitConstant>
 						<name>Health_restore_amount_per_tick</name>
 						<var>
-							<compiledString>FQsAAAACAAAAGAAAACsAAABBZGRSZXN0b3JlAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twFOQAAANld/NlF/IvlXcMAAAAAAABEQA==</compiledString>
+							<compiledString>FQsAAAACAAAAGAAAACsAAABBZGRSZXN0b3JlAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twFOQAAANld/NlF/IvlXcMAAAAAAABOQA==</compiledString>
 							<returnType>float</returnType>
-							<sString>40+cAddRestore</sString>
+							<sString>60+cAddRestore</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -440,10 +441,10 @@
 		<sString>0</sString>
 	</manaCost>
 	<marker></marker>
-	<maxQuantity>5</maxQuantity>
+	<maxQuantity>100</maxQuantity>
 	<microAI href="" />
 	<minUseRangeCorrection>0</minUseRangeCorrection>
-	<naftaCost>70</naftaCost>
+	<naftaCost>50</naftaCost>
 	<name textref="/Items/Consumables/HealingPotion.ARCT_name.txt" />
 	<node></node>
 	<passiveApplicators />

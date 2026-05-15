@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
-	<BackLink DBID="/Items/Talents/Class/Healer/Ability1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A1.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Healer/CharityDefenceSpell.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/AreaHeal.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/CharityDefenceSpell_AoE.APLR" Count="1" />
 	<applicators>
 		<Item href="/Items/Talents/Class/Healer/status_A2_CharityDefence.APLR" id="A00C966C-D31C-4BC8-9797-3ED5FBAF4B32">
 			<StatModApplicator>
@@ -15,9 +17,9 @@
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString></compiledString>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UMixCLTQyLgsgAAAD/0ItNDIsRi00Mi4LMAAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
 					<returnType>bool</returnType>
-					<sString>true</sString>
+					<sString>rBaseStamina &gt;= rBaseWill</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<lifeTime>
@@ -43,7 +45,7 @@
 				</modifier>
 				<providerName></providerName>
 				<startCondition>
-					<compiledString></compiledString>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
 					<returnType>bool</returnType>
 					<sString>true</sString>
 				</startCondition>
@@ -62,9 +64,9 @@
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString></compiledString>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UMixCLTQyLgsgAAAD/0ItNDIsRi00Mi4LMAAAA3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
 					<returnType>bool</returnType>
-					<sString>true</sString>
+					<sString>rBaseStamina &lt; rBaseWill</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<lifeTime>
@@ -118,9 +120,9 @@
 		<Item href="" />
 	</effect>
 	<enabled>
-		<compiledString>FRYAAAACAAAAHQAAADYAAABIZWFsZXJfQTIAAABIZWFsZXJfQTIAVYvsg+wMaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgMAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0EYtVCDtVDHQJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+		<compiledString>FRYAAAACAAAAHQAAADYAAABIZWFsZXJfQTIAAABIZWFsZXJfQTIAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgMAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCKRfuL5V3D</compiledString>
 		<returnType>bool</returnType>
-		<sString>tal("Healer_A2") &amp;&amp; pFirst != pSecond</sString>
+		<sString>tal("Healer_A2")</sString>
 	</enabled>
 	<flags>0</flags>
 	<formulaName></formulaName>

@@ -10,8 +10,8 @@
 	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A0_SUP.TALENT" Count="1" />
 	<name>A0_LifeDrainPercent</name>
 	<var>
-		<compiledString>FR8AAAADAAAAJgAAAD8AAAB2AAAAVmFtcGlyZV9BMF9TVVAAAFZhbXBpcmVfQTBfU1VQAFWL7IPsGGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdAvdBbwAAADdXfDrBdno3V3wi1UQiwKLTRCLkJAAAAD/0g+2wPfYG8CD4AWDwA2JRezbRezcTfDZXejZReiL5V3DAAAAAAAA8D9mZmZmZmb+Pw==</compiledString>
+		<compiledString>FUsAAAAEAAAAWgAAAHIAAACgAAAAtgAAAEEwX0Jhc2VMaWZlRHJhaW5QZXJjZW50AFZhbXBpcmVfRXRlcm5hbEh1bmdlcgAAAEEwX1NVUF9MaWZlRHJhaW5NdWx0aXBsaWVyAFWL7IPsGItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SagGLRRBQaBgAAACLTQiLEYtNCIuCnAEAAN1d+P/QM8k7RRAPlcGJTfTbRfSLVQxSi0UIUGgwAAAAi00QixGLTRCLQlDdXez/0NwlzgAAANxN7Nno3sHcTfjZXejZReiL5V3DAAAAAAAA8D8=</compiledString>
 		<returnType>float</returnType>
-		<sString>(tal("Vampire_A0_SUP") ? 1.9 : 1) * (13 + (mIsNight ? 5 : 0))</sString>
+		<sString>cA0_BaseLifeDrainPercent * (1 + (sender.applVampire_EternalHunger(UNIT) != pMisc) * (cA0_SUP_LifeDrainMultiplier - 1))</sString>
 	</var>
 </UnitConstant>

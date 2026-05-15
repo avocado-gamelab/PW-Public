@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BaseAttack>
 	<BackLink DBID="/Creeps/A/Heavy/PVP.CREEP" Count="1" />
+	<BackLink DBID="/Creeps/A/Heavy/PVP_MidOnly.CREEP" Count="1" />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
 		<compiledString></compiledString>
@@ -112,7 +113,7 @@
 	<passiveApplicators>
 		<Item href="/Creeps/Abilities/Units_BaseAttackMod.APLR" />
 		<Item href="/Creeps/Abilities/Units_FixAttackSpeed.APLR" />
-		<Item href="/Items/Talents/TalentKits/Redset5_1_Push/status_redset5_1_CreepBuffStatus.APLR" />
+		<Item href="/Creeps/Abilities/SpellDamageReduction/status_SpellDamageReduction.APLR" />
 	</passiveApplicators>
 	<requireLineOfSight>true</requireLineOfSight>
 	<shortDescription textref="" />

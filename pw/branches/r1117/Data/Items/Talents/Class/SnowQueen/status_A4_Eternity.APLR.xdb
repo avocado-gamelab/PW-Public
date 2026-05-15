@@ -4,7 +4,7 @@
 	<BackLink DBID="/Heroes/DefaultStatus/List_AllControlStatusesWithoutSlow.APLS" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Chronicle/Ability_A0.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/FallenAngel/status_A2u_ControlTimeDecrease.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A4.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A4.TALENT" Count="3" />
 	<applicators>
 		<Item href="/Items/Talents/Class/SnowQueen/status_A4_Eternity.APLR" id="0BABD1E0-2455-4B93-9DDC-96C64C59AC1A">
 			<FlagsApplicator>
@@ -56,9 +56,9 @@
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString>FRgAAAACAAAANwAAAEkAAABkdXJhdGlvbgAAAABBNF9EdXJhdGlvbgBVi+yD7BCLRRCLEItNEItCSP/QiUX8i00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ/9BoAAAAAItN/IsRi038i0JU3V30/9DcXfTf4PbEBXoJx0XwAQAAAOsHx0XwAAAAAIpF8IvlXcM=</compiledString>
+					<compiledString>FR4AAAACAAAAPQAAAE8AAABkdXJhdGlvbgAAAABBNHVfQm9udXNEdXJhdGlvbgBVi+yD7BCLRRCLEItNEItCSP/QiUX8i00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ/9BoAAAAAItN/IsRi038i0JU3V30/9DcXfTf4PbEBXoJx0XwAQAAAOsHx0XwAAAAAIpF8IvlXcM=</compiledString>
 					<returnType>bool</returnType>
-					<sString>$ParentApplVariable("duration") &lt; cA4_Duration</sString>
+					<sString>$ParentApplVariable("duration") &lt; cA4u_BonusDuration</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<lifeTime>
@@ -152,9 +152,9 @@
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString>FTgAAAAEAAAAPwAAAFgAAACmAAAAuAAAAFNub3dRdWVlbl9BNHUAAABTbm93UXVlZW5fQTR1AAAAZHVyYXRpb24AAAAAQTRfRHVyYXRpb24AVYvsg+wcaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0YYtVEIsCi00Qi1BI/9KJRfSLRQxQi00IUWgsAAAAi1UQiwKLTRCLUFD/0mggAAAAi0X0ixCLTfSLQlTdXez/0Nxd7N/g9sRBdQnHRegBAAAA6wfHRegAAAAAi03oiU3k6wfHReQAAAAAikXki+Vdww==</compiledString>
+					<compiledString>FT4AAAAEAAAARQAAAF4AAACsAAAAvgAAAFNub3dRdWVlbl9BNHUAAABTbm93UXVlZW5fQTR1AAAAZHVyYXRpb24AAAAAQTR1X0JvbnVzRHVyYXRpb24AVYvsg+wcaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0YYtVEIsCi00Qi1BI/9KJRfSLRQxQi00IUWgsAAAAi1UQiwKLTRCLUFD/0mggAAAAi0X0ixCLTfSLQlTdXez/0Nxd7N/g9sRBdQnHRegBAAAA6wfHRegAAAAAi03oiU3k6wfHReQAAAAAikXki+Vdww==</compiledString>
 					<returnType>bool</returnType>
-					<sString>tal("SnowQueen_A4u") ? ($ParentApplVariable("duration") &gt; cA4_Duration ) : false</sString>
+					<sString>tal("SnowQueen_A4u") ? ($ParentApplVariable("duration") &gt; cA4u_BonusDuration ) : false</sString>
 				</enabled>
 				<flag>0</flag>
 				<formulaName></formulaName>
@@ -204,9 +204,9 @@
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString>FTgAAAAEAAAAPwAAAFgAAACmAAAAuAAAAFNub3dRdWVlbl9BNHUAAABTbm93UXVlZW5fQTR1AAAAZHVyYXRpb24AAAAAQTRfRHVyYXRpb24AVYvsg+wYaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0UotVEIsCi00Qi1BI/9KJRfSLRQxQi00IUWgsAAAAi1UQiwKLTRCLUFD/0mggAAAAi0X0ixCLTfSLQlTdXez/0Nxd7N/g9sRBewnHRegAAAAA6wfHRegBAAAAikXoi+Vdww==</compiledString>
+					<compiledString>FT4AAAAEAAAARQAAAF4AAACsAAAAvgAAAFNub3dRdWVlbl9BNHUAAABTbm93UXVlZW5fQTR1AAAAZHVyYXRpb24AAAAAQTR1X0JvbnVzRHVyYXRpb24AVYvsg+wYaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0UotVEIsCi00Qi1BI/9KJRfSLRQxQi00IUWgsAAAAi1UQiwKLTRCLUFD/0mggAAAAi0X0ixCLTfSLQlTdXez/0Nxd7N/g9sRBewnHRegAAAAA6wfHRegBAAAAikXoi+Vdww==</compiledString>
 					<returnType>bool</returnType>
-					<sString>!tal("SnowQueen_A4u") || ($ParentApplVariable("duration") &lt;= cA4_Duration )</sString>
+					<sString>!tal("SnowQueen_A4u") || ($ParentApplVariable("duration") &lt;= cA4u_BonusDuration )</sString>
 				</enabled>
 				<flag>0</flag>
 				<formulaName></formulaName>
@@ -237,9 +237,9 @@
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString>FRgAAAACAAAANwAAAEkAAABkdXJhdGlvbgAAAABBNF9EdXJhdGlvbgBVi+yD7BCLRRCLEItNEItCSP/QiUX8i00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ/9BoAAAAAItN/IsRi038i0JU3V30/9DcXfTf4PbEBXoJx0XwAQAAAOsHx0XwAAAAAIpF8IvlXcM=</compiledString>
+					<compiledString>FR4AAAACAAAAPQAAAE8AAABkdXJhdGlvbgAAAABBNHVfQm9udXNEdXJhdGlvbgBVi+yD7BCLRRCLEItNEItCSP/QiUX8i00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ/9BoAAAAAItN/IsRi038i0JU3V30/9DcXfTf4PbEBXoJx0XwAQAAAOsHx0XwAAAAAIpF8IvlXcM=</compiledString>
 					<returnType>bool</returnType>
-					<sString>$ParentApplVariable("duration") &lt; cA4_Duration</sString>
+					<sString>$ParentApplVariable("duration") &lt; cA4u_BonusDuration</sString>
 				</enabled>
 				<flag>8192</flag>
 				<formulaName></formulaName>
@@ -262,7 +262,7 @@
 	</applicators>
 	<applyTarget>ApplicatorTarget</applyTarget>
 	<behaviorFlags>216</behaviorFlags>
-	<caption>статус Вечность</caption>
+	<caption>статус Вечность на противника</caption>
 	<customCounter>
 		<compiledString></compiledString>
 		<returnType>int</returnType>
@@ -274,7 +274,7 @@
 		<sString>-1.0</sString>
 	</customProgress>
 	<description textref="/Items/Talents/Class/SnowQueen/status_A4_Eternity.APLR_description.txt" />
-	<dispellPriority>High</dispellPriority>
+	<dispellPriority>NonDispellable</dispellPriority>
 	<effect>
 		<Item href="" />
 		<Item href="" />
@@ -299,9 +299,9 @@
 	<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
 	<stackCount>0</stackCount>
 	<startCondition>
-		<compiledString></compiledString>
+		<compiledString>FQAAAAAAAAAAVYvsVotFCIsQi00Ii4KQAQAA/9CL8ItNDIsRi00Mi4KQAQAA/9AzyTvwD5XBisFeXcM=</compiledString>
 		<returnType>bool</returnType>
-		<sString>true</sString>
+		<sString>sFctn != rFctn</sString>
 	</startCondition>
 	<statusPosition>0</statusPosition>
 	<stopBehaviour>StopByChild</stopBehaviour>

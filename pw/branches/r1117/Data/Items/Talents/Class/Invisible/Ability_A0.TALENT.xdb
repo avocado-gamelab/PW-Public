@@ -2,15 +2,15 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Invisible_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Invisible_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Elite_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Elite_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Epic_Str.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Invisible_Mighty.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Invisible.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Invisible_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Invisible.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -41,8 +41,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Invisible/Ability_A0.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Invisible/Ability_A0.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Invisible/Ability_A0.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Invisible/condition_Invisible_A2u" />
 		<Item href="/Items/Talents/Class/Invisible/condition_InvisibleTrue" />
@@ -145,7 +145,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Invisible/A0.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -506,7 +506,7 @@
 				</actionsCount>
 				<applyTarget>ApplicatorTarget</applyTarget>
 				<behaviorFlags>0</behaviorFlags>
-				<caption>Прайм за убийства от союзников</caption>
+				<caption>(Отключено) Прайм за убийства от союзников</caption>
 				<effect>
 					<Item href="" />
 					<Item href="" />
@@ -585,9 +585,9 @@
 				</processor>
 				<providerName></providerName>
 				<startCondition>
-					<compiledString></compiledString>
+					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
 					<returnType>bool</returnType>
-					<sString>true</sString>
+					<sString>false</sString>
 				</startCondition>
 				<useAbilityCooldown>false</useAbilityCooldown>
 				<useAbilityOwnerMana>false</useAbilityOwnerMana>
@@ -602,7 +602,7 @@
 				</actionsCount>
 				<applyTarget>ApplicatorTarget</applyTarget>
 				<behaviorFlags>0</behaviorFlags>
-				<caption>Прайм за убийства от врагов</caption>
+				<caption>(Отключено) Прайм за убийства от врагов</caption>
 				<effect>
 					<Item href="" />
 					<Item href="" />
@@ -681,9 +681,9 @@
 				</processor>
 				<providerName></providerName>
 				<startCondition>
-					<compiledString></compiledString>
+					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
 					<returnType>bool</returnType>
-					<sString>true</sString>
+					<sString>false</sString>
 				</startCondition>
 				<useAbilityCooldown>false</useAbilityCooldown>
 				<useAbilityOwnerMana>false</useAbilityOwnerMana>

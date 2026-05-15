@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Dex" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Energy" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Will" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_AtkSpd" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_Int" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_Life" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_Sta" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_Will" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Fairy/_A.HROB" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Fairy/_B.HROB" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Episode1/heroes/ally/_.HROB" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet2.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Thunder/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/ThunderGod.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Hunter.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G136: Презрение слабых</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="6E78C37A-0CDE-42DD-A0E7-E3BEF805BD01">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="1D28EB73-0706-4FD3-BFB2-F20283DDFEB6">
+					<UnitConstant>
+						<name>EnergyHeroAmount</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUMl9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcMAAAAAAABJQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT2_Stat * 50</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="BEF0674D-4A4F-4866-A8A4-B6A8C9762BBC">
+					<UnitConstant>
+						<name>EnergyCreepAmount</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUMl9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcMAAAAAAAAEQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT2_Stat * 2.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+		<returnType>float</returnType>
+		<sString>1</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_136.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="2AC99777-702A-45C5-A392-A794C041362C">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption></caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="AF2C374B-53C4-457C-A3E0-945DFDF51437">
+					<EventProcessorGroup>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<processors>
+							<Item href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="01EED595-5DAA-49EA-9084-86D935D4E6BA">
+								<EventProcessorUnitDieNearMe>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<checkSender>0</checkSender>
+									<killerFlags>9</killerFlags>
+									<range>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</range>
+									<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+									<spell href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="82273AFD-6CC1-4E1C-9949-1D356F956689">
+										<Spell>
+											<applicators>
+												<Item href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="D653ACCC-AD5D-4E01-817D-011CA9A9AD1A">
+													<SpellApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption></caption>
+														<enabled>
+															<compiledString></compiledString>
+															<returnType>bool</returnType>
+															<sString>true</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<providerName></providerName>
+														<spell href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="2832F880-01A0-40EC-8CFB-61737FB12CDA">
+															<Spell>
+																<applicators>
+																	<Item href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="E8BB4819-C86D-4A5E-99A5-1D227D0D3786">
+																		<HealApplicator>
+																			<amount>
+																				<compiledString>FREAAAABAAAAHQAAAEVuZXJneUhlcm9BbW91bnQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+																				<returnType>float</returnType>
+																				<sString>cEnergyHeroAmount</sString>
+																			</amount>
+																			<applyTarget>ApplicatorTarget</applyTarget>
+																			<caption>Восстанавливаем энергию</caption>
+																			<enabled>
+																				<compiledString></compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</enabled>
+																			<formulaName></formulaName>
+																			<healTarget>Energy</healTarget>
+																			<ignoreHealingMods>false</ignoreHealingMods>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<providerName></providerName>
+																			<uiEvent href="/UI/Events/CommonEvents/EventEnergy.UIEV" />
+																		</HealApplicator>
+																	</Item>
+																</applicators>
+																<dispatch href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="DD0C47B2-F902-4CEB-9D9F-FD2C9F60044B">
+																	<DispatchImmediate>
+																		<alwaysApply>false</alwaysApply>
+																		<applyEffect>
+																			<Item href="" />
+																			<Item href="" />
+																		</applyEffect>
+																		<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																		<applyEffectOrientation>Default</applyEffectOrientation>
+																		<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																		<dieAfterApply>true</dieAfterApply>
+																		<dispatchEffect>
+																			<Item href="" />
+																			<Item href="" />
+																		</dispatchEffect>
+																		<flags>0</flags>
+																		<instantApply>false</instantApply>
+																	</DispatchImmediate>
+																</dispatch>
+															</Spell>
+														</spell>
+														<spellTarget>AbilityOwner</spellTarget>
+														<targetSelector href="" />
+													</SpellApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="3C0F6855-71D2-4200-AF44-9991BD0F8039">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+									<targets>536870915</targets>
+								</EventProcessorUnitDieNearMe>
+							</Item>
+							<Item href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="78FF2261-D5EC-4E91-A134-4D1CA266BCF0">
+								<EventProcessorUnitDieNearMe>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<checkSender>0</checkSender>
+									<killerFlags>9</killerFlags>
+									<range>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</range>
+									<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+									<spell href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="6AA8B748-4CEB-48C0-BF4D-F19F99BF2CF5">
+										<Spell>
+											<applicators>
+												<Item href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="B8FAE406-C685-4E70-9E16-D5BF71995FD8">
+													<SpellApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption></caption>
+														<enabled>
+															<compiledString></compiledString>
+															<returnType>bool</returnType>
+															<sString>true</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<providerName></providerName>
+														<spell href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="74E0C70C-9F68-4170-B3BB-074165E8322D">
+															<Spell>
+																<applicators>
+																	<Item href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="09F805CA-B627-4882-8630-6DFD1F9F830D">
+																		<HealApplicator>
+																			<amount>
+																				<compiledString>FRIAAAABAAAAHgAAAEVuZXJneUNyZWVwQW1vdW50AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+																				<returnType>float</returnType>
+																				<sString>cEnergyCreepAmount</sString>
+																			</amount>
+																			<applyTarget>ApplicatorTarget</applyTarget>
+																			<caption>Восстанавливаем энергию</caption>
+																			<enabled>
+																				<compiledString></compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</enabled>
+																			<formulaName></formulaName>
+																			<healTarget>Energy</healTarget>
+																			<ignoreHealingMods>false</ignoreHealingMods>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<providerName></providerName>
+																			<uiEvent href="/UI/Events/CommonEvents/EventEnergy.UIEV" />
+																		</HealApplicator>
+																	</Item>
+																</applicators>
+																<dispatch href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="67B478C2-AFA2-483C-9C2E-AE9BEDCDCD19">
+																	<DispatchImmediate>
+																		<alwaysApply>false</alwaysApply>
+																		<applyEffect>
+																			<Item href="" />
+																			<Item href="" />
+																		</applyEffect>
+																		<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																		<applyEffectOrientation>Default</applyEffectOrientation>
+																		<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																		<dieAfterApply>true</dieAfterApply>
+																		<dispatchEffect>
+																			<Item href="" />
+																			<Item href="" />
+																		</dispatchEffect>
+																		<flags>0</flags>
+																		<instantApply>false</instantApply>
+																	</DispatchImmediate>
+																</dispatch>
+															</Spell>
+														</spell>
+														<spellTarget>AbilityOwner</spellTarget>
+														<targetSelector href="" />
+													</SpellApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Items/Talents/Common/Obsolete/G136_EnergyfromHeroes.TALENT" id="44944FA3-76E0-453D-BB20-5F181C2C2F54">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+									<targets>538705980</targets>
+								</EventProcessorUnitDieNearMe>
+							</Item>
+						</processors>
+						<spell href="" />
+					</EventProcessorGroup>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>true</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G136</persistentId>
+	<prerequisiteTalents />
+	<rarity>excellent</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>0</talentRollGroups>
+	<talentStats />
+	<targetType>1073741824</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQwAAAABAAAAGAAAAFJhbmdlX1Nob3J0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Short</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

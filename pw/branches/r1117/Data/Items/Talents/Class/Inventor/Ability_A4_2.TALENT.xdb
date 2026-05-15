@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Inventor_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Inventor_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A4_2_SUP.TALENT" Count="1" />
@@ -28,6 +28,7 @@
 	<aoeType>None</aoeType>
 	<applicators>
 		<Item href="/Items/Talents/Class/Inventor/SpendDetails.APLR" />
+		<Item href="/Items/Talents/Class/Inventor/A0_IncMoveSpeed.APLR" />
 		<Item href="/Items/Talents/Class/Inventor/Ability_A4_2.TALENT" id="DB63D831-0CA9-4980-B3C3-1FC5F6926903">
 			<ProgramApplicator>
 				<applicators>
@@ -334,20 +335,10 @@
 				<uiEvent href="/UI/Events/ErrorMessages/CastError_UnsuitablePlace.UIEV" />
 			</TargetCastLimitation>
 		</Item>
-		<Item href="/Items/Talents/Class/Inventor/Ability_A4_2.TALENT" id="E9B30AA3-39D8-4A36-8905-1B05FA3B701D">
-			<ConditionCastLimitation>
-				<condition>
-					<compiledString>FQwAAAABAAAAEAAAAEludmVudG9yX0E0AFWL7GgAAAAAi0UIixCLTQiLgqgBAAD/0PfYG8CDwAFdww==</compiledString>
-					<returnType>bool</returnType>
-					<sString>!sender.GetTalent( "Inventor_A4" )</sString>
-				</condition>
-				<uiEvent href="" />
-			</ConditionCastLimitation>
-		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Inventor/Ability_A4_2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Inventor/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Inventor/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Inventor/condition_EnoughDetails" />
 	</conditionFormulas>
@@ -377,13 +368,16 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/Inventor/const_A4_2_StatMultiplier" />
+				<Item href="/Items/Talents/Class/Inventor/const_A4_2_DamageBuildings" />
+				<Item href="/Items/Talents/Class/Inventor/const_A4_2_DamageCreeps" />
 				<Item href="/Items/Talents/Class/Inventor/Ability_A4_2.TALENT" id="ACE744DD-A347-44B1-BDC2-CCE344FD094B">
 					<UnitConstant>
 						<name>A4_DamageTower_TT</name>
 						<var>
-							<compiledString>FQAAAAABAAAANgAAAFWL7FGLRQiLEItNCIuCNAEAAP/QUdkcJItNCIsRi00Ii4IwAQAA/9BR2Rwk6BsAAACDxAjcDUQAAADZXfzZRfyL5V3DmpmZmZmZ8T9Vi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+							<compiledString>FSwAAAACAAAAOwAAAFUAAABBNF8yX0RhbWFnZUJ1aWxkaW5ncwAAAABBNF8yX1N0YXRNdWx0aXBsaWVyAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoGAAAAItVEIsCi00Qi1BQ3V34/9LcTfjZXfTZRfSL5V3D</compiledString>
 							<returnType>float</returnType>
-							<sString> max( sStrength, sIntellect) *1.1</sString>
+							<sString>cA4_2_DamageBuildings * cA4_2_StatMultiplier</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -391,9 +385,9 @@
 					<UnitConstant>
 						<name>A4_DamageAOE_TT</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQQ==</compiledString>
+							<compiledString>FSgAAAACAAAANwAAAFEAAABBNF8yX0RhbWFnZUNyZWVwcwAAAEE0XzJfU3RhdE11bHRpcGxpZXIAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgUAAAAi1UQiwKLTRCLUFDdXfj/0txN+Nld9NlF9IvlXcM=</compiledString>
 							<returnType>float</returnType>
-							<sString>20</sString>
+							<sString>cA4_2_DamageCreeps * cA4_2_StatMultiplier</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -427,6 +421,15 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/Inventor/const_A0_CurrentInventor_Details" />
+				<Item href="/Items/Talents/Class/Inventor/const_A0_Haste_Duration" />
+				<Item href="/Items/Talents/Class/Inventor/const_A0_Haste_Percent" />
+				<Item href="/Items/Talents/Class/Inventor/const_A0_MaxDetails" />
+				<Item href="/Items/Talents/Class/Inventor/const_A0_TechDetailsperHastPercent" />
+				<Item href="/Items/Talents/Class/Inventor/const_A0_TechHastePercentperDetail" />
+				<Item href="/Items/Talents/Class/Inventor/const_A0_BaseAttackPerDetail" />
+				<Item href="/Items/Talents/Class/Inventor/const_A0_BaseAttackTotal" />
+				<Item href="/Items/Talents/Class/Inventor/const_A0_MaxMoveSpeedPercent" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -466,7 +469,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>2</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Inventor/A4_2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <UnitConstant>
-	<BackLink DBID="/Items/Talents/Class/Warlord/Ability3.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Warlord/Ability3_Upg.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Warlord/Ability_A3.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Warlord/Ability_A3u.TALENT" Count="1" />
 	<name>A3_Duration</name>
 	<var>
-		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+		<compiledString>FTMAAAAEAAAAOgAAAFMAAACTAAAArAAAAFdhcmxvcmRfQTNfU1VQAABXYXJsb3JkX0EzX1NVUAAAQTNfU1VQX0FkZER1cmF0aW9uAFWL7IPsGGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4lN9NtF9ItVDFKLRQhQaCAAAACLTRCLEYtNEItCUN1d7P/Q3E3s3AW6AAAA2V3o2UXoi+VdwwAAAAAAABRA</compiledString>
 		<returnType>float</returnType>
-		<sString>5</sString>
+		<sString>5 + tal("Warlord_A3_SUP") * cA3_SUP_AddDuration</sString>
 	</var>
 </UnitConstant>

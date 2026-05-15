@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Witch.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Witch_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Witch_US.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Witch.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Witch_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Witch_US.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Witch/Ability_A3u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Witch_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Witch_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Witch/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Witch/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Witch/Elite_IntAsp.TALENTSET" Count="1" />
@@ -46,8 +46,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Witch/Ability_A3.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Witch/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Witch/Ability_A3.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Witch/Ability_A3.TALENT" id="20266C59-E64C-4A5E-A281-E6C29C51BB20">
 			<ConditionFormula>
@@ -186,7 +186,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>26</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Witch/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

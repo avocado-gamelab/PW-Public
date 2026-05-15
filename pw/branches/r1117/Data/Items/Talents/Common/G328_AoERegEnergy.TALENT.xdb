@@ -1,0 +1,1274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="3" />
+	<BackLink DBID="/GameLogic/TalentGroup.TGRP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar5_Set2" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G328_AoERegEnergy.TALENT" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="3" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_OrangeSet2.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet13.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Ratcatcher/Elite_IntLife.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Ratcatcher/Elite_StrIntLife.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="8E2B8110-BFAF-4C6B-9AB1-1266919090BE">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Дрейн энергии и жизни</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="5134D4A6-4CA6-4BE8-8992-297507147695">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="84165034-2F9F-4ED7-8959-C2045B77B1E2">
+								<VariableProxyApplicator>
+									<applicators>
+										<Item>
+											<applicator href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="2C59EF1D-6770-4760-828E-8BFA25A3C714">
+												<DamageApplicator>
+													<applyTarget>PrevApplicatorTarget</applyTarget>
+													<cancelInvisibility>false</cancelInvisibility>
+													<caption>- списываем с врага ману</caption>
+													<damage>
+														<compiledString>FRwAAAACAAAAKwAAAD0AAABFbmVyZ3lEcmFpbgBHMzI4RW5lcmd5RHJhaW4AVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JoDAAAAItFCIsQi00Ii4KIAQAA3V34/9DcTfjZXfTZRfSL5V3D</compiledString>
+														<returnType>float</returnType>
+														<sString>cEnergyDrain * sender.vG328EnergyDrain</sString>
+													</damage>
+													<damageMode>0</damageMode>
+													<damageType>Mana</damageType>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<timeLimiter>-1</timeLimiter>
+													<uiEvent href="/UI/Events/CommonEvents/EventEnergyBurn.UIEV" />
+												</DamageApplicator>
+											</applicator>
+											<variableNames>
+												<Item>damageDealed</Item>
+											</variableNames>
+										</Item>
+										<Item>
+											<applicator href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="8F5AFE30-D037-4FF3-83E2-749FA9100968">
+												<StatModApplicator>
+													<applyTarget>AbilityOwner</applyTarget>
+													<behaviorFlags>0</behaviorFlags>
+													<caption>аккумулятор</caption>
+													<constraint>None</constraint>
+													<dontUpdate>false</dontUpdate>
+													<effect>
+														<Item href="" />
+														<Item href="" />
+													</effect>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<lifeTime>
+														<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzczMPg==</compiledString>
+														<returnType>float</returnType>
+														<sString>0.4</sString>
+													</lifeTime>
+													<LoggingEvent>-1</LoggingEvent>
+													<modifier>
+														<addValue>
+															<compiledString>FQ0AAAABAAAAIgAAAGRhbWFnZURlYWxlZABVi+xRi0UQixCLTRCLQkj/0IlF/GgAAAAAi038ixGLTfyLQlT/0IvlXcM=</compiledString>
+															<returnType>float</returnType>
+															<sString>mObjectParent-&gt;GetVariable("damageDealed")</sString>
+														</addValue>
+														<multValue>
+															<compiledString></compiledString>
+															<returnType>float</returnType>
+															<sString>1.0f</sString>
+														</multValue>
+														<stat>Life</stat>
+														<topModifier>false</topModifier>
+														<variable>G328Accumulator</variable>
+													</modifier>
+													<providerName></providerName>
+													<startCondition>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</startCondition>
+													<statModName></statModName>
+												</StatModApplicator>
+											</applicator>
+											<variableNames />
+										</Item>
+									</applicators>
+									<applyTarget>AbilityOwner</applyTarget>
+									<caption>Крадем энергию</caption>
+									<enabled>
+										<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+								</VariableProxyApplicator>
+							</Item>
+							<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="E0588839-249B-4F9D-A78D-BAE8183292B0">
+								<DamageApplicator>
+									<applyTarget>AbilityTarget</applyTarget>
+									<cancelInvisibility>false</cancelInvisibility>
+									<caption>Наносим урон</caption>
+									<damage>
+										<compiledString>FSgAAAACAAAANwAAAEkAAABHMzQzX0RhbWFnZVBlckNoYXJnZQAAAABHMzI4RW5lcmd5RHJhaW4AVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JoGAAAAItFCIsQi00Ii4KIAQAA3V34/9DcTfjZXfTZRfSL5V3D</compiledString>
+										<returnType>float</returnType>
+										<sString>cG343_DamagePerCharge * sender.vG328EnergyDrain</sString>
+									</damage>
+									<damageMode>4</damageMode>
+									<damageType>Pure</damageType>
+									<enabled>
+										<compiledString>FQwAAAACAAAAEQAAACcAAABHMzQzX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+										<returnType>bool</returnType>
+										<sString>sender.vG343_Active &gt; 0</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+									<timeLimiter>-1</timeLimiter>
+									<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed.UIEV" />
+								</DamageApplicator>
+							</Item>
+							<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="FD78B5AA-8B09-4690-8466-8FEFEA39E186">
+								<HealApplicator>
+									<amount>
+										<compiledString>FSwAAAADAAAAMwAAAFQAAABmAAAARzMyOEFjY3VtdWxhdG9yAEVuZXJneURyYWluAEczMjhFbmVyZ3lEcmFpbgBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9BR2Rwki00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ/9BoHAAAAItNCIsRi00Ii4KIAQAA3V34/9DcTfjZXfTZRfRR2Rwk6AcAAACDxAiL5V3DVYvsUdlFCNlFDN7Z3+D2xEF1CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+										<returnType>float</returnType>
+										<sString>min(cEnergyDrain * sender.vG328EnergyDrain , sender.vG328Accumulator)</sString>
+									</amount>
+									<applyTarget>AbilityOwner</applyTarget>
+									<caption>дать энергии (отключено)</caption>
+									<enabled>
+										<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+										<returnType>bool</returnType>
+										<sString>false</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<healTarget>Energy</healTarget>
+									<ignoreHealingMods>false</ignoreHealingMods>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+									<uiEvent href="/UI/Events/CommonEvents/EventEnergy.UIEV" />
+								</HealApplicator>
+							</Item>
+							<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="117E3232-2FC7-4482-81E1-EFD158A3C76B">
+								<PermanentStatModApplicator>
+									<applyTarget>AbilityOwner</applyTarget>
+									<caption>Сбрасываем множитель на урон</caption>
+									<customApplyType>None</customApplyType>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<modifier>
+										<addValue>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>0.0f</sString>
+										</addValue>
+										<multValue>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>0.0f</sString>
+										</multValue>
+										<stat>Life</stat>
+										<topModifier>false</topModifier>
+										<variable>G328EnergyDrain</variable>
+									</modifier>
+									<providerName></providerName>
+								</PermanentStatModApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="4C3851C2-F865-4CCB-9E2D-BCC8F22E97C2">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="/Effects/Buffs/Balance/EnemyBlue.EFFT" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="" />
+			</SpellApplicator>
+		</Item>
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G328: Предзнаменование</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations>
+		<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="7B7205F8-7FCD-484C-B2C9-2E83B7E22E07">
+			<ConditionCastLimitation>
+				<condition>
+					<compiledString>FQwAAAADAAAAHwAAACsAAABBAAAARzM0M19BY3RpdmUAVYvsUYtFDIsQi00Mi0IQ/9DcHWMAAADf4PbEQXQraAAAAACLTQiLEYtNCIuCiAEAAP/Q3B1jAAAA3+D2xEF0CcdF/AAAAADrB8dF/AEAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>rMaxEnergy &gt; 0 || sender.vG343_Active &gt; 0</sString>
+				</condition>
+				<uiEvent href="/UI/Events/ErrorMessages/CastError_NoValidCurrentTarget.UIEV" />
+			</ConditionCastLimitation>
+		</Item>
+	</castLimitations>
+	<commonDescription textref="/Items/Talents/Common/G328_AoERegEnergy.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G328_AoERegEnergy.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="00053E62-BF00-40BB-9FFC-51375E815CB5">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHMzI4Q291bnRlcgBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG328Counter &gt; 0</sString>
+				</condition>
+				<name>HaveStacks</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="13E07471-1F34-4427-AA61-69D13D1D427C">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSEAAAAEAAAAMAAAAEMAAABPAAAAaAAAAEczMjhfa2l0Q291bnRlcl9UVAAARzMyOAAAAABHMzI4AFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3B20AAAA3+D2xEF1WGgUAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoHAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdAnHRfQAAAAA6wfHRfQBAAAAikX0i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(cG328_kitCounter_TT&gt;0&amp;&amp;(tal("G328")))</sString>
+				</condition>
+				<name>FormNotActiveSession</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="C5E75FE1-5C69-4A50-B9F9-F6AC7BA42DAC">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSEAAAACAAAAMAAAAEoAAABHMzI4X2tpdENvdW50ZXJfVFQAAEczMjhfTWF4Rm9ybQBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBQAAACLVRCLAotNEItQUN1d+P/S3F343+D2xAV6CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG328_kitCounter_TT&gt;cG328_MaxForm</sString>
+				</condition>
+				<name>FormOverChargedSession</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="6839BA77-9CF9-4B5C-A72F-77A49A8217F0">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSkAAAAEAAAAOAAAAEsAAABXAAAAcAAAAEczMjhfa2l0Q291bnRlcl9UVF9DYXN0bGUAAABHMzI4AAAAAEczMjgAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcHbwAAADf4PbEQXVYaBwAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgkAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0CcdF9AAAAADrB8dF9AEAAACKRfSL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(cG328_kitCounter_TT_Castle&gt;0&amp;&amp;(tal("G328")))</sString>
+				</condition>
+				<name>FormNotActiveCastle</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="994C9E14-8893-4E39-A196-A35FB700977A">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRoAAAACAAAAJwAAADoAAABHMzI4X2tpdENvdW50ZXJfVFRfQ2FzdGxlAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twdXAAAAN/g9sRBdQnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAABA</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG328_kitCounter_TT_Castle&gt;2</sString>
+				</condition>
+				<name>FormOverChargedCastle</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="7B17F5F3-A684-44E7-AF7F-B659C2359A8C">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHMzQzX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG343_Active&gt;0</sString>
+				</condition>
+				<name>G343_Damage</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="D27FED09-AD87-4AD3-8211-A76596C7DDEB">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="C8D5001D-970B-4049-9DDF-D727821E95CF">
+					<UnitConstant>
+						<name>Add_EnergyRegAbs</name>
+						<var>
+							<compiledString>FRgAAAADAAAAJwAAAEEAAABaAAAAVDJfU3RhdABFbmVyZ3lSZWdCdWRnZXQAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgIAAAAi1UQiwKLTRCLUFDdXfj/0txN+NwNaAAAANld9NlF9IvlXcNmZmZmZmbmPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT2_Stat * cEnergyRegBudget * 0.7</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="D9B80B7A-4ACD-4B85-A819-283D67BC8A05">
+					<UnitConstant>
+						<name>TT_Add_EnergyRegAbs</name>
+						<var>
+							<compiledString>FR8AAAACAAAALgAAAEAAAABBZGRfRW5lcmd5UmVnQWJzAAAAAFN0YXR1c18zMjgAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JoFAAAAItFDIsQi00Mi4KIAQAA3V34/9DcTfjZXfTZRfSL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cAdd_EnergyRegAbs * receiver.vStatus_328</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="23D0AC7E-8981-4B31-B6E0-0F45C1DA8EBC">
+					<UnitConstant>
+						<name>TECH_StacksPerCast</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="D9975F9C-E07A-4072-B14F-8A70EBEE3EAB">
+					<UnitConstant>
+						<name>MaxStacks</name>
+						<var>
+							<compiledString>FUAAAAAHAAAARwAAAF0AAABzAAAAiQAAAKcAAADHAAAA/gAAAFN0YWNrcwAARzMzMkFkZF9TdGFja3MAAEczMzJfQWN0aXZlAEczMjlBZGRfU3RhY2tzAABHMzI5X0FjdGl2ZQBVi+yD7BhoGAAAAItFCIsQi00Ii4KIAQAA/9DcHTQBAADf4PbEQXUGxkX/AesExkX/AGg0AAAAi00IixGLTQiLgogBAAD/0NwdNAEAAN/g9sRBdQbGRf4B6wTGRf4Ai00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ/9BR2e7ZHCSLTQxRi1UIUmgIAAAAi0UQixCLTRCLQlDdXfT/0FHZHCQPtk3/UehTAAAAg8QM3EX0Udnu2Rwki1UMUotFCFBoJAAAAItNEIsRi00Qi0JQ3V3s/9BR2RwkD7ZN/lHoHAAAAIPEDNxF7Nld6NlF6IvlXcMAAAAAAAAAAAAAAABVi+xRD7ZFCIXAdAjZRQzZXfzrBtlFENld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cStacks + s(sender.vG332_Active&gt;0,cG332Add_Stacks,0) +s(sender.vG329_Active&gt;0,cG329Add_Stacks,0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="6AFD3011-F1A5-40E1-9157-C9F8F1513A8B">
+					<UnitConstant>
+						<name>Stacks</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>4</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="293975B1-4463-482C-9EE9-7C214897236E">
+					<UnitConstant>
+						<name>TECH_NeedCosts</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAACQw==</compiledString>
+							<returnType>float</returnType>
+							<sString>130</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="4EC771AC-1ECE-4597-9E18-2D35F732B67A">
+					<UnitConstant>
+						<name>TECH_LifeModAddPercent</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="16115EDA-963B-43C2-85B0-A04673412AA2">
+					<UnitConstant>
+						<name>TECH_EnergyModAddPercent</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="ADD645F1-AF4E-4B5D-B6F9-D5CE8E458A78">
+					<UnitConstant>
+						<name>TT_EnergyDrain</name>
+						<var>
+							<compiledString>FRgAAAACAAAAJwAAADkAAABFbmVyZ3lEcmFpbgBHMzI4Q291bnRlcgBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0mgMAAAAi0UIixCLTQiLgogBAADdXfj/0NxN+Nld9NlF9IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cEnergyDrain * sender.vG328Counter</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="9BC82517-0F23-4B1D-9207-5B5F2C7DE920">
+					<UnitConstant>
+						<name>EnergyDrain</name>
+						<var>
+							<compiledString>FREAAAABAAAAHQAAAFRlY2hfRW5lcmd5RHJhaW4AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cTech_EnergyDrain</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="CBAF4C48-EABC-44B7-9765-9936F64CB73C">
+					<UnitConstant>
+						<name>Tech_EnergyDrain</name>
+						<var>
+							<compiledString>FQAAAAACAAAABgAAABAAAABVi+xR2QUqAAAA2RwkUdkFJgAAANkcJItFEIsQi00Qi0Js/9BdwwAAMEIAAABA</compiledString>
+							<returnType>float</returnType>
+							<sString>refineScale(44, 2)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="1496557A-E0AA-467B-BFB5-B4314117CC91">
+					<UnitConstant>
+						<name>TT_Tech_EnergyDrain</name>
+						<var>
+							<compiledString>FREAAAABAAAAHQAAAFRlY2hfRW5lcmd5RHJhaW4AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cTech_EnergyDrain</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/TalentSet2/const_G328_MaxForm" />
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="BFA3F4ED-3929-4C07-8A73-93D5ECE5DE64">
+					<UnitConstant>
+						<name>TECH_FormCapacity</name>
+						<var>
+							<compiledString>FQ0AAAABAAAAGQAAAEczMjhfTWF4Rm9ybQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cG328_MaxForm</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="93E3DE9E-8FAB-403A-BF95-35B8337731C2">
+					<UnitConstant>
+						<name>G328_kitCounter_TT</name>
+						<var>
+							<compiledString>FQ0AAAACAAAAFAAAAC0AAABHMzI4AAAAAEczMjgAVYvsg+wYaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgIAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCLTRCLEYtNEItCeP/QiUX020X0Udnu2RwkUdno2RwkD7ZN+1HdXezoGAAAAIPEDNxt7Nld6NlF6IvlXcMAAIA/AAAAAFWL7FEPtkUIhcB0CNlFDNld/OsG2UUQ2V382UX8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>mActivatedWithinKit - s(tal("G328"), 1 , 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="6733E851-3ED3-4A9F-A0D7-FE75AA618AA8">
+					<UnitConstant>
+						<name>G328_kitCounter_TT_Castle</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvsUVHZ7tkcJItFEIsQi00Qi0J4/9CD6AGJRfzbRfxR2Rwk6AsAAACDxAiL5V3DAAAAAFWL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>max(mActivatedWithinKit - 1, 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/TalentSet2/const_G332Add_Stacks" />
+				<Item href="/Items/Talents/TalentKits/TalentSet2/const_G329Add_Stacks" />
+				<Item href="/Items/Talents/TalentKits/TalentSet2/const_G343_DamagePerCharge" />
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="35E1A151-1769-4058-8265-485648DD65B4">
+					<UnitConstant>
+						<name>TT_Damage</name>
+						<var>
+							<compiledString>FSQAAAACAAAAMwAAAEUAAABHMzQzX0RhbWFnZVBlckNoYXJnZQAAAABHMzI4Q291bnRlcgBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0mgYAAAAi0UIixCLTQiLgogBAADdXfj/0NxN+Nld9NlF9IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cG343_DamagePerCharge *sender.vG328Counter</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="7B6BEED9-202B-4AFA-8B34-27B6202F39B3">
+					<UnitConstant>
+						<name>TT_MaxStacks</name>
+						<var>
+							<compiledString>FQcAAAABAAAAEwAAAFN0YWNrcwBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cStacks</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQQ==</compiledString>
+		<returnType>float</returnType>
+		<sString>30</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G328_AoERegEnergy.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="43BCECA2-2C7C-47B6-891E-314F206BC281">
+		<DispatchLinear>
+			<aiming>Pursue</aiming>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<flyMode>Parabolic</flyMode>
+			<fromLocator>Body</fromLocator>
+			<height>0</height>
+			<killEffect>true</killEffect>
+			<locatorOrient>true</locatorOrient>
+			<maxDeviation>180</maxDeviation>
+			<maxDistance>-1</maxDistance>
+			<maxRise>0</maxRise>
+			<minRise>0</minRise>
+			<persistentApplicators>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="FA639B56-011B-4C17-8DC2-548F77C95658">
+					<PermanentStatModApplicator>
+						<applyTarget>AbilityOwner</applyTarget>
+						<caption>Запоминаем урон, который мы должны нанести</caption>
+						<customApplyType>None</customApplyType>
+						<enabled>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</enabled>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<modifier>
+							<addValue>
+								<compiledString>FQwAAAABAAAAEAAAAEczMjhDb3VudGVyAFWL7GgAAAAAi0UIixCLTQiLgogBAAD/0F3D</compiledString>
+								<returnType>float</returnType>
+								<sString>sender.vG328Counter</sString>
+							</addValue>
+							<multValue>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>1.0f</sString>
+							</multValue>
+							<stat>Life</stat>
+							<topModifier>false</topModifier>
+							<variable>G328EnergyDrain</variable>
+						</modifier>
+						<providerName></providerName>
+					</PermanentStatModApplicator>
+				</Item>
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="13DAF286-76B7-464D-AD64-86A2FBF4EEE0">
+					<PermanentStatModApplicator>
+						<applyTarget>AbilityOwner</applyTarget>
+						<caption>Сбрасываем стеки</caption>
+						<customApplyType>None</customApplyType>
+						<enabled>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</enabled>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<modifier>
+							<addValue>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>0.0f</sString>
+							</addValue>
+							<multValue>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>0.0f</sString>
+							</multValue>
+							<stat>Life</stat>
+							<topModifier>false</topModifier>
+							<variable>G328Counter</variable>
+						</modifier>
+						<providerName></providerName>
+					</PermanentStatModApplicator>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/TalentSet2/Set2_RemResPoints.APLR" />
+				<Item href="/Items/Talents/TalentKits/TalentSet2/Set2_SaveResCosts.APLR" />
+				<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="5FCAA085-6AEE-490E-BDA7-115F9991FD11">
+					<SpellApplicator>
+						<applyTarget>AbilityOwner</applyTarget>
+						<caption>Эффект на кастере</caption>
+						<enabled>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</enabled>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<providerName></providerName>
+						<spell href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="47934804-7BD9-44B6-ADAB-7F4110A2D121">
+							<Spell>
+								<applicators />
+								<dispatch href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="0B2F1366-3740-447B-9DF3-DDA72024A854">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="/Effects/Buffs/Cure/_Blue.EFFT" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>false</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+						<spellTarget>ApplicatorTarget</spellTarget>
+						<targetSelector href="" />
+					</SpellApplicator>
+				</Item>
+			</persistentApplicators>
+			<speed>150</speed>
+			<suspendTime>0</suspendTime>
+			<toLocator>Body</toLocator>
+		</DispatchLinear>
+	</dispatch>
+	<flags>3</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_328.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G328_AoERegEnergy.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="87318DB7-8AA9-4F32-B94B-E27CABE8C9EF">
+			<AuraApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Common/Applicators/status_328_EnergyReg.APLR" />
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Аура</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<range>
+					<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+					<returnType>float</returnType>
+					<sString>cRange_Long</sString>
+				</range>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<targets>268435471</targets>
+				<targetSelector href="" />
+				<type>Ally</type>
+			</AuraApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Applicators/status_328_ERegSelf.APLR" />
+		<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="54D410AB-FC55-4BF6-9B6A-341E5E7CB8D0">
+			<PermanentStatModApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<caption>РегЭнергии+</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FREAAAABAAAAHQAAAEFkZF9FbmVyZ3lSZWdBYnMAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_EnergyRegAbs</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>EnergyRegenerationAbsolute</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="141EC9DD-4CA4-431E-8D0D-014EB7BEF96A">
+			<PermanentStatModApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<caption>Счетчик аур</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>Status_328</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="11C577C0-9CDD-408B-9199-27A2197D120B">
+			<FlagsApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Запрет использовать без стеков</caption>
+				<consumables />
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHMzI4Q291bnRlcgBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF6CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG328Counter &lt;= 0</sString>
+				</enabled>
+				<flag>1024</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents>
+					<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" />
+				</talents>
+				<useListAs>ListAsRule</useListAs>
+			</FlagsApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="0FEA22DA-232D-48D8-8763-9A0D12855C0F">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>триггер на использование таланта за энергию</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="DC7ED95D-D779-4C13-9432-8AF81DAD4A77">
+					<EventProcessorAbilityManacostTransformer>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<filter>
+							<abilitiesList />
+							<abilityCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</abilityCondition>
+							<abilityCostMode>Energy</abilityCostMode>
+							<exceptThis>false</exceptThis>
+							<flags>671088830</flags>
+							<onlySingleTarget>false</onlySingleTarget>
+						</filter>
+						<spell href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="EF99A302-6BF3-47EE-AFF3-DEA8C8238C65">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="46728287-6A94-4D35-9C91-483855343EFE">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>Сколько маны или здоровья затратили на абилки</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FSkAAAACAAAASAAAAF4AAABCYXNlTWFuYUNvc3QAAAAAVEVDSF9FbmVyZ3lNb2RBZGRQZXJjZW50AFWL7IPsEItFEIsQi00Qi0JI/9CJRfyLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlD/0Nno3sFoAAAAAItN/IsRi038i0JU3V30/9DcTfTZXfDZRfCL5V3DAAAAAAAA8D8=</compiledString>
+													<returnType>float</returnType>
+													<sString>appl.parent.vBaseManaCost * (1 + cTECH_EnergyModAddPercent) </sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>AddG328Counter</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="D5069A7D-330C-4C4B-90AB-D94BE6B723E9">
+										<SpellApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>Проверяем, сколько мы затратили маны</caption>
+											<enabled>
+												<compiledString>FSsAAAAEAAAAMgAAAEgAAABUAAAAcQAAAEczMjhDb3VudGVyAEFkZEczMjhDb3VudGVyAABURUNIX05lZWRDb3N0cwBVi+yD7BBoAAAAAItFCIsQi00Ii4KIAQAA/9DcHbUAAADf4PbEQXpUaAwAAACLTQiLEYtNCIuCiAEAAP/Qi00MUYtVCFJoHAAAAItFEIsQi00Qi0JQ3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAItN9IlN8OsHx0XwAQAAAIpF8IvlXcMAAAAAAAAAAA==</compiledString>
+												<returnType>bool</returnType>
+												<sString>sender.vG328Counter&lt;=0 ? sender.vAddG328Counter&gt;=cTECH_NeedCosts : true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<spell href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="50A3B535-F615-4DED-838A-16C735254C4D">
+												<Spell>
+													<applicators>
+														<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="952AB5E7-82F1-4F2F-BC20-AA4D6D135F18">
+															<PermanentStatModApplicator>
+																<applyTarget>AbilityOwner</applyTarget>
+																<caption>Увеличиваем счётчик</caption>
+																<customApplyType>None</customApplyType>
+																<enabled>
+																	<compiledString>FRYAAAACAAAAHQAAADoAAABHMzI4Q291bnRlcgBNYXhTdGFja3MAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Qi00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+																	<returnType>bool</returnType>
+																	<sString>sender.vG328Counter &lt; cMaxStacks</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<modifier>
+																	<addValue>
+																		<compiledString>FTcAAAAEAAEARgAAAFgAAAB9AAAAmgAAAPEAAABNYXhTdGFja3MAAABHMzI4Q291bnRlcgBBZGRHMzI4Q291bnRlcgAAVEVDSF9OZWVkQ29zdHMAVYvsg+wYi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JoDAAAAItFCIsQi00Ii4KIAQAA3V34/9DcbfjZXfTZRfRR2RwkaBgAAACLTQiLEYtNCIuCiAEAAP/Qi00MUYtVCFJoKAAAAItFEIsQi00Qi0JQ3V3s/9DcfezZXejZRehR2Rwk6A8AAADZHCToOgAAAIPECIvlXcNVi+xR2UUI2Rwk6AUAAACDxARdw1WL7FHZRQiD7AjdHCTo//7//4PECNld/NlF/IvlXcNVi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+																		<returnType>float</returnType>
+																		<sString>min( floor( sender.vAddG328Counter / cTECH_NeedCosts ), cMaxStacks - sender.vG328Counter)</sString>
+																	</addValue>
+																	<multValue>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>1.0f</sString>
+																	</multValue>
+																	<stat>Life</stat>
+																	<topModifier>false</topModifier>
+																	<variable>G328Counter</variable>
+																</modifier>
+																<providerName></providerName>
+															</PermanentStatModApplicator>
+														</Item>
+														<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="437FB702-D473-400B-9865-642C4FD0A7E3">
+															<PermanentStatModApplicator>
+																<applyTarget>ApplicatorTarget</applyTarget>
+																<caption>cost update</caption>
+																<customApplyType>None</customApplyType>
+																<enabled>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>true</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<modifier>
+																	<addValue>
+																		<compiledString>FR8AAAACAAEAKwAAAEEAAACVAAAAVEVDSF9OZWVkQ29zdHMAAEFkZEczMjhDb3VudGVyAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SUdkcJGgQAAAAi0UIixCLTQiLgogBAAD/0FHZHCToBQAAAIPECF3DVYvsUdlFDNkcJFHZRQjZHCToBQAAAIPECF3DVYvsUdlFDIPsCN0cJNlFCIPsCN0cJOhP////g8QQ2V382UX8i+Vdww==</compiledString>
+																		<returnType>float</returnType>
+																		<sString>fmod(sender.vAddG328Counter,cTECH_NeedCosts)</sString>
+																	</addValue>
+																	<multValue>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>0.0f</sString>
+																	</multValue>
+																	<stat>Life</stat>
+																	<topModifier>false</topModifier>
+																	<variable>AddG328Counter</variable>
+																</modifier>
+																<providerName></providerName>
+															</PermanentStatModApplicator>
+														</Item>
+													</applicators>
+													<dispatch href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="B4935E5F-B963-4C52-919A-7ECF4E9E6690">
+														<DispatchImmediate>
+															<alwaysApply>false</alwaysApply>
+															<applyEffect>
+																<Item href="" />
+																<Item href="" />
+															</applyEffect>
+															<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+															<applyEffectOrientation>Default</applyEffectOrientation>
+															<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+															<dieAfterApply>true</dieAfterApply>
+															<dispatchEffect>
+																<Item href="" />
+																<Item href="" />
+															</dispatchEffect>
+															<flags>0</flags>
+															<instantApply>false</instantApply>
+														</DispatchImmediate>
+													</dispatch>
+												</Spell>
+											</spell>
+											<spellTarget>ApplicatorTarget</spellTarget>
+											<targetSelector href="" />
+										</SpellApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="27583C8A-BDE3-4DF0-ACBD-2244E123050A">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="/Effects/Buffs/Regen/_Time.EFFT" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>false</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+					</EventProcessorAbilityManacostTransformer>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="5CD55B87-D152-4B77-995E-12D0C807E0CE">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>триггер на использование таланта за здоровье</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="A18B1C4A-74C9-4F94-BCA7-B14650CDBA7F">
+					<EventProcessorAbilityManacostTransformer>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<filter>
+							<abilitiesList />
+							<abilityCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</abilityCondition>
+							<abilityCostMode>Life</abilityCostMode>
+							<exceptThis>false</exceptThis>
+							<flags>671088830</flags>
+							<onlySingleTarget>false</onlySingleTarget>
+						</filter>
+						<spell href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="D75A5638-2CEB-48EF-B8DF-B3F84580C499">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="F4ED5C58-8781-4A24-AC07-7844A65B15C8">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>Сколько маны или здоровья затратили на абилки</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FScAAAACAAAARgAAAFwAAABCYXNlTWFuYUNvc3QAAAAAVEVDSF9MaWZlTW9kQWRkUGVyY2VudABVi+yD7BCLRRCLEItNEItCSP/QiUX8i00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ/9DZ6N7BaAAAAACLTfyLEYtN/ItCVN1d9P/Q3E302V3w2UXwi+VdwwAAAAAAAPA/</compiledString>
+													<returnType>float</returnType>
+													<sString>appl.parent.vBaseManaCost  * (1 + cTECH_LifeModAddPercent) </sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>AddG328Counter</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="199A6BB6-58FB-4FBD-8D50-3B116285203E">
+										<SpellApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>Проверяем, сколько мы затратили маны</caption>
+											<enabled>
+												<compiledString>FSsAAAAEAAAAMgAAAEgAAABUAAAAcQAAAEczMjhDb3VudGVyAEFkZEczMjhDb3VudGVyAABURUNIX05lZWRDb3N0cwBVi+yD7BBoAAAAAItFCIsQi00Ii4KIAQAA/9DcHbUAAADf4PbEQXpUaAwAAACLTQiLEYtNCIuCiAEAAP/Qi00MUYtVCFJoHAAAAItFEIsQi00Qi0JQ3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAItN9IlN8OsHx0XwAQAAAIpF8IvlXcMAAAAAAAAAAA==</compiledString>
+												<returnType>bool</returnType>
+												<sString>sender.vG328Counter&lt;=0 ? sender.vAddG328Counter&gt;=cTECH_NeedCosts : true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<spell href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="C4027A80-53BB-41B9-806D-515DA621C647">
+												<Spell>
+													<applicators>
+														<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="8290C7EE-F8D8-4143-A5BD-7317987C8D57">
+															<PermanentStatModApplicator>
+																<applyTarget>AbilityOwner</applyTarget>
+																<caption>Увеличиваем счётчик</caption>
+																<customApplyType>None</customApplyType>
+																<enabled>
+																	<compiledString>FRYAAAACAAAAHQAAADoAAABHMzI4Q291bnRlcgBNYXhTdGFja3MAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Qi00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+																	<returnType>bool</returnType>
+																	<sString>sender.vG328Counter &lt; cMaxStacks</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<modifier>
+																	<addValue>
+																		<compiledString>FTcAAAAEAAEARgAAAFgAAAB9AAAAmgAAAPEAAABNYXhTdGFja3MAAABHMzI4Q291bnRlcgBBZGRHMzI4Q291bnRlcgAAVEVDSF9OZWVkQ29zdHMAVYvsg+wYi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JoDAAAAItFCIsQi00Ii4KIAQAA3V34/9DcbfjZXfTZRfRR2RwkaBgAAACLTQiLEYtNCIuCiAEAAP/Qi00MUYtVCFJoKAAAAItFEIsQi00Qi0JQ3V3s/9DcfezZXejZRehR2Rwk6A8AAADZHCToOgAAAIPECIvlXcNVi+xR2UUI2Rwk6AUAAACDxARdw1WL7FHZRQiD7AjdHCTo//7//4PECNld/NlF/IvlXcNVi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+																		<returnType>float</returnType>
+																		<sString>min( floor( sender.vAddG328Counter / cTECH_NeedCosts ), cMaxStacks - sender.vG328Counter)</sString>
+																	</addValue>
+																	<multValue>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>1.0f</sString>
+																	</multValue>
+																	<stat>Life</stat>
+																	<topModifier>false</topModifier>
+																	<variable>G328Counter</variable>
+																</modifier>
+																<providerName></providerName>
+															</PermanentStatModApplicator>
+														</Item>
+														<Item href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="7C0041E0-6EC5-4E13-BEB7-0893E57832F3">
+															<PermanentStatModApplicator>
+																<applyTarget>ApplicatorTarget</applyTarget>
+																<caption>cost update</caption>
+																<customApplyType>None</customApplyType>
+																<enabled>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>true</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<modifier>
+																	<addValue>
+																		<compiledString>FR8AAAACAAEAKwAAAEEAAACVAAAAVEVDSF9OZWVkQ29zdHMAAEFkZEczMjhDb3VudGVyAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SUdkcJGgQAAAAi0UIixCLTQiLgogBAAD/0FHZHCToBQAAAIPECF3DVYvsUdlFDNkcJFHZRQjZHCToBQAAAIPECF3DVYvsUdlFDIPsCN0cJNlFCIPsCN0cJOhP////g8QQ2V382UX8i+Vdww==</compiledString>
+																		<returnType>float</returnType>
+																		<sString>fmod(sender.vAddG328Counter,cTECH_NeedCosts)</sString>
+																	</addValue>
+																	<multValue>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>0.0f</sString>
+																	</multValue>
+																	<stat>Life</stat>
+																	<topModifier>false</topModifier>
+																	<variable>AddG328Counter</variable>
+																</modifier>
+																<providerName></providerName>
+															</PermanentStatModApplicator>
+														</Item>
+													</applicators>
+													<dispatch href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="18AD7CE7-10FD-460B-BFAF-C9762EDCAD98">
+														<DispatchImmediate>
+															<alwaysApply>false</alwaysApply>
+															<applyEffect>
+																<Item href="" />
+																<Item href="" />
+															</applyEffect>
+															<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+															<applyEffectOrientation>Default</applyEffectOrientation>
+															<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+															<dieAfterApply>true</dieAfterApply>
+															<dispatchEffect>
+																<Item href="" />
+																<Item href="" />
+															</dispatchEffect>
+															<flags>0</flags>
+															<instantApply>false</instantApply>
+														</DispatchImmediate>
+													</dispatch>
+												</Spell>
+											</spell>
+											<spellTarget>ApplicatorTarget</spellTarget>
+											<targetSelector href="" />
+										</SpellApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Common/G328_AoERegEnergy.TALENT" id="C2A41C88-EBEA-4CE7-A44E-8698038F9501">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="/Effects/Buffs/Regen/_Time.EFFT" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>false</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+					</EventProcessorAbilityManacostTransformer>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G328</persistentId>
+	<prerequisiteTalents />
+	<rarity>exclusive</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G328_AoERegEnergy.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>EnergyRegenerationAbsolute</stat>
+			<values>
+				<Item>2.772</Item>
+				<Item>2.9645</Item>
+				<Item>3.157</Item>
+				<Item>3.3495</Item>
+				<Item>3.542</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>672989247</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Long</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

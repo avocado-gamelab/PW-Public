@@ -2,19 +2,19 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Inventor.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Inventor.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Inventor_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A4.TALENT" Count="2" />
+	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A4_2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A4_SUP.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
 	<BackLink DBID="/Test/Talents/Inventor/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Inventor/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Inventor/Elite_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Inventor/Elite_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Inventor/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Inventor/Epic_Str.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A4_2.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Inventor_Mighty.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A4_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -919,21 +919,10 @@
 		<returnType>float</returnType>
 		<sString>0.0f</sString>
 	</castAllowRange>
-	<castLimitations>
-		<Item href="/Items/Talents/Class/Inventor/Ability_A4.TALENT" id="AED3E519-A886-4466-832A-DBD46988CDAC">
-			<ConditionCastLimitation>
-				<condition>
-					<compiledString>FQ4AAAABAAAAEgAAAEludmVudG9yX0E0XzIAVYvsaAAAAACLRQiLEItNCIuCqAEAAP/Q99gbwIPAAV3D</compiledString>
-					<returnType>bool</returnType>
-					<sString>!sender.GetTalent( "Inventor_A4_2" )</sString>
-				</condition>
-				<uiEvent href="" />
-			</ConditionCastLimitation>
-		</Item>
-	</castLimitations>
+	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Inventor/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Inventor/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Inventor/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Inventor/condition_EnoughDetails" />
 		<Item href="/Items/Talents/Class/Inventor/Ability_A4.TALENT" id="DC4CBB2B-CD08-4F61-BB29-DA5790CB28E5">
@@ -967,9 +956,9 @@
 					<UnitConstant>
 						<name>A4_HalfDamage_Phys</name>
 						<var>
-							<compiledString>FT8AAAAHAAAARgAAAF8AAACdAAAAsAAAAMMAAADNAAAAAgEAAEE0X1BlcmlvZAAAAEludmVudG9yX0E0X1NVUABJbnZlbnRvcl9BNF9TVVAAQTRfU1VQX0JvbnVzRGFtYWdlAFWL7IPsHGgMAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoHAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdCWLVQxSi0UIUGgsAAAAi00QixGLTRCLQlD/0NwNQgEAAN1d8OsF2e7dXfBqAVHZBTYBAADZHCRR2QUyAQAA2RwkagCLTQiLEYtNCIuCMAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0ItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d6P/Q3E3o2ejcRfDeydld5NlF5IvlXcMAAAAAAADwPwAAuEEAACdDAAAAAAAAAAB7FK5H4XqEPw==</compiledString>
+							<compiledString>FUsAAAAGAAAAUgAAAGsAAACpAAAAvAAAANMAAADtAAAAQTRfRFBTX1BoeXMAQTRfUGVyaW9kAAAASW52ZW50b3JfQTRfU1VQAEludmVudG9yX0E0X1NVUABBNF9TVVBfQm9udXNEYW1hZ2UAVYvsg+wcaBgAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgoAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0JYtVDFKLRQhQaDgAAACLTRCLEYtNEItCUP/Q3A0lAQAA3V3w6wXZ7t1d8ItNDFGLVQhSaAAAAACLRRCLEItNEItCUP/Qi00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ3V3o/9DcTejZ6NxF8N7J2V3k2UXki+VdwwAAAAAAAPA/AAAAAAAAAAB7FK5H4XqEPw==</compiledString>
 							<returnType>float</returnType>
-							<sString>damageScale( sStrength, 23, 167 ) * cA4_Period * ( 1 + (tal("Inventor_A4_SUP") ? cA4_SUP_BonusDamage*0.01 : 0))</sString>
+							<sString>cA4_DPS_Phys * cA4_Period * ( 1 + (tal("Inventor_A4_SUP") ? cA4_SUP_BonusDamage*0.01 : 0))</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -977,9 +966,9 @@
 					<UnitConstant>
 						<name>A4_HalfDamage_Mag</name>
 						<var>
-							<compiledString>FT8AAAAHAAAARgAAAF8AAACdAAAAsAAAAMMAAADNAAAAAgEAAEE0X1BlcmlvZAAAAEludmVudG9yX0E0X1NVUABJbnZlbnRvcl9BNF9TVVAAQTRfU1VQX0JvbnVzRGFtYWdlAFWL7IPsHGgMAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoHAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdCWLVQxSi0UIUGgsAAAAi00QixGLTRCLQlD/0NwNQgEAAN1d8OsF2e7dXfBqAVHZBTYBAADZHCRR2QUyAQAA2RwkagCLTQiLEYtNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0ItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d6P/Q3E3o2ejcRfDeydld5NlF5IvlXcMAAAAAAADwPwAAlkIAAAtEAAAAAAAAAAB7FK5H4XqEPw==</compiledString>
+							<compiledString>FUsAAAAGAAAAUgAAAGsAAACpAAAAvAAAANMAAADtAAAAQTRfRFBTX01hZwAAQTRfUGVyaW9kAAAASW52ZW50b3JfQTRfU1VQAEludmVudG9yX0E0X1NVUABBNF9TVVBfQm9udXNEYW1hZ2UAVYvsg+wcaBgAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgoAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0JYtVDFKLRQhQaDgAAACLTRCLEYtNEItCUP/Q3A0lAQAA3V3w6wXZ7t1d8ItNDFGLVQhSaAAAAACLRRCLEItNEItCUP/Qi00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ3V3o/9DcTejZ6NxF8N7J2V3k2UXki+VdwwAAAAAAAPA/AAAAAAAAAAB7FK5H4XqEPw==</compiledString>
 							<returnType>float</returnType>
-							<sString>damageScale( sIntellect, 75, 556 ) * cA4_Period * ( 1 + (tal("Inventor_A4_SUP") ? cA4_SUP_BonusDamage * 0.01 : 0))</sString>
+							<sString>cA4_DPS_Mag * cA4_Period * ( 1 + (tal("Inventor_A4_SUP") ? cA4_SUP_BonusDamage * 0.01 : 0))</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -1015,21 +1004,21 @@
 				</Item>
 				<Item href="/Items/Talents/Class/Inventor/Ability_A4.TALENT" id="0D511758-29BF-4102-8452-A54105BF4C57">
 					<UnitConstant>
-						<name>A4_TTHalfDamage_Mag</name>
+						<name>A4_DPS_Mag</name>
 						<var>
-							<compiledString>FR4AAAACAAAALQAAAEcAAABBNF9IYWxmRGFtYWdlX01hZwAAAEE0X1BlcmlvZABVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBQAAACLVRCLAotNEItQUN1d+P/S3H342V302UX0i+Vdww==</compiledString>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAACWQgAAC0Q=</compiledString>
 							<returnType>float</returnType>
-							<sString>cA4_HalfDamage_Mag/cA4_Period</sString>
+							<sString>damageScale( sIntellect, 75, 556 )</sString>
 						</var>
 					</UnitConstant>
 				</Item>
 				<Item href="/Items/Talents/Class/Inventor/Ability_A4.TALENT" id="2B3724F8-789E-4020-AFFF-4F684B009D70">
 					<UnitConstant>
-						<name>A4_TTHalfDamage_Phys</name>
+						<name>A4_DPS_Phys</name>
 						<var>
-							<compiledString>FR4AAAACAAAALQAAAEcAAABBNF9IYWxmRGFtYWdlX1BoeXMAAEE0X1BlcmlvZABVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBQAAACLVRCLAotNEItQUN1d+P/S3H342V302UX0i+Vdww==</compiledString>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCMAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAAC4QQAAJ0M=</compiledString>
 							<returnType>float</returnType>
-							<sString>cA4_HalfDamage_Phys/cA4_Period</sString>
+							<sString>damageScale( sStrength, 23, 167 )</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -1083,6 +1072,8 @@
 					</UnitConstant>
 				</Item>
 				<Item href="/Items/Talents/Class/Inventor/const_A4_SUP_BonusDamage" />
+				<Item href="/Items/Talents/Class/Inventor/const_A0_MaxMoveSpeedPercent" />
+				<Item href="/Items/Talents/Class/Inventor/const_A4_SUP_CDR" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -1091,9 +1082,9 @@
 		<percent>0</percent>
 	</consumptionBonus>
 	<cooldownTime>
-		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABwQQ==</compiledString>
+		<compiledString>FSsAAAAEAAAAMgAAAEsAAACLAAAApAAAAEludmVudG9yX0E0X1NVUABJbnZlbnRvcl9BNF9TVVAAQTRfU1VQX0NEUgBVi+yD7BhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuJTfTbRfSLVQxSi0UIUGggAAAAi00QixGLTRCLQlDdXez/0NxN7NwtsgAAANld6NlF6IvlXcMAAAAAAAA+QA==</compiledString>
 		<returnType>float</returnType>
-		<sString>15</sString>
+		<sString>30 - tal("Inventor_A4_SUP") * cA4_SUP_CDR</sString>
 	</cooldownTime>
 	<cooldownTimeSecondState>
 		<compiledString></compiledString>
@@ -1122,7 +1113,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>2049</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Inventor/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

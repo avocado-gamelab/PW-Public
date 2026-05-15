@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Fluffy.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Fluffy_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Fluffy.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Fluffy_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Fluffy_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Fluffy/Ability_A0.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Fluffy/Ability_A1.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Fluffy/Ability_A1u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Fluffy_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Fluffy/Elite_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Fluffy/Elite_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Fluffy/Epic_Int.TALENTSET" Count="1" />
@@ -997,8 +997,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Fluffy/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Fluffy/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Fluffy/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Fluffy/Ability_A1.TALENT" id="EDB49AAF-F571-4DE7-B8A9-E7A4708494D4">
 			<ConditionFormula>
@@ -1029,9 +1029,9 @@
 					<UnitConstant>
 						<name>A1_Damage</name>
 						<var>
-							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAACWQgDADEQ=</compiledString>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAADDQgAAN0Q=</compiledString>
 							<returnType>float</returnType>
-							<sString>damageScale( sIntellect, 75, 563)</sString>
+							<sString>damageScale( sIntellect, 97.5, 732)</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -1140,7 +1140,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>599</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Fluffy/A1_small.ITEX" />
 	<imageSecondState href="/UI/Styles/Icons/Heroes/Fluffy/A1_big.ITEX" />
 	<isGenderTalent>false</isGenderTalent>

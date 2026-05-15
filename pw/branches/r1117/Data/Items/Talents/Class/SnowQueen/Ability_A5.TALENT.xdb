@@ -2,14 +2,15 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/SnowQueen.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/SnowQueen_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/SnowQueen_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/SnowQueen.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/SnowQueen_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/SnowQueen_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Duel.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Elite_IntLife.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Elite_StrInt.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Epic_IntLife.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Epic_IntLife_Ult2.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Test_Satanic.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -40,14 +41,14 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/SnowQueen/Ability_A5.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/SnowQueen/Ability_A5.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/SnowQueen/Ability_A5.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas />
 	<conflictingTalents />
 	<constants href="/Items/Talents/Class/SnowQueen/Ability_A5.TALENT" id="7960C7D6-2037-4CBD-9FF8-BC60150A4F04">
 		<UnitConstantsContainer>
 			<vars>
-				<Item href="/Items/Talents/Class/SnowQueen/const_A5_Damage" />
+				<Item href="/Items/Talents/Class/SnowQueen/const_A5_BaseDamage" />
 				<Item href="/Items/Talents/Class/SnowQueen/Ability_A5.TALENT" id="6426A975-04DF-4D45-92D9-C0CEA9B22BFA">
 					<UnitConstant>
 						<name>A5_Period</name>
@@ -58,6 +59,8 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/SnowQueen/const_A5_Damage" />
+				<Item href="/Items/Talents/Class/SnowQueen/const_A3_StrongAttackDamageMultPercent" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -79,7 +82,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/SnowQueen/A5.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

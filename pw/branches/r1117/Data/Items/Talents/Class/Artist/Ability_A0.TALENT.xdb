@@ -2,9 +2,9 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Artist.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Artist_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Artist_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Artist.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Artist_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Artist_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Artist/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Artist/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Artist/Elite_Int.TALENTSET" Count="1" />
@@ -12,7 +12,7 @@
 	<BackLink DBID="/Test/Talents/Artist/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Artist/Epic_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Artist/Epic_Str_Ult2.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Artist/Ability_A3u.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Artist/Ability_A0u.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -43,8 +43,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Artist/Ability_A0.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Artist/Ability_A0.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Artist/Ability_A0.TALENT" id="B504C959-D588-48EA-9522-D6B432C406AE">
 			<ConditionFormula>
@@ -106,6 +106,16 @@
 				<name>ScrollID4</name>
 			</ConditionFormula>
 		</Item>
+		<Item href="/Items/Talents/Class/Artist/Ability_A0.TALENT" id="029EA47E-E8FC-43F2-9D28-FA0BC560BCAB">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLQhz/0ItNCIsRi00Ii4I4AQAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sAttackSpeed &gt;= sDexterity</sString>
+				</condition>
+				<name>AddAttackSpeed</name>
+			</ConditionFormula>
+		</Item>
 	</conditionFormulas>
 	<conflictingTalents />
 	<constants href="/Items/Talents/Class/Artist/Ability_A0.TALENT" id="B826FC7D-8AEC-4241-B55D-D780ECF5D65E">
@@ -133,11 +143,11 @@
 				</Item>
 				<Item href="/Items/Talents/Class/Artist/Ability_A0.TALENT" id="3E52672C-D8A3-413C-8062-5F7F94EC0A4F">
 					<UnitConstant>
-						<name>A0_AddAtttackSpeedPerStack</name>
+						<name>A0_AddDamageStat</name>
 						<var>
-							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAFHZBWMAAADZHCRR2QVfAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJItNCIsRi00Ii4IwAQAA/9BR2Rwk6B8AAACDxATZHCRqAItNEIsRi00Qi0Jg/9Bdw5qZmT8AABBBVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBWMAAADZHCRR2QVfAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJItNCIsRi00Ii4IwAQAA/9BR2Rwk6B8AAACDxATZHCRqAItNEIsRi00Qi0Jg/9Bdw2ZmZj8AANhAVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
 							<returnType>float</returnType>
-							<sString>abilityScale(max( sStrength, sIntellect ), 1.2, 9, false)</sString>
+							<sString>abilityScale(max(sStrength, sIntellect), 0.9, 6.75)</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -165,11 +175,11 @@
 				<Item href="/Items/Talents/Class/Artist/const_A4u_MaxStacks" />
 				<Item href="/Items/Talents/Class/Artist/Ability_A0.TALENT" id="5A34B0DC-12B3-4DC0-929B-2444A643D17D">
 					<UnitConstant>
-						<name>A0_AddAtkSpdStatus</name>
+						<name>A0_AddDamageStatStatus</name>
 						<var>
-							<compiledString>FSsAAAACAAAAMgAAAE8AAABBcnRpc3RfTWFzdGVyeQAAQTBfQWRkQXR0dGFja1NwZWVkUGVyU3RhY2sAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Qi00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ3V34/9DcTfjZXfTZRfSL5V3D</compiledString>
+							<compiledString>FSEAAAACAAAAKAAAAEUAAABBcnRpc3RfTWFzdGVyeQAAQTBfQWRkRGFtYWdlU3RhdABVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlDdXfj/0NxN+Nld9NlF9IvlXcM=</compiledString>
 							<returnType>float</returnType>
-							<sString>sender.vArtist_Mastery*cA0_AddAtttackSpeedPerStack</sString>
+							<sString>sender.vArtist_Mastery*cA0_AddDamageStat</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -225,7 +235,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Artist/A0.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

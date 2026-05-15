@@ -4,11 +4,12 @@
 	<BackLink DBID="/GameLogic/Statistic/Legend.ACHIEV" Count="1" />
 	<BackLink DBID="/Maps/Multiplayer/CTE/CTEDragonSlayer.ACHIEV" Count="1" />
 	<BackLink DBID="/Maps/Multiplayer/CTE/CTELegend.ACHIEV" Count="1" />
+	<BackLink DBID="/Maps/Multiplayer/MOBA/Achievements/DragonSlayer.ACHIEV" Count="1" />
+	<BackLink DBID="/Maps/Multiplayer/MOBA/Achievements/Legend.ACHIEV" Count="1" />
+	<BackLink DBID="/Maps/Multiplayer/MOBA/NewYear/_.ADMP" Count="1" />
 	<BackLink DBID="/Maps/Multiplayer/MOBA/NewYear/PVP_NY.CREEP" Count="1" />
 	<BackLink DBID="/Maps/Multiplayer/MOBA/Spawners/NeutralBoss.NCSPN" Count="1" />
 	<BackLink DBID="/Test/Talents/TST_SummonBoss.TALENT" Count="1" />
-	<BackLink DBID="/Maps/Multiplayer/MOBA/Achievements/DragonSlayer.ACHIEV" Count="1" />
-	<BackLink DBID="/Maps/Multiplayer/MOBA/Achievements/Legend.ACHIEV" Count="1" />
 	<abilities>
 		<Item skip="1" />
 		<Item href="/Creeps/Bosses/Boss1/A1.ABLT" />
@@ -284,9 +285,9 @@
 								<Item href="" />
 							</effect>
 							<enabled>
-								<compiledString></compiledString>
+								<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
 								<returnType>bool</returnType>
-								<sString>true</sString>
+								<sString>false</sString>
 							</enabled>
 							<formulaName></formulaName>
 							<lifeTime>
@@ -334,7 +335,180 @@
 				<warFogRemoveTime>0</warFogRemoveTime>
 			</Ability>
 		</Item>
-		<Item skip="1" />
+		<Item href="/Creeps/Bosses/Boss1/PVP.CREEP" id="DA4111D0-9F8B-4D6A-82BB-54284C8CE360">
+			<Ability>
+				<activeCustomTrigger>true</activeCustomTrigger>
+				<allowChase>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</allowChase>
+				<alternativeTargets />
+				<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+				<aoeHeight>0</aoeHeight>
+				<aoeMaterial href="" />
+				<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+				<aoeSize>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</aoeSize>
+				<aoeType>None</aoeType>
+				<applicators />
+				<autoTargetSelector href="" />
+				<caption></caption>
+				<castAllowRange>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</castAllowRange>
+				<castLimitations />
+				<commonDescription textref="" />
+				<compiledDescriptionA textref="" />
+				<compiledDescriptionB textref="" />
+				<conditionFormulas />
+				<constants href="" />
+				<cooldownTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</cooldownTime>
+				<cooldownTimeSecondState>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</cooldownTimeSecondState>
+				<description textref="" />
+				<dispatch href="" />
+				<flags>5</flags>
+				<image href="" />
+				<imageSecondState href="" />
+				<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+				<manaCost>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</manaCost>
+				<marker></marker>
+				<microAI href="" />
+				<minUseRangeCorrection>0</minUseRangeCorrection>
+				<name textref="/Creeps/Bosses/Boss1/PVP.CREEP_da4111d09f8b4d6a82bb54284c8ce360_name.txt" />
+				<node></node>
+				<passiveApplicators>
+					<Item href="/Creeps/Bosses/Boss1/PVP.CREEP" id="FE8FE722-0D42-4E7E-BB0F-EF72A8646FD7">
+						<TriggerApplicator>
+							<actionsCount>
+								<compiledString>FQAAAAAAAAAAVYvsuAEAAABdww==</compiledString>
+								<returnType>int</returnType>
+								<sString>1</sString>
+							</actionsCount>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>152</behaviorFlags>
+							<caption>Спавним яйцо при смерти</caption>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<playAck>false</playAck>
+							<processor href="/Creeps/Bosses/Boss1/PVP.CREEP" id="2298ECAE-CEE9-4207-BC96-2AA98FDC9E74">
+								<EventProcessorOnDeath>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<castSpellDelay>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</castSpellDelay>
+									<checkSender>0</checkSender>
+									<objectFilter>2040319</objectFilter>
+									<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+									<spell href="/Creeps/Bosses/Boss1/PVP.CREEP" id="A04B579F-A80B-41E5-A45B-6EE78F209181">
+										<Spell>
+											<applicators>
+												<Item href="/Creeps/Bosses/Boss1/PVP.CREEP" id="BB6DD92D-9D7E-4BD0-96F2-B1C6A0F07B29">
+													<CreateGlyphApplicator>
+														<absolutePosition>
+															<x>0</x>
+															<y>0</y>
+														</absolutePosition>
+														<angle>0</angle>
+														<angleIsRelative>false</angleIsRelative>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>Спавним яйцо</caption>
+														<distance>0</distance>
+														<enabled>
+															<compiledString></compiledString>
+															<returnType>bool</returnType>
+															<sString>true</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<glyph href="/Glyphs/Dragon_Egg.GLPH" />
+														<LoggingEvent>-1</LoggingEvent>
+														<providerName></providerName>
+														<radius>10</radius>
+														<scriptName></scriptName>
+													</CreateGlyphApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Creeps/Bosses/Boss1/PVP.CREEP" id="CF4CDEBC-3E4F-4EBA-AA19-62EC18E6D733">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+								</EventProcessorOnDeath>
+							</processor>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<useAbilityCooldown>false</useAbilityCooldown>
+							<useAbilityOwnerMana>false</useAbilityOwnerMana>
+						</TriggerApplicator>
+					</Item>
+				</passiveApplicators>
+				<requireLineOfSight>true</requireLineOfSight>
+				<shortDescription textref="" />
+				<targetType>136258047</targetType>
+				<type>Passive</type>
+				<useRange>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</useRange>
+				<useRangeMaterial href="" />
+				<warFogRemoveRadius>0</warFogRemoveRadius>
+				<warFogRemoveTime>0</warFogRemoveTime>
+			</Ability>
+		</Item>
 	</abilities>
 	<attackAbility href="/Creeps/Bosses/Boss1/AttackAbility.ATCK" />
 	<deathParameters href="/Creeps/Bosses/Boss1/PVP.CREEP" id="8504CFB7-CC78-43D7-8155-815EDCEE79C1">

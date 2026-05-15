@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Items/Talents/Class/Naga/Ability_A1_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Naga_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Naga_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
@@ -33,8 +33,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Naga/Ability_A3_SUP.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Naga/Ability_A3_SUP.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Naga/Ability_A3_SUP.TALENT" id="0C199968-E940-4A97-9704-27335EDF9691">
 			<ConditionFormula>
@@ -75,7 +75,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>22.7</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Naga/A3_SUP.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -97,7 +97,7 @@
 	<passiveApplicators />
 	<persistentId>Naga_A3_SUP</persistentId>
 	<prerequisiteTalents>
-		<Item href="/Items/Talents/Class/Naga/Ability3.TALENT" />
+		<Item href="/Items/Talents/Class/Naga/Ability_A3.TALENT" />
 	</prerequisiteTalents>
 	<rarity>Class</rarity>
 	<requireLineOfSight>true</requireLineOfSight>

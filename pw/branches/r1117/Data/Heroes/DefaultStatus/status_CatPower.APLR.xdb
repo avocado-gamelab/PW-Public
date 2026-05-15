@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
-	<BackLink DBID="/Buildings/DefaultStats/CheckCatKill.ABLT" Count="1" />
+	<BackLink DBID="/Buildings/DefaultStats/CheckCatKill.ABLT" Count="2" />
 	<BackLink DBID="/Heroes/DefaultStatus/status_CatPower.APLR" Count="1" />
 	<applicators>
-		<Item href="/Heroes/DefaultStatus/status_CatPower.APLR" id="CBBFE035-1799-4E36-A657-8F78AF015049">
+		<Item href="/Heroes/DefaultStatus/status_CatPower.APLR" id="F0A52A03-2543-40BA-B42F-CF1C5764164A">
 			<StatModApplicator>
 				<applyTarget>ApplicatorTarget</applyTarget>
 				<behaviorFlags>216</behaviorFlags>
-				<caption>Увеличиваем реген хп</caption>
+				<caption>Увеличиваем мана рег</caption>
 				<constraint>None</constraint>
 				<dontUpdate>false</dontUpdate>
 				<effect>
@@ -15,7 +15,7 @@
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString></compiledString>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
 					<returnType>bool</returnType>
 					<sString>true</sString>
 				</enabled>
@@ -28,56 +28,9 @@
 				<LoggingEvent>-1</LoggingEvent>
 				<modifier>
 					<addValue>
-						<compiledString>FQ0AAAABAAAAGQAAAEJ1ZmZfUmVnZW5IUABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcysQA==</compiledString>
 						<returnType>float</returnType>
-						<sString>cBuff_RegenHP</sString>
-					</addValue>
-					<multValue>
-						<compiledString></compiledString>
-						<returnType>float</returnType>
-						<sString>1.0f</sString>
-					</multValue>
-					<stat>LifeRegenerationAbsolute</stat>
-					<topModifier>false</topModifier>
-					<variable></variable>
-				</modifier>
-				<providerName></providerName>
-				<startCondition>
-					<compiledString></compiledString>
-					<returnType>bool</returnType>
-					<sString>true</sString>
-				</startCondition>
-				<statModName></statModName>
-			</StatModApplicator>
-		</Item>
-		<Item href="/Heroes/DefaultStatus/status_CatPower.APLR" id="40559CB7-AD42-48F4-9053-D0E30CB1E91C">
-			<StatModApplicator>
-				<applyTarget>ApplicatorTarget</applyTarget>
-				<behaviorFlags>216</behaviorFlags>
-				<caption>Увеличиваем реген маны</caption>
-				<constraint>None</constraint>
-				<dontUpdate>false</dontUpdate>
-				<effect>
-					<Item href="" />
-					<Item href="" />
-				</effect>
-				<enabled>
-					<compiledString></compiledString>
-					<returnType>bool</returnType>
-					<sString>true</sString>
-				</enabled>
-				<formulaName></formulaName>
-				<lifeTime>
-					<compiledString></compiledString>
-					<returnType>float</returnType>
-					<sString>-1.0</sString>
-				</lifeTime>
-				<LoggingEvent>-1</LoggingEvent>
-				<modifier>
-					<addValue>
-						<compiledString>FREAAAABAAAAHQAAAEJ1ZmZfUmVnZW5FbmVyZ3kAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
-						<returnType>float</returnType>
-						<sString>cBuff_RegenEnergy</sString>
+						<sString>5.4</sString>
 					</addValue>
 					<multValue>
 						<compiledString></compiledString>
@@ -85,53 +38,6 @@
 						<sString>1.0f</sString>
 					</multValue>
 					<stat>EnergyRegenerationAbsolute</stat>
-					<topModifier>false</topModifier>
-					<variable></variable>
-				</modifier>
-				<providerName></providerName>
-				<startCondition>
-					<compiledString></compiledString>
-					<returnType>bool</returnType>
-					<sString>true</sString>
-				</startCondition>
-				<statModName></statModName>
-			</StatModApplicator>
-		</Item>
-		<Item href="/Heroes/DefaultStatus/status_CatPower.APLR" id="F0A52A03-2543-40BA-B42F-CF1C5764164A">
-			<StatModApplicator>
-				<applyTarget>ApplicatorTarget</applyTarget>
-				<behaviorFlags>216</behaviorFlags>
-				<caption>Увеличиваем МС</caption>
-				<constraint>None</constraint>
-				<dontUpdate>false</dontUpdate>
-				<effect>
-					<Item href="" />
-					<Item href="" />
-				</effect>
-				<enabled>
-					<compiledString>FSAAAAACAAAAJQAAAFEAAABDYXRLaWxsX0NvdW50ZXIAV2VuZGlnb1NlbGZSb290AFWL7FFoAAAAAItFDIsQi00Mi4KIAQAA/9BR2Rwk6FYAAACDxASD+AF+QGoAi00QUWgQAAAAi1UMiwKLTQyLkJwBAAD/0jtFEHQXi0UQixCLTRCLgpAAAAD/0A+2yIXJdQnHRfwBAAAA6wfHRfwAAAAAikX8i+Vdw7gBAAAAD6L3wgAAAAR0B/MPLEQkBMPpAAAAAFWL7IPsDNlFCNl9/A+3RfwNAAwAAIlF+Nlt+Ntd9Nlt/ItF9IvlXcM=</compiledString>
-					<returnType>bool</returnType>
-					<sString>f2l(receiver.vCatKill_Counter) &gt; 1 &amp;&amp; (receiver.applWendigoSelfRoot(GLOBAL) == pMisc || mIsNight==false)</sString>
-				</enabled>
-				<formulaName></formulaName>
-				<lifeTime>
-					<compiledString></compiledString>
-					<returnType>float</returnType>
-					<sString>-1.0</sString>
-				</lifeTime>
-				<LoggingEvent>-1</LoggingEvent>
-				<modifier>
-					<addValue>
-						<compiledString>FRMAAAABAAAAHwAAAEJ1ZmZfRmxhdE1vdmVTcGVlZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
-						<returnType>float</returnType>
-						<sString>cBuff_FlatMoveSpeed</sString>
-					</addValue>
-					<multValue>
-						<compiledString></compiledString>
-						<returnType>float</returnType>
-						<sString>1.0f</sString>
-					</multValue>
-					<stat>MoveSpeed</stat>
 					<topModifier>false</topModifier>
 					<variable></variable>
 				</modifier>
@@ -156,9 +62,9 @@
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString>FRAAAAABAAAARAAAAENhdEtpbGxfQ291bnRlcgBVi+yD7AyLRQyLEItNDIuCvAAAAP/Qi00MixGLTQyLgrgAAADdXfj/0Nxd+N/g9sQBdS9oAAAAAItNDIsRi00Mi4KIAQAA/9BR2Rwk6B8AAACDxASD+AJ+CcdF9AEAAADrB8dF9AAAAACKRfSL5V3DuAEAAAAPovfCAAAABHQH8w8sRCQEw+kAAAAAVYvsg+wM2UUI2X38D7dF/A0ADAAAiUX42W3421302W38i0X0i+Vdww==</compiledString>
+					<compiledString>FRAAAAABAAAARAAAAENhdEtpbGxfQ291bnRlcgBVi+yD7AyLRQyLEItNDIuCvAAAAP/Qi00MixGLTQyLgrgAAADdXfj/0Nxd+N/g9sQBdS9oAAAAAItNDIsRi00Mi4KIAQAA/9BR2Rwk6B8AAACDxASD+AF+CcdF9AEAAADrB8dF9AAAAACKRfSL5V3DuAEAAAAPovfCAAAABHQH8w8sRCQEw+kAAAAAVYvsg+wM2UUI2X38D7dF/A0ADAAAiUX42W3421302W38i0X0i+Vdww==</compiledString>
 					<returnType>bool</returnType>
-					<sString>(rBaseIntellect&lt;=rBaseStrength) &amp;&amp; f2l(receiver.vCatKill_Counter) &gt; 2</sString>
+					<sString>(rBaseIntellect&lt;=rBaseStrength) &amp;&amp; f2l(receiver.vCatKill_Counter) &gt; 1</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<lifeTime>
@@ -203,9 +109,9 @@
 					<Item href="" />
 				</effect>
 				<enabled>
-					<compiledString>FRAAAAABAAAARAAAAENhdEtpbGxfQ291bnRlcgBVi+yD7AyLRQyLEItNDIuCvAAAAP/Qi00MixGLTQyLgrgAAADdXfj/0Nxd+N/g9sQFei9oAAAAAItNDIsRi00Mi4KIAQAA/9BR2Rwk6B8AAACDxASD+AJ+CcdF9AEAAADrB8dF9AAAAACKRfSL5V3DuAEAAAAPovfCAAAABHQH8w8sRCQEw+kAAAAAVYvsg+wM2UUI2X38D7dF/A0ADAAAiUX42W3421302W38i0X0i+Vdww==</compiledString>
+					<compiledString>FRAAAAABAAAARAAAAENhdEtpbGxfQ291bnRlcgBVi+yD7AyLRQyLEItNDIuCvAAAAP/Qi00MixGLTQyLgrgAAADdXfj/0Nxd+N/g9sQFei9oAAAAAItNDIsRi00Mi4KIAQAA/9BR2Rwk6B8AAACDxASD+AF+CcdF9AEAAADrB8dF9AAAAACKRfSL5V3DuAEAAAAPovfCAAAABHQH8w8sRCQEw+kAAAAAVYvsg+wM2UUI2X38D7dF/A0ADAAAiUX42W3421302W38i0X0i+Vdww==</compiledString>
 					<returnType>bool</returnType>
-					<sString>(rBaseIntellect &gt; rBaseStrength) &amp;&amp; f2l(receiver.vCatKill_Counter) &gt; 2</sString>
+					<sString>(rBaseIntellect &gt; rBaseStrength) &amp;&amp; f2l(receiver.vCatKill_Counter) &gt; 1</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<lifeTime>
@@ -226,6 +132,194 @@
 						<sString>1</sString>
 					</multValue>
 					<stat>Intellect</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
+		<Item href="/Heroes/DefaultStatus/status_CatPower.APLR" id="876AEE91-B54F-4D1E-ABE0-F33F0DBBE4BB">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>216</behaviorFlags>
+				<caption>Увеличиваем Проворство</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FRAAAAABAAAAFwAAAENhdEtpbGxfQ291bnRlcgBVi+yD7BxoAAAAAItFDIsQi00Mi4KIAQAA/9BR2Rwk6KoAAACDxASD+AIPjpAAAACLTQyLEYtNDIuCjAAAAP/Qi00MixGLTQyLgsAAAADdXfj/0Nxd+N/g9sRBemOLTQyLEYtNDIuCjAAAAP/Qi00MixGLTQyLgswAAADdXfD/0Nxd8N/g9sRBejaLTQyLEYtNDIuCjAAAAP/Qi00MixGLTQyLgsgAAADdXej/0Nxd6N/g9sRBegnHReQBAAAA6wfHReQAAAAAikXki+Vdw7gBAAAAD6L3wgAAAAR0B/MPLEQkBMPpAAAAAFWL7IPsDNlFCNl9/A+3RfwNAAwAAIlF+Nlt+Ntd9Nlt/ItF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>f2l(receiver.vCatKill_Counter) &gt; 2 &amp;&amp; (rBaseAttackSpeed &gt;= rBaseDexterity &amp;&amp; rBaseAttackSpeed &gt;= rBaseWill &amp;&amp; rBaseAttackSpeed &gt;= rBaseStamina)</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FRIAAAABAAAAHgAAAEJ1ZmZfT2ZmU3RhdFRvdGFsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cBuff_OffStatTotal</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</multValue>
+					<stat>AttackSpeed</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
+		<Item href="/Heroes/DefaultStatus/status_CatPower.APLR" id="A1E0F7BC-2D4B-4776-97FC-6037302210BD">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>216</behaviorFlags>
+				<caption>Увеличиваем Хитрость</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FRAAAAABAAAAFwAAAENhdEtpbGxfQ291bnRlcgBVi+yD7BxoAAAAAItFDIsQi00Mi4KIAQAA/9BR2Rwk6KoAAACDxASD+AIPjpAAAACLTQyLEYtNDIuCwAAAAP/Qi00MixGLTQyLgowAAADdXfj/0Nxd+N/g9sQFemOLTQyLEYtNDIuCwAAAAP/Qi00MixGLTQyLgswAAADdXfD/0Nxd8N/g9sRBejaLTQyLEYtNDIuCwAAAAP/Qi00MixGLTQyLgsgAAADdXej/0Nxd6N/g9sRBegnHReQBAAAA6wfHReQAAAAAikXki+Vdw7gBAAAAD6L3wgAAAAR0B/MPLEQkBMPpAAAAAFWL7IPsDNlFCNl9/A+3RfwNAAwAAIlF+Nlt+Ntd9Nlt/ItF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>f2l(receiver.vCatKill_Counter) &gt; 2 &amp;&amp; (rBaseDexterity &gt; rBaseAttackSpeed &amp;&amp; rBaseDexterity &gt;= rBaseWill &amp;&amp; rBaseDexterity &gt;= rBaseStamina)</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FRIAAAABAAAAHgAAAEJ1ZmZfT2ZmU3RhdFRvdGFsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cBuff_OffStatTotal</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</multValue>
+					<stat>Dexterity</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
+		<Item href="/Heroes/DefaultStatus/status_CatPower.APLR" id="729767A9-C708-4F78-81E8-3DDE7BF51774">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>216</behaviorFlags>
+				<caption>Увеличиваем Стойкость</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FRAAAAABAAAAFwAAAENhdEtpbGxfQ291bnRlcgBVi+yD7BxoAAAAAItFDIsQi00Mi4KIAQAA/9BR2Rwk6KoAAACDxASD+AIPjpAAAACLTQyLEYtNDIuCyAAAAP/Qi00MixGLTQyLgowAAADdXfj/0Nxd+N/g9sQFemOLTQyLEYtNDIuCyAAAAP/Qi00MixGLTQyLgsAAAADdXfD/0Nxd8N/g9sQFejaLTQyLEYtNDIuCyAAAAP/Qi00MixGLTQyLgswAAADdXej/0Nxd6N/g9sRBegnHReQBAAAA6wfHReQAAAAAikXki+Vdw7gBAAAAD6L3wgAAAAR0B/MPLEQkBMPpAAAAAFWL7IPsDNlFCNl9/A+3RfwNAAwAAIlF+Nlt+Ntd9Nlt/ItF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>f2l(receiver.vCatKill_Counter) &gt; 2 &amp;&amp; (rBaseStamina &gt; rBaseAttackSpeed &amp;&amp; rBaseStamina &gt; rBaseDexterity &amp;&amp; rBaseStamina &gt;= rBaseWill)</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FRIAAAABAAAAHgAAAEJ1ZmZfT2ZmU3RhdFRvdGFsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cBuff_OffStatTotal</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</multValue>
+					<stat>Stamina</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
+		<Item href="/Heroes/DefaultStatus/status_CatPower.APLR" id="1A551ABA-A75F-4144-BE11-C85102E3A36F">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>216</behaviorFlags>
+				<caption>Увеличиваем Волю</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FRAAAAABAAAAFwAAAENhdEtpbGxfQ291bnRlcgBVi+yD7BxoAAAAAItFDIsQi00Mi4KIAQAA/9BR2Rwk6KoAAACDxASD+AIPjpAAAACLTQyLEYtNDIuCzAAAAP/Qi00MixGLTQyLgowAAADdXfj/0Nxd+N/g9sQFemOLTQyLEYtNDIuCzAAAAP/Qi00MixGLTQyLgsAAAADdXfD/0Nxd8N/g9sQFejaLTQyLEYtNDIuCzAAAAP/Qi00MixGLTQyLgsgAAADdXej/0Nxd6N/g9sQFegnHReQBAAAA6wfHReQAAAAAikXki+Vdw7gBAAAAD6L3wgAAAAR0B/MPLEQkBMPpAAAAAFWL7IPsDNlFCNl9/A+3RfwNAAwAAIlF+Nlt+Ntd9Nlt/ItF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>f2l(receiver.vCatKill_Counter) &gt; 2 &amp;&amp; (rBaseWill &gt; rBaseAttackSpeed &amp;&amp; rBaseWill &gt; rBaseDexterity &amp;&amp; rBaseWill &gt; rBaseStamina)</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FRIAAAABAAAAHgAAAEJ1ZmZfT2ZmU3RhdFRvdGFsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cBuff_OffStatTotal</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</multValue>
+					<stat>Will</stat>
 					<topModifier>false</topModifier>
 					<variable></variable>
 				</modifier>

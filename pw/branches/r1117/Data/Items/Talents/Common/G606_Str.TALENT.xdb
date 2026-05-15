@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="2" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Spinners" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="3" />
+	<BackLink DBID="/Social/Quests/TalentQuests/_Settings" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet15.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Ent_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Marine_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Naga_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Zealot_Mighty.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G606: Спиннер силы</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G606_Str.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G606_Str.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G606_Str.TALENT" id="07952240-75AD-4473-A227-1096B550301D">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ8AAAACAAAAFAAAACoAAABHNjA2X0luY3JlbWVudABVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1MAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG606_Increment&gt;0</sString>
+				</condition>
+				<name>G606_Increment</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Spinners_Event/condition_Spinners_bonus2Active" />
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G606_Str.TALENT" id="6250500A-9758-4F99-99C7-44F457A39800">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G606_Str.TALENT" id="80C936EF-D304-40D8-BCDD-E94080AEA3BE">
+					<UnitConstant>
+						<name>Add_Str</name>
+						<var>
+							<compiledString>FRMAAAADAAAAIgAAADwAAABSAAAAVDNfU3RhdABTdGFja1ZhbHVlAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoCAAAAItVEIsCi00Qi1BQ3V34/9LcNW8AAADZ6N7h3E342V302UX0i+VdwwAAAAAAAPA/AAAAAAAAAEA=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT3_Stat * (1 - cStackValue / 2)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G606_Str.TALENT" id="7F2C760B-48A9-4CB2-BFFD-6B0B7621BB6F">
+					<UnitConstant>
+						<name>Add_StrPerm</name>
+						<var>
+							<compiledString>FQcAAAACAAAAFAAAACcAAABNYXhTdHIAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3DU1AAAA2V382UX8i+VdwwAAAAAAADRA</compiledString>
+							<returnType>float</returnType>
+							<sString>cMaxStr / 20</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G606_Str.TALENT" id="6BB6F207-F188-4C0B-8923-7829074DF81D">
+					<UnitConstant>
+						<name>MaxStr</name>
+						<var>
+							<compiledString>FRMAAAACAAAAIgAAADwAAABUM19TdGF0AFN0YWNrVmFsdWUAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgIAAAAi1UQiwKLTRCLUFDdXfj/0txN+Nld9NlF9IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT3_Stat * cStackValue</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G606_Str.TALENT" id="C4239609-140C-4D6D-B1CD-D9574C60C2B7">
+					<UnitConstant>
+						<name>Period</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABwQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>60</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G606_Str.TALENT" id="A1C4119C-A6F4-4E78-AFEE-5C1AE31C18A1">
+					<UnitConstant>
+						<name>TT_G606_Increment</name>
+						<var>
+							<compiledString>FQ8AAAABAAAAEwAAAEc2MDZfSW5jcmVtZW50AFWL7GgAAAAAi0UIixCLTQiLgogBAAD/0F3D</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG606_Increment</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Spinners_Event/const_Spinners_PrimeAmount" />
+				<Item href="/Items/Talents/TalentKits/Spinners_Event/const_Spinners_NaftaPeriod" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G606_Str.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>5</flags>
+	<forceBonus>13.21</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_606.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>2</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G606_Str.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G606_Str.TALENT" id="82702A8F-FFFC-4ECA-A5DE-60280521BB74">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>+Str</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQgAAAABAAAAFAAAAEFkZF9TdHIAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Str</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Strength</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Spinners_Event/statMod_Spinners_PrimeAmount.APLR" />
+		<Item href="/Items/Talents/Common/G606_Str.TALENT" id="6A6D1E88-9273-41A4-BA2B-FB39DA0E3094">
+			<SpellPeriodicallyApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>раз в 60 сек</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString>FRsAAAAFAAEAKgAAAEQAAABvAAAAfAAAAJUAAADVAAAATWF4U3RyAABBZGRfU3RyUGVybQBQZXJpb2QAVYvsg+wYi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgIAAAAi1UQiwKLTRCLUFDdXfj/0tx9+Nld9NlF9FHZHCToSQAAAIPEBNwFqwAAAItFDFCLTQhRaBQAAACLVRCLAotNEItQUN1d7P/S3E3s3AWjAAAA2V3o2UXoi+Vdw5qZmZmZmbk/AAAAAAAA8D9Vi+xR2UUI2Rwk6AUAAACDxARdw1WL7FHZRQiD7AjdHCToIf///4PECNld/NlF/IvlXcM=</compiledString>
+					<returnType>float</returnType>
+					<sString>( ceil( cMaxStr / cAdd_StrPerm ) + 1.0 ) * cPeriod + 0.1</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<period>
+					<compiledString>FQcAAAABAAAAEwAAAFBlcmlvZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+					<returnType>float</returnType>
+					<sString>cPeriod</sString>
+				</period>
+				<providerName></providerName>
+				<scaleMode>ScaleIsCount</scaleMode>
+				<spell href="/Items/Talents/Common/G606_Str.TALENT" id="548D98E0-A48F-4E7A-B250-EC00322FE471">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Common/G606_Str.TALENT" id="E309A3AE-697D-416B-B318-78E5EE825B5A">
+								<PermanentStatModApplicator>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<caption>+Str</caption>
+									<customApplyType>None</customApplyType>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<modifier>
+										<addValue>
+											<compiledString>FSAAAAAEAAAALwAAAFMAAAB2AAAAgwAAAEFkZF9TdHJQZXJtAE1heFN0cgAAQWRkX1N0clBlcm0AVYvsg+wUi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JR2RwkUdnu2Rwki0UMUItNCFFoDAAAAItVEIsCi00Qi1BQ/9KLRRCLEItNEItCEN1d+P/Q3CW+AAAAi00MUYtVCFJoFAAAAItFEIsQi00Qi0JQ3V3w/9DcTfDcbfjZXezZRexR2Rwk6EYAAACDxATZHCToEwAAAIPECIvlXcMAAAAAAADwPwAAAABVi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3DVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+											<returnType>float</returnType>
+											<sString>clamp( cMaxStr - (mScale - 1) * cAdd_StrPerm, 0, cAdd_StrPerm )</sString>
+										</addValue>
+										<multValue>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>1.0f</sString>
+										</multValue>
+										<stat>Strength</stat>
+										<topModifier>false</topModifier>
+										<variable></variable>
+									</modifier>
+									<providerName></providerName>
+								</PermanentStatModApplicator>
+							</Item>
+							<Item href="/Items/Talents/Common/G606_Str.TALENT" id="B17D6DCC-C607-4496-B48B-57F10F607184">
+								<PermanentStatModApplicator>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<caption>G606_Increment creep</caption>
+									<customApplyType>None</customApplyType>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<modifier>
+										<addValue>
+											<compiledString>FSAAAAAEAAAALwAAAFMAAAB2AAAAgwAAAEFkZF9TdHJQZXJtAE1heFN0cgAAQWRkX1N0clBlcm0AVYvsg+wUi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JR2RwkUdnu2Rwki0UMUItNCFFoDAAAAItVEIsCi00Qi1BQ/9KLRRCLEItNEItCEN1d+P/Q3CW+AAAAi00MUYtVCFJoFAAAAItFEIsQi00Qi0JQ3V3w/9DcTfDcbfjZXezZRexR2Rwk6EYAAACDxATZHCToEwAAAIPECIvlXcMAAAAAAADwPwAAAABVi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3DVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+											<returnType>float</returnType>
+											<sString>clamp( cMaxStr - (mScale - 1) * cAdd_StrPerm, 0, cAdd_StrPerm )</sString>
+										</addValue>
+										<multValue>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>1.0f</sString>
+										</multValue>
+										<stat>Life</stat>
+										<topModifier>false</topModifier>
+										<variable>G606_Increment</variable>
+									</modifier>
+									<providerName></providerName>
+								</PermanentStatModApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Common/G606_Str.TALENT" id="DD45FF85-BB00-42FD-BFDA-59615FD54F33">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<startOffset>
+					<compiledString>FQcAAAABAAAAEwAAAFBlcmlvZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+					<returnType>float</returnType>
+					<sString>cPeriod</sString>
+				</startOffset>
+				<targetSelector href="" />
+			</SpellPeriodicallyApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Spinners_Event/spell_Spinners_PrimeAmount.APLR" />
+	</passiveApplicators>
+	<persistentId>G606</persistentId>
+	<prerequisiteTalents />
+	<rarity>exclusive</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>17</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>Strength</stat>
+			<values>
+				<Item>5</Item>
+				<Item>5.4</Item>
+				<Item>5.8</Item>
+				<Item>6.2</Item>
+				<Item>6.6</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>136258047</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

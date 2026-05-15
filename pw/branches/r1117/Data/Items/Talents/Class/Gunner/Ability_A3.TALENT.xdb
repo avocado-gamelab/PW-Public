@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Gunner.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Gunner_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Gunner.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Gunner_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Gunner/Ability_A3u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Gunner_Mighty.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Gunner1_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Gunner_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -130,6 +129,7 @@
 														<spell href="/Items/Talents/Class/Gunner/Ability_A3.TALENT" id="69042E88-FB15-402B-B848-3336664BBB58">
 															<Spell>
 																<applicators>
+																	<Item href="/Heroes/DefaultStatus/FakeDamage.APLR" />
 																	<Item href="/Items/Talents/Class/Gunner/status_A3_WebRoot.APLR" />
 																	<Item href="/Items/Talents/Class/Gunner/Ability_A3.TALENT" id="EC2A0D64-1726-4D0B-A643-E063B722180B">
 																		<SpellSwitchApplicator>
@@ -300,8 +300,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Gunner/Ability_A3.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Gunner/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Gunner/Ability_A3.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Gunner/Ability_A3.TALENT" id="B40C0639-1E93-4CF7-B368-ABA312AA2820">
 			<ConditionFormula>
@@ -332,9 +332,9 @@
 					<UnitConstant>
 						<name>A3_Range</name>
 						<var>
-							<compiledString>FQsAAAACAAAAGAAAACsAAABSYW5nZV9Mb25nAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twFOQAAANld/NlF/IvlXcMAAAAAAADwPw==</compiledString>
+							<compiledString>FQsAAAACAAAAGAAAACsAAABSYW5nZV9Mb25nAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twFOQAAANld/NlF/IvlXcMAAAAAAAAUQA==</compiledString>
 							<returnType>float</returnType>
-							<sString>cRange_Long + 1</sString>
+							<sString>cRange_Long + 5</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -398,9 +398,9 @@
 		<percent>0</percent>
 	</consumptionBonus>
 	<cooldownTime>
-		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQQ==</compiledString>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQQ==</compiledString>
 		<returnType>float</returnType>
-		<sString>10</sString>
+		<sString>20</sString>
 	</cooldownTime>
 	<cooldownTimeSecondState>
 		<compiledString></compiledString>
@@ -429,7 +429,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>75</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Gunner/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ProgramApplicator>
-	<BackLink DBID="/Items/Talents/Level1/G598_RegEnergy.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G600_StrOrInt.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level3/G601_DexStrOrInt.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level4/G599_Dex.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G598_RegEnergy.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G600_StrOrInt.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G601_DexStrOrInt.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G599_Dex.TALENT" Count="1" />
 	<applicators>
 		<Item>
 			<applicator href="/Items/Talents/TalentKits/Redset5_5_Caster/Program_Redset5_5_Add_EnergyReg.APLR" id="50035E16-7EE0-4E6D-BEA2-A1DE316CD965">
@@ -170,9 +170,9 @@
 																					<Item href="/Items/Talents/TalentKits/Redset5_5_Caster/Program_Redset5_5_Add_EnergyReg.APLR" id="268D3348-28D0-4A04-BB65-25305AD45C47">
 																						<HealApplicator>
 																							<amount>
-																								<compiledString>FTAAAAACAAAAPAAAAFIAAABSZWRzZXQ1XzVfSGVhbAAAUmVkc2V0NV9UaGlzSGVhbFBhbnRoZXJMaWZlTGFjawBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0lHZHCRoEAAAAItFCIsQi00Ii4KIAQAA/9BR2Rwk6AUAAACDxAhdw1WL7FHZRQjZRQze2d/g9sRBdQjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+																								<compiledString>FWAAAAAFAAAAZQAAAHsAAACPAAAArgAAAMoAAABBZGRfRW5lcmd5UmVnX1JlZHNldDVfNUNvdW50ZXIAAFJlZHNldDVfNV9IZWFsAABSZWRzZXQ1XzVfSGVhbDMAUmVkc2V0NV9UaGlzSGVhbFBhbnRoZXJMaWZlTGFjawBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B3uAAAA3+D2xER6H4tNDFGLVQhSaCAAAACLRRCLEItNEItCUP/Q2V386x2LTQxRi1UIUmgwAAAAi0UQixCLTRCLQlD/0Nld/FHZRfzZHCRoQAAAAItNCIsRi00Ii4KIAQAA/9BR2Rwk6A8AAACDxAiL5V3DAAAAAAAAAEBVi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
 																								<returnType>float</returnType>
-																								<sString>min(sender.vRedset5_ThisHealPantherLifeLack, cRedset5_5_Heal)</sString>
+																								<sString>min(sender.vRedset5_ThisHealPantherLifeLack, sender.vAdd_EnergyReg_Redset5_5Counter == 2 ? cRedset5_5_Heal : cRedset5_5_Heal3)</sString>
 																							</amount>
 																							<applyTarget>ApplicatorTarget</applyTarget>
 																							<caption>Есть кошка: хил в саммона</caption>
@@ -192,9 +192,9 @@
 																					<Item href="/Items/Talents/TalentKits/Redset5_5_Caster/Program_Redset5_5_Add_EnergyReg.APLR" id="6966BA34-7B9A-4FEB-A381-6ABC5B4C2918">
 																						<HealApplicator>
 																							<amount>
-																								<compiledString>FTAAAAACAAAAPwAAAFEAAABSZWRzZXQ1XzVfSGVhbAAAUmVkc2V0NV9UaGlzSGVhbFBhbnRoZXJMaWZlTGFjawBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0mgQAAAAi0UIixCLTQiLgogBAADdXfj/0Nxt+Nld9NlF9FHZHCRR2e7ZHCToCwAAAIPECIvlXcMAAAAAVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+																								<compiledString>FWAAAAAFAAAAZwAAAH0AAACRAAAAsAAAAMUAAABBZGRfRW5lcmd5UmVnX1JlZHNldDVfNUNvdW50ZXIAAFJlZHNldDVfNV9IZWFsAABSZWRzZXQ1XzVfSGVhbDMAUmVkc2V0NV9UaGlzSGVhbFBhbnRoZXJMaWZlTGFjawBVi+yD7AhoAAAAAItFCIsQi00Ii4KIAQAA/9DcHfwAAADf4PbERHofi00MUYtVCFJoIAAAAItFEIsQi00Qi0JQ/9DZXfzrHYtNDFGLVQhSaDAAAACLRRCLEItNEItCUP/Q2V38aEAAAACLTQiLEYtNCIuCiAEAAP/Q2G382V342UX4UdkcJFHZ7tkcJOgTAAAAg8QIi+VdwwAAAAAAAAAAAAAAQFWL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
 																								<returnType>float</returnType>
-																								<sString>max(0, cRedset5_5_Heal - sender.vRedset5_ThisHealPantherLifeLack)</sString>
+																								<sString>max(0, (sender.vAdd_EnergyReg_Redset5_5Counter == 2 ? cRedset5_5_Heal : cRedset5_5_Heal3) - sender.vRedset5_ThisHealPantherLifeLack)</sString>
 																							</amount>
 																							<applyTarget>AbilityOwner</applyTarget>
 																							<caption>Есть кошка: хил в героя</caption>
@@ -251,9 +251,9 @@
 																<Item href="/Items/Talents/TalentKits/Redset5_5_Caster/Program_Redset5_5_Add_EnergyReg.APLR" id="66DB1EFC-E7CC-4EDC-8C81-15380A542EBE">
 																	<HealApplicator parent="/GameLogic/GeneralApplicators/Heal.APLR">
 																		<amount>
-																			<compiledString>FQ8AAAABAAAAGwAAAFJlZHNldDVfNV9IZWFsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+																			<compiledString>FUAAAAAEAAAARQAAAFsAAABvAAAAjgAAAEFkZF9FbmVyZ3lSZWdfUmVkc2V0NV81Q291bnRlcgAAUmVkc2V0NV81X0hlYWwAAFJlZHNldDVfNV9IZWFsMwBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B2pAAAA3+D2xER6H4tNDFGLVQhSaCAAAACLRRCLEItNEItCUP/Q2V386x2LTQxRi1UIUmgwAAAAi0UQixCLTRCLQlD/0Nld/NlF/IvlXcMAAAAAAAAAQA==</compiledString>
 																			<returnType>float</returnType>
-																			<sString>cRedset5_5_Heal</sString>
+																			<sString>sender.vAdd_EnergyReg_Redset5_5Counter == 2 ? cRedset5_5_Heal : cRedset5_5_Heal3</sString>
 																		</amount>
 																	</HealApplicator>
 																</Item>
@@ -291,9 +291,9 @@
 					</processor>
 					<providerName></providerName>
 					<startCondition>
-						<compiledString>FR8AAAADAAAAJAAAADoAAABUAAAAQWRkX0VuZXJneVJlZ19SZWRzZXQ1XzVDb3VudGVyAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHX4AAADf4PbERHoji00QixGLTRCLQhz/0NwddgAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAPA/AAAAAAAAAEA=</compiledString>
+						<compiledString>FTYAAAAEAAAAOwAAAFEAAABjAAAAiwAAAEFkZF9FbmVyZ3lSZWdfUmVkc2V0NV81Q291bnRlcgAAUmVkc2V0NV81X0hlYWxUcmlnZ2VyAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHbUAAADf4PbEAXVDagCLTRBRaCAAAACLVQiLAotNCIuQnAEAAP/SO0UQdSOLRRCLEItNEItCHP/Q3B2tAAAA3+D2xER6CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAA8D8AAAAAAAAAQA==</compiledString>
 						<returnType>bool</returnType>
-						<sString>sender.vAdd_EnergyReg_Redset5_5Counter == 2 &amp;&amp; mPreparedness == 1.0f</sString>
+						<sString>sender.vAdd_EnergyReg_Redset5_5Counter &gt;= 2 &amp;&amp; sender.applRedset5_5_HealTrigger(GLOBAL) == pMisc &amp;&amp; mPreparedness == 1.0f</sString>
 					</startCondition>
 					<useAbilityCooldown>true</useAbilityCooldown>
 					<useAbilityOwnerMana>false</useAbilityOwnerMana>
@@ -330,7 +330,7 @@
 		<returnType>bool</returnType>
 		<sString>true</sString>
 	</enabled>
-	<formulaName></formulaName>
+	<formulaName>Redset5_5_HealTrigger</formulaName>
 	<lifeTime>
 		<compiledString></compiledString>
 		<returnType>float</returnType>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Rifleman.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Rifleman_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Rifleman_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Rifleman.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Rifleman_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Rifleman_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Rifleman/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Rifleman/Epic_Str.TALENTSET" Count="1" />
 	<activationConditions />
@@ -36,8 +36,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Rifleman/Ability_A2u.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Rifleman/Ability_A2u.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Rifleman/Ability_A2u.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Rifleman/Ability_A2u.TALENT" id="31CF6879-6EA4-40FB-B4EA-A52099658AE9">
 			<ConditionFormula>
@@ -56,6 +56,8 @@
 			<vars>
 				<Item href="/Items/Talents/Class/Rifleman/const_A2_Sta_Will_Cut" />
 				<Item href="/Items/Talents/Class/Rifleman/const_A2y_Debuff_Duration" />
+				<Item href="/Items/Talents/Class/Rifleman/const_A2u_Haste_Percent" />
+				<Item href="/Items/Talents/Class/Rifleman/const_A2u_HasteDuration" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -77,7 +79,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Rifleman/A2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

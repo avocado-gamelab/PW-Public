@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PermanentStatModApplicator>
+	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A1.TALENT" Count="1" />
+	<applyTarget>AbilityOwner</applyTarget>
+	<caption>Запоминаем оверхил от убийства росчерком</caption>
+	<customApplyType>None</customApplyType>
+	<enabled>
+		<compiledString>FRYAAAABAAAAIAAAAFZhbXBpcmVfRXRlcm5hbEh1bmdlcgBVi+xqAYtFEFBoAAAAAItNCIsRi00Ii4KcAQAA/9AzyTtFEA+VwYrBXcM=</compiledString>
+		<returnType>bool</returnType>
+		<sString>sender.applVampire_EternalHunger(UNIT) != pMisc</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<LoggingEvent>-1</LoggingEvent>
+	<modifier>
+		<addValue>
+			<compiledString>FVsAAAAGAAAAYgAAAHsAAACxAAAA0QAAAC8BAABIAQAAVmFtcGlyZV9BMQAAVmFtcGlyZV9BMQAAVmFtcGlyZV9BMQAAQTFfVG90YWxIZWFsT25LaWxsAABBMF9TVVBfSGVhbFNoaWVsZENvbnZlcnNpb25QZXJjZW50AFWL7IPsKGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoDAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdDdoGAAAAItVCIsCi00Ii5CoAQAA/9KJRfSLRQxQi00IUWgkAAAAi1X0iwKLTfSLUFD/0tld8OsF2e7ZXfBR2e7ZHCSLRQyLEItNDItCDP/Qi00MixGLTQyLAt1d6P/Q3G3o2G3w2V3k2UXkUdkcJOg/AAAAg8QIi00MUYtVCFJoOAAAAItFEIsQi00Qi0JQ3V3c/9DcTdzcDVYBAADZXdjZRdiL5V3DexSuR+F6hD8AAAAAVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+			<returnType>float</returnType>
+			<sString>max(talconst("Vampire_A1", "A1_TotalHealOnKill") - (rMaxLife - rLife), 0) * cA0_SUP_HealShieldConversionPercent * 0.01</sString>
+		</addValue>
+		<multValue>
+			<compiledString></compiledString>
+			<returnType>float</returnType>
+			<sString>1.0f</sString>
+		</multValue>
+		<stat>Life</stat>
+		<topModifier>false</topModifier>
+		<variable>Vampire_BloodShield</variable>
+	</modifier>
+	<providerName></providerName>
+</PermanentStatModApplicator>

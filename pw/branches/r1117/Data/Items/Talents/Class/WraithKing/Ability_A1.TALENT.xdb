@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/WraithKing.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/WraithKing_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/WraithKing.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/WraithKing_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/WraithKing_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/WraithKing/Ability_A1_SUP.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/WraithKing/Ability_A1u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/WraithKing/status_A0_Arsenal.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/WraithKing_Mighty.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/WraithKing/Ability_A1_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -81,9 +81,9 @@
 													<caption>vA3u_Stop  +1</caption>
 													<customApplyType>None</customApplyType>
 													<enabled>
-														<compiledString></compiledString>
+														<compiledString>FSYAAAACAAAALQAAAEYAAABXcmFpdGhLaW5nX0ExX1NVUAAAAFdyYWl0aEtpbmdfQTFfU1VQAFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoFAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAikX7i+Vdww==</compiledString>
 														<returnType>bool</returnType>
-														<sString>true</sString>
+														<sString>tal("WraithKing_A1_SUP")</sString>
 													</enabled>
 													<formulaName></formulaName>
 													<LoggingEvent>-1</LoggingEvent>
@@ -565,9 +565,9 @@
 																								<caption>vA3u_Stop  +1</caption>
 																								<customApplyType>None</customApplyType>
 																								<enabled>
-																									<compiledString></compiledString>
+																									<compiledString>FSYAAAACAAAALQAAAEYAAABXcmFpdGhLaW5nX0ExX1NVUAAAAFdyYWl0aEtpbmdfQTFfU1VQAFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoFAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAikX7i+Vdww==</compiledString>
 																									<returnType>bool</returnType>
-																									<sString>true</sString>
+																									<sString>tal("WraithKing_A1_SUP")</sString>
 																								</enabled>
 																								<formulaName></formulaName>
 																								<LoggingEvent>-1</LoggingEvent>
@@ -886,9 +886,9 @@
 																		<applicator href="/Items/Talents/Class/WraithKing/Ability_A1.TALENT" id="AE1BD0F6-3BFF-42D6-9263-BA29A0E7C87C">
 																			<SpellApplicator parent="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/appl_G766_RefreshAndNotify.APLR">
 																				<enabled>
-																					<compiledString>FTUAAAAGAAAAPAAAAFUAAACPAAAAqAAAAN4AAAAEAQAAV3JhaXRoS2luZ19BMXUAAFdyYWl0aEtpbmdfQTF1AABHNzY2AAAAAEc3NjYAAAAARzc2NgBVi+yD7BxoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyQ+FmQAAAGggAAAAi1UIiwKLTQiLkKgBAAD/0oXAdCpoKAAAAItFCIsQi00Ii4KoAQAA/9CJRfSLTfSLEYtN9ItCBP/QiEXz6wTGRfMAD7ZN84XJdEpoMAAAAItVCIsCi00Ii5CoAQAA/9KJReyLReyLEItN7ItCHP/Q3B01AQAA3+D2xER6CcdF6AEAAADrB8dF6AAAAACLTeiJTeTrB8dF5AAAAACKReSL5V3DAAAAAAAA8D8=</compiledString>
+																					<compiledString>FTUAAAAGAAAAPAAAAFUAAACPAAAAqAAAAN4AAAAMAQAAV3JhaXRoS2luZ19BMXUAAFdyYWl0aEtpbmdfQTF1AABHNzY2AAAAAEc3NjYAAAAARzc2NgBVi+yD7CBoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyQ+FoQAAAGggAAAAi1UIiwKLTQiLkKgBAAD/0oXAdCpoKAAAAItFCIsQi00Ii4KoAQAA/9CJRfSLTfSLEYtN9ItCBP/QiEXz6wTGRfMAD7ZN84XJdFJoMAAAAItVCIsCi00Ii5CoAQAA/9KJReyLReyLEItN7IsC/9APtsiJTejbRejcHT0BAADf4PbERHoJx0XkAQAAAOsHx0XkAAAAAItV5IlV4OsHx0XgAAAAAIpF4IvlXcMAAAAAAADwPw==</compiledString>
 																					<returnType>bool</returnType>
-																					<sString>!tal("WraithKing_A1u") &amp;&amp; tal("G766") ? pFirst-&gt;GetTalent("G766")-&gt;GetPreparedness() == 1.0f : false</sString>
+																					<sString>!tal("WraithKing_A1u") &amp;&amp; tal("G766") ? pFirst-&gt;GetTalent("G766")-&gt;IsAbilityOn() == 1.0f : false</sString>
 																				</enabled>
 																			</SpellApplicator>
 																		</applicator>
@@ -1346,8 +1346,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/WraithKing/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/WraithKing/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/WraithKing/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/WraithKing/Ability_A1.TALENT" id="3E4301CF-F3BF-41A5-9184-884B6905FE2E">
 			<ConditionFormula>
@@ -1544,7 +1544,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>79</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/WraithKing/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

@@ -4,10 +4,12 @@
 	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A3.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A4.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A4_2.TALENT" Count="2" />
+	<BackLink DBID="/Items/Talents/Class/Inventor/Ability_A0.TALENT" Count="1" />
 	<name>A0_BaseAttackMod</name>
 	<var>
-		<compiledString>FUkAAAADAAAAWAAAAGoAAACKAAAAQTBfQmFzZUF0dGFja01vZGVQZXJEZXRhaWwAAERldGFpbHNTcGVuZAAAAABUZWNoX2RldGFpbHNfcGVyX0hhc3RQZXJjZW50AFWL7IPsFItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SaBwAAACLRQiLEItNCIuCiAEAAN1d+P/Qi00MUYtVCFJoLAAAAItFEIsQi00Qi0JQ3V3w/9DcffDcTfjZXezZReyL5V3D</compiledString>
+		<compiledString>FU0AAAADAAAAXAAAAG4AAACOAAAAQTBfQmFzZUF0dGFja01vZGVQZXJEZXRhaWwAAEludmVudG9yX0RldGFpbHMAAAAAVGVjaF9kZXRhaWxzX3Blcl9IYXN0UGVyY2VudABVi+yD7BSLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0mgcAAAAi0UIixCLTQiLgogBAADdXfj/0ItNDFGLVQhSaDAAAACLRRCLEItNEItCUN1d8P/Q3H3w3E342V3s2UXsi+Vdww==</compiledString>
 		<returnType>float</returnType>
-		<sString>cA0_BaseAttackModePerDetail*(sender.vDetailsSpend/cTech_details_per_HastPercent)</sString>
+		<sString>cA0_BaseAttackModePerDetail*( sender.vInventor_Details/cTech_details_per_HastPercent)</sString>
 	</var>
 </UnitConstant>

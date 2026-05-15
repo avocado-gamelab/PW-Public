@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar3" Count="1" />
+	<BackLink DBID="/Test/Talents/Archeress/Duel_Vamp.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Gunslinger/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Gunslinger/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Highlander/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Marine/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Marine/Duel_Cat.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mowgli/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Naga/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Naga/Duel_Vamp.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Vampire/Duel_Asp.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Witch/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Witch/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet6.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar3_Pop" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="2" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Highlander.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G153: Тренировка проворства</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="9735DFED-2D1C-4780-A78B-AF7AF7B3C367">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ8AAAACAAAAFAAAACoAAABHMTUzX0luY3JlbWVudABVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1MAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG153_Increment&gt;0</sString>
+				</condition>
+				<name>G153_Increment</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="79606FB3-EBED-4F31-BEF6-2336E07A6CAB">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="13766653-41DA-4E6A-81FA-D548519A0A04">
+					<UnitConstant>
+						<name>Add_AttackSpeed</name>
+						<var>
+							<compiledString>FRMAAAADAAAAIgAAADwAAABSAAAAVDRfU3RhdABTdGFja1ZhbHVlAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoCAAAAItVEIsCi00Qi1BQ3V34/9LcNW8AAADZ6N7h3E342V302UX0i+VdwwAAAAAAAPA/AAAAAAAAAEA=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT4_Stat * (1 - cStackValue / 2)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="104CE7FB-86D5-4A00-9826-BF54D485C042">
+					<UnitConstant>
+						<name>Add_AttackSpeedForCreep</name>
+						<var>
+							<compiledString>FQ8AAAACAAAAHAAAAC8AAABBdHRhY2tTcGVlZE1heABVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcNT0AAADZXfzZRfyL5V3DAAAAAAAAeUA=</compiledString>
+							<returnType>float</returnType>
+							<sString>cAttackSpeedMax / 400</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="5E948B6D-9548-48AF-8EDC-D1AD8E5D483B">
+					<UnitConstant>
+						<name>Add_AttackSpeedForHero</name>
+						<var>
+							<compiledString>FQ8AAAACAAAAHAAAAC8AAABBdHRhY2tTcGVlZE1heABVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcNT0AAADZXfzZRfyL5V3DAAAAAAAAREA=</compiledString>
+							<returnType>float</returnType>
+							<sString>cAttackSpeedMax / 40</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="15FE43C2-FC46-4E74-80F1-DB2A3F2FB635">
+					<UnitConstant>
+						<name>AttackSpeedMax</name>
+						<var>
+							<compiledString>FRMAAAACAAAAIgAAADwAAABUNF9TdGF0AFN0YWNrVmFsdWUAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgIAAAAi1UQiwKLTRCLUFDdXfj/0txN+Nld9NlF9IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT4_Stat * cStackValue</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="5A42C163-D204-444E-9355-2E5605E14990">
+					<UnitConstant>
+						<name>TECH_Add_AttackSpeedCreepJustified</name>
+						<var>
+							<compiledString>FTgAAAADAAAARwAAAFkAAACGAAAAQXR0YWNrU3BlZWRNYXgAAEcxNTNfSW5jcmVtZW50AABBZGRfQXR0YWNrU3BlZWRGb3JDcmVlcABVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0mgQAAAAi0UIixCLTQiLgogBAADdXfj/0Nxt+Nld9NlF9FHZHCSLTQxRi1UIUmggAAAAi0UQixCLTRCLQlD/0FHZHCToBwAAAIPECIvlXcNVi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>min( cAdd_AttackSpeedForCreep, cAttackSpeedMax - sender.vG153_Increment )</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="07AD9C44-5124-458C-8E44-4E82BAAC0FC3">
+					<UnitConstant>
+						<name>TECH_Add_AttackSpeedHeroJustified</name>
+						<var>
+							<compiledString>FTcAAAADAAAARgAAAFgAAACFAAAAQXR0YWNrU3BlZWRNYXgAAEcxNTNfSW5jcmVtZW50AABBZGRfQXR0YWNrU3BlZWRGb3JIZXJvAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SaBAAAACLRQiLEItNCIuCiAEAAN1d+P/Q3G342V302UX0UdkcJItNDFGLVQhSaCAAAACLRRCLEItNEItCUP/QUdkcJOgHAAAAg8QIi+Vdw1WL7FHZRQjZRQze2d/g9sRBdQjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>min( cAdd_AttackSpeedForHero, cAttackSpeedMax - sender.vG153_Increment )</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="00F469B5-E7D9-4EBC-A578-ADEF1579B714">
+					<UnitConstant>
+						<name>TT_G153_Increment</name>
+						<var>
+							<compiledString>FQ8AAAABAAAAEwAAAEcxNTNfSW5jcmVtZW50AFWL7GgAAAAAi0UIixCLTQiLgogBAAD/0F3D</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG153_Increment</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>16.15</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_153.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>3</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="51175D44-9C47-464B-9094-B9BDF50E980C">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>+AttackSpeed</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FRAAAAABAAAAHAAAAEFkZF9BdHRhY2tTcGVlZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_AttackSpeed</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>AttackSpeed</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="285585EC-C085-4914-A5CB-F15DBBB5674C">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>153</behaviorFlags>
+				<caption>триггер на убийство</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FR8AAAACAAAAJgAAAEMAAABHMTUzX0luY3JlbWVudAAAQXR0YWNrU3BlZWRNYXgAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Qi00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG153_Increment &lt; cAttackSpeedMax</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="C971222A-9AD4-4F8B-B33E-136A9B9B9464">
+					<EventProcessorGroup>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<processors>
+							<Item href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="AEA6A9B5-B30C-4916-B2C0-BD4E54C000A3">
+								<EventProcessorUnitDieNearMe>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<checkSender>0</checkSender>
+									<killerFlags>9</killerFlags>
+									<range>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</range>
+									<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+									<spell href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="7EA0792A-6170-4042-9E67-0DDB64BD1DF6">
+										<Spell>
+											<applicators>
+												<Item href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="4C626AF9-F756-432F-8CD5-4B9C93E8C60E">
+													<PermanentStatModApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>+AttackSpeed</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString>FR8AAAACAAAAJgAAAEMAAABHMTUzX0luY3JlbWVudAAAQXR0YWNrU3BlZWRNYXgAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Qi00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vG153_Increment &lt; cAttackSpeedMax</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FSIAAAABAAAALgAAAFRFQ0hfQWRkX0F0dGFja1NwZWVkSGVyb0p1c3RpZmllZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+																<returnType>float</returnType>
+																<sString>cTECH_Add_AttackSpeedHeroJustified</sString>
+															</addValue>
+															<multValue>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</multValue>
+															<stat>AttackSpeed</stat>
+															<topModifier>false</topModifier>
+															<variable></variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+												<Item href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="239DE372-BDC6-4B97-B438-0F59F0A02F4F">
+													<PermanentStatModApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>G153_Increment hero</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString>FR8AAAACAAAAJgAAAEMAAABHMTUzX0luY3JlbWVudAAAQXR0YWNrU3BlZWRNYXgAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Qi00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vG153_Increment &lt; cAttackSpeedMax</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FSIAAAABAAAALgAAAFRFQ0hfQWRkX0F0dGFja1NwZWVkSGVyb0p1c3RpZmllZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+																<returnType>float</returnType>
+																<sString>cTECH_Add_AttackSpeedHeroJustified</sString>
+															</addValue>
+															<multValue>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</multValue>
+															<stat>AttackSpeed</stat>
+															<topModifier>false</topModifier>
+															<variable>G153_Increment</variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="A5B4D7DC-DBDE-40FC-BC38-7F78897EBFFF">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+									<targets>536870915</targets>
+								</EventProcessorUnitDieNearMe>
+							</Item>
+							<Item href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="5D6EC1CE-3BE2-4E1B-907C-5AF4A5C58E07">
+								<EventProcessorUnitDieNearMe>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<checkSender>0</checkSender>
+									<killerFlags>9</killerFlags>
+									<range>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</range>
+									<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+									<spell href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="542E5D52-1464-4B20-BD98-EF4DEE3F3387">
+										<Spell>
+											<applicators>
+												<Item href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="96F881B9-DA16-4D2E-833E-1CD79E663CD8">
+													<PermanentStatModApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>+AttackSpeed</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString>FR8AAAACAAAAJgAAAEMAAABHMTUzX0luY3JlbWVudAAAQXR0YWNrU3BlZWRNYXgAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Qi00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vG153_Increment &lt; cAttackSpeedMax</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FSMAAAABAAAALwAAAFRFQ0hfQWRkX0F0dGFja1NwZWVkQ3JlZXBKdXN0aWZpZWQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+																<returnType>float</returnType>
+																<sString>cTECH_Add_AttackSpeedCreepJustified</sString>
+															</addValue>
+															<multValue>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</multValue>
+															<stat>AttackSpeed</stat>
+															<topModifier>false</topModifier>
+															<variable></variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+												<Item href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="C3272FBC-0B8C-4C9F-980D-D599DDCCFC52">
+													<PermanentStatModApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>G153_Increment creep</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString>FR8AAAACAAAAJgAAAEMAAABHMTUzX0luY3JlbWVudAAAQXR0YWNrU3BlZWRNYXgAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Qi00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vG153_Increment &lt; cAttackSpeedMax</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FSMAAAABAAAALwAAAFRFQ0hfQWRkX0F0dGFja1NwZWVkQ3JlZXBKdXN0aWZpZWQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+																<returnType>float</returnType>
+																<sString>cTECH_Add_AttackSpeedCreepJustified</sString>
+															</addValue>
+															<multValue>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</multValue>
+															<stat>AttackSpeed</stat>
+															<topModifier>false</topModifier>
+															<variable>G153_Increment</variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Items/Talents/Common/Obsolete/G153_IncrAspd-perKill.TALENT" id="4EC935CD-3D35-495A-9502-86B7B4AF8788">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+									<targets>538705980</targets>
+								</EventProcessorUnitDieNearMe>
+							</Item>
+						</processors>
+						<spell href="" />
+					</EventProcessorGroup>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G153</persistentId>
+	<prerequisiteTalents />
+	<rarity>excellent</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>AttackSpeed</stat>
+			<values>
+				<Item>6.5</Item>
+				<Item>7</Item>
+				<Item>7.5</Item>
+				<Item>8</Item>
+				<Item>8.5</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>1909247</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PermanentStatModApplicator>
+	<BackLink DBID="/Items/Talents/Class/Vampire/status_A4_StunAndDPS.APLR" Count="1" />
+	<applyTarget>AbilityOwner</applyTarget>
+	<caption>Запоминаем весь оверхил от ульты</caption>
+	<customApplyType>None</customApplyType>
+	<enabled>
+		<compiledString>FRYAAAABAAAAIAAAAFZhbXBpcmVfRXRlcm5hbEh1bmdlcgBVi+xqAYtFEFBoAAAAAItNCIsRi00Ii4KcAQAA/9AzyTtFEA+VwYrBXcM=</compiledString>
+		<returnType>bool</returnType>
+		<sString>sender.applVampire_EternalHunger(UNIT) != pMisc</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<LoggingEvent>-1</LoggingEvent>
+	<modifier>
+		<addValue>
+			<compiledString>FUcAAAAFAAAAZgAAAKgAAAC+AAAAxwAAAPgAAABkYW1hZ2VEZWFsZWQAAAAAQTBfTGlmZURyYWluUGVyY2VudABBMF9TVVBfSGVhbFNoaWVsZENvbnZlcnNpb25QZXJjZW50AFWL7IPsLItFEIsQi00Qi0JI/9CJRfyLTQxRi1UIUmgkAAAAi0UQixCLTRCLQlD/0FHZ7tkcJItNDIsRi00MiwLdXfT/0ItNDIsRi00Mi0IM3V3s/9DcZeyLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlDdXeT/0Nw1FgEAANno3sFoAAAAAItN/IsRi038i0JU3V3c/9DcTdzcZeTZXdjZRdhR2Rwk6DIAAACDxAjcTfTcDQYBAADZXdTZRdSL5V3DexSuR+F6hD8AAAAAAADwPwAAAAAAAFlAAAAAAFWL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+			<returnType>float</returnType>
+			<sString>max(appl.parent.GetVariable("damageDealed") * (1 + cA0_LifeDrainPercent / 100) - (rMaxLife - rLife), 0) * cA0_SUP_HealShieldConversionPercent * 0.01</sString>
+		</addValue>
+		<multValue>
+			<compiledString></compiledString>
+			<returnType>float</returnType>
+			<sString>1.0f</sString>
+		</multValue>
+		<stat>Life</stat>
+		<topModifier>false</topModifier>
+		<variable>Vampire_BloodShield</variable>
+	</modifier>
+	<providerName></providerName>
+</PermanentStatModApplicator>

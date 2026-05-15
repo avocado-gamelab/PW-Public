@@ -2,12 +2,12 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/GhostLord.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/GhostLord_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/GhostLord.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/GhostLord_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/GhostLord_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/GhostLord/Ability_A1u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/GhostLord_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Ghostlord/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Ghostlord/Elite_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Ghostlord/Elite_Str.TALENTSET" Count="1" />
@@ -96,8 +96,8 @@
 		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/GhostLord/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/GhostLord/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/GhostLord/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/GhostLord/Ability_A1.TALENT" id="F6390ED8-BBD5-4E95-A59A-6D1C7BA19F03">
 			<ConditionFormula>
@@ -114,80 +114,6 @@
 	<constants href="/Items/Talents/Class/GhostLord/Ability_A1.TALENT" id="7A9DEF6C-EFC3-48C2-A74F-96552F9A96A5">
 		<UnitConstantsContainer>
 			<vars>
-				<Item href="/Items/Talents/Class/GhostLord/Ability_A1.TALENT" id="7707264E-6A39-4C16-A12F-91E24BEE0B1F">
-					<UnitConstant>
-						<name>A1_TotalDamage</name>
-						<var>
-							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAAB0QgAA5UM=</compiledString>
-							<returnType>float</returnType>
-							<sString>damageScale( sIntellect,  61, 458 )</sString>
-						</var>
-					</UnitConstant>
-				</Item>
-				<Item href="/Items/Talents/Class/GhostLord/Ability_A1.TALENT" id="BAE7F2BD-9D91-49D4-999A-7CBC69B118D2">
-					<UnitConstant>
-						<name>A1_DropRange</name>
-						<var>
-							<compiledString>FRkAAAADAAAAKAAAAEIAAABbAAAAUmFuZ2VfTG9uZwAAUmFuZ2VfTWVkaXVtAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoDAAAAItVEIsCi00Qi1BQ3V34/9LcRfjcBWkAAADZXfTZRfSL5V3DAAAAAAAA8D8=</compiledString>
-							<returnType>float</returnType>
-							<sString>cRange_Long+cRange_Medium+1</sString>
-						</var>
-					</UnitConstant>
-				</Item>
-				<Item href="/Items/Talents/Class/GhostLord/const_A1_Duration" />
-				<Item href="/Items/Talents/Class/GhostLord/Ability_A1.TALENT" id="7B5B3056-74CF-4F5E-BE00-CF88652B9FC1">
-					<UnitConstant>
-						<name>A1_DamagePerTick</name>
-						<var>
-							<compiledString>FSgAAAADAAAANwAAAFEAAABxAAAAQTFfVG90YWxEYW1hZ2UAAEExX1BlcmlvZAAAAEExX0R1cmF0aW9uAFWL7IPsFItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoEAAAAItVEIsCi00Qi1BQ3V34/9LcTfiLRQxQi00IUWgcAAAAi1UQiwKLTRCLUFDdXfD/0tx98Nld7NlF7IvlXcM=</compiledString>
-							<returnType>float</returnType>
-							<sString>cA1_TotalDamage * cA1_Period / cA1_Duration</sString>
-						</var>
-					</UnitConstant>
-				</Item>
-				<Item href="/Items/Talents/Class/GhostLord/const_A1_Period" />
-				<Item href="/Items/Talents/Class/GhostLord/const_A1u_IncHealing" />
-				<Item href="/Items/Talents/Class/GhostLord/const_A1u_IncHealingPerTick" />
-				<Item href="/Items/Talents/Class/GhostLord/Ability_A1.TALENT" id="8C4DC2C3-1B5A-4C00-B064-4396A328D2FA">
-					<UnitConstant>
-						<name>A1_DmgHeal</name>
-						<var>
-							<compiledString>FUoAAAAEAAAAUQAAAGoAAACoAAAAzAAAAEExX0RhbWFnZVBlclRpY2sAAAAAR2hvc3RMb3JkX0ExdQAAAEdob3N0TG9yZF9BMXUAAABBMXVfSW5jSGVhbGluZ1BlclRpY2sAVYvsg+wQaBQAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgkAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0H4tVDFKLRQhQaDQAAACLTRCLEYtNEItCUP/Q2V306wXZ7tld9ItNDFGLVQhSaAAAAACLRRCLEItNEItCUP/Q2EX02V3w2UXwi+VdwwAAAAA=</compiledString>
-							<returnType>float</returnType>
-							<sString>cA1_DamagePerTick + (tal("GhostLord_A1u") ? cA1u_IncHealingPerTick : 0)</sString>
-						</var>
-					</UnitConstant>
-				</Item>
-				<Item href="/Items/Talents/Class/GhostLord/Ability_A1.TALENT" id="E0C69E00-1EF4-4892-8FF3-03F4D6C1C731">
-					<UnitConstant>
-						<name>A1_DamagePerTick_TT</name>
-						<var>
-							<compiledString>FSkAAAACAAAAMAAAAE0AAABHaG9zdExvcmRfQTFBbGx5X0NvdW50AABBMV9EYW1hZ2VQZXJUaWNrAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaBgAAACLRRCLEItNEItCUN1d+P/Q3E342V302UX0i+Vdww==</compiledString>
-							<returnType>float</returnType>
-							<sString>sender.vGhostLord_A1Ally_Count * cA1_DamagePerTick</sString>
-						</var>
-					</UnitConstant>
-				</Item>
-				<Item href="/Items/Talents/Class/GhostLord/Ability_A1.TALENT" id="702F21C8-DEA6-4741-A5E5-E8880C0BD7FE">
-					<UnitConstant>
-						<name>A1_DmgHeal_TT</name>
-						<var>
-							<compiledString>FSMAAAACAAAAKgAAAEcAAABHaG9zdExvcmRfQTFFbmVteV9Db3VudABBMV9EbWdIZWFsAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaBgAAACLRRCLEItNEItCUN1d+P/Q3E342V302UX0i+Vdww==</compiledString>
-							<returnType>float</returnType>
-							<sString>sender.vGhostLord_A1Enemy_Count * cA1_DmgHeal</sString>
-						</var>
-					</UnitConstant>
-				</Item>
-				<Item href="/Items/Talents/Class/GhostLord/Ability_A1.TALENT" id="F648DFBB-3AB3-41FD-B0A2-662E078F0155">
-					<UnitConstant>
-						<name>A1_HeailngPerTick_TT</name>
-						<var>
-							<compiledString>FWgAAAAHAAAAbwAAAIgAAAC+AAAA3gAAAAIBAAAfAQAAPwEAAEExX1RvdGFsSGVhbAAAAABHaG9zdExvcmRfQTF1AAAAR2hvc3RMb3JkX0ExdQAAAEdob3N0TG9yZF9BMXUAAABBMXVfSW5jSGVhbGluZwAAQTFfUGVyaW9kAAAAQTFfRHVyYXRpb24AVYvsg+wkaBAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmggAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0N2gwAAAAi1UIiwKLTQiLkKgBAAD/0olF9ItFDFCLTQhRaEAAAACLVfSLAotN9ItQUP/S2V3w6wXZ7tld8ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S2EXwi0UMUItNCFFoUAAAAItVEIsCi00Qi1BQ3V3o/9LcTeiLRQxQi00IUWhcAAAAi1UQiwKLTRCLUFDdXeD/0tx94Nld3NlF3IvlXcMAAAAA</compiledString>
-							<returnType>float</returnType>
-							<sString>(cA1_TotalHeal + talconst("GhostLord_A1u","A1u_IncHealing") ) * cA1_Period / cA1_Duration</sString>
-						</var>
-					</UnitConstant>
-				</Item>
 				<Item href="/Items/Talents/Class/GhostLord/Ability_A1.TALENT" id="5AD571E7-B602-4E0A-821F-CAE9022851CA">
 					<UnitConstant>
 						<name>A1_UseRange</name>
@@ -198,26 +124,19 @@
 						</var>
 					</UnitConstant>
 				</Item>
-				<Item href="/Items/Talents/Class/GhostLord/Ability_A1.TALENT" id="A58805FF-E8E2-49F0-A7FC-DE8136DD8D07">
-					<UnitConstant>
-						<name>A1_TotalHeal</name>
-						<var>
-							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAABQQgCAwkM=</compiledString>
-							<returnType>float</returnType>
-							<sString>damageScale( sIntellect,  52, 389 )</sString>
-						</var>
-					</UnitConstant>
-				</Item>
-				<Item href="/Items/Talents/Class/GhostLord/Ability_A1.TALENT" id="80245BB9-9F29-4458-8D93-672143D57F19">
-					<UnitConstant>
-						<name>A1_HealPerTick</name>
-						<var>
-							<compiledString>FSgAAAADAAAANwAAAFEAAABxAAAAQTFfVG90YWxIZWFsAAAAAEExX1BlcmlvZAAAAEExX0R1cmF0aW9uAFWL7IPsFItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoEAAAAItVEIsCi00Qi1BQ3V34/9LcTfiLRQxQi00IUWgcAAAAi1UQiwKLTRCLUFDdXfD/0tx98Nld7NlF7IvlXcM=</compiledString>
-							<returnType>float</returnType>
-							<sString>cA1_TotalHeal * cA1_Period / cA1_Duration</sString>
-						</var>
-					</UnitConstant>
-				</Item>
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_TotalDamage" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_DropRange" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_Duration" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_DamagePerTick" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_Period" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1u_IncHealing" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1u_IncHealingPerTick" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_DmgHeal" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_DamagePerTick_TT" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_DmgHeal_TT" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_HeailngPerTick_TT" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_TotalHeal" />
+				<Item href="/Items/Talents/Class/GhostLord/const_A1_HealPerTick" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -257,7 +176,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>3</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/GhostLord/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

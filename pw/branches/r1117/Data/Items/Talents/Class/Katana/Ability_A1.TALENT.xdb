@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Katana.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Katana_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Katana.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Katana_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Katana_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Katana/Ability_A1.TALENT" Count="2" />
 	<BackLink DBID="/Items/Talents/Class/Katana/Ability_A1u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Katana_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -38,9 +38,9 @@
 				<caption>Изменяем КД абилки</caption>
 				<dontUseDispatches>true</dontUseDispatches>
 				<enabled>
-					<compiledString>FRUAAAAEAAAAHAAAADUAAABrAAAAkQAAAEc3NjYAAAAARzc2NgAAAABHNzY2AFWL7IPsFGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoCAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdEpoEAAAAItVCIsCi00Ii5CoAQAA/9KJRfSLRfSLEItN9ItCHP/Q3B3CAAAA3+D2xAV6CcdF8AEAAADrB8dF8AAAAACLTfCJTezrB8dF7AEAAACKReyL5V3DAAAAAAAA8D8=</compiledString>
+					<compiledString>FRUAAAADAAAAHAAAADUAAABrAAAARzc2NgAAAABHNzY2AAAAAEc3NjYAVYvsg+wQaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgIAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0M2gQAAAAi1UIiwKLTQiLkKgBAAD/0olF9ItF9IsQi030iwL/0A+2yPfZG8mDwQGJTfDrB8dF8AEAAACKRfCL5V3D</compiledString>
 					<returnType>bool</returnType>
-					<sString>tal("G766") ? pFirst-&gt;GetTalent("G766")-&gt;GetPreparedness() &lt; 1.0f : true</sString>
+					<sString>tal("G766") ? pFirst-&gt;GetTalent("G766")-&gt;IsAbilityOn() == 0 : true</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<LoggingEvent>-1</LoggingEvent>
@@ -212,7 +212,9 @@
 				</spells>
 			</SpellSwitchApplicator>
 		</Item>
-		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/appl_G766_RefreshAndNotify.APLR" />
+		<Item href="/Items/Talents/Class/Katana/Ability_A1.TALENT" id="1BA8BBD4-8BCF-4BE6-8279-5A7E814C9B23">
+			<SpellApplicator parent="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/appl_G766_RefreshAndNotify.APLR" />
+		</Item>
 		<Item href="/Items/Talents/Class/Katana/Ability_A1.TALENT" id="48D70053-FA85-48DA-AF14-26E956699DCD">
 			<SpellSwitchApplicator>
 				<activeSpellIndex>
@@ -592,8 +594,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Katana/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Katana/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Katana/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Katana/Ability_A1.TALENT" id="BBE922D2-B9B9-4950-A728-C1BBD6D59295">
 			<ConditionFormula>
@@ -705,7 +707,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>6</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Katana/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

@@ -1,0 +1,1094 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Werewolf.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Werewolf_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Werewolf_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Werewolf/Ability_A2_SUP.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Werewolf/Ability_A2u.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Werewolf.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Episode1/Talents/Werewolf_A4.TALENT" Count="2" />
+	<BackLink DBID="/Test/Talents/Werewolf/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Werewolf/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Werewolf/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Werewolf/Epic_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Werewolf/Epic_Str_Ultimate2.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="92A2C352-5D75-444E-BD0E-077CEF9364A3">
+			<SpellApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<caption>выбрать точку для прыжка</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="13F91C57-A13A-46B1-88C3-4371A6CF53EE">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="01E27E97-79C6-4DA9-AD38-1B33BA63B3EA">
+								<ProgramApplicator>
+									<applicators>
+										<Item>
+											<applicator href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="43FDA6D1-781A-4EAF-B89E-441E0A31D107">
+												<ProgramApplicator>
+													<applicators>
+														<Item>
+															<applicator href="/GameLogic/GeneralApplicators/IsolatedWDamage.APLR" />
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>1</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/GameLogic/GeneralApplicators/SetTossed.APLR" />
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>1</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="9A69D924-0BC8-4393-AD6F-BC29CE5F0E64">
+																<SpellApplicator>
+																	<applyTarget>AbilityTarget</applyTarget>
+																	<caption>замедлить</caption>
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<formulaName></formulaName>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<spell href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="5DBCC212-07F0-40B1-8350-FDE7F7C275BC">
+																		<Spell>
+																			<applicators>
+																				<Item href="/Heroes/DefaultStatus/_SLOW_MOVE.APLR" />
+																			</applicators>
+																			<dispatch href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="695DE0BE-5009-4696-8283-ABA57D7C0160">
+																				<DispatchImmediate>
+																					<alwaysApply>false</alwaysApply>
+																					<applyEffect>
+																						<Item href="" />
+																						<Item href="" />
+																					</applyEffect>
+																					<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																					<applyEffectOrientation>Default</applyEffectOrientation>
+																					<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																					<dieAfterApply>true</dieAfterApply>
+																					<dispatchEffect>
+																						<Item href="" />
+																						<Item href="" />
+																					</dispatchEffect>
+																					<flags>0</flags>
+																					<instantApply>false</instantApply>
+																				</DispatchImmediate>
+																			</dispatch>
+																		</Spell>
+																	</spell>
+																	<spellTarget>ApplicatorTarget</spellTarget>
+																	<targetSelector href="" />
+																</SpellApplicator>
+															</applicator>
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>1</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/Items/Talents/Class/Werewolf/A2_Jump.APLR" />
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>2</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="B84F3C43-D317-44C9-9FE1-EF7DFDBE79B1">
+																<FlagsApplicator>
+																	<applyTarget>ApplicatorTarget</applyTarget>
+																	<behaviorFlags>32</behaviorFlags>
+																	<caption>idle если цель умерла</caption>
+																	<consumables />
+																	<effect>
+																		<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="154AF94D-7B22-4C33-89B4-804E8253B712">
+																			<PlayAnimationEffect>
+																				<animGraphNode>idle</animGraphNode>
+																				<deathType>Manual</deathType>
+																				<enableCondition href="" />
+																				<goToOtherNodeOnStop>false</goToOtherNodeOnStop>
+																				<lifeTime>0</lifeTime>
+																				<marker></marker>
+																				<markerReachTime>0</markerReachTime>
+																				<returnAnimGraphNode></returnAnimGraphNode>
+																			</PlayAnimationEffect>
+																		</Item>
+																		<Item href="" />
+																	</effect>
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<flag>0</flag>
+																	<formulaName></formulaName>
+																	<lifeTime>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>0.1</sString>
+																	</lifeTime>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<startCondition>
+																		<compiledString>FS8AAAAEAAEANgAAAFgAAABkAAAAgQAAAG4BAABBYmlsaXR5VGFyZ2V0AAAAQWJpbGl0eVRhcmdldAAAAEEyX0hpdE1heFJhbmdlAFWL7IPsJGgAAAAAi0UQixCLTRCLQkz/0IlF7ItN7IsRi03siwL/0Nwd6AAAAN/g9sREe3doEAAAAItNEIsRi00Qi0JM/9CJReiLTQxRi1UIUmggAAAAi0UQixCLTRCLQlD/0I1N+FGLVeiLAotN6IuQjAEAAN1d4P/SUI1F8FCLTQiLEYtNCIuCjAEAAP/QUOgsAAAAg8QI3F3g3+D2xEF0CcdF3AAAAADrB8dF3AEAAACKRdyL5V3DAAAAAAAAAABVi+yD7BSLRQjZQASLTQzYYQTZXfTZRfRR2Rwki1UI2QKLRQzYINld8NlF8FHZHCSNTfjoVwAAANlF+NhN+NlF/NhN/N7B2V3s2UXsUdkcJOgHAAAAg8QEi+Vdw1WL7FHZRQjZHCToBQAAAIPEBF3DVYvsUdlFCIPsCN0cJOhq/v//g8QI2V382UX8i+Vdw1WL7FGJTfyLRfzZRQjZGItN/NlFDNlZBItF/IvlXcIIAA==</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>appl.oAbilityTarget.Life == 0 || d( sPos, appl.oAbilityTarget.Pos ) &gt; cA2_HitMaxRange</sString>
+																	</startCondition>
+																	<talents />
+																	<useListAs>ListAsRule</useListAs>
+																</FlagsApplicator>
+															</applicator>
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>1</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FS8AAAAEAAEANgAAAFgAAABkAAAAgQAAAG4BAABBYmlsaXR5VGFyZ2V0AAAAQWJpbGl0eVRhcmdldAAAAEEyX0hpdE1heFJhbmdlAFWL7IPsJGgAAAAAi0UQixCLTRCLQkz/0IlF7ItN7IsRi03siwL/0Nwd6AAAAN/g9sREe3doEAAAAItNEIsRi00Qi0JM/9CJReiLTQxRi1UIUmggAAAAi0UQixCLTRCLQlD/0I1N+FGLVeiLAotN6IuQjAEAAN1d4P/SUI1F8FCLTQiLEYtNCIuCjAEAAP/QUOgsAAAAg8QI3F3g3+D2xEF0CcdF3AAAAADrB8dF3AEAAACKRdyL5V3DAAAAAAAAAABVi+yD7BSLRQjZQASLTQzYYQTZXfTZRfRR2Rwki1UI2QKLRQzYINld8NlF8FHZHCSNTfjoVwAAANlF+NhN+NlF/NhN/N7B2V3s2UXsUdkcJOgHAAAAg8QEi+Vdw1WL7FHZRQjZHCToBQAAAIPEBF3DVYvsUdlFCIPsCN0cJOhq/v//g8QI2V382UX8i+Vdw1WL7FGJTfyLRfzZRQjZGItN/NlFDNlZBItF/IvlXcIIAA==</compiledString>
+																<returnType>bool</returnType>
+																<sString>appl.oAbilityTarget.Life == 0 || d( sPos, appl.oAbilityTarget.Pos ) &gt; cA2_HitMaxRange</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="5898DEF6-AEF4-4E69-957D-3F2F588520E4">
+																<FlagsApplicator>
+																	<applyTarget>ApplicatorTarget</applyTarget>
+																	<behaviorFlags>32</behaviorFlags>
+																	<caption>Анимация Броска</caption>
+																	<consumables />
+																	<effect>
+																		<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="E18D13D6-A68E-4066-8FFD-56FABFA49F27">
+																			<PlayAnimationEffect>
+																				<animGraphNode>ability4</animGraphNode>
+																				<deathType>Manual</deathType>
+																				<enableCondition href="" />
+																				<goToOtherNodeOnStop>false</goToOtherNodeOnStop>
+																				<lifeTime>0</lifeTime>
+																				<marker></marker>
+																				<markerReachTime>0</markerReachTime>
+																				<returnAnimGraphNode></returnAnimGraphNode>
+																			</PlayAnimationEffect>
+																		</Item>
+																		<Item href="" />
+																	</effect>
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<flag>0</flag>
+																	<formulaName></formulaName>
+																	<lifeTime>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>0.1</sString>
+																	</lifeTime>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<startCondition>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</startCondition>
+																	<talents />
+																	<useListAs>ListAsRule</useListAs>
+																</FlagsApplicator>
+															</applicator>
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>2</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="BF4E47C6-9863-4252-AF69-E2F22B22D1AB">
+																<SpellApplicator>
+																	<applyTarget>AbilityTarget</applyTarget>
+																	<caption>Урон</caption>
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<formulaName></formulaName>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<spell href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="EC098352-B322-424A-B0D4-D8F86DA6A4A8">
+																		<Spell>
+																			<applicators>
+																				<Item href="/Effects/Shots/HitsApplicators/MeleeHero.APLR" />
+																				<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="1EC5448D-0647-489A-A97E-4D4137FC5027">
+																					<DamageApplicator parent="/GameLogic/GeneralApplicators/CommonDamage.APLR">
+																						<damage>
+																							<compiledString>FQoAAAABAAAAFgAAAEEyX0RhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+																							<returnType>float</returnType>
+																							<sString>cA2_Damage</sString>
+																						</damage>
+																						<damageMode>0</damageMode>
+																						<damageType>Energy</damageType>
+																						<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
+																					</DamageApplicator>
+																				</Item>
+																			</applicators>
+																			<dispatch href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="C5741F05-0F18-4D1A-930F-7D421B1B3995">
+																				<DispatchImmediate>
+																					<alwaysApply>false</alwaysApply>
+																					<applyEffect>
+																						<Item href="" />
+																						<Item href="" />
+																					</applyEffect>
+																					<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																					<applyEffectOrientation>Default</applyEffectOrientation>
+																					<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																					<dieAfterApply>true</dieAfterApply>
+																					<dispatchEffect>
+																						<Item href="" />
+																						<Item href="" />
+																					</dispatchEffect>
+																					<flags>1</flags>
+																					<instantApply>true</instantApply>
+																				</DispatchImmediate>
+																			</dispatch>
+																		</Spell>
+																	</spell>
+																	<spellTarget>AbilityTarget</spellTarget>
+																	<targetSelector href="" />
+																</SpellApplicator>
+															</applicator>
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>2</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+														<Item>
+															<applicator href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="9CA648F9-7AF9-4A58-9B7B-DBE376ED6489">
+																<FlagsApplicator>
+																	<applyTarget>ApplicatorTarget</applyTarget>
+																	<behaviorFlags>1</behaviorFlags>
+																	<caption>задержка</caption>
+																	<consumables />
+																	<effect>
+																		<Item href="" />
+																		<Item href="" />
+																	</effect>
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<flag>0</flag>
+																	<formulaName></formulaName>
+																	<lifeTime>
+																		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DmpmZPg==</compiledString>
+																		<returnType>float</returnType>
+																		<sString>0.3</sString>
+																	</lifeTime>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<startCondition>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>false</sString>
+																	</startCondition>
+																	<talents />
+																	<useListAs>ListAsRule</useListAs>
+																</FlagsApplicator>
+															</applicator>
+															<continueCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</continueCondition>
+															<continueEvents>2</continueEvents>
+															<delay>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>-1.0</sString>
+															</delay>
+															<stopCondition>
+																<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>0</sString>
+															</stopCondition>
+															<stopEvents>0</stopEvents>
+														</Item>
+													</applicators>
+													<applyTarget>ApplicatorTarget</applyTarget>
+													<behaviorFlags>2</behaviorFlags>
+													<caption>программа</caption>
+													<effect>
+														<Item href="" />
+														<Item href="" />
+													</effect>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<lifeTime>
+														<compiledString></compiledString>
+														<returnType>float</returnType>
+														<sString>-1.0</sString>
+													</lifeTime>
+													<LoggingEvent>-1</LoggingEvent>
+													<providerName></providerName>
+													<startCondition>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</startCondition>
+												</ProgramApplicator>
+											</applicator>
+											<continueCondition>
+												<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</continueCondition>
+											<continueEvents>2</continueEvents>
+											<delay>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</delay>
+											<stopCondition>
+												<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</stopCondition>
+											<stopEvents>0</stopEvents>
+										</Item>
+										<Item>
+											<applicator href="/GameLogic/GeneralApplicators/EndOfAbility.APLR" />
+											<continueCondition>
+												<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</continueCondition>
+											<continueEvents>1</continueEvents>
+											<delay>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</delay>
+											<stopCondition>
+												<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>0</sString>
+											</stopCondition>
+											<stopEvents>0</stopEvents>
+										</Item>
+									</applicators>
+									<applyTarget>AbilityOwner</applyTarget>
+									<behaviorFlags>0</behaviorFlags>
+									<caption>внешняя программа с отключением абилки</caption>
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<lifeTime>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+									<startCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</startCondition>
+								</ProgramApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="57B924C0-6C59-4939-BA8D-A5BAA8F2A9AA">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="C8E2CD7A-45EE-43CF-A85E-B6D8075BA8CE">
+					<PointTargetSelector>
+						<checkMinRange>true</checkMinRange>
+						<mode>RangeFromTarget</mode>
+						<offset>
+							<x>0</x>
+							<y>1</y>
+						</offset>
+						<paralleledTarget>false</paralleledTarget>
+						<range>
+							<compiledString>FRcAAAABAAAAIwAAAEp1bXBEaXN0YW5jZUZyb21UYXJnZXQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cJumpDistanceFromTarget</sString>
+						</range>
+						<targetSelector href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="6A7E3647-8445-49DA-A37B-13D286626E5B">
+							<SelectApplicatorTarget>
+								<applicatorIndex>0</applicatorIndex>
+								<applicatorName></applicatorName>
+								<namedApplicatorTarget>ApplicatorTarget</namedApplicatorTarget>
+								<selectTarget>AbilityTarget</selectTarget>
+							</SelectApplicatorTarget>
+						</targetSelector>
+						<traceMode>0</traceMode>
+					</PointTargetSelector>
+				</targetSelector>
+			</SpellApplicator>
+		</Item>
+	</applicators>
+	<askId>2</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А2. Дикий зверь</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Class/Werewolf/Ability_A2.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Werewolf/Ability_A2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Werewolf/Ability_A2.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="8A9C8CAB-564C-4ACF-BCCF-5061180F0836">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR0AAAACAAAAJAAAAD0AAABXZXJld29sZl9BMnUAAAAAV2VyZXdvbGZfQTJ1AFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZF+/fYG8CDwAGL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Werewolf_A2u") == false</sString>
+				</condition>
+				<name>Werewolf_A2u</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="ABA8549F-8345-4DC7-AF3F-E56278F716C5">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSAAAAACAAAAJwAAAEAAAABXZXJld29sZl9BMl9TVVAAV2VyZXdvbGZfQTJfU1VQAFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZF+/fYG8CDwAGL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Werewolf_A2_SUP") == false</sString>
+				</condition>
+				<name>Werewolf_A2_SUP</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="E3A106B4-E809-4436-AFAF-AAEC0559B706">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Werewolf/const_A2u_Duration" />
+				<Item href="/Items/Talents/Class/Werewolf/const_A2uDamage" />
+				<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="C3057E7F-989A-496F-85BE-579EA3DF925B">
+					<UnitConstant>
+						<name>A2_HitMaxRange</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>10</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="AC0C786F-2C42-47CC-A735-0E4CB04A8DF7">
+					<UnitConstant>
+						<name>JumpDistanceFromTarget</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>4.0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="47FC2B3A-3386-40F3-89FF-1B6ADD930120">
+					<UnitConstant>
+						<name>Slow_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="E8C721E4-9924-4C75-8227-F49C8A95C0F1">
+					<UnitConstant>
+						<name>Dec_MoveSpeed</name>
+						<var>
+							<compiledString>FUgAAAAFAAAATwAAAGgAAACmAAAAwAAAAOUAAABXZXJld29sZl9BMl9TVVAAV2VyZXdvbGZfQTJfU1VQAEEyX0Jhc2VTbG93AEEyX0JvbnVzU2xvdwAAAABBMl9CYXNlU2xvdwBVi+yD7BxoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQ/i1UMUotFCFBoIAAAAItNEIsRi00Qi0JQ/9CLTQxRi1UIUmgsAAAAi0UQixCLTRCLQlDdXfD/0NxF8N1d6Osdi00MUYtVCFJoPAAAAItFEIsQi00Qi0JQ/9DdXejdRejZXeTZReSL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>tal("Werewolf_A2_SUP") ? (cA2_BaseSlow + cA2_BonusSlow) : cA2_BaseSlow</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="04346119-AFC7-42AF-A6FF-8C7585892B52">
+					<UnitConstant>
+						<name>A2u_Range</name>
+						<var>
+							<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange_Long</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Werewolf/const_A2uModDmg" />
+				<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="0BE8ABEA-A339-4A57-9586-D0128D8C244F">
+					<UnitConstant>
+						<name>A2u_ModDmgTT</name>
+						<var>
+							<compiledString>FQsAAAABAAAAFwAAAEEydV9EYW1hZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cA2u_Damage</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="1039C06E-442F-4E3A-9360-0FD6720BFD4E">
+					<UnitConstant>
+						<name>A2_Damage</name>
+						<var>
+							<compiledString>FU4AAAAFAAAAVQAAAG4AAACsAAAAxgAAAOsAAABXZXJld29sZl9BMl9TVVAAV2VyZXdvbGZfQTJfU1VQAEEyX0Jhc2VEYW1hZ2UAAABBMl9Cb251c0RhbWFnZQAAQTJfQmFzZURhbWFnZQBVi+yD7BxoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQ/i1UMUotFCFBoIAAAAItNEIsRi00Qi0JQ/9CLTQxRi1UIUmgwAAAAi0UQixCLTRCLQlDdXfD/0NxF8N1d6Osdi00MUYtVCFJoQAAAAItFEIsQi00Qi0JQ/9DdXejdRejZXeTZReSL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>tal("Werewolf_A2_SUP") ? (cA2_BaseDamage + cA2_BonusDamage) : cA2_BaseDamage</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="21C41AB6-605D-4B94-A1D5-4672CF787585">
+					<UnitConstant>
+						<name>TargetLife</name>
+						<var>
+							<compiledString>FRYAAAABAAAAGgAAAEEydV9UYXJnZXRMaWZlUGVyY2VudABVi+xoAAAAAItFCIsQi00Ii4KIAQAA/9Bdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vA2u_TargetLifePercent</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="586C3C14-822D-4335-89D3-717299CC7C32">
+					<UnitConstant>
+						<name>LifeForStack</name>
+						<var>
+							<compiledString>FT0AAAAEAAAARAAAAF0AAACTAAAAswAAAFdlcmV3b2xmX0EydQAAAABXZXJld29sZl9BMnUAAAAAV2VyZXdvbGZfQTJ1AAAAAExpZmVGb3JTdGFjawBVi+yD7BBoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQ3aCAAAACLVQiLAotNCIuQqAEAAP/SiUX0i0UMUItNCFFoMAAAAItV9IsCi030i1BQ/9LZXfDrBdnu2V3w2UXwi+VdwwAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>talconst("Werewolf_A2u" , "LifeForStack")</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="87EC9795-D7BD-4452-AC4E-72F9FDE7CDDC">
+					<UnitConstant>
+						<name>FXMaxStack</name>
+						<var>
+							<compiledString>FQ0AAAACAAAAGgAAAC0AAABMaWZlRm9yU3RhY2sAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3D07AAAA2V382UX8i+VdwwAAAAAAAFlA</compiledString>
+							<returnType>float</returnType>
+							<sString>100/cLifeForStack</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="696A9BDA-F9F7-4CD5-92D6-ACA4E680FF4A">
+					<UnitConstant>
+						<name>A2_BaseDamage</name>
+						<var>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAABIQgCAu0M=</compiledString>
+							<returnType>float</returnType>
+							<sString>damageScale (sIntellect, 50, 375)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Werewolf/const_A2_BonusDamage" />
+				<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="7E7997A4-878F-4174-ACCF-4CEB93AE6F07">
+					<UnitConstant>
+						<name>A2_BaseSlow</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>40</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Werewolf/const_A2_BonusSlow" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACQQQ==</compiledString>
+		<returnType>float</returnType>
+		<sString>18</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Werewolf/Ability_A2.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="BD46F743-540A-40A6-8C5C-7249F5312EC9">
+		<DispatchImmediate>
+			<alwaysApply>true</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>true</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>515</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Werewolf/A4.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>false</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>100</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="D2148ADD-945C-4940-A92A-82E47C8102ED">
+		<TargetSelectorMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</condition>
+			<targetSelector href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="4BCF4602-2C1F-49C0-93CF-5B6A4F23D204">
+				<FirstTargetSelector>
+					<nearestTarget>false</nearestTarget>
+					<targetSelector href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="F4ABC5B8-3A8D-4248-B03A-841BD71F8E9C">
+						<AreaTargetSelector>
+							<absolutePosition>
+								<x>0</x>
+								<y>0</y>
+							</absolutePosition>
+							<flags>0</flags>
+							<mode>Normal</mode>
+							<range>
+								<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+								<returnType>float</returnType>
+								<sString>cRange_Long</sString>
+							</range>
+							<targetFilter>679477251</targetFilter>
+							<targetSelector href="" />
+						</AreaTargetSelector>
+					</targetSelector>
+				</FirstTargetSelector>
+			</targetSelector>
+		</TargetSelectorMicroAI>
+	</microAI>
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>300</naftaCost>
+	<name textref="/Items/Talents/Class/Werewolf/Ability_A2.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="7CE8C507-1246-4E64-B965-2BAE766F8A8F">
+			<FlagsApplicator parent="/GameLogic/GeneralApplicators/ForbidTalentByCondition.APLR">
+				<talents>
+					<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" />
+				</talents>
+			</FlagsApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="5A9BBF33-36F7-4BB6-A0B7-E770099DF188">
+			<StatusApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="E76E70AE-FEEF-4705-9D89-63A71F5001F5">
+						<AuraApplicator>
+							<applicators>
+								<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="2D627724-15FF-42B3-8666-508D922539E7">
+									<StatusApplicator>
+										<applicators>
+											<Item href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="20446E7D-871D-4CBF-A66B-BBB65193DE2B">
+												<StatModApplicator>
+													<applyTarget>AbilityOwner</applyTarget>
+													<behaviorFlags>1</behaviorFlags>
+													<caption>Храним здоровье цели</caption>
+													<constraint>None</constraint>
+													<dontUpdate>false</dontUpdate>
+													<effect>
+														<Item href="" />
+														<Item href="" />
+													</effect>
+													<enabled>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<lifeTime>
+														<compiledString></compiledString>
+														<returnType>float</returnType>
+														<sString>-1.0</sString>
+													</lifeTime>
+													<LoggingEvent>-1</LoggingEvent>
+													<modifier>
+														<addValue>
+															<compiledString>FQ8AAAACAAAAJgAAAEsAAABUYXJnZXQAAFRhcmdldABVi+yD7ByLRRCLEItNEItCSP/QiUX8aAAAAACLTfyLEYtN/ItCTP/QiUX4i00QixGLTRCLQkj/0IlF9GgIAAAAi030ixGLTfSLQkz/0IlF8ItN8IsRi03wi0IM/9CLTfiLEYtN+IsC3V3o/9DcdejZXeTZReSL5V3D</compiledString>
+															<returnType>float</returnType>
+															<sString>appl.parent.oTarget.Life / appl.parent.oTarget.MaxLife</sString>
+														</addValue>
+														<multValue>
+															<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+															<returnType>float</returnType>
+															<sString>0.0f</sString>
+														</multValue>
+														<stat>Life</stat>
+														<topModifier>false</topModifier>
+														<variable>A2u_TargetLifePercent</variable>
+													</modifier>
+													<providerName></providerName>
+													<startCondition>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</startCondition>
+													<statModName></statModName>
+												</StatModApplicator>
+											</Item>
+										</applicators>
+										<applyTarget>ApplicatorTarget</applyTarget>
+										<behaviorFlags>1</behaviorFlags>
+										<caption>статус на цели</caption>
+										<customCounter>
+											<compiledString></compiledString>
+											<returnType>int</returnType>
+											<sString>0</sString>
+										</customCounter>
+										<customProgress>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>-1.0</sString>
+										</customProgress>
+										<description textref="" />
+										<dispellPriority>NonDispellable</dispellPriority>
+										<effect>
+											<Item href="" />
+											<Item href="" />
+										</effect>
+										<enabled>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</enabled>
+										<flags>0</flags>
+										<formulaName></formulaName>
+										<image href="" />
+										<lifeTime>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>-1.0</sString>
+										</lifeTime>
+										<LoggingEvent>-1</LoggingEvent>
+										<name textref="" />
+										<power>0</power>
+										<providerName></providerName>
+										<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+										<stackCount>0</stackCount>
+										<startCondition>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</startCondition>
+										<statusPosition>0</statusPosition>
+										<stopBehaviour>StopByTime</stopBehaviour>
+										<unstackableWith href="" />
+									</StatusApplicator>
+								</Item>
+							</applicators>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption>Ищем врага с мин ХП</caption>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName>LoneBeastTarget</formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<providerName></providerName>
+							<range>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>0.0f</sString>
+							</range>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<targets>10428927</targets>
+							<targetSelector href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="972A6BAB-2073-44B3-ADF7-E46DE96127FE">
+								<ComparingTargetSelector>
+									<referenceValue>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</referenceValue>
+									<targetSelector href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="C722E335-31A8-41F5-B9F2-25AC61C77593">
+										<ConditionTargetSelector>
+											<condition>
+												<compiledString>FRoAAAADAAAAMwAAAEkAAABbAAAATGlrZUhlcm8AAAAATmlnaHRIdW50ZXJBNABVi+xRi0UMixCLTQyLQlT/0A+2yIXJdUtoAAAAAItVDIsCi00Mi5CIAQAA/9LcHYsAAADf4PbEQXUgagCLRRBQaAwAAACLTQyLEYtNDIuCnAEAAP/QO0UQdQnHRfwAAAAA6wfHRfwBAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+												<returnType>bool</returnType>
+												<sString>rIsHero || receiver.vLikeHero &gt; 0 &amp;&amp; receiver.applNightHunterA4(GLOBAL) != pMisc</sString>
+											</condition>
+											<flags>0</flags>
+											<mode>Normal</mode>
+											<targetSelector href="/Items/Talents/Class/Werewolf/Ability_A2.TALENT" id="F2774613-EBEB-458C-8558-1342171AEC04">
+												<AreaTargetSelector>
+													<absolutePosition>
+														<x>0</x>
+														<y>0</y>
+													</absolutePosition>
+													<flags>0</flags>
+													<mode>Normal</mode>
+													<range>
+														<compiledString>FQoAAAABAAAAFgAAAEEydV9SYW5nZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+														<returnType>float</returnType>
+														<sString>cA2u_Range</sString>
+													</range>
+													<targetFilter>1744830471</targetFilter>
+													<targetSelector href="" />
+												</AreaTargetSelector>
+											</targetSelector>
+										</ConditionTargetSelector>
+									</targetSelector>
+									<valueToCompare>
+										<compiledString>FQAAAAAAAAAAVYvsg+wMi0UMixCLTQyLAv/Qi00MixGLTQyLQgzdXfj/0Nx9+Nld9NlF9IvlXcM=</compiledString>
+										<returnType>float</returnType>
+										<sString>rLife/rMaxLife</sString>
+									</valueToCompare>
+								</ComparingTargetSelector>
+							</targetSelector>
+							<type>None</type>
+						</AuraApplicator>
+					</Item>
+				</applicators>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Тех.Статус А2у</caption>
+				<customCounter>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</customCounter>
+				<customProgress>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</customProgress>
+				<description textref="" />
+				<dispellPriority>NonDispellable</dispellPriority>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FR0AAAACAAAAJAAAAD0AAABXZXJld29sZl9BMnUAAAAAV2VyZXdvbGZfQTJ1AFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAikX7i+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Werewolf_A2u")</sString>
+				</enabled>
+				<flags>0</flags>
+				<formulaName>LoneBeast</formulaName>
+				<image href="" />
+				<lifeTime>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0f</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<name textref="" />
+				<power>0</power>
+				<providerName></providerName>
+				<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+				<stackCount>0</stackCount>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statusPosition>0</statusPosition>
+				<stopBehaviour>StopByTime</stopBehaviour>
+				<unstackableWith href="" />
+			</StatusApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Werewolf/status_A2u_LoneBeast.APLR" />
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/trigger_G766_RefreshAndNotify.APLR" />
+	</passiveApplicators>
+	<persistentId>Werewolf_A2</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Class/Werewolf/Ability_A2.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>672923711</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Long</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

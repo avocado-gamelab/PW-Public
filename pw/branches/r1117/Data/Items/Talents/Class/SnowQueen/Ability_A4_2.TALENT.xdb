@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/SnowQueen_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/SnowQueen_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A4u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Epic_IntLife_Ult2.TALENTSET" Count="1" />
 	<activationConditions />
@@ -561,21 +561,10 @@
 		<returnType>float</returnType>
 		<sString>0.0f</sString>
 	</castAllowRange>
-	<castLimitations>
-		<Item href="/Items/Talents/Class/SnowQueen/Ability_A4_2.TALENT" id="79D85B1E-8ABD-419B-A7D7-A4F50A610CD3">
-			<ConditionCastLimitation>
-				<condition>
-					<compiledString>FR4AAAACAAAAIwAAADwAAABTbm93UXVlZW5fQTQAAAAAU25vd1F1ZWVuX0E0dQBVi+xRaAAAAACLRQiLEItNCIuCqAEAAP/QhcB1ImgQAAAAi00IixGLTQiLgqgBAAD/0IXAdQnHRfwBAAAA6wfHRfwAAAAAikX8i+Vdww==</compiledString>
-					<returnType>bool</returnType>
-					<sString>!sender.GetTalent( "SnowQueen_A4" ) &amp;&amp; !sender.GetTalent( "SnowQueen_A4u" )</sString>
-				</condition>
-				<uiEvent href="" />
-			</ConditionCastLimitation>
-		</Item>
-	</castLimitations>
+	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/SnowQueen/Ability_A4_2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/SnowQueen/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/SnowQueen/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/SnowQueen/Ability_A4_2.TALENT" id="2F6B4893-5976-4B5A-B629-88FC84DEEAE9">
 			<ConditionFormula>
@@ -629,9 +618,9 @@
 					<UnitConstant>
 						<name>A4_2_Damage</name>
 						<var>
-							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCMAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAACgQgAAFkQ=</compiledString>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBWMAAADZHCRR2QVfAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJItNCIsRi00Ii4IwAQAA/9BR2Rwk6B8AAACDxATZHCRqAYtNEIsRi00Qi0Jg/9BdwwAAoEIAABZEVYvsUdlFCNlFDN7Z3+D2xAV6CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
 							<returnType>float</returnType>
-							<sString>damageScale( sStrength, 80, 600)</sString>
+							<sString>damageScale( max(sStrength, sIntellect), 80, 600)</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -701,7 +690,7 @@
 						</var>
 					</UnitConstant>
 				</Item>
-				<Item href="/Items/Talents/Class/SnowQueen/const_A5_Damage" />
+				<Item href="/Items/Talents/Class/SnowQueen/const_A5_BaseDamage" />
 				<Item href="/Items/Talents/Class/SnowQueen/Ability_A4_2.TALENT" id="B7B8D954-26C2-4C77-87E4-9A990D0847C7">
 					<UnitConstant>
 						<name>UltimateConstant</name>
@@ -751,7 +740,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>82</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/SnowQueen/A4_2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

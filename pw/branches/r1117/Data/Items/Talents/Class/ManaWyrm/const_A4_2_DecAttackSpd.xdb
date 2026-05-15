@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <UnitConstant>
-	<BackLink DBID="/Items/Talents/Class/ManaWyrm/Ability4_2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/ManaWyrm/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Heroes/ManaWyrm/_.HROB" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/ManaWyrm/Ability4_2U.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/ManaWyrm/Ability_A4_2u.TALENT" Count="1" />
 	<name>Dec_AttackSpeed</name>
 	<var>
-		<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoAi00QixGLTRCLQmD/0F3DAADgQAAASEI=</compiledString>
+		<compiledString>FTcAAAADAAAARgAAAGAAAAB5AAAAQTRfMl9CYXNlRGVjQXR0YWNrU3BkAAAAQTBfTWF4U3RhY2sATWFuYVd5cm1fQTBfRWZmZWN0AFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoGAAAAItVEIsCi00Qi1BQ3V34/9JR2RwkaCQAAACLRQiLEItNCIuCiAEAAP/QUdkcJOgQAAAAg8QI3E342V302UX0i+Vdw1WL7FHZRQjZRQze2d/g9sRBdQjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
 		<returnType>float</returnType>
-		<sString>abilityScale(sIntellect,7,50)</sString>
+		<sString>cA4_2_BaseDecAttackSpd * min( sender.vManaWyrm_A0_Effect , cA0_MaxStack)</sString>
 	</var>
 </UnitConstant>

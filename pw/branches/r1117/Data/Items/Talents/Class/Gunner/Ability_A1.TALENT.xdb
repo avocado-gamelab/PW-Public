@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Gunner.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Gunner_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Gunner.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Gunner_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Gunner_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Gunner/Ability_A1_SUP.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Gunner/Ability_A1u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Gunner_Mighty.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Gunner1_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -66,9 +65,9 @@
 				<applyTarget>ApplicatorTarget</applyTarget>
 				<caption>спелл в секторе откат А1у</caption>
 				<enabled>
-					<compiledString>FTYAAAAEAAAAPQAAAFYAAACMAAAApQAAAEd1bm5lcl9BMV9TVVAAAABHdW5uZXJfQTFfU1VQAAAAR3VubmVyX0EyAAAAR3VubmVyX0EyAFWL7IPsFGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdFhoIAAAAItVCIsCi00Ii5CoAQAA/9KFwHQqaCwAAACLRQiLEItNCIuCqAEAAP/QiUX0i030ixGLTfSLQgT/0IhF8+sExkXzAA+2TfOFyXQJx0XsAQAAAOsHx0XsAAAAAIpF7IvlXcM=</compiledString>
+					<compiledString>FS4AAAAEAAAANQAAAE4AAACEAAAAnQAAAEd1bm5lcl9BMXUAAEd1bm5lcl9BMXUAAEd1bm5lcl9BMgAAAEd1bm5lcl9BMgBVi+yD7BRoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXRYaBgAAACLVQiLAotNCIuQqAEAAP/ShcB0KmgkAAAAi0UIixCLTQiLgqgBAAD/0IlF9ItN9IsRi030i0IE/9CIRfPrBMZF8wAPtk3zhcl0CcdF7AEAAADrB8dF7AAAAACKReyL5V3D</compiledString>
 					<returnType>bool</returnType>
-					<sString>tal("Gunner_A1_SUP") &amp;&amp; tal("Gunner_A2")</sString>
+					<sString>tal("Gunner_A1u") &amp;&amp; tal("Gunner_A2")</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<LoggingEvent>-1</LoggingEvent>
@@ -281,8 +280,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Gunner/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Gunner/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Gunner/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Gunner/Ability_A1.TALENT" id="82C28250-DE26-4066-BAAC-49A21D1727FA">
 			<ConditionFormula>
@@ -313,9 +312,9 @@
 					<UnitConstant>
 						<name>Damage</name>
 						<var>
-							<compiledString>FR4AAAAGAAAAJQAAAD4AAAB4AAAAggAAALgAAADCAAAAR3VubmVyX0ExX1NVUAAAAEd1bm5lcl9BMV9TVVAAVYvsg+wMaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0QGoBUdkFBAEAANkcJFHZBQABAADZHCRqAItVCIsCi00Ii5A0AQAA/9JR2RwkagGLRRCLEItNEItCYP/Q2V306z5qAVHZBfwAAADZHCRR2QX4AAAA2RwkagCLTQiLEYtNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0Nld9NlF9IvlXcMAAJZCAMAMRAAApkIAABtE</compiledString>
+							<compiledString>FS4AAAAGAAAANQAAAE4AAACAAAAAigAAAMkAAADnAAAAR3VubmVyX0ExX1NVUAAAAEd1bm5lcl9BMV9TVVAAAABBMV9TVVBfRGFtYWdlAFWL7IPsIGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAagFR2QUQAQAA2RwkUdkFDAEAANkcJGoAi00IixGLTQiLgjQBAAD/0FHZHCRqAYtNEIsRi00Qi0Jg/9APtk37iU3020X0i1UMUotFCFBoIAAAAItNEIsRi00Qi0JQ2cndXezdXeT/0NxN5Nw1BAEAANno3sHcTezZXeDZReCL5V3DAAAAAAAA8D8AAAAAAABZQAAAtEIAAClE</compiledString>
 							<returnType>float</returnType>
-							<sString>tal("Gunner_A1_SUP") ? damageScale( sIntellect,83, 620 ) : damageScale( sIntellect,75, 563 )</sString>
+							<sString>damageScale( sIntellect,90, 676 ) * (1 + tal("Gunner_A1_SUP") * cA1_SUP_Damage/100)</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -371,7 +370,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>67</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Gunner/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

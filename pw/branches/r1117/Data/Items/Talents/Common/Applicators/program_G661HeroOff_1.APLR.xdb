@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProgramApplicator>
+	<BackLink DBID="/Heroes/DefaultStatus/List_AllControlAppl.APLS" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G661_GuildHeroOff_Red.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/Applicators/program_G661HeroOff_Self.APLR" Count="1" />
+	<applicators>
+		<Item>
+			<applicator href="/Items/Talents/Common/Applicators/status_G661HeroOff_Red.APLR" />
+			<continueCondition>
+				<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</continueCondition>
+			<continueEvents>2</continueEvents>
+			<delay>
+				<compiledString></compiledString>
+				<returnType>float</returnType>
+				<sString>-1.0</sString>
+			</delay>
+			<stopCondition>
+				<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</stopCondition>
+			<stopEvents>0</stopEvents>
+		</Item>
+		<Item>
+			<applicator href="/Items/Talents/Common/Applicators/program_G661HeroOff_1.APLR" id="066DF41F-F932-4CB6-A2FD-492D4F7FEFB1">
+				<FlagsApplicator>
+					<applyTarget>ApplicatorTarget</applyTarget>
+					<behaviorFlags>1</behaviorFlags>
+					<caption>FX</caption>
+					<consumables />
+					<effect>
+						<Item href="/Effects/Buffs/Parallel/_FadeOut.EFFT" />
+						<Item href="" />
+					</effect>
+					<enabled>
+						<compiledString></compiledString>
+						<returnType>bool</returnType>
+						<sString>true</sString>
+					</enabled>
+					<flag>0</flag>
+					<formulaName></formulaName>
+					<lifeTime>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</lifeTime>
+					<LoggingEvent>-1</LoggingEvent>
+					<providerName></providerName>
+					<startCondition>
+						<compiledString></compiledString>
+						<returnType>bool</returnType>
+						<sString>true</sString>
+					</startCondition>
+					<talents />
+					<useListAs>ListAsRule</useListAs>
+				</FlagsApplicator>
+			</applicator>
+			<continueCondition>
+				<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</continueCondition>
+			<continueEvents>1</continueEvents>
+			<delay>
+				<compiledString></compiledString>
+				<returnType>float</returnType>
+				<sString>-1.0</sString>
+			</delay>
+			<stopCondition>
+				<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</stopCondition>
+			<stopEvents>0</stopEvents>
+		</Item>
+		<Item>
+			<applicator href="/Items/Talents/Common/Applicators/program_G661HeroOff_1.APLR" id="8FA36E03-4AAD-4E70-A490-38BD1AC06CEB">
+				<SpellSwitchApplicator>
+					<activeSpellIndex>
+						<compiledString>FQAAAAAAAAAAVYvsi0UIM8k7RQwPlMGLwV3D</compiledString>
+						<returnType>int</returnType>
+						<sString>pFirst == pSecond? 1 : 0</sString>
+					</activeSpellIndex>
+					<applyTarget>ApplicatorTarget</applyTarget>
+					<caption>slow or haste</caption>
+					<dontUseDispatches>true</dontUseDispatches>
+					<enabled>
+						<compiledString></compiledString>
+						<returnType>bool</returnType>
+						<sString>true</sString>
+					</enabled>
+					<formulaName></formulaName>
+					<LoggingEvent>-1</LoggingEvent>
+					<providerName></providerName>
+					<spells>
+						<Item href="/Items/Talents/Common/Applicators/program_G661HeroOff_1.APLR" id="4C6E3859-90AD-4525-87B7-BFB807C22BF0">
+							<Spell>
+								<applicators>
+									<Item href="/Heroes/DefaultStatus/_SLOW_MOVE.APLR" />
+								</applicators>
+								<dispatch href="" />
+							</Spell>
+						</Item>
+						<Item href="/Items/Talents/Common/Applicators/program_G661HeroOff_1.APLR" id="DC566B71-BD2C-422A-AD85-8003D29EC043">
+							<Spell>
+								<applicators>
+									<Item href="/Heroes/DefaultStatus/_HASTE_status.APLR" />
+								</applicators>
+								<dispatch href="" />
+							</Spell>
+						</Item>
+					</spells>
+				</SpellSwitchApplicator>
+			</applicator>
+			<continueCondition>
+				<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</continueCondition>
+			<continueEvents>1</continueEvents>
+			<delay>
+				<compiledString></compiledString>
+				<returnType>float</returnType>
+				<sString>-1.0</sString>
+			</delay>
+			<stopCondition>
+				<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</stopCondition>
+			<stopEvents>0</stopEvents>
+		</Item>
+	</applicators>
+	<applyTarget>ApplicatorTarget</applyTarget>
+	<behaviorFlags>3</behaviorFlags>
+	<caption>G661HeroOff program</caption>
+	<effect>
+		<Item href="" />
+		<Item href="" />
+	</effect>
+	<enabled>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<lifeTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>-1.0</sString>
+	</lifeTime>
+	<LoggingEvent>-1</LoggingEvent>
+	<providerName></providerName>
+	<startCondition>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</startCondition>
+</ProgramApplicator>

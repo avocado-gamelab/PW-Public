@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Vampire.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Vampire.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A4u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
 	<BackLink DBID="/Test/Talents/RedSet5Add.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Vampire/Duel_Asp.TALENTSET" Count="1" />
@@ -206,20 +206,10 @@
 				<uiEvent href="/UI/Events/ErrorMessages/CastError_Immune2Ctrl.UIEV" />
 			</ConditionCastLimitation>
 		</Item>
-		<Item href="/Items/Talents/Class/Vampire/Ability_A4.TALENT" id="DC608528-D9F2-4501-AB13-1F4C6450F736">
-			<ConditionCastLimitation>
-				<condition>
-					<compiledString>FR4AAAACAAAAIwAAADwAAABWYW1waXJlX0E0XzIAAAAAVmFtcGlyZV9BNF8ydQBVi+xRaAAAAACLRQiLEItNCIuCqAEAAP/QhcB1ImgQAAAAi00IixGLTQiLgqgBAAD/0IXAdQnHRfwBAAAA6wfHRfwAAAAAikX8i+Vdww==</compiledString>
-					<returnType>bool</returnType>
-					<sString>!sender.GetTalent( "Vampire_A4_2" ) &amp;&amp; !sender.GetTalent( "Vampire_A4_2u" )</sString>
-				</condition>
-				<uiEvent href="" />
-			</ConditionCastLimitation>
-		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Vampire/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Vampire/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Vampire/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Vampire/Ability_A4.TALENT" id="0B76319E-573E-4430-9731-65673CD7FFCE">
 			<ConditionFormula>
@@ -239,6 +229,8 @@
 	<constants href="/Items/Talents/Class/Vampire/Ability_A4.TALENT" id="F6254CC2-0368-492D-81E2-10A08C98670E">
 		<UnitConstantsContainer>
 			<vars>
+				<Item href="/Items/Talents/Class/Vampire/const_A0_BaseLifeDrainPercent" />
+				<Item href="/Items/Talents/Class/Vampire/const_A0_SUP_AdditionalLifeDrainPercent" />
 				<Item href="/Items/Talents/Class/Vampire/const_A0_LifeDrainPercent" />
 				<Item href="/Items/Talents/Class/Vampire/const_A0_TerrainLifeCostModifier" />
 				<Item href="/Items/Talents/Class/Vampire/Ability_A4.TALENT" id="F9FC9656-750C-4F97-802A-A8098A437A8D">
@@ -376,6 +368,8 @@
 				</Item>
 				<Item href="/Items/Talents/Class/Vampire/const_A4u_DmgRedPercentBase" />
 				<Item href="/Items/Talents/Class/Vampire/const_A4u_DmgRedPercentMax" />
+				<Item href="/Items/Talents/Class/Vampire/const_A0_SUP_LifeDrainMultiplier" />
+				<Item href="/Items/Talents/Class/Vampire/const_A0_SUP_HealShieldConversionPercent" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -415,7 +409,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>18433</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Vampire/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

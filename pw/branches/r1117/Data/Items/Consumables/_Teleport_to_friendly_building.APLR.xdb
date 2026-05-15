@@ -83,7 +83,41 @@
 							</Item>
 							<Item href="/Items/Consumables/_Teleport_to_friendly_building.APLR" id="72489BA7-C094-4D67-8F18-3D9213E0AA68">
 								<StatusApplicator>
-									<applicators />
+									<applicators>
+										<Item href="/Items/Consumables/_Teleport_to_friendly_building.APLR" id="1B2CF32B-7E36-4B3B-8EE6-C28C0AC92A03">
+											<FlagsApplicator>
+												<applyTarget>AbilityOwner</applyTarget>
+												<behaviorFlags>0</behaviorFlags>
+												<caption>Запрещаем двигаться, пока телепортируемся</caption>
+												<consumables />
+												<effect>
+													<Item href="" />
+													<Item href="" />
+												</effect>
+												<enabled>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</enabled>
+												<flag>1</flag>
+												<formulaName></formulaName>
+												<lifeTime>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>-1.0</sString>
+												</lifeTime>
+												<LoggingEvent>-1</LoggingEvent>
+												<providerName></providerName>
+												<startCondition>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</startCondition>
+												<talents />
+												<useListAs>ListAsRule</useListAs>
+											</FlagsApplicator>
+										</Item>
+									</applicators>
 									<applyTarget>AbilityOwner</applyTarget>
 									<behaviorFlags>1</behaviorFlags>
 									<caption>статус телепортируемся</caption>
@@ -137,9 +171,75 @@
 						<behaviorFlags>1</behaviorFlags>
 						<cancelOnDisable>true</cancelOnDisable>
 						<cancelOnInterrupt>true</cancelOnInterrupt>
-						<cancelSpell href="" />
+						<cancelSpell href="/Items/Consumables/_Teleport_to_friendly_building.APLR" id="C125256C-26C4-4355-BC29-77F57FAFE654">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Consumables/_Teleport_to_friendly_building.APLR" id="9C420523-4331-45DA-8DAC-43A73E60280B">
+										<RefreshCooldownApplicator>
+											<allowCdIncrease>true</allowCdIncrease>
+											<applyTarget>AbilityOwner</applyTarget>
+											<caption>Устанавливаем КД, если сами прервали</caption>
+											<enabled>
+												<compiledString>FRYAAAADAAAALQAAAEAAAABSAAAASW50ZXJydXB0ZWQASW50ZXJydXB0AFWL7IPsCItFEIsQi00Qi0JI/9CJRfxoAAAAAItN/IsRi038i0JU/9DcHYIAAADf4PbERHopagGLTRBRaAwAAACLVQiLAotNCIuQnAEAAP/SO0UQdQnHRfgBAAAA6wfHRfgAAAAAikX4i+VdwwAAAAAAAAAA</compiledString>
+												<returnType>bool</returnType>
+												<sString>appl.parent.vInterrupted == 0 &amp;&amp; sender.applInterrupt(UNIT) == pMisc</sString>
+											</enabled>
+											<flags>128</flags>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<reduceByPercent>true</reduceByPercent>
+											<reductionAmount>
+												<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+												<returnType>float</returnType>
+												<sString>-1</sString>
+											</reductionAmount>
+											<refreshThis>false</refreshThis>
+											<talents>
+												<Item href="/Items/Consumables/TeleportScroll.ARCT" />
+											</talents>
+											<useListAs>ListAsRule</useListAs>
+										</RefreshCooldownApplicator>
+									</Item>
+									<Item href="/Items/Consumables/_Teleport_to_friendly_building.APLR" id="EC5D3373-889D-4E6B-9AD9-C3466E19CA23">
+										<AbilityEndApplicator>
+											<applyTarget>AbilityOwner</applyTarget>
+											<cancelApplicators>true</cancelApplicators>
+											<caption>End Of Ability</caption>
+											<enabled>
+												<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLAv/QXcM=</compiledString>
+												<returnType>bool</returnType>
+												<sString>mIsAbilityOn</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+										</AbilityEndApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Consumables/_Teleport_to_friendly_building.APLR" id="A2847FEF-C924-4612-ACEC-8670B73555BC">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>true</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</cancelSpell>
 						<caption>Teleport Chanelling</caption>
-						<channelingType>Creation</channelingType>
+						<channelingType>Streaming</channelingType>
 						<effect>
 							<Item href="/Items/Consumables/_Teleport_to_friendly_building.APLR" id="7DB9595B-63BF-4ADE-9B0D-B1EE705FA8AC">
 								<PlayAnimationEffect>

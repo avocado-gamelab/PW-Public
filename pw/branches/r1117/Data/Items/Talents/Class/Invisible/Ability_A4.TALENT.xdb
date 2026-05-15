@@ -2,18 +2,18 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Invisible.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Invisible.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A4_2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A4_2u.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A4u.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Elite_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Elite_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Epic_Str.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A4_2.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A4_2u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A4u.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -460,8 +460,8 @@
 		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Invisible/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Invisible/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Invisible/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Invisible/Ability_A4.TALENT" id="A0970E1A-818D-40A4-A2ED-4443D31A972A">
 			<ConditionFormula>
@@ -476,9 +476,9 @@
 		<Item href="/Items/Talents/Class/Invisible/Ability_A4.TALENT" id="2621CE6E-3A21-44BD-95A5-007877988DEB">
 			<ConditionFormula>
 				<condition>
-					<compiledString>FR8AAAACAAAAJgAAAD8AAABJbnZpc2libGVfQTJ1MQAASW52aXNpYmxlX0EydTEAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwIPAAYvlXcM=</compiledString>
+					<compiledString>FR4AAAACAAAAJQAAAD4AAABJbnZpc2libGVfQTR1AAAASW52aXNpYmxlX0E0dQBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
 					<returnType>bool</returnType>
-					<sString>tal("Invisible_A2u1") == false</sString>
+					<sString>tal("Invisible_A4u") == false</sString>
 				</condition>
 				<name>Invisible_A4u</name>
 			</ConditionFormula>
@@ -582,7 +582,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>11</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Invisible/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

@@ -2,12 +2,12 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Marine.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Marine_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Marine.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Marine_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Marine_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Marine/Ability_A1u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Marine_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Marine/Duel.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Marine/Duel_Cat.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Marine/Elite_Str.TALENTSET" Count="1" />
@@ -214,8 +214,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Marine/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Marine/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Marine/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Marine/Ability_A1.TALENT" id="1AE2564C-E751-43AD-A357-AC911CAB6FAD">
 			<ConditionFormula>
@@ -308,7 +308,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>1027</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Marine/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

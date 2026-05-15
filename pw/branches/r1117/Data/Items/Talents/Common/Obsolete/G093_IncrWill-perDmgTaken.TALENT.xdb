@@ -1,0 +1,791 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar3" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Episode1/Talents/DuelRockman_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Episode1/Talents/DuelWitcher_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Angel/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Bard/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Fairy/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Ghostlord/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Duel_En.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Highlander/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Manawyrm/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Naga/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Naga/Duel_Vamp.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Night/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Prince/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Prince/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Ratcatcher/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Ratcatcher/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Rockman/Duel_Life.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Rockman/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Unicorn/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Warlord/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/WitchDoctor/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/WitchDoctor/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Witcher/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Witcher/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Test_ManaRework.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet7.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSetHealer.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar3_Pop" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="2" />
+	<BackLink DBID="/Test/Talents/TestSet16.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G093: Укрепление веры</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="C1FB8F95-5DAB-45E7-8099-1F822048F459">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ8AAAACAAAAFAAAACoAAABHMDkzX1RvdGFsV2lsbABVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1GAAAA3+D2xER7BsZF/wHrBMZF/wCKRf+L5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG093_TotalWill</sString>
+				</condition>
+				<name>G093_Increment</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="A64D2604-7167-423B-B0F9-CB247CE140A2">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="C4F5C8CA-ADBE-4BD5-ADE4-B2C70A0B458A">
+					<UnitConstant>
+						<name>Add_Will</name>
+						<var>
+							<compiledString>FRMAAAADAAAAIgAAADwAAABSAAAAVDVfU3RhdABTdGFja1ZhbHVlAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoCAAAAItVEIsCi00Qi1BQ3V34/9LcNW8AAADZ6N7h3E342V302UX0i+VdwwAAAAAAAPA/AAAAAAAAAEA=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT5_Stat * (1 - cStackValue / 2)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="62816240-7DB7-49F8-A10A-1BB3E666A1B1">
+					<UnitConstant>
+						<name>Add_WillPerm</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABNYXhXaWxsAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0tw1NgAAANld/NlF/IvlXcMAAAAAAABZQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cMaxWill / 100</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="2C2A4D94-4E8A-4FD0-B1BE-203673966924">
+					<UnitConstant>
+						<name>DamageToTake</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABIQw==</compiledString>
+							<returnType>float</returnType>
+							<sString>200</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="AC497195-88F7-46B8-994E-6070846C333B">
+					<UnitConstant>
+						<name>MaxWill</name>
+						<var>
+							<compiledString>FRMAAAACAAAAIgAAADwAAABUNV9TdGF0AFN0YWNrVmFsdWUAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgIAAAAi1UQiwKLTRCLUFDdXfj/0txN+Nld9NlF9IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT5_Stat * cStackValue</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="27344F92-C9D2-4080-BCAE-B918318A47A4">
+					<UnitConstant>
+						<name>TT_G093_Increment</name>
+						<var>
+							<compiledString>FQ8AAAABAAAAEwAAAEcwOTNfVG90YWxXaWxsAFWL7GgAAAAAi0UIixCLTQiLgogBAAD/0F3D</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG093_TotalWill</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>22.7</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_093.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>4</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="F0F71948-57FF-4F3E-BBAF-2D10FE55F989">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>+Will</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9XaWxsAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Will</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Will</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="FEE80859-EE16-4CEE-945E-E871F0DE64F2">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>триггер на урон</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FScAAAAEAAAALgAAAEsAAABqAAAAgAAAAEcwOTNfVG90YWxXaWxsAABNYXhXaWxsAFBhbnRoZXJJc0FsaXZlAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaBAAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xEF1K2gYAAAAi00IixGLTQiLgogBAAD/0NwdogAAAN/g9sREegnHRfQBAAAA6wfHRfQAAAAAikX0i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG093_TotalWill &lt; cMaxWill &amp;&amp; sender.vPantherIsAlive == 0</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="008CCC82-458A-4634-9C82-B18179682A9B">
+					<EventProcessorDamageTransformer>
+						<abilityFilter>
+							<abilitiesList />
+							<abilityCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</abilityCondition>
+							<abilityCostMode>Energy</abilityCostMode>
+							<exceptThis>false</exceptThis>
+							<flags>1073743103</flags>
+							<onlySingleTarget>false</onlySingleTarget>
+						</abilityFilter>
+						<add>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</add>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<checkSender>0</checkSender>
+						<damageTypeFilter>31</damageTypeFilter>
+						<flags>2</flags>
+						<matchTargetInverted>false</matchTargetInverted>
+						<mul>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>1.0f</sString>
+						</mul>
+						<objectFilter>2040319</objectFilter>
+						<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+						<spell href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="C27BD5CC-0C34-4039-8010-577D35ADF7CB">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="A273BE1E-7CC6-411F-BCF6-5C909ED34676">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>увеличить счётчик урона</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FQUAAAABAAAAEgAAAFNURVAAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3MDZXfzZRfxR2Rwki0UMixCLTQyLgqwBAAD/0IvlXcM=</compiledString>
+													<returnType>float</returnType>
+													<sString>pSecond-&gt;GetDamageTaken(cSTEP*2)</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>G093_DamageAccum</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="A1940E23-1480-42A6-8470-F1BBA6647262">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>+Will</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString>FSEAAAACAAAAKAAAAEUAAABHMDkzX0RhbWFnZUFjY3VtAAAAAERhbWFnZVRvVGFrZQBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgUAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBegnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>sender.vG093_DamageAccum &gt;= cDamageToTake</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FUkAAAAFAAEAWAAAAGoAAACPAAAArAAAAN4AAAAtAQAATWF4V2lsbABHMDkzX1RvdGFsV2lsbAAARzA5M19EYW1hZ2VBY2N1bQAAAABEYW1hZ2VUb1Rha2UAAAAAQWRkX1dpbGxQZXJtAFWL7IPsJItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SaAgAAACLRQiLEItNCIuCiAEAAN1d+P/Q3G342V302UX0UdkcJGgYAAAAi00IixGLTQiLgogBAAD/0ItNDFGLVQhSaCwAAACLRRCLEItNEItCUN1d7P/Q3H3s2V3o2UXoUdkcJOg5AAAAg8QEi00MUYtVCFJoPAAAAItFEIsQi00Qi0JQ3V3g/9DcTeDZXdzZRdxR2Rwk6DoAAACDxAiL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6MP+//+DxAjZXfzZRfyL5V3DVYvsUdlFCNlFDN7Z3+D2xEF1CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+													<returnType>float</returnType>
+													<sString>min( floor( sender.vG093_DamageAccum / cDamageToTake ) * cAdd_WillPerm, cMaxWill - sender.vG093_TotalWill )</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</multValue>
+												<stat>Will</stat>
+												<topModifier>false</topModifier>
+												<variable></variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="F9F269B2-766F-4D37-BE8C-5BFDF2BBE969">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>+G093_TotalWill</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString>FSEAAAACAAAAKAAAAEUAAABHMDkzX0RhbWFnZUFjY3VtAAAAAERhbWFnZVRvVGFrZQBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgUAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBegnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>sender.vG093_DamageAccum &gt;= cDamageToTake</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FUkAAAAFAAEAWAAAAGoAAACPAAAArAAAAN4AAAAtAQAATWF4V2lsbABHMDkzX1RvdGFsV2lsbAAARzA5M19EYW1hZ2VBY2N1bQAAAABEYW1hZ2VUb1Rha2UAAAAAQWRkX1dpbGxQZXJtAFWL7IPsJItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SaAgAAACLRQiLEItNCIuCiAEAAN1d+P/Q3G342V302UX0UdkcJGgYAAAAi00IixGLTQiLgogBAAD/0ItNDFGLVQhSaCwAAACLRRCLEItNEItCUN1d7P/Q3H3s2V3o2UXoUdkcJOg5AAAAg8QEi00MUYtVCFJoPAAAAItFEIsQi00Qi0JQ3V3g/9DcTeDZXdzZRdxR2Rwk6DoAAACDxAiL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6MP+//+DxAjZXfzZRfyL5V3DVYvsUdlFCNlFDN7Z3+D2xEF1CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+													<returnType>float</returnType>
+													<sString>min( floor( sender.vG093_DamageAccum / cDamageToTake ) * cAdd_WillPerm, cMaxWill - sender.vG093_TotalWill )</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>G093_TotalWill</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="3BA8F314-0A8B-474A-AE2B-E96D76AC8044">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>счётчик урона сбросить до остатка</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FSEAAAACAAEALQAAAEMAAACXAAAARGFtYWdlVG9UYWtlAAAAAEcwOTNfRGFtYWdlQWNjdW0AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JR2RwkaBAAAACLRQiLEItNCIuCiAEAAP/QUdkcJOgFAAAAg8QIXcNVi+xR2UUM2RwkUdlFCNkcJOgFAAAAg8QIXcNVi+xR2UUMg+wI3Rwk2UUIg+wI3Rwk6E3///+DxBDZXfzZRfyL5V3D</compiledString>
+													<returnType>float</returnType>
+													<sString>fmod( sender.vG093_DamageAccum, cDamageToTake )</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>0.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>G093_DamageAccum</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="E70DBE7C-6FC2-4876-A8A0-5B75C39AD5BF">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>false</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+						<treatDelegatedByDelegator>false</treatDelegatedByDelegator>
+					</EventProcessorDamageTransformer>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="198FB448-EDD7-4ED3-A6BC-22E61F4D8560">
+			<SpellPeriodicallyApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>триггер на урон по кошке</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FSMAAAAEAAAAKAAAAD4AAABKAAAAYAAAAFBhbnRoZXJJc0FsaXZlAABHMDkzVHJpZ2dlclN0YXJ0ZWQAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdigAAAN/g9sREeitoEAAAAItNCIsRi00Ii4KIAQAA/9DcHYIAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAAAAAAAAAPA/</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vPantherIsAlive == 1 &amp;&amp; sender.vG093TriggerStarted == 0</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<period>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAPw==</compiledString>
+					<returnType>float</returnType>
+					<sString>0.5f</sString>
+				</period>
+				<providerName></providerName>
+				<scaleMode>ScaleIsCount</scaleMode>
+				<spell href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="E3AA0ADA-7550-444C-ACD6-9BE3F0188D30">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="91C718BE-ED85-4ED7-8348-D467E36BC6AE">
+								<TriggerApplicator>
+									<actionsCount>
+										<compiledString></compiledString>
+										<returnType>int</returnType>
+										<sString>0</sString>
+									</actionsCount>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<behaviorFlags>0</behaviorFlags>
+									<caption>триггер на урон</caption>
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString>FRgAAAACAAAAHwAAADwAAABHMDkzX1RvdGFsV2lsbAAATWF4V2lsbABVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBdQnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+										<returnType>bool</returnType>
+										<sString>sender.vG093_TotalWill &lt; cMaxWill</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<lifeTime>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<playAck>false</playAck>
+									<processor href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="14BCD9F8-FA80-4B54-A2BB-893828C36E2E">
+										<EventProcessorDamageTransformer>
+											<abilityFilter>
+												<abilitiesList />
+												<abilityCondition>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</abilityCondition>
+												<abilityCostMode>Energy</abilityCostMode>
+												<exceptThis>false</exceptThis>
+												<flags>1073743103</flags>
+												<onlySingleTarget>false</onlySingleTarget>
+											</abilityFilter>
+											<add>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>0.0f</sString>
+											</add>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<checkSender>0</checkSender>
+											<damageTypeFilter>31</damageTypeFilter>
+											<flags>2</flags>
+											<matchTargetInverted>false</matchTargetInverted>
+											<mul>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>1.0f</sString>
+											</mul>
+											<objectFilter>2040319</objectFilter>
+											<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+											<spell href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="4858EDC3-3902-409D-8EF5-1ABFD5CE56C7">
+												<Spell>
+													<applicators>
+														<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="737406BB-69F9-43B4-870B-3AA3CDB80C43">
+															<PermanentStatModApplicator>
+																<applyTarget>AbilityOwner</applyTarget>
+																<caption>увеличить счётчик урона</caption>
+																<customApplyType>None</customApplyType>
+																<enabled>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>true</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<modifier>
+																	<addValue>
+																		<compiledString>FQ0AAAACAAAAJAAAAEEAAABUYXJnZXQAAFNURVAAVYvsg+wMi0UQixCLTRCLQkj/0IlF/GgAAAAAi038ixGLTfyLQkz/0IlF+ItNDFGLVQhSaAgAAACLRRCLEItNEItCUP/Q3MDZXfTZRfRR2Rwki034ixGLTfiLgqwBAAD/0IvlXcM=</compiledString>
+																		<returnType>float</returnType>
+																		<sString>appl.parent.oTarget.GetDamageTaken(cSTEP*2)</sString>
+																	</addValue>
+																	<multValue>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>1.0f</sString>
+																	</multValue>
+																	<stat>Life</stat>
+																	<topModifier>false</topModifier>
+																	<variable>G093_DamageAccum</variable>
+																</modifier>
+																<providerName></providerName>
+															</PermanentStatModApplicator>
+														</Item>
+														<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="3F8C6D34-06C1-4572-8866-3E976DBB5B04">
+															<PermanentStatModApplicator>
+																<applyTarget>AbilityOwner</applyTarget>
+																<caption>+Will</caption>
+																<customApplyType>None</customApplyType>
+																<enabled>
+																	<compiledString>FSEAAAACAAAAKAAAAEUAAABHMDkzX0RhbWFnZUFjY3VtAAAAAERhbWFnZVRvVGFrZQBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgUAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBegnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+																	<returnType>bool</returnType>
+																	<sString>sender.vG093_DamageAccum &gt;= cDamageToTake</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<modifier>
+																	<addValue>
+																		<compiledString>FUkAAAAFAAEAWAAAAGoAAACPAAAArAAAAN4AAAAtAQAATWF4V2lsbABHMDkzX1RvdGFsV2lsbAAARzA5M19EYW1hZ2VBY2N1bQAAAABEYW1hZ2VUb1Rha2UAAAAAQWRkX1dpbGxQZXJtAFWL7IPsJItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SaAgAAACLRQiLEItNCIuCiAEAAN1d+P/Q3G342V302UX0UdkcJGgYAAAAi00IixGLTQiLgogBAAD/0ItNDFGLVQhSaCwAAACLRRCLEItNEItCUN1d7P/Q3H3s2V3o2UXoUdkcJOg5AAAAg8QEi00MUYtVCFJoPAAAAItFEIsQi00Qi0JQ3V3g/9DcTeDZXdzZRdxR2Rwk6DoAAACDxAiL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6MP+//+DxAjZXfzZRfyL5V3DVYvsUdlFCNlFDN7Z3+D2xEF1CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+																		<returnType>float</returnType>
+																		<sString>min( floor( sender.vG093_DamageAccum / cDamageToTake ) * cAdd_WillPerm, cMaxWill - sender.vG093_TotalWill )</sString>
+																	</addValue>
+																	<multValue>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>1.0f</sString>
+																	</multValue>
+																	<stat>Will</stat>
+																	<topModifier>false</topModifier>
+																	<variable></variable>
+																</modifier>
+																<providerName></providerName>
+															</PermanentStatModApplicator>
+														</Item>
+														<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="41E31486-930A-42EB-9EBA-37D14605DE82">
+															<PermanentStatModApplicator>
+																<applyTarget>AbilityOwner</applyTarget>
+																<caption>+G093_TotalWill</caption>
+																<customApplyType>None</customApplyType>
+																<enabled>
+																	<compiledString>FSEAAAACAAAAKAAAAEUAAABHMDkzX0RhbWFnZUFjY3VtAAAAAERhbWFnZVRvVGFrZQBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgUAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBegnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+																	<returnType>bool</returnType>
+																	<sString>sender.vG093_DamageAccum &gt;= cDamageToTake</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<modifier>
+																	<addValue>
+																		<compiledString>FUkAAAAFAAEAWAAAAGoAAACPAAAArAAAAN4AAAAtAQAATWF4V2lsbABHMDkzX1RvdGFsV2lsbAAARzA5M19EYW1hZ2VBY2N1bQAAAABEYW1hZ2VUb1Rha2UAAAAAQWRkX1dpbGxQZXJtAFWL7IPsJItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SaAgAAACLRQiLEItNCIuCiAEAAN1d+P/Q3G342V302UX0UdkcJGgYAAAAi00IixGLTQiLgogBAAD/0ItNDFGLVQhSaCwAAACLRRCLEItNEItCUN1d7P/Q3H3s2V3o2UXoUdkcJOg5AAAAg8QEi00MUYtVCFJoPAAAAItFEIsQi00Qi0JQ3V3g/9DcTeDZXdzZRdxR2Rwk6DoAAACDxAiL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6MP+//+DxAjZXfzZRfyL5V3DVYvsUdlFCNlFDN7Z3+D2xEF1CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+																		<returnType>float</returnType>
+																		<sString>min( floor( sender.vG093_DamageAccum / cDamageToTake ) * cAdd_WillPerm, cMaxWill - sender.vG093_TotalWill )</sString>
+																	</addValue>
+																	<multValue>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>1.0f</sString>
+																	</multValue>
+																	<stat>Life</stat>
+																	<topModifier>false</topModifier>
+																	<variable>G093_TotalWill</variable>
+																</modifier>
+																<providerName></providerName>
+															</PermanentStatModApplicator>
+														</Item>
+														<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="2B8B34D5-C63D-4ED2-BA7C-BD4BEC2B17DA">
+															<PermanentStatModApplicator>
+																<applyTarget>AbilityOwner</applyTarget>
+																<caption>счётчик урона сбросить до остатка</caption>
+																<customApplyType>None</customApplyType>
+																<enabled>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>true</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<modifier>
+																	<addValue>
+																		<compiledString>FSEAAAACAAEALQAAAEMAAACXAAAARGFtYWdlVG9UYWtlAAAAAEcwOTNfRGFtYWdlQWNjdW0AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JR2RwkaBAAAACLRQiLEItNCIuCiAEAAP/QUdkcJOgFAAAAg8QIXcNVi+xR2UUM2RwkUdlFCNkcJOgFAAAAg8QIXcNVi+xR2UUMg+wI3Rwk2UUIg+wI3Rwk6E3///+DxBDZXfzZRfyL5V3D</compiledString>
+																		<returnType>float</returnType>
+																		<sString>fmod( sender.vG093_DamageAccum, cDamageToTake )</sString>
+																	</addValue>
+																	<multValue>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>0.0f</sString>
+																	</multValue>
+																	<stat>Life</stat>
+																	<topModifier>false</topModifier>
+																	<variable>G093_DamageAccum</variable>
+																</modifier>
+																<providerName></providerName>
+															</PermanentStatModApplicator>
+														</Item>
+													</applicators>
+													<dispatch href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="88301E77-B18D-45D9-B4A6-BB49B8B8F4CE">
+														<DispatchImmediate>
+															<alwaysApply>false</alwaysApply>
+															<applyEffect>
+																<Item href="" />
+																<Item href="" />
+															</applyEffect>
+															<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+															<applyEffectOrientation>Default</applyEffectOrientation>
+															<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+															<dieAfterApply>true</dieAfterApply>
+															<dispatchEffect>
+																<Item href="" />
+																<Item href="" />
+															</dispatchEffect>
+															<flags>0</flags>
+															<instantApply>false</instantApply>
+														</DispatchImmediate>
+													</dispatch>
+												</Spell>
+											</spell>
+											<treatDelegatedByDelegator>false</treatDelegatedByDelegator>
+										</EventProcessorDamageTransformer>
+									</processor>
+									<providerName></providerName>
+									<startCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</startCondition>
+									<useAbilityCooldown>false</useAbilityCooldown>
+									<useAbilityOwnerMana>false</useAbilityOwnerMana>
+								</TriggerApplicator>
+							</Item>
+							<Item href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="25858FDA-E06B-4D1B-9406-D19DAB2BD792">
+								<StatModApplicator>
+									<applyTarget>AbilityOwner</applyTarget>
+									<behaviorFlags>1</behaviorFlags>
+									<caption>Переменная на хозяйку о наличии триггера</caption>
+									<constraint>None</constraint>
+									<dontUpdate>false</dontUpdate>
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString>FQ8AAAACAAAAFAAAACoAAABQYW50aGVySXNBbGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1MAAAA3+D2xER6CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAA8D8=</compiledString>
+										<returnType>bool</returnType>
+										<sString>sender.vPantherIsAlive == 1</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<lifeTime>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<modifier>
+										<addValue>
+											<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+											<returnType>float</returnType>
+											<sString>1</sString>
+										</addValue>
+										<multValue>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>1.0f</sString>
+										</multValue>
+										<stat>Life</stat>
+										<topModifier>false</topModifier>
+										<variable>G093TriggerStarted</variable>
+									</modifier>
+									<providerName></providerName>
+									<startCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</startCondition>
+									<statModName></statModName>
+								</StatModApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="5F74F9A2-6823-4494-A09F-D73C878A2A58">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<startOffset>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAPw==</compiledString>
+					<returnType>float</returnType>
+					<sString>0.5f</sString>
+				</startOffset>
+				<targetSelector href="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT" id="4315AF8F-15CD-42A5-8955-DAFB905D90DE">
+					<RelativeUnitTargetSelector>
+						<relation>AlphaSummon</relation>
+					</RelativeUnitTargetSelector>
+				</targetSelector>
+			</SpellPeriodicallyApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G093</persistentId>
+	<prerequisiteTalents />
+	<rarity>excellent</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/Obsolete/G093_IncrWill-perDmgTaken.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>Will</stat>
+			<values>
+				<Item>9.5</Item>
+				<Item>10.2</Item>
+				<Item>10.9</Item>
+				<Item>11.6</Item>
+				<Item>12.3</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>136258047</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

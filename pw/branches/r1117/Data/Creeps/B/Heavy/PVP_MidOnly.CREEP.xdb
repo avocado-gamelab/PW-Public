@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdvMapCreep parent="/Creeps/B/Heavy/_Parent.CREEP">
+	<BackLink DBID="/Maps/Multiplayer/MidOnly/Spawners/_B.CSPN" Count="1" />
+	<abilities>
+		<Item skip="1" />
+		<Item href="/GameLogic/RaiseFlagAblt_Siege.ABLT" />
+		<Item skip="1" />
+		<Item skip="1" />
+		<Item href="/Creeps/Abilities/OnDeath_AoE_Nafta.ABLT" />
+	</abilities>
+	<attackAbility href="/Creeps/B/Heavy/PVP_MidOnly.CREEP" id="CB27F47B-C478-43E6-9946-D47D9CD2B3C0">
+		<BaseAttack parent="/Creeps/B/Heavy/AttackAbility.ATCK" />
+	</attackAbility>
+	<stats href="/Creeps/DefaultStats/PvP/Faction_Siege_MidOnly.STCN" />
+</AdvMapCreep>

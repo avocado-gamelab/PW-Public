@@ -18,11 +18,11 @@
 					<DamageApplicator>
 						<applyTarget>ApplicatorTarget</applyTarget>
 						<cancelInvisibility>false</cancelInvisibility>
-						<caption>урон</caption>
+						<caption>Базовый урон</caption>
 						<damage>
-							<compiledString>FQoAAAABAAAAFgAAAEEzX0RhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<compiledString>FQ4AAAABAAAAGgAAAEEzX0Jhc2VEYW1hZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
 							<returnType>float</returnType>
-							<sString>cA3_Damage</sString>
+							<sString>cA3_BaseDamage</sString>
 						</damage>
 						<damageMode>0</damageMode>
 						<damageType>Energy</damageType>
@@ -36,6 +36,30 @@
 						<providerName></providerName>
 						<timeLimiter>-1</timeLimiter>
 						<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
+					</DamageApplicator>
+				</Item>
+				<Item href="/Heroes/WraithKing/appl_SpellA3Damage.APLR" id="45A0FD40-120D-4603-BF1F-6E9CC379DB26">
+					<DamageApplicator>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<cancelInvisibility>false</cancelInvisibility>
+						<caption>Урон от стаков</caption>
+						<damage>
+							<compiledString>FRAAAAABAAAAHAAAAEEzX1RvdGFsX0RhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cA3_Total_Damage</sString>
+						</damage>
+						<damageMode>0</damageMode>
+						<damageType>Material</damageType>
+						<enabled>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</enabled>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<providerName></providerName>
+						<timeLimiter>-1</timeLimiter>
+						<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
 					</DamageApplicator>
 				</Item>
 				<Item href="/Items/Talents/Class/WraithKing/status_A3_WatchDead.APLR" />

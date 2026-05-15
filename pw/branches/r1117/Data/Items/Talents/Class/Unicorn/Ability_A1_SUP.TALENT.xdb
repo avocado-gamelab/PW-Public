@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Unicorn_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Unicorn/Ability_A0_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Unicorn.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Unicorn_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Unicorn_Alternative.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -34,8 +34,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Unicorn/Ability_A1_SUP.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Unicorn/Ability_A1_SUP.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Unicorn/Ability_A1_SUP.TALENT" id="F68C69F8-2DE7-4148-86E6-C1FB59A99DE3">
 			<ConditionFormula>
@@ -85,7 +85,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>22.7</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Unicorn/A1_SUP.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -107,7 +107,7 @@
 	<passiveApplicators />
 	<persistentId>Unicorn_A1_SUP</persistentId>
 	<prerequisiteTalents>
-		<Item href="/Items/Talents/Class/Unicorn/Ability1.TALENT" />
+		<Item href="/Items/Talents/Class/Unicorn/Ability_A1.TALENT" />
 	</prerequisiteTalents>
 	<rarity>Class</rarity>
 	<requireLineOfSight>false</requireLineOfSight>

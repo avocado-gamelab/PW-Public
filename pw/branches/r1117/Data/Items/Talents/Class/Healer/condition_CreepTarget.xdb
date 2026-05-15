@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ConditionFormula>
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A5.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A4_2.TALENT" Count="1" />
+	<condition>
+		<compiledString>FQAAAAAAAAAAVYvsUYtFDIsQi00Mi0JQ/9CD+AJ0LYtNDIsRi00Mi0JQ/9CD+AN0G4tNDIsRi00Mi0JQ/9CD+AR0CcdF/AAAAADrB8dF/AEAAACKRfyL5V3D</compiledString>
+		<returnType>bool</returnType>
+		<sString>receiver.UnitKind == 2 || receiver.UnitKind == 3 || receiver.UnitKind == 4</sString>
+	</condition>
+	<name>CreepTarget</name>
+</ConditionFormula>

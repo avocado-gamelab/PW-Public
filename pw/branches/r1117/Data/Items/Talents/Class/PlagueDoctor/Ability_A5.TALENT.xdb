@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/PlagueDoctor.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/PlagueDoctor_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/PlagueDoctor.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/PlagueDoctor_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/PlagueDoctor/Ability_A5_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
@@ -34,8 +34,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/PlagueDoctor/Ability_A5.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/PlagueDoctor/Ability_A5.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/PlagueDoctor/Ability_A5.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/PlagueDoctor/Ability_A5.TALENT" id="B2771EAC-5F48-4EDF-B051-8BF00534AEC8">
 			<ConditionFormula>
@@ -48,9 +48,7 @@
 			</ConditionFormula>
 		</Item>
 	</conditionFormulas>
-	<conflictingTalents>
-		<Item href="/Items/Talents/Class/PlagueDoctor/Ability_A1_SUP.TALENT" />
-	</conflictingTalents>
+	<conflictingTalents />
 	<constants href="/Items/Talents/Class/PlagueDoctor/Ability_A5.TALENT" id="78C45536-C1F8-48DE-90EC-7B7E3688F762">
 		<UnitConstantsContainer>
 			<vars>
@@ -116,7 +114,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>4</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/PlagueDoctor/A5.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

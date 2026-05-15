@@ -2,11 +2,12 @@
 <StatusApplicator>
 	<BackLink DBID="/Items/Talents/Class/Banshee/Ability_A1.TALENT" Count="1" />
 	<BackLink DBID="/Heroes/Banshee/_.HROB" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Banshee/status_A0_Enemy_SUP.APLR" Count="3" />
 	<applicators>
 		<Item href="/Items/Talents/Class/Banshee/status_A0_Enemy.APLR" id="FF7E78F4-C588-465F-A8CE-38F0466D8409">
 			<StatModApplicator>
 				<applyTarget>ApplicatorTarget</applyTarget>
-				<behaviorFlags>0</behaviorFlags>
+				<behaviorFlags>144</behaviorFlags>
 				<caption>Дереген ХП</caption>
 				<constraint>None</constraint>
 				<dontUpdate>false</dontUpdate>
@@ -50,7 +51,6 @@
 				<statModName></statModName>
 			</StatModApplicator>
 		</Item>
-		<Item href="/Heroes/DefaultStatus/_Vulnerability_status.APLR" />
 		<Item href="/Items/Talents/Class/Banshee/trigger_A0_1hp.APLR" />
 		<Item href="/Items/Talents/Class/Banshee/status_A0_Enemy.APLR" id="9A72BCF9-86AC-4621-9A83-70256D774159">
 			<TriggerApplicator>
@@ -196,7 +196,7 @@
 					<Item href="/Items/Talents/Class/Banshee/status_A0_Self.APLR" />
 				</applicators>
 				<applyTarget>ApplicatorTarget</applyTarget>
-				<behaviorFlags>2</behaviorFlags>
+				<behaviorFlags>146</behaviorFlags>
 				<caption>Тех.статус для логики «один бафф с цели»</caption>
 				<customCounter>
 					<compiledString></compiledString>
@@ -248,7 +248,7 @@
 	<behaviorFlags>146</behaviorFlags>
 	<caption>Статус А0 - дереген ХП</caption>
 	<customCounter>
-		<compiledString></compiledString>
+		<compiledString>FQAAAAAAAAAAVYvsM8Bdww==</compiledString>
 		<returnType>int</returnType>
 		<sString>0</sString>
 	</customCounter>
@@ -264,9 +264,9 @@
 		<Item href="" />
 	</effect>
 	<enabled>
-		<compiledString></compiledString>
+		<compiledString>FR8AAAACAAAAJgAAAD8AAABCYW5zaGVlX0EwX1NVUAAAQmFuc2hlZV9BMF9TVVAAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwIPAAYvlXcM=</compiledString>
 		<returnType>bool</returnType>
-		<sString>true</sString>
+		<sString>tal("Banshee_A0_SUP") == false</sString>
 	</enabled>
 	<flags>3</flags>
 	<formulaName>BansheeA0_Enemy</formulaName>
@@ -283,9 +283,9 @@
 	<stackableAcrossUnits>PartiallyStackable</stackableAcrossUnits>
 	<stackCount>4</stackCount>
 	<startCondition>
-		<compiledString>FRIAAAACAAAAHwAAADIAAABBMF9TdGFydENvbmRpdGlvbgBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcHU4AAADf4PbERHsGxkX/AesExkX/AIpF/4vlXcMAAAAAAAAAAA==</compiledString>
+		<compiledString>FTMAAAAEAAAAQgAAAFUAAABhAAAAegAAAEEwX1N0YXJ0Q29uZGl0aW9uAAAAQmFuc2hlZV9BMF9TVVAAAEJhbnNoZWVfQTBfU1VQAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3B3GAAAA3+D2xER7WGgUAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoJAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdQnHRfQBAAAA6wfHRfQAAAAAikX0i+VdwwAAAAAAAAAA</compiledString>
 		<returnType>bool</returnType>
-		<sString>cA0_StartCondition</sString>
+		<sString>cA0_StartCondition &amp;&amp; tal("Banshee_A0_SUP") == false</sString>
 	</startCondition>
 	<statusPosition>0</statusPosition>
 	<stopBehaviour>StopByTime</stopBehaviour>

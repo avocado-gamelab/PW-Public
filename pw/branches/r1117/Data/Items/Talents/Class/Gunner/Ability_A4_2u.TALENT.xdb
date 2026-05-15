@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
-	<BackLink DBID="/Items/Talents/Gunner_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Gunner_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Gunner/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Gunner/Ability_A4u.TALENT" Count="1" />
 	<BackLink DBID="/Social.ROOT" Count="1" />
@@ -34,8 +34,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Gunner/Ability_A4_2u.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Gunner/Ability_A4_2u.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Gunner/Ability_A4_2u.TALENT" id="9B1636C4-7976-42F5-8A3C-2BBF50AD06A5">
 			<ConditionFormula>
@@ -69,9 +69,9 @@
 					<UnitConstant>
 						<name>BaseAttackBonus</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQQ==</compiledString>
 							<returnType>float</returnType>
-							<sString>5.0f</sString>
+							<sString>10.0f</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -96,7 +96,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>16.15</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Gunner/A4_2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -212,9 +212,9 @@
 				<caption>Бонус к АА</caption>
 				<customApplyType>None</customApplyType>
 				<enabled>
-					<compiledString></compiledString>
+					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
 					<returnType>bool</returnType>
-					<sString>true</sString>
+					<sString>false</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<LoggingEvent>-1</LoggingEvent>

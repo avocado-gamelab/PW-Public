@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
-	<BackLink DBID="/Items/Talents/Shadow.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Shadow.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Shadow/Ability_A2u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Shadow_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Shadow_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Shadow/Shadow.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Shadow_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Shadow_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
@@ -36,8 +36,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Shadow/Ability_A2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Shadow/Ability_A2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Shadow/Ability_A2.TALENT" id="A14DD464-34A0-464B-A613-3A8CBA34D741">
 			<ConditionFormula>
@@ -110,7 +110,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>595</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Shadow/A2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

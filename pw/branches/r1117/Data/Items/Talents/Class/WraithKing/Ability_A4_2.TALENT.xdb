@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/WraithKing_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/WraithKing_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/WraithKing/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/WraithKing/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/WraithKing/Ability_A4u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/WraithKing/status_A0_Arsenal.APLR" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -275,8 +276,8 @@
 		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/WraithKing/Ability_A4_2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/WraithKing/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/WraithKing/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/WraithKing/Ability_A4_2.TALENT" id="77EC2DB4-A993-41C5-9308-0F595EBCCF27">
 			<ConditionFormula>
@@ -348,6 +349,7 @@
 				<Item href="/Items/Talents/Class/WraithKing/const_A4_2_TargetCounter" />
 				<Item href="/Items/Talents/Class/WraithKing/const_A4_2_GiveArsenal" />
 				<Item href="/Items/Talents/Class/WraithKing/const_A4_2_ArsenalPerAlly" />
+				<Item href="/Items/Talents/Class/WraithKing/const_A2_SUP_RangeIncrease" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -387,7 +389,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>2</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/WraithKing/A4_2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

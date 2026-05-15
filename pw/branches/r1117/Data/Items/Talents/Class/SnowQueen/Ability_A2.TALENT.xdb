@@ -2,10 +2,10 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/SnowQueen.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/SnowQueen_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/SnowQueen.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/SnowQueen_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A2_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/SnowQueen_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/SnowQueen_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Duel.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Elite_IntLife.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/SnowQueen/Elite_StrInt.TALENTSET" Count="1" />
@@ -29,7 +29,9 @@
 		<sString>0.0f</sString>
 	</aoeSize>
 	<aoeType>None</aoeType>
-	<applicators />
+	<applicators>
+		<Item href="/Items/Talents/Class/SnowQueen/status_A2_FrostPower_Ally.APLR" />
+	</applicators>
 	<askId>2</askId>
 	<autoTargetSelector href="" />
 	<budget>-1</budget>
@@ -41,8 +43,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/SnowQueen/Ability_A2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/SnowQueen/Ability_A2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/SnowQueen/Ability_A2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/SnowQueen/Ability_A2.TALENT" id="76C6C657-A9DA-4748-8694-A7F2350F6060">
 			<ConditionFormula>
@@ -87,6 +89,16 @@
 					</UnitConstant>
 				</Item>
 				<Item href="/Items/Talents/Class/SnowQueen/const_A2_SUP_DecreasingDamage" />
+				<Item href="/Items/Talents/Class/SnowQueen/Ability_A2.TALENT" id="C5DF2F3E-CF21-4304-8B00-84EFA5F0FDC9">
+					<UnitConstant>
+						<name>AllyDuration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>10</sString>
+						</var>
+					</UnitConstant>
+				</Item>
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -95,9 +107,9 @@
 		<percent>0</percent>
 	</consumptionBonus>
 	<cooldownTime>
-		<compiledString></compiledString>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQQ==</compiledString>
 		<returnType>float</returnType>
-		<sString>0.0f</sString>
+		<sString>20</sString>
 	</cooldownTime>
 	<cooldownTimeSecondState>
 		<compiledString></compiledString>
@@ -106,9 +118,27 @@
 	</cooldownTimeSecondState>
 	<description textref="/Items/Talents/Class/SnowQueen/Ability_A2.TALENT_description.txt" />
 	<devPoints>1</devPoints>
-	<dispatch href="" />
+	<dispatch href="/Items/Talents/Class/SnowQueen/Ability_A2.TALENT" id="6A7601E2-15CB-4A62-8DA5-F9CECADC31F2">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
 	<flags>1</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/SnowQueen/A2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -120,136 +150,33 @@
 		<returnType>float</returnType>
 		<sString>0.0f</sString>
 	</manaCost>
-	<marker></marker>
+	<marker>doCast2</marker>
 	<microAI href="" />
 	<minLevel>0</minLevel>
 	<minUseRangeCorrection>0</minUseRangeCorrection>
 	<naftaCost>300</naftaCost>
 	<name textref="/Items/Talents/Class/SnowQueen/Ability_A2.TALENT_name.txt" />
-	<node></node>
+	<node>ability2</node>
 	<passiveApplicators>
-		<Item href="/Items/Talents/Class/SnowQueen/Ability_A2.TALENT" id="FA47E799-5CB7-4C0C-8051-0E569403411E">
-			<TriggerApplicator>
-				<actionsCount>
-					<compiledString></compiledString>
-					<returnType>int</returnType>
-					<sString>0</sString>
-				</actionsCount>
-				<applyTarget>ApplicatorTarget</applyTarget>
-				<behaviorFlags>0</behaviorFlags>
-				<caption>триггер на урон</caption>
-				<effect>
-					<Item href="" />
-					<Item href="" />
-				</effect>
-				<enabled>
-					<compiledString></compiledString>
-					<returnType>bool</returnType>
-					<sString>true</sString>
-				</enabled>
-				<formulaName></formulaName>
-				<lifeTime>
-					<compiledString></compiledString>
-					<returnType>float</returnType>
-					<sString>-1.0</sString>
-				</lifeTime>
-				<LoggingEvent>-1</LoggingEvent>
-				<playAck>false</playAck>
-				<processor href="/Items/Talents/Class/SnowQueen/A2A3_OnDamage.EVNT" />
-				<providerName></providerName>
-				<startCondition>
-					<compiledString></compiledString>
-					<returnType>bool</returnType>
-					<sString>true</sString>
-				</startCondition>
-				<useAbilityCooldown>false</useAbilityCooldown>
-				<useAbilityOwnerMana>false</useAbilityOwnerMana>
-			</TriggerApplicator>
-		</Item>
 		<Item href="/Items/Talents/Class/SnowQueen/status_A2_FrostPower.APLR" />
-		<Item href="/Items/Talents/Class/SnowQueen/Ability_A2.TALENT" id="C825736E-5C47-45A7-873E-EB6414F79376">
-			<FlagsApplicator>
-				<applyTarget>ApplicatorTarget</applyTarget>
-				<behaviorFlags>0</behaviorFlags>
-				<caption>Эффект без апгрейда</caption>
-				<consumables />
-				<effect>
-					<Item href="/Effects/Debuffs/Crystal/_Ally.EFFT" />
-					<Item href="" />
-				</effect>
-				<enabled>
-					<compiledString>FSUAAAACAAAALAAAAEUAAABTbm93UXVlZW5fQTJfU1VQAAAAAFNub3dRdWVlbl9BMl9TVVAAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgUAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwIPAAYvlXcM=</compiledString>
-					<returnType>bool</returnType>
-					<sString>tal("SnowQueen_A2_SUP") == false</sString>
-				</enabled>
-				<flag>0</flag>
-				<formulaName></formulaName>
-				<lifeTime>
-					<compiledString></compiledString>
-					<returnType>float</returnType>
-					<sString>-1.0</sString>
-				</lifeTime>
-				<LoggingEvent>-1</LoggingEvent>
-				<providerName></providerName>
-				<startCondition>
-					<compiledString></compiledString>
-					<returnType>bool</returnType>
-					<sString>true</sString>
-				</startCondition>
-				<talents />
-				<useListAs>ListAsRule</useListAs>
-			</FlagsApplicator>
-		</Item>
-		<Item href="/Items/Talents/Class/SnowQueen/Ability_A2.TALENT" id="348547A6-8A99-43DF-82C3-F24A546003F1">
-			<FlagsApplicator>
-				<applyTarget>ApplicatorTarget</applyTarget>
-				<behaviorFlags>0</behaviorFlags>
-				<caption>Эффект с апгрейдом</caption>
-				<consumables />
-				<effect>
-					<Item href="/Effects/Debuffs/Crystal/_AllyUp.EFFT" />
-					<Item href="" />
-				</effect>
-				<enabled>
-					<compiledString>FSUAAAACAAAALAAAAEUAAABTbm93UXVlZW5fQTJfU1VQAAAAAFNub3dRdWVlbl9BMl9TVVAAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgUAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCKRfuL5V3D</compiledString>
-					<returnType>bool</returnType>
-					<sString>tal("SnowQueen_A2_SUP")</sString>
-				</enabled>
-				<flag>0</flag>
-				<formulaName></formulaName>
-				<lifeTime>
-					<compiledString></compiledString>
-					<returnType>float</returnType>
-					<sString>-1.0</sString>
-				</lifeTime>
-				<LoggingEvent>-1</LoggingEvent>
-				<providerName></providerName>
-				<startCondition>
-					<compiledString></compiledString>
-					<returnType>bool</returnType>
-					<sString>true</sString>
-				</startCondition>
-				<talents />
-				<useListAs>ListAsRule</useListAs>
-			</FlagsApplicator>
-		</Item>
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/trigger_G766_RefreshAndNotify.APLR" />
 	</passiveApplicators>
 	<persistentId>SnowQueen_A2</persistentId>
 	<prerequisiteTalents />
 	<rarity>Class</rarity>
 	<requireLineOfSight>false</requireLineOfSight>
-	<shortDescription textref="" />
+	<shortDescription textref="/Items/Talents/Class/SnowQueen/Ability_A2.TALENT_shortDescription.txt" />
 	<talentRollGroups>63</talentRollGroups>
 	<talentStats />
-	<targetType>136258047</targetType>
-	<type>Passive</type>
+	<targetType>268435459</targetType>
+	<type>Active</type>
 	<upgradeLevel>0</upgradeLevel>
 	<useRange>
-		<compiledString></compiledString>
+		<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
 		<returnType>float</returnType>
-		<sString>0.0f</sString>
+		<sString>cRange_Long</sString>
 	</useRange>
-	<useRangeMaterial href="" />
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
 	<variativeMaxTalentStats />
 	<variativeMinTalentStats />
 	<vendorCost>0</vendorCost>

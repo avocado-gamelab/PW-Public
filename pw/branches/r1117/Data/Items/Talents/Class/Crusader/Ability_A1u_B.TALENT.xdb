@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Crusader_B.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Crusader_B_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Crusader_B_US.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Crusader_B.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Crusader_B_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Crusader_B_US.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Crusader/Duel_B_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Crusader/Duel_B_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Crusader/Elite_B_CDR.TALENTSET" Count="1" />
@@ -11,6 +11,8 @@
 	<BackLink DBID="/Test/Talents/Crusader/Elite_B_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Crusader/Epic_B_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Crusader/Epic_B_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Crusader/Ability_A1_A.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Crusader/Ability_A1u_A.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -41,8 +43,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Crusader/Ability_A1u_B.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Crusader/Ability_A1u_B.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Crusader/Ability_A1u_B.TALENT" id="CF761EAF-3DC4-45A2-8F76-D3CB6D28ADEF">
 			<ConditionFormula>
@@ -55,7 +57,10 @@
 			</ConditionFormula>
 		</Item>
 	</conditionFormulas>
-	<conflictingTalents />
+	<conflictingTalents>
+		<Item href="/Items/Talents/Class/Crusader/Ability_A1_A.TALENT" />
+		<Item href="/Items/Talents/Class/Crusader/Ability_A1u_A.TALENT" />
+	</conflictingTalents>
 	<constants href="/Items/Talents/Class/Crusader/Ability_A1u_B.TALENT" id="CF9E9F56-D620-4B9F-8A9D-EECDEED48CE7">
 		<UnitConstantsContainer>
 			<vars>
@@ -82,7 +87,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Crusader/A1_B.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UnitConstant>
+	<BackLink DBID="/Heroes/Assassin/AttackAbility.ATCK" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A0.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A4.TALENT" Count="1" />
+	<name>A0_TotalDamage</name>
+	<var>
+		<compiledString>FV0AAAAEAAAAZAAAAHkAAACZAAAAsgAAAEFzc2Fzc2luX1BvaXNvbkRhbWFnZQAAAEFzc2Fzc2luX0EwX1BvaXNvbkNvdW50ZXIAAABBMF9BZGRpdGlvbmFsUG9pc29uRGFtYWdlUGVyU3RhY2tQZXJjZW50AFWL7IPsFGgAAAAAi0UMixCLTQyLgogBAAD/0GgYAAAAi00MixGLTQyLgogBAADdXfj/0ItNDFGLVQhSaDQAAACLRRCLEItNEItCUN1d8P/Q3E3w3A3PAAAA2ejewdxN+Nld7NlF7IvlXcMAAAAAAADwP3sUrkfheoQ/</compiledString>
+		<returnType>float</returnType>
+		<sString>receiver.vAssassin_PoisonDamage * (1 + receiver.vAssassin_A0_PoisonCounter * cA0_AdditionalPoisonDamagePerStackPercent * 0.01)</sString>
+	</var>
+</UnitConstant>

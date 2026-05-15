@@ -3,7 +3,7 @@
 	<BackLink DBID="/Maps/Multiplayer/MOBA/Spawners/Neutral.NCSPN" Count="4" />
 	<BackLink DBID="/Maps/Multiplayer/MOBA/Spawners/Neutral_1.NCSPN" Count="2" />
 	<BackLink DBID="/Maps/Multiplayer/MOBA/Spawners/Neutral_Elite.NCSPN" Count="2" />
-	<BackLink DBID="/Maps/Multiplayer/MOBA/Spawners/Neutral_Elite_1.NCSPN" Count="2" />
+	<BackLink DBID="/Maps/Multiplayer/MOBA/Spawners/Neutral_Elite_1.NCSPN" Count="4" />
 	<BackLink DBID="/Maps/Multiplayer/MOBA/Spawners/Neutral_Normal.NCSPN" Count="2" />
 	<abilities>
 		<Item href="/Creeps/Minions/Minion2/A0.ABLT" />
@@ -31,18 +31,18 @@
 					</increment>
 					<levelUpgrades>
 						<Item>
-							<increment>20</increment>
+							<increment>40</increment>
 							<level>0</level>
 						</Item>
 						<Item>
 							<increment>0</increment>
-							<level>10</level>
+							<level>15</level>
 						</Item>
 					</levelUpgrades>
 					<value>
-						<compiledString>FRQAAAACAAAAIQAAADQAAABOZXV0cmFsQ3JlZXBfTW9kX0hQAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNQgAAANld/NlF/IvlXcMAAAAAAABZQA==</compiledString>
+						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADSQw==</compiledString>
 						<returnType>float</returnType>
-						<sString>100 * cNeutralCreep_Mod_HP</sString>
+						<sString>420</sString>
 					</value>
 				</Item>
 				<Item>
@@ -53,19 +53,19 @@
 					</increment>
 					<levelUpgrades>
 						<Item>
-							<increment>0.8</increment>
+							<increment>1.5</increment>
 							<level>0</level>
 						</Item>
 						<Item>
 							<increment>0</increment>
-							<level>10</level>
+							<level>15</level>
 						</Item>
 					</levelUpgrades>
 					<statId>Intellect</statId>
 					<value>
-						<compiledString>FRUAAAACAAAAIgAAADUAAABOZXV0cmFsQ3JlZXBfTW9kX0F0awBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcDUMAAADZXfzZRfyL5V3DAAAAAAAAHEA=</compiledString>
+						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACIQQ==</compiledString>
 						<returnType>float</returnType>
-						<sString>7 * cNeutralCreep_Mod_Atk</sString>
+						<sString>17</sString>
 					</value>
 				</Item>
 				<Item>
@@ -89,9 +89,9 @@
 					</increment>
 					<statId>AttackSpeed</statId>
 					<value>
-						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABIQg==</compiledString>
+						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAC0Qg==</compiledString>
 						<returnType>float</returnType>
-						<sString>50</sString>
+						<sString>90</sString>
 					</value>
 				</Item>
 				<Item>
@@ -102,19 +102,19 @@
 					</increment>
 					<levelUpgrades>
 						<Item>
-							<increment>2.3</increment>
+							<increment>3</increment>
 							<level>0</level>
 						</Item>
 						<Item>
 							<increment>0</increment>
-							<level>10</level>
+							<level>15</level>
 						</Item>
 					</levelUpgrades>
 					<statId>Will</statId>
 					<value>
-						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADoQQ==</compiledString>
+						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQg==</compiledString>
 						<returnType>float</returnType>
-						<sString>29</sString>
+						<sString>100</sString>
 					</value>
 				</Item>
 				<Item>
@@ -125,19 +125,19 @@
 					</increment>
 					<levelUpgrades>
 						<Item>
-							<increment>2.3</increment>
+							<increment>3</increment>
 							<level>0</level>
 						</Item>
 						<Item>
 							<increment>0</increment>
-							<level>10</level>
+							<level>15</level>
 						</Item>
 					</levelUpgrades>
 					<statId>Stamina</statId>
 					<value>
-						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADoQQ==</compiledString>
+						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQg==</compiledString>
 						<returnType>float</returnType>
-						<sString>29</sString>
+						<sString>100</sString>
 					</value>
 				</Item>
 				<Item>
@@ -161,9 +161,9 @@
 					</increment>
 					<statId>NaftaForKill</statId>
 					<value>
-						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQQ==</compiledString>
+						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQQ==</compiledString>
 						<returnType>float</returnType>
-						<sString>8</sString>
+						<sString>25</sString>
 					</value>
 				</Item>
 				<Item>
@@ -192,9 +192,14 @@
 						</Item>
 						<Item>
 							<increment>0</increment>
-							<level>10</level>
+							<level>15</level>
 						</Item>
 					</levelUpgrades>
+					<value>
+						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABAQA==</compiledString>
+						<returnType>float</returnType>
+						<sString>3</sString>
+					</value>
 				</Item>
 				<Item>
 					<calcIncrement>0</calcIncrement>
@@ -207,9 +212,9 @@
 					<levelUpgrades />
 					<statId>TeamNaftaForPresence</statId>
 					<value>
-						<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADAQA==</compiledString>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
 						<returnType>float</returnType>
-						<sString>6</sString>
+						<sString>0</sString>
 					</value>
 				</Item>
 			</stats>

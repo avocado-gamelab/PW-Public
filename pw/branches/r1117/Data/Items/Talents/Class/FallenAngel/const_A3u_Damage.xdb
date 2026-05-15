@@ -3,8 +3,8 @@
 	<BackLink DBID="/Items/Talents/Class/FallenAngel/Ability_A3.TALENT" Count="1" />
 	<name>A3u_Damage</name>
 	<var>
-		<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAABIQgCAg0M=</compiledString>
+		<compiledString>FUAAAAAGAAAARwAAAGAAAACSAAAAnAAAANsAAAD2AAAARmFsbGVuQW5nZWxfQTNfU1VQAABGYWxsZW5BbmdlbF9BM19TVVAAAEEzX1NVUF9EYW1hZ2VNdWx0aXBsaWVyAFWL7IPsIGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoFAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAagFR2QUaAQAA2RwkUdkFFgEAANkcJGoAi00IixGLTQiLgjQBAAD/0FHZHCRqAYtNEIsRi00Qi0Jg/9APtk37iU3020X0i1UMUotFCFBoKAAAAItNEIsRi00Qi0JQ2cndXezdXeT/0NwlDgEAANxN5Nno3sHcTezZXeDZReCL5V3DAAAAAAAA8D8AAEhCAICDQw==</compiledString>
 		<returnType>float</returnType>
-		<sString>damageScale(sIntellect,50, 263)</sString>
+		<sString>damageScale(sIntellect,50, 263) * (1 + tal("FallenAngel_A3_SUP") * (cA3_SUP_DamageMultiplier - 1))</sString>
 	</var>
 </UnitConstant>

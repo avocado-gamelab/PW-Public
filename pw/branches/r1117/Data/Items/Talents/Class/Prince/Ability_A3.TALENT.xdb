@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Prince.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Prince_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Prince/Ability_A3u.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Prince_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Prince/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Prince/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Prince/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Prince/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Prince/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Prince/Epic_Str.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>3</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А3. Клинок с секретом</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Prince/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Prince/Ability_A3.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Prince/Ability_A3.TALENT" id="E1E8E389-DE9E-4DCC-BE69-253106F025F4">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRcAAAACAAAAHgAAADcAAABQcmluY2VfQTN1AABQcmluY2VfQTN1AFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoDAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZF+/fYG8CDwAGL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Prince_A3u") == false</sString>
+				</condition>
+				<name>Prince_A3u</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Prince/Ability_A3.TALENT" id="DDDB0D02-2A9D-45F4-B502-A1B347CD5CFE">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR4AAAACAAAAJQAAAD4AAABQcmluY2VfQTNfU1VQAAAAUHJpbmNlX0EzX1NVUABVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Prince_A3_SUP") == false</sString>
+				</condition>
+				<name>Prince_A3_SUP</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/Prince/Ability_A3.TALENT" id="115B24E7-FAC3-4170-AC07-B1188629877D">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Prince/Ability_A3.TALENT" id="50FBC9B8-081F-4598-8627-153C51F96F05">
+					<UnitConstant>
+						<name>A3_ProcTech</name>
+						<var>
+							<compiledString>FQgAAAACAAAAIwAAADYAAABBM19Qcm9jAFWL7IPsCItFDFCLTQhRagJqA4tVDFKLRQhQaAAAAACLTRCLEYtNEItCUP/Q3A1eAAAA2V382UX8UdkcJItNEIsRi00Qi0Jk/9APtsiJTfjbRfiL5V3DexSuR+F6hD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>smartRoll(cA3_Proc*0.01 , 3 , 2) </sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Prince/Ability_A3.TALENT" id="3CA085F8-4CB7-4DFE-8E72-95CE1295AD71">
+					<UnitConstant>
+						<name>A3_Damage</name>
+						<var>
+							<compiledString>FSwAAAADAAAAOwAAAFUAAABrAAAAQTNfRmlyc3REYW1hZ2UAAEE0XzJ1X0RhbWFnZUluY3JlYXNlUGVyY2VudABVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBAAAACLVRCLAotNEItQUN1d+P/S3DWIAAAA2ejewdxN+Nld9NlF9IvlXcMAAAAAAADwPwAAAAAAAFlA</compiledString>
+							<returnType>float</returnType>
+							<sString>cA3_FirstDamage * (1 + cA4_2u_DamageIncreasePercent/100 )</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Prince/Ability_A3.TALENT" id="2AF081CA-9270-487A-B104-C4199A5BFF8C">
+					<UnitConstant>
+						<name>A3_Proc</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>40</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Prince/const_A3_Range" />
+				<Item href="/Items/Talents/Class/Prince/const_A3u_DamageIncomePercent" />
+				<Item href="/Items/Talents/Class/Prince/const_A3u_StatusCD" />
+				<Item href="/Items/Talents/Class/Prince/Ability_A3.TALENT" id="38B4DAFF-CCB3-426F-AA76-8F1E0833A727">
+					<UnitConstant>
+						<name>A3_FirstDamage</name>
+						<var>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoAi00QixGLTRCLQmD/0F3DAACIQQAA/EI=</compiledString>
+							<returnType>float</returnType>
+							<sString>abilityScale(sIntellect, 17, 126)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Prince/const_A3u_CDRefresh" />
+				<Item href="/Items/Talents/Class/Prince/const_A3_SUP_CD" />
+				<Item href="/Items/Talents/Class/Prince/const_A4_2u_DamageIncreasePercent" />
+				<Item href="/Items/Talents/Class/Prince/const_DuelVictory" />
+				<Item href="/Items/Talents/Class/Prince/const_A4_2u_DamagePerDuelVictoryPercent" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Prince/Ability_A3.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>10</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Prince/A3.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>390</naftaCost>
+	<name textref="/Items/Talents/Class/Prince/Ability_A3.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators />
+	<persistentId>Prince_A3</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQoAAAABAAAAFgAAAEFvRV9SYW5nZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+		<returnType>float</returnType>
+		<sString>cAoE_Range</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Circle.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

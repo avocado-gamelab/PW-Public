@@ -1,0 +1,933 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar5_Set5" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Frogenglut_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/GhostLord_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Healer_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Reaper_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Naga_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Rockman_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Shadow_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Wendigo_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_AtkSpd_Upg" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Life_Energy_Upg2" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Sta_Upg" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Sta_Upg2" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Will_Upg" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Int_Will_Upg2" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_Life_Upg2" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_Sta_AtkSpd_Upg" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentLists/Str_Will_AtkSpd_Upg" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="5" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_OrangeSet5.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/OrangeSet5.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet2_1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Epic_Life.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Frog/Epic_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Highlander/Epic_StrLife.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/IronKnight/Epic_StrLife.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Naga/Epic_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Naga/Epic_Will.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Rockman/Epic_StrLife.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Warlord/Epic_StrSta.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Witcher/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Witcher/Epic_Str.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G441: Самоотверженность</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="AEC28B0B-8A49-447F-9C00-B561D2604160">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ8AAAACAAAAFAAAACoAAABHNDQxX1RvdGFsTGlmZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1GAAAA3+D2xER7BsZF/wHrBMZF/wCKRf+L5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG441_TotalLife</sString>
+				</condition>
+				<name>G441_Increment</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="92FB7A39-1C2E-4606-953B-AA49326FD579">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ8AAAACAAAAFAAAACoAAABHNDQxX1N0YU9yV2lsbABVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1MAAAA3+D2xER6CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAA8D8=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG441_StaOrWill == 1</sString>
+				</condition>
+				<name>StaOrWill</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="494FE21F-3DAC-470F-88DC-4BD472D14980">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="897A7A6A-7D46-4E13-ABBC-DFCCA48F0A16">
+					<UnitConstant>
+						<name>Add_Life</name>
+						<var>
+							<compiledString>FR8AAAAFAAAALgAAAEgAAABoAAAAfgAAAIQAAABUNl9TdGF0AExpZmVCdWRnZXQAAFN0YWNrVmFsdWUAVYvsg+wUi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgIAAAAi1UQiwKLTRCLUFDdXfj/0txN+ItFDFCLTQhRaBQAAACLVRCLAotNEItQUN1d8P/S3DWdAAAA3C2VAAAA3E3w2V3s2UXsi+VdwwAAAAAAAOg/AAAAAAAAAEA=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT6_Stat * cLifeBudget * (0.75 - cStackValue / 2)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="FC142EF7-98FC-4D6B-9BA2-41A412243A8A">
+					<UnitConstant>
+						<name>Add_LifePerm</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABNYXhMaWZlAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0tw1NgAAANld/NlF/IvlXcMAAAAAAABpQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cMaxLife / 200</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="F9585F06-1107-405E-9364-110842919906">
+					<UnitConstant>
+						<name>DamageToTake</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACWQw==</compiledString>
+							<returnType>float</returnType>
+							<sString>300</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="78D384B2-5CEE-43CE-A37B-2E408D0184F3">
+					<UnitConstant>
+						<name>MaxLife</name>
+						<var>
+							<compiledString>FR8AAAADAAAALgAAAEgAAABoAAAAVDZfU3RhdABMaWZlQnVkZ2V0AABTdGFja1ZhbHVlAFWL7IPsFItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoCAAAAItVEIsCi00Qi1BQ3V34/9LcTfiLRQxQi00IUWgUAAAAi1UQiwKLTRCLUFDdXfD/0txN8Nld7NlF7IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT6_Stat * cLifeBudget * cStackValue</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="83849B51-C29E-4193-82EA-C3DB34CF8E46">
+					<UnitConstant>
+						<name>TT_G441_Increment</name>
+						<var>
+							<compiledString>FQ8AAAABAAAAEwAAAEc0NDFfVG90YWxMaWZlAFWL7GgAAAAAi0UIixCLTQiLgogBAAD/0F3D</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vG441_TotalLife</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="31448E9B-4287-46BE-A9AB-975C7D736000">
+					<UnitConstant>
+						<name>Add_Stat</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUNl9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcMAAAAAAADQPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT6_Stat * 0.25</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>31.31</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_441.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>5</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="D6648A51-2641-40C5-BC6F-CFAC6B9BE1ED">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>+Life</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9MaWZlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Life</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="6D8D591B-808B-4708-9728-42956F77043F">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>триггер на урон</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FScAAAAEAAAALgAAAEsAAABqAAAAgAAAAEc0NDFfVG90YWxMaWZlAABNYXhMaWZlAFBhbnRoZXJJc0FsaXZlAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaBAAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xEF1K2gYAAAAi00IixGLTQiLgogBAAD/0NwdogAAAN/g9sREegnHRfQBAAAA6wfHRfQAAAAAikX0i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG441_TotalLife &lt; cMaxLife &amp;&amp; sender.vPantherIsAlive == 0</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="9233684C-891A-45EE-B874-1B8A61C60DC2">
+					<EventProcessorDamageTransformer>
+						<abilityFilter>
+							<abilitiesList />
+							<abilityCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</abilityCondition>
+							<abilityCostMode>Energy</abilityCostMode>
+							<exceptThis>false</exceptThis>
+							<flags>1073743103</flags>
+							<onlySingleTarget>false</onlySingleTarget>
+						</abilityFilter>
+						<add>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</add>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<checkSender>0</checkSender>
+						<damageTypeFilter>31</damageTypeFilter>
+						<flags>2</flags>
+						<matchTargetInverted>false</matchTargetInverted>
+						<mul>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>1.0f</sString>
+						</mul>
+						<objectFilter>2040319</objectFilter>
+						<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+						<spell href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="4FCD0CED-55E7-4053-A992-D833D5300248">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="72F29010-79DF-4E01-924C-76DE56952F5F">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>увеличить счётчик урона</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FQUAAAABAAAAEgAAAFNURVAAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3MDZXfzZRfxR2Rwki0UMixCLTQyLgqwBAAD/0IvlXcM=</compiledString>
+													<returnType>float</returnType>
+													<sString>pSecond-&gt;GetDamageTaken(cSTEP*2)</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>G441_DamageAccum</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="D0E9BC40-5306-4D1D-9B3B-58D656865CF7">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>+Life</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString>FSEAAAACAAAAKAAAAEUAAABHNDQxX0RhbWFnZUFjY3VtAAAAAERhbWFnZVRvVGFrZQBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgUAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBegnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>sender.vG441_DamageAccum &gt;= cDamageToTake</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FUkAAAAFAAEAWAAAAGoAAACPAAAArAAAAN4AAAAtAQAATWF4TGlmZQBHNDQxX1RvdGFsTGlmZQAARzQ0MV9EYW1hZ2VBY2N1bQAAAABEYW1hZ2VUb1Rha2UAAAAAQWRkX0xpZmVQZXJtAFWL7IPsJItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SaAgAAACLRQiLEItNCIuCiAEAAN1d+P/Q3G342V302UX0UdkcJGgYAAAAi00IixGLTQiLgogBAAD/0ItNDFGLVQhSaCwAAACLRRCLEItNEItCUN1d7P/Q3H3s2V3o2UXoUdkcJOg5AAAAg8QEi00MUYtVCFJoPAAAAItFEIsQi00Qi0JQ3V3g/9DcTeDZXdzZRdxR2Rwk6DoAAACDxAiL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6MP+//+DxAjZXfzZRfyL5V3DVYvsUdlFCNlFDN7Z3+D2xEF1CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+													<returnType>float</returnType>
+													<sString>min( floor( sender.vG441_DamageAccum / cDamageToTake ) * cAdd_LifePerm, cMaxLife - sender.vG441_TotalLife )</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable></variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="87A77235-C8CE-4009-8989-35D8B795DBF6">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>+G441_TotalLife</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString>FSEAAAACAAAAKAAAAEUAAABHNDQxX0RhbWFnZUFjY3VtAAAAAERhbWFnZVRvVGFrZQBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgUAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBegnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>sender.vG441_DamageAccum &gt;= cDamageToTake</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FUkAAAAFAAEAWAAAAGoAAACPAAAArAAAAN4AAAAtAQAATWF4TGlmZQBHNDQxX1RvdGFsTGlmZQAARzQ0MV9EYW1hZ2VBY2N1bQAAAABEYW1hZ2VUb1Rha2UAAAAAQWRkX0xpZmVQZXJtAFWL7IPsJItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SaAgAAACLRQiLEItNCIuCiAEAAN1d+P/Q3G342V302UX0UdkcJGgYAAAAi00IixGLTQiLgogBAAD/0ItNDFGLVQhSaCwAAACLRRCLEItNEItCUN1d7P/Q3H3s2V3o2UXoUdkcJOg5AAAAg8QEi00MUYtVCFJoPAAAAItFEIsQi00Qi0JQ3V3g/9DcTeDZXdzZRdxR2Rwk6DoAAACDxAiL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6MP+//+DxAjZXfzZRfyL5V3DVYvsUdlFCNlFDN7Z3+D2xEF1CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+													<returnType>float</returnType>
+													<sString>min( floor( sender.vG441_DamageAccum / cDamageToTake ) * cAdd_LifePerm, cMaxLife - sender.vG441_TotalLife )</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>G441_TotalLife</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="11B83BD3-7C8E-45AD-BF95-EAD9DB62D122">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>счётчик урона сбросить до остатка</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FSEAAAACAAEALQAAAEMAAACXAAAARGFtYWdlVG9UYWtlAAAAAEc0NDFfRGFtYWdlQWNjdW0AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JR2RwkaBAAAACLRQiLEItNCIuCiAEAAP/QUdkcJOgFAAAAg8QIXcNVi+xR2UUM2RwkUdlFCNkcJOgFAAAAg8QIXcNVi+xR2UUMg+wI3Rwk2UUIg+wI3Rwk6E3///+DxBDZXfzZRfyL5V3D</compiledString>
+													<returnType>float</returnType>
+													<sString>fmod( sender.vG441_DamageAccum, cDamageToTake )</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>0.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>G441_DamageAccum</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="5935CC17-C7D1-4324-BC41-282BC42931BA">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>false</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+						<treatDelegatedByDelegator>false</treatDelegatedByDelegator>
+					</EventProcessorDamageTransformer>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="A78A070A-3545-422E-8A5F-60FFD556B809">
+			<SpellPeriodicallyApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>триггер на урон по кошке</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FSMAAAAEAAAAKAAAAD4AAABKAAAAYAAAAFBhbnRoZXJJc0FsaXZlAABHNDQxVHJpZ2dlclN0YXJ0ZWQAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdigAAAN/g9sREeitoEAAAAItNCIsRi00Ii4KIAQAA/9DcHYIAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAAAAAAAAAPA/</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vPantherIsAlive == 1 &amp;&amp; sender.vG441TriggerStarted == 0</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<period>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAPw==</compiledString>
+					<returnType>float</returnType>
+					<sString>0.5f</sString>
+				</period>
+				<providerName></providerName>
+				<scaleMode>ScaleIsCount</scaleMode>
+				<spell href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="1C969F65-938A-448F-A34D-2825145D34A7">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="1EFE51EC-C9A5-4B74-98DD-9B106E020FC9">
+								<TriggerApplicator>
+									<actionsCount>
+										<compiledString></compiledString>
+										<returnType>int</returnType>
+										<sString>0</sString>
+									</actionsCount>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<behaviorFlags>0</behaviorFlags>
+									<caption>триггер на урон</caption>
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString>FRgAAAACAAAAHwAAADwAAABHNDQxX1RvdGFsTGlmZQAATWF4TGlmZQBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBdQnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+										<returnType>bool</returnType>
+										<sString>sender.vG441_TotalLife &lt; cMaxLife</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<lifeTime>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<playAck>false</playAck>
+									<processor href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="0F2BB34A-4D44-4B50-8AAE-67A809BDB929">
+										<EventProcessorDamageTransformer>
+											<abilityFilter>
+												<abilitiesList />
+												<abilityCondition>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</abilityCondition>
+												<abilityCostMode>Energy</abilityCostMode>
+												<exceptThis>false</exceptThis>
+												<flags>1073743103</flags>
+												<onlySingleTarget>false</onlySingleTarget>
+											</abilityFilter>
+											<add>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>0.0f</sString>
+											</add>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<checkSender>0</checkSender>
+											<damageTypeFilter>31</damageTypeFilter>
+											<flags>2</flags>
+											<matchTargetInverted>false</matchTargetInverted>
+											<mul>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>1.0f</sString>
+											</mul>
+											<objectFilter>2040319</objectFilter>
+											<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+											<spell href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="0BC79C7A-3D04-4E8A-82C5-7DCF06EBE1F8">
+												<Spell>
+													<applicators>
+														<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="411BC50B-4C72-4168-B68B-F6CA010758F2">
+															<PermanentStatModApplicator>
+																<applyTarget>AbilityOwner</applyTarget>
+																<caption>увеличить счётчик урона</caption>
+																<customApplyType>None</customApplyType>
+																<enabled>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>true</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<modifier>
+																	<addValue>
+																		<compiledString>FQ0AAAACAAAAJAAAAEEAAABUYXJnZXQAAFNURVAAVYvsg+wMi0UQixCLTRCLQkj/0IlF/GgAAAAAi038ixGLTfyLQkz/0IlF+ItNDFGLVQhSaAgAAACLRRCLEItNEItCUP/Q3MDZXfTZRfRR2Rwki034ixGLTfiLgqwBAAD/0IvlXcM=</compiledString>
+																		<returnType>float</returnType>
+																		<sString>appl.parent.oTarget.GetDamageTaken(cSTEP*2)</sString>
+																	</addValue>
+																	<multValue>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>1.0f</sString>
+																	</multValue>
+																	<stat>Life</stat>
+																	<topModifier>false</topModifier>
+																	<variable>G441_DamageAccum</variable>
+																</modifier>
+																<providerName></providerName>
+															</PermanentStatModApplicator>
+														</Item>
+														<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="E62429C1-F4D4-4B6D-97E2-D4581BF62F43">
+															<PermanentStatModApplicator>
+																<applyTarget>AbilityOwner</applyTarget>
+																<caption>+Life</caption>
+																<customApplyType>None</customApplyType>
+																<enabled>
+																	<compiledString>FSEAAAACAAAAKAAAAEUAAABHNDQxX0RhbWFnZUFjY3VtAAAAAERhbWFnZVRvVGFrZQBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgUAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBegnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+																	<returnType>bool</returnType>
+																	<sString>sender.vG441_DamageAccum &gt;= cDamageToTake</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<modifier>
+																	<addValue>
+																		<compiledString>FUkAAAAFAAEAWAAAAGoAAACPAAAArAAAAN4AAAAtAQAATWF4TGlmZQBHNDQxX1RvdGFsTGlmZQAARzQ0MV9EYW1hZ2VBY2N1bQAAAABEYW1hZ2VUb1Rha2UAAAAAQWRkX0xpZmVQZXJtAFWL7IPsJItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SaAgAAACLRQiLEItNCIuCiAEAAN1d+P/Q3G342V302UX0UdkcJGgYAAAAi00IixGLTQiLgogBAAD/0ItNDFGLVQhSaCwAAACLRRCLEItNEItCUN1d7P/Q3H3s2V3o2UXoUdkcJOg5AAAAg8QEi00MUYtVCFJoPAAAAItFEIsQi00Qi0JQ3V3g/9DcTeDZXdzZRdxR2Rwk6DoAAACDxAiL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6MP+//+DxAjZXfzZRfyL5V3DVYvsUdlFCNlFDN7Z3+D2xEF1CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+																		<returnType>float</returnType>
+																		<sString>min( floor( sender.vG441_DamageAccum / cDamageToTake ) * cAdd_LifePerm, cMaxLife - sender.vG441_TotalLife )</sString>
+																	</addValue>
+																	<multValue>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>1.0f</sString>
+																	</multValue>
+																	<stat>Life</stat>
+																	<topModifier>false</topModifier>
+																	<variable></variable>
+																</modifier>
+																<providerName></providerName>
+															</PermanentStatModApplicator>
+														</Item>
+														<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="1C865723-231A-4936-9C85-61FD4955AAD7">
+															<PermanentStatModApplicator>
+																<applyTarget>AbilityOwner</applyTarget>
+																<caption>+G441_TotalLife</caption>
+																<customApplyType>None</customApplyType>
+																<enabled>
+																	<compiledString>FSEAAAACAAAAKAAAAEUAAABHNDQxX0RhbWFnZUFjY3VtAAAAAERhbWFnZVRvVGFrZQBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgUAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBegnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+																	<returnType>bool</returnType>
+																	<sString>sender.vG441_DamageAccum &gt;= cDamageToTake</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<modifier>
+																	<addValue>
+																		<compiledString>FUkAAAAFAAEAWAAAAGoAAACPAAAArAAAAN4AAAAtAQAATWF4TGlmZQBHNDQxX1RvdGFsTGlmZQAARzQ0MV9EYW1hZ2VBY2N1bQAAAABEYW1hZ2VUb1Rha2UAAAAAQWRkX0xpZmVQZXJtAFWL7IPsJItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SaAgAAACLRQiLEItNCIuCiAEAAN1d+P/Q3G342V302UX0UdkcJGgYAAAAi00IixGLTQiLgogBAAD/0ItNDFGLVQhSaCwAAACLRRCLEItNEItCUN1d7P/Q3H3s2V3o2UXoUdkcJOg5AAAAg8QEi00MUYtVCFJoPAAAAItFEIsQi00Qi0JQ3V3g/9DcTeDZXdzZRdxR2Rwk6DoAAACDxAiL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6MP+//+DxAjZXfzZRfyL5V3DVYvsUdlFCNlFDN7Z3+D2xEF1CNlFCNld/OsG2UUM2V382UX8i+Vdww==</compiledString>
+																		<returnType>float</returnType>
+																		<sString>min( floor( sender.vG441_DamageAccum / cDamageToTake ) * cAdd_LifePerm, cMaxLife - sender.vG441_TotalLife )</sString>
+																	</addValue>
+																	<multValue>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>1.0f</sString>
+																	</multValue>
+																	<stat>Life</stat>
+																	<topModifier>false</topModifier>
+																	<variable>G441_TotalLife</variable>
+																</modifier>
+																<providerName></providerName>
+															</PermanentStatModApplicator>
+														</Item>
+														<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="8F99D47C-624C-43CA-877A-8789537B6AD7">
+															<PermanentStatModApplicator>
+																<applyTarget>AbilityOwner</applyTarget>
+																<caption>счётчик урона сбросить до остатка</caption>
+																<customApplyType>None</customApplyType>
+																<enabled>
+																	<compiledString></compiledString>
+																	<returnType>bool</returnType>
+																	<sString>true</sString>
+																</enabled>
+																<formulaName></formulaName>
+																<LoggingEvent>-1</LoggingEvent>
+																<modifier>
+																	<addValue>
+																		<compiledString>FSEAAAACAAEALQAAAEMAAACXAAAARGFtYWdlVG9UYWtlAAAAAEc0NDFfRGFtYWdlQWNjdW0AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9JR2RwkaBAAAACLRQiLEItNCIuCiAEAAP/QUdkcJOgFAAAAg8QIXcNVi+xR2UUM2RwkUdlFCNkcJOgFAAAAg8QIXcNVi+xR2UUMg+wI3Rwk2UUIg+wI3Rwk6E3///+DxBDZXfzZRfyL5V3D</compiledString>
+																		<returnType>float</returnType>
+																		<sString>fmod( sender.vG441_DamageAccum, cDamageToTake )</sString>
+																	</addValue>
+																	<multValue>
+																		<compiledString></compiledString>
+																		<returnType>float</returnType>
+																		<sString>0.0f</sString>
+																	</multValue>
+																	<stat>Life</stat>
+																	<topModifier>false</topModifier>
+																	<variable>G441_DamageAccum</variable>
+																</modifier>
+																<providerName></providerName>
+															</PermanentStatModApplicator>
+														</Item>
+													</applicators>
+													<dispatch href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="B2235512-6C88-4053-BFD5-53E8A7D2F9EF">
+														<DispatchImmediate>
+															<alwaysApply>false</alwaysApply>
+															<applyEffect>
+																<Item href="" />
+																<Item href="" />
+															</applyEffect>
+															<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+															<applyEffectOrientation>Default</applyEffectOrientation>
+															<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+															<dieAfterApply>true</dieAfterApply>
+															<dispatchEffect>
+																<Item href="" />
+																<Item href="" />
+															</dispatchEffect>
+															<flags>0</flags>
+															<instantApply>false</instantApply>
+														</DispatchImmediate>
+													</dispatch>
+												</Spell>
+											</spell>
+											<treatDelegatedByDelegator>false</treatDelegatedByDelegator>
+										</EventProcessorDamageTransformer>
+									</processor>
+									<providerName></providerName>
+									<startCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</startCondition>
+									<useAbilityCooldown>false</useAbilityCooldown>
+									<useAbilityOwnerMana>false</useAbilityOwnerMana>
+								</TriggerApplicator>
+							</Item>
+							<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="C7C08E3D-A461-44D9-AD8C-D9CD3CB8B735">
+								<StatModApplicator>
+									<applyTarget>AbilityOwner</applyTarget>
+									<behaviorFlags>1</behaviorFlags>
+									<caption>Переменная на хозяйку о наличии триггера</caption>
+									<constraint>None</constraint>
+									<dontUpdate>false</dontUpdate>
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString>FQ8AAAACAAAAFAAAACoAAABQYW50aGVySXNBbGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1MAAAA3+D2xER6CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAA8D8=</compiledString>
+										<returnType>bool</returnType>
+										<sString>sender.vPantherIsAlive == 1</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<lifeTime>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<modifier>
+										<addValue>
+											<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+											<returnType>float</returnType>
+											<sString>1</sString>
+										</addValue>
+										<multValue>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>1.0f</sString>
+										</multValue>
+										<stat>Life</stat>
+										<topModifier>false</topModifier>
+										<variable>G441TriggerStarted</variable>
+									</modifier>
+									<providerName></providerName>
+									<startCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</startCondition>
+									<statModName></statModName>
+								</StatModApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="24CA3255-B080-4FF9-A8F7-5324860BE380">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<startOffset>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAPw==</compiledString>
+					<returnType>float</returnType>
+					<sString>0.5f</sString>
+				</startOffset>
+				<targetSelector href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="85C580AB-2908-4CD7-8498-DF890D2793E2">
+					<RelativeUnitTargetSelector>
+						<relation>AlphaSummon</relation>
+					</RelativeUnitTargetSelector>
+				</targetSelector>
+			</SpellPeriodicallyApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="41F6BD4C-E641-4084-A2D0-3624C588ABBD">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>StaOrWill</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgsgAAAD/0ItNCIsRi00Ii4LMAAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStamina&gt;=sBaseWill</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G441_StaOrWill</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="D1CB4C60-70F8-49BC-9DEE-84E0F66BF93E">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>+ Stamina if &gt;= Will</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgsgAAAD/0ItNCIsRi00Ii4LMAAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStamina &gt;= sBaseWill</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9TdGF0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Stamina</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Obsolete/G441_Life_inc_Will_Stamina.TALENT" id="B111707D-8B4D-4764-9EB4-23F850D6327D">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>+ Stamina if &lt; Will</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgsgAAAD/0ItNCIsRi00Ii4LMAAAA3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStamina &lt; sBaseWill</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9TdGF0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Will</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G441</persistentId>
+	<prerequisiteTalents />
+	<rarity>excellent</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>Life</stat>
+			<values>
+				<Item>202.5</Item>
+				<Item>217.5</Item>
+				<Item>232.5</Item>
+				<Item>247.5</Item>
+				<Item>262.5</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>136258047</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats>
+		<Item>
+			<addValueName>Add_Stat</addValueName>
+			<stat>Stamina</stat>
+			<values>
+				<Item>6.75</Item>
+				<Item>7.25</Item>
+				<Item>7.75</Item>
+				<Item>8.25</Item>
+				<Item>8.75</Item>
+				<Item>9.25</Item>
+				<Item>9.75</Item>
+				<Item>10.25</Item>
+				<Item>10.75</Item>
+				<Item>11.25</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_Stat</addValueName>
+			<stat>Will</stat>
+			<values>
+				<Item>6.75</Item>
+				<Item>7.25</Item>
+				<Item>7.75</Item>
+				<Item>8.25</Item>
+				<Item>8.75</Item>
+				<Item>9.25</Item>
+				<Item>9.75</Item>
+				<Item>10.25</Item>
+				<Item>10.75</Item>
+				<Item>11.25</Item>
+			</values>
+		</Item>
+	</variativeMaxTalentStats>
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

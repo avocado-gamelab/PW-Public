@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
-	<BackLink DBID="/Items/Talents/Class/ManaWyrm/Ability2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/ManaWyrm/Ability_A2.TALENT" Count="1" />
 	<applicators>
 		<Item href="/Items/Talents/Class/ManaWyrm/status_A2_EtherealForm.APLR" id="30BDD0E2-EC9A-4E11-A80F-F7CA73C65004">
 			<SpellPeriodicallyApplicator>
@@ -64,9 +64,9 @@
 									<cancelInvisibility>false</cancelInvisibility>
 									<caption>нанести урон</caption>
 									<damage>
-										<compiledString>FQkAAAABAAAAFQAAAEEyRGFtYWdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+										<compiledString>FQwAAAABAAAAGAAAAEEydTFfRGFtYWdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
 										<returnType>float</returnType>
-										<sString>cA2Damage</sString>
+										<sString>cA2u1_Damage</sString>
 									</damage>
 									<damageMode>4</damageMode>
 									<damageType>Energy</damageType>
@@ -206,12 +206,12 @@
 									<cancelInvisibility>false</cancelInvisibility>
 									<caption>нанести урон</caption>
 									<damage>
-										<compiledString>FQkAAAABAAAAFQAAAEEyRGFtYWdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+										<compiledString>FRMAAAABAAAAHwAAAEEydTFfRGFtYWdlX0hlcm9lcwBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
 										<returnType>float</returnType>
-										<sString>cA2Damage</sString>
+										<sString>cA2u1_Damage_Heroes</sString>
 									</damage>
 									<damageMode>4</damageMode>
-									<damageType>Material</damageType>
+									<damageType>Energy</damageType>
 									<enabled>
 										<compiledString>FR4AAAACAAAATAAAAGUAAABNYW5hV3lybV9BMnUxAAAATWFuYVd5cm1fQTJ1MQBVi+yD7AxWi0UIixCLTQiLgpABAAD/0Ivwi00MixGLTQyLgpABAAD/0DvwdFhoAAAAAItNCIsRi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQJx0X0AQAAAOsHx0X0AAAAAIpF9F6L5V3D</compiledString>
 										<returnType>bool</returnType>
@@ -221,7 +221,7 @@
 									<LoggingEvent>-1</LoggingEvent>
 									<providerName></providerName>
 									<timeLimiter>-1</timeLimiter>
-									<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
+									<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
 								</DamageApplicator>
 							</Item>
 						</applicators>

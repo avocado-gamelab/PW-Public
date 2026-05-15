@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <SpellApplicator>
-	<BackLink DBID="/Items/Talents/Class/Hunter/Ability1.TALENT" Count="2" />
+	<BackLink DBID="/Items/Talents/Class/Hunter/Ability_A1.TALENT" Count="2" />
 	<applyTarget>ApplicatorTarget</applyTarget>
 	<caption>спелл с уроном и статусами</caption>
 	<enabled>
@@ -39,6 +39,8 @@
 					</DamageApplicator>
 				</Item>
 				<Item href="/Heroes/DefaultStatus/_MORTALSTRIKE_Status.APLR" />
+				<Item href="/Items/Talents/Class/Hunter/add_A0Bleeding.APLR" />
+				<Item href="/Items/Talents/Class/Hunter/status_A0_bleeding.APLR" />
 			</applicators>
 			<dispatch href="/Items/Talents/Class/Hunter/appl_A1_ArrowSpell.APLR" id="EBB19949-A56A-4798-ACEF-C660953DD75C">
 				<DispatchImmediate>

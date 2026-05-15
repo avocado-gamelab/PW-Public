@@ -113,6 +113,7 @@
 				<providerName></providerName>
 			</VariableProxyApplicator>
 		</Item>
+		<Item href="/Heroes/status_TowerMultiplayerDamage.APLR" />
 	</applicators>
 	<autoTargetSelector href="" />
 	<caption></caption>
@@ -126,7 +127,13 @@
 	<compiledDescriptionA textref="" />
 	<compiledDescriptionB textref="" />
 	<conditionFormulas />
-	<constants href="" />
+	<constants href="/Heroes/Werewolf/AttackAbility.ATCK" id="CF879014-A42E-46AD-B167-D14A6DF76F28">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Heroes/const_TowerDamgeBuff" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
 	<cooldownTime>
 		<compiledString></compiledString>
 		<returnType>float</returnType>

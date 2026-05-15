@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProgramApplicator parent="/Items/Talents/Class/Prince/programm_A3_AoE.APLR">
+	<BackLink DBID="/Items/Talents/Class/Prince/Ability_A0.TALENT" Count="1" />
+	<applicators>
+		<Item skip="1" />
+		<Item skip="1" />
+		<Item skip="1" />
+		<Item skip="1" />
+		<Item>
+			<applicator href="/Items/Talents/Class/Prince/programm_A3_AoE_Passive.APLR" id="2AF44B29-CBFA-469A-AFC9-B1E6014FC1CD">
+				<PermanentStatModApplicator>
+					<applyTarget>ApplicatorTarget</applyTarget>
+					<caption>Повышаем переменную</caption>
+					<customApplyType>None</customApplyType>
+					<enabled>
+						<compiledString></compiledString>
+						<returnType>bool</returnType>
+						<sString>true</sString>
+					</enabled>
+					<formulaName></formulaName>
+					<LoggingEvent>-1</LoggingEvent>
+					<modifier>
+						<addValue>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</addValue>
+						<multValue>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</multValue>
+						<stat>Life</stat>
+						<topModifier>false</topModifier>
+						<variable>Prince_A3_SUP_IsOnCD</variable>
+					</modifier>
+					<providerName></providerName>
+				</PermanentStatModApplicator>
+			</applicator>
+			<continueCondition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</continueCondition>
+			<continueEvents>2</continueEvents>
+			<delay>
+				<compiledString></compiledString>
+				<returnType>float</returnType>
+				<sString>-1.0</sString>
+			</delay>
+			<stopCondition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</stopCondition>
+			<stopEvents>0</stopEvents>
+		</Item>
+	</applicators>
+	<caption>Прок с AoE уроном от Фарта</caption>
+	<enabled>
+		<compiledString>FU0AAAAGAAAAVAAAAG0AAACjAAAAvAAAAPIAAAAIAQAAUHJpbmNlX0EzAAAAUHJpbmNlX0EzAAAAUHJpbmNlX0EzX1NVUAAAAFByaW5jZV9BM19TVVAAAABQcmluY2VfQTNfU1VQX0lzT25DRABVi+yD7BRoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXR6aBgAAACLVQiLAotNCIuQqAEAAP/ShcB0KmgoAAAAi0UIixCLTQiLgqgBAAD/0IlF9ItN9IsRi030i0IE/9CIRfPrBMZF8wAPtk3zhcl0K2g4AAAAi1UIiwKLTQiLkIgBAAD/0twdKgEAAN/g9sREegnHRewBAAAA6wfHRewAAAAAikXsi+VdwwAAAAAAAAAA</compiledString>
+		<returnType>bool</returnType>
+		<sString>tal("Prince_A3") &amp;&amp; tal("Prince_A3_SUP") &amp;&amp; sender.vPrince_A3_SUP_IsOnCD == false</sString>
+	</enabled>
+	<startCondition>
+		<compiledString>FRUAAAACAAAAGgAAADAAAABQcmluY2VfQTBfQWJzb3JwdGlvbgBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1SAAAA3+D2xER7CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+		<returnType>bool</returnType>
+		<sString>sender.vPrince_A0_Absorption != 0</sString>
+	</startCondition>
+</ProgramApplicator>

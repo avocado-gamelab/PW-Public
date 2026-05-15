@@ -2,11 +2,11 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Marine.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Marine.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Marine/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Marine/Ability_A4u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Marine/Ability_A4u_2.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
 	<BackLink DBID="/Test/Talents/Marine/Duel.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Marine/Duel_Cat.TALENTSET" Count="1" />
@@ -307,21 +307,10 @@
 		<returnType>float</returnType>
 		<sString>0.0f</sString>
 	</castAllowRange>
-	<castLimitations>
-		<Item href="/Items/Talents/Class/Marine/Ability_A4.TALENT" id="E11590B6-2CBE-4773-9F0E-7AA7F3A43CEC">
-			<ConditionCastLimitation>
-				<condition>
-					<compiledString>FRkAAAACAAAAHgAAADcAAABNYXJpbmVfQTRfMgBNYXJpbmVfQTR1XzIAVYvsUWgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdSJoDAAAAItNCIsRi00Ii4KoAQAA/9CFwHUJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcM=</compiledString>
-					<returnType>bool</returnType>
-					<sString>!sender.GetTalent( "Marine_A4_2" ) &amp;&amp; !sender.GetTalent( "Marine_A4u_2" )</sString>
-				</condition>
-				<uiEvent href="" />
-			</ConditionCastLimitation>
-		</Item>
-	</castLimitations>
+	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Marine/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Marine/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Marine/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Marine/Ability_A4.TALENT" id="8637C344-2954-45EC-8325-6EF1BD1D1FC7">
 			<ConditionFormula>
@@ -345,9 +334,9 @@
 					<UnitConstant>
 						<name>A4_Damage</name>
 						<var>
-							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUEAAADZHCRR2QU9AAAA2RwkagCLRQiLEItNCItCHP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAACwQQAAIkM=</compiledString>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUEAAADZHCRR2QU9AAAA2RwkagCLRQiLEItNCItCHP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAAAwQQAAokI=</compiledString>
 							<returnType>float</returnType>
-							<sString>damageScale(sAttackSpeed, 22,162)</sString>
+							<sString>damageScale(sAttackSpeed, 11,81)</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -365,9 +354,9 @@
 					<UnitConstant>
 						<name>A4_Period</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DmpkZPw==</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DmpmZPg==</compiledString>
 							<returnType>float</returnType>
-							<sString>0.6</sString>
+							<sString>0.3</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -437,7 +426,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>3</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Marine/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

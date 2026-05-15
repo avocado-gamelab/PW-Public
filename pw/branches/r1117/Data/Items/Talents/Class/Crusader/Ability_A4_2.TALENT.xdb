@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Crusader_A_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Crusader_B_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Crusader_A_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Crusader_B_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Crusader/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Crusader/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Crusader/Ability_A4u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
@@ -308,9 +308,9 @@
 											<targetSelector href="/Items/Talents/Class/Crusader/Ability_A4_2.TALENT" id="0B8BBFAD-890F-4ABB-80DE-63FD5C502CD6">
 												<ConditionTargetSelector>
 													<condition>
-														<compiledString>FVcAAAAJAAAAXgAAAHkAAACMAAAAmAAAALEAAADnAAAA+gAAAAYBAAAfAQAAVGFyZ2V0AAB0YXJnZXQAAENydXNhZGVyX0E0XzJ1AABDcnVzYWRlcl9BNF8ydQAAdGFyZ2V0AABDcnVzYWRlcl9BNF8ydQAAQ3J1c2FkZXJfQTRfMnUAVYvsg+wUaAAAAACLRRCLEItNEItCTP/QOUUMD4TlAAAAaAgAAACLTRCLEYtNEItCVP/Q3B1zAQAA3+D2xER6T2gQAAAAi00IixGLTQiLgqgBAAD/0IXAdCpoIAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdXdoMAAAAItVEIsCi00Qi1BU/9LcHWsBAADf4PbERHpPaDgAAACLRQiLEItNCIuCqAEAAP/QhcB0KmhIAAAAi00IixGLTQiLgqgBAAD/0IlF9ItN9IsRi030i0IE/9CIRfPrBMZF8wAPtk3zhcl0CcdF7AEAAADrB8dF7AAAAACKReyL5V3DAAAAAAAA8D8AAAAAAAAIQA==</compiledString>
+														<compiledString>FVcAAAAJAAAAXgAAAHkAAACMAAAAmAAAALEAAADnAAAA+gAAAAYBAAAfAQAAVGFyZ2V0AAB0YXJnZXQAAENydXNhZGVyX0E0XzJ1AABDcnVzYWRlcl9BNF8ydQAAdGFyZ2V0AABDcnVzYWRlcl9BNF8ydQAAQ3J1c2FkZXJfQTRfMnUAVYvsg+wUaAAAAACLRRCLEItNEItCTP/QOUUMD4TlAAAAaAgAAACLTRCLEYtNEItCVP/Q3B1zAQAA3+D2xER6T2gQAAAAi00IixGLTQiLgqgBAAD/0IXAdCpoIAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdXdoMAAAAItVEIsCi00Qi1BU/9LcHWsBAADf4PbERHpPaDgAAACLRQiLEItNCIuCqAEAAP/QhcB0KmhIAAAAi00IixGLTQiLgqgBAAD/0IlF9ItN9IsRi030i0IE/9CIRfPrBMZF8wAPtk3zhcl0CcdF7AEAAADrB8dF7AAAAACKReyL5V3DAAAAAAAA8D8AAAAAAAAAQA==</compiledString>
 														<returnType>bool</returnType>
-														<sString>pSecond!= pMisc-&gt;GetObject("Target") &amp;&amp; !(appl.GetVariable("target") ==  3 &amp;&amp;  tal("Crusader_A4_2u")) &amp;&amp; !(appl.GetVariable("target") ==  1 &amp;&amp;  !tal("Crusader_A4_2u")) </sString>
+														<sString>pSecond!= pMisc-&gt;GetObject("Target") &amp;&amp; !(appl.GetVariable("target") ==  2 &amp;&amp;  tal("Crusader_A4_2u")) &amp;&amp; !(appl.GetVariable("target") ==  1 &amp;&amp;  !tal("Crusader_A4_2u")) </sString>
 													</condition>
 													<flags>0</flags>
 													<mode>Normal</mode>
@@ -359,9 +359,9 @@
 					</ComparingTargetSelector>
 				</target>
 				<targetsNumber>
-					<compiledString>FR8AAAACAAAAJgAAAD8AAABDcnVzYWRlcl9BNF8ydQAAQ3J1c2FkZXJfQTRfMnUAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwIPgAoPAAovlXcM=</compiledString>
+					<compiledString>FR8AAAACAAAAJgAAAD8AAABDcnVzYWRlcl9BNF8ydQAAQ3J1c2FkZXJfQTRfMnUAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwPfYg8ACi+Vdww==</compiledString>
 					<returnType>int</returnType>
-					<sString>tal("Crusader_A4_2u") ? 4 : 2</sString>
+					<sString>tal("Crusader_A4_2u") ? 3 : 2</sString>
 				</targetsNumber>
 			</BounceApplicator>
 		</Item>
@@ -377,8 +377,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Crusader/Ability_A4_2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Crusader/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Crusader/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Crusader/Ability_A4_2.TALENT" id="86FDB609-7E2A-4058-A1A6-70903C68D4FF">
 			<ConditionFormula>
@@ -541,7 +541,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>11</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Crusader/A4_2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

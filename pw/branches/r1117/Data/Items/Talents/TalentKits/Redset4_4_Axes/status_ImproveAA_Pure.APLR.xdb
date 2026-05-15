@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AbilityUpgradeApplicator>
-	<BackLink DBID="/Items/Talents/Level1/G580_AxesLifeDrain.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G580_AxesLifeDrain.TALENT" Count="1" />
 	<applicators>
 		<Item href="/Items/Talents/TalentKits/Redset4_4_Axes/status_ImproveAA_Pure.APLR" id="3E74E84D-9A60-49C5-8FD2-8E67E2DF0061">
 			<SpellApplicator>
 				<applyTarget>ApplicatorTarget</applyTarget>
-				<caption>Спелл действует только на чудь</caption>
+				<caption>Спелл действует на чудь, саммонов и боссов</caption>
 				<enabled>
-					<compiledString>FQsAAAACAAAASAAAAF4AAABJbW11bmUyQXhlAFWL7IPsCItFDIsQi00Mi0JQ/9CD+AV0JItNDIsRi00Mi0JQ/9CD+BJ0EotNDIsRi00Mi0JQ/9CD+BN1QWgAAAAAi00MixGLTQyLgogBAAD/0NwdlgAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAg338AXUJx0X4AQAAAOsHx0X4AAAAAIpF+IvlXcMAAAAAAAAAAA==</compiledString>
+					<compiledString>FQsAAAACAAAAWgAAAHAAAABJbW11bmUyQXhlAFWL7IPsCItFDIsQi00Mi0JQ/9CD+AJ0NotNDIsRi00Mi0JQ/9CD+AV0JItNDIsRi00Mi0JQ/9CD+BJ0EotNDIsRi00Mi0JQ/9CD+BN1QWgAAAAAi00MixGLTQyLgogBAAD/0NwdqAAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAg338AXUJx0X4AQAAAOsHx0X4AAAAAIpF+IvlXcMAAAAAAAAAAA==</compiledString>
 					<returnType>bool</returnType>
-					<sString>(rUnitKind == 5 || rUnitKind == 18 || rUnitKind == 19) &amp;&amp; (!receiver.vImmune2Axe==1)</sString>
+					<sString>(rUnitKind == 2 || rUnitKind == 5 || rUnitKind == 18 || rUnitKind == 19) &amp;&amp; (!receiver.vImmune2Axe==1)</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<LoggingEvent>-1</LoggingEvent>
@@ -45,9 +45,9 @@
 														<damageMode>0</damageMode>
 														<damageType>Pure</damageType>
 														<enabled>
-															<compiledString></compiledString>
+															<compiledString>FQwAAAACAAAAEQAAACcAAABBeGVEYW1hZ2VDRABVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xER6CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
 															<returnType>bool</returnType>
-															<sString>true</sString>
+															<sString>sender.vAxeDamageCD == 0</sString>
 														</enabled>
 														<formulaName></formulaName>
 														<LoggingEvent>-1</LoggingEvent>
@@ -55,6 +55,36 @@
 														<timeLimiter>-1</timeLimiter>
 														<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed.UIEV" />
 													</DamageApplicator>
+												</Item>
+												<Item href="/Items/Talents/TalentKits/Redset4_4_Axes/status_ImproveAA_Pure.APLR" id="4765CF3B-DEA4-4FE1-8242-E84F99A3F472">
+													<PermanentStatModApplicator>
+														<applyTarget>AbilityOwner</applyTarget>
+														<caption>Запрещаем в этом кадре наносить урон топором</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString></compiledString>
+															<returnType>bool</returnType>
+															<sString>true</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																<returnType>float</returnType>
+																<sString>1</sString>
+															</addValue>
+															<multValue>
+																<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																<returnType>float</returnType>
+																<sString>1</sString>
+															</multValue>
+															<stat>Life</stat>
+															<topModifier>false</topModifier>
+															<variable>AxeDamageCD</variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
 												</Item>
 											</applicators>
 											<dispatch href="/Items/Talents/TalentKits/Redset4_4_Axes/status_ImproveAA_Pure.APLR" id="F99F6C07-C477-44D0-A0B0-416095664DD9">
@@ -82,7 +112,6 @@
 									<targetSelector href="" />
 								</SpellApplicator>
 							</Item>
-							<Item href="/Items/Talents/TalentKits/Redset4_4_Axes/status_G580_Regen.APLR" />
 						</applicators>
 						<dispatch href="/Items/Talents/TalentKits/Redset4_4_Axes/status_ImproveAA_Pure.APLR" id="4C5B827A-9872-488A-ABCE-854E73B6452E">
 							<DispatchImmediate>
@@ -123,7 +152,7 @@
 		<Item href="" />
 	</effect>
 	<enabled>
-		<compiledString></compiledString>
+		<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
 		<returnType>bool</returnType>
 		<sString>true</sString>
 	</enabled>

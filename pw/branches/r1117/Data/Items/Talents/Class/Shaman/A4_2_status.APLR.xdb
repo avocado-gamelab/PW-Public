@@ -39,11 +39,40 @@
 		</Item>
 		<Item href="/Heroes/DefaultStatus/_Vulnerability_status.APLR" />
 		<Item href="/Heroes/DefaultStatus/_ARMORCUT_status.APLR" />
-		<Item href="/Items/Talents/Class/Shaman/A4_2_status.APLR" id="8D2D95EA-FF17-428C-A7F0-AC2957A3AE2D">
-			<MoveToApplicator>
+		<Item href="/Items/Talents/Class/Shaman/A4_2_status.APLR" id="63137465-AB67-4F54-BAE4-AE04F0244252">
+			<MovementControlApplicator>
 				<applyTarget>ApplicatorTarget</applyTarget>
 				<behaviorFlags>0</behaviorFlags>
-				<caption>Движение к шаману</caption>
+				<caption>Отменяем последний мувпоинт</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString>FQUAAAABAAAAEQAAAFNURVAAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+					<returnType>float</returnType>
+					<sString>cSTEP</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+			</MovementControlApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Shaman/A4_2_status.APLR" id="F4EB2671-7770-4D50-A66F-06258029D708">
+			<SpellPeriodicallyApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Периодически заставляем цель идти к Шаману</caption>
 				<effect>
 					<Item href="" />
 					<Item href="" />
@@ -54,43 +83,110 @@
 					<sString>true</sString>
 				</enabled>
 				<formulaName></formulaName>
-				<isMoveDirect>
-					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
-					<returnType>bool</returnType>
-					<sString>false</sString>
-				</isMoveDirect>
-				<isNotStackable>false</isNotStackable>
-				<justRotate>false</justRotate>
 				<lifeTime>
 					<compiledString></compiledString>
 					<returnType>float</returnType>
 					<sString>-1.0</sString>
 				</lifeTime>
 				<LoggingEvent>-1</LoggingEvent>
-				<moveRange>
-					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
+				<period>
+					<compiledString>FQUAAAABAAAAEQAAAFNURVAAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
 					<returnType>float</returnType>
-					<sString>2.0f</sString>
-				</moveRange>
-				<moveSpeed>
-					<compiledString></compiledString>
-					<returnType>float</returnType>
-					<sString>0.0f</sString>
-				</moveSpeed>
-				<moveTarget>AbilityOwner</moveTarget>
-				<offset>
-					<x>0</x>
-					<y>0</y>
-				</offset>
+					<sString>cSTEP</sString>
+				</period>
 				<providerName></providerName>
-				<pushUnits>false</pushUnits>
+				<scaleMode>ScaleIsCount</scaleMode>
+				<spell href="/Items/Talents/Class/Shaman/A4_2_status.APLR" id="0B763DA2-143A-41DE-AB66-34F3F219934A">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Class/Shaman/A4_2_status.APLR" id="EAAD57C5-0398-41E6-B7FE-F0BE2517D959">
+								<MoveToApplicator>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<behaviorFlags>0</behaviorFlags>
+									<caption>Движение к шаману</caption>
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<isMoveDirect>
+										<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+										<returnType>bool</returnType>
+										<sString>false</sString>
+									</isMoveDirect>
+									<isNotStackable>false</isNotStackable>
+									<justRotate>false</justRotate>
+									<lifeTime>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<moveRange>
+										<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
+										<returnType>float</returnType>
+										<sString>2.0f</sString>
+									</moveRange>
+									<moveSpeed>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</moveSpeed>
+									<moveTarget>AbilityOwner</moveTarget>
+									<offset>
+										<x>0</x>
+										<y>1</y>
+									</offset>
+									<providerName></providerName>
+									<pushUnits>false</pushUnits>
+									<startCondition>
+										<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</startCondition>
+								</MoveToApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Class/Shaman/A4_2_status.APLR" id="7109775C-EC73-44EF-9CD6-30676C2867B7">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
 				<startCondition>
 					<compiledString></compiledString>
 					<returnType>bool</returnType>
 					<sString>true</sString>
 				</startCondition>
-			</MoveToApplicator>
+				<startOffset>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</startOffset>
+				<targetSelector href="" />
+			</SpellPeriodicallyApplicator>
 		</Item>
+		<Item href="/Heroes/DefaultStatus/FakeDamage.APLR" />
 	</applicators>
 	<applyTarget>ApplicatorTarget</applyTarget>
 	<behaviorFlags>2</behaviorFlags>
@@ -106,7 +202,7 @@
 		<sString>-1.0</sString>
 	</customProgress>
 	<description textref="/Items/Talents/Class/Shaman/A4_2_status.APLR_description.txt" />
-	<dispellPriority>High</dispellPriority>
+	<dispellPriority>NonDispellable</dispellPriority>
 	<effect>
 		<Item href="/Effects/Debuffs/Taunt/_.EFFT" />
 		<Item href="" />

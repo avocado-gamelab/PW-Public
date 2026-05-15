@@ -2,12 +2,12 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Fairy.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Fairy_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Fairy.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Fairy_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Fairy_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Fairy/Ability_A1u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Fairy_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Fairy.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/RedSet4Add.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Fairy/Duel.TALENTSET" Count="1" />
@@ -346,8 +346,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Fairy/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Fairy/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Fairy/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Fairy/condition_BuffDexOrAspd" />
 		<Item href="/Items/Talents/Class/Fairy/Ability_A1.TALENT" id="34C52E7A-B065-4A1B-89B8-7A06A8236383">
@@ -446,9 +446,9 @@
 					<UnitConstant>
 						<name>A1_ModDmg</name>
 						<var>
-							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAABwQQAA4EI=</compiledString>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAABwQQAABkM=</compiledString>
 							<returnType>float</returnType>
-							<sString>damageScale( sIntellect, 15, 112 )</sString>
+							<sString>damageScale( sIntellect, 15, 134 )</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -494,7 +494,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>323</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Fairy/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

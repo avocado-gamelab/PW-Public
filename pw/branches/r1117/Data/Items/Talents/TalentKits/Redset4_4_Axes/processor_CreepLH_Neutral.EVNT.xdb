@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EventProcessorUnitDieNearMe>
-	<BackLink DBID="/Items/Talents/TalentKits/Redset4_4_Axes/trigger_GiveNafta_NeutralOnly.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G580_AxesLifeDrain.TALENT" Count="4" />
 	<applyTarget>AbilityOwner</applyTarget>
 	<checkSender>0</checkSender>
 	<killerFlags>9</killerFlags>
@@ -13,30 +13,10 @@
 	<spell href="/Items/Talents/TalentKits/Redset4_4_Axes/processor_CreepLH_Neutral.EVNT" id="4D359C5D-E712-4743-9140-5BD794FA6584">
 		<Spell>
 			<applicators>
-				<Item href="/Items/Talents/TalentKits/Redset4_4_Axes/processor_CreepLH_Neutral.EVNT" id="722E0CFD-EC82-4DDC-AC14-D82181B3CC97">
-					<AddNaftaApplicator>
-						<applyTarget>AbilityOwner</applyTarget>
-						<caption>плоти нологи</caption>
-						<enabled>
-							<compiledString></compiledString>
-							<returnType>bool</returnType>
-							<sString>true</sString>
-						</enabled>
-						<formulaName></formulaName>
-						<isFromImpulseBuff>false</isFromImpulseBuff>
-						<LoggingEvent>-1</LoggingEvent>
-						<nafta>
-							<compiledString>FS8AAAADAAAAPgAAAFgAAACCAAAATWF4TmFmdGFHYWluAAAAAEN1cnJlbnROYWZ0YUdhaW4AAAAATmFmdGFCb251cwBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBAAAACLVRCLAotNEItQUN1d+P/S3G342V302UX0UdkcJItFDFCLTQhRaCQAAACLVRCLAotNEItQUP/SUdkcJOgHAAAAg8QIi+Vdw1WL7FHZRQjZRQze2d/g9sRBdQjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
-							<returnType>float</returnType>
-							<sString>min(cNaftaBonus,cMaxNaftaGain - cCurrentNaftaGain)</sString>
-						</nafta>
-						<providerName></providerName>
-					</AddNaftaApplicator>
-				</Item>
 				<Item href="/Items/Talents/TalentKits/Redset4_4_Axes/processor_CreepLH_Neutral.EVNT" id="C1C17123-DA94-4071-8CCA-B607CA61078E">
 					<PermanentStatModApplicator>
 						<applyTarget>AbilityOwner</applyTarget>
-						<caption>зополняй бумажки</caption>
+						<caption>Повышаем урон</caption>
 						<customApplyType>None</customApplyType>
 						<enabled>
 							<compiledString></compiledString>
@@ -47,9 +27,9 @@
 						<LoggingEvent>-1</LoggingEvent>
 						<modifier>
 							<addValue>
-								<compiledString>FS8AAAADAAAAPgAAAFgAAACCAAAATWF4TmFmdGFHYWluAAAAAEN1cnJlbnROYWZ0YUdhaW4AAAAATmFmdGFCb251cwBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBAAAACLVRCLAotNEItQUN1d+P/S3G342V302UX0UdkcJItFDFCLTQhRaCQAAACLVRCLAotNEItQUP/SUdkcJOgHAAAAg8QIi+Vdw1WL7FHZRQjZRQze2d/g9sRBdQjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+								<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
 								<returnType>float</returnType>
-								<sString>min(cNaftaBonus,cMaxNaftaGain - cCurrentNaftaGain)</sString>
+								<sString>1</sString>
 							</addValue>
 							<multValue>
 								<compiledString></compiledString>
@@ -58,7 +38,7 @@
 							</multValue>
 							<stat>Life</stat>
 							<topModifier>false</topModifier>
-							<variable>CurrentNaftaGain</variable>
+							<variable>AxeAdditionalDamage</variable>
 						</modifier>
 						<providerName></providerName>
 					</PermanentStatModApplicator>
@@ -85,5 +65,5 @@
 			</dispatch>
 		</Spell>
 	</spell>
-	<targets>571211808</targets>
+	<targets>571211812</targets>
 </EventProcessorUnitDieNearMe>

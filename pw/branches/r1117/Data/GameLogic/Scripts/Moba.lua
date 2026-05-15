@@ -9,13 +9,13 @@ function OnUnitDie( victimId, killerId, lastHitterId, deathParamsInfo )
 		local dbid = "Dragon"
 		local faction = LuaGetUnitFactionById( killerId )
 
-		local lastWave = LuaSpawnerGetLastWave( "Boss_Dragon" )
-		local strSpawnDragonPoint = tostring( "Boss_Dragon_w".. lastWave.. "_c1" )
-		local IdSpawnDragonPoint = LuaGetUnitIdByObjectName( strSpawnDragonPoint )
+		--local lastWave = LuaSpawnerGetLastWave( "Boss_Dragon" )
+		--local strSpawnDragonPoint = tostring( "Boss_Dragon_w".. lastWave.. "_c1" )
+		local IdSpawnDragonPoint = victimId --LuaGetUnitIdByObjectName( strSpawnDragonPoint )
 
 		LuaCreateZombieById( IdSpawnDragonPoint, dbid, faction )
 
-		LuaKillUnit( strSpawnDragonPoint )
+		--LuaKillUnit( strSpawnDragonPoint )
 	end
 	
 	if LuaGetUnitVariableById( victimId, "InventorSpecial" ) ~= 0 then

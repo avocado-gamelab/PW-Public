@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Healer.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Healer_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Healer_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSetHealer.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Duel_En.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Elite.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Healer/Epic.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Healer/Ability_A3_SUP.TALENT" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>3</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А3. Вдохновение милосердия</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Class/Healer/Ability_A3.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Healer/Ability_A3.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Healer/Ability_A3.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Healer/condition_BoostStr" />
+		<Item href="/Items/Talents/Class/Healer/Ability_A3.TALENT" id="A36D66F3-5383-4134-A737-5C490676B35A">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR8AAAACAAAAJgAAAD8AAABIZWFsZXJfQTFfVXBnMQAASGVhbGVyX0ExX1VwZzEAVYvsg+wIaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtkX799gbwIPAAYvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Healer_A1_Upg1") == false</sString>
+				</condition>
+				<name>Healer_A1_Upg1</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/Healer/Ability_A3.TALENT" id="D1A820CA-44EF-4E64-8ECE-A75259B9D8D2">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Healer/Ability_A3.TALENT" id="5D343F42-176B-41B6-845A-473E8F66A298">
+					<UnitConstant>
+						<name>A3AddIntellect</name>
+						<var>
+							<compiledString>FQsAAAABAAAAFwAAAEEzQWRkUG93ZXIAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cA3AddPower</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Healer/Ability_A3.TALENT" id="8D443F07-8675-4ECE-AA6C-564E71DD7715">
+					<UnitConstant>
+						<name>A3MulIntellect</name>
+						<var>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.1f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Healer/const_A3_AddPower" />
+				<Item href="/Items/Talents/Class/Healer/Ability_A3.TALENT" id="18CB04A6-8BAB-4E4A-B50F-B38339988C90">
+					<UnitConstant>
+						<name>A3Duration</name>
+						<var>
+							<compiledString>FTUAAAAEAAAAPAAAAFUAAACVAAAArgAAAEhlYWxlcl9BM19TVVAAAABIZWFsZXJfQTNfU1VQAAAAQTNfU1VQX0JvbnVzRHVyYXRpb24AVYvsg+wYaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37iU3020X0i1UMUotFCFBoIAAAAItNEIsRi00Qi0JQ3V3s/9DcTezcBbwAAADZXejZReiL5V3DAAAAAAAAIEA=</compiledString>
+							<returnType>float</returnType>
+							<sString>8 +  tal("Healer_A3_SUP") * cA3_SUP_BonusDuration</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Healer/Ability_A3.TALENT" id="420EBEB3-0F7F-4242-A5CF-110BB8806374">
+					<UnitConstant>
+						<name>A3Proc</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>100</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Healer/const_A3_AddHalfPower" />
+				<Item href="/Items/Talents/Class/Healer/Ability_A3.TALENT" id="3428283C-3267-47E6-A6C8-CF72A3AF413E">
+					<UnitConstant>
+						<name>A3ProcOthers</name>
+						<var>
+							<compiledString>FUEAAAAGAAAASAAAAGEAAACXAAAAtwAAANkAAAD0AAAASGVhbGVyX0EzX1Byb2IAAHZhbHVlAAAASGVhbGVyX0EzAAAASGVhbGVyX0EzAAAASGVhbGVyX0EzAAAAUHJvYwBVi+yD7CBoGAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaCQAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2TfuFyXQ3aDAAAACLVQiLAotNCIuQqAEAAP/SiUX0i0UMUItNCFFoPAAAAItV9IsCi030i1BQ/9LZXfDrBdnu2V3wagGLRRBQaAAAAACLTQyLEYtNDIuCnAEAAP/QiUXs2UXwaBAAAACLTeyLEYtN7ItCVN1d5P/Q2ejewdxN5Nld4NlF4IvlXcMAAAAAAADwPwAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>(1 + receiver.FindApplicator( "Healer_A3_Prob", pMisc, UNIT )-&gt;GetVariable("value")) * talconst("Healer_A3","Proc")</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Healer/Proc" />
+				<Item href="/Items/Talents/Class/Healer/const_A3_SUP_BonusDuration" />
+				<Item href="/Items/Talents/Class/Healer/const_A3_SUP_BonusValue" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Healer/Ability_A3.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>13.21</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Healer/A3.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>2</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>540</naftaCost>
+	<name textref="/Items/Talents/Class/Healer/Ability_A3.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Class/Healer/status_A3_CharityPowerSelf.APLR" />
+	</passiveApplicators>
+	<persistentId>Healer_A3</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

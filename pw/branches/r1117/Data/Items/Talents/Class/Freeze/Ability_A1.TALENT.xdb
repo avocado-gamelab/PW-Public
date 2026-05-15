@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Freeze.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Freeze_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Freeze.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Freeze_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Freeze_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Freeze/Ability_A1.TALENT" Count="3" />
+	<BackLink DBID="/Items/Talents/Class/Freeze/Ability_A1_SUP.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Freeze/Ability_A1u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Freeze/Ability_A3.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Freeze_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Freeze/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Freeze/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Freeze/Elite_IntAsp.TALENTSET" Count="1" />
@@ -16,7 +17,6 @@
 	<BackLink DBID="/Test/Talents/Freeze/Elite_LifeStrAsp.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Freeze/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Freeze/Epic_Str.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Freeze/Ability_A1_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -995,8 +995,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Freeze/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Freeze/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Freeze/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Freeze/Ability_A1.TALENT" id="5CC0C2C2-228E-4D8A-8783-372EA3D48CE8">
 			<ConditionFormula>
@@ -1143,7 +1143,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>599</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Freeze/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

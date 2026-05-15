@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="2" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar5_Set2" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Banshee_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Mage_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/SnowQueen_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="3" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_OrangeSet2.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet13.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet14.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet15.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSetNewUltimates1.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/FallenAngel/Epic_IntDex.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mage/Elite_PvE.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/PinkGirl/Epic_Int.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G326: Ожесточенность</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="B19C0CA2-98EC-443D-922D-26AA1ED0CBB9">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHMzI2X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF0CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(sender.vG326_Active&gt;0)</sString>
+				</condition>
+				<name>InForma</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="6E185DAC-AB0D-4261-8777-5F320256A1B4">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="76EEF246-031B-45BF-91CF-C0B2BCBB511C">
+					<UnitConstant>
+						<name>Add_Dexterity</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUNl9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcOamZmZmZnZPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT6_Stat * 0.4</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="BF2DDDE0-06F2-4648-9818-67622ECFEC11">
+					<UnitConstant>
+						<name>DefenceAmount</name>
+						<var>
+							<compiledString>FQgAAAADAAAAFQAAACgAAAAuAAAAVDZfU3RhdABVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcDUQAAADcNTwAAADZXfzZRfyL5V3DAAAAAAAAAEAzMzMzMzPjPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT6_Stat * 0.6 / 2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="3A6A9623-979C-4C8A-ACD8-D188E19779CD">
+					<UnitConstant>
+						<name>TECH_StepValue</name>
+						<var>
+							<compiledString>FR4AAAACAAAALQAAAEcAAABEZWZlbmNlQW1vdW50AAAAVEVDSF9NYXhTdGVwcwBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBAAAACLVRCLAotNEItQUN1d+P/S3H342V302UX0i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cDefenceAmount/cTECH_MaxSteps</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="810B4D5E-424D-4386-8AC9-FABE8769DE11">
+					<UnitConstant>
+						<name>TT_DefenceAmount</name>
+						<var>
+							<compiledString>FQ4AAAABAAAAGwAAAERlZmVuY2VBbW91bnQAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3MDZXfzZRfyL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cDefenceAmount * 2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="FA975345-5F58-447E-A087-9CF4F2DB8713">
+					<UnitConstant>
+						<name>TECH_MaxSteps</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="AED31C8B-1884-4371-BCB0-990F71E4FB29">
+					<UnitConstant>
+						<name>TT_StepValue</name>
+						<var>
+							<compiledString>FQ4AAAADAAAAGwAAADIAAAA4AAAAVEVDSF9NYXhTdGVwcwBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LZ6N7x3A1OAAAA3DVGAAAA2V382UX8i+VdwwAAAAAAAABAAAAAAAAAWUAAAAAAAADwPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>1/cTECH_MaxSteps*100/2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/TalentSet2/const_G326_CoolDown" />
+				<Item href="/Items/Talents/TalentKits/TalentSet2/const_G330_MaxForm" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>31.31</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_326.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>5</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="D93C886C-FC75-43BF-AB75-6DED1DB277ED">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Dexterity</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQ4AAAABAAAAGgAAAEFkZF9EZXh0ZXJpdHkAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Dexterity</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Dexterity</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="C8EF7837-087A-423A-A20B-98EDC64EC688">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Initialise DefPosition326</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>0.0</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>DefPosition326</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="EF7C7EAC-823B-4D50-AEE2-94E92C0534AB">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>увеличение Э защиты</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FR4AAAACAAAAJQAAAEQAAABEZWZQb3NpdGlvbjMyNgAARGVmZW5jZUFtb3VudABVi+yD7AxoAAAAAItFDIsQi00Mi4KIAQAA/9DZ4ItNDFGLVQhSaBAAAACLRRCLEItNEItCUN1d+P/Q3EX42V302UX0i+Vdww==</compiledString>
+						<returnType>float</returnType>
+						<sString>-receiver.vDefPosition326 + cDefenceAmount</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Will</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="0AB98B09-83A2-4872-99C2-44CAE6C7EB70">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>увеличение М защиты</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FR4AAAACAAAAJQAAAEIAAABEZWZQb3NpdGlvbjMyNgAARGVmZW5jZUFtb3VudABVi+yD7AxoAAAAAItFDIsQi00Mi4KIAQAA/9CLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlDdXfj/0NxF+Nld9NlF9IvlXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>receiver.vDefPosition326 + cDefenceAmount</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Stamina</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="3A2060A1-322E-4509-AB44-A3666DCCD755">
+			<OnDamageApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>реакция на М урон</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FS8AAAADAAAANgAAAFMAAABwAAAARGVmUG9zaXRpb24zMjYAAERlZmVuY2VBbW91bnQAAABURUNIX1N0ZXBWYWx1ZQBVi+yD7BRoAAAAAItFDIsQi00Mi4KIAQAA/9CLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlDdXfj/0ItNDFGLVQhSaCAAAACLRRCLEItNEItCUN1d8P/Q3G3w3F343+D2xAF1CcdF7AEAAADrB8dF7AAAAACKReyL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>receiver.vDefPosition326 &lt;= cDefenceAmount - cTECH_StepValue</sString>
+				</enabled>
+				<filterFlags>7</filterFlags>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="95D3AE95-97C8-4E4D-9E09-C8E094B51C04">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="53801D0C-777B-46F8-9A1A-9274D980161F">
+								<PermanentStatModApplicator>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<caption></caption>
+									<customApplyType>None</customApplyType>
+									<enabled>
+										<compiledString>FS8AAAADAAAANgAAAFMAAABwAAAARGVmUG9zaXRpb24zMjYAAERlZmVuY2VBbW91bnQAAABURUNIX1N0ZXBWYWx1ZQBVi+yD7BRoAAAAAItFDIsQi00Mi4KIAQAA/9CLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlDdXfj/0ItNDFGLVQhSaCAAAACLRRCLEItNEItCUN1d8P/Q3G3w3F343+D2xAF1CcdF7AEAAADrB8dF7AAAAACKReyL5V3D</compiledString>
+										<returnType>bool</returnType>
+										<sString>receiver.vDefPosition326 &lt;= cDefenceAmount - cTECH_StepValue</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<modifier>
+										<addValue>
+											<compiledString>FQ8AAAABAAAAGwAAAFRFQ0hfU3RlcFZhbHVlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+											<returnType>float</returnType>
+											<sString>cTECH_StepValue</sString>
+										</addValue>
+										<multValue>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>1.0f</sString>
+										</multValue>
+										<stat>Life</stat>
+										<topModifier>false</topModifier>
+										<variable>DefPosition326</variable>
+									</modifier>
+									<providerName></providerName>
+								</PermanentStatModApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="9FA718CA-2C64-4B0B-8155-5B6776D0B6E3">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>AbilityOwner</spellTarget>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+			</OnDamageApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="21943F82-8AE6-45F0-AB02-84826E180961">
+			<OnDamageApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>реакция на Э урон</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FS4AAAADAAAANQAAAFIAAAByAAAARGVmUG9zaXRpb24zMjYAAFRFQ0hfU3RlcFZhbHVlAABEZWZlbmNlQW1vdW50AFWL7IPsFGgAAAAAi0UMixCLTQyLgogBAAD/0ItNDFGLVQhSaBAAAACLRRCLEItNEItCUN1d+P/Q3G34i00MUYtVCFJoIAAAAItFEIsQi00Qi0JQ3V3w/9DZ4Nxd8N/g9sRBegnHRewBAAAA6wfHRewAAAAAikXsi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>receiver.vDefPosition326 - cTECH_StepValue &gt;= -cDefenceAmount</sString>
+				</enabled>
+				<filterFlags>11</filterFlags>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="50C0A24D-C44D-4DAD-B44B-2F29639EF5D2">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="2B2875A5-9F20-495B-9724-F4FAB6406BD3">
+								<PermanentStatModApplicator>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<caption></caption>
+									<customApplyType>None</customApplyType>
+									<enabled>
+										<compiledString>FS4AAAADAAAANQAAAFIAAAByAAAARGVmUG9zaXRpb24zMjYAAFRFQ0hfU3RlcFZhbHVlAABEZWZlbmNlQW1vdW50AFWL7IPsFGgAAAAAi0UMixCLTQyLgogBAAD/0ItNDFGLVQhSaBAAAACLRRCLEItNEItCUN1d+P/Q3G34i00MUYtVCFJoIAAAAItFEIsQi00Qi0JQ3V3w/9DZ4Nxd8N/g9sRBegnHRewBAAAA6wfHRewAAAAAikXsi+Vdww==</compiledString>
+										<returnType>bool</returnType>
+										<sString>receiver.vDefPosition326 - cTECH_StepValue &gt;= -cDefenceAmount</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<modifier>
+										<addValue>
+											<compiledString>FQ8AAAABAAAAGwAAAFRFQ0hfU3RlcFZhbHVlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S2eBdww==</compiledString>
+											<returnType>float</returnType>
+											<sString>-cTECH_StepValue</sString>
+										</addValue>
+										<multValue>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>1.0f</sString>
+										</multValue>
+										<stat>Life</stat>
+										<topModifier>false</topModifier>
+										<variable>DefPosition326</variable>
+									</modifier>
+									<providerName></providerName>
+								</PermanentStatModApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="C74A4F19-FE3D-4879-B6EE-3874BF3DF8DA">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>AbilityOwner</spellTarget>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+			</OnDamageApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G326_Dex_WillOrStrmn.TALENT" id="AD392029-63D7-4EAD-9517-F2A701BAD6C2">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>G326_Active</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString>FSkAAAADAAAAMAAAAE0AAAB/AAAARzMzMF9Gb3JtQ291bnRlcgAAAABHMzMwX01heEZvcm0AAAAARzMzMABVi+yD7BBoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgUAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sQBdTWLTQiLEYtNCIuCfAEAAP/QiUX0aCQAAACLTfSLEYtN9IuCqAEAAP/QhcB0CcdF8AEAAADrB8dF8AAAAACKRfCL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>(sender.vG330_FormCounter &lt;= cG330_MaxForm)&amp;&amp;(sObjectMaster-&gt;GetTalent("G330"))</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G326_Active</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/TalentSet2/G330_FormCounter.APLR" />
+	</passiveApplicators>
+	<persistentId>G326</persistentId>
+	<prerequisiteTalents />
+	<rarity>good</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>Dexterity</stat>
+			<values>
+				<Item>10.8</Item>
+				<Item>11.6</Item>
+				<Item>12.4</Item>
+				<Item>13.2</Item>
+				<Item>14</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>136258047</targetType>
+	<type>Simple</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

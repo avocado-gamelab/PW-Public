@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <UnitConstant>
-	<BackLink DBID="/Items/Talents/Class/Warlord/Ability3.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Warlord/Ability3_Upg.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Warlord/Ability_A3.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Warlord/Ability_A3u.TALENT" Count="1" />
 	<name>A3_RetaliationDamage</name>
 	<var>
-		<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCyAAAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DMzOPQQAAAkM=</compiledString>
+		<compiledString>FTgAAAAGAAAAPwAAAFgAAACKAAAAlAAAANMAAADuAAAAV2FybG9yZF9BM19TVVAAAFdhcmxvcmRfQTNfU1VQAABBM19TVVBfRGFtYWdlTXVsdGlwbGllcgBVi+yD7CBoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AGoBUdkFEgEAANkcJFHZBQ4BAADZHCRqAItNCIsRi00Ii4LIAAAA/9BR2RwkagGLTRCLEYtNEItCYP/QD7ZN+4lN9NtF9ItVDFKLRQhQaCAAAACLTRCLEYtNEItCUNnJ3V3s3V3k/9DcJQYBAADcTeTZ6N7B3E3s2V3g2UXgi+VdwwAAAAAAAPA/MzOPQQAAAkM=</compiledString>
 		<returnType>float</returnType>
-		<sString>damageScale(sBaseStamina,17.9, 130)</sString>
+		<sString>damageScale(sBaseStamina,17.9, 130) * (1 + tal("Warlord_A3_SUP") * (cA3_SUP_DamageMultiplier - 1))</sString>
 	</var>
 </UnitConstant>

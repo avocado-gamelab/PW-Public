@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Vampiric3_Satanic/V3_Satanic.TALKIT" Count="2" />
+	<BackLink DBID="/Test/Talents/TestSetKits.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Archeress/Elite_PvE.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Naga/Elite_PvE.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar5_Set1" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="3" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_OrangeSet1.ROLLCONT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" Count="1" />
+	<BackLink DBID="/Test/Talents/Test_Satanic.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" id="5D33CDDB-19E4-4911-AFDE-4ED42D73DB00">
+			<StatusApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" id="0CAAB201-F462-485A-95CC-24040541E191">
+						<TriggerApplicator>
+							<actionsCount>
+								<compiledString></compiledString>
+								<returnType>int</returnType>
+								<sString>0</sString>
+							</actionsCount>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption>Хил по триггеру на атаку</caption>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<playAck>false</playAck>
+							<processor href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" id="B2D2D5E2-09BC-4E57-9847-C7F1B673FF25">
+								<EventProcessorOutgoingDamage>
+									<abilityFilter>
+										<abilitiesList />
+										<abilityCondition>
+											<compiledString></compiledString>
+											<returnType>bool</returnType>
+											<sString>true</sString>
+										</abilityCondition>
+										<abilityCostMode>Any</abilityCostMode>
+										<exceptThis>false</exceptThis>
+										<flags>536870913</flags>
+										<onlySingleTarget>false</onlySingleTarget>
+									</abilityFilter>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<damageTypeFilter>31</damageTypeFilter>
+									<modifiedDamage>
+										<compiledString>FQcAAAABAAAACwAAAERhbWFnZQBVi+xoAAAAAItFEIsQi00Qi0JU/9Bdww==</compiledString>
+										<returnType>float</returnType>
+										<sString>appl.vDamage</sString>
+									</modifiedDamage>
+									<spell href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" id="92597104-2726-4325-B607-56002E1CFE04">
+										<Spell>
+											<applicators>
+												<Item href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" id="B6EC1A3A-D4A4-4E12-AE21-CED2B02FE042">
+													<HealApplicator>
+														<amount>
+															<compiledString>FRkAAAADAAAALgAAAFwAAAB1AAAAU1RFUAAAAABMaWZlc3RlYWxQZXJjZW50AFWL7IPsDItFEFBqBItNDFGLVQhSaAAAAACLRRCLEItNEItCUP/QUdkcJItNCIsRi00Ii4LwAQAA/9CLTQxRi1UIUmgIAAAAi0UQixCLTRCLQlDdXfj/0NxN+NwNgwAAANld9NlF9IvlXcN7FK5H4XqEPw==</compiledString>
+															<returnType>float</returnType>
+															<sString>sender.GetDamageDealtEx(cSTEP, DMG_ABILITY_ATTACK, pMisc ) * cLifestealPercent * 0.01</sString>
+														</amount>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>Хилимся</caption>
+														<enabled>
+															<compiledString>FS0AAAAGAAAANAAAAEoAAABkAAAAkgAAAKsAAACxAAAARzMxNF9EYW1hZ2VEZWFsdAAAAABTVEVQAAAAAExpZmVzdGVhbFBlcmNlbnQAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Q3B3jAAAA3+D2xER6cItNEFFqBItVDFKLRQhQaBQAAACLTRCLEYtNEItCUP/QUdkcJItNCIsRi00Ii4LwAQAA/9CLTQxRi1UIUmgcAAAAi0UQixCLTRCLQlDdXfj/0NxN+NwN2wAAANwd0wAAAN/g9sQBdQnHRfQBAAAA6wfHRfQAAAAAikX0i+VdwwAAAAAAAPA/exSuR+F6hD8AAAAAAAAAAA==</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vG314_DamageDealt == 0 &amp;&amp; sender.GetDamageDealtEx(cSTEP, DMG_ABILITY_ATTACK, pMisc ) * cLifestealPercent * 0.01 &gt;= 1</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<healTarget>Health</healTarget>
+														<ignoreHealingMods>false</ignoreHealingMods>
+														<LoggingEvent>-1</LoggingEvent>
+														<providerName></providerName>
+														<uiEvent href="/UI/Events/CommonEvents/EventHeal.UIEV" />
+													</HealApplicator>
+												</Item>
+												<Item href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" id="5DFD70B4-C249-4FAF-932E-0430F42FF1EC">
+													<PermanentStatModApplicator>
+														<applyTarget>AbilityOwner</applyTarget>
+														<caption>Уже хилились</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString></compiledString>
+															<returnType>bool</returnType>
+															<sString>true</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																<returnType>float</returnType>
+																<sString>1</sString>
+															</addValue>
+															<multValue>
+																<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																<returnType>float</returnType>
+																<sString>1</sString>
+															</multValue>
+															<stat>Life</stat>
+															<topModifier>false</topModifier>
+															<variable>G314_DamageDealt</variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" id="DD7D889A-321B-48D1-B911-AD18A0125ECF">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+								</EventProcessorOutgoingDamage>
+							</processor>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<useAbilityCooldown>false</useAbilityCooldown>
+							<useAbilityOwnerMana>false</useAbilityOwnerMana>
+						</TriggerApplicator>
+					</Item>
+					<Item href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" id="ED77DB92-B000-40F8-AB16-B61B3A00D7AF">
+						<SpellPeriodicallyApplicator>
+							<applyTarget>AbilityOwner</applyTarget>
+							<behaviorFlags>216</behaviorFlags>
+							<caption>Сбрасываем переменную отхила</caption>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<period>
+								<compiledString>FQUAAAABAAAAEQAAAFNURVAAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+								<returnType>float</returnType>
+								<sString>cSTEP</sString>
+							</period>
+							<providerName></providerName>
+							<scaleMode>ScaleIsCount</scaleMode>
+							<spell href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" id="4281A957-7534-4924-B471-67A7A8C05B40">
+								<Spell>
+									<applicators>
+										<Item href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" id="9D864D44-BE04-47A2-AD7F-3595780A1C0E">
+											<PermanentStatModApplicator>
+												<applyTarget>AbilityOwner</applyTarget>
+												<caption>Снова можем хилиться</caption>
+												<customApplyType>None</customApplyType>
+												<enabled>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</enabled>
+												<formulaName></formulaName>
+												<LoggingEvent>-1</LoggingEvent>
+												<modifier>
+													<addValue>
+														<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+														<returnType>float</returnType>
+														<sString>0</sString>
+													</addValue>
+													<multValue>
+														<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+														<returnType>float</returnType>
+														<sString>0</sString>
+													</multValue>
+													<stat>Life</stat>
+													<topModifier>false</topModifier>
+													<variable>G314_DamageDealt</variable>
+												</modifier>
+												<providerName></providerName>
+											</PermanentStatModApplicator>
+										</Item>
+									</applicators>
+									<dispatch href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" id="3040BCD9-B85E-433F-A410-CBA00E14A4DB">
+										<DispatchImmediate>
+											<alwaysApply>false</alwaysApply>
+											<applyEffect>
+												<Item href="" />
+												<Item href="" />
+											</applyEffect>
+											<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+											<applyEffectOrientation>Default</applyEffectOrientation>
+											<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+											<dieAfterApply>true</dieAfterApply>
+											<dispatchEffect>
+												<Item href="" />
+												<Item href="" />
+											</dispatchEffect>
+											<flags>0</flags>
+											<instantApply>true</instantApply>
+										</DispatchImmediate>
+									</dispatch>
+								</Spell>
+							</spell>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<startOffset>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>0.0f</sString>
+							</startOffset>
+							<targetSelector href="" />
+						</SpellPeriodicallyApplicator>
+					</Item>
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Статус исцеления от урона</caption>
+				<customCounter>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</customCounter>
+				<customProgress>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</customProgress>
+				<description textref="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT_5d33cddb19e44911afde4ed42d73db00_description.txt" />
+				<dispellPriority>Medium</dispellPriority>
+				<effect>
+					<Item href="/Effects/Buffs/Rage/Bloody.EFFT" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flags>0</flags>
+				<formulaName></formulaName>
+				<image href="/UI/Styles/Icons/Talents/_314.ITEX" />
+				<lifeTime>
+					<compiledString>FRIAAAABAAAAHgAAAExpZmVzdGVhbER1cmF0aW9uAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+					<returnType>float</returnType>
+					<sString>cLifestealDuration</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<name textref="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT_5d33cddb19e44911afde4ed42d73db00_name.txt" />
+				<power>0</power>
+				<providerName></providerName>
+				<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+				<stackCount>0</stackCount>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statusPosition>0</statusPosition>
+				<stopBehaviour>StopByTime</stopBehaviour>
+				<unstackableWith href="" />
+			</StatusApplicator>
+		</Item>
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G314: Кровавый штурм</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" id="F22F18C9-3E19-4C4F-ACDB-6B4566482D16">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" id="A3737512-36F1-40C1-AFAD-408276289620">
+					<UnitConstant>
+						<name>Add_Life</name>
+						<var>
+							<compiledString>FRMAAAACAAAAIgAAADwAAABUNl9TdGF0AExpZmVCdWRnZXQAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgIAAAAi1UQiwKLTRCLUFDdXfj/0txN+Nld9NlF9IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT6_Stat * cLifeBudget</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Vampiric3_Satanic/const_G314_Cooldown" />
+				<Item href="/Items/Talents/TalentKits/Vampiric3_Satanic/const_LifestealDuration" />
+				<Item href="/Items/Talents/TalentKits/Vampiric3_Satanic/const_LifestealPercent" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQ4AAAABAAAAGgAAAEczMTRfQ29vbGRvd24AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cG314_Cooldown</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" id="E4266937-B92B-4032-BCE2-3BDBA9BE7687">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>98578</flags>
+	<forceBonus>31.31</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_314.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>5</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" id="7EDC2A2B-E7A1-46C1-A732-97A6921438F9">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Life</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9MaWZlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Life</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" id="93A625D8-A500-4E06-83A6-9FCFB7BC7E85">
+			<FlagsApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Запрет использовать без остальных талантов кита</caption>
+				<consumables />
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FS0AAAAGAAAANAAAAE0AAACHAAAAoAAAANYAAADvAAAARzI5NQAAAABHMjk1AAAAAEczMDYAAAAARzMwNgAAAABHMzE0AAAAAEczMTQAVYvsg+wcaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgIAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hckPhKcAAABoEAAAAItVCIsCi00Ii5CoAQAA/9KFwHQqaBgAAACLRQiLEItNCIuCqAEAAP/QiUX0i030ixGLTfSLQgT/0IhF8+sExkXzAA+2TfOFyXRYaCAAAACLVQiLAotNCIuQqAEAAP/ShcB0KmgoAAAAi0UIixCLTQiLgqgBAAD/0IlF7ItN7IsRi03si0IE/9CIRevrBMZF6wAPtk3rhcl0CcdF5AAAAADrB8dF5AEAAACKReSL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>!tal("G295") || !tal("G306") || !tal("G314")</sString>
+				</enabled>
+				<flag>1024</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents>
+					<Item href="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT" />
+				</talents>
+				<useListAs>ListAsRule</useListAs>
+			</FlagsApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G314</persistentId>
+	<prerequisiteTalents />
+	<rarity>outstanding</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G314_Aura_LifeDrain.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>Life</stat>
+			<values>
+				<Item>810</Item>
+				<Item>870</Item>
+				<Item>930</Item>
+				<Item>990</Item>
+				<Item>1050</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>0</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

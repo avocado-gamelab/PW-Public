@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Vampire.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Vampire_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Vampire_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Vampire.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Vampire_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Vampire_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Vampire/Duel_Asp.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Vampire/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Vampire/Duel_Str.TALENTSET" Count="1" />
@@ -42,8 +42,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Vampire/Ability_A1u.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Vampire/Ability_A1u.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Vampire/Ability_A1u.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Vampire/Ability_A1u.TALENT" id="D87E2BDA-5F21-4A49-9F73-FC40A15C6EC6">
 			<ConditionFormula>
@@ -62,6 +62,7 @@
 			<vars>
 				<Item href="/Items/Talents/Class/Vampire/const_A1u_Damage" />
 				<Item href="/Items/Talents/Class/Vampire/const_A1u_BonusHealOnKill" />
+				<Item href="/Items/Talents/Class/Vampire/const_A1_SUP_BonusDamagePercent" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -83,7 +84,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>0</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Vampire/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
 	<BackLink DBID="/Items/Talents/Class/Ratcatcher/status_A0_PowerOfMany.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Ratcatcher/Ability2.TALENT" Count="3" />
+	<BackLink DBID="/Items/Talents/Class/Ratcatcher/Ability_A2.TALENT" Count="3" />
 	<BackLink DBID="/Items/Talents/Class/Ratcatcher/status_A0_HeroPoM.APLR" Count="3" />
 	<applicators>
 		<Item href="/Items/Talents/Class/Ratcatcher/status_A0_MasterPoM.APLR" id="A62AC1D9-7CF0-4822-936E-C087219B1574">
@@ -154,6 +154,53 @@
 					<Item href="" />
 				</effect>
 				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FS4AAAADAAAANQAAAE4AAABuAAAAUmF0Y2F0Y2hlcl9BMAAAAFJhdGNhdGNoZXJfQTAAAABCb251c19EZWZlbmNlAFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdDdoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTQxRi1UIUmggAAAAi0X8ixCLTfyLQlD/0Nld+OsF2e7ZXfjZRfiL5V3DAAAAAA==</compiledString>
+						<returnType>float</returnType>
+						<sString>talconstNoCheck("Ratcatcher_A0","Bonus_Defence") </sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Stamina</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>false</sString>
+				</startCondition>
+				<statModName></statModName>
+			</StatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Ratcatcher/status_A0_MasterPoM.APLR" id="E3C61DBF-EBC9-4A77-BF06-41093F7A924E">
+			<StatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>-- Даем волю за суммона</caption>
+				<constraint>None</constraint>
+				<dontUpdate>false</dontUpdate>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
 					<compiledString></compiledString>
 					<returnType>bool</returnType>
 					<sString>true</sString>
@@ -167,24 +214,24 @@
 				<LoggingEvent>-1</LoggingEvent>
 				<modifier>
 					<addValue>
-						<compiledString>FS4AAAADAAAANQAAAE4AAABuAAAAUmF0Y2F0Y2hlcl9BMAAAAFJhdGNhdGNoZXJfQTAAAABCb251c19TdGFtaW5hAFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdDdoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTQxRi1UIUmggAAAAi0X8ixCLTfyLQlD/0Nld+OsF2e7ZXfjZRfiL5V3DAAAAAA==</compiledString>
+						<compiledString>FS4AAAADAAAANQAAAE4AAABuAAAAUmF0Y2F0Y2hlcl9BMAAAAFJhdGNhdGNoZXJfQTAAAABCb251c19EZWZlbmNlAFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdDdoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTQxRi1UIUmggAAAAi0X8ixCLTfyLQlD/0Nld+OsF2e7ZXfjZRfiL5V3DAAAAAA==</compiledString>
 						<returnType>float</returnType>
-						<sString>talconstNoCheck("Ratcatcher_A0","Bonus_Stamina") </sString>
+						<sString>talconstNoCheck("Ratcatcher_A0","Bonus_Defence") </sString>
 					</addValue>
 					<multValue>
 						<compiledString></compiledString>
 						<returnType>float</returnType>
 						<sString>1.0f</sString>
 					</multValue>
-					<stat>Stamina</stat>
+					<stat>Will</stat>
 					<topModifier>false</topModifier>
 					<variable></variable>
 				</modifier>
 				<providerName></providerName>
 				<startCondition>
-					<compiledString></compiledString>
+					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
 					<returnType>bool</returnType>
-					<sString>true</sString>
+					<sString>false</sString>
 				</startCondition>
 				<statModName></statModName>
 			</StatModApplicator>

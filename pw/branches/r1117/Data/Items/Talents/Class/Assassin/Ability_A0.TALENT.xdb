@@ -2,15 +2,18 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Assassin_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Assassin_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Duel.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Elite_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Epic_Str.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Assassin_Mighty.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Assassin.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Assassin_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Assassin.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A0_SUP.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A0_SUP_2.TALENT" Count="1" />
+	<BackLink DBID="/Test/Talents/Assassin/New_SUP.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A3.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A3_2.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -33,7 +36,7 @@
 	<askId>0</askId>
 	<autoTargetSelector href="" />
 	<budget>-1</budget>
-	<caption>А0. Инстинкт убийцы</caption>
+	<caption>А0. Верная смерть</caption>
 	<castAllowRange>
 		<compiledString></compiledString>
 		<returnType>float</returnType>
@@ -41,8 +44,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Assassin/Ability_A0.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Assassin/Ability_A0.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas />
 	<conflictingTalents />
 	<constants href="/Items/Talents/Class/Assassin/Ability_A0.TALENT" id="CE2A02EB-0104-4C8D-ADF3-D8016979572B">
@@ -68,6 +71,35 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/Assassin/const_A0_PoisonDelay" />
+				<Item href="/Items/Talents/Class/Assassin/const_A0_PoisonDamagePercent" />
+				<Item href="/Items/Talents/Class/Assassin/const_A0_AdditionalPoisonDamagePerStackPercent" />
+				<Item href="/Items/Talents/Class/Assassin/const_A0_PoisonDamageToMonsterMultiplier" />
+				<Item href="/Items/Talents/Class/Assassin/Ability_A0.TALENT" id="F084593C-F32F-4222-9A66-5D466F47B174">
+					<UnitConstant>
+						<name>PoisonDamage</name>
+						<var>
+							<compiledString>FRcAAAADAAAARQAAAFIAAABrAAAAQTBfUG9pc29uRGFtYWdlUGVyY2VudABVi+yD7BSLRQiLEItNCIuCAAEAAP/Qi00IixGLTQiLggQBAADdXfj/0NxF+Nw1gQAAAItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d8P/Q3E3w3A15AAAA2V3s2UXsi+VdwwAAAEDheoQ/AAAAAAAAAEA=</compiledString>
+							<returnType>float</returnType>
+							<sString>(sDamageMin + sDamageMax) / 2 * cA0_PoisonDamagePercent * 0.01f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Assassin/const_A0_TotalDamage" />
+				<Item href="/Items/Talents/Class/Assassin/Ability_A0.TALENT" id="470C50D4-1D09-44AC-BE06-FA98F7DE1D32">
+					<UnitConstant>
+						<name>PoisonCondition</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>true</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Assassin/const_A4_IncreaseAdditionalPoisonDamagePerStackPercent" />
+				<Item href="/Items/Talents/Class/Assassin/const_A0_SUP_2_IncreasePoisonDamage" />
+				<Item href="/Items/Talents/Class/Assassin/const_A0_PoisonCounter" />
+				<Item href="/Items/Talents/Class/Assassin/const_A0_BasePoisonDamage" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -89,7 +121,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Assassin/A0.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -194,6 +226,136 @@
 				<useAbilityCooldown>false</useAbilityCooldown>
 				<useAbilityOwnerMana>false</useAbilityOwnerMana>
 			</TriggerApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Assassin/Ability_A0.TALENT" id="3832BA10-36EB-4835-86E6-E8F9536A399E">
+			<AbilityUpgradeApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Class/Assassin/appl_A0_Poison.APLR" />
+				</applicators>
+				<applyCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</applyCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>Яд от автоатаки</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flags>0</flags>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<persistentApplicators />
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents />
+				<targetAbility>BaseAttack</targetAbility>
+				<useListAs>ListAsRule</useListAs>
+			</AbilityUpgradeApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Assassin/Ability_A0.TALENT" id="EE5A2286-AC70-441D-8E37-C9D6BB5E60A2">
+			<AbilityUpgradeApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Class/Assassin/appl_A0_PoisonWithoutAddDamage.APLR" />
+				</applicators>
+				<applyCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</applyCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>144</behaviorFlags>
+				<caption>Яд от сюрикена (без стака урона, для триггера метки)</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FR0AAAACAAAAJAAAAD0AAABBc3Nhc3Npbl9BMXUAAAAAQXNzYXNzaW5fQTF1AFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAikX7i+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Assassin_A1u")</sString>
+				</enabled>
+				<flags>0</flags>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<persistentApplicators />
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents>
+					<Item href="/Items/Talents/Class/Assassin/Ability_A1.TALENT" />
+				</talents>
+				<targetAbility>TalentFromList</targetAbility>
+				<useListAs>ListAsRule</useListAs>
+			</AbilityUpgradeApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Assassin/Ability_A0.TALENT" id="F0CABEA5-0953-4584-B583-847299280A47">
+			<AbilityUpgradeApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Class/Assassin/appl_A0_PoisonWithoutAddDamage.APLR" />
+				</applicators>
+				<applyCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</applyCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>144</behaviorFlags>
+				<caption>Яд от прыжка (без стака урона, для триггера метки)</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FR0AAAACAAAAJAAAAD0AAABBc3Nhc3Npbl9BNHUAAAAAQXNzYXNzaW5fQTR1AFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAikX7i+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Assassin_A4u")</sString>
+				</enabled>
+				<flags>0</flags>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<persistentApplicators />
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents>
+					<Item href="/Items/Talents/Class/Assassin/Ability_A4.TALENT" />
+				</talents>
+				<targetAbility>TalentFromList</targetAbility>
+				<useListAs>ListAsRule</useListAs>
+			</AbilityUpgradeApplicator>
 		</Item>
 	</passiveApplicators>
 	<persistentId>Assassin_A0</persistentId>

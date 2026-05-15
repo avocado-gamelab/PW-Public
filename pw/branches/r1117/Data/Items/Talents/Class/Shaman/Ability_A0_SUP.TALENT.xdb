@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
-	<BackLink DBID="/Items/Talents/Shaman_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Shaman_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Shaman/Ability_A2_SUP.TALENT" Count="1" />
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Shaman/Ability_A3_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -32,8 +34,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Shaman/Ability_A0_SUP.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Shaman/Ability_A0_SUP.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Shaman/Ability_A0_SUP.TALENT" id="671E8CD6-756D-45BA-A85D-8F72065C3954">
 			<ConditionFormula>
@@ -48,11 +50,24 @@
 	</conditionFormulas>
 	<conflictingTalents>
 		<Item href="/Items/Talents/Class/Shaman/Ability_A2_SUP.TALENT" />
+		<Item href="/Items/Talents/Class/Shaman/Ability_A3_SUP.TALENT" />
 	</conflictingTalents>
 	<constants href="/Items/Talents/Class/Shaman/Ability_A0_SUP.TALENT" id="0A065CE5-06B2-4F19-BF65-2003BF239F65">
 		<UnitConstantsContainer>
 			<vars>
 				<Item href="/Items/Talents/Class/Shaman/const_A0_DefPercent" />
+				<Item href="/Items/Talents/Class/Shaman/const_A0_SUP_AddDefPercent" />
+				<Item href="/Items/Talents/Class/Shaman/const_A0_BaseDefPercent" />
+				<Item href="/Items/Talents/Class/Shaman/Ability_A0_SUP.TALENT" id="038B8D9B-4D06-47B9-A1F2-DA4BB47E7771">
+					<UnitConstant>
+						<name>SumDefPercent</name>
+						<var>
+							<compiledString>FSkAAAACAAAAOAAAAFIAAABBMF9CYXNlRGVmUGVyY2VudAAAAEEwX1NVUF9BZGREZWZQZXJjZW50AFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoFAAAAItVEIsCi00Qi1BQ3V34/9LcRfjZXfTZRfSL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cA0_BaseDefPercent + cA0_SUP_AddDefPercent</sString>
+						</var>
+					</UnitConstant>
+				</Item>
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -74,7 +89,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>22.7</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Shaman/A0_SUP.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

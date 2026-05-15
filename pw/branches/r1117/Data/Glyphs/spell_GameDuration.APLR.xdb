@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SpellApplicator>
+	<BackLink DBID="/Glyphs/PrimeRune.GLPH" Count="1" />
+	<BackLink DBID="/Heroes/Highlander/_.HROB" Count="3" />
+	<BackLink DBID="/Heroes/status_TowerMultiplayerDamage.APLR" Count="1" />
+	<applyTarget>ApplicatorTarget</applyTarget>
+	<caption>спелл в гз</caption>
+	<enabled>
+		<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<LoggingEvent>-1</LoggingEvent>
+	<providerName></providerName>
+	<spell href="/Glyphs/spell_GameDuration.APLR" id="4009735D-5191-4806-8FCB-74C7269394CB">
+		<Spell>
+			<applicators>
+				<Item href="/Glyphs/spell_GameDuration.APLR" id="DB5AF4D4-092C-4BCA-BFCB-7CBD17AD627B">
+					<PermanentStatModApplicator>
+						<applyTarget>AbilityOwner</applyTarget>
+						<caption>сколько времени не подскажете</caption>
+						<customApplyType>None</customApplyType>
+						<enabled>
+							<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</enabled>
+						<formulaName>DayDuration1</formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<modifier>
+							<addValue>
+								<compiledString>FRUAAAACAAAAGgAAAC8AAABUYXJnZXQAAEdhbWVEdXJhdGlvbgBVi+xRaAAAAACLRRCLEItNEItCTP/QiUX8aAgAAACLTfyLEYtN/IuCiAEAAP/Qi+Vdww==</compiledString>
+								<returnType>float</returnType>
+								<sString>$ApplTarget-&gt;GetVariable("GameDuration")</sString>
+							</addValue>
+							<multValue>
+								<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+								<returnType>float</returnType>
+								<sString>0.0f</sString>
+							</multValue>
+							<stat>Life</stat>
+							<topModifier>false</topModifier>
+							<variable>GameDuration</variable>
+						</modifier>
+						<providerName></providerName>
+					</PermanentStatModApplicator>
+				</Item>
+			</applicators>
+			<dispatch href="/Glyphs/spell_GameDuration.APLR" id="48C78E5F-507E-42C0-B02B-2C3C2BF17A7D">
+				<DispatchImmediate>
+					<alwaysApply>false</alwaysApply>
+					<applyEffect>
+						<Item href="" />
+						<Item href="" />
+					</applyEffect>
+					<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+					<applyEffectOrientation>Default</applyEffectOrientation>
+					<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+					<dieAfterApply>true</dieAfterApply>
+					<dispatchEffect>
+						<Item href="" />
+						<Item href="" />
+					</dispatchEffect>
+					<flags>0</flags>
+					<instantApply>true</instantApply>
+				</DispatchImmediate>
+			</dispatch>
+		</Spell>
+	</spell>
+	<spellTarget>ApplicatorTarget</spellTarget>
+	<targetSelector href="/Glyphs/spell_GameDuration.APLR" id="12CC37CC-DCB5-494A-BA88-2B82AC6D74D1">
+		<MainBuildingTargetSelector />
+	</targetSelector>
+</SpellApplicator>

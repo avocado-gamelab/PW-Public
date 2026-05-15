@@ -1,0 +1,1226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Items/Talents/Builds/Default/Faceless_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Faceless/Ability_A1.TALENT" Count="1" />
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Faceless/Ability_A4.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Faceless/A1_RefreshCD.APLR" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="/Effects/UI/AOESelection/CorridorNarrow.MTRL" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString>FQkAAAACAAAAFgAAACkAAABBMV9XaWR0aABVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcDTcAAADZXfzZRfyL5V3DAAAAAAAA+D8=</compiledString>
+		<returnType>float</returnType>
+		<sString>cA1_Width*1.5</sString>
+	</aoeSize>
+	<aoeType>CorridorMax</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="8F0EA3E6-B82D-48FD-8344-EF1A25204F3D">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>выбратьточку на макс расстоянии</caption>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="D8D61E3A-1852-4116-BC46-E9A25CDF63B0">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="A858C084-8751-44F6-B0B3-21D99DD3C4DD">
+								<WaitForSpellApplicator>
+									<applyTarget>AbilityOwner</applyTarget>
+									<behaviorFlags>144</behaviorFlags>
+									<behaviour>4</behaviour>
+									<caption>кинуть отскакивающий кинжал</caption>
+									<dispatchSource href="" />
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<firstTargetToHit href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="9B7A95BD-09EA-4B57-A56B-E1AA1DBB7245">
+										<ComparingTargetSelector>
+											<referenceValue>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>0.0f</sString>
+											</referenceValue>
+											<targetSelector href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="0673884A-383F-4FAB-91CB-BC57D4BFD59C">
+												<ConditionTargetSelector>
+													<condition>
+														<compiledString>FRAAAAACAAAAFQAAACsAAABJZ25vcmFibGVUYXJnZXQAVYvsUWgAAAAAi0UMixCLTQyLgogBAAD/0NwdTQAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+														<returnType>bool</returnType>
+														<sString>receiver.vIgnorableTarget == 0</sString>
+													</condition>
+													<flags>0</flags>
+													<mode>Normal</mode>
+													<targetSelector href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="7B13D6D8-24BE-4E1C-AFE1-1255BC722DB3">
+														<CapsuleTargetSelector>
+															<cutoffFirstSegment>true</cutoffFirstSegment>
+															<flags>0</flags>
+															<mode>Normal</mode>
+															<range>
+																<compiledString>FQkAAAACAAAAFgAAACkAAABBMV9XaWR0aABVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcDTcAAADZXfzZRfyL5V3DAAAAAAAA4D8=</compiledString>
+																<returnType>float</returnType>
+																<sString>cA1_Width * 0.5f</sString>
+															</range>
+															<rangeFromOwner>
+																<compiledString>FQkAAAABAAAAFQAAAEExX1JhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+																<returnType>float</returnType>
+																<sString>cA1_Range</sString>
+															</rangeFromOwner>
+															<segmentBegin>PreviousPosition</segmentBegin>
+															<segmentDirectionOffset>0</segmentDirectionOffset>
+															<segmentEnd>CurrentPosition</segmentEnd>
+															<segmentEndTargetSelector href="" />
+															<targetFilter>538705983</targetFilter>
+														</CapsuleTargetSelector>
+													</targetSelector>
+												</ConditionTargetSelector>
+											</targetSelector>
+											<valueToCompare>
+												<compiledString>FQAAAAAAAAEAugAAAFWL7IPsEI1F+FCLTQyLEYtNDIuCjAEAAP/QUI1N8FGLVQiLAotNCIuQjAEAAP/SUOgHAAAAg8QIi+Vdw1WL7IPsFItFCNlABItNDNhhBNld9NlF9FHZHCSLVQjZAotFDNgg2V3w2UXwUdkcJI1N+OhXAAAA2UX42E342UX82E383sHZXezZRexR2Rwk6AcAAACDxASL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6B7///+DxAjZXfzZRfyL5V3DVYvsUYlN/ItF/NlFCNkYi0382UUM2VkEi0X8i+VdwggA</compiledString>
+												<returnType>float</returnType>
+												<sString>d( sPos, rPos )</sString>
+											</valueToCompare>
+										</ComparingTargetSelector>
+									</firstTargetToHit>
+									<formulaName></formulaName>
+									<lifeTime>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+									<spell href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="F2ABAFE7-0A40-4802-A224-6B8F5908293A">
+										<Spell>
+											<applicators>
+												<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="DCD2719A-88CF-4F4C-ABE1-D28F181586C9">
+													<SpellApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>если попали в юнита</caption>
+														<enabled>
+															<compiledString>FQAAAAAAAAAAVYvsM8CDfQwAD5XAXcM=</compiledString>
+															<returnType>bool</returnType>
+															<sString>pSecond != 0</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<providerName></providerName>
+														<spell href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="897D2E01-FDC8-473E-93E1-A1D94AE749EE">
+															<Spell>
+																<applicators>
+																	<Item href="/Items/Talents/Class/Faceless/A4IncreaseCCB.APLR" />
+																	<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="8E503CDB-1B63-4709-B51B-4FEC188ED5BB">
+																		<StatusApplicator>
+																			<applicators>
+																				<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="E7B08E26-33B3-411A-B2CD-BB7398FBC34A">
+																					<TriggerApplicator>
+																						<actionsCount>
+																							<compiledString></compiledString>
+																							<returnType>int</returnType>
+																							<sString>1</sString>
+																						</actionsCount>
+																						<applyTarget>ApplicatorTarget</applyTarget>
+																						<behaviorFlags>216</behaviorFlags>
+																						<caption>Триггер на смерть цели</caption>
+																						<effect>
+																							<Item href="" />
+																							<Item href="" />
+																						</effect>
+																						<enabled>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</enabled>
+																						<formulaName></formulaName>
+																						<lifeTime>
+																							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+																							<returnType>float</returnType>
+																							<sString>-1</sString>
+																						</lifeTime>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<playAck>false</playAck>
+																						<processor href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="46711F5D-F61C-4771-8598-1E2BAC6E5965">
+																							<EventProcessorOnDeath>
+																								<applyTarget>ApplicatorTarget</applyTarget>
+																								<castSpellDelay>
+																									<compiledString></compiledString>
+																									<returnType>float</returnType>
+																									<sString>0.0f</sString>
+																								</castSpellDelay>
+																								<checkSender>0</checkSender>
+																								<objectFilter>2040319</objectFilter>
+																								<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+																								<spell href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="D493E080-477A-4E7A-A3DC-65099FBFB883">
+																									<Spell>
+																										<applicators>
+																											<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="4EB61A2D-BD18-4896-8C63-23986CBA62A9">
+																												<PermanentStatModApplicator>
+																													<applyTarget>AbilityOwner</applyTarget>
+																													<caption>He's dead Boss</caption>
+																													<customApplyType>None</customApplyType>
+																													<enabled>
+																														<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																														<returnType>bool</returnType>
+																														<sString>true</sString>
+																													</enabled>
+																													<formulaName></formulaName>
+																													<LoggingEvent>-1</LoggingEvent>
+																													<modifier>
+																														<addValue>
+																															<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																															<returnType>float</returnType>
+																															<sString>1.0f</sString>
+																														</addValue>
+																														<multValue>
+																															<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+																															<returnType>float</returnType>
+																															<sString>0.0f</sString>
+																														</multValue>
+																														<stat>Life</stat>
+																														<topModifier>false</topModifier>
+																														<variable>HesDeadBoss</variable>
+																													</modifier>
+																													<providerName></providerName>
+																												</PermanentStatModApplicator>
+																											</Item>
+																										</applicators>
+																										<dispatch href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="EE1974F9-232C-4ADC-B0BF-D04FF125C1AF">
+																											<DispatchImmediate>
+																												<alwaysApply>false</alwaysApply>
+																												<applyEffect>
+																													<Item href="" />
+																													<Item href="" />
+																												</applyEffect>
+																												<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																												<applyEffectOrientation>Default</applyEffectOrientation>
+																												<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																												<dieAfterApply>true</dieAfterApply>
+																												<dispatchEffect>
+																													<Item href="" />
+																													<Item href="" />
+																												</dispatchEffect>
+																												<flags>0</flags>
+																												<instantApply>true</instantApply>
+																											</DispatchImmediate>
+																										</dispatch>
+																									</Spell>
+																								</spell>
+																							</EventProcessorOnDeath>
+																						</processor>
+																						<providerName></providerName>
+																						<startCondition>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</startCondition>
+																						<useAbilityCooldown>false</useAbilityCooldown>
+																						<useAbilityOwnerMana>false</useAbilityOwnerMana>
+																					</TriggerApplicator>
+																				</Item>
+																			</applicators>
+																			<applyTarget>ApplicatorTarget</applyTarget>
+																			<behaviorFlags>218</behaviorFlags>
+																			<caption>Чек на смерть цели</caption>
+																			<customCounter>
+																				<compiledString></compiledString>
+																				<returnType>int</returnType>
+																				<sString>0</sString>
+																			</customCounter>
+																			<customProgress>
+																				<compiledString></compiledString>
+																				<returnType>float</returnType>
+																				<sString>-1.0</sString>
+																			</customProgress>
+																			<description textref="" />
+																			<dispellPriority>NonDispellable</dispellPriority>
+																			<effect>
+																				<Item href="" />
+																				<Item href="" />
+																			</effect>
+																			<enabled>
+																				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</enabled>
+																			<flags>5</flags>
+																			<formulaName></formulaName>
+																			<image href="" />
+																			<lifeTime>
+																				<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAPw==</compiledString>
+																				<returnType>float</returnType>
+																				<sString>0.5</sString>
+																			</lifeTime>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<name textref="" />
+																			<power>0</power>
+																			<providerName></providerName>
+																			<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+																			<stackCount>0</stackCount>
+																			<startCondition>
+																				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</startCondition>
+																			<statusPosition>0</statusPosition>
+																			<stopBehaviour>StopByTime</stopBehaviour>
+																			<unstackableWith href="" />
+																		</StatusApplicator>
+																	</Item>
+																	<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="23B6AF31-670A-4ABE-9827-4E05DF0B2E38">
+																		<TargetsCounterApplicator>
+																			<applyTarget>AbilityOwner</applyTarget>
+																			<behaviorFlags>216</behaviorFlags>
+																			<caption>Счетчик целей</caption>
+																			<effect>
+																				<Item href="" />
+																				<Item href="" />
+																			</effect>
+																			<enabled>
+																				<compiledString></compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</enabled>
+																			<formulaName>Faceless_A1_TargetsCounter</formulaName>
+																			<lifeTime>
+																				<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPg==</compiledString>
+																				<returnType>float</returnType>
+																				<sString>0.2</sString>
+																			</lifeTime>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<providerName></providerName>
+																			<startCondition>
+																				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</startCondition>
+																			<targetSelector href="/Items/Talents/Class/Faceless/A1_Cort.TGSL" />
+																		</TargetsCounterApplicator>
+																	</Item>
+																	<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="4BFDC48C-C20A-4027-88A1-59778F989AA3">
+																		<VariableProxyApplicator>
+																			<applicators>
+																				<Item>
+																					<applicator href="/Items/Talents/Class/Faceless/A1Damage.APLR" />
+																					<variableNames>
+																						<Item>isCritical</Item>
+																					</variableNames>
+																				</Item>
+																				<Item>
+																					<applicator href="/Items/Talents/Class/Faceless/A1u1Slow.APLR" />
+																					<variableNames />
+																				</Item>
+																				<Item>
+																					<applicator href="/Items/Talents/Class/Faceless/A2InstaKill.APLR" />
+																					<variableNames />
+																				</Item>
+																				<Item>
+																					<applicator href="/Items/Talents/Class/Faceless/A2CritHealing.APLR" />
+																					<variableNames />
+																				</Item>
+																				<Item>
+																					<applicator href="/Items/Talents/Class/Faceless/A2_SUP_WasCritical.APLR" />
+																					<variableNames />
+																				</Item>
+																				<Item>
+																					<applicator href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="5AB74FDF-888F-4C26-A5A3-DC549344B602">
+																						<PermanentStatModApplicator>
+																							<applyTarget>AbilityOwner</applyTarget>
+																							<caption>He's dead Boss</caption>
+																							<customApplyType>None</customApplyType>
+																							<enabled>
+																								<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																								<returnType>bool</returnType>
+																								<sString>false; //appl.parent.oTarget.Life == 0</sString>
+																							</enabled>
+																							<formulaName></formulaName>
+																							<LoggingEvent>-1</LoggingEvent>
+																							<modifier>
+																								<addValue>
+																									<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																									<returnType>float</returnType>
+																									<sString>1.0f</sString>
+																								</addValue>
+																								<multValue>
+																									<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+																									<returnType>float</returnType>
+																									<sString>0.0f</sString>
+																								</multValue>
+																								<stat>Life</stat>
+																								<topModifier>false</topModifier>
+																								<variable>HesDeadBoss</variable>
+																							</modifier>
+																							<providerName></providerName>
+																						</PermanentStatModApplicator>
+																					</applicator>
+																					<variableNames />
+																				</Item>
+																			</applicators>
+																			<applyTarget>ApplicatorTarget</applyTarget>
+																			<caption>урон и замедление</caption>
+																			<enabled>
+																				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</enabled>
+																			<formulaName></formulaName>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<providerName></providerName>
+																		</VariableProxyApplicator>
+																	</Item>
+																	<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="E7119F96-49C8-487A-8BD0-CBCDC46D8CBE">
+																		<SpellApplicator>
+																			<applyTarget>ApplicatorTarget</applyTarget>
+																			<caption>рикошет</caption>
+																			<enabled>
+																				<compiledString>FR4AAAACAAAAJQAAAD4AAABGYWNlbGVzc19BMXUyAAAARmFjZWxlc3NfQTF1MgBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AIpF+4vlXcM=</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>tal("Faceless_A1u2")</sString>
+																			</enabled>
+																			<formulaName></formulaName>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<providerName></providerName>
+																			<spell href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="51921EBD-98B3-43DF-B8AA-6FD0618F0E17">
+																				<Spell>
+																					<applicators>
+																						<Item href="/Items/Talents/Class/Faceless/A4IncreaseCCB.APLR" />
+																						<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="03DC6AB1-AF81-4BE1-8742-057AC757B274">
+																							<VariableProxyApplicator>
+																								<applicators>
+																									<Item>
+																										<applicator href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="00509738-8467-45F4-8A94-F3D033E13316">
+																											<DamageApplicator>
+																												<applyTarget>ApplicatorTarget</applyTarget>
+																												<cancelInvisibility>false</cancelInvisibility>
+																												<caption>урон</caption>
+																												<damage>
+																													<compiledString>FUMAAAAHAAAASgAAAGAAAAB0AAAAkwAAAK0AAADKAAAA4wAAAEhlc0RlYWRCb3NzAEExRGFtYWdlAAAAAEExRGFtYWdlAAAAAEExRGFtYWdlAAAAAEExRGFtYWdlSW5jUGVyY2VudABVi+yD7BxoAAAAAItFCIsQi00Ii4KIAQAA/9DcHQIBAADf4PbERHofi00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ/9DdXfjrY4tNDFGLVQhSaBgAAACLRRCLEItNEItCUP/Qi00MUYtVCFJoJAAAAItFEIsQi00Qi0JQ3V3w/9CLTQxRi1UIUmgwAAAAi0UQixCLTRCLQlDdXej/0NxN6Nw1+gAAANxF8N1d+N1F+Nld5NlF5IvlXcMAAAAAAABZQAAAAAAAAAAA</compiledString>
+																													<returnType>float</returnType>
+																													<sString>sender.vHesDeadBoss == 0? cA1Damage : cA1Damage + cA1Damage*cA1DamageIncPercent/100</sString>
+																												</damage>
+																												<damageMode>8</damageMode>
+																												<damageType>Energy</damageType>
+																												<enabled>
+																													<compiledString></compiledString>
+																													<returnType>bool</returnType>
+																													<sString>true</sString>
+																												</enabled>
+																												<formulaName></formulaName>
+																												<LoggingEvent>-1</LoggingEvent>
+																												<providerName></providerName>
+																												<timeLimiter>-1</timeLimiter>
+																												<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
+																											</DamageApplicator>
+																										</applicator>
+																										<variableNames>
+																											<Item>isCritical</Item>
+																										</variableNames>
+																									</Item>
+																									<Item>
+																										<applicator href="/Items/Talents/Class/Faceless/A1u1Slow.APLR" />
+																										<variableNames />
+																									</Item>
+																									<Item>
+																										<applicator href="/Items/Talents/Class/Faceless/A2InstaKill.APLR" />
+																										<variableNames />
+																									</Item>
+																									<Item>
+																										<applicator href="/Items/Talents/Class/Faceless/A2CritHealing.APLR" />
+																										<variableNames />
+																									</Item>
+																									<Item>
+																										<applicator href="/Items/Talents/Class/Faceless/A2_SUP_WasCritical.APLR" />
+																										<variableNames />
+																									</Item>
+																								</applicators>
+																								<applyTarget>ApplicatorTarget</applyTarget>
+																								<caption>урон и замедление</caption>
+																								<enabled>
+																									<compiledString></compiledString>
+																									<returnType>bool</returnType>
+																									<sString>true</sString>
+																								</enabled>
+																								<formulaName></formulaName>
+																								<LoggingEvent>-1</LoggingEvent>
+																								<providerName></providerName>
+																							</VariableProxyApplicator>
+																						</Item>
+																					</applicators>
+																					<dispatch href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="91823FAA-1B0A-4FD3-97C1-87CDFB3B4B54">
+																						<DispatchLinear>
+																							<aiming>Straight</aiming>
+																							<alwaysApply>false</alwaysApply>
+																							<applyEffect>
+																								<Item href="/Effects/Shots/Spear/_MagicHit.EFFT" />
+																								<Item href="" />
+																							</applyEffect>
+																							<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																							<applyEffectOrientation>Default</applyEffectOrientation>
+																							<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																							<dieAfterApply>true</dieAfterApply>
+																							<dispatchEffect>
+																								<Item href="/Effects/Shots/Dagger/_A.EFFT" />
+																								<Item href="/Effects/Shots/Dagger/_B.EFFT" />
+																							</dispatchEffect>
+																							<flags>1</flags>
+																							<flyMode>Linear</flyMode>
+																							<fromLocator>Body</fromLocator>
+																							<height>0</height>
+																							<killEffect>true</killEffect>
+																							<locatorOrient>false</locatorOrient>
+																							<maxDeviation>180</maxDeviation>
+																							<maxDistance>-1</maxDistance>
+																							<maxRise>0</maxRise>
+																							<minRise>0</minRise>
+																							<persistentApplicators />
+																							<speed>30</speed>
+																							<suspendTime>0</suspendTime>
+																							<toLocator>Body</toLocator>
+																						</DispatchLinear>
+																					</dispatch>
+																				</Spell>
+																			</spell>
+																			<spellTarget>ApplicatorTarget</spellTarget>
+																			<targetSelector href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="490DAF59-C575-44B3-85E3-6F0E959151F1">
+																				<ComparingTargetSelector>
+																					<referenceValue>
+																						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+																						<returnType>float</returnType>
+																						<sString>0</sString>
+																					</referenceValue>
+																					<targetSelector href="/Items/Talents/Class/Faceless/A1_Cort.TGSL" />
+																					<valueToCompare>
+																						<compiledString>FQAAAAAAAAEAugAAAFWL7IPsEI1F+FCLTQyLEYtNDIuCjAEAAP/QUI1N8FGLVQiLAotNCIuQjAEAAP/SUOgHAAAAg8QIi+Vdw1WL7IPsFItFCNlABItNDNhhBNld9NlF9FHZHCSLVQjZAotFDNgg2V3w2UXwUdkcJI1N+OhXAAAA2UX42E342UX82E383sHZXezZRexR2Rwk6AcAAACDxASL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6B7///+DxAjZXfzZRfyL5V3DVYvsUYlN/ItF/NlFCNkYi0382UUM2VkEi0X8i+VdwggA</compiledString>
+																						<returnType>float</returnType>
+																						<sString>d( sPos, rPos )</sString>
+																					</valueToCompare>
+																				</ComparingTargetSelector>
+																			</targetSelector>
+																		</SpellApplicator>
+																	</Item>
+																</applicators>
+																<dispatch href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="C5A62018-D38A-45A2-ACA5-713E4DB63952">
+																	<DispatchImmediate>
+																		<alwaysApply>false</alwaysApply>
+																		<applyEffect>
+																			<Item href="/Effects/Shots/Dagger/_3AimHit.EFFT" />
+																			<Item href="" />
+																		</applyEffect>
+																		<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																		<applyEffectOrientation>Default</applyEffectOrientation>
+																		<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																		<dieAfterApply>true</dieAfterApply>
+																		<dispatchEffect>
+																			<Item href="" />
+																			<Item href="" />
+																		</dispatchEffect>
+																		<flags>1</flags>
+																		<instantApply>true</instantApply>
+																	</DispatchImmediate>
+																</dispatch>
+															</Spell>
+														</spell>
+														<spellTarget>ApplicatorTarget</spellTarget>
+														<targetSelector href="" />
+													</SpellApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Items/Talents/Class/Faceless/A1Dagger.DSCH" />
+										</Spell>
+									</spell>
+									<spellTarget>ApplicatorTarget</spellTarget>
+									<startCondition>
+										<compiledString>FR4AAAACAAAAJQAAAD4AAABGYWNlbGVzc19BMXUxAAAARmFjZWxlc3NfQTF1MQBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+										<returnType>bool</returnType>
+										<sString>!tal("Faceless_A1u1")</sString>
+									</startCondition>
+								</WaitForSpellApplicator>
+							</Item>
+							<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="9A829C7D-C12B-49EE-BA63-303FD7627C81">
+								<WaitForSpellApplicator>
+									<applyTarget>AbilityOwner</applyTarget>
+									<behaviorFlags>144</behaviorFlags>
+									<behaviour>4</behaviour>
+									<caption>кинуть проникающий кинжал</caption>
+									<dispatchSource href="" />
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<firstTargetToHit href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="D2D6BA53-1118-4F7D-AD47-E0F60DEC13AA">
+										<ComparingTargetSelector>
+											<referenceValue>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>0.0f</sString>
+											</referenceValue>
+											<targetSelector href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="7A6B7FC8-B1C8-4D65-83CD-58F550FAE4A1">
+												<ConditionTargetSelector>
+													<condition>
+														<compiledString>FRAAAAACAAAAFQAAACsAAABJZ25vcmFibGVUYXJnZXQAVYvsUWgAAAAAi0UMixCLTQyLgogBAAD/0NwdTQAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+														<returnType>bool</returnType>
+														<sString>receiver.vIgnorableTarget == 0</sString>
+													</condition>
+													<flags>0</flags>
+													<mode>Normal</mode>
+													<targetSelector href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="5A9C1898-014B-41AD-9818-AC5B25DC42BB">
+														<CapsuleTargetSelector>
+															<cutoffFirstSegment>true</cutoffFirstSegment>
+															<flags>0</flags>
+															<mode>Normal</mode>
+															<range>
+																<compiledString>FQkAAAACAAAAFgAAACkAAABBMV9XaWR0aABVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcDTcAAADZXfzZRfyL5V3DAAAAAAAA4D8=</compiledString>
+																<returnType>float</returnType>
+																<sString>cA1_Width * 0.5f</sString>
+															</range>
+															<rangeFromOwner>
+																<compiledString>FQkAAAABAAAAFQAAAEExX1JhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+																<returnType>float</returnType>
+																<sString>cA1_Range</sString>
+															</rangeFromOwner>
+															<segmentBegin>PreviousPosition</segmentBegin>
+															<segmentDirectionOffset>0</segmentDirectionOffset>
+															<segmentEnd>CurrentPosition</segmentEnd>
+															<segmentEndTargetSelector href="" />
+															<targetFilter>538443779</targetFilter>
+														</CapsuleTargetSelector>
+													</targetSelector>
+												</ConditionTargetSelector>
+											</targetSelector>
+											<valueToCompare>
+												<compiledString>FQAAAAAAAAEAugAAAFWL7IPsEI1F+FCLTQyLEYtNDIuCjAEAAP/QUI1N8FGLVQiLAotNCIuQjAEAAP/SUOgHAAAAg8QIi+Vdw1WL7IPsFItFCNlABItNDNhhBNld9NlF9FHZHCSLVQjZAotFDNgg2V3w2UXwUdkcJI1N+OhXAAAA2UX42E342UX82E383sHZXezZRexR2Rwk6AcAAACDxASL5V3DVYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6B7///+DxAjZXfzZRfyL5V3DVYvsUYlN/ItF/NlFCNkYi0382UUM2VkEi0X8i+VdwggA</compiledString>
+												<returnType>float</returnType>
+												<sString>d( sPos, rPos )</sString>
+											</valueToCompare>
+										</ComparingTargetSelector>
+									</firstTargetToHit>
+									<formulaName></formulaName>
+									<lifeTime>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+									<spell href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="899DF10D-3238-4C58-B531-A837FC749B11">
+										<Spell>
+											<applicators>
+												<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="71670B74-9E98-4E51-9C93-2A3EE7D43234">
+													<SpellApplicator>
+														<applyTarget>ApplicatorTarget</applyTarget>
+														<caption>если попали в юнита</caption>
+														<enabled>
+															<compiledString>FQAAAAAAAAAAVYvsM8CDfQwAD5XAXcM=</compiledString>
+															<returnType>bool</returnType>
+															<sString>pSecond != 0</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<providerName></providerName>
+														<spell href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="491BD7D0-7A0B-4307-9B99-1DE0C7A674A7">
+															<Spell>
+																<applicators>
+																	<Item href="/Items/Talents/Class/Faceless/A4IncreaseCCB.APLR" />
+																	<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="085DE2C2-80F4-4880-993D-BA9E4E7D1323">
+																		<StatusApplicator>
+																			<applicators>
+																				<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="893CFFA5-C8B9-401B-9397-45ED0E07E1F0">
+																					<TriggerApplicator>
+																						<actionsCount>
+																							<compiledString></compiledString>
+																							<returnType>int</returnType>
+																							<sString>1</sString>
+																						</actionsCount>
+																						<applyTarget>ApplicatorTarget</applyTarget>
+																						<behaviorFlags>216</behaviorFlags>
+																						<caption>Триггер на смерть цели</caption>
+																						<effect>
+																							<Item href="" />
+																							<Item href="" />
+																						</effect>
+																						<enabled>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</enabled>
+																						<formulaName></formulaName>
+																						<lifeTime>
+																							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+																							<returnType>float</returnType>
+																							<sString>-1</sString>
+																						</lifeTime>
+																						<LoggingEvent>-1</LoggingEvent>
+																						<playAck>false</playAck>
+																						<processor href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="3FC485E4-5094-4AAB-8EBD-C721F5A24990">
+																							<EventProcessorOnDeath>
+																								<applyTarget>ApplicatorTarget</applyTarget>
+																								<castSpellDelay>
+																									<compiledString></compiledString>
+																									<returnType>float</returnType>
+																									<sString>0.0f</sString>
+																								</castSpellDelay>
+																								<checkSender>0</checkSender>
+																								<objectFilter>2040319</objectFilter>
+																								<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+																								<spell href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="BFFEC7B8-FAFC-474E-89AE-04DF47CB36E7">
+																									<Spell>
+																										<applicators>
+																											<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="B6075F8E-CA7D-4B91-911A-A64C66A97FA8">
+																												<PermanentStatModApplicator>
+																													<applyTarget>AbilityOwner</applyTarget>
+																													<caption>He's dead Boss</caption>
+																													<customApplyType>None</customApplyType>
+																													<enabled>
+																														<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																														<returnType>bool</returnType>
+																														<sString>true</sString>
+																													</enabled>
+																													<formulaName></formulaName>
+																													<LoggingEvent>-1</LoggingEvent>
+																													<modifier>
+																														<addValue>
+																															<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																															<returnType>float</returnType>
+																															<sString>1.0f</sString>
+																														</addValue>
+																														<multValue>
+																															<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+																															<returnType>float</returnType>
+																															<sString>0.0f</sString>
+																														</multValue>
+																														<stat>Life</stat>
+																														<topModifier>false</topModifier>
+																														<variable>HesDeadBoss</variable>
+																													</modifier>
+																													<providerName></providerName>
+																												</PermanentStatModApplicator>
+																											</Item>
+																										</applicators>
+																										<dispatch href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="FEB211CC-6959-4157-8217-5C86731DC146">
+																											<DispatchImmediate>
+																												<alwaysApply>false</alwaysApply>
+																												<applyEffect>
+																													<Item href="" />
+																													<Item href="" />
+																												</applyEffect>
+																												<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																												<applyEffectOrientation>Default</applyEffectOrientation>
+																												<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																												<dieAfterApply>true</dieAfterApply>
+																												<dispatchEffect>
+																													<Item href="" />
+																													<Item href="" />
+																												</dispatchEffect>
+																												<flags>0</flags>
+																												<instantApply>true</instantApply>
+																											</DispatchImmediate>
+																										</dispatch>
+																									</Spell>
+																								</spell>
+																							</EventProcessorOnDeath>
+																						</processor>
+																						<providerName></providerName>
+																						<startCondition>
+																							<compiledString></compiledString>
+																							<returnType>bool</returnType>
+																							<sString>true</sString>
+																						</startCondition>
+																						<useAbilityCooldown>false</useAbilityCooldown>
+																						<useAbilityOwnerMana>false</useAbilityOwnerMana>
+																					</TriggerApplicator>
+																				</Item>
+																			</applicators>
+																			<applyTarget>ApplicatorTarget</applyTarget>
+																			<behaviorFlags>218</behaviorFlags>
+																			<caption>Чек на смерть цели</caption>
+																			<customCounter>
+																				<compiledString></compiledString>
+																				<returnType>int</returnType>
+																				<sString>0</sString>
+																			</customCounter>
+																			<customProgress>
+																				<compiledString></compiledString>
+																				<returnType>float</returnType>
+																				<sString>-1.0</sString>
+																			</customProgress>
+																			<description textref="" />
+																			<dispellPriority>NonDispellable</dispellPriority>
+																			<effect>
+																				<Item href="" />
+																				<Item href="" />
+																			</effect>
+																			<enabled>
+																				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</enabled>
+																			<flags>5</flags>
+																			<formulaName></formulaName>
+																			<image href="" />
+																			<lifeTime>
+																				<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAPw==</compiledString>
+																				<returnType>float</returnType>
+																				<sString>0.5</sString>
+																			</lifeTime>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<name textref="" />
+																			<power>0</power>
+																			<providerName></providerName>
+																			<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+																			<stackCount>0</stackCount>
+																			<startCondition>
+																				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</startCondition>
+																			<statusPosition>0</statusPosition>
+																			<stopBehaviour>StopByTime</stopBehaviour>
+																			<unstackableWith href="" />
+																		</StatusApplicator>
+																	</Item>
+																	<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="19A9944C-D369-4DBD-A567-E62F9F270D67">
+																		<TargetsCounterApplicator>
+																			<applyTarget>AbilityOwner</applyTarget>
+																			<behaviorFlags>216</behaviorFlags>
+																			<caption>Счетчик целей</caption>
+																			<effect>
+																				<Item href="" />
+																				<Item href="" />
+																			</effect>
+																			<enabled>
+																				<compiledString></compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</enabled>
+																			<formulaName>Faceless_A1_TargetsCounter</formulaName>
+																			<lifeTime>
+																				<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPg==</compiledString>
+																				<returnType>float</returnType>
+																				<sString>0.2</sString>
+																			</lifeTime>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<providerName></providerName>
+																			<startCondition>
+																				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</startCondition>
+																			<targetSelector href="/Items/Talents/Class/Faceless/A1_Cort.TGSL" />
+																		</TargetsCounterApplicator>
+																	</Item>
+																	<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="97A5701B-C217-4DBF-A803-81AEEECF66D6">
+																		<VariableProxyApplicator>
+																			<applicators>
+																				<Item>
+																					<applicator href="/Items/Talents/Class/Faceless/A1Damage.APLR" />
+																					<variableNames>
+																						<Item>isCritical</Item>
+																					</variableNames>
+																				</Item>
+																				<Item>
+																					<applicator href="/Items/Talents/Class/Faceless/A1u1Slow.APLR" />
+																					<variableNames />
+																				</Item>
+																				<Item>
+																					<applicator href="/Items/Talents/Class/Faceless/A2InstaKill.APLR" />
+																					<variableNames />
+																				</Item>
+																				<Item>
+																					<applicator href="/Items/Talents/Class/Faceless/A2CritHealing.APLR" />
+																					<variableNames />
+																				</Item>
+																				<Item>
+																					<applicator href="/Items/Talents/Class/Faceless/A2_SUP_WasCritical.APLR" />
+																					<variableNames />
+																				</Item>
+																				<Item>
+																					<applicator href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="BD645D58-B06E-4784-8E09-2F63F467D42D">
+																						<PermanentStatModApplicator>
+																							<applyTarget>AbilityOwner</applyTarget>
+																							<caption>He's dead Boss</caption>
+																							<customApplyType>None</customApplyType>
+																							<enabled>
+																								<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																								<returnType>bool</returnType>
+																								<sString>false; //appl.parent.oTarget.Life == 0</sString>
+																							</enabled>
+																							<formulaName></formulaName>
+																							<LoggingEvent>-1</LoggingEvent>
+																							<modifier>
+																								<addValue>
+																									<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																									<returnType>float</returnType>
+																									<sString>1.0f</sString>
+																								</addValue>
+																								<multValue>
+																									<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+																									<returnType>float</returnType>
+																									<sString>0.0f</sString>
+																								</multValue>
+																								<stat>Life</stat>
+																								<topModifier>false</topModifier>
+																								<variable>HesDeadBoss</variable>
+																							</modifier>
+																							<providerName></providerName>
+																						</PermanentStatModApplicator>
+																					</applicator>
+																					<variableNames />
+																				</Item>
+																			</applicators>
+																			<applyTarget>ApplicatorTarget</applyTarget>
+																			<caption>урон и замедление</caption>
+																			<enabled>
+																				<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																				<returnType>bool</returnType>
+																				<sString>true</sString>
+																			</enabled>
+																			<formulaName></formulaName>
+																			<LoggingEvent>-1</LoggingEvent>
+																			<providerName></providerName>
+																		</VariableProxyApplicator>
+																	</Item>
+																</applicators>
+																<dispatch href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="41D4344D-7AB4-480F-9B0D-B562D80CA3A1">
+																	<DispatchImmediate>
+																		<alwaysApply>false</alwaysApply>
+																		<applyEffect>
+																			<Item href="/Effects/Shots/Dagger/_3AimHit.EFFT" />
+																			<Item href="" />
+																		</applyEffect>
+																		<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																		<applyEffectOrientation>Default</applyEffectOrientation>
+																		<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																		<dieAfterApply>true</dieAfterApply>
+																		<dispatchEffect>
+																			<Item href="" />
+																			<Item href="" />
+																		</dispatchEffect>
+																		<flags>1</flags>
+																		<instantApply>true</instantApply>
+																	</DispatchImmediate>
+																</dispatch>
+															</Spell>
+														</spell>
+														<spellTarget>ApplicatorTarget</spellTarget>
+														<targetSelector href="" />
+													</SpellApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Items/Talents/Class/Faceless/A1Dagger.DSCH" />
+										</Spell>
+									</spell>
+									<spellTarget>ApplicatorTarget</spellTarget>
+									<startCondition>
+										<compiledString>FR4AAAACAAAAJQAAAD4AAABGYWNlbGVzc19BMXUxAAAARmFjZWxlc3NfQTF1MQBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AIpF+4vlXcM=</compiledString>
+										<returnType>bool</returnType>
+										<sString>tal("Faceless_A1u1")</sString>
+									</startCondition>
+								</WaitForSpellApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="91D7F187-379F-4733-8F66-7F6EED6F3309">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="620D49D4-4735-425D-BF0C-A05448DE7737">
+					<PointTargetSelector>
+						<checkMinRange>true</checkMinRange>
+						<mode>RangeFromOwner</mode>
+						<offset>
+							<x>0</x>
+							<y>1</y>
+						</offset>
+						<paralleledTarget>false</paralleledTarget>
+						<range>
+							<compiledString>FQkAAAABAAAAFQAAAEExX1JhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cA1_Range</sString>
+						</range>
+						<targetSelector href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="B2E2CF67-2568-43F5-BD97-303B2847D689">
+							<SelectApplicatorTarget>
+								<applicatorIndex>0</applicatorIndex>
+								<applicatorName></applicatorName>
+								<namedApplicatorTarget>ApplicatorTarget</namedApplicatorTarget>
+								<selectTarget>ApplicatorTarget</selectTarget>
+							</SelectApplicatorTarget>
+						</targetSelector>
+						<traceMode>0</traceMode>
+					</PointTargetSelector>
+				</targetSelector>
+			</SpellApplicator>
+		</Item>
+	</applicators>
+	<askId>1</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>A1. Закаленное Лезвие тьмы</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="87AB307E-D5E1-4B9C-9D8C-CDEB484B1747">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR4AAAACAAAAJQAAAD4AAABGYWNlbGVzc19BMXUxAAAARmFjZWxlc3NfQTF1MQBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Faceless_A1u1") == false</sString>
+				</condition>
+				<name>Faceless_A1u1</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="9737FFEA-3F1F-4581-8546-CD308274C5F6">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR4AAAACAAAAJQAAAD4AAABGYWNlbGVzc19BMXUyAAAARmFjZWxlc3NfQTF1MgBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Faceless_A1u2") == false</sString>
+				</condition>
+				<name>Faceless_A1u2</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="ECB60C85-D407-44C1-A5B6-5B208CED9610">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSAAAAACAAAAJwAAAEAAAABGYWNlbGVzc19BMV9TVVAARmFjZWxlc3NfQTFfU1VQAFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZF+/fYG8CDwAGL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Faceless_A1_SUP") == false</sString>
+				</condition>
+				<name>Faceless_A1_SUP</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents>
+		<Item href="/Items/Talents/Class/Faceless/Ability_A1.TALENT" />
+	</conflictingTalents>
+	<constants href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="F6155041-3412-48C5-B04A-4A495DF4F66D">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="FBE461AE-4E44-43DC-99D9-464F874684FA">
+					<UnitConstant>
+						<name>A1Damage</name>
+						<var>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAADwQgAA8EM=</compiledString>
+							<returnType>float</returnType>
+							<sString>damageScale(sIntellect, 120, 480) </sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="4FF8B251-5558-4839-AD9C-ABAA06228127">
+					<UnitConstant>
+						<name>A1RicochetDamage</name>
+						<var>
+							<compiledString>FQoAAAADAAAAFQAAAB8AAABUAAAAVEVSUkJPTlVTAFWL7IPsDGoBUdkFeQAAANkcJFHZBXUAAADZHCRqAItFCIsQi00Ii4I0AQAA/9BR2RwkagGLTRCLEYtNEItCYP/Qi00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ3V34/9DcTfjZXfTZRfSL5V3DAABUQgAAyEM=</compiledString>
+							<returnType>float</returnType>
+							<sString>damageScale(sIntellect, 53, 400)*cTERRBONUS</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Faceless/const_A1_DecMoveSpeed" />
+				<Item href="/Items/Talents/Class/Faceless/const_A1_DamageInc" />
+				<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="202C9A57-52AB-4168-A6DA-2758AB7A4CAB">
+					<UnitConstant>
+						<name>A1_Width</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADAPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>1.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="13814604-BE96-4A08-8E22-3BC0457AFE34">
+					<UnitConstant>
+						<name>A1_Range</name>
+						<var>
+							<compiledString>FQsAAAACAAAAGAAAACsAAABSYW5nZV9Mb25nAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twFOQAAANld/NlF/IvlXcMAAAAAAAAQQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange_Long + 4</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Faceless/const_A2_HealthThresholdPercent" />
+				<Item href="/Items/Talents/Class/Faceless/const_A1_SUP_CDReductionPerKill" />
+				<Item href="/Items/Talents/Class/Faceless/const_A1_PierceDamagePercent" />
+				<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="88523A05-4BAA-48FC-B161-1D1196D562A6">
+					<UnitConstant>
+						<name>Slow_Duration2</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>6</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="C2A080A4-E2DC-4BED-9114-4B6B718841B0">
+					<UnitConstant>
+						<name>Slow_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>3</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADgQA==</compiledString>
+		<returnType>float</returnType>
+		<sString>7</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="8A1DD633-3970-4DB2-A69A-509380E83584">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>79</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Faceless/A1.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAC0Qg==</compiledString>
+		<returnType>float</returnType>
+		<sString>90</sString>
+	</manaCost>
+	<marker>doCast1</marker>
+	<microAI href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="8D4C137F-480F-42EA-B870-5EC066F79E43">
+		<TargetSelectorMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</condition>
+			<targetSelector href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="B7F396D4-CD08-4E18-B223-38C6D7AAABF3">
+				<ConvertTargetToLand>
+					<aggregateMode>First</aggregateMode>
+					<targetSelector href="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT" id="565B49D4-92B0-4918-BB9B-62FFF7EAF45C">
+						<AreaTargetSelector>
+							<absolutePosition>
+								<x>0</x>
+								<y>0</y>
+							</absolutePosition>
+							<flags>0</flags>
+							<mode>Normal</mode>
+							<range>
+								<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+								<returnType>float</returnType>
+								<sString>cRange_Long </sString>
+							</range>
+							<targetFilter>672137219</targetFilter>
+							<targetSelector href="" />
+						</AreaTargetSelector>
+					</targetSelector>
+				</ConvertTargetToLand>
+			</targetSelector>
+		</TargetSelectorMicroAI>
+	</microAI>
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>300</naftaCost>
+	<name textref="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT_name.txt" />
+	<node>ability1</node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/trigger_G766_RefreshAndNotify.APLR" />
+	</passiveApplicators>
+	<persistentId>Faceless_A1_ALT</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Class/Faceless/Ability_A1_ALT.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>16777216</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQkAAAABAAAAFQAAAEExX1JhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<returnType>float</returnType>
+		<sString>cA1_Range</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

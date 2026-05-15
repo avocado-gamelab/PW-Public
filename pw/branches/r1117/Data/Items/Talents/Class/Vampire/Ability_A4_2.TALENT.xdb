@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Vampire_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Vampire_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Vampire_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A4u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
 	<BackLink DBID="/Test/Talents/Vampire/Epic_Str_Ult2.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Vampire_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -64,14 +64,91 @@
 							<useListAs>ListAsRule</useListAs>
 						</FlagsApplicator>
 					</Item>
+					<Item href="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" id="059EB8BB-D89C-4738-9DC0-43E75439EB64">
+						<TriggerApplicator>
+							<actionsCount>
+								<compiledString></compiledString>
+								<returnType>int</returnType>
+								<sString>1</sString>
+							</actionsCount>
+							<applyTarget>AbilityOwner</applyTarget>
+							<behaviorFlags>216</behaviorFlags>
+							<caption>Триггер на свою смерть для сброса КД</caption>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString>FQkAAAABAAAAFQAAAEE0X0RlbGF5AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+								<returnType>float</returnType>
+								<sString>cA4_Delay</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<playAck>false</playAck>
+							<processor href="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" id="DF0647BB-E1C6-44A4-853A-74224AA64548">
+								<EventProcessorOnDeath>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<castSpellDelay>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</castSpellDelay>
+									<checkSender>0</checkSender>
+									<objectFilter>2040319</objectFilter>
+									<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+									<spell href="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" id="60C984FD-B849-4863-80E3-887DC9850638">
+										<Spell>
+											<applicators>
+												<Item href="/GameLogic/GeneralApplicators/RefreshThis.APLR" />
+											</applicators>
+											<dispatch href="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" id="11EF17D6-8FF0-41ED-8FB6-40909EBF8065">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+								</EventProcessorOnDeath>
+							</processor>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<useAbilityCooldown>false</useAbilityCooldown>
+							<useAbilityOwnerMana>false</useAbilityOwnerMana>
+						</TriggerApplicator>
+					</Item>
 				</applicatorsOnSelf>
 				<applyTarget>AbilityOwner</applyTarget>
-				<behaviorFlags>152</behaviorFlags>
+				<behaviorFlags>216</behaviorFlags>
 				<cancelOnDisable>false</cancelOnDisable>
 				<cancelOnInterrupt>true</cancelOnInterrupt>
 				<cancelSpell href="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" id="8F4C6FA3-7B98-49D4-9F38-3B4725BF5D18">
 					<Spell>
 						<applicators>
+							<Item href="/GameLogic/GeneralApplicators/RefreshThis.APLR" />
 							<Item href="/GameLogic/GeneralApplicators/EndOfAbility.APLR" />
 						</applicators>
 						<dispatch href="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" id="A24CC615-0290-44E1-A805-BE7DC7F90A93">
@@ -139,7 +216,68 @@
 					<returnType>bool</returnType>
 					<sString>true</sString>
 				</startCondition>
-				<startSpell href="" />
+				<startSpell href="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" id="044A52AA-34A0-4BA3-BA67-6532220B1781">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" id="A69BEADD-8892-4F8E-8506-0B3067770C8C">
+								<EyeApplicator>
+									<applyTarget>AbilityTarget</applyTarget>
+									<behaviorFlags>0</behaviorFlags>
+									<cancelObstacles>true</cancelObstacles>
+									<caption>Открываем туман войны вокруг цели, пока кастуем</caption>
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<eyeTarget>AbilityTarget</eyeTarget>
+									<flags>8</flags>
+									<formulaName></formulaName>
+									<lifeTime>
+										<compiledString>FQkAAAACAAAAFgAAACkAAABBNF9EZWxheQBVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcBTcAAADZXfzZRfyL5V3DAAAAAAAA4D8=</compiledString>
+										<returnType>float</returnType>
+										<sString>cA4_Delay + 0.5</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+									<startCondition>
+										<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</startCondition>
+									<visRange>
+										<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABAQA==</compiledString>
+										<returnType>float</returnType>
+										<sString>3</sString>
+									</visRange>
+								</EyeApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" id="BF0E9593-CA94-469A-AB44-6C04DF6116C9">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</startSpell>
 				<stopSpell href="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" id="69BD4855-DCC5-4BED-9D38-BE851A33B5E9">
 					<Spell>
 						<applicators>
@@ -213,6 +351,10 @@
 																				<variableNames>
 																					<Item>damageDealed</Item>
 																				</variableNames>
+																			</Item>
+																			<Item>
+																				<applicator href="/Items/Talents/Class/Vampire/appl_A0_SUP_SaveOverheal.APLR" />
+																				<variableNames />
 																			</Item>
 																			<Item>
 																				<applicator href="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" id="4FEDC819-F158-4708-BD1B-282074A85029">
@@ -356,9 +498,9 @@
 	<budget>-1</budget>
 	<caption>А4_2. Погребенный заживо</caption>
 	<castAllowRange>
-		<compiledString></compiledString>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAB6RA==</compiledString>
 		<returnType>float</returnType>
-		<sString>0.0f</sString>
+		<sString>1000</sString>
 	</castAllowRange>
 	<castLimitations>
 		<Item href="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" id="26EF1749-D6DD-4191-9D8D-D3957B115C3C">
@@ -381,20 +523,10 @@
 				<uiEvent href="/UI/Events/ErrorMessages/CastError_AlreadyTransformed.UIEV" />
 			</ConditionCastLimitation>
 		</Item>
-		<Item href="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" id="7D94A2FF-2A5E-4B2B-BE16-3C2DEFDC00B6">
-			<ConditionCastLimitation>
-				<condition>
-					<compiledString>FRgAAAACAAAAHQAAADYAAABWYW1waXJlX0E0AABWYW1waXJlX0E0dQBVi+xRaAAAAACLRQiLEItNCIuCqAEAAP/QhcB1ImgMAAAAi00IixGLTQiLgqgBAAD/0IXAdQnHRfwBAAAA6wfHRfwAAAAAikX8i+Vdww==</compiledString>
-					<returnType>bool</returnType>
-					<sString>!sender.GetTalent( "Vampire_A4" ) &amp;&amp; !sender.GetTalent( "Vampire_A4u" )</sString>
-				</condition>
-				<uiEvent href="" />
-			</ConditionCastLimitation>
-		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" id="8EFBF503-5DF1-45B7-9560-816A8AD93225">
 			<ConditionFormula>
@@ -447,6 +579,8 @@
 				</Item>
 				<Item href="/Items/Talents/Class/Vampire/const_A0_TerrainLifeCostModifier" />
 				<Item href="/Items/Talents/Class/Vampire/const_A4_2u_Damage" />
+				<Item href="/Items/Talents/Class/Vampire/const_A0_BaseLifeDrainPercent" />
+				<Item href="/Items/Talents/Class/Vampire/const_A0_SUP_AdditionalLifeDrainPercent" />
 				<Item href="/Items/Talents/Class/Vampire/const_A0_LifeDrainPercent" />
 				<Item href="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" id="E89924C7-CF9D-486C-A209-1BE8BF6ACD38">
 					<UnitConstant>
@@ -459,6 +593,8 @@
 					</UnitConstant>
 				</Item>
 				<Item href="/Items/Talents/Class/Vampire/A4_2_Delay" />
+				<Item href="/Items/Talents/Class/Vampire/const_A0_SUP_HealShieldConversionPercent" />
+				<Item href="/Items/Talents/Class/Vampire/const_A0_SUP_LifeDrainMultiplier" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -497,8 +633,8 @@
 			<instantApply>true</instantApply>
 		</DispatchImmediate>
 	</dispatch>
-	<flags>18467</flags>
-	<forceBonus>0</forceBonus>
+	<flags>18471</flags>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Vampire/A4_2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -521,7 +657,7 @@
 	<persistentId>Vampire_A4_2</persistentId>
 	<prerequisiteTalents />
 	<rarity>Class</rarity>
-	<requireLineOfSight>true</requireLineOfSight>
+	<requireLineOfSight>false</requireLineOfSight>
 	<shortDescription textref="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT_shortDescription.txt" />
 	<talentRollGroups>63</talentRollGroups>
 	<talentStats />

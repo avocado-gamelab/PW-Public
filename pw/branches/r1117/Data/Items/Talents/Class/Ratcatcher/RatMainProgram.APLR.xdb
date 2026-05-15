@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ProgramApplicator>
-	<BackLink DBID="/Items/Talents/Class/Ratcatcher/Ability3.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Ratcatcher/Ability_A3.TALENT" Count="1" />
 	<applicators>
 		<Item>
 			<applicator href="/Items/Talents/Class/Ratcatcher/RatMainProgram.APLR" id="8ADB23C7-EC6F-43AB-9711-064235B6A8A1">
@@ -586,6 +586,97 @@
 							</delay>
 							<stopCondition>
 								<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+								<returnType>bool</returnType>
+								<sString>0</sString>
+							</stopCondition>
+							<stopEvents>0</stopEvents>
+						</Item>
+						<Item>
+							<applicator href="/Items/Talents/Class/Ratcatcher/RatMainProgram.APLR" id="D9D2B748-E8E0-4E07-B0F7-282C5F4C1332">
+								<TriggerApplicator>
+									<actionsCount>
+										<compiledString></compiledString>
+										<returnType>int</returnType>
+										<sString>0</sString>
+									</actionsCount>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<behaviorFlags>0</behaviorFlags>
+									<caption>Неуязвима к способностям (бей атакой!)</caption>
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<lifeTime>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<playAck>false</playAck>
+									<processor href="/Items/Talents/Class/Ratcatcher/RatMainProgram.APLR" id="B99DDC96-8F5F-425C-BCCC-DC1082491D83">
+										<EventProcessorDamageTransformer>
+											<abilityFilter>
+												<abilitiesList />
+												<abilityCondition>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</abilityCondition>
+												<abilityCostMode>Any</abilityCostMode>
+												<exceptThis>false</exceptThis>
+												<flags>1073742014</flags>
+												<onlySingleTarget>false</onlySingleTarget>
+											</abilityFilter>
+											<add>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>0.0f</sString>
+											</add>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<checkSender>0</checkSender>
+											<damageTypeFilter>31</damageTypeFilter>
+											<flags>0</flags>
+											<matchTargetInverted>false</matchTargetInverted>
+											<mul>
+												<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+												<returnType>float</returnType>
+												<sString>0.0f</sString>
+											</mul>
+											<objectFilter>2040319</objectFilter>
+											<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+											<spell href="" />
+											<treatDelegatedByDelegator>false</treatDelegatedByDelegator>
+										</EventProcessorDamageTransformer>
+									</processor>
+									<providerName></providerName>
+									<startCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</startCondition>
+									<useAbilityCooldown>false</useAbilityCooldown>
+									<useAbilityOwnerMana>false</useAbilityOwnerMana>
+								</TriggerApplicator>
+							</applicator>
+							<continueCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>0</sString>
+							</continueCondition>
+							<continueEvents>1</continueEvents>
+							<delay>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</delay>
+							<stopCondition>
+								<compiledString></compiledString>
 								<returnType>bool</returnType>
 								<sString>0</sString>
 							</stopCondition>

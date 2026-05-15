@@ -29,6 +29,12 @@
 	<aoeType>None</aoeType>
 	<applicators>
 		<Item href="/Buildings/DefaultStats/MainBuildingAutoAttack.APLR" />
+		<Item href="/Buildings/DefaultStats/DefaultMainAttack.ATCK" id="B5F71A35-22F9-452F-8E9E-CBBFF7728CF8">
+			<DamageApplicator parent="/Buildings/DefaultStats/MainBuildingAutoAttack.APLR">
+				<damageType>Energy</damageType>
+				<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
+			</DamageApplicator>
+		</Item>
 		<Item href="/Buildings/DefaultStats/StackTowerDamage.APLR" />
 	</applicators>
 	<autoTargetSelector href="" />
@@ -82,7 +88,7 @@
 			<maxRise>0</maxRise>
 			<minRise>0</minRise>
 			<persistentApplicators />
-			<speed>15</speed>
+			<speed>30</speed>
 			<suspendTime>0</suspendTime>
 			<toLocator>Body</toLocator>
 		</DispatchLinear>
@@ -441,6 +447,8 @@
 				<targetSelector href="" />
 			</SpellPeriodicallyApplicator>
 		</Item>
+		<Item href="/Buildings/DefaultStats/Backdoor_Protection.APLR" />
+		<Item href="/Buildings/DefaultStats/Damage_Multiplier.APLR" />
 	</passiveApplicators>
 	<requireLineOfSight>true</requireLineOfSight>
 	<shortDescription textref="" />

@@ -6,7 +6,7 @@
 	<BackLink DBID="/Maps/Multiplayer/MOBA/Shops/Mod9_N.SHOP" Count="1" />
 	<BackLink DBID="/Maps/PvE/Series/Episode1/buildings/Shop.SHOP" Count="1" />
 	<BackLink DBID="/Maps/Test/BalanseTest/Shops/_N.SHOP" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G725_StrOrInt.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G725_StrOrInt.TALENT" Count="1" />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
 		<compiledString></compiledString>
@@ -77,6 +77,8 @@
 				<damage>
 					<compiledString>FQcAAAABAAAAEwAAAERhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
 				</damage>
+				<damageType>Pure</damageType>
+				<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed.UIEV" />
 			</DamageApplicator>
 		</Item>
 	</applicators>
@@ -99,9 +101,9 @@
 					<UnitConstant>
 						<name>Damage</name>
 						<var>
-							<compiledString>FR8AAAAFAAAAJgAAAD8AAAB9AAAAkAAAANAAAABHNzI1AAAAAEc3MjUAAAAARzcyNV9BZGREYW1hZ2UAVYvsg+wUaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgIAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0JYtVDFKLRQhQaBAAAACLTRCLEYtNEItCUP/Q3DX9AAAA3V3w6wXZ7t1d8ItNCIsRi00Ii4I0AQAA/9BR2Rwki00IixGLTQiLgjABAAD/0FHZHCToOgAAAIPECNwN7QAAANno3EXw3snZXezZReyL5V3DAAAAAAAA8D8AAAAAAAD4PwAAAAAAAAAAAAAAAAAAWUBVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+							<compiledString>FSsAAAAGAAAAMgAAAEsAAACJAAAAnAAAANwAAACzAQAATGlmZUJ1ZGdldAAARzcyNQAAAABHNzI1AAAAAEc3MjVfQWRkRGFtYWdlAFWL7IPsIGgMAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoFAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdCWLVQxSi0UIUGgcAAAAi00QixGLTRCLQlD/0Nw14AEAAN1d8OsF2e7dXfCLTQiLEYtNCItCBP/QUdkcJItNCIsRi00IiwL/0FHZHCToGAEAAIPECItNDFGLVQhSaAAAAACLRRCLEItNEItCUN1d6P/Q3H3o2V3k2UXkUdkcJItNCIsRi00Ii4I4AQAA/9BR2Rwki00IixGLTQiLQhz/0FHZHCTowQAAAIPEBNkcJOi2AAAAg8QE2Rwki00IixGLTQiLgkQBAAD/0FHZHCSLTQiLEYtNCIuCQAEAAP/QUdkcJOiDAAAAg8QE2Rwki00IixGLTQiLgjQBAAD/0FHZHCSLTQiLEYtNCIuCMAEAAP/QUdkcJOhQAAAAg8QE2Rwk6EUAAACDxATZHCToOgAAAIPECNwN0AEAANno3EXw3snZXeDZReCL5V3DAAAAAAAA8D8AAAAAAAD4PwAAAAAAAAAAAAAAAAAAWUBVi+xR2UUI2UUM3tnf4PbEBXoI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
 							<returnType>float</returnType>
-							<sString>(max(sStrength, sIntellect) * 1.5) * (1 + ( tal("G725")? cG725_AddDamage/100 : 0))</sString>
+							<sString>(max(max(max(sStrength, sIntellect), max(sStamina, sWill)), max(max(sAttackSpeed, sDexterity), max(sLife, sEnergy)/cLifeBudget)) * 1.5) * (1 + ( tal("G725")? cG725_AddDamage/100 : 0))</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -164,7 +166,7 @@
 		<sString>0</sString>
 	</manaCost>
 	<marker></marker>
-	<maxQuantity>1</maxQuantity>
+	<maxQuantity>100</maxQuantity>
 	<microAI href="" />
 	<minUseRangeCorrection>0</minUseRangeCorrection>
 	<naftaCost>100</naftaCost>

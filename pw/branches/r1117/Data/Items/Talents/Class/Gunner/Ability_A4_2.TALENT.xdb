@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
-	<BackLink DBID="/Items/Talents/Gunner_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Gunner_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Gunner/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Gunner/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Gunner/Ability_A4u.TALENT" Count="1" />
@@ -35,8 +35,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Gunner/Ability_A4_2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Gunner/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Gunner/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Gunner/Ability_A4_2.TALENT" id="E83091D0-A600-4AD5-8B17-839063B98E11">
 			<ConditionFormula>
@@ -81,9 +81,19 @@
 					<UnitConstant>
 						<name>BaseAttackBonus</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQQ==</compiledString>
 							<returnType>float</returnType>
-							<sString>5.0f</sString>
+							<sString>10.0f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Gunner/Ability_A4_2.TALENT" id="24572427-7C41-44A6-82EF-28C476AE39BA">
+					<UnitConstant>
+						<name>BonusRange</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>2.0f</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -108,7 +118,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Gunner/A4_2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -254,27 +264,27 @@
 		<Item href="/Items/Talents/Class/Gunner/Ability_A4_2.TALENT" id="C0FFBAE0-EFA3-4B9E-8B9C-29FC03AC81D1">
 			<PermanentStatModApplicator>
 				<applyTarget>AbilityOwner</applyTarget>
-				<caption>Бонус к АА</caption>
+				<caption>Бонус к дальности атаки</caption>
 				<customApplyType>None</customApplyType>
 				<enabled>
-					<compiledString></compiledString>
+					<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
 					<returnType>bool</returnType>
-					<sString>true</sString>
+					<sString>false</sString>
 				</enabled>
 				<formulaName></formulaName>
 				<LoggingEvent>-1</LoggingEvent>
 				<modifier>
 					<addValue>
-						<compiledString>FRAAAAACAAAAHQAAADAAAABCYXNlQXR0YWNrQm9udXMAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3A0+AAAA2V382UX8i+VdwwAAAEDheoQ/</compiledString>
+						<compiledString>FQsAAAABAAAAFwAAAEJvbnVzUmFuZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
 						<returnType>float</returnType>
-						<sString>cBaseAttackBonus *0.01f</sString>
+						<sString>cBonusRange</sString>
 					</addValue>
 					<multValue>
 						<compiledString></compiledString>
 						<returnType>float</returnType>
 						<sString>1.0f</sString>
 					</multValue>
-					<stat>BaseAttack</stat>
+					<stat>Range</stat>
 					<topModifier>false</topModifier>
 					<variable></variable>
 				</modifier>

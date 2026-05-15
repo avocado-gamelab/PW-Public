@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/WitchDoctor.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/WitchDoctor_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/WitchDoctor_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/WitchDoctor/_refreshMana.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/WitchDoctor/Ability_A2u.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/WitchDoctor.TALENTSET" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/WitchDoctor/Ability0.TALENT" Count="1" />
+	<BackLink DBID="/Test/Talents/WitchDoctor/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/WitchDoctor/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/WitchDoctor/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/WitchDoctor/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/WitchDoctor/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/WitchDoctor/Epic_Str.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>2</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А2. Живая шкура</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="77E7A30F-423F-418E-9821-581DE52D0D03">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSAAAAACAAAAJwAAAEAAAABXaXRjaERvY3Rvcl9BMnUAV2l0Y2hEb2N0b3JfQTJ1AFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZF+/fYG8CDwAGL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("WitchDoctor_A2u") == false</sString>
+				</condition>
+				<name>WitchDoctor_A2u</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="E55F9EAA-41DC-4E8A-B016-CBA78BA22170">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="78550A17-441E-46A9-91D0-96936840700C">
+					<UnitConstant>
+						<name>A2_KickDistance</name>
+						<var>
+							<compiledString>FQ0AAAABAAAAGQAAAFJhbmdlX01lZGl1bQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange_Medium</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="3D6AC881-FC5F-4623-861D-75DA4BE65B8E">
+					<UnitConstant>
+						<name>Stun_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADAPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>1.5f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="82286D8F-E6EA-4D8D-8D8A-D08A660F3585">
+					<UnitConstant>
+						<name>A2_Damage</name>
+						<var>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoBi00QixGLTRCLQmD/0F3DAABwQgAA4UM=</compiledString>
+							<returnType>float</returnType>
+							<sString>damageScale(sIntellect, 60, 450)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="30B10A85-6FDC-44C2-9E13-3D113A6E9D97">
+					<UnitConstant>
+						<name>A2_Cooldown</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>40</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/WitchDoctor/const_A2u_EasyTreeModeDuration" />
+				<Item href="/Items/Talents/Class/WitchDoctor/const_A2u_EasyTreeModeChannelTime" />
+				<Item href="/Items/Talents/Class/WitchDoctor/const_A2u_BaseHaste" />
+				<Item href="/Items/Talents/Class/WitchDoctor/const_A2u_TreeHaste" />
+				<Item href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="B83BB4D4-68CA-402B-A728-ADD48B874445">
+					<UnitConstant>
+						<name>Haste_Percent</name>
+						<var>
+							<compiledString>FU4AAAAHAAAAWwAAAHMAAACGAAAAkgAAAKgAAAC8AAAA2wAAAFRyZWVzQ291bnRlcgAAAAB0YXJnZXRzQ291bnQAAAAARXZpbFRyZWVJc05lYXIAAEEydV9UcmVlSGFzdGUAAABBMnVfQmFzZUhhc3RlAFWL7IPsCGoBi0UQUGgAAAAAi00IixGLTQiLgpwBAAD/0IlF/GgQAAAAi038ixGLTfyLQlT/0Nwd/gAAAN/g9sRBdEFoIAAAAItNCIsRi00Ii4KIAQAA/9DcHfYAAADf4PbEAXQfi00MUYtVCFJoQAAAAItFEIsQi00Qi0JQ/9DZXfjrHYtNDFGLVQhSaDAAAACLRRCLEItNEItCUP/Q2V342UX4i+VdwwAAAAAAAPA/AAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.FindApplicator("TreesCounter", pMisc, UNIT)-&gt;GetVariable("targetsCount") &gt; 0 || sender.vEvilTreeIsNear &gt;= 1 ? cA2u_TreeHaste : cA2u_BaseHaste</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="57795CEB-654F-4C8C-90DC-567BD726A86E">
+					<UnitConstant>
+						<name>TechHaste_Condition</name>
+						<var>
+							<compiledString>FSAAAAACAAAAJwAAAEAAAABXaXRjaERvY3Rvcl9BMnUAV2l0Y2hEb2N0b3JfQTJ1AFWL7IPsDGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4lN9NtF9IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>tal("WitchDoctor_A2u")</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQwAAAABAAAAGAAAAEEyX0Nvb2xkb3duAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<returnType>float</returnType>
+		<sString>cA2_Cooldown</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>18</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/WitchDoctor/A2.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABwQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>60</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>300</naftaCost>
+	<name textref="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Class/WitchDoctor/status_A2_LivingSkin.APLR" />
+		<Item href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="258D66E1-F3A6-4DF7-B64F-D978971735B1">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>триггер на урон</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQwAAAABAAAAFgAAAFN0YXR1c0hleGVkAFWL7GoAi0UQUGgAAAAAi00IixGLTQiLgpwBAAD/0DPJOUUQD5TBisFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>pMisc == sender.applStatusHexed(GLOBAL)</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="4F75E11D-CC87-416D-81DE-9F1DF52443D2">
+					<EventProcessorDamageTransformer>
+						<abilityFilter>
+							<abilitiesList />
+							<abilityCondition>
+								<compiledString>FSMAAAAEAAAAKAAAAD4AAABQAAAAcAAAAEltbXVuZTJDb250cm9sAABUaHJvdwAAAFRocm93X0p1bXAAVYvsUWgAAAAAi0UMixCLTQyLgogBAAD/0NwdoAAAAN/g9sREeklqAYtNEFFoEAAAAItVDIsCi00Mi5CcAQAA/9I7RRB1KWoBi0UQUGgYAAAAi00MixGLTQyLgpwBAAD/0DtFEHUJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+								<returnType>bool</returnType>
+								<sString>receiver.vImmune2Control == 0 &amp;&amp; receiver.applThrow(UNIT) == pMisc &amp;&amp; receiver.applThrow_Jump(UNIT) == pMisc</sString>
+							</abilityCondition>
+							<abilityCostMode>Energy</abilityCostMode>
+							<exceptThis>false</exceptThis>
+							<flags>1073741825</flags>
+							<onlySingleTarget>false</onlySingleTarget>
+						</abilityFilter>
+						<add>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>0.0f</sString>
+						</add>
+						<applyTarget>ApplicatorSelectedTarget</applyTarget>
+						<checkSender>2</checkSender>
+						<damageTypeFilter>31</damageTypeFilter>
+						<flags>0</flags>
+						<matchTargetInverted>false</matchTargetInverted>
+						<mul>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>1.0f</sString>
+						</mul>
+						<objectFilter>536870915</objectFilter>
+						<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+						<spell href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="D51616E0-FC00-416D-9524-9A5DA93D157A">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="7AF839D6-9F15-4BD9-9248-F6DC377CBD83">
+										<ProgramApplicator>
+											<applicators>
+												<Item>
+													<applicator href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="05D72576-AEFC-41A3-853A-42226AEF3A2C">
+														<StatModApplicator>
+															<applyTarget>AbilityOwner</applyTarget>
+															<behaviorFlags>0</behaviorFlags>
+															<caption>Вешаем на себя переменную для А4 на 0.1 сек</caption>
+															<constraint>None</constraint>
+															<dontUpdate>false</dontUpdate>
+															<effect>
+																<Item href="" />
+																<Item href="" />
+															</effect>
+															<enabled>
+																<compiledString>FSAAAAACAAAAJwAAAEAAAABXaXRjaERvY3Rvcl9BMnUAV2l0Y2hEb2N0b3JfQTJ1AFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAikX7i+Vdww==</compiledString>
+																<returnType>bool</returnType>
+																<sString>tal("WitchDoctor_A2u")</sString>
+															</enabled>
+															<formulaName></formulaName>
+															<lifeTime>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>0.1</sString>
+															</lifeTime>
+															<LoggingEvent>-1</LoggingEvent>
+															<modifier>
+																<addValue>
+																	<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																	<returnType>float</returnType>
+																	<sString>1</sString>
+																</addValue>
+																<multValue>
+																	<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+																	<returnType>float</returnType>
+																	<sString>0</sString>
+																</multValue>
+																<stat>Life</stat>
+																<topModifier>false</topModifier>
+																<variable>A2_JustTriggered</variable>
+															</modifier>
+															<providerName></providerName>
+															<startCondition>
+																<compiledString></compiledString>
+																<returnType>bool</returnType>
+																<sString>true</sString>
+															</startCondition>
+															<statModName></statModName>
+														</StatModApplicator>
+													</applicator>
+													<continueCondition>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>0</sString>
+													</continueCondition>
+													<continueEvents>1</continueEvents>
+													<delay>
+														<compiledString></compiledString>
+														<returnType>float</returnType>
+														<sString>-1.0</sString>
+													</delay>
+													<stopCondition>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>0</sString>
+													</stopCondition>
+													<stopEvents>0</stopEvents>
+												</Item>
+												<Item>
+													<applicator href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="A646A819-0409-4254-880A-755A29BA751C">
+														<SpellApplicator>
+															<applyTarget>ApplicatorTarget</applyTarget>
+															<caption>Спелл с воздействиями шкуры</caption>
+															<enabled>
+																<compiledString></compiledString>
+																<returnType>bool</returnType>
+																<sString>true</sString>
+															</enabled>
+															<formulaName></formulaName>
+															<LoggingEvent>-1</LoggingEvent>
+															<providerName></providerName>
+															<spell href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="54F2F8A1-B99A-42C7-8053-869DD5DB6C34">
+																<Spell>
+																	<applicators>
+																		<Item href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="B5C0000E-98E5-4E6C-9E1F-C89C371B5737">
+																			<ProgramApplicator>
+																				<applicators>
+																					<Item>
+																						<applicator href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="0BC767F9-BC37-480C-A414-C30273DE788B">
+																							<StatModApplicator>
+																								<applyTarget>ApplicatorTarget</applyTarget>
+																								<behaviorFlags>152</behaviorFlags>
+																								<caption>Unit is thrown (Tossed)</caption>
+																								<constraint>None</constraint>
+																								<dontUpdate>true</dontUpdate>
+																								<effect>
+																									<Item href="" />
+																									<Item href="" />
+																								</effect>
+																								<enabled>
+																									<compiledString></compiledString>
+																									<returnType>bool</returnType>
+																									<sString>true</sString>
+																								</enabled>
+																								<formulaName></formulaName>
+																								<lifeTime>
+																									<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+																									<returnType>float</returnType>
+																									<sString>-1</sString>
+																								</lifeTime>
+																								<LoggingEvent>-1</LoggingEvent>
+																								<modifier>
+																									<addValue>
+																										<compiledString></compiledString>
+																										<returnType>float</returnType>
+																										<sString>1.0f</sString>
+																									</addValue>
+																									<multValue>
+																										<compiledString></compiledString>
+																										<returnType>float</returnType>
+																										<sString>0.0f</sString>
+																									</multValue>
+																									<stat>Life</stat>
+																									<topModifier>false</topModifier>
+																									<variable>Tossed</variable>
+																								</modifier>
+																								<providerName></providerName>
+																								<startCondition>
+																									<compiledString>FQYAAAABAAAAEAAAAFRocm93AFWL7GoBi0UQUGgAAAAAi00MixGLTQyLgpwBAAD/0DPJO0UQD5TBisFdww==</compiledString>
+																									<returnType>bool</returnType>
+																									<sString>receiver.applThrow(UNIT) == pMisc</sString>
+																								</startCondition>
+																								<statModName></statModName>
+																							</StatModApplicator>
+																						</applicator>
+																						<continueCondition>
+																							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>0</sString>
+																						</continueCondition>
+																						<continueEvents>1</continueEvents>
+																						<delay>
+																							<compiledString></compiledString>
+																							<returnType>float</returnType>
+																							<sString>-1.0</sString>
+																						</delay>
+																						<stopCondition>
+																							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>0</sString>
+																						</stopCondition>
+																						<stopEvents>0</stopEvents>
+																					</Item>
+																					<Item>
+																						<applicator href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="0DDAAE99-419B-4621-819D-45D708B0188D">
+																							<ThrowApplicator>
+																								<angle>0</angle>
+																								<applyTarget>ApplicatorTarget</applyTarget>
+																								<behaviorFlags>152</behaviorFlags>
+																								<caption>Enemy throw</caption>
+																								<collisionFlags>1</collisionFlags>
+																								<enabled>
+																									<compiledString>FTcAAAAFAAAAPAAAAFIAAABkAAAAhAAAAKQAAABJbW11bmUyQ29udHJvbAAAVGhyb3cAAABUaHJvd19KdW1wAABjYXB0dXJlZEJ5RXZpbFRyZWUAVYvsUWgAAAAAi0UMixCLTQyLgogBAAD/0Nwd1AAAAN/g9sREemlqAItNEFFoEAAAAItVDIsCi00Mi5CcAQAA/9I7RRB1SWoAi0UQUGgYAAAAi00MixGLTQyLgpwBAAD/0DtFEHUpagCLTRBRaCQAAACLVQyLAotNDIuQnAEAAP/SO0UQdQnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+																									<returnType>bool</returnType>
+																									<sString>receiver.vImmune2Control == 0 &amp;&amp; receiver.applThrow(GLOBAL) == pMisc &amp;&amp; receiver.applThrow_Jump(GLOBAL) == pMisc &amp;&amp; receiver.FindApplicator("capturedByEvilTree", pMisc, GLOBAL) == pMisc</sString>
+																								</enabled>
+																								<firstTargetToHit href="" />
+																								<flightType>Throw</flightType>
+																								<flipTime>
+																									<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+																									<returnType>float</returnType>
+																									<sString>5.0</sString>
+																								</flipTime>
+																								<flyEffect>
+																									<Item href="" />
+																									<Item href="" />
+																								</flyEffect>
+																								<formulaName>Throw</formulaName>
+																								<landTime>0</landTime>
+																								<lockRotation>false</lockRotation>
+																								<LoggingEvent>-1</LoggingEvent>
+																								<maxDistance>0</maxDistance>
+																								<maxHeight>1.994598</maxHeight>
+																								<moveSpeed>
+																									<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAC4QQ==</compiledString>
+																									<returnType>float</returnType>
+																									<sString>23</sString>
+																								</moveSpeed>
+																								<providerName></providerName>
+																								<startSpell href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="6F3299D4-B814-44F8-B257-7E12D41262C8">
+																									<Spell>
+																										<applicators>
+																											<Item href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="CBF3FC3E-B103-4EE9-8D42-19A8FDCBEC67">
+																												<DamageApplicator>
+																													<applyTarget>ApplicatorTarget</applyTarget>
+																													<cancelInvisibility>false</cancelInvisibility>
+																													<caption>damage</caption>
+																													<damage>
+																														<compiledString>FQoAAAABAAAAFgAAAEEyX0RhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+																														<returnType>float</returnType>
+																														<sString>cA2_Damage</sString>
+																													</damage>
+																													<damageMode>0</damageMode>
+																													<damageType>Energy</damageType>
+																													<enabled>
+																														<compiledString></compiledString>
+																														<returnType>bool</returnType>
+																														<sString>true</sString>
+																													</enabled>
+																													<formulaName></formulaName>
+																													<LoggingEvent>-1</LoggingEvent>
+																													<providerName></providerName>
+																													<timeLimiter>-1</timeLimiter>
+																													<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
+																												</DamageApplicator>
+																											</Item>
+																										</applicators>
+																										<dispatch href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="2109FE7D-2307-47F3-AD32-E14BDD72554B">
+																											<DispatchImmediate>
+																												<alwaysApply>false</alwaysApply>
+																												<applyEffect>
+																													<Item href="" />
+																													<Item href="" />
+																												</applyEffect>
+																												<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																												<applyEffectOrientation>Default</applyEffectOrientation>
+																												<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																												<dieAfterApply>true</dieAfterApply>
+																												<dispatchEffect>
+																													<Item href="" />
+																													<Item href="" />
+																												</dispatchEffect>
+																												<flags>1</flags>
+																												<instantApply>false</instantApply>
+																											</DispatchImmediate>
+																										</dispatch>
+																									</Spell>
+																								</startSpell>
+																								<stopSpell href="" />
+																								<surfaceSpeedFromAG>false</surfaceSpeedFromAG>
+																								<takeOffTime>0</takeOffTime>
+																								<targetSelector href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="78B3E734-C803-4B95-9613-2FA5909E9786">
+																									<PointTargetSelector>
+																										<checkMinRange>true</checkMinRange>
+																										<mode>RangeFromOwner</mode>
+																										<offset>
+																											<x>0</x>
+																											<y>1</y>
+																										</offset>
+																										<paralleledTarget>false</paralleledTarget>
+																										<range>
+																											<compiledString>FQ0AAAABAAAAHAAAAFJhbmdlX01lZGl1bQBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFEIsQi00Qi0IM3V34/9DcRfjZXfTZRfSL5V3D</compiledString>
+																											<returnType>float</returnType>
+																											<sString>cRange_Medium + mDist2Target</sString>
+																										</range>
+																										<targetSelector href="" />
+																										<traceMode>0</traceMode>
+																									</PointTargetSelector>
+																								</targetSelector>
+																								<trackTargetUnit>false</trackTargetUnit>
+																								<trajectory Animated="True">
+																									<Tracks>
+																										<Item>
+																											<Item>
+																												<Key>0</Key>
+																												<Value>0</Value>
+																											</Item>
+																											<Item>
+																												<Key>0.2</Key>
+																												<Value>1.5</Value>
+																											</Item>
+																											<Item>
+																												<Key>0.4933673</Key>
+																												<Value>1.994598</Value>
+																											</Item>
+																											<Item>
+																												<Key>0.8</Key>
+																												<Value>1.5</Value>
+																											</Item>
+																											<Item>
+																												<Key>1</Key>
+																												<Value>0</Value>
+																											</Item>
+																										</Item>
+																									</Tracks>
+																									<Type>Clamp</Type>
+																									<Values>
+																										<Item>
+																											<Key>0</Key>
+																											<Value>0</Value>
+																										</Item>
+																										<Item>
+																											<Key>0.2</Key>
+																											<Value>1.5</Value>
+																										</Item>
+																										<Item>
+																											<Key>0.4933673</Key>
+																											<Value>1.994598</Value>
+																										</Item>
+																										<Item>
+																											<Key>0.8</Key>
+																											<Value>1.5</Value>
+																										</Item>
+																										<Item>
+																											<Key>1</Key>
+																											<Value>0</Value>
+																										</Item>
+																									</Values>
+																								</trajectory>
+																							</ThrowApplicator>
+																						</applicator>
+																						<continueCondition>
+																							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>0</sString>
+																						</continueCondition>
+																						<continueEvents>2</continueEvents>
+																						<delay>
+																							<compiledString></compiledString>
+																							<returnType>float</returnType>
+																							<sString>-1.0</sString>
+																						</delay>
+																						<stopCondition>
+																							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>0</sString>
+																						</stopCondition>
+																						<stopEvents>0</stopEvents>
+																					</Item>
+																					<Item>
+																						<applicator href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="3EF60A5D-6371-4D64-9D1B-F9AD5C480069">
+																							<SpellApplicator>
+																								<applyTarget>ApplicatorTarget</applyTarget>
+																								<caption>Спелл со стуном</caption>
+																								<enabled>
+																									<compiledString></compiledString>
+																									<returnType>bool</returnType>
+																									<sString>true</sString>
+																								</enabled>
+																								<formulaName></formulaName>
+																								<LoggingEvent>-1</LoggingEvent>
+																								<providerName></providerName>
+																								<spell href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="D807C6AC-E66C-426E-A7D2-73490F927494">
+																									<Spell>
+																										<applicators>
+																											<Item href="/Heroes/DefaultStatus/_STUN_Status.APLR" />
+																										</applicators>
+																										<dispatch href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="6768A18F-CD9A-41E9-B651-60BFF8183813">
+																											<DispatchImmediate>
+																												<alwaysApply>false</alwaysApply>
+																												<applyEffect>
+																													<Item href="" />
+																													<Item href="" />
+																												</applyEffect>
+																												<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																												<applyEffectOrientation>Default</applyEffectOrientation>
+																												<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																												<dieAfterApply>true</dieAfterApply>
+																												<dispatchEffect>
+																													<Item href="" />
+																													<Item href="" />
+																												</dispatchEffect>
+																												<flags>0</flags>
+																												<instantApply>true</instantApply>
+																											</DispatchImmediate>
+																										</dispatch>
+																									</Spell>
+																								</spell>
+																								<spellTarget>ApplicatorTarget</spellTarget>
+																								<targetSelector href="" />
+																							</SpellApplicator>
+																						</applicator>
+																						<continueCondition>
+																							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>0</sString>
+																						</continueCondition>
+																						<continueEvents>1</continueEvents>
+																						<delay>
+																							<compiledString></compiledString>
+																							<returnType>float</returnType>
+																							<sString>-1.0</sString>
+																						</delay>
+																						<stopCondition>
+																							<compiledString>FQAAAAAAAAAAVYvsMsBdww==</compiledString>
+																							<returnType>bool</returnType>
+																							<sString>0</sString>
+																						</stopCondition>
+																						<stopEvents>0</stopEvents>
+																					</Item>
+																				</applicators>
+																				<applyTarget>ApplicatorTarget</applyTarget>
+																				<behaviorFlags>154</behaviorFlags>
+																				<caption>Действие шкуры</caption>
+																				<effect>
+																					<Item href="" />
+																					<Item href="" />
+																				</effect>
+																				<enabled>
+																					<compiledString></compiledString>
+																					<returnType>bool</returnType>
+																					<sString>true</sString>
+																				</enabled>
+																				<formulaName></formulaName>
+																				<lifeTime>
+																					<compiledString></compiledString>
+																					<returnType>float</returnType>
+																					<sString>-1.0</sString>
+																				</lifeTime>
+																				<LoggingEvent>-1</LoggingEvent>
+																				<providerName></providerName>
+																				<startCondition>
+																					<compiledString></compiledString>
+																					<returnType>bool</returnType>
+																					<sString>true</sString>
+																				</startCondition>
+																			</ProgramApplicator>
+																		</Item>
+																	</applicators>
+																	<dispatch href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="3437FC71-FE78-4ECB-A18B-8C0D9A0A2054">
+																		<DispatchByTime>
+																			<alwaysApply>true</alwaysApply>
+																			<applyEffect>
+																				<Item href="" />
+																				<Item href="" />
+																			</applyEffect>
+																			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																			<applyEffectOrientation>Default</applyEffectOrientation>
+																			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																			<cancelOnSenderDeath>false</cancelOnSenderDeath>
+																			<dieAfterApply>true</dieAfterApply>
+																			<dispatchEffect>
+																				<Item href="" />
+																				<Item href="" />
+																			</dispatchEffect>
+																			<flags>0</flags>
+																			<lifeTime>
+																				<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																				<returnType>float</returnType>
+																				<sString>1</sString>
+																			</lifeTime>
+																			<persistentApplicators />
+																		</DispatchByTime>
+																	</dispatch>
+																</Spell>
+															</spell>
+															<spellTarget>ApplicatorTarget</spellTarget>
+															<targetSelector href="" />
+														</SpellApplicator>
+													</applicator>
+													<continueCondition>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>0</sString>
+													</continueCondition>
+													<continueEvents>1</continueEvents>
+													<delay>
+														<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzczMPQ==</compiledString>
+														<returnType>float</returnType>
+														<sString>0.1</sString>
+													</delay>
+													<stopCondition>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>0</sString>
+													</stopCondition>
+													<stopEvents>0</stopEvents>
+												</Item>
+												<Item>
+													<applicator href="/Items/Talents/Class/WitchDoctor/status_A2_LivingSkin_CD.APLR" />
+													<continueCondition>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>0</sString>
+													</continueCondition>
+													<continueEvents>2</continueEvents>
+													<delay>
+														<compiledString></compiledString>
+														<returnType>float</returnType>
+														<sString>-1.0</sString>
+													</delay>
+													<stopCondition>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>0</sString>
+													</stopCondition>
+													<stopEvents>0</stopEvents>
+												</Item>
+											</applicators>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<behaviorFlags>0</behaviorFlags>
+											<caption>skin appl</caption>
+											<effect>
+												<Item href="" />
+												<Item href="" />
+											</effect>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<lifeTime>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</lifeTime>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<startCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</startCondition>
+										</ProgramApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Class/WitchDoctor/Ability_A2.TALENT" id="1ED3837A-4F16-4782-961C-C898E53FE13C">
+									<DispatchLinear>
+										<aiming>Straight</aiming>
+										<alwaysApply>true</alwaysApply>
+										<applyEffect>
+											<Item href="/Effects/Debuffs/Paw/_A.EFFT" />
+											<Item href="/Effects/Debuffs/Paw/_B.EFFT" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Motion</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<flyMode>Linear</flyMode>
+										<fromLocator></fromLocator>
+										<height>0</height>
+										<killEffect>true</killEffect>
+										<locatorOrient>false</locatorOrient>
+										<maxDeviation>180</maxDeviation>
+										<maxDistance>-1</maxDistance>
+										<maxRise>0</maxRise>
+										<minRise>0</minRise>
+										<persistentApplicators />
+										<speed>100</speed>
+										<suspendTime>0</suspendTime>
+										<toLocator>Body</toLocator>
+									</DispatchLinear>
+								</dispatch>
+							</Spell>
+						</spell>
+						<treatDelegatedByDelegator>false</treatDelegatedByDelegator>
+					</EventProcessorDamageTransformer>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>true</useAbilityCooldown>
+				<useAbilityOwnerMana>true</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>WitchDoctor_A2</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

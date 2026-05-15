@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Glyph>
+	<BackLink DBID="/Glyphs/GlyphWardSpawnerAbility.ABLT" Count="2" />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Glyphs/WardGlyphCheap.GLPH" id="5E2C1F69-3624-4508-8228-63CE1373032D">
+			<GiveConsumable>
+				<amount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>1</sString>
+				</amount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Выдать вард</caption>
+				<consumable href="/Items/Consumables/EyeOfSeeingCheapest.ARCT" />
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+			</GiveConsumable>
+		</Item>
+	</applicators>
+	<autoTargetSelector href="" />
+	<caption></caption>
+	<castAllowRange>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<color>
+		<A>1</A>
+		<B>1</B>
+		<G>1</G>
+		<R>1</R>
+	</color>
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas />
+	<constants href="/Glyphs/WardGlyphCheap.GLPH" id="36B304C5-0F3F-469C-8E8A-60D9F2FFC828">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Glyphs/WardGlyphCheap.GLPH" id="CF492AFC-A34C-48AF-B3E5-9E207B62EDD0">
+					<UnitConstant>
+						<name>Haste_AtkSpdPercent</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADAPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>1.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Glyphs/WardGlyphCheap.GLPH" id="56FEFE2C-F227-4B56-9D7C-EF4F2EF1EFDA">
+					<UnitConstant>
+						<name>Haste_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>40</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Glyphs/WardGlyphCheap.GLPH" id="48BD204F-5552-476B-B4F8-41A50C312214">
+					<UnitConstant>
+						<name>Haste_MoveAmount</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>40</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Glyphs/WardGlyphCheap.GLPH" id="CCEA05D9-C7B7-4EA9-A50C-40C649A4D990">
+					<UnitConstant>
+						<name>Haste_AtkSpdPercent_TT</name>
+						<var>
+							<compiledString>FREAAAABAAAAHQAAAEF0dGFja1NwZWVkQm9udXMAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cAttackSpeedBonus</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Glyphs/WardGlyphCheap.GLPH" id="B7A33642-4001-48B5-9648-45CF9BDA657C">
+					<UnitConstant>
+						<name>AttackSpeedBonus</name>
+						<var>
+							<compiledString>FQwAAAAGAAIAGQAAACwAAAAyAAAAZwAAAHcAAACWAAAA4gAAABUBAABCdWlsZGluZ01vZABVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcDVQAAADcBUwAAADZXfzZRfxR2Rwk6BcAAACDxASL5V3DAAAAAAAAMUAAAAAAAAAWQFWL7IPsCNlFCNwduAAAAN/g9sQBdR/ZRQjcBbAAAADZXfzZRfxR2Rwk6GkAAACDxATrHesb2UUI3CWwAAAA2V342UX4UdkcJOgXAAAAg8QEi+VdwwAAAAAAAOA/AAAAAAAAAABVi+xR2UUI2Rwk6AUAAACDxARdw1WL7FHZRQiD7AjdHCToFP///4PECNld/NlF/IvlXcNVi+xR2UUI2Rwk6AUAAACDxARdw1WL7FHZRQiD7AjdHCTo2/7//4PECNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>round(17 + 5.5 * cBuildingMod)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Glyphs/WardGlyphCheap.GLPH" id="97CCF48F-5E8E-4109-BF20-CC0BDB5B1F93">
+					<UnitConstant>
+						<name>BuildingMod</name>
+						<var>
+							<compiledString>FQwAAAABAAAAEAAAAE1hcENvZWZmTXVsAFWL7GgAAAAAi0UMixCLTQyLgogBAAD/0F3D</compiledString>
+							<returnType>float</returnType>
+							<sString>receiver.vMapCoeffMul</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Glyphs/WardGlyphCheap.GLPH_description.txt" />
+	<dispatch href="/Glyphs/WardGlyphCheap.GLPH" id="ADF046A4-9F11-44FC-A585-DEC284262F33">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="/Effects/Buffs/Cure/_3.EFFT" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>5</flags>
+	<gameObject href="/Glyphs/WardGlyphCheap.SSO" />
+	<id>Booster</id>
+	<image href="/UI/Styles/Icons/Artifacts/_Test.ITEX" />
+	<imageSecondState href="" />
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minimapIcon>None</minimapIcon>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>0</naftaCost>
+	<name textref="/Glyphs/WardGlyphCheap.GLPH_name.txt" />
+	<node></node>
+	<openWarFogRadius>0</openWarFogRadius>
+	<passiveApplicators />
+	<pickupAbility href="" />
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<targetType>7</targetType>
+	<type>Passive</type>
+	<useRange>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Glyph>

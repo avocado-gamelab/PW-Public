@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/FallenAngel_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/FallenAngel_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/FallenAngel/Ability_A3.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/FallenAngel/Ability_A4.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/FallenAngel/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/FallenAngel/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/FallenAngel/Ability_A4u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/FallenAngel/Ability_A4_2.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -534,6 +534,53 @@
 											<useAbilityOwnerMana>false</useAbilityOwnerMana>
 										</TriggerApplicator>
 									</Item>
+									<Item href="/Items/Talents/Class/FallenAngel/Ability_A4_2.TALENT" id="EC304963-DCA1-46FB-ADF4-2315A16F4A49">
+										<StatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<behaviorFlags>0</behaviorFlags>
+											<caption>Увеличиваем реген хп</caption>
+											<constraint>None</constraint>
+											<dontUpdate>false</dontUpdate>
+											<effect>
+												<Item href="" />
+												<Item href="" />
+											</effect>
+											<enabled>
+												<compiledString>FSYAAAACAAAALQAAAEYAAABGYWxsZW5BbmdlbF9BNF8ydQAAAEZhbGxlbkFuZ2VsX0E0XzJ1AFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoFAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAikX7i+Vdww==</compiledString>
+												<returnType>bool</returnType>
+												<sString>tal("FallenAngel_A4_2u")</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<lifeTime>
+												<compiledString></compiledString>
+												<returnType>float</returnType>
+												<sString>-1.0</sString>
+											</lifeTime>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FQ0AAAABAAAAGQAAAEJ1ZmZfUmVnZW5IUABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+													<returnType>float</returnType>
+													<sString>cBuff_RegenHP</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>1.0f</sString>
+												</multValue>
+												<stat>LifeRegenerationAbsolute</stat>
+												<topModifier>false</topModifier>
+												<variable></variable>
+											</modifier>
+											<providerName></providerName>
+											<startCondition>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</startCondition>
+											<statModName></statModName>
+										</StatModApplicator>
+									</Item>
 								</applicators>
 								<applyTarget>AbilityOwner</applyTarget>
 								<behaviorFlags>3</behaviorFlags>
@@ -847,8 +894,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/FallenAngel/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/FallenAngel/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/FallenAngel/Ability_A4_2.TALENT" id="ADDE0B78-0268-4535-9D54-CD13A4ACE0FC">
 			<ConditionFormula>
@@ -1019,6 +1066,18 @@
 					</UnitConstant>
 				</Item>
 				<Item href="/Items/Talents/Class/FallenAngel/const_A4_2_SUP_SpellDefPercentage" />
+				<Item href="/Items/Talents/Class/FallenAngel/Ability_A4_2.TALENT" id="42DBC7A3-A46F-43D4-8061-1C46C4DB2405">
+					<UnitConstant>
+						<name>Buff_RegenHP</name>
+						<var>
+							<compiledString>FRgAAAACAAAARgAAAF8AAABBNF8ydV9CdWZmX1JlZ2VuUGVyY2VudABVi+yD7BSLRQyLEItNDItCDP/Qi00MixGLTQyLAt1d+P/Q3G34i00MUYtVCFJoAAAAAItFEIsQi00Qi0JQ3V3w/9DcTfDcDW0AAADZXezZReyL5V3DAAAAQOF6hD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>(rMaxLife - rLife) * cA4_2u_Buff_RegenPercent * 0.01f</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/FallenAngel/const_A4_2u_Buff_RegenPercent" />
+				<Item href="/Items/Talents/Class/FallenAngel/const_A4_2_SUP_Buff_RegenPercent" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -1027,9 +1086,9 @@
 		<percent>0</percent>
 	</consumptionBonus>
 	<cooldownTime>
-		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQQ==</compiledString>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABwQg==</compiledString>
 		<returnType>float</returnType>
-		<sString>30</sString>
+		<sString>60</sString>
 	</cooldownTime>
 	<cooldownTimeSecondState>
 		<compiledString></compiledString>
@@ -1058,7 +1117,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>7</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/FallenAngel/A4_2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

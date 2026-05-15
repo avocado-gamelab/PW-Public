@@ -1,0 +1,678 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set3" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set3_kit2" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset3_2_IceCream/Redset3_2_IceCream.TALKIT" Count="2" />
+	<BackLink DBID="/Social/TalentsCollection" Count="4" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_LosTal7.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_RedSet3.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet3.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet6.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet7_4.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet8.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet8Add.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet7_5.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet7_6.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NY2020_BadList.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season13_BadList.ROLLCONT" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G520: Чарующее изобилие</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G520_StrOrInt.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G520_StrOrInt.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="EBD606B9-C834-4F31-A5D0-6C6611CBE3B0">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQ4AAAACAAAAEwAAACkAAABHNTIwX1N0ck9ySW50AFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHUsAAADf4PbERHoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAADwPw==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG520_StrOrInt==1</sString>
+				</condition>
+				<name>StrOrInt</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="A930B1A4-4A24-47DF-A38A-D9A8CA6E4A8A">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSEAAAAEAAAAMAAAAEMAAABPAAAAaAAAAEc1MjBfa2l0Q291bnRlcl9UVAAARzUyMAAAAABHNTIwAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3B20AAAA3+D2xEF1WGgUAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoHAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdAnHRfQAAAAA6wfHRfQBAAAAikX0i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(cG520_kitCounter_TT&gt;0&amp;&amp;(tal("G520")))</sString>
+				</condition>
+				<name>FormNotActiveSession</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="76B48BB6-D193-4ADB-96DD-3C957A2FAB85">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSEAAAACAAAAMAAAAEoAAABHNTIwX2tpdENvdW50ZXJfVFQAAEc1MjBfTWF4Rm9ybQBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBQAAACLVRCLAotNEItQUN1d+P/S3F343+D2xAV6CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG520_kitCounter_TT&gt;cG520_MaxForm</sString>
+				</condition>
+				<name>FormOverChargedSession</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="25B55753-ADAE-4B5E-92A6-A979CDA80726">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSkAAAAEAAAAOAAAAEsAAABXAAAAcAAAAEc1MjBfa2l0Q291bnRlcl9UVF9DYXN0bGUAAABHNTIwAAAAAEc1MjAAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcHbwAAADf4PbEQXVYaBwAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgkAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0CcdF9AAAAADrB8dF9AEAAACKRfSL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(cG520_kitCounter_TT_Castle&gt;0&amp;&amp;(tal("G520")))</sString>
+				</condition>
+				<name>FormNotActiveCastle</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="AB2D906C-33A9-4668-9E43-1BC6668A2D4E">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSkAAAACAAAAOAAAAFIAAABHNTIwX2tpdENvdW50ZXJfVFRfQ2FzdGxlAAAARzUyMF9NYXhGb3JtAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoHAAAAItVEIsCi00Qi1BQ3V34/9LcXfjf4PbEBXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG520_kitCounter_TT_Castle&gt;cG520_MaxForm</sString>
+				</condition>
+				<name>FormOverChargedCastle</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="68D03B04-C2B7-4976-9A7E-887F465365ED">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTIxX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG521_Active &gt; 0</sString>
+				</condition>
+				<name>G521_EnergyReg</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="302C7556-6143-4062-AEC8-C693C2D2F618">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTIyX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG522_Active &gt; 0</sString>
+				</condition>
+				<name>G522_Life_StrOrInt</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="2CC0490C-9A64-411F-B3D0-56CB06623394">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTIzX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG523_Active &gt; 0</sString>
+				</condition>
+				<name>G523_MoveSpeed</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="CF3ABE32-2FB8-4A7C-81C3-7A859953555F">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTI0X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG524_Active &gt; 0</sString>
+				</condition>
+				<name>G524_Sta_StrOrInt</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="A2A27418-489D-42FA-AA83-6D440BFC8E44">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTI1X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG525_Active &gt; 0</sString>
+				</condition>
+				<name>G525_Will_StrOrInt</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="BC527B5B-CFEC-4A1B-9578-9DD7008D6DAF">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHNTQzX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG543_Active &gt; 0</sString>
+				</condition>
+				<name>G543_StrOrlnt</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="528351B5-DAB9-433C-8D8E-589A6049D354">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSQAAAAGAAAAKQAAAD8AAABLAAAAYQAAAG0AAACDAAAARzUyMl9BY3RpdmUARzUyNF9BY3RpdmUARzUyNV9BY3RpdmUAVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdpQAAAN/g9sRBdE1oDAAAAItNCIsRi00Ii4KIAQAA/9DcHaUAAADf4PbEQXQraBgAAACLTQiLEYtNCIuCiAEAAP/Q3B2lAAAA3+D2xEF0CcdF/AAAAADrB8dF/AEAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG522_Active &gt; 0 || sender.vG524_Active &gt; 0 || sender.vG525_Active &gt; 0</sString>
+				</condition>
+				<name>OrG525orG524orG522</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="80EA1CF6-5038-4806-BF08-59FF241001A9">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="2AF02BA9-0B88-4CF6-B02B-EDA6BCFAFA72">
+					<UnitConstant>
+						<name>Add_Stat</name>
+						<var>
+							<compiledString>FQgAAAACAAAAFQAAACgAAABUMV9TdGF0AFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twNNgAAANld/NlF/IvlXcMAAAAAAADgPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>cT1_Stat * 0.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="8A9F9F0F-CDEA-44D8-BAFA-BC652D0E3684">
+					<UnitConstant>
+						<name>G520_kitCounter_TT</name>
+						<var>
+							<compiledString>FQ0AAAACAAAAFAAAAC0AAABHNTIwAAAAAEc1MjAAVYvsg+wYaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgIAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCLTRCLEYtNEItCeP/QiUX020X0Udnu2RwkUdno2RwkD7ZN+1HdXezoGAAAAIPEDNxt7Nld6NlF6IvlXcMAAIA/AAAAAFWL7FEPtkUIhcB0CNlFDNld/OsG2UUQ2V382UX8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>mActivatedWithinKit - s(tal("G520"), 1 , 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="D5EB7C3E-B7E7-4B4C-A1BA-950FB9DCE25C">
+					<UnitConstant>
+						<name>G520_kitCounter_TT_Castle</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvsUVHZ7tkcJItFEIsQi00Qi0J4/9CD6AGJRfzbRfxR2Rwk6AsAAACDxAiL5V3DAAAAAFWL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>max(mActivatedWithinKit - 1, 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="02F53180-9C64-4B4E-A9C7-D3A7043F39C6">
+					<UnitConstant>
+						<name>TECH_FormCapacity</name>
+						<var>
+							<compiledString>FQ0AAAABAAAAGQAAAEc1MjBfTWF4Rm9ybQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cG520_MaxForm</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset3_2_IceCream/const_G520_MaxForm" />
+				<Item href="/Items/Talents/TalentKits/Redset3_2_IceCream/const_G521_Add_Energy_Restore" />
+				<Item href="/Items/Talents/TalentKits/Redset3_2_IceCream/const_G522_Heal" />
+				<Item href="/Items/Talents/TalentKits/Redset3_2_IceCream/const_G524_Deacrease_TimeControl" />
+				<Item href="/Items/Talents/TalentKits/Redset3_2_IceCream/const_G525_Duration" />
+				<Item href="/Items/Talents/TalentKits/Redset3_2_IceCream/const_G525_HealthIncrease" />
+				<Item href="/Items/Talents/TalentKits/Redset3_2_IceCream/const_G520_EnergyPerTick" />
+				<Item href="/Items/Talents/TalentKits/Redset3_2_IceCream/const_G520_EnergyRestorePeriod" />
+				<Item href="/Items/Talents/TalentKits/Redset3_2_IceCream/const_G520_EnergyRestoreTime" />
+				<Item href="/Items/Talents/TalentKits/Redset3_2_IceCream/const_G520_HealthPerTick" />
+				<Item href="/Items/Talents/TalentKits/Redset3_2_IceCream/const_G520_HealthRestorePeriod" />
+				<Item href="/Items/Talents/TalentKits/Redset3_2_IceCream/const_G520_HealthDuration" />
+				<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="6D023C6E-E82A-4691-A713-9633F58FEC5D">
+					<UnitConstant>
+						<name>G520_HealthAmount</name>
+						<var>
+							<compiledString>FT4AAAADAAAATQAAAGcAAACHAAAARzUyMF9IZWFsdGhQZXJUaWNrAABIZWFsdGhfcmVzdG9yZV90aW1lAEhlYWx0aF9yZXN0b3JlX3BlcmlvZABVi+yD7BSLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBQAAACLVRCLAotNEItQUN1d+P/S3E34i0UMUItNCFFoKAAAAItVEIsCi00Qi1BQ3V3w/9LcffDZXezZReyL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cG520_HealthPerTick*cHealth_restore_time/cHealth_restore_period</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="5E969B78-1829-4903-AF8B-119D71D6289E">
+					<UnitConstant>
+						<name>G520_EnergyAmount</name>
+						<var>
+							<compiledString>FUIAAAADAAAAUQAAAGsAAACLAAAARzUyMF9DYWtlRW5lcmd5X1RpY2sAAAAARW5lcmd5X3Jlc3RvcmVfdGltZQBFbmVyZ3lfcmVzdG9yZV9wZXJpb2QAVYvsg+wUi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgYAAAAi1UQiwKLTRCLUFDdXfj/0txN+ItFDFCLTQhRaCwAAACLVRCLAotNEItQUN1d8P/S3H3w2V3s2UXsi+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cG520_CakeEnergy_Tick*cEnergy_restore_time/cEnergy_restore_period</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset3_2_IceCream/const_G520_HastePercent" />
+				<Item href="/Items/Talents/TalentKits/Redset3_2_IceCream/const_G520_HasteDuration" />
+				<Item href="/Items/Talents/TalentKits/Redset3_2_IceCream/const_G523_Add_Heal_Restore" />
+				<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="5A063729-8A21-42EF-AC33-37B1F492A366">
+					<UnitConstant>
+						<name>G520_HealthPerTickTT</name>
+						<var>
+							<compiledString>FQAAAAABAAAADAAAAFWL7FHZ6NkcJFHZBSIAAADZHCSLRRCLEItNEItCbP/QXcMAAKBBAACAPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>refineScale(20, 1)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="B32250E6-2602-4466-9F45-811B517DB402">
+					<UnitConstant>
+						<name>G520_HealthAmountTT</name>
+						<var>
+							<compiledString>FUIAAAADAAAAUQAAAGsAAACLAAAARzUyMF9IZWFsdGhQZXJUaWNrVFQAAAAASGVhbHRoX3Jlc3RvcmVfdGltZQBIZWFsdGhfcmVzdG9yZV9wZXJpb2QAVYvsg+wUi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgYAAAAi1UQiwKLTRCLUFDdXfj/0txN+ItFDFCLTQhRaCwAAACLVRCLAotNEItQUN1d8P/S3H3w2V3s2UXsi+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cG520_HealthPerTickTT*cHealth_restore_time/cHealth_restore_period</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="D8906217-9533-45A0-B6C7-2C127F2F60D3">
+					<UnitConstant>
+						<name>G520_EnergyPerTickTT</name>
+						<var>
+							<compiledString>FQAAAAABAAAADAAAAFWL7FHZ6NkcJFHZBSIAAADZHCSLRRCLEItNEItCbP/QXcMAAKBBAACAPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>refineScale(20, 1)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="E997D982-A64D-4854-9461-0172A0B3F4F0">
+					<UnitConstant>
+						<name>G520_EnergyAmountTT</name>
+						<var>
+							<compiledString>FUIAAAADAAAAUQAAAGsAAACLAAAARzUyMF9FbmVyZ3lQZXJUaWNrVFQAAAAARW5lcmd5X3Jlc3RvcmVfdGltZQBFbmVyZ3lfcmVzdG9yZV9wZXJpb2QAVYvsg+wUi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9KLRQxQi00IUWgYAAAAi1UQiwKLTRCLUFDdXfj/0txN+ItFDFCLTQhRaCwAAACLVRCLAotNEItQUN1d8P/S3H3w2V3s2UXsi+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cG520_EnergyPerTickTT*cEnergy_restore_time/cEnergy_restore_period</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G520_StrOrInt.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>5</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_520.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G520_StrOrInt.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="2BCE5A59-B39C-41E3-B782-C70D1EDE15EB">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>StrOrInt</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&gt;=sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1</sString>
+					</addValue>
+					<multValue>
+						<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+						<returnType>float</returnType>
+						<sString>0</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>G520_StrOrInt</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="B908C36F-42BD-46B3-99D7-4F483147B535">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Strength</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&gt;=sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9TdGF0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Strength</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="957846C8-3AE9-43FB-9B88-E7824A74BDA8">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Intellect</caption>
+				<customApplyType>Maximize</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgrgAAAD/0ItNCIsRi00Ii4K8AAAA3V34/9DcXfjf4PbEQXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sBaseStrength&lt;sBaseIntellect</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9TdGF0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Stat</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Intellect</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="99E0E8C4-8C55-4FE8-8590-72C229AC9D98">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>216</behaviorFlags>
+				<caption>Триггер на покупку консумов</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="D79D44AD-D582-4A47-82DB-2713F5D4A16B">
+					<EventProcessorOnConsumableObtained>
+						<applyTarget>AbilityOwner</applyTarget>
+						<consumable href="" />
+						<origin>2</origin>
+						<spell href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="359395A5-A0DC-4787-A1CA-6A37CDA69929">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="717DB53D-C255-4C46-9E3B-3A71E4A983C6">
+										<SpellSwitchApplicator>
+											<activeSpellIndex>
+												<compiledString>FQAAAAAAAAAAVYvsagNqAItFEIsQi00Qi0Jc/9Bdww==</compiledString>
+												<returnType>int</returnType>
+												<sString>random(0,3)</sString>
+											</activeSpellIndex>
+											<applyTarget>AbilityOwner</applyTarget>
+											<caption>Спелсвитчер с выдачей консумов</caption>
+											<dontUseDispatches>true</dontUseDispatches>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<providerName></providerName>
+											<spells>
+												<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="5FB70AFA-9B30-471D-A0BE-19EE0739805D">
+													<Spell>
+														<applicators>
+															<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="7EFB139F-A49C-40AA-8CDF-2537D756ED1C">
+																<GiveConsumable>
+																	<amount>
+																		<compiledString></compiledString>
+																		<returnType>int</returnType>
+																		<sString>1</sString>
+																	</amount>
+																	<applyTarget>AbilityOwner</applyTarget>
+																	<caption>Даем пирожок диспела</caption>
+																	<consumable href="/Items/Consumables/CleansingCake.ARCT" />
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<formulaName></formulaName>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																</GiveConsumable>
+															</Item>
+														</applicators>
+														<dispatch href="" />
+													</Spell>
+												</Item>
+												<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="4A4389E5-696F-4D9E-B8C6-12FDA6FCFEFF">
+													<Spell>
+														<applicators>
+															<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="26CCBE15-F9C8-400D-8634-A59EF0AE737B">
+																<GiveConsumable>
+																	<amount>
+																		<compiledString></compiledString>
+																		<returnType>int</returnType>
+																		<sString>1</sString>
+																	</amount>
+																	<applyTarget>AbilityOwner</applyTarget>
+																	<caption>Даем пирожок энергии</caption>
+																	<consumable href="/Items/Consumables/EnergyCake.ARCT" />
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<formulaName></formulaName>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																</GiveConsumable>
+															</Item>
+														</applicators>
+														<dispatch href="" />
+													</Spell>
+												</Item>
+												<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="46561E36-42D7-4998-8643-2E779A3FD13F">
+													<Spell>
+														<applicators>
+															<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="5EFD6A61-3EF1-4E28-B7FF-6C11F02C716F">
+																<GiveConsumable>
+																	<amount>
+																		<compiledString></compiledString>
+																		<returnType>int</returnType>
+																		<sString>1</sString>
+																	</amount>
+																	<applyTarget>AbilityOwner</applyTarget>
+																	<caption>Даем пирожок хила</caption>
+																	<consumable href="/Items/Consumables/HealingCake.ARCT" />
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<formulaName></formulaName>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																</GiveConsumable>
+															</Item>
+														</applicators>
+														<dispatch href="" />
+													</Spell>
+												</Item>
+												<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="6A4226F2-E6E7-4CAC-A9E7-903A24A5BB4F">
+													<Spell>
+														<applicators>
+															<Item href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="041626B5-4A72-4BC0-A147-BF9335ACC0F2">
+																<GiveConsumable>
+																	<amount>
+																		<compiledString></compiledString>
+																		<returnType>int</returnType>
+																		<sString>1</sString>
+																	</amount>
+																	<applyTarget>AbilityOwner</applyTarget>
+																	<caption>Даем пирожок скорости</caption>
+																	<consumable href="/Items/Consumables/SpeedCake.ARCT" />
+																	<enabled>
+																		<compiledString></compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</enabled>
+																	<formulaName></formulaName>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																</GiveConsumable>
+															</Item>
+														</applicators>
+														<dispatch href="" />
+													</Spell>
+												</Item>
+											</spells>
+										</SpellSwitchApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Common/G520_StrOrInt.TALENT" id="048E8AF1-CC6F-4B5E-8131-9F6918FA7BF4">
+									<DispatchImmediate>
+										<alwaysApply>true</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>true</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+					</EventProcessorOnConsumableObtained>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G520</persistentId>
+	<prerequisiteTalents />
+	<rarity>exclusive</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G520_StrOrInt.TALENT_shortDescription.txt" />
+	<talentRollGroups>16</talentRollGroups>
+	<talentStats />
+	<targetType>136258047</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats>
+		<Item>
+			<addValueName>Add_Stat</addValueName>
+			<stat>Strength</stat>
+			<values>
+				<Item>2.5</Item>
+				<Item>2.7</Item>
+				<Item>2.9</Item>
+				<Item>3.1</Item>
+				<Item>3.3</Item>
+				<Item>3.5</Item>
+				<Item>3.7</Item>
+				<Item>3.9</Item>
+				<Item>4.1</Item>
+				<Item>4.3</Item>
+			</values>
+		</Item>
+		<Item>
+			<addValueName>Add_Stat</addValueName>
+			<stat>Intellect</stat>
+			<values>
+				<Item>2.5</Item>
+				<Item>2.7</Item>
+				<Item>2.9</Item>
+				<Item>3.1</Item>
+				<Item>3.3</Item>
+				<Item>3.5</Item>
+				<Item>3.7</Item>
+				<Item>3.9</Item>
+				<Item>4.1</Item>
+				<Item>4.3</Item>
+			</values>
+		</Item>
+	</variativeMaxTalentStats>
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

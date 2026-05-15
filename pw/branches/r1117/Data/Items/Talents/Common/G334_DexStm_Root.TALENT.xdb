@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="3" />
+	<BackLink DBID="/GameLogic/TalentGroup.TGRP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar5_Set2" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="4" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_OrangeSet2.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet14.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet15.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSetNewUltimates1.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="/Effects/UI/AOESelection/Cone.MTRL" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQQ==</compiledString>
+		<returnType>float</returnType>
+		<sString>25</sString>
+	</aoeSize>
+	<aoeType>UnattachedSector</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="CA30B4E7-F6E7-4058-B0C4-E4FEB598AFEE">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Поиск цели в секторе с кем связываем</caption>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="866C702C-EA5D-4A3F-B026-B7EC27202E97">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="0524224A-C9A6-406F-AAD1-9EE3E4B3F2A7">
+								<StatModApplicator>
+									<applyTarget>AbilityOwner</applyTarget>
+									<behaviorFlags>25</behaviorFlags>
+									<caption>Запоминаем, что поймали кого то еще</caption>
+									<constraint>None</constraint>
+									<dontUpdate>false</dontUpdate>
+									<effect>
+										<Item href="" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString>FQ8AAAACAAAALQAAAEMAAABJbW11bmUyQ29udHJvbABVi+xRaAAAEACLRQyLEItNDItCaP/QD7bIhcl1K2gAAAAAi1UMiwKLTQyLkIgBAAD/0twdZQAAAN/g9sREegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+										<returnType>bool</returnType>
+										<sString>!rFlag(1048576) &amp;&amp; receiver.vImmune2Control == 0</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<lifeTime>
+										<compiledString>FQ4AAAABAAAAGgAAAFJvb3RfRHVyYXRpb24AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+										<returnType>float</returnType>
+										<sString>cRoot_Duration</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<modifier>
+										<addValue>
+											<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+											<returnType>float</returnType>
+											<sString>1</sString>
+										</addValue>
+										<multValue>
+											<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+											<returnType>float</returnType>
+											<sString>0</sString>
+										</multValue>
+										<stat>Life</stat>
+										<topModifier>false</topModifier>
+										<variable>G334_CatchSecond</variable>
+									</modifier>
+									<providerName></providerName>
+									<startCondition>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</startCondition>
+									<statModName></statModName>
+								</StatModApplicator>
+							</Item>
+							<Item href="/Items/Talents/Common/Applicators/spell_G334WStatus.APLR" />
+						</applicators>
+						<dispatch href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="FC570245-9D94-479D-B39B-E65245F3C6B8">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>true</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="9A3E9028-9ACC-4A83-92B5-C0E798F7CA40">
+					<ConditionTargetSelector>
+						<condition>
+							<compiledString>FQ8AAAACAAAAFAAAACoAAABJbW11bmUyQ29udHJvbABVi+xRaAAAAACLRQyLEItNDIuCiAEAAP/Q3B1lAAAA3+D2xER6ImgAABAAi00MixGLTQyLQmj/0A+2yIXJdQnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+							<returnType>bool</returnType>
+							<sString>receiver.vImmune2Control == 0 &amp;&amp; !rFlag(1048576)</sString>
+						</condition>
+						<flags>0</flags>
+						<mode>Normal</mode>
+						<targetSelector href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="3EF51162-4011-4231-883F-238862C495B0">
+							<CountingTargetSelector>
+								<enableSorting>true</enableSorting>
+								<flags>0</flags>
+								<heroesFirst>false</heroesFirst>
+								<mode>Normal</mode>
+								<order>Increasing</order>
+								<sortingValue>
+									<compiledString>FQcAAAABAAEADgAAACwBAABUYXJnZXQAVYvsg+wwaAAAAACLRRCLEItNEItCTP/QiUXsi00MixGLTQyLQlT/0A+2yPfZG8mD4ZyDwWSJTejbReiNVfhSi0XsixCLTeyLgowBAADdXeD/0FCNTfBRi1UMiwKLTQyLkIwBAAD/0lDoOgAAAIPECItFDIsQi00Mi0JQ3V3Y/9CD6Ar32BvAJSL8//8F6AMAAIlF1NtF1NxF2NxF4Nld0NlF0IvlXcNVi+yD7BSLRQjZQASLTQzYYQTZXfTZRfRR2Rwki1UI2QKLRQzYINld8NlF8FHZHCSNTfjoVwAAANlF+NhN+NlF/NhN/N7B2V3s2UXsUdkcJOgHAAAAg8QEi+Vdw1WL7FHZRQjZHCToBQAAAIPEBF3DVYvsUdlFCIPsCN0cJOis/v//g8QI2V382UX8i+Vdw1WL7FGJTfyLRfzZRQjZGItN/NlFDNlZBItF/IvlXcIIAA==</compiledString>
+									<returnType>float</returnType>
+									<sString>(rUnitKind == 10 ? 1000 : 10) + d( rPos, appl.oTarget.Pos ) + (rIsHero ? 0 : 100)</sString>
+								</sortingValue>
+								<targetSelector href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="D41DD485-64FD-4D30-AD8B-E1DF7976CF1C">
+									<SectorTargetSelector>
+										<angle>40</angle>
+										<centerIsSegmentEnd>true</centerIsSegmentEnd>
+										<flags>1</flags>
+										<mode>SendOnce</mode>
+										<range>
+											<compiledString>FQwAAAACAAAAGQAAACwAAABSYW5nZV9TaG9ydABVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcBToAAADZXfzZRfyL5V3DAAAAAAAAAEA=</compiledString>
+											<returnType>float</returnType>
+											<sString>cRange_Short+2</sString>
+										</range>
+										<segmentBegin>AbilityOwner</segmentBegin>
+										<segmentDirectionOffset>0</segmentDirectionOffset>
+										<segmentEnd>CurrentPosition</segmentEnd>
+										<targetFilter>571211779</targetFilter>
+									</SectorTargetSelector>
+								</targetSelector>
+								<targetsNumber>
+									<compiledString></compiledString>
+									<returnType>int</returnType>
+									<sString>1</sString>
+								</targetsNumber>
+							</CountingTargetSelector>
+						</targetSelector>
+					</ConditionTargetSelector>
+				</targetSelector>
+			</SpellApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="317A328F-F72A-4EF5-83AE-675C898A28A3">
+			<FXApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<auxillaryTarget href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="C361C9D1-8713-4854-B94D-AF57E40A690F">
+					<FirstTargetSelector>
+						<nearestTarget>false</nearestTarget>
+						<targetSelector href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="5202DE3B-F719-42B2-930B-C7DEC077865D">
+							<ConditionTargetSelector>
+								<condition>
+									<compiledString>FQ8AAAACAAAAFAAAACoAAABJbW11bmUyQ29udHJvbABVi+xRaAAAAACLRQyLEItNDIuCiAEAAP/Q3B1lAAAA3+D2xER6ImgAABAAi00MixGLTQyLQmj/0A+2yIXJdQnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+									<returnType>bool</returnType>
+									<sString>receiver.vImmune2Control == 0 &amp;&amp; !rFlag(1048576)</sString>
+								</condition>
+								<flags>1</flags>
+								<mode>Normal</mode>
+								<targetSelector href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="D63319E4-52FA-4C29-8F67-0F9FE146F396">
+									<CountingTargetSelector>
+										<enableSorting>true</enableSorting>
+										<flags>1</flags>
+										<heroesFirst>false</heroesFirst>
+										<mode>Normal</mode>
+										<order>Increasing</order>
+										<sortingValue>
+											<compiledString>FQcAAAABAAEADgAAACwBAABUYXJnZXQAVYvsg+wwaAAAAACLRRCLEItNEItCTP/QiUXsi00MixGLTQyLQlT/0A+2yPfZG8mD4ZyDwWSJTejbReiNVfhSi0XsixCLTeyLgowBAADdXeD/0FCNTfBRi1UMiwKLTQyLkIwBAAD/0lDoOgAAAIPECItFDIsQi00Mi0JQ3V3Y/9CD6Ar32BvAJSL8//8F6AMAAIlF1NtF1NxF2NxF4Nld0NlF0IvlXcNVi+yD7BSLRQjZQASLTQzYYQTZXfTZRfRR2Rwki1UI2QKLRQzYINld8NlF8FHZHCSNTfjoVwAAANlF+NhN+NlF/NhN/N7B2V3s2UXsUdkcJOgHAAAAg8QEi+Vdw1WL7FHZRQjZHCToBQAAAIPEBF3DVYvsUdlFCIPsCN0cJOis/v//g8QI2V382UX8i+Vdw1WL7FGJTfyLRfzZRQjZGItN/NlFDNlZBItF/IvlXcIIAA==</compiledString>
+											<returnType>float</returnType>
+											<sString>(rUnitKind == 10 ? 1000 : 10) + d( rPos, appl.oTarget.Pos ) + (rIsHero ? 0 : 100)</sString>
+										</sortingValue>
+										<targetSelector href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="166F0161-27FC-49AF-9AC1-3F74C8E8B985">
+											<SectorTargetSelector>
+												<angle>40</angle>
+												<centerIsSegmentEnd>true</centerIsSegmentEnd>
+												<flags>1</flags>
+												<mode>SendOnce</mode>
+												<range>
+													<compiledString>FQwAAAACAAAAGQAAACwAAABSYW5nZV9TaG9ydABVi+xRi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcBToAAADZXfzZRfyL5V3DAAAAAAAAAEA=</compiledString>
+													<returnType>float</returnType>
+													<sString>cRange_Short+2</sString>
+												</range>
+												<segmentBegin>AbilityOwner</segmentBegin>
+												<segmentDirectionOffset>0</segmentDirectionOffset>
+												<segmentEnd>CurrentPosition</segmentEnd>
+												<targetFilter>571211779</targetFilter>
+											</SectorTargetSelector>
+										</targetSelector>
+										<targetsNumber>
+											<compiledString></compiledString>
+											<returnType>int</returnType>
+											<sString>1</sString>
+										</targetsNumber>
+									</CountingTargetSelector>
+								</targetSelector>
+							</ConditionTargetSelector>
+						</targetSelector>
+					</FirstTargetSelector>
+				</auxillaryTarget>
+				<behaviorFlags>145</behaviorFlags>
+				<caption>Эффект связывания с доп целью</caption>
+				<effect>
+					<Item href="/Effects/Debuffs/Lash/_Web.EFFT" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FRYAAAADAAAAIwAAAD0AAABfAAAAU3RhdHVzUm9vdAAAQXV4VGFyZ2V0AFWL7IPsCGoBi0UQUGgAAAAAi00MixGLTQyLgpwBAAD/0DtFEHQ3aAwAAACLTRCLEYtNEItCTP/QiUX8i038ixGLTfyLAv/Q3B2BAAAA3+D2xEF1CcdF+AEAAADrB8dF+AAAAACKRfiL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>receiver.applStatusRoot(UNIT) != pMisc &amp;&amp;  appl.oAuxTarget.Life &gt; 0</sString>
+				</enabled>
+				<flags>0</flags>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FSEAAAAEAAAAPwAAAFUAAABhAAAAdwAAAEltbXVuZTJDb250cm9sAABHMzM0X0NhdGNoU2Vjb25kAFWL7FFoAAAQAItFDIsQi00Mi0Jo/9APtsiFyXVNaAAAAACLVQyLAotNDIuQiAEAAP/S3B2ZAAAA3+D2xER6K2gQAAAAi0UIixCLTQiLgogBAAD/0NwdmQAAAN/g9sREewnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>!rFlag(1048576) &amp;&amp; receiver.vImmune2Control == 0 &amp;&amp; sender.vG334_CatchSecond != 0</sString>
+				</startCondition>
+			</FXApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Applicators/spell_G334WStatus.APLR" />
+		<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="62ED0EC8-C030-49D6-B79B-AC6B4CA3AA79">
+			<DamageApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<cancelInvisibility>false</cancelInvisibility>
+				<caption>Дамаг</caption>
+				<damage>
+					<compiledString>FQcAAAABAAAAEwAAAERhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+					<returnType>float</returnType>
+					<sString>cDamage</sString>
+				</damage>
+				<damageMode>0</damageMode>
+				<damageType>Pure</damageType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<timeLimiter>-1</timeLimiter>
+				<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed.UIEV" />
+			</DamageApplicator>
+		</Item>
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G334: Хищная натура</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G334_DexStm_Root.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G334_DexStm_Root.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="770D1194-7E3E-4025-9DB9-628452A6C99B">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSEAAAAEAAAAMAAAAEMAAABPAAAAaAAAAEczMzRfa2l0Q291bnRlcl9UVAAARzMzNAAAAABHMzM0AFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3B20AAAA3+D2xEF1WGgUAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoHAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJdAnHRfQAAAAA6wfHRfQBAAAAikX0i+VdwwAAAAAAAAAA</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(cG334_kitCounter_TT&gt;0&amp;&amp;(tal("G334")))</sString>
+				</condition>
+				<name>FormNotActiveSession</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="46E04542-D73D-4142-9420-7C35A8498A40">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSEAAAACAAAAMAAAAEoAAABHMzM0X2tpdENvdW50ZXJfVFQAAEczMzRfTWF4Rm9ybQBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBQAAACLVRCLAotNEItQUN1d+P/S3F343+D2xAV6CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG334_kitCounter_TT&gt;cG334_MaxForm</sString>
+				</condition>
+				<name>FormOverChargedSession</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="9B7B1823-D171-4751-BAB3-D00DB421FB6A">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSkAAAAEAAAAOAAAAEsAAABXAAAAcAAAAEczMzRfa2l0Q291bnRlcl9UVF9DYXN0bGUAAABHMzM0AAAAAEczMzQAVYvsg+wMi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9LcHbwAAADf4PbEQXVYaBwAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgkAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0CcdF9AAAAADrB8dF9AEAAACKRfSL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>!(cG334_kitCounter_TT_Castle&gt;0&amp;&amp;(tal("G334")))</sString>
+				</condition>
+				<name>FormNotActiveCastle</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="227AE5D4-88F2-41CA-86D7-1EBA45FDF670">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRoAAAACAAAAJwAAADoAAABHMzM0X2tpdENvdW50ZXJfVFRfQ2FzdGxlAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twdXAAAAN/g9sRBdQnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAhA</compiledString>
+					<returnType>bool</returnType>
+					<sString>cG334_kitCounter_TT_Castle&gt;3</sString>
+				</condition>
+				<name>FormOverChargedCastle</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="C4F3FCB9-CF0C-4D63-940A-B5D4FF786172">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQwAAAACAAAAEQAAACcAAABHMzIyX0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xEF1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG322_Active&gt;0</sString>
+				</condition>
+				<name>G322_Root</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="5D09AD08-D51D-4359-B73B-035BCBD6E313">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="A3C4374B-D161-4148-89C2-7BD2387E7900">
+					<UnitConstant>
+						<name>Add_Life</name>
+						<var>
+							<compiledString>FRMAAAADAAAAIgAAADwAAABVAAAAVDRfU3RhdABMaWZlQnVkZ2V0AFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoCAAAAItVEIsCi00Qi1BQ3V34/9LcTfjcDWMAAADZXfTZRfSL5V3DZmZmZmZm5j8=</compiledString>
+							<returnType>float</returnType>
+							<sString>cT4_Stat * cLifeBudget * 0.7</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/TalentSet2/const_G334_MaxForm" />
+				<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="928440B0-9983-4A30-97AE-B5E95CD33355">
+					<UnitConstant>
+						<name>G334_kitCounter_TT</name>
+						<var>
+							<compiledString>FQ0AAAACAAAAFAAAAC0AAABHMzM0AAAAAEczMzQAVYvsg+wYaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgIAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCLTRCLEYtNEItCeP/QiUX020X0Udnu2RwkUdno2RwkD7ZN+1HdXezoGAAAAIPEDNxt7Nld6NlF6IvlXcMAAIA/AAAAAFWL7FEPtkUIhcB0CNlFDNld/OsG2UUQ2V382UX8i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>mActivatedWithinKit - s(tal("G334"), 1 , 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="E1154F7C-06A9-4B4E-8FF2-B5BC74293A72">
+					<UnitConstant>
+						<name>G334_kitCounter_TT_Castle</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvsUVHZ7tkcJItFEIsQi00Qi0J4/9CD6AGJRfzbRfxR2Rwk6AsAAACDxAiL5V3DAAAAAFWL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>max(mActivatedWithinKit - 1, 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="BBD6F834-265D-495E-B299-4679BE97D7A1">
+					<UnitConstant>
+						<name>TECH_FormCapacity</name>
+						<var>
+							<compiledString>FQ0AAAABAAAAGQAAAEczMzRfTWF4Rm9ybQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cG334_MaxForm</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="A3FEFD44-4286-4AB3-B578-8DBECF09E328">
+					<UnitConstant>
+						<name>Tech_Damage</name>
+						<var>
+							<compiledString>FQAAAAACAAAABgAAABAAAABVi+xR2QUqAAAA2RwkUdkFJgAAANkcJItFEIsQi00Qi0Js/9BdwwAASEMAAHBB</compiledString>
+							<returnType>float</returnType>
+							<sString>refineScale(200, 15)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="8F57D8E7-DB09-426B-84B9-E7B173145ACA">
+					<UnitConstant>
+						<name>Damage</name>
+						<var>
+							<compiledString>FSgAAAAEAAAALwAAAEUAAABjAAAAgwAAAFRlY2hfRGFtYWdlAEczMzhfQWRkX0RhbWFnZQBHMzM4X0FjdGl2ZQBVi+yD7BBoHAAAAItFCIsQi00Ii4KIAQAA/9DcHbkAAADf4PbEQXUGxkX/AesExkX/AItNDFGLVQhSaAAAAACLRRCLEItNEItCUP/QUdnu2Rwki00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ3V30/9BR2RwkD7ZN/1HoHAAAAIPEDNxF9Nld8NlF8IvlXcMAAAAAAAAAAAAAAABVi+xRD7ZFCIXAdAjZRQzZXfzrBtlFENld/NlF/IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cTech_Damage + s(sender.vG338_Active&gt;0,cG338_Add_Damage,0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/TalentSet2/const_G338_Add_Damage" />
+				<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="1661A54F-D51D-40E7-9511-DC69327443E6">
+					<UnitConstant>
+						<name>TT_Damage</name>
+						<var>
+							<compiledString>FQwAAAABAAAAGAAAAFRlY2hfRGFtYWdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>cTech_Damage</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="8B6266CA-25AF-4082-A9A3-D2433DEA4CD2">
+					<UnitConstant>
+						<name>Root_Duration</name>
+						<var>
+							<compiledString>FUoAAAAEAAAATwAAAGUAAAB5AAAAmAAAAEczMzRfQ2F0Y2hTZWNvbmQAAAAAQ3VycmVudF9GdWxsX1Jvb3REdXJhdGlvbgAAAEN1cnJlbnRfQmFzZV9Sb290RHVyYXRpb24AVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdswAAAN/g9sREeh+LTQxRi1UIUmgUAAAAi0UQixCLTRCLQlD/0Nld/Osdi00MUYtVCFJoMAAAAItFEIsQi00Qi0JQ/9DZXfzZRfyL5V3DAAAAAAAA8D8=</compiledString>
+							<returnType>float</returnType>
+							<sString>(sender.vG334_CatchSecond == 1 ? cCurrent_Full_RootDuration : cCurrent_Base_RootDuration)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="7D01EFF7-93CF-4591-AA4F-42E82A44928D">
+					<UnitConstant>
+						<name>Base_RootDuration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADAPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>1.5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="5510E8A1-CD08-46B0-8B24-2A45405C11B0">
+					<UnitConstant>
+						<name>Full_RootDuration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>3</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/TalentSet2/const_G322_Add_Root_Duration" />
+				<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="BDBD75D8-D480-47A7-9B6E-F258F14FAB8B">
+					<UnitConstant>
+						<name>Current_Full_RootDuration</name>
+						<var>
+							<compiledString>FTYAAAAEAAAAPQAAAFMAAABnAAAAiwAAAEZ1bGxfUm9vdER1cmF0aW9uAAAARzMyMl9BY3RpdmUARzMyMl9BZGRfUm9vdER1cmF0aW9uAFWL7IPsCGgUAAAAi0UIixCLTQiLgogBAAD/0NwdrQAAAN/g9sRBdR+LTQxRi1UIUmggAAAAi0UQixCLTRCLQlD/0Nld/OsF2e7ZXfyLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlD/0NhF/Nld+NlF+IvlXcMAAAAAAAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>cFull_RootDuration + (sender.vG322_Active &gt; 0 ? cG322_Add_RootDuration : 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="FA2FB650-5DC2-4C25-9C9F-CE06F481A74F">
+					<UnitConstant>
+						<name>Current_Base_RootDuration</name>
+						<var>
+							<compiledString>FTYAAAAEAAAAPQAAAFMAAABnAAAAiwAAAEJhc2VfUm9vdER1cmF0aW9uAAAARzMyMl9BY3RpdmUARzMyMl9BZGRfUm9vdER1cmF0aW9uAFWL7IPsCGgUAAAAi0UIixCLTQiLgogBAAD/0NwdrQAAAN/g9sRBdR+LTQxRi1UIUmggAAAAi0UQixCLTRCLQlD/0Nld/OsF2e7ZXfyLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlD/0NhF/Nld+NlF+IvlXcMAAAAAAAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>cBase_RootDuration + (sender.vG322_Active &gt; 0 ? cG322_Add_RootDuration : 0)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAC0Qg==</compiledString>
+		<returnType>float</returnType>
+		<sString>90</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G334_DexStm_Root.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="28AE511E-7400-48EC-8CAC-9550816D1D25">
+		<DispatchLinear>
+			<aiming>Homing</aiming>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="/Effects/Shots/Web/_HitRed.EFFT" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Motion</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="/Effects/Shots/Web/_Red.EFFT" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<flyMode>Parabolic</flyMode>
+			<fromLocator>Attack</fromLocator>
+			<height>0</height>
+			<killEffect>true</killEffect>
+			<locatorOrient>false</locatorOrient>
+			<maxDeviation>180</maxDeviation>
+			<maxDistance>-1</maxDistance>
+			<maxRise>0</maxRise>
+			<minRise>0</minRise>
+			<persistentApplicators />
+			<speed>20</speed>
+			<suspendTime>0</suspendTime>
+			<toLocator>Body</toLocator>
+		</DispatchLinear>
+	</dispatch>
+	<flags>1</flags>
+	<forceBonus>16.15</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_334.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>3</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G334_DexStm_Root.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G334_DexStm_Root.TALENT" id="BC28F30C-4430-4899-AD89-149EFBA79F68">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_Life</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQkAAAABAAAAFQAAAEFkZF9MaWZlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_Life</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G334</persistentId>
+	<prerequisiteTalents />
+	<rarity>outstanding</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G334_DexStm_Root.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>Life</stat>
+			<values>
+				<Item>273</Item>
+				<Item>294</Item>
+				<Item>315</Item>
+				<Item>336</Item>
+				<Item>357</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>671875075</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQ0AAAABAAAAGQAAAFJhbmdlX01lZGl1bQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Medium</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

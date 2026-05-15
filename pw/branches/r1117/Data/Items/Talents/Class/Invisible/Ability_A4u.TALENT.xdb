@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Invisible.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Invisible.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Invisible/Elite_Int.TALENTSET" Count="1" />
@@ -10,6 +10,7 @@
 	<BackLink DBID="/Test/Talents/Invisible/Epic_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A4_2u.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Invisible_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -40,10 +41,10 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Invisible/Ability_A4u.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Invisible/Ability_A4u.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Invisible/Ability_A4u.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
-		<Item href="/Items/Talents/Class/Invisible/Ability_A4u.TALENT" id="F6B9506B-1F31-456F-AC03-4124945950B1">
+		<Item href="/Items/Talents/Class/Invisible/Ability_A4u.TALENT" id="2E62C5F0-60D5-488D-BB15-1E90594AE078">
 			<ConditionFormula>
 				<condition>
 					<compiledString>FR0AAAACAAAAJAAAAD0AAABJbnZpc2libGVfQTQAAAAASW52aXNpYmxlX0E0AFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZF+/fYG8CDwAGL5V3D</compiledString>
@@ -58,7 +59,7 @@
 		<Item href="/Items/Talents/Class/Invisible/Ability_A4_2.TALENT" />
 		<Item href="/Items/Talents/Class/Invisible/Ability_A4_2u.TALENT" />
 	</conflictingTalents>
-	<constants href="/Items/Talents/Class/Invisible/Ability_A4u.TALENT" id="BF378D12-BED5-4CD0-BB67-F1719D4EBD0F">
+	<constants href="/Items/Talents/Class/Invisible/Ability_A4u.TALENT" id="3477D42B-F651-4CF0-A362-CB5AD66E4EEC">
 		<UnitConstantsContainer>
 			<vars>
 				<Item href="/Items/Talents/Class/Invisible/const_A4u_AddFansCount" />
@@ -86,7 +87,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>16.15</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Invisible/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -106,7 +107,7 @@
 	<name textref="/Items/Talents/Class/Invisible/Ability_A4u.TALENT_name.txt" />
 	<node></node>
 	<passiveApplicators />
-	<persistentId>Invisible_A2u1</persistentId>
+	<persistentId>Invisible_A4u</persistentId>
 	<prerequisiteTalents>
 		<Item href="/Items/Talents/Class/Invisible/Ability_A4.TALENT" />
 	</prerequisiteTalents>

@@ -1,0 +1,1103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set8" Count="1" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Rar6_Set8_kit6" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset8_6_Invisible/Redset8_6_Invisible.TALKIT" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="4" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NormTal.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_RedSet8.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet8Add.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season9_Mediocre.ROLLCONT" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_NY2020_MediocreList.ROLLCONT" Count="1" />
+	<BackLink DBID="/Test/Talents/RedSet7_11.TALENTSET" Count="1" />
+	<BackLink DBID="/Social/Lootboxes/ROLLCONTS/roll_Season13_MediocreList.ROLLCONT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>true</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="/Effects/UI/AOESelection/Circle.MTRL" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Long</sString>
+	</aoeSize>
+	<aoeType>Disk</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="93CC1399-F610-4BD5-8AA2-47B09F9041D4">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Невидимость только на себя</caption>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLQnj/0DPJg/gCD5TBisFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>mActivatedWithinKit == 2</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="604F85D9-1130-4481-B073-5982E073CC63">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="2EE394C3-DFE4-4516-944E-1A4D9CE3148D">
+								<StatusApplicator>
+									<applicators>
+										<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="9A24B977-BF2E-4821-91DA-2F220549FC58">
+											<InvisibilityApplicator>
+												<applyTarget>ApplicatorTarget</applyTarget>
+												<behaviorFlags>145</behaviorFlags>
+												<caption>собственно невидимость</caption>
+												<effect>
+													<Item href="/Effects/General/Invisible/_Switcher.EFFT" />
+													<Item href="" />
+												</effect>
+												<enabled>
+													<compiledString>FQAAAAACAAAABwAAACAAAABVi+xRUdkFSgAAANkcJItFCIsQi00Ii4KsAQAA/9DcHUIAAADf4PbEQXoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAM3MTD4=</compiledString>
+													<returnType>bool</returnType>
+													<sString>sender.GetDamageTaken(0.2) &lt;= 0</sString>
+												</enabled>
+												<fadeIn>
+													<compiledString>FRQAAAABAAAAIAAAAEludmlzaWJpbGl0eV9GYWRlSW4AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+													<returnType>float</returnType>
+													<sString>cInvisibility_FadeIn</sString>
+												</fadeIn>
+												<formulaName>Invisibility</formulaName>
+												<ignoreCancel>false</ignoreCancel>
+												<lifeTime>
+													<compiledString>FRYAAAABAAAAIgAAAEludmlzaWJpbGl0eV9EdXJhdGlvbgBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+													<returnType>float</returnType>
+													<sString>cInvisibility_Duration</sString>
+												</lifeTime>
+												<LoggingEvent>-1</LoggingEvent>
+												<onBecomeInvisible href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="5138401A-3B24-4405-B361-2EB433B1A7EB">
+													<Spell>
+														<applicators>
+															<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="3906B6F1-0D5F-4739-935B-40B5711FA37D">
+																<FlagsApplicator>
+																	<applyTarget>ApplicatorTarget</applyTarget>
+																	<behaviorFlags>0</behaviorFlags>
+																	<caption></caption>
+																	<consumables />
+																	<effect>
+																		<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="FD8A46B5-3321-4B07-85FD-E1C5CB3F321D">
+																			<EffectSwitcher>
+																				<deathType>Manual</deathType>
+																				<effectOnInvisible href="/Effects/General/Invisible/DistortionEnemy.EFFT" />
+																				<effectOnVisible href="" />
+																				<enableCondition href="" />
+																				<isVisibleUnderWarfog>false</isVisibleUnderWarfog>
+																				<lifeTime>0</lifeTime>
+																				<logic>FactionVisibility</logic>
+																			</EffectSwitcher>
+																		</Item>
+																		<Item href="" />
+																	</effect>
+																	<enabled>
+																		<compiledString>FQ0AAAACAAAAGAAAAEAAAABJbnZpc2liaWxpdHkAVYvsUWoAi0UQUGgAAAAAi00MixGLTQyLgpwBAAD/0DtFEHQji00MixGLTQyLQkj/0NwdYgAAAN/g9sQFegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAOA/</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>(receiver.applInvisibility(GLOBAL) != pMisc) &amp;&amp; (rTimeStanding &lt; 0.5)</sString>
+																	</enabled>
+																	<flag>0</flag>
+																	<formulaName></formulaName>
+																	<lifeTime>
+																		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+																		<returnType>float</returnType>
+																		<sString>-1.0</sString>
+																	</lifeTime>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<startCondition>
+																		<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</startCondition>
+																	<talents />
+																	<useListAs>ListAsRule</useListAs>
+																</FlagsApplicator>
+															</Item>
+														</applicators>
+														<dispatch href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="EF9643CC-A672-468C-A388-445B289A4FEE">
+															<DispatchImmediate>
+																<alwaysApply>false</alwaysApply>
+																<applyEffect>
+																	<Item href="" />
+																	<Item href="" />
+																</applyEffect>
+																<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																<applyEffectOrientation>Default</applyEffectOrientation>
+																<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																<dieAfterApply>true</dieAfterApply>
+																<dispatchEffect>
+																	<Item href="" />
+																	<Item href="" />
+																</dispatchEffect>
+																<flags>0</flags>
+																<instantApply>false</instantApply>
+															</DispatchImmediate>
+														</dispatch>
+													</Spell>
+												</onBecomeInvisible>
+												<providerName></providerName>
+												<startCondition>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</startCondition>
+											</InvisibilityApplicator>
+										</Item>
+										<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="8D37A036-8E11-44C1-A149-1C5555B84C1F">
+											<UIMessageApplicator>
+												<applyTarget>ApplicatorTarget</applyTarget>
+												<caption> - FlyOff Message</caption>
+												<enabled>
+													<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</enabled>
+												<formulaName></formulaName>
+												<LoggingEvent>-1</LoggingEvent>
+												<message textref="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT_8d37a0368e1144c1a1491c5555b84c1f_message.txt" />
+												<providerName></providerName>
+												<uiEvent href="" />
+												<value>
+													<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+													<returnType>float</returnType>
+													<sString>-1.0</sString>
+												</value>
+											</UIMessageApplicator>
+										</Item>
+										<Item href="/Heroes/DefaultStatus/InvisFadeInFX.APLR" />
+									</applicators>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<behaviorFlags>144</behaviorFlags>
+									<caption>Статус "Маскировка" (Invisibility_Duration)</caption>
+									<customCounter>
+										<compiledString></compiledString>
+										<returnType>int</returnType>
+										<sString>0</sString>
+									</customCounter>
+									<customProgress>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</customProgress>
+									<description textref="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT_2ee394c3dfe44516944e1a4d9ce3148d_description.txt" />
+									<dispellPriority>High</dispellPriority>
+									<effect>
+										<Item href="/Effects/Buffs/Manoeuvre/_.EFFT" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString>FQAAAAAAAAAAVYvsaAAAAAiLRQyLEItNDItCaP/QD7bA99gbwIPAAV3D</compiledString>
+										<returnType>bool</returnType>
+										<sString>!rFlag(134217728)</sString>
+									</enabled>
+									<flags>0</flags>
+									<formulaName>StatusInvisibility</formulaName>
+									<image href="/UI/Styles/Icons/Statuses/Standard/Invis.ITEX" />
+									<lifeTime>
+										<compiledString>FRYAAAABAAAAIgAAAEludmlzaWJpbGl0eV9EdXJhdGlvbgBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+										<returnType>float</returnType>
+										<sString>cInvisibility_Duration</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<name textref="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT_2ee394c3dfe44516944e1a4d9ce3148d_name.txt" />
+									<power>0</power>
+									<providerName></providerName>
+									<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+									<stackCount>0</stackCount>
+									<startCondition>
+										<compiledString>FRkAAAACAAAAPwAAAFIAAABJbnZpc2libGVfU3RhcnRDb25kaXRpb24AVYvsUWgAAAAIi0UMixCLTQyLQmj/0A+2yIXJdTCLVQxSi0UIUGgAAAAAi00QixGLTRCLQlD/0NwddAAAAN/g9sREewnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+										<returnType>bool</returnType>
+										<sString>!rFlag(134217728) &amp;&amp; cInvisible_StartCondition</sString>
+									</startCondition>
+									<statusPosition>0</statusPosition>
+									<stopBehaviour>StopByAllChilds</stopBehaviour>
+									<unstackableWith href="" />
+								</StatusApplicator>
+							</Item>
+							<Item href="/Heroes/DefaultStatus/_HASTE_status.APLR" />
+						</applicators>
+						<dispatch href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="DFF00E7A-E23C-4F98-8861-041B8D54A734">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>AbilityOwner</spellTarget>
+				<targetSelector href="" />
+			</SpellApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="520A957A-9EAF-430E-932F-D12DC19B9D46">
+			<SpellApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Невидимость на всех</caption>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLQnj/0DPJg/gCD5/BisFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>mActivatedWithinKit &gt; 2</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<spell href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="29F356BF-C0A9-47C9-9CE8-BF20D2D15246">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="6645CDF8-C1A8-459B-81AB-768DBE743767">
+								<StatusApplicator>
+									<applicators>
+										<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="99385471-0D0D-4783-AE04-318DE9649F5A">
+											<InvisibilityApplicator>
+												<applyTarget>ApplicatorTarget</applyTarget>
+												<behaviorFlags>145</behaviorFlags>
+												<caption>собственно невидимость</caption>
+												<effect>
+													<Item href="/Effects/General/Invisible/_Switcher.EFFT" />
+													<Item href="" />
+												</effect>
+												<enabled>
+													<compiledString>FQAAAAACAAAABwAAACAAAABVi+xRUdkFSgAAANkcJItFDIsQi00Mi4KsAQAA/9DcHUIAAADf4PbEQXoJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAM3MTD4=</compiledString>
+													<returnType>bool</returnType>
+													<sString>receiver.GetDamageTaken(0.2) &lt;= 0</sString>
+												</enabled>
+												<fadeIn>
+													<compiledString>FRQAAAABAAAAIAAAAEludmlzaWJpbGl0eV9GYWRlSW4AVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+													<returnType>float</returnType>
+													<sString>cInvisibility_FadeIn</sString>
+												</fadeIn>
+												<formulaName>Invisibility</formulaName>
+												<ignoreCancel>false</ignoreCancel>
+												<lifeTime>
+													<compiledString>FRYAAAABAAAAIgAAAEludmlzaWJpbGl0eV9EdXJhdGlvbgBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+													<returnType>float</returnType>
+													<sString>cInvisibility_Duration</sString>
+												</lifeTime>
+												<LoggingEvent>-1</LoggingEvent>
+												<onBecomeInvisible href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="82BEEA69-9D76-4477-97FE-377BFBD4ECA9">
+													<Spell>
+														<applicators>
+															<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="500BF963-24D4-4D89-8CBB-431EFA5231C8">
+																<FlagsApplicator>
+																	<applyTarget>ApplicatorTarget</applyTarget>
+																	<behaviorFlags>0</behaviorFlags>
+																	<caption></caption>
+																	<consumables />
+																	<effect>
+																		<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="398DBB08-081B-4332-B88F-9BA2E2985C27">
+																			<EffectSwitcher>
+																				<deathType>Manual</deathType>
+																				<effectOnInvisible href="/Effects/General/Invisible/DistortionEnemy.EFFT" />
+																				<effectOnVisible href="" />
+																				<enableCondition href="" />
+																				<isVisibleUnderWarfog>false</isVisibleUnderWarfog>
+																				<lifeTime>0</lifeTime>
+																				<logic>FactionVisibility</logic>
+																			</EffectSwitcher>
+																		</Item>
+																		<Item href="" />
+																	</effect>
+																	<enabled>
+																		<compiledString>FQ0AAAACAAAAGAAAAEAAAABJbnZpc2liaWxpdHkAVYvsUWoAi0UQUGgAAAAAi00MixGLTQyLgpwBAAD/0DtFEHQji00MixGLTQyLQkj/0NwdYgAAAN/g9sQFegnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAOA/</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>(receiver.applInvisibility(GLOBAL) != pMisc) &amp;&amp; (rTimeStanding &lt; 0.5)</sString>
+																	</enabled>
+																	<flag>0</flag>
+																	<formulaName></formulaName>
+																	<lifeTime>
+																		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+																		<returnType>float</returnType>
+																		<sString>-1.0</sString>
+																	</lifeTime>
+																	<LoggingEvent>-1</LoggingEvent>
+																	<providerName></providerName>
+																	<startCondition>
+																		<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+																		<returnType>bool</returnType>
+																		<sString>true</sString>
+																	</startCondition>
+																	<talents />
+																	<useListAs>ListAsRule</useListAs>
+																</FlagsApplicator>
+															</Item>
+														</applicators>
+														<dispatch href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="96BA512F-9B6D-4EBE-81C4-321B2AAFA81B">
+															<DispatchImmediate>
+																<alwaysApply>false</alwaysApply>
+																<applyEffect>
+																	<Item href="" />
+																	<Item href="" />
+																</applyEffect>
+																<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+																<applyEffectOrientation>Default</applyEffectOrientation>
+																<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+																<dieAfterApply>true</dieAfterApply>
+																<dispatchEffect>
+																	<Item href="" />
+																	<Item href="" />
+																</dispatchEffect>
+																<flags>0</flags>
+																<instantApply>false</instantApply>
+															</DispatchImmediate>
+														</dispatch>
+													</Spell>
+												</onBecomeInvisible>
+												<providerName></providerName>
+												<startCondition>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</startCondition>
+											</InvisibilityApplicator>
+										</Item>
+										<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="B32F5089-1166-4368-9774-F6984E048B08">
+											<UIMessageApplicator>
+												<applyTarget>ApplicatorTarget</applyTarget>
+												<caption> - FlyOff Message</caption>
+												<enabled>
+													<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</enabled>
+												<formulaName></formulaName>
+												<LoggingEvent>-1</LoggingEvent>
+												<message textref="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT_b32f5089116643689774f6984e048b08_message.txt" />
+												<providerName></providerName>
+												<uiEvent href="" />
+												<value>
+													<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+													<returnType>float</returnType>
+													<sString>-1.0</sString>
+												</value>
+											</UIMessageApplicator>
+										</Item>
+										<Item href="/Heroes/DefaultStatus/InvisFadeInFX.APLR" />
+									</applicators>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<behaviorFlags>144</behaviorFlags>
+									<caption>Статус "Маскировка" (Invisibility_Duration)</caption>
+									<customCounter>
+										<compiledString></compiledString>
+										<returnType>int</returnType>
+										<sString>0</sString>
+									</customCounter>
+									<customProgress>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>-1.0</sString>
+									</customProgress>
+									<description textref="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT_6645cdf8c1a8459b81ab768dbe743767_description.txt" />
+									<dispellPriority>High</dispellPriority>
+									<effect>
+										<Item href="/Effects/Buffs/Manoeuvre/_.EFFT" />
+										<Item href="" />
+									</effect>
+									<enabled>
+										<compiledString>FQAAAAAAAAAAVYvsaAAAAAiLRQyLEItNDItCaP/QD7bA99gbwIPAAV3D</compiledString>
+										<returnType>bool</returnType>
+										<sString>!rFlag(134217728)</sString>
+									</enabled>
+									<flags>0</flags>
+									<formulaName>StatusInvisibility</formulaName>
+									<image href="/UI/Styles/Icons/Statuses/Standard/Invis.ITEX" />
+									<lifeTime>
+										<compiledString>FRYAAAABAAAAIgAAAEludmlzaWJpbGl0eV9EdXJhdGlvbgBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+										<returnType>float</returnType>
+										<sString>cInvisibility_Duration</sString>
+									</lifeTime>
+									<LoggingEvent>-1</LoggingEvent>
+									<name textref="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT_6645cdf8c1a8459b81ab768dbe743767_name.txt" />
+									<power>0</power>
+									<providerName></providerName>
+									<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+									<stackCount>0</stackCount>
+									<startCondition>
+										<compiledString>FRkAAAACAAAAPwAAAFIAAABJbnZpc2libGVfU3RhcnRDb25kaXRpb24AVYvsUWgAAAAIi0UMixCLTQyLQmj/0A+2yIXJdTCLVQxSi0UIUGgAAAAAi00QixGLTRCLQlD/0NwddAAAAN/g9sREewnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+										<returnType>bool</returnType>
+										<sString>!rFlag(134217728) &amp;&amp; cInvisible_StartCondition</sString>
+									</startCondition>
+									<statusPosition>0</statusPosition>
+									<stopBehaviour>StopByAllChilds</stopBehaviour>
+									<unstackableWith href="" />
+								</StatusApplicator>
+							</Item>
+							<Item href="/Heroes/DefaultStatus/_HASTE_status.APLR" />
+						</applicators>
+						<dispatch href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="73006585-027A-43D6-A9DC-7EEA93909045">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<spellTarget>ApplicatorTarget</spellTarget>
+				<targetSelector href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="F44AF4E1-C3CA-4DA2-A88E-C0C571972AFB">
+					<AreaTargetSelector>
+						<absolutePosition>
+							<x>0</x>
+							<y>0</y>
+						</absolutePosition>
+						<flags>0</flags>
+						<mode>Normal</mode>
+						<range>
+							<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange_Long</sString>
+						</range>
+						<targetFilter>1476395011</targetFilter>
+						<targetSelector href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="3A4A3D35-1B42-4A1E-93E7-E030882B0272">
+							<SelectApplicatorTarget>
+								<applicatorIndex>0</applicatorIndex>
+								<applicatorName></applicatorName>
+								<namedApplicatorTarget>ApplicatorSelectedTarget</namedApplicatorTarget>
+								<selectTarget>AbilityOwner</selectTarget>
+							</SelectApplicatorTarget>
+						</targetSelector>
+					</AreaTargetSelector>
+				</targetSelector>
+			</SpellApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="3B76EBAB-49CB-412B-A232-22479D623FE9">
+			<FlagsApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>AoE Effect</caption>
+				<consumables />
+				<effect>
+					<Item href="/Effects/Buffs/Manoeuvre/_Area.EFFT" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flag>0</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLQnj/0DPJg/gCD5/BisFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>mActivatedWithinKit &gt; 2</sString>
+				</startCondition>
+				<talents />
+				<useListAs>ListAsRule</useListAs>
+			</FlagsApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Redset8_4_TriggerShield/spell_G657_StatModSelf.APLR" />
+		<Item href="/Items/Talents/TalentKits/Redset8_4_TriggerShield/spell_G657_StatModAllies.APLR" />
+		<Item href="/Items/Talents/TalentKits/Redset8_4_TriggerShield/spell_G657_StatModEnemies.APLR" />
+	</applicators>
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G682: Поступь ворона</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations>
+		<Item href="/GameLogic/GeneralApplicators/CastLimitations/ForbiddenInvis.ABCL" />
+	</castLimitations>
+	<commonDescription textref="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="87C1324B-0ADD-43AB-AA56-2EEB72699C82">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLQnj/0DPJg/gCD5zBisFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>mActivatedWithinKit &lt; 2</sString>
+				</condition>
+				<name>InForma</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="C74E858A-E6BF-4072-A149-4DEDB2B71345">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLQnj/0DPJg/gDD5zBisFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>mActivatedWithinKit &lt; 3</sString>
+				</condition>
+				<name>AoE</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="8AD072DB-E976-4B3F-95C6-1415D603BE84">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="12262A2F-B416-4EB0-BF47-94C9CA3F7CA3">
+					<UnitConstant>
+						<name>Add_MoveSpeed</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>7</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="0AEF212A-4383-45B8-AEA6-A78C3283DDE8">
+					<UnitConstant>
+						<name>Add_MoveSpeed_Night</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="3C8C35A6-8D18-463A-BE55-8763E4137580">
+					<UnitConstant>
+						<name>NightSpeedBoost</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>5</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="057420BC-EE80-4039-9E92-CA15FA599FB3">
+					<UnitConstant>
+						<name>TECH_NightSpeed</name>
+						<var>
+							<compiledString>FSAAAAACAAAALwAAAEkAAABBZGRfTW92ZVNwZWVkAAAATmlnaHRTcGVlZEJvb3N0AFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoEAAAAItVEIsCi00Qi1BQ3V34/9LcRfjZXfTZRfSL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cAdd_MoveSpeed + cNightSpeedBoost</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="E13686ED-9D1B-44DF-9A3A-8C76587F3ACE">
+					<UnitConstant>
+						<name>TECH_NightSpeedBoost</name>
+						<var>
+							<compiledString>FSAAAAACAAAALwAAAEEAAABURUNIX05pZ2h0U3BlZWQAQWRkZWRfTW92ZVNwZWVkAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SaBAAAACLRQiLEItNCIuCiAEAAN1d+P/Q3G342V302UX0i+Vdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cTECH_NightSpeed - sender.vAdded_MoveSpeed</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Redset8_6_Invisible/const_Redset8_6_AddStat" />
+				<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="8CFF5907-3177-409A-9CE9-FB2E422FF44A">
+					<UnitConstant>
+						<name>Add_EnergyRegAbs</name>
+						<var>
+							<compiledString>FSgAAAADAAAANwAAAFEAAABxAAAAVDNfU3RhdABBZGRfTW92ZVNwZWVkAAAARW5lcmd5UmVnQnVkZ2V0AFWL7IPsFItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoCAAAAItVEIsCi00Qi1BQ3V34/9LcbfiLRQxQi00IUWgYAAAAi1UQiwKLTRCLUFDdXfD/0txN8Nld7NlF7IvlXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>(cT3_Stat - cAdd_MoveSpeed) * cEnergyRegBudget</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="67F510BE-6FC9-40CC-B778-D4C10AB2EE9E">
+					<UnitConstant>
+						<name>Invisibility_Duration</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACoQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>21</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="57B1C299-EDCA-40B4-BA42-6537E20F82A4">
+					<UnitConstant>
+						<name>Invisibility_FadeIn</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="68C2CBEA-B988-4E16-94EC-518712883911">
+					<UnitConstant>
+						<name>TT_Invisibility_Duration</name>
+						<var>
+							<compiledString>FSwAAAACAAAAOwAAAFUAAABJbnZpc2liaWxpdHlfRHVyYXRpb24AAABJbnZpc2liaWxpdHlfRmFkZUluAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoGAAAAItVEIsCi00Qi1BQ3V34/9LcbfjZXfTZRfSL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cInvisibility_Duration - cInvisibility_FadeIn</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="B579C4B2-403F-4EFA-96DA-5C0C2F85CDD2">
+					<UnitConstant>
+						<name>Haste_Percent</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>30</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="162452B6-8818-43EC-967A-302429709750">
+					<UnitConstant>
+						<name>Haste_Duration</name>
+						<var>
+							<compiledString>FRYAAAABAAAAIgAAAEludmlzaWJpbGl0eV9EdXJhdGlvbgBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cInvisibility_Duration</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="35F2E08C-3966-4584-8523-80454A442974">
+					<UnitConstant>
+						<name>Haste_Condition</name>
+						<var>
+							<compiledString>FQAAAAACAAAAHgAAADcAAABVi+xRi0UQixCLTRCLgpAAAAD/0A+2yIXJdDBR2QVhAAAA2Rwki1UMiwKLTQyLkKwBAAD/0twdWQAAAN/g9sRBegnHRfwBAAAA6wfHRfwAAAAA20X8i+VdwwAAAAAAAAAAzcxMPg==</compiledString>
+							<returnType>float</returnType>
+							<sString>mIsNight &amp;&amp; receiver.GetDamageTaken(0.2) &lt;= 0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADwQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>120</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="C6F12963-4014-4CD3-9C9C-D43D944ED050">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>19</flags>
+	<forceBonus>13.21</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_682.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>2</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="2CB9BB92-934F-4A62-8F54-677673B0C84A">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>RedSet8_6Counter</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>RedSet8_6Counter</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Redset8_6_Invisible/Program_Redset8_6_AspdOrDex.APLR" />
+		<Item href="/Items/Talents/_commonData/parent_MoveChange.APLR" />
+		<Item href="/Items/Talents/_commonData/AddedMoveSpeed.APLR" />
+		<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="0024C1BB-9E31-4551-BC13-C34C8C901F0B">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Установить G682_BonusSpeed на новую величину</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FRUAAAABAAAAIQAAAFRFQ0hfTmlnaHRTcGVlZEJvb3N0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+						<returnType>float</returnType>
+						<sString>cTECH_NightSpeedBoost</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>0.0f</sString>
+					</multValue>
+					<stat>Energy</stat>
+					<topModifier>false</topModifier>
+					<variable>G682_BonusSpeed</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="EFD3D8DA-3600-4912-A936-F48DBB78E2E6">
+			<StatusApplicator>
+				<applicators />
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>UI Статус "Ночь"</caption>
+				<customCounter>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</customCounter>
+				<customProgress>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</customProgress>
+				<description textref="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT_efd3d8da36004912a936f48dbb78e2e6_description.txt" />
+				<dispellPriority>NonDispellable</dispellPriority>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FSEAAAAEAAAAJgAAADwAAABQAAAAYwAAAEc2ODJfSXNPbgAAAFRFQ0hfTmlnaHRTcGVlZEJvb3N0AFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHYUAAADf4PbERHswi00MUYtVCFJoDAAAAItFEIsQi00Qi0JQ/9DcHYUAAADf4PbEQXUJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vG682_IsOn != 0 &amp;&amp; cTECH_NightSpeedBoost &gt; 0</sString>
+				</enabled>
+				<flags>0</flags>
+				<formulaName></formulaName>
+				<image href="/UI/Styles/Icons/Talents/_682.ITEX" />
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<name textref="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT_efd3d8da36004912a936f48dbb78e2e6_name.txt" />
+				<power>0</power>
+				<providerName></providerName>
+				<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+				<stackCount>0</stackCount>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<statusPosition>0</statusPosition>
+				<stopBehaviour>StopByTime</stopBehaviour>
+				<unstackableWith href="" />
+			</StatusApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="7C6B374A-0F72-4C98-96C0-B5EA7D7C6711">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>216</behaviorFlags>
+				<caption>Триггер "Я купил талант на Скорость!"</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQgAAAABAAAAEgAAAFRocm93VXAAVYvsagCLRRBQaAAAAACLTQiLEYtNCIuCnAEAAP/QM8k7RRAPlMGKwV3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.applThrowUp(GLOBAL) == pMisc</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="0DAADDE5-7F51-4BEA-B720-FF3782B5C7C9">
+					<EventProcessorCondition>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<condition>
+							<compiledString>FSUAAAACAAAALAAAAEkAAABHNjgyX0JvbnVzU3BlZWQAVEVDSF9OaWdodFNwZWVkQm9vc3QAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Qi00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ3V34/9DcXfjf4PbEBXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+							<returnType>bool</returnType>
+							<sString>sender.vG682_BonusSpeed &gt; cTECH_NightSpeedBoost</sString>
+						</condition>
+						<events>8192</events>
+						<onlyParent>false</onlyParent>
+						<spell href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="ED3447A0-26C6-4288-8BAF-B1E30EE37D3D">
+							<Spell>
+								<applicators>
+									<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="6DFA08E8-468B-48CF-840C-FC16D2BCAB16">
+										<PermanentStatModApplicator>
+											<applyTarget>AbilityOwner</applyTarget>
+											<caption>Add_MoveSpeed</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString>FQoAAAACAAAADwAAACUAAABHNjgyX0lzT24AVYvsUWgAAAAAi0UIixCLTQiLgogBAAD/0NwdRwAAAN/g9sREewnHRfwBAAAA6wfHRfwAAAAAikX8i+VdwwAAAAAAAAAA</compiledString>
+												<returnType>bool</returnType>
+												<sString>sender.vG682_IsOn != 0</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FSUAAAACAAAALAAAAEkAAABHNjgyX0JvbnVzU3BlZWQAVEVDSF9OaWdodFNwZWVkQm9vc3QAVYvsg+wMaAAAAACLRQiLEItNCIuCiAEAAP/Qi00MUYtVCFJoEAAAAItFEIsQi00Qi0JQ3V34/9DcbfjZ4Nld9NlF9IvlXcM=</compiledString>
+													<returnType>float</returnType>
+													<sString>-(sender.vG682_BonusSpeed - cTECH_NightSpeedBoost)</sString>
+												</addValue>
+												<multValue>
+													<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+													<returnType>float</returnType>
+													<sString>1</sString>
+												</multValue>
+												<stat>MoveSpeed</stat>
+												<topModifier>false</topModifier>
+												<variable></variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+									<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="5BAF47ED-E910-405F-83A8-C96B0E80659E">
+										<PermanentStatModApplicator>
+											<applyTarget>ApplicatorTarget</applyTarget>
+											<caption>Установить G682_BonusSpeed на новую величину</caption>
+											<customApplyType>None</customApplyType>
+											<enabled>
+												<compiledString></compiledString>
+												<returnType>bool</returnType>
+												<sString>true</sString>
+											</enabled>
+											<formulaName></formulaName>
+											<LoggingEvent>-1</LoggingEvent>
+											<modifier>
+												<addValue>
+													<compiledString>FRUAAAABAAAAIQAAAFRFQ0hfTmlnaHRTcGVlZEJvb3N0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+													<returnType>float</returnType>
+													<sString>cTECH_NightSpeedBoost</sString>
+												</addValue>
+												<multValue>
+													<compiledString></compiledString>
+													<returnType>float</returnType>
+													<sString>0.0f</sString>
+												</multValue>
+												<stat>Life</stat>
+												<topModifier>false</topModifier>
+												<variable>G682_BonusSpeed</variable>
+											</modifier>
+											<providerName></providerName>
+										</PermanentStatModApplicator>
+									</Item>
+								</applicators>
+								<dispatch href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="BB52FC4B-E4B6-49D9-92B4-7AD73EFA1B2B">
+									<DispatchImmediate>
+										<alwaysApply>false</alwaysApply>
+										<applyEffect>
+											<Item href="" />
+											<Item href="" />
+										</applyEffect>
+										<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+										<applyEffectOrientation>Default</applyEffectOrientation>
+										<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+										<dieAfterApply>true</dieAfterApply>
+										<dispatchEffect>
+											<Item href="" />
+											<Item href="" />
+										</dispatchEffect>
+										<flags>0</flags>
+										<instantApply>true</instantApply>
+									</DispatchImmediate>
+								</dispatch>
+							</Spell>
+						</spell>
+					</EventProcessorCondition>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/Applicators/trigger_G682_Night.APLR" />
+		<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="974804F0-43DF-4D64-BFE1-545D4788FE90">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>+ EnergyRegAbs</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FREAAAABAAAAHQAAAEFkZF9FbmVyZ3lSZWdBYnMAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_EnergyRegAbs</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>EnergyRegenerationAbsolute</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" id="5545C739-0C2B-41BE-AC3A-B57190688F70">
+			<FlagsApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Запрет использовать талант, если нет 3</caption>
+				<consumables />
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvsi0UQixCLTRCLQnj/0DPJg/gCD5zBisFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>mActivatedWithinKit &lt; 2</sString>
+				</enabled>
+				<flag>1024</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents>
+					<Item href="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT" />
+				</talents>
+				<useListAs>ListAsRule</useListAs>
+			</FlagsApplicator>
+		</Item>
+	</passiveApplicators>
+	<persistentId>G682</persistentId>
+	<prerequisiteTalents />
+	<rarity>exclusive</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G682_MoveSpeed_Night.TALENT_shortDescription.txt" />
+	<talentRollGroups>16</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>EnergyRegenerationAbsolute</stat>
+			<values>
+				<Item>1.65</Item>
+				<Item>2.09</Item>
+				<Item>2.53</Item>
+				<Item>2.97</Item>
+				<Item>3.41</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>0</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQsAAAABAAAAFwAAAFJhbmdlX0xvbmcAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+		<returnType>float</returnType>
+		<sString>cRange_Long</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

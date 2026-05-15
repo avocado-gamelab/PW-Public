@@ -1,8 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ProgramApplicator>
-	<BackLink DBID="/Items/Talents/Class/Demonolog/Ability2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Demonolog/Ability_A2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Demonolog/SummonTrap.APLR" Count="1" />
 	<applicators>
+		<Item>
+			<applicator href="/Items/Talents/Class/Demonolog/ProgrammaRootAndSilence.APLR" id="AC36DEAF-6AC0-4B0C-9A36-AB29ABC99FCD">
+				<DamageApplicator parent="/Heroes/DefaultStatus/FakeDamage.APLR">
+					<applyTarget>PrevApplicatorTarget</applyTarget>
+				</DamageApplicator>
+			</applicator>
+			<continueCondition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</continueCondition>
+			<continueEvents>1</continueEvents>
+			<delay>
+				<compiledString></compiledString>
+				<returnType>float</returnType>
+				<sString>-1.0</sString>
+			</delay>
+			<stopCondition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>0</sString>
+			</stopCondition>
+			<stopEvents>0</stopEvents>
+		</Item>
 		<Item>
 			<applicator href="/Items/Talents/Class/Demonolog/ProgrammaRootAndSilence.APLR" id="FB5024F0-7AE5-4F80-AAF5-E3FA99A8C87F">
 				<SpellApplicator>

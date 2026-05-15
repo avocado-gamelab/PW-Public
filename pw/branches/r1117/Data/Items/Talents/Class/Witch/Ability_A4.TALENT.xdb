@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Witch.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Witch_US.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Witch.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Witch_US.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Witch/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Witch/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Witch/Ability_A4u.TALENT" Count="1" />
@@ -33,6 +33,7 @@
 	</aoeSize>
 	<aoeType>None</aoeType>
 	<applicators>
+		<Item href="/Heroes/DefaultStatus/FakeDamage.APLR" />
 		<Item href="/Items/Talents/Class/Witch/status_A4_FragileCurse.APLR" />
 		<Item href="/Heroes/DefaultStatus/_PANIC_status.APLR" />
 	</applicators>
@@ -58,8 +59,8 @@
 		</Item>
 	</castLimitations>
 	<commonDescription textref="/Items/Talents/Class/Witch/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Witch/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Witch/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Witch/Ability_A4.TALENT" id="FAC0F768-C8DD-496C-91EF-36E26E29B5F7">
 			<ConditionFormula>
@@ -200,7 +201,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>11</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Witch/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

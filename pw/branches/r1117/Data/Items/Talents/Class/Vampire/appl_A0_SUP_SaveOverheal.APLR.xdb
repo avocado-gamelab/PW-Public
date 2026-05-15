@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PermanentStatModApplicator>
+	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Vampire/A2_BlinkToTarget.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Vampire/Ability_A4_2.TALENT" Count="1" />
+	<BackLink DBID="/Heroes/Vampire/_.HROB" Count="1" />
+	<applyTarget>AbilityOwner</applyTarget>
+	<caption>Запоминаем оверхил от единичного урона</caption>
+	<customApplyType>None</customApplyType>
+	<enabled>
+		<compiledString>FRYAAAABAAAAIAAAAFZhbXBpcmVfRXRlcm5hbEh1bmdlcgBVi+xqAYtFEFBoAAAAAItNCIsRi00Ii4KcAQAA/9AzyTtFEA+VwYrBXcM=</compiledString>
+		<returnType>bool</returnType>
+		<sString>sender.applVampire_EternalHunger(UNIT) != pMisc</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<LoggingEvent>-1</LoggingEvent>
+	<modifier>
+		<addValue>
+			<compiledString>FUcAAAAFAAAAZgAAAKgAAAC9AAAA1gAAAPQAAABkYW1hZ2VEZWFsZWQAAAAAQTBfTGlmZURyYWluUGVyY2VudABBMF9TVVBfSGVhbFNoaWVsZENvbnZlcnNpb25QZXJjZW50AFWL7IPsLItFEIsQi00Qi0JI/9CJRfyLTQxRi1UIUmgkAAAAi0UQixCLTRCLQlD/0FHZ7tkcJItNDIsRi00MiwLdXfT/0ItNDIsRi00Mi0IM3V3s/9DcZeyLTQxRi1UIUmgQAAAAi0UQixCLTRCLQlDdXeT/0GgAAAAAi038ixGLTfyLQlTdXdz/0NxN3Nw1CgEAANxl5Nld2NlF2FHZHCToKgAAAIPECNxN9NwNAgEAANld1NlF1IvlXcN7FK5H4XqEPwAAAAAAAFlAAAAAAFWL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+			<returnType>float</returnType>
+			<sString>max(appl.parent.GetVariable("damageDealed") * cA0_LifeDrainPercent / 100 - (rMaxLife - rLife), 0) * cA0_SUP_HealShieldConversionPercent * 0.01</sString>
+		</addValue>
+		<multValue>
+			<compiledString></compiledString>
+			<returnType>float</returnType>
+			<sString>1.0f</sString>
+		</multValue>
+		<stat>Life</stat>
+		<topModifier>false</topModifier>
+		<variable>Vampire_BloodShield</variable>
+	</modifier>
+	<providerName></providerName>
+</PermanentStatModApplicator>

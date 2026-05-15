@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
-	<BackLink DBID="/Items/Talents/Class/Frogenglut/Ability_A0_SUP.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Frogenglut.TALENTSET" Count="1" />
 	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Frogenglut.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Frogenglut/Ability_A0_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -33,8 +33,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Frogenglut/Ability_A2_SUP.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Frogenglut/Ability_A2_SUP.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Frogenglut/Ability_A2_SUP.TALENT" id="45BD443E-AEA9-41AC-AF7D-CAFB431FA19B">
 			<ConditionFormula>
@@ -69,7 +69,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>22.7</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Frogenglut/A2_SUP.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -91,7 +91,7 @@
 	<passiveApplicators />
 	<persistentId>Frogenglut_A2_SUP</persistentId>
 	<prerequisiteTalents>
-		<Item href="/Items/Talents/Class/Frogenglut/Ability2.TALENT" />
+		<Item href="/Items/Talents/Class/Frogenglut/Ability_A2.TALENT" />
 	</prerequisiteTalents>
 	<rarity>Class</rarity>
 	<requireLineOfSight>true</requireLineOfSight>

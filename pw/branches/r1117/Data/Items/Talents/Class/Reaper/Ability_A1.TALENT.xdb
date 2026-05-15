@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Reaper.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Reaper_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Reaper.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Reaper_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Reaper_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Reaper/Ability_A1.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Reaper/Ability_A1_SUP.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Reaper/Ability_A1u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Reaper_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Reaper/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Reaper/Epic_Str.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Class/Reaper/Ability_A1_SUP.TALENT" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -859,8 +859,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Reaper/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Reaper/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Reaper/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Reaper/Ability_A1.TALENT" id="F642735A-DC3D-432E-B69D-8BF52B6EF6B4">
 			<ConditionFormula>
@@ -1029,7 +1029,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>583</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Reaper/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

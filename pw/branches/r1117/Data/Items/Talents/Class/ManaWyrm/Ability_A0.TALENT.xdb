@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Manawyrm.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Manawyrm/Duel.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Manawyrm/Elite.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Manawyrm/Epic.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Manawyrm_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Manawyrm.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Manawyrm_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/ManaWyrm/Ability_A0_SUP.TALENT" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А0. Лорд Эфира</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="E9FF389C-6970-459B-966F-1F71DAB3DF24">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FTgAAAAEAAAAPwAAAFgAAACOAAAApwAAAE1hbmFXeXJtX0E0dQAAAABNYW5hV3lybV9BNHUAAAAATWFuYVd5cm1fQTQATWFuYVd5cm1fQTQAVYvsg+wUaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgQAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0WGggAAAAi1UIiwKLTQiLkKgBAAD/0oXAdCpoLAAAAItFCIsQi00Ii4KoAQAA/9CJRfSLTfSLEYtN9ItCBP/QiEXz6wTGRfMAD7ZN84XJdAnHRewAAAAA6wfHRewBAAAAikXsi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("ManaWyrm_A4u") == false || tal("ManaWyrm_A4") == false</sString>
+				</condition>
+				<name>ManaWyrm_A4u</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="0B63E8B6-0662-44C7-AD9A-744C0C65E5C9">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FSAAAAACAAAAJwAAAEAAAABNYW5hV3lybV9BMF9TVVAATWFuYVd5cm1fQTBfU1VQAFWL7IPsCGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZF+/fYG8CDwAGL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("ManaWyrm_A0_SUP") == false</sString>
+				</condition>
+				<name>ManaWyrm_A0_SUP</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="AC0730E8-BA00-49EA-8892-369C3DAC74A3">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="7A007219-F70F-487E-89FB-B528A4033EE3">
+					<UnitConstant>
+						<name>A0_EnergyDamageIncreasePercent</name>
+						<var>
+							<compiledString>FSAAAAACAAAAJwAAAEAAAABNYW5hV3lybV9BMF9TVVAATWFuYVd5cm1fQTBfU1VQAFWL7IPsDGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+/fZG8mD4QeDwQqJTfTbRfSL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>tal("ManaWyrm_A0_SUP")? 17 : 10</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="74C6FB71-44E1-45AA-84AE-DAC00F16A2BF">
+					<UnitConstant>
+						<name>A0_Range</name>
+						<var>
+							<compiledString>FQ0AAAABAAAAGQAAAFJhbmdlX0V4TG9uZwBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cRange_ExLong</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="6F7019CD-3468-4B90-83EC-DB86F895BDD6">
+					<UnitConstant>
+						<name>A0_EnemyHeroes</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>20</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="59A45C25-2F05-4C9F-ABBA-C4A9A1334B96">
+					<UnitConstant>
+						<name>A0_AddMaxEnergy</name>
+						<var>
+							<compiledString>FRsAAAADAAAAJgAAADAAAABlAAAAQTNfU1VQX01heEVuZXJneU11bHRpcGxpZXIAVYvsg+wMagFR2QWKAAAA2RwkUdkFhgAAANkcJGoAi0UIixCLTQiLgjQBAAD/0FHZHCRqAYtNEIsRi00Qi0Jg/9CLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlDdXfj/0NxN+Nld9NlF9IvlXcMAAJhBAAAPQw==</compiledString>
+							<returnType>float</returnType>
+							<sString>damageScale(sIntellect,19,143) * cA3_SUP_MaxEnergyMultiplier</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/ManaWyrm/const_A0_MaxStacks" />
+				<Item href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="F5DACB18-53C2-462B-B302-CD6BDC945F55">
+					<UnitConstant>
+						<name>A0_TotalEnergy</name>
+						<var>
+							<compiledString>FS8AAAADAAAAPgAAAFgAAABxAAAAQTBfQWRkTWF4RW5lcmd5AEEwX01heFN0YWNrAE1hbmFXeXJtX0EwX0VmZmVjdABVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBAAAACLVRCLAotNEItQUN1d+P/SUdkcJGgcAAAAi0UIixCLTQiLgogBAAD/0FHZHCToEAAAAIPECNxN+Nld9NlF9IvlXcNVi+xR2UUI2UUM3tnf4PbEQXUI2UUI2V386wbZRQzZXfzZRfyL5V3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cA0_AddMaxEnergy * min( sender.vManaWyrm_A0_Effect, cA0_MaxStack)</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/ManaWyrm/const_A4u_TotalBonusBurn" />
+				<Item href="/Items/Talents/Class/ManaWyrm/const_A4u_BonusBurnEnergy" />
+				<Item href="/Items/Talents/Class/ManaWyrm/const_A3_SUP_AddMaxHp" />
+				<Item href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="FBC87CE6-F795-4D76-B200-39FD18D8960F">
+					<UnitConstant>
+						<name>A3_SUP_MaxEnergyMultiplier</name>
+						<var>
+							<compiledString>FTQAAAAEAAAAOwAAAFQAAACKAAAApwAAAEEzX1NVUF9BZGRNYXhFbmVyZ3kATWFuYVd5cm1fQTNfU1VQAE1hbmFXeXJtX0EzX1NVUABVi+yD7BBoFAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaCQAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AItNDFGLVQhSaAAAAACLRRCLEItNEItCUP/QD7ZN+4lN9NpN9NwNwQAAANno3sHZXfDZRfCL5V3DAAAAAAAA8D97FK5H4XqEPw==</compiledString>
+							<returnType>float</returnType>
+							<sString>(1 + (cA3_SUP_AddMaxEnergy * tal("ManaWyrm_A3_SUP") * 0.01))</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/ManaWyrm/const_A0_SUP_BonusStacks" />
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>1</flags>
+	<forceBonus>6.85</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/ManaWyrm/A0.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>true</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>0</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>0</naftaCost>
+	<name textref="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="AC202E19-F780-4E06-A12C-E58539D3CFEA">
+			<AuraApplicator>
+				<applicators>
+					<Item href="/Items/Talents/Class/ManaWyrm/status_A0_Ether_Lord.APLR" />
+				</applicators>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Аура, раздающая статус</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<range>
+					<compiledString>FQkAAAABAAAAFQAAAEEwX1JhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+					<returnType>float</returnType>
+					<sString>cA0_Range</sString>
+				</range>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<targets>538705983</targets>
+				<targetSelector href="" />
+				<type>Enemy</type>
+			</AuraApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="5C189222-6C68-4608-8465-44EA6D046072">
+			<TriggerApplicator>
+				<actionsCount>
+					<compiledString></compiledString>
+					<returnType>int</returnType>
+					<sString>0</sString>
+				</actionsCount>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>0</behaviorFlags>
+				<caption>Триггер на убийство героя</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FSAAAAACAAAAJwAAAEQAAABNYW5hV3lybV9BMF9FZmZlY3QAAEEwX01heFN0YWNrAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaBQAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xEF1CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vManaWyrm_A0_Effect &lt; cA0_MaxStack</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>-1.0</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<playAck>false</playAck>
+				<processor href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="E5123C22-C5C3-4675-94FB-152F8B915952">
+					<EventProcessorGroup>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<processors>
+							<Item href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="C82D6CEC-5674-41FB-B761-170D32A5483B">
+								<EventProcessorUnitDieNearMe>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<checkSender>0</checkSender>
+									<killerFlags>9</killerFlags>
+									<range>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</range>
+									<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+									<spell href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="25D4161A-03AA-4416-B02C-5228CD812437">
+										<Spell>
+											<applicators>
+												<Item href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="E910E11F-E1C3-42C4-A96E-E78E51A97D4E">
+													<PermanentStatModApplicator>
+														<applyTarget>AbilityOwner</applyTarget>
+														<caption>ManaWyrm_A0_Effect</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString>FSAAAAACAAAAJwAAAEQAAABNYW5hV3lybV9BMF9FZmZlY3QAAEEwX01heFN0YWNrAFWL7IPsDGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaBQAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xEF1CcdF9AEAAADrB8dF9AAAAACKRfSL5V3D</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vManaWyrm_A0_Effect &lt; cA0_MaxStack</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</addValue>
+															<multValue>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</multValue>
+															<stat>Life</stat>
+															<topModifier>false</topModifier>
+															<variable>ManaWyrm_A0_Effect</variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="6618638E-431B-4FF1-A477-345B13011EC7">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+									<targets>536870915</targets>
+								</EventProcessorUnitDieNearMe>
+							</Item>
+							<Item href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="B5CC05CB-E84B-489C-A6D3-C491D3905992">
+								<EventProcessorUnitDieNearMe>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<checkSender>0</checkSender>
+									<killerFlags>9</killerFlags>
+									<range>
+										<compiledString></compiledString>
+										<returnType>float</returnType>
+										<sString>0.0f</sString>
+									</range>
+									<senderMatchTarget>ApplicatorTarget</senderMatchTarget>
+									<spell href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="E54D0D06-831D-4B5B-B830-3013EB795D28">
+										<Spell>
+											<applicators>
+												<Item href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="887E815A-663F-448A-8719-9057BA33A8A0">
+													<PermanentStatModApplicator>
+														<applyTarget>AbilityOwner</applyTarget>
+														<caption>ManaWyrm_A0_CreepInc</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString>FScAAAACAAAALgAAAEsAAABNYW5hV3lybV9BMF9DcmVlcEluYwAAAABBMF9FbmVteUhlcm9lcwBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9CLTQxRi1UIUmgYAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBdQnHRfQBAAAA6wfHRfQAAAAAikX0i+Vdww==</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vManaWyrm_A0_CreepInc &lt; cA0_EnemyHeroes</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</addValue>
+															<multValue>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</multValue>
+															<stat>Life</stat>
+															<topModifier>false</topModifier>
+															<variable>ManaWyrm_A0_CreepInc</variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+												<Item href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="F5007CEA-1B98-4F5D-984A-5FD878DC9EAA">
+													<PermanentStatModApplicator>
+														<applyTarget>AbilityOwner</applyTarget>
+														<caption>ManaWyrm_A0_Effect</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString>FUgAAAAEAAAATwAAAGwAAACLAAAAqAAAAE1hbmFXeXJtX0EwX0NyZWVwSW5jAAAAAEEwX0VuZW15SGVyb2VzAABNYW5hV3lybV9BMF9FZmZlY3QAAEEwX01heFN0YWNrAFWL7IPsFGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaBgAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xEF6RWgoAAAAi00IixGLTQiLgogBAAD/0ItNDFGLVQhSaDwAAACLRRCLEItNEItCUN1d8P/Q3F3w3+D2xEF1CcdF7AEAAADrB8dF7AAAAACKReyL5V3D</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vManaWyrm_A0_CreepInc &gt;= cA0_EnemyHeroes &amp;&amp; sender.vManaWyrm_A0_Effect &lt; cA0_MaxStack</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</addValue>
+															<multValue>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>1.0f</sString>
+															</multValue>
+															<stat>Life</stat>
+															<topModifier>false</topModifier>
+															<variable>ManaWyrm_A0_Effect</variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+												<Item href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="C45061DE-FD77-445D-9F17-01F34105742E">
+													<PermanentStatModApplicator>
+														<applyTarget>AbilityOwner</applyTarget>
+														<caption>ManaWyrm_A0_CreepInc = 0</caption>
+														<customApplyType>None</customApplyType>
+														<enabled>
+															<compiledString>FUgAAAAEAAAATwAAAGwAAACLAAAAqAAAAE1hbmFXeXJtX0EwX0NyZWVwSW5jAAAAAEEwX0VuZW15SGVyb2VzAABNYW5hV3lybV9BMF9FZmZlY3QAAEEwX01heFN0YWNrAFWL7IPsFGgAAAAAi0UIixCLTQiLgogBAAD/0ItNDFGLVQhSaBgAAACLRRCLEItNEItCUN1d+P/Q3F343+D2xEF6RWgoAAAAi00IixGLTQiLgogBAAD/0ItNDFGLVQhSaDwAAACLRRCLEItNEItCUN1d8P/Q3F3w3+D2xEF1CcdF7AEAAADrB8dF7AAAAACKReyL5V3D</compiledString>
+															<returnType>bool</returnType>
+															<sString>sender.vManaWyrm_A0_CreepInc &gt;= cA0_EnemyHeroes &amp;&amp; sender.vManaWyrm_A0_Effect &lt; cA0_MaxStack</sString>
+														</enabled>
+														<formulaName></formulaName>
+														<LoggingEvent>-1</LoggingEvent>
+														<modifier>
+															<addValue>
+																<compiledString></compiledString>
+																<returnType>float</returnType>
+																<sString>0.0f</sString>
+															</addValue>
+															<multValue>
+																<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+																<returnType>float</returnType>
+																<sString>0.0f</sString>
+															</multValue>
+															<stat>Life</stat>
+															<topModifier>false</topModifier>
+															<variable>ManaWyrm_A0_CreepInc</variable>
+														</modifier>
+														<providerName></providerName>
+													</PermanentStatModApplicator>
+												</Item>
+											</applicators>
+											<dispatch href="/Items/Talents/Class/ManaWyrm/Ability_A0.TALENT" id="B7B82506-A445-4B6A-A469-55EB6E33C743">
+												<DispatchImmediate>
+													<alwaysApply>false</alwaysApply>
+													<applyEffect>
+														<Item href="" />
+														<Item href="" />
+													</applyEffect>
+													<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+													<applyEffectOrientation>Default</applyEffectOrientation>
+													<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+													<dieAfterApply>true</dieAfterApply>
+													<dispatchEffect>
+														<Item href="" />
+														<Item href="" />
+													</dispatchEffect>
+													<flags>0</flags>
+													<instantApply>false</instantApply>
+												</DispatchImmediate>
+											</dispatch>
+										</Spell>
+									</spell>
+									<targets>538705980</targets>
+								</EventProcessorUnitDieNearMe>
+							</Item>
+						</processors>
+						<spell href="" />
+					</EventProcessorGroup>
+				</processor>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<useAbilityCooldown>false</useAbilityCooldown>
+				<useAbilityOwnerMana>false</useAbilityOwnerMana>
+			</TriggerApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/ManaWyrm/status_A0_Ether_Lord_Energy.APLR" />
+	</passiveApplicators>
+	<persistentId>ManaWyrm_A0</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>1073741824</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQkAAAABAAAAFQAAAEEwX1JhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+		<returnType>float</returnType>
+		<sString>cA0_Range</sString>
+	</useRange>
+	<useRangeMaterial href="/Effects/UI/AOESelection/Radius.MTRL" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

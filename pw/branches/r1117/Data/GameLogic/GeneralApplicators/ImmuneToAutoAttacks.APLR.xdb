@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
-	<BackLink DBID="/Creeps/Champions/Champion3/PvE_Coop1_Tank.CREEP" Count="1" />
 	<applicators>
-		<Item href="/GameLogic/GeneralApplicators/ImmuneToAutoAttacks.APLR" id="C4807BFA-8BDF-4218-B1BC-B2E905879B9A">
+		<Item href="/GameLogic/GeneralApplicators/ImmuneToAutoAttacks.APLR" id="BF2E02B1-1553-4691-B8D3-023C24CCA0BF">
 			<TriggerApplicator>
 				<actionsCount>
 					<compiledString></compiledString>
 					<returnType>int</returnType>
 					<sString>0</sString>
 				</actionsCount>
-				<applyTarget>AbilityOwner</applyTarget>
+				<applyTarget>ApplicatorTarget</applyTarget>
 				<behaviorFlags>0</behaviorFlags>
 				<caption></caption>
 				<effect>
@@ -29,7 +28,7 @@
 				</lifeTime>
 				<LoggingEvent>-1</LoggingEvent>
 				<playAck>false</playAck>
-				<processor href="/GameLogic/GeneralApplicators/ImmuneToAutoAttacks.APLR" id="EBD9E368-D505-40CA-8C7A-DDDA7418D910">
+				<processor href="/GameLogic/GeneralApplicators/ImmuneToAutoAttacks.APLR" id="0D9B7765-6831-4CA0-86FD-F8126B1970AB">
 					<EventProcessorDamageTransformer>
 						<abilityFilter>
 							<abilitiesList />
@@ -77,7 +76,7 @@
 	</applicators>
 	<applyTarget>ApplicatorTarget</applyTarget>
 	<behaviorFlags>0</behaviorFlags>
-	<caption></caption>
+	<caption>ImmuneToAA</caption>
 	<customCounter>
 		<compiledString></compiledString>
 		<returnType>int</returnType>

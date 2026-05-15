@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
-	<BackLink DBID="/Glyphs/Booster.GLPH" Count="1" />
 	<BackLink DBID="/Glyphs/BoosterAfterKill.GLPH" Count="1" />
 	<BackLink DBID="/Glyphs/BoosterOld.GLPH" Count="1" />
 	<BackLink DBID="/Glyphs/PvE_Coop1_Booster.GLPH" Count="1" />
@@ -16,7 +15,7 @@
 				<constraint>None</constraint>
 				<dontUpdate>false</dontUpdate>
 				<effect>
-					<Item href="/Effects/Buffs/SpeedingUp/_MoveAndAttack.EFFT" />
+					<Item href="" />
 					<Item href="" />
 				</effect>
 				<enabled>
@@ -120,7 +119,7 @@
 	<description textref="/Heroes/DefaultStatus/_QUICKNESS_status_high.APLR_description.txt" />
 	<dispellPriority>High</dispellPriority>
 	<effect>
-		<Item href="" />
+		<Item href="/Effects/Buffs/SpeedingUp/_MoveAndAttack.EFFT" />
 		<Item href="" />
 	</effect>
 	<enabled>
@@ -132,9 +131,9 @@
 	<formulaName>HasteStatus</formulaName>
 	<image href="/UI/Styles/Icons/Statuses/Standard/Haste.ITEX" />
 	<lifeTime>
-		<compiledString>FUMAAAAFAAAASgAAAGAAAAB0AAAAjgAAALMAAABSZWRzZXQ3XzdDb3VudGVyAAAAAEhhc3RlX0R1cmF0aW9uAABFeHRyYUR1cmF0aW9uAAAASGFzdGVfRHVyYXRpb24AVYvsg+wUaAAAAACLRQyLEItNDIuCiAEAAP/Q3B3UAAAA3+D2xAF1P4tNDFGLVQhSaBQAAACLRRCLEItNEItCUP/Qi00MUYtVCFJoJAAAAItFEIsQi00Qi0JQ3V34/9DcRfjdXfDrHYtNDFGLVQhSaDQAAACLRRCLEItNEItCUP/Q3V3w3UXw2V3s2UXsi+VdwwAAAAAAAPA/</compiledString>
+		<compiledString>FUMAAAAFAAAASgAAAGAAAAB0AAAAjgAAALMAAABSZWRzZXQ3XzdDb3VudGVyAAAAAEhhc3RlX0R1cmF0aW9uAABFeHRyYUR1cmF0aW9uAAAASGFzdGVfRHVyYXRpb24AVYvsg+wUaAAAAACLRQyLEItNDIuCiAEAAP/Q3B3UAAAA3+D2xAF1P4tNDFGLVQhSaBQAAACLRRCLEItNEItCUP/Qi00MUYtVCFJoJAAAAItFEIsQi00Qi0JQ3V34/9DcRfjdXfDrHYtNDFGLVQhSaDQAAACLRRCLEItNEItCUP/Q3V3w3UXw2V3s2UXsi+VdwwAAAAAAAAhA</compiledString>
 		<returnType>float</returnType>
-		<sString>receiver.vRedset7_7Counter &gt;= 1? cHaste_Duration + cExtraDuration : cHaste_Duration</sString>
+		<sString>receiver.vRedset7_7Counter &gt;= 3? cHaste_Duration + cExtraDuration : cHaste_Duration</sString>
 	</lifeTime>
 	<LoggingEvent>-1</LoggingEvent>
 	<name textref="/Heroes/DefaultStatus/_QUICKNESS_status_high.APLR_name.txt" />

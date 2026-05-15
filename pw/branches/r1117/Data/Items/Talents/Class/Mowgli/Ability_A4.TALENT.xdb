@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/SocialTest.ROOT" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Mowgli.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Mowgli/Ability_A4_2.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Mowgli/Ability_A4_2Upg.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Mowgli/Ability_A4_Upg.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Mowgli_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mowgli/Duel_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mowgli/Duel_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mowgli/Elite_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mowgli/Elite_Str.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mowgli/Epic_Int.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Mowgli/Epic_Str.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators>
+		<Item href="/Items/Talents/Class/Mowgli/Ability_A4.TALENT" id="795612F1-D79D-43B1-BA5A-4B1488FC9DE4">
+			<FlagsApplicator>
+				<applyTarget>AbilityOwner</applyTarget>
+				<behaviorFlags>1</behaviorFlags>
+				<caption></caption>
+				<consumables />
+				<effect>
+					<Item href="/Heroes/Mowgli/FXAbility4.EFFT" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<flag>0</flag>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+					<returnType>float</returnType>
+					<sString>1</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<providerName></providerName>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<talents />
+				<useListAs>ListAsRule</useListAs>
+			</FlagsApplicator>
+		</Item>
+		<Item href="/Items/Talents/Class/Mowgli/status_A4_GreatHunt.APLR" />
+		<Item href="/Items/Talents/Class/Mowgli/A4_GreatHunt.APLR" />
+		<Item href="/Items/Talents/Class/Mowgli/A4_Pursue.APLR" />
+		<Item href="/Items/Talents/Class/Mowgli/RecastSupport.APLR" />
+		<Item href="/Heroes/DefaultStatus/QuicknessFlyoff.APLR" />
+	</applicators>
+	<askId>4</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>А4. Великая охота</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Class/Mowgli/Ability_A4.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Mowgli/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Mowgli/Ability_A4.TALENT_compiledDescriptionB.txt" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Class/Mowgli/Ability_A4.TALENT" id="CC01D0A5-077E-4D94-9380-62A8CB981ADF">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FR4AAAACAAAAJQAAAD4AAABNb3dnbGlfQTRfVXBnAAAATW93Z2xpX0E0X1VwZwBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaBAAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AA+2Rfv32BvAg8ABi+Vdww==</compiledString>
+					<returnType>bool</returnType>
+					<sString>tal("Mowgli_A4_Upg") == false</sString>
+				</condition>
+				<name>Mowgli_A4_Upg</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/Class/Mowgli/Ability_A4.TALENT" id="D0F6A170-480E-456B-8FB7-ED0EE9279FC4">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FQYAAAACAAAACwAAACEAAABJc1BldABVi+xRaAAAAACLRQyLEItNDIuCiAEAAP/Q3B1DAAAA3+D2xER7CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+					<returnType>bool</returnType>
+					<sString>receiver.vIsPet != 0</sString>
+				</condition>
+				<name>MowgliWolfs</name>
+			</ConditionFormula>
+		</Item>
+	</conditionFormulas>
+	<conflictingTalents>
+		<Item href="/Items/Talents/Class/Mowgli/Ability_A4_2.TALENT" />
+		<Item href="/Items/Talents/Class/Mowgli/Ability_A4_2Upg.TALENT" />
+	</conflictingTalents>
+	<constants href="/Items/Talents/Class/Mowgli/Ability_A4.TALENT" id="A928524F-20FD-4BF0-8D16-99905AF8AE1B">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Class/Mowgli/Ability_A4.TALENT" id="5835EEE5-CD41-4762-A4BC-F8702B2F2956">
+					<UnitConstant>
+						<name>A4timer</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>10</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Mowgli/Ability_A4.TALENT" id="927DA5F9-242D-4C18-B6D9-1FE8DF21901B">
+					<UnitConstant>
+						<name>BaseAttInc</name>
+						<var>
+							<compiledString>FQAAAAACAAAACAAAABIAAABVi+xqAVHZBUQAAADZHCRR2QVAAAAA2RwkagCLRQiLEItNCIuCNAEAAP/QUdkcJGoAi00QixGLTRCLQmD/0F3DMzOTQAAACkI=</compiledString>
+							<returnType>float</returnType>
+							<sString>abilityScale(sIntellect, 4.6, 34.5 )</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Mowgli/Ability_A4.TALENT" id="1588D684-D48D-46F4-962B-9E20C2C82316">
+					<UnitConstant>
+						<name>AddAttInc</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQQ==</compiledString>
+							<returnType>float</returnType>
+							<sString>25</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Mowgli/Ability_A4.TALENT" id="0502D557-2412-4BD4-B1DB-68AE28B27AC3">
+					<UnitConstant>
+						<name>A4attspeedincrease</name>
+						<var>
+							<compiledString>FR4AAAAGAAAAJQAAADsAAABPAAAAaQAAAJIAAACYAAAASXNQZXQAAABCYXNlQXR0SW5jAABBZGRBdHRJbmMAVYvsg+wcaAAAAACLRQyLEItNDIuCiAEAAP/Q3B3GAAAA3+D2xER6XotNDFGLVQhSaAgAAACLRRCLEItNEItCUP/Qi00MUYtVCFJoFAAAAItFEIsQi00Qi0JQ3V34/9CLTQiLEYtNCItCQN1d8P/Q3E3w3DW+AAAA3AW2AAAA3E343V3o6wXZ7t1d6N1F6Nld5NlF5IvlXcMAAAAAAADwPwAAAAAAAFlAAAAAAAAAAAA=</compiledString>
+							<returnType>float</returnType>
+							<sString>receiver.vIsPet == 0 ? cBaseAttInc*(cAddAttInc*sSummonCnt/100+1) : 0</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Mowgli/Ability_A4.TALENT" id="2D74FE6A-0AC2-4B83-B005-D632A39499C7">
+					<UnitConstant>
+						<name>A4attspeedincrease_test</name>
+						<var>
+							<compiledString>FRMAAAACAAAAIAAAADMAAABBNGF0dHNwZWVkaW5jcmVhc2UAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3A1BAAAA2V382UX8i+VdwwAAAAAAAFlA</compiledString>
+							<returnType>float</returnType>
+							<sString>cA4attspeedincrease*100</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Mowgli/Ability_A4.TALENT" id="23916A92-74FF-48F9-8DC8-545FA1133900">
+					<UnitConstant>
+						<name>A4speedinc</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>40</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Mowgli/Ability_A4.TALENT" id="446F67C4-5CEF-49C2-8B40-CA1FEE415643">
+					<UnitConstant>
+						<name>Haste_Duration</name>
+						<var>
+							<compiledString>FQgAAAABAAAAFAAAAEE0dGltZXIAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cA4timer</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Mowgli/Ability_A4.TALENT" id="1AF77782-FA2A-481D-9E58-C78D6B3D95AC">
+					<UnitConstant>
+						<name>Haste_Percent</name>
+						<var>
+							<compiledString>FQsAAAABAAAAFwAAAEE0c3BlZWRpbmMAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+							<returnType>float</returnType>
+							<sString>cA4speedinc</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Class/Mowgli/Ability_A4.TALENT" id="98C9883A-7F45-4F84-A99F-8106DAEA0A79">
+					<UnitConstant>
+						<name>UltimateConstant</name>
+						<var>
+							<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+							<returnType>float</returnType>
+							<sString>1</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQg==</compiledString>
+		<returnType>float</returnType>
+		<sString>100</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Class/Mowgli/Ability_A4.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="/Items/Talents/Class/Mowgli/Ability_A4.TALENT" id="6F10BE2C-D39C-4222-A6AB-5D1F32B79F49">
+		<DispatchImmediate>
+			<alwaysApply>false</alwaysApply>
+			<applyEffect>
+				<Item href="" />
+				<Item href="" />
+			</applyEffect>
+			<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+			<applyEffectOrientation>Default</applyEffectOrientation>
+			<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+			<dieAfterApply>true</dieAfterApply>
+			<dispatchEffect>
+				<Item href="" />
+				<Item href="" />
+			</dispatchEffect>
+			<flags>0</flags>
+			<instantApply>false</instantApply>
+		</DispatchImmediate>
+	</dispatch>
+	<flags>3</flags>
+	<forceBonus>13.21</forceBonus>
+	<image href="/UI/Styles/Icons/Heroes/Mowgli/A4.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>true</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQw==</compiledString>
+		<returnType>float</returnType>
+		<sString>320</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="/Items/Talents/Class/Mowgli/Ability_A4.TALENT" id="D3190CE3-E00F-4AD9-8227-4F967D672BFE">
+		<MultipleTargetSelectorMicroAI>
+			<castWhenIdle>false</castWhenIdle>
+			<condition>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</condition>
+			<minTargetCount>3</minTargetCount>
+			<minTargetWeight>0</minTargetWeight>
+			<targetSelector href="/Items/Talents/Class/Mowgli/Ability_A4.TALENT" id="EE280A84-7029-4353-A90F-321FB075EEE9">
+				<AreaTargetSelector>
+					<absolutePosition>
+						<x>0</x>
+						<y>0</y>
+					</absolutePosition>
+					<flags>0</flags>
+					<mode>Normal</mode>
+					<range>
+						<compiledString>FQ0AAAABAAAAGQAAAFJhbmdlX0V4TG9uZwBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+						<returnType>float</returnType>
+						<sString>cRange_ExLong</sString>
+					</range>
+					<targetFilter>679477279</targetFilter>
+					<targetSelector href="" />
+				</AreaTargetSelector>
+			</targetSelector>
+			<unitFilter>
+				<compiledString></compiledString>
+				<returnType>bool</returnType>
+				<sString>true</sString>
+			</unitFilter>
+		</MultipleTargetSelectorMicroAI>
+	</microAI>
+	<minLevel>2</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>540</naftaCost>
+	<name textref="/Items/Talents/Class/Mowgli/Ability_A4.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators />
+	<persistentId>Mowgli_A4</persistentId>
+	<prerequisiteTalents />
+	<rarity>Class</rarity>
+	<requireLineOfSight>false</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Class/Mowgli/Ability_A4.TALENT_shortDescription.txt" />
+	<talentRollGroups>63</talentRollGroups>
+	<talentStats />
+	<targetType>0</targetType>
+	<type>Active</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+		<returnType>float</returnType>
+		<sString>0</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>0</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

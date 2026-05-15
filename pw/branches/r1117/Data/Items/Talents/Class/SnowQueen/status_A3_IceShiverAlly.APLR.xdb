@@ -1,16 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatusApplicator>
+	<BackLink DBID="/Items/Talents/Class/SnowQueen/Ability_A3.TALENT" Count="1" />
 	<applicators>
-		<Item href="/Items/Talents/Class/SnowQueen/status_A3_IceShiverAlly.APLR" id="84CB4420-949D-491C-9A3D-185B4234203E">
-			<TriggerApplicator>
-				<actionsCount>
-					<compiledString></compiledString>
-					<returnType>int</returnType>
-					<sString>0</sString>
-				</actionsCount>
+		<Item href="/Items/Talents/Class/SnowQueen/status_A3_IceShiverAlly.APLR" id="B56BD8D2-D9AB-4C47-9BD4-15B6CF16134C">
+			<SpellPeriodicallyApplicator>
 				<applyTarget>ApplicatorTarget</applyTarget>
 				<behaviorFlags>144</behaviorFlags>
-				<caption>триггер на урон</caption>
+				<caption>Периодический спелл с хилом</caption>
 				<effect>
 					<Item href="" />
 					<Item href="" />
@@ -27,49 +23,72 @@
 					<sString>-1.0</sString>
 				</lifeTime>
 				<LoggingEvent>-1</LoggingEvent>
-				<playAck>false</playAck>
-				<processor href="/Items/Talents/Class/SnowQueen/status_A3_IceShiverAlly.APLR" id="5110937C-FE40-4F56-885B-049D49277201">
-					<EventProcessorDamageTransformer parent="/Items/Talents/Class/SnowQueen/A2A3_OnDamage.EVNT">
-						<spell href="/Items/Talents/Class/SnowQueen/status_A3_IceShiverAlly.APLR" id="0C265516-5CD7-4B53-8A2C-7F54BA00527E">
-							<Spell parent="/Items/Talents/Class/SnowQueen/A2A3_Spell.SPLL">
-								<applicators>
-									<Item href="/Items/Talents/Class/SnowQueen/status_A3_IceShiverAlly.APLR" id="F7A422D6-E8A9-4F11-93F2-EFB7EDA08508">
-										<VariableProxyApplicator parent="/Items/Talents/Class/SnowQueen/damageWithA0.APLR">
-											<applicators>
-												<Item>
-													<applicator href="/Items/Talents/Class/SnowQueen/status_A3_IceShiverAlly.APLR" id="37420B5C-4F62-4F22-84B3-385D74FA0B4E">
-														<DamageApplicator parent="/GameLogic/GeneralApplicators/CommonDamage.APLR">
-															<damage>
-																<compiledString>FREAAAABAAAAHQAAAEEzX0RhbWFnZVJlZmxlY3QAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
-																<returnType>float</returnType>
-																<sString>cA3_DamageReflect</sString>
-															</damage>
-															<damageType>Energy</damageType>
-															<enabled>
-																<compiledString></compiledString>
-															</enabled>
-															<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
-														</DamageApplicator>
-													</applicator>
-												</Item>
-												<Item skip="1" />
-											</applicators>
-										</VariableProxyApplicator>
-									</Item>
-								</applicators>
-							</Spell>
-						</spell>
-					</EventProcessorDamageTransformer>
-				</processor>
+				<period>
+					<compiledString>FQoAAAABAAAAFgAAAEEzX1BlcmlvZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+					<returnType>float</returnType>
+					<sString>cA3_Period</sString>
+				</period>
 				<providerName></providerName>
+				<scaleMode>ScaleIsCount</scaleMode>
+				<spell href="/Items/Talents/Class/SnowQueen/status_A3_IceShiverAlly.APLR" id="DC655106-767B-4358-9CBF-3984B4F829E5">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Class/SnowQueen/status_A3_IceShiverAlly.APLR" id="4885E278-B355-4EEC-8A97-8A4A9C7C636C">
+								<HealApplicator>
+									<amount>
+										<compiledString>FQ8AAAABAAAAGwAAAEEzX0hlYWxQZXJUaWNrAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+										<returnType>float</returnType>
+										<sString>cA3_HealPerTick</sString>
+									</amount>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<caption>Хилим</caption>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<healTarget>Health</healTarget>
+									<ignoreHealingMods>false</ignoreHealingMods>
+									<LoggingEvent>-1</LoggingEvent>
+									<providerName></providerName>
+									<uiEvent href="/UI/Events/CommonEvents/EventHeal.UIEV" />
+								</HealApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Class/SnowQueen/status_A3_IceShiverAlly.APLR" id="0AC3BD37-0B12-4016-96B6-E8A8021D3C39">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
 				<startCondition>
 					<compiledString></compiledString>
 					<returnType>bool</returnType>
 					<sString>true</sString>
 				</startCondition>
-				<useAbilityCooldown>false</useAbilityCooldown>
-				<useAbilityOwnerMana>false</useAbilityOwnerMana>
-			</TriggerApplicator>
+				<startOffset>
+					<compiledString>FQoAAAACAAAAFwAAACoAAABBM19QZXJpb2QAVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3A04AAAA2V382UX8i+VdwwAAAAAAAOA/</compiledString>
+					<returnType>float</returnType>
+					<sString>cA3_Period * 0.5</sString>
+				</startOffset>
+				<targetSelector href="" />
+			</SpellPeriodicallyApplicator>
 		</Item>
 	</applicators>
 	<applyTarget>ApplicatorTarget</applyTarget>
@@ -111,9 +130,9 @@
 	<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
 	<stackCount>0</stackCount>
 	<startCondition>
-		<compiledString></compiledString>
+		<compiledString>FSUAAAACAAAAUwAAAGwAAABTbm93UXVlZW5fQTNfU1VQAAAAAFNub3dRdWVlbl9BM19TVVAAVYvsg+wMVotFCIsQi00Ii4KQAQAA/9CL8ItNDIsRi00Mi4KQAQAA/9A78HVYaAAAAACLTQiLEYtNCIuCqAEAAP/QhcB0KmgUAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hcl0CcdF9AEAAADrB8dF9AAAAACKRfRei+Vdww==</compiledString>
 		<returnType>bool</returnType>
-		<sString>true</sString>
+		<sString>sFctn == rFctn &amp;&amp; tal("SnowQueen_A3_SUP")</sString>
 	</startCondition>
 	<statusPosition>0</statusPosition>
 	<stopBehaviour>StopByTime</stopBehaviour>

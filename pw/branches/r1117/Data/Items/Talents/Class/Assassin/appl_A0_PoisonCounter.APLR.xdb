@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PermanentStatModApplicator>
+	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A0.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A1.TALENT" Count="2" />
+	<BackLink DBID="/Items/Talents/Class/Assassin/appl_A0_Poison.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A4.TALENT" Count="1" />
+	<applyTarget>ApplicatorTarget</applyTarget>
+	<caption>Добавляем число ядов</caption>
+	<customApplyType>None</customApplyType>
+	<enabled>
+		<compiledString>FRAAAAACAAAAHQAAADAAAABQb2lzb25Db25kaXRpb24AVYvsUYtFDFCLTQhRaAAAAACLVRCLAotNEItQUP/S3B1MAAAA3+D2xER7BsZF/wHrBMZF/wCKRf+L5V3DAAAAAAAAAAA=</compiledString>
+		<returnType>bool</returnType>
+		<sString>cPoisonCondition</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<LoggingEvent>-1</LoggingEvent>
+	<modifier>
+		<addValue>
+			<compiledString>FQAAAAAAAAAAVYvs2ehdwwAAgD8=</compiledString>
+			<returnType>float</returnType>
+			<sString>1.0f</sString>
+		</addValue>
+		<multValue>
+			<compiledString>FRMAAAABAAAAHgAAAEFzc2Fzc2luX0EwX1BvaXNvbgBVi+xRagCLRRBQaAAAAACLTQyLEYtNDIuCnAEAAP/QO0UQdAfZ6Nld/OsF2e7ZXfzZRfyL5V3DAAAAAAAAgD8=</compiledString>
+			<returnType>float</returnType>
+			<sString>receiver.applAssassin_A0_Poison(GLOBAL) != pMisc ? 1.0f : 0</sString>
+		</multValue>
+		<stat>Life</stat>
+		<topModifier>false</topModifier>
+		<variable>Assassin_A0_PoisonCounter</variable>
+	</modifier>
+	<providerName></providerName>
+</PermanentStatModApplicator>

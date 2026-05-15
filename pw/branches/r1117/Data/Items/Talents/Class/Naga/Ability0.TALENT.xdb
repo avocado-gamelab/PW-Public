@@ -2,9 +2,9 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Naga.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Naga_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Naga_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Naga.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Naga_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Naga_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Maps/PvE/Series/Coop1/Heroes/Naga.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Naga/Duel.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Naga/Duel_Vamp.TALENTSET" Count="1" />
@@ -13,6 +13,7 @@
 	<BackLink DBID="/Test/Talents/Naga/Elite_Will.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Naga/Epic_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Naga/Epic_Will.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Test_Satanic.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -43,14 +44,14 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Naga/Ability0.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Naga/Ability0.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas />
 	<conflictingTalents />
-	<constants href="/Items/Talents/Class/Naga/Ability0.TALENT" id="CD6D1A92-8E7A-47AB-A33F-5A0AD7129C3B">
+	<constants href="/Items/Talents/Class/Naga/Ability0.TALENT" id="6713EB2D-A9E3-4E84-A9EA-E836E9112E93">
 		<UnitConstantsContainer>
 			<vars>
-				<Item href="/Items/Talents/Class/Naga/Ability0.TALENT" id="B53D3892-528B-4E02-BE8E-7B5342B8A878">
+				<Item href="/Items/Talents/Class/Naga/Ability0.TALENT" id="17919F1B-2CBB-48BB-905D-90886DF4177E">
 					<UnitConstant>
 						<name>A0_AttackChance</name>
 						<var>
@@ -60,7 +61,7 @@
 						</var>
 					</UnitConstant>
 				</Item>
-				<Item href="/Items/Talents/Class/Naga/Ability0.TALENT" id="ACAE093D-96AD-4BA0-B297-9FF0B05E9BD7">
+				<Item href="/Items/Talents/Class/Naga/Ability0.TALENT" id="72FDC63B-5108-4574-88E2-C12F48CCBA50">
 					<UnitConstant>
 						<name>A0_Range</name>
 						<var>
@@ -71,7 +72,7 @@
 					</UnitConstant>
 				</Item>
 				<Item href="/Items/Talents/Class/Naga/const_LifeDrainCap" />
-				<Item href="/Items/Talents/Class/Naga/Ability0.TALENT" id="56BF1EDB-F7A0-4F71-9976-BE46D9E0B1C2">
+				<Item href="/Items/Talents/Class/Naga/Ability0.TALENT" id="4A01BAC0-9F4B-472E-ADD4-C3BAF1B103C1">
 					<UnitConstant>
 						<name>A0_Proc</name>
 						<var>
@@ -102,7 +103,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Naga/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
@@ -122,7 +123,7 @@
 	<name textref="/Items/Talents/Class/Naga/Ability0.TALENT_name.txt" />
 	<node></node>
 	<passiveApplicators>
-		<Item href="/Items/Talents/Class/Naga/Ability0.TALENT" id="01AF92EB-5636-4FC3-929D-C219F598078A">
+		<Item href="/Items/Talents/Class/Naga/Ability0.TALENT" id="E443E2E6-63FF-4ADA-BD9D-46B8036B9E39">
 			<TriggerApplicator>
 				<actionsCount>
 					<compiledString></compiledString>
@@ -149,11 +150,11 @@
 				</lifeTime>
 				<LoggingEvent>-1</LoggingEvent>
 				<playAck>false</playAck>
-				<processor href="/Items/Talents/Class/Naga/Ability0.TALENT" id="70212A05-A791-416B-85E6-6FEC28E9C6AE">
+				<processor href="/Items/Talents/Class/Naga/Ability0.TALENT" id="F958555C-685A-4DCC-A6EB-1510E832F942">
 					<EventProcessorGroup>
 						<applyTarget>ApplicatorTarget</applyTarget>
 						<processors>
-							<Item href="/Items/Talents/Class/Naga/Ability0.TALENT" id="52EF1C38-C2DB-4760-9B67-A33B88EF983A">
+							<Item href="/Items/Talents/Class/Naga/Ability0.TALENT" id="CFCBABB1-41ED-4DB0-ACC3-0C12EC60F972">
 								<EventProcessorCondition>
 									<applyTarget>ApplicatorTarget</applyTarget>
 									<condition>
@@ -166,7 +167,7 @@
 									<spell href="" />
 								</EventProcessorCondition>
 							</Item>
-							<Item href="/Items/Talents/Class/Naga/Ability0.TALENT" id="E67CB7E4-D755-4528-957D-E9AB9337474B">
+							<Item href="/Items/Talents/Class/Naga/Ability0.TALENT" id="D4C877F1-1000-4AFB-89FE-83B0B3E883C5">
 								<EventProcessorDamageTransformer>
 									<abilityFilter>
 										<abilitiesList />
@@ -202,10 +203,10 @@
 								</EventProcessorDamageTransformer>
 							</Item>
 						</processors>
-						<spell href="/Items/Talents/Class/Naga/Ability0.TALENT" id="A8C595D7-E6ED-438D-9BE4-38ED40BA4B50">
+						<spell href="/Items/Talents/Class/Naga/Ability0.TALENT" id="3BE432B4-39FE-4EE3-9364-4AD0EA592095">
 							<Spell>
 								<applicators>
-									<Item href="/Items/Talents/Class/Naga/Ability0.TALENT" id="30C0AD63-A96D-439D-A7ED-03A6A482765C">
+									<Item href="/Items/Talents/Class/Naga/Ability0.TALENT" id="219DCEAB-7F5A-4D81-AECB-03B2E8462745">
 										<SpellApplicator>
 											<applyTarget>ApplicatorTarget</applyTarget>
 											<caption>Шанс на срабатывание</caption>
@@ -217,10 +218,10 @@
 											<formulaName></formulaName>
 											<LoggingEvent>-1</LoggingEvent>
 											<providerName></providerName>
-											<spell href="/Items/Talents/Class/Naga/Ability0.TALENT" id="39BA370F-69E7-4A91-BE96-CF1D31ED0023">
+											<spell href="/Items/Talents/Class/Naga/Ability0.TALENT" id="84E183D4-9029-4F18-BEEF-2397B5B9BC50">
 												<Spell>
 													<applicators>
-														<Item href="/Items/Talents/Class/Naga/Ability0.TALENT" id="65C43E32-528F-491B-A4DF-9B7F35D1F37E">
+														<Item href="/Items/Talents/Class/Naga/Ability0.TALENT" id="7219D486-86C3-47F1-B1D1-084FAFE8F79F">
 															<ProgramApplicator>
 																<applicators>
 																	<Item>
@@ -292,7 +293,7 @@
 															</ProgramApplicator>
 														</Item>
 													</applicators>
-													<dispatch href="/Items/Talents/Class/Naga/Ability0.TALENT" id="9294488F-2C28-4662-9E95-E4DFC36A13BE">
+													<dispatch href="/Items/Talents/Class/Naga/Ability0.TALENT" id="B79DB456-ACB3-4724-A8EA-693C3339DB9F">
 														<DispatchImmediate>
 															<alwaysApply>false</alwaysApply>
 															<applyEffect>
@@ -318,7 +319,7 @@
 										</SpellApplicator>
 									</Item>
 								</applicators>
-								<dispatch href="/Items/Talents/Class/Naga/Ability0.TALENT" id="67EAAEA7-1FE7-4B5F-A965-82EB9E180627">
+								<dispatch href="/Items/Talents/Class/Naga/Ability0.TALENT" id="42769FD9-A774-4491-9F45-17D2D31A3787">
 									<DispatchImmediate>
 										<alwaysApply>false</alwaysApply>
 										<applyEffect>
@@ -352,7 +353,7 @@
 			</TriggerApplicator>
 		</Item>
 	</passiveApplicators>
-	<persistentId>Naga_A0</persistentId>
+	<persistentId>Naga_0</persistentId>
 	<prerequisiteTalents />
 	<rarity>Class</rarity>
 	<requireLineOfSight>false</requireLineOfSight>

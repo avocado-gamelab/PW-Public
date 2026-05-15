@@ -18,7 +18,7 @@
 			<stopCondition>
 				<compiledString>FUAAAAAEAAAARwAAAF0AAABxAAAAiwAAAEEyX0RhbWFnZVRyaWdnZXJlZAAAQTJfU2hpZWxkQ3VycmVudENhcGFjaXR5AAAAAEEyX1NoaWVsZEFtb3VudABVi+yD7BBoAAAAAItFCIsQi00Ii4KIAQAA/9DcHc8AAADf4PbEQXpZi00MUYtVCFJoFAAAAItFEIsQi00Qi0JQ/9CLTQxRi1UIUmgwAAAAi0UQixCLTRCLQlDdXfj/0Nxd+N/g9sRBdQnHRfQBAAAA6wfHRfQAAAAAi030iU3w6wfHRfAAAAAAikXwi+VdwwAAAAAAAAAA</compiledString>
 				<returnType>bool</returnType>
-				<sString>sender.vA2_DamageTriggered &lt;= 0 ? cA2_ShieldCurrentCapacity &lt; cA2_ShieldAmount : 0</sString>
+				<sString>(sender.vA2_DamageTriggered &lt;= 0 ? cA2_ShieldCurrentCapacity &lt; cA2_ShieldAmount : 0)</sString>
 			</stopCondition>
 			<stopEvents>0</stopEvents>
 		</Item>
@@ -127,7 +127,7 @@
 			<applicator href="/Items/Talents/Class/Monster/A2_ShieldProgramm.APLR" id="3C732704-7700-447D-849D-8ED3925FBB4C">
 				<SpellApplicator>
 					<applyTarget>ApplicatorTarget</applyTarget>
-					<caption>Spell с ускорением</caption>
+					<caption>Spell с ускорением и статами</caption>
 					<enabled>
 						<compiledString></compiledString>
 						<returnType>bool</returnType>
@@ -140,7 +140,152 @@
 						<Spell>
 							<applicators>
 								<Item href="/Heroes/DefaultStatus/_HASTE_status.APLR" />
-								<Item href="/Heroes/DefaultStatus/_QUICKNESS_status.APLR" />
+								<Item href="/Items/Talents/Class/Monster/A2_ShieldProgramm.APLR" id="E0C1ACCD-F677-4729-8C80-A072BA003E25">
+									<StatusApplicator>
+										<applicators>
+											<Item href="/Items/Talents/Class/Monster/A2_ShieldProgramm.APLR" id="219F6507-8BB5-4669-AC9C-3C7ADA156C1D">
+												<StatModApplicator>
+													<applyTarget>ApplicatorTarget</applyTarget>
+													<behaviorFlags>144</behaviorFlags>
+													<caption>Увеличить проворство</caption>
+													<constraint>None</constraint>
+													<dontUpdate>true</dontUpdate>
+													<effect>
+														<Item href="" />
+														<Item href="" />
+													</effect>
+													<enabled>
+														<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgowAAAD/0ItNCIsRi00Ii4LAAAAA3V34/9DcXfjf4PbEQXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+														<returnType>bool</returnType>
+														<sString>sBaseAttackSpeed &gt;= sBaseDexterity</sString>
+													</enabled>
+													<formulaName></formulaName>
+													<lifeTime>
+														<compiledString></compiledString>
+														<returnType>float</returnType>
+														<sString>-1.0</sString>
+													</lifeTime>
+													<LoggingEvent>-1</LoggingEvent>
+													<modifier>
+														<addValue>
+															<compiledString>FQwAAAABAAAAGAAAAEEyX0FkZF9TdGF0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+															<returnType>float</returnType>
+															<sString>cA2_Add_Stat</sString>
+														</addValue>
+														<multValue>
+															<compiledString></compiledString>
+															<returnType>float</returnType>
+															<sString>1.0f</sString>
+														</multValue>
+														<stat>AttackSpeed</stat>
+														<topModifier>false</topModifier>
+														<variable></variable>
+													</modifier>
+													<providerName></providerName>
+													<startCondition>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</startCondition>
+													<statModName></statModName>
+												</StatModApplicator>
+											</Item>
+											<Item href="/Items/Talents/Class/Monster/A2_ShieldProgramm.APLR" id="BD469517-226B-46D4-8960-1ED58F2F709A">
+												<StatModApplicator>
+													<applyTarget>ApplicatorTarget</applyTarget>
+													<behaviorFlags>144</behaviorFlags>
+													<caption>Увеличить хитрость</caption>
+													<constraint>None</constraint>
+													<dontUpdate>true</dontUpdate>
+													<effect>
+														<Item href="" />
+														<Item href="" />
+													</effect>
+													<enabled>
+														<compiledString>FQAAAAAAAAAAVYvsg+wMi0UIixCLTQiLgsAAAAD/0ItNCIsRi00Ii4KMAAAA3V34/9DcXfjf4PbEBXoJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+														<returnType>bool</returnType>
+														<sString>sBaseDexterity &gt; sBaseAttackSpeed </sString>
+													</enabled>
+													<formulaName></formulaName>
+													<lifeTime>
+														<compiledString></compiledString>
+														<returnType>float</returnType>
+														<sString>-1.0</sString>
+													</lifeTime>
+													<LoggingEvent>-1</LoggingEvent>
+													<modifier>
+														<addValue>
+															<compiledString>FQwAAAABAAAAGAAAAEEyX0FkZF9TdGF0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+															<returnType>float</returnType>
+															<sString>cA2_Add_Stat</sString>
+														</addValue>
+														<multValue>
+															<compiledString></compiledString>
+															<returnType>float</returnType>
+															<sString>1.0f</sString>
+														</multValue>
+														<stat>Dexterity</stat>
+														<topModifier>false</topModifier>
+														<variable></variable>
+													</modifier>
+													<providerName></providerName>
+													<startCondition>
+														<compiledString></compiledString>
+														<returnType>bool</returnType>
+														<sString>true</sString>
+													</startCondition>
+													<statModName></statModName>
+												</StatModApplicator>
+											</Item>
+										</applicators>
+										<applyTarget>ApplicatorTarget</applyTarget>
+										<behaviorFlags>145</behaviorFlags>
+										<caption>Повышение проворства/хитрости</caption>
+										<customCounter>
+											<compiledString></compiledString>
+											<returnType>int</returnType>
+											<sString>0</sString>
+										</customCounter>
+										<customProgress>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>-1.0</sString>
+										</customProgress>
+										<description textref="/Items/Talents/Class/Monster/A2_ShieldProgramm.APLR_e0c1accdf67747298c80a072ba003e25_description.txt" />
+										<dispellPriority>NonDispellable</dispellPriority>
+										<effect>
+											<Item href="" />
+											<Item href="" />
+										</effect>
+										<enabled>
+											<compiledString>FREAAAABAAAAGwAAAE1vbnN0ZXJfQTJTaGllbGQAVYvsagGLRRBQaAAAAACLTQiLEYtNCIuCnAEAAP/QM8k7RRAPlMGKwV3D</compiledString>
+											<returnType>bool</returnType>
+											<sString>sender.applMonster_A2Shield(UNIT) == pMisc</sString>
+										</enabled>
+										<flags>0</flags>
+										<formulaName></formulaName>
+										<image href="/UI/Styles/Icons/Heroes/Monster/A2.ITEX" />
+										<lifeTime>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>-1.0</sString>
+										</lifeTime>
+										<LoggingEvent>-1</LoggingEvent>
+										<name textref="/Items/Talents/Class/Monster/A2_ShieldProgramm.APLR_e0c1accdf67747298c80a072ba003e25_name.txt" />
+										<power>0</power>
+										<providerName></providerName>
+										<stackableAcrossUnits>Unstackable</stackableAcrossUnits>
+										<stackCount>0</stackCount>
+										<startCondition>
+											<compiledString>FRgAAAACAAAAHwAAADgAAABNb25zdGVyX0EydQBNb25zdGVyX0EydQBVi+yD7AhoAAAAAItFCIsQi00Ii4KoAQAA/9CFwHQqaAwAAACLTQiLEYtNCIuCqAEAAP/QiUX8i038ixGLTfyLQgT/0IhF++sExkX7AIpF+4vlXcM=</compiledString>
+											<returnType>bool</returnType>
+											<sString> tal("Monster_A2u")</sString>
+										</startCondition>
+										<statusPosition>0</statusPosition>
+										<stopBehaviour>StopByTime</stopBehaviour>
+										<unstackableWith href="" />
+									</StatusApplicator>
+								</Item>
 								<Item href="/Items/Talents/Class/Monster/A2_ShieldProgramm.APLR" id="D5BE2ED1-A2B5-4025-AE9B-B4280B13A375">
 									<StatusApplicator parent="/Heroes/DefaultStatus/_INVISIBILITY_status.APLR">
 										<enabled>

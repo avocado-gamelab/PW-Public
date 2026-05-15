@@ -2,13 +2,14 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Assassin_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Assassin_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Duel.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Elite_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Epic_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Assassin/Epic_Str.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Assassin_Mighty.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Assassin.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Assassin_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Assassin.TALENTSET" Count="1" />
+	<BackLink DBID="/Test/Talents/Assassin/New_SUP.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -31,7 +32,7 @@
 	<askId>0</askId>
 	<autoTargetSelector href="" />
 	<budget>-1</budget>
-	<caption>А1у. Безжалостная сталь</caption>
+	<caption>А1у. Отравленный сюрикен</caption>
 	<castAllowRange>
 		<compiledString></compiledString>
 		<returnType>float</returnType>
@@ -39,8 +40,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Assassin/Ability_A1u.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Assassin/Ability_A1u.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Assassin/Ability_A1u.TALENT" id="2949344E-EDD6-4372-8559-D9E8B34B1EE3">
 			<ConditionFormula>
@@ -57,18 +58,7 @@
 	<constants href="/Items/Talents/Class/Assassin/Ability_A1u.TALENT" id="B4C30069-A30C-4E79-B6E9-F7452E5F7BA9">
 		<UnitConstantsContainer>
 			<vars>
-				<Item href="/Items/Talents/Class/Assassin/Ability_A1u.TALENT" id="3EF69DDE-2DFC-48DB-9F0D-E3C63CA1A94C">
-					<UnitConstant>
-						<name>A1u_Damage_TT</name>
-						<var>
-							<compiledString>FRoAAAACAAAAKQAAAEMAAABBMXVfRGFtYWdlAABBMV9CYXNlRGFtYWdlAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoDAAAAItVEIsCi00Qi1BQ3V34/9LcbfjZXfTZRfSL5V3D</compiledString>
-							<returnType>float</returnType>
-							<sString>cA1u_Damage - cA1_BaseDamage</sString>
-						</var>
-					</UnitConstant>
-				</Item>
 				<Item href="/Items/Talents/Class/Assassin/const_A1u_Damage" />
-				<Item href="/Items/Talents/Class/Assassin/cosnt_A1_BaseDamage" />
 				<Item href="/Items/Talents/Class/Assassin/Ability_A1u.TALENT" id="0EE4849B-ABFE-4D81-9D11-EAF1B2A6F678">
 					<UnitConstant>
 						<name>Slow_Duration</name>
@@ -89,6 +79,7 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/Assassin/const_A0_PoisonDelay" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -110,7 +101,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Assassin/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

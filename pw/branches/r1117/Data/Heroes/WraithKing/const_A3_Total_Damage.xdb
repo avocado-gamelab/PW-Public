@@ -4,8 +4,8 @@
 	<BackLink DBID="/Items/Talents/Class/WraithKing/Ability_A3.TALENT" Count="1" />
 	<name>A3_Total_Damage</name>
 	<var>
-		<compiledString>FSEAAAACAAAAMAAAAEoAAABUVF9BM19EYW1hZ2UAAAAAQTBfQXJzZW5hbFN0dWNrcwBVi+yD7AyLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0otFDFCLTQhRaBAAAACLVRCLAotNEItQUN1d+P/S3E342V302UX0i+Vdww==</compiledString>
+		<compiledString>FUUAAAAEAAAAVAAAAG4AAACOAAAApAAAAFRUX0EzX0RhbWFnZQAAAABBMF9BcnNlbmFsU3R1Y2tzAAAAAEEwX0FkZGl0aW9uYWxBdHRhY2tEYW1hZ2VQZXJjZW50AFWL7IPsFItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoEAAAAItVEIsCi00Qi1BQ3V34/9LcTfiLRQxQi00IUWgkAAAAi1UQiwKLTRCLUFDdXfD/0twNwQAAANno3sHcTfDZXezZReyL5V3DAAAAAAAA8D8AAABA4XqEPw==</compiledString>
 		<returnType>float</returnType>
-		<sString>cTT_A3_Damage * cA0_ArsenalStucks </sString>
+		<sString>cTT_A3_Damage * cA0_ArsenalStucks * (1.0f + cA0_AdditionalAttackDamagePercent * 0.01f)</sString>
 	</var>
 </UnitConstant>

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Monster.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Monster_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Monster.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Monster_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Monster_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Monster/Ability_A1.TALENT" Count="2" />
 	<BackLink DBID="/Items/Talents/Class/Monster/Ability_A1_SUP.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Monster/Ability_A1u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Monster_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Monster/Duel_Int.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Monster/Duel_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Monster/Elite_Aspd.TALENTSET" Count="1" />
@@ -568,9 +568,9 @@
 											<applicator href="/Items/Talents/Class/Monster/Ability_A1.TALENT" id="5A0C9DAA-1164-4620-818E-D1607D945D0A">
 												<SpellApplicator parent="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/appl_G766_RefreshAndNotify.APLR">
 													<enabled>
-														<compiledString>FS0AAAAGAAAANAAAAE0AAACHAAAAoAAAANYAAAD8AAAATW9uc3Rlcl9BMXUATW9uc3Rlcl9BMXUARzc2NgAAAABHNzY2AAAAAEc3NjYAVYvsg+wcaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgMAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hckPhZkAAABoGAAAAItVCIsCi00Ii5CoAQAA/9KFwHQqaCAAAACLRQiLEItNCIuCqAEAAP/QiUX0i030ixGLTfSLQgT/0IhF8+sExkXzAA+2TfOFyXRKaCgAAACLVQiLAotNCIuQqAEAAP/SiUXsi0XsixCLTeyLQhz/0NwdLQEAAN/g9sREegnHRegBAAAA6wfHRegAAAAAi03oiU3k6wfHReQAAAAAikXki+VdwwAAAAAAAPA/</compiledString>
+														<compiledString>FS0AAAAGAAAANAAAAE0AAACHAAAAoAAAANYAAAAEAQAATW9uc3Rlcl9BMXUATW9uc3Rlcl9BMXUARzc2NgAAAABHNzY2AAAAAEc3NjYAVYvsg+wgaAAAAACLRQiLEItNCIuCqAEAAP/QhcB0KmgMAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wAPtk37hckPhaEAAABoGAAAAItVCIsCi00Ii5CoAQAA/9KFwHQqaCAAAACLRQiLEItNCIuCqAEAAP/QiUX0i030ixGLTfSLQgT/0IhF8+sExkXzAA+2TfOFyXRSaCgAAACLVQiLAotNCIuQqAEAAP/SiUXsi0XsixCLTeyLAv/QD7bIiU3o20Xo3B01AQAA3+D2xER6CcdF5AEAAADrB8dF5AAAAACLVeSJVeDrB8dF4AAAAACKReCL5V3DAAAAAAAA8D8=</compiledString>
 														<returnType>bool</returnType>
-														<sString>!tal("Monster_A1u") &amp;&amp; tal("G766") ? pFirst-&gt;GetTalent("G766")-&gt;GetPreparedness() == 1.0f : false</sString>
+														<sString>!tal("Monster_A1u") &amp;&amp; tal("G766") ? pFirst-&gt;GetTalent("G766")-&gt;IsAbilityOn() == 1.0f : false</sString>
 													</enabled>
 												</SpellApplicator>
 											</applicator>
@@ -1237,7 +1237,7 @@
 	<askId>1</askId>
 	<autoTargetSelector href="" />
 	<budget>-1</budget>
-	<caption>А1 Твари</caption>
+	<caption>А1 Подкоп</caption>
 	<castAllowRange>
 		<compiledString></compiledString>
 		<returnType>float</returnType>
@@ -1245,8 +1245,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Monster/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Monster/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Monster/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Monster/Ability_A1.TALENT" id="B639312D-30B6-4811-AA0E-5B2F8B3DC6AE">
 			<ConditionFormula>
@@ -1431,7 +1431,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>4613</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Monster/A1_1.ITEX" />
 	<imageSecondState href="/UI/Styles/Icons/Heroes/Monster/A1_2.ITEX" />
 	<isGenderTalent>false</isGenderTalent>

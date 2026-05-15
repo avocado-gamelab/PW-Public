@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talent>
+	<BackLink DBID="/Social.ROOT" Count="1" />
+	<BackLink DBID="/GameLogic/AILogic.AILP" Count="2" />
+	<BackLink DBID="/Items/RerollShop/TalentsList_Spinners" Count="1" />
+	<BackLink DBID="/Social/TalentsCollection" Count="4" />
+	<BackLink DBID="/Social/Quests/TalentQuests/_Settings" Count="1" />
+	<BackLink DBID="/Test/Talents/TestSet15.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Ent_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Marine_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Naga_Mighty.TALENTSET" Count="1" />
+	<activationConditions />
+	<activeCustomTrigger>true</activeCustomTrigger>
+	<allowChase>
+		<compiledString></compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</allowChase>
+	<alternativeTargets />
+	<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+	<aoeHeight>0</aoeHeight>
+	<aoeMaterial href="" />
+	<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+	<aoeSize>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</aoeSize>
+	<aoeType>None</aoeType>
+	<applicators />
+	<askId>0</askId>
+	<autoTargetSelector href="" />
+	<budget>-1</budget>
+	<caption>G612: Спиннер скорости</caption>
+	<castAllowRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</castAllowRange>
+	<castLimitations />
+	<commonDescription textref="/Items/Talents/Common/G612_EndergyRegen.TALENT_commonDescription.txt" />
+	<compiledDescriptionA textref="/Items/Talents/Common/G612_EndergyRegen.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="" />
+	<conditionFormulas>
+		<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="284A49FD-2C77-4CE8-963C-26004EE3B6EF">
+			<ConditionFormula>
+				<condition>
+					<compiledString>FRQAAAACAAAAGQAAAC8AAABBZGRlZF9Nb3ZlU3BlZWRfNjEyAFWL7FFoAAAAAItFCIsQi00Ii4KIAQAA/9DcHVEAAADf4PbEQXUJx0X8AQAAAOsHx0X8AAAAAIpF/IvlXcMAAAAAAAAAAA==</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vAdded_MoveSpeed_612&gt;0</sString>
+				</condition>
+				<name>Added_MoveSpeed_612</name>
+			</ConditionFormula>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Spinners_Event/condition_Spinners_bonus2Active" />
+	</conditionFormulas>
+	<conflictingTalents />
+	<constants href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="9007ABE9-5DE4-4B4C-B9EE-239727C2D1D1">
+		<UnitConstantsContainer>
+			<vars>
+				<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="78695A4E-A431-4065-BDA6-F00CE0CCA93C">
+					<UnitConstant>
+						<name>Add_MoveSpeed</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>2</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="A28D54E6-F594-455A-A0FD-7B7875A602D5">
+					<UnitConstant>
+						<name>Add_MoveSpeedPerm</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DmpmZPg==</compiledString>
+							<returnType>float</returnType>
+							<sString>0.3</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="CB7614AF-E52C-430E-8898-CDACE285A87A">
+					<UnitConstant>
+						<name>MaxMoveSpeed</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADAQA==</compiledString>
+							<returnType>float</returnType>
+							<sString>6</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="4F2403B4-E755-4B7E-94D0-D80F0335A0A2">
+					<UnitConstant>
+						<name>Period</name>
+						<var>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABwQg==</compiledString>
+							<returnType>float</returnType>
+							<sString>60</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="FAC4C71A-C081-4D2A-B64C-9CF428A5D94E">
+					<UnitConstant>
+						<name>Add_EnergyRegAbs</name>
+						<var>
+							<compiledString>FTgAAAAFAAAARwAAAGEAAACBAAAAlwAAAKcAAABUMl9TdGF0AEFkZF9Nb3ZlU3BlZWQAAABNYXhNb3ZlU3BlZWQAAAAARW5lcmd5UmVnQnVkZ2V0AFWL7IPsHItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoCAAAAItVEIsCi00Qi1BQ3V34/9LcbfiLRQxQi00IUWgYAAAAi1UQiwKLTRCLUFDdXfD/0tw1yAAAANxt8ItFDFCLTQhRaCgAAACLVRCLAotNEItQUN1d6P/S3E3o2V3k2UXki+VdwwAAAAAAAABA</compiledString>
+							<returnType>float</returnType>
+							<sString>(cT2_Stat - cAdd_MoveSpeed - cMaxMoveSpeed / 2) * cEnergyRegBudget</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+				<Item href="/Items/Talents/TalentKits/Spinners_Event/const_Spinners_PrimeAmount" />
+				<Item href="/Items/Talents/TalentKits/Spinners_Event/const_Spinners_NaftaPeriod" />
+				<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="62E138F5-D1C7-489B-B734-A040D4CE1CD6">
+					<UnitConstant>
+						<name>TT_G612_Increment</name>
+						<var>
+							<compiledString>FRQAAAABAAAAGAAAAEFkZGVkX01vdmVTcGVlZF82MTIAVYvsaAAAAACLRQiLEItNCIuCiAEAAP/QXcM=</compiledString>
+							<returnType>float</returnType>
+							<sString>sender.vAdded_MoveSpeed_612</sString>
+						</var>
+					</UnitConstant>
+				</Item>
+			</vars>
+		</UnitConstantsContainer>
+	</constants>
+	<consumptionBonus>
+		<constant>0</constant>
+		<percent>0</percent>
+	</consumptionBonus>
+	<cooldownTime>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTime>
+	<cooldownTimeSecondState>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</cooldownTimeSecondState>
+	<description textref="/Items/Talents/Common/G612_EndergyRegen.TALENT_description.txt" />
+	<devPoints>1</devPoints>
+	<dispatch href="" />
+	<flags>5</flags>
+	<forceBonus>9.78</forceBonus>
+	<image href="/UI/Styles/Icons/Talents/_612.ITEX" />
+	<imageSecondState href="" />
+	<isGenderTalent>false</isGenderTalent>
+	<isTakenOnStart>false</isTakenOnStart>
+	<isUltimateTalent>false</isUltimateTalent>
+	<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+	<manaCost>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</manaCost>
+	<marker></marker>
+	<microAI href="" />
+	<minLevel>1</minLevel>
+	<minUseRangeCorrection>0</minUseRangeCorrection>
+	<naftaCost>-1</naftaCost>
+	<name textref="/Items/Talents/Common/G612_EndergyRegen.TALENT_name.txt" />
+	<node></node>
+	<passiveApplicators>
+		<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="ABA4B5F0-802A-453A-9025-A3CEE70DCCDD">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Add_EnergyRegAbs</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FREAAAABAAAAHQAAAEFkZF9FbmVyZ3lSZWdBYnMAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_EnergyRegAbs</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>EnergyRegenerationAbsolute</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="2B98E99F-C338-45FA-AD69-39BEDB7FC202">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>Добавляем базовую скорость в Added_MoveSpeed_612</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FQ4AAAABAAAAGgAAAEFkZF9Nb3ZlU3BlZWQAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_MoveSpeed</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>Added_MoveSpeed_612</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="5C12328F-0F85-4B1F-A436-81595AFEDB7F">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>увеличиваем MoveSpeed (изначально было sender.vAdded_MoveSpeed_612 вместо cAdd_MoveSpeed)</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString>FSQAAAACAAAAKwAAAEAAAABBZGRlZF9Nb3ZlU3BlZWQAQWRkZWRfTW92ZVNwZWVkXzYxMgBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9BoEAAAAItNCIsRi00Ii4KIAQAA3V34/9DcXfjf4PbEAXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vAdded_MoveSpeed &lt;= sender.vAdded_MoveSpeed_612</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FSAAAAACAAAALwAAAEEAAABBZGRfTW92ZVNwZWVkAAAAQWRkZWRfTW92ZVNwZWVkAFWL7IPsDItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SaBAAAACLRQiLEItNCIuCiAEAAN1d+P/Q3G342V302UX0i+Vdww==</compiledString>
+						<returnType>float</returnType>
+						<sString>cAdd_MoveSpeed - sender.vAdded_MoveSpeed</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>MoveSpeed</stat>
+					<topModifier>false</topModifier>
+					<variable></variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="01BA6A59-E862-460D-8CAB-DAAECC88C566">
+			<PermanentStatModApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<caption>устанавливаем Added_MoveSpeed на новую величину</caption>
+				<customApplyType>None</customApplyType>
+				<enabled>
+					<compiledString>FSQAAAACAAAAKwAAAEAAAABBZGRlZF9Nb3ZlU3BlZWQAQWRkZWRfTW92ZVNwZWVkXzYxMgBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9BoEAAAAItNCIsRi00Ii4KIAQAA3V34/9DcXfjf4PbEAXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+					<returnType>bool</returnType>
+					<sString>sender.vAdded_MoveSpeed &lt;= sender.vAdded_MoveSpeed_612</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<LoggingEvent>-1</LoggingEvent>
+				<modifier>
+					<addValue>
+						<compiledString>FSQAAAACAAAAKwAAAEAAAABBZGRlZF9Nb3ZlU3BlZWRfNjEyAEFkZGVkX01vdmVTcGVlZABVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9BoFAAAAItNCIsRi00Ii4KIAQAA3V34/9DcbfjZXfTZRfSL5V3D</compiledString>
+						<returnType>float</returnType>
+						<sString>sender.vAdded_MoveSpeed_612 - sender.vAdded_MoveSpeed</sString>
+					</addValue>
+					<multValue>
+						<compiledString></compiledString>
+						<returnType>float</returnType>
+						<sString>1.0f</sString>
+					</multValue>
+					<stat>Life</stat>
+					<topModifier>false</topModifier>
+					<variable>Added_MoveSpeed</variable>
+				</modifier>
+				<providerName></providerName>
+			</PermanentStatModApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Spinners_Event/statMod_Spinners_PrimeAmount.APLR" />
+		<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="A4942DBF-81B7-4767-9FA4-4A39756467C3">
+			<SpellPeriodicallyApplicator>
+				<applyTarget>ApplicatorTarget</applyTarget>
+				<behaviorFlags>152</behaviorFlags>
+				<caption>увеличить скорость раз в 60 сек</caption>
+				<effect>
+					<Item href="" />
+					<Item href="" />
+				</effect>
+				<enabled>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</enabled>
+				<formulaName></formulaName>
+				<lifeTime>
+					<compiledString>FSsAAAAFAAEAOgAAAFQAAAB/AAAAjAAAAKUAAADlAAAATWF4TW92ZVNwZWVkAAAAAEFkZF9Nb3ZlU3BlZWRQZXJtAAAAUGVyaW9kAFWL7IPsGItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/Si0UMUItNCFFoEAAAAItVEIsCi00Qi1BQ3V34/9LcffjZXfTZRfRR2Rwk6EkAAACDxATcBbsAAACLRQxQi00IUWgkAAAAi1UQiwKLTRCLUFDdXez/0txN7NwFswAAANld6NlF6IvlXcOamZmZmZm5PwAAAAAAAPA/VYvsUdlFCNkcJOgFAAAAg8QEXcNVi+xR2UUIg+wI3Rwk6BH///+DxAjZXfzZRfyL5V3D</compiledString>
+					<returnType>float</returnType>
+					<sString>( ceil( cMaxMoveSpeed / cAdd_MoveSpeedPerm ) + 1.0 ) * cPeriod + 0.1</sString>
+				</lifeTime>
+				<LoggingEvent>-1</LoggingEvent>
+				<period>
+					<compiledString>FQcAAAABAAAAEwAAAFBlcmlvZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+					<returnType>float</returnType>
+					<sString>cPeriod</sString>
+				</period>
+				<providerName></providerName>
+				<scaleMode>ScaleIsCount</scaleMode>
+				<spell href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="7C6B7988-5DD7-4FDC-B930-AF38542F8B78">
+					<Spell>
+						<applicators>
+							<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="4DC6DC83-B265-4196-8B1D-660C3AF10369">
+								<PermanentStatModApplicator>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<caption>Увеличиваем Added_MoveSpeed_612</caption>
+									<customApplyType>None</customApplyType>
+									<enabled>
+										<compiledString></compiledString>
+										<returnType>bool</returnType>
+										<sString>true</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<modifier>
+										<addValue>
+											<compiledString>FTYAAAAEAAAARQAAAGkAAACMAAAAmQAAAEFkZF9Nb3ZlU3BlZWRQZXJtAAAATWF4TW92ZVNwZWVkAAAAAEFkZF9Nb3ZlU3BlZWRQZXJtAFWL7IPsFItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SUdkcJFHZ7tkcJItFDFCLTQhRaBQAAACLVRCLAotNEItQUP/Si0UQixCLTRCLQhDdXfj/0Nwl1AAAAItNDFGLVQhSaCQAAACLRRCLEItNEItCUN1d8P/Q3E3w3G342V3s2UXsUdkcJOhGAAAAg8QE2Rwk6BMAAACDxAiL5V3DAAAAAAAA8D8AAAAAVYvsUdlFCNlFDN7Z3+D2xEF1CNlFCNld/OsG2UUM2V382UX8i+Vdw1WL7FHZRQjZRQze2d/g9sQFegjZRQjZXfzrBtlFDNld/NlF/IvlXcM=</compiledString>
+											<returnType>float</returnType>
+											<sString>clamp( cMaxMoveSpeed - (mScale - 1) * cAdd_MoveSpeedPerm, 0, cAdd_MoveSpeedPerm )</sString>
+										</addValue>
+										<multValue>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>1.0f</sString>
+										</multValue>
+										<stat>Life</stat>
+										<topModifier>false</topModifier>
+										<variable>Added_MoveSpeed_612</variable>
+									</modifier>
+									<providerName></providerName>
+								</PermanentStatModApplicator>
+							</Item>
+							<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="0C4939BB-92D2-4CAF-AE9F-7B9A3801242F">
+								<PermanentStatModApplicator>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<caption>увеличиваем MoveSpeed</caption>
+									<customApplyType>None</customApplyType>
+									<enabled>
+										<compiledString>FSQAAAACAAAAKwAAAEAAAABBZGRlZF9Nb3ZlU3BlZWQAQWRkZWRfTW92ZVNwZWVkXzYxMgBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9BoEAAAAItNCIsRi00Ii4KIAQAA3V34/9DcXfjf4PbEAXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+										<returnType>bool</returnType>
+										<sString>sender.vAdded_MoveSpeed &lt;= sender.vAdded_MoveSpeed_612</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<modifier>
+										<addValue>
+											<compiledString>FSQAAAACAAAAKwAAAEAAAABBZGRlZF9Nb3ZlU3BlZWRfNjEyAEFkZGVkX01vdmVTcGVlZABVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9BoFAAAAItNCIsRi00Ii4KIAQAA3V34/9DcbfjZXfTZRfSL5V3D</compiledString>
+											<returnType>float</returnType>
+											<sString>sender.vAdded_MoveSpeed_612 - sender.vAdded_MoveSpeed</sString>
+										</addValue>
+										<multValue>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>1.0f</sString>
+										</multValue>
+										<stat>MoveSpeed</stat>
+										<topModifier>false</topModifier>
+										<variable></variable>
+									</modifier>
+									<providerName></providerName>
+								</PermanentStatModApplicator>
+							</Item>
+							<Item href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="E860666D-D161-4682-90D5-86A88E0C3550">
+								<PermanentStatModApplicator>
+									<applyTarget>ApplicatorTarget</applyTarget>
+									<caption>устанавливаем Added_MoveSpeed на новую величину</caption>
+									<customApplyType>None</customApplyType>
+									<enabled>
+										<compiledString>FSQAAAACAAAAKwAAAEAAAABBZGRlZF9Nb3ZlU3BlZWQAQWRkZWRfTW92ZVNwZWVkXzYxMgBVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9BoEAAAAItNCIsRi00Ii4KIAQAA3V34/9DcXfjf4PbEAXUJx0X0AQAAAOsHx0X0AAAAAIpF9IvlXcM=</compiledString>
+										<returnType>bool</returnType>
+										<sString>sender.vAdded_MoveSpeed &lt;= sender.vAdded_MoveSpeed_612</sString>
+									</enabled>
+									<formulaName></formulaName>
+									<LoggingEvent>-1</LoggingEvent>
+									<modifier>
+										<addValue>
+											<compiledString>FSQAAAACAAAAKwAAAEAAAABBZGRlZF9Nb3ZlU3BlZWRfNjEyAEFkZGVkX01vdmVTcGVlZABVi+yD7AxoAAAAAItFCIsQi00Ii4KIAQAA/9BoFAAAAItNCIsRi00Ii4KIAQAA3V34/9DcbfjZXfTZRfSL5V3D</compiledString>
+											<returnType>float</returnType>
+											<sString>sender.vAdded_MoveSpeed_612 - sender.vAdded_MoveSpeed</sString>
+										</addValue>
+										<multValue>
+											<compiledString></compiledString>
+											<returnType>float</returnType>
+											<sString>1.0f</sString>
+										</multValue>
+										<stat>Life</stat>
+										<topModifier>false</topModifier>
+										<variable>Added_MoveSpeed</variable>
+									</modifier>
+									<providerName></providerName>
+								</PermanentStatModApplicator>
+							</Item>
+						</applicators>
+						<dispatch href="/Items/Talents/Common/G612_EndergyRegen.TALENT" id="F23C90B0-1ED6-4EDA-A403-69AD8B123179">
+							<DispatchImmediate>
+								<alwaysApply>false</alwaysApply>
+								<applyEffect>
+									<Item href="" />
+									<Item href="" />
+								</applyEffect>
+								<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+								<applyEffectOrientation>Default</applyEffectOrientation>
+								<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+								<dieAfterApply>true</dieAfterApply>
+								<dispatchEffect>
+									<Item href="" />
+									<Item href="" />
+								</dispatchEffect>
+								<flags>0</flags>
+								<instantApply>false</instantApply>
+							</DispatchImmediate>
+						</dispatch>
+					</Spell>
+				</spell>
+				<startCondition>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</startCondition>
+				<startOffset>
+					<compiledString>FQcAAAABAAAAEwAAAFBlcmlvZABVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+					<returnType>float</returnType>
+					<sString>cPeriod</sString>
+				</startOffset>
+				<targetSelector href="" />
+			</SpellPeriodicallyApplicator>
+		</Item>
+		<Item href="/Items/Talents/TalentKits/Spinners_Event/spell_Spinners_PrimeAmount.APLR" />
+	</passiveApplicators>
+	<persistentId>G612</persistentId>
+	<prerequisiteTalents />
+	<rarity>exclusive</rarity>
+	<requireLineOfSight>true</requireLineOfSight>
+	<shortDescription textref="/Items/Talents/Common/G612_EndergyRegen.TALENT_shortDescription.txt" />
+	<talentRollGroups>17</talentRollGroups>
+	<talentStats>
+		<Item>
+			<addValueName></addValueName>
+			<stat>EnergyRegenerationAbsolute</stat>
+			<values>
+				<Item>1.21</Item>
+				<Item>1.485</Item>
+				<Item>1.76</Item>
+				<Item>2.035</Item>
+				<Item>2.31</Item>
+			</values>
+		</Item>
+	</talentStats>
+	<targetType>136258047</targetType>
+	<type>Passive</type>
+	<upgradeLevel>0</upgradeLevel>
+	<useRange>
+		<compiledString></compiledString>
+		<returnType>float</returnType>
+		<sString>0.0f</sString>
+	</useRange>
+	<useRangeMaterial href="" />
+	<variativeMaxTalentStats />
+	<variativeMinTalentStats />
+	<vendorCost>-1</vendorCost>
+	<warFogRemoveRadius>0</warFogRemoveRadius>
+	<warFogRemoveTime>0</warFogRemoveTime>
+</Talent>

@@ -2,14 +2,14 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Archeress.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Archeress_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Archeress.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Archeress_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Archeress_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Archeress/Ability_A1.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Archeress/Ability_A1_SUP.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Archeress/Ability_A1u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset6_2_CDR/appl_Redset6_2_RefreshCooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Archeress_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Archeress/Duel.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Archeress/Duel_Vamp.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Archeress/Elite_NoAsp.TALENTSET" Count="1" />
@@ -502,8 +502,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Archeress/Ability_A1.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Archeress/Ability_A1.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Archeress/Ability_A1.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Archeress/Ability_A1.TALENT" id="88CD1CBC-37D8-42AD-A7B4-D7A522B01E7D">
 			<ConditionFormula>
@@ -534,9 +534,9 @@
 					<UnitConstant>
 						<name>Range</name>
 						<var>
-							<compiledString>FQsAAAACAAAAGAAAACsAAABSYW5nZV9Mb25nAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twFOQAAANld/NlF/IvlXcMAAAAAAAAQQA==</compiledString>
+							<compiledString>FUsAAAAGAAAAUgAAAGsAAAChAAAAtAAAAMsAAADmAAAAUmFuZ2VfTG9uZwAAQXJjaGVyZXNzX0ExX1NVUAAAAABBcmNoZXJlc3NfQTFfU1VQAAAAAEExX1NVUF9SYW5nZU11bHRpcGxpZXIAVYvsg+wgaAwAAACLRQiLEItNCIuCqAEAAP/QhcB0KmggAAAAi00IixGLTQiLgqgBAAD/0IlF/ItN/IsRi038i0IE/9CIRfvrBMZF+wCLTQxRi1UIUmgAAAAAi0UQixCLTRCLQlD/0NwFBgEAAA+2TfuJTfTbRfSLVQxSi0UIUGg0AAAAi00QixGLTRCLQlDZyd1d7N1d5P/Q3CX+AAAA3E3k2ejewdxN7Nld4NlF4IvlXcMAAAAAAADwPwAAAAAAABBA</compiledString>
 							<returnType>float</returnType>
-							<sString>cRange_Long+4</sString>
+							<sString>(cRange_Long + 4) * (1 + tal("Archeress_A1_SUP") * (cA1_SUP_RangeMultiplier - 1))</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -645,6 +645,7 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/Archeress/const_A1_SUP_RangeMultiplier" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -684,7 +685,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>2159</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>6.85</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Archeress/A1.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

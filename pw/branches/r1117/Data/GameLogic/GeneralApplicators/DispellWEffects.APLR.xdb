@@ -14,16 +14,16 @@
 	<BackLink DBID="/Items/Talents/Class/Witcher/Ability_A2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Witcher/Ability_A3.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Zealot/Ability_A2.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level1/G482_SelfHeal.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/trigger_G349.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/trigger_G349_Night.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Level3/G515_Life_MoveSpeed.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level4/G293_GuildAllyDispell.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level4/G660_GuildAllyDispell_Red.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level5/auraApplicator_G353.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/Level5/G063_Life-Int-DispellAoE.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentKits/Redset7_11_MiniRefresher/spell_G766_RefreshAndNotify.SPLL" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G482_SelfHeal.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G515_Life_MoveSpeed.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/Applicators/auraApplicator_G353.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/Applicators/trigger_G349.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/Applicators/trigger_G349_Night.APLR" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/Obsolete/G063_Life-Int-DispellAoE.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G293_GuildAllyDispell.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G660_GuildAllyDispell_Red.TALENT" Count="1" />
 	<BackLink DBID="/Items/Temp/DispellStick.ARCT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G717_WillOrStamina.TALENT" Count="1" />
 	<applicators>
 		<Item>
 			<applicator href="/GameLogic/GeneralApplicators/Dispell.APLR" />
@@ -107,9 +107,9 @@
 	<applyTarget>ApplicatorTarget</applyTarget>
 	<caption>Диспелл и эффекты к нему</caption>
 	<enabled>
-		<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+		<compiledString>FREAAAACAAAAHgAAADEAAABEaXNwZWxsQ29uZGl0aW9uAFWL7FGLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0twdTQAAAN/g9sREewbGRf8B6wTGRf8AikX/i+VdwwAAAAAAAAAA</compiledString>
 		<returnType>bool</returnType>
-		<sString>true</sString>
+		<sString>cDispellCondition</sString>
 	</enabled>
 	<formulaName></formulaName>
 	<LoggingEvent>-1</LoggingEvent>

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/PinkGirl_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/PinkGirl_Alternative.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/PinkGirl/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/PinkGirl/Ability_A4u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/PinkGirl_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/PinkGirl_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -35,8 +35,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/PinkGirl/Ability_A4_2u.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/PinkGirl/Ability_A4_2u.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/PinkGirl/Ability_A4_2u.TALENT" id="29BCAC09-3FD9-4F06-855F-21B90E2843ED">
 			<ConditionFormula>
@@ -59,6 +59,7 @@
 				<Item href="/Items/Talents/Class/PinkGirl/const_Radius_Percent" />
 				<Item href="/Items/Talents/Class/PinkGirl/const_A4_2_Damage" />
 				<Item href="/Items/Talents/Class/PinkGirl/const_CatHitPoint" />
+				<Item href="/Items/Talents/Class/PinkGirl/const_Cat_AddHitPoints" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -80,7 +81,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>16</forceBonus>
+	<forceBonus>16.15</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/PinkGirl/A5.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

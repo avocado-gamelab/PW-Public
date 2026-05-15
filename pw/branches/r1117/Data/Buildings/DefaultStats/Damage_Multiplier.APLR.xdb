@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SpellApplicator>
+	<BackLink DBID="/Buildings/DefaultStats/ability_AParent_AttackAbility.ATCK" Count="1" />
+	<BackLink DBID="/Buildings/DefaultStats/ability_ATier1_AttackAbility.ATCK" Count="1" />
+	<BackLink DBID="/Buildings/DefaultStats/ability_BParent_AttackAbility.ATCK" Count="1" />
+	<BackLink DBID="/Buildings/DefaultStats/ability_BTier1_AttackAbility.ATCK" Count="1" />
+	<BackLink DBID="/Buildings/DefaultStats/DefaultMainAttack.ATCK" Count="1" />
+	<BackLink DBID="/Maps/Multiplayer/MOBA/Towers/BottomA1.TOWR" Count="1" />
+	<applyTarget>ApplicatorTarget</applyTarget>
+	<caption>Усиление/Ослабление урона строений</caption>
+	<enabled>
+		<compiledString>FQAAAAAAAAAAVYvssAFdww==</compiledString>
+		<returnType>bool</returnType>
+		<sString>true</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<LoggingEvent>-1</LoggingEvent>
+	<providerName></providerName>
+	<spell href="/Buildings/DefaultStats/Damage_Multiplier.APLR" id="DF4B1ECC-F9FC-4729-B6F7-881E835EB51A">
+		<Spell>
+			<applicators>
+				<Item href="/Buildings/DefaultStats/Damage_Multiplier.APLR" id="3ED6C6DD-8188-4BBB-A5E9-2CBE5B4EBBEB">
+					<TargetsCounterApplicator>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<behaviorFlags>0</behaviorFlags>
+						<caption>Считаем союзных героев вокруг</caption>
+						<effect>
+							<Item href="" />
+							<Item href="" />
+						</effect>
+						<enabled>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</enabled>
+						<formulaName>DamageMultiplierAllyHeroCounter</formulaName>
+						<lifeTime>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0</sString>
+						</lifeTime>
+						<LoggingEvent>-1</LoggingEvent>
+						<providerName></providerName>
+						<startCondition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</startCondition>
+						<targetSelector href="/Buildings/DefaultStats/Damage_Multiplier.APLR" id="2F64513C-5F9B-414C-BA5A-D17699207265">
+							<AreaTargetSelector>
+								<absolutePosition>
+									<x>0</x>
+									<y>0</y>
+								</absolutePosition>
+								<flags>0</flags>
+								<mode>Normal</mode>
+								<range>
+									<compiledString>FSAAAAABAAAALAAAAERhbWFnZU11bHRpcGxpZXJIZXJvU2VhcmNoUmFuZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+									<returnType>float</returnType>
+									<sString>cDamageMultiplierHeroSearchRange</sString>
+								</range>
+								<targetFilter>268435459</targetFilter>
+								<targetSelector href="" />
+							</AreaTargetSelector>
+						</targetSelector>
+					</TargetsCounterApplicator>
+				</Item>
+				<Item href="/Buildings/DefaultStats/Damage_Multiplier.APLR" id="E2769A76-239D-4317-AF5D-CEA43712E731">
+					<TargetsCounterApplicator>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<behaviorFlags>0</behaviorFlags>
+						<caption>Считаем вражеских героев вокруг</caption>
+						<effect>
+							<Item href="" />
+							<Item href="" />
+						</effect>
+						<enabled>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</enabled>
+						<formulaName>DamageMultiplierEnemyHeroCounter</formulaName>
+						<lifeTime>
+							<compiledString></compiledString>
+							<returnType>float</returnType>
+							<sString>-1.0</sString>
+						</lifeTime>
+						<LoggingEvent>-1</LoggingEvent>
+						<providerName></providerName>
+						<startCondition>
+							<compiledString></compiledString>
+							<returnType>bool</returnType>
+							<sString>true</sString>
+						</startCondition>
+						<targetSelector href="/Buildings/DefaultStats/Damage_Multiplier.APLR" id="4E1D8F6E-B86A-4AE3-8087-9842EC479B51">
+							<AreaTargetSelector>
+								<absolutePosition>
+									<x>0</x>
+									<y>0</y>
+								</absolutePosition>
+								<flags>0</flags>
+								<mode>Normal</mode>
+								<range>
+									<compiledString>FSAAAAABAAAALAAAAERhbWFnZU11bHRpcGxpZXJIZXJvU2VhcmNoUmFuZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+									<returnType>float</returnType>
+									<sString>cDamageMultiplierHeroSearchRange</sString>
+								</range>
+								<targetFilter>536870915</targetFilter>
+								<targetSelector href="" />
+							</AreaTargetSelector>
+						</targetSelector>
+					</TargetsCounterApplicator>
+				</Item>
+				<Item href="/Buildings/DefaultStats/status_Damage_Increase.APLR" />
+				<Item href="/Buildings/DefaultStats/status_Damage_Decrease.APLR" />
+			</applicators>
+			<dispatch href="/Buildings/DefaultStats/Damage_Multiplier.APLR" id="6A818A9A-86BD-4100-B388-DBB4BE226716">
+				<DispatchImmediate>
+					<alwaysApply>false</alwaysApply>
+					<applyEffect>
+						<Item href="" />
+						<Item href="" />
+					</applyEffect>
+					<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+					<applyEffectOrientation>Default</applyEffectOrientation>
+					<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+					<dieAfterApply>true</dieAfterApply>
+					<dispatchEffect>
+						<Item href="" />
+						<Item href="" />
+					</dispatchEffect>
+					<flags>0</flags>
+					<instantApply>false</instantApply>
+				</DispatchImmediate>
+			</dispatch>
+		</Spell>
+	</spell>
+	<spellTarget>AbilityOwner</spellTarget>
+	<targetSelector href="" />
+</SpellApplicator>

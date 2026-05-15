@@ -7,9 +7,483 @@
 	<BackLink DBID="/Maps/Multiplayer/MOBA/Mod10/Test_PvP_1x1.ADMPDSCR" Count="1" />
 	<abilities>
 		<Item href="/Creeps/Bosses/Boss1/ability_PVP_Walked.ABLT" />
-		<Item href="/Creeps/Bosses/Boss1/A1_Walked.ABLT" />
-		<Item href="" />
-		<Item skip="1" />
+		<Item href="/Creeps/Bosses/Boss1/ability_PVP_Walked_DragonFire.ABLT" />
+		<Item href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="DA29AF7F-644E-4181-9CCC-907B225D516C">
+			<Ability>
+				<activeCustomTrigger>true</activeCustomTrigger>
+				<allowChase>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</allowChase>
+				<alternativeTargets />
+				<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+				<aoeHeight>0</aoeHeight>
+				<aoeMaterial href="/Effects/UI/AOESelection/Circle.MTRL" />
+				<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+				<aoeSize>
+					<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+					<returnType>float</returnType>
+					<sString>0</sString>
+				</aoeSize>
+				<aoeType>None</aoeType>
+				<applicators />
+				<autoTargetSelector href="" />
+				<caption>Горелка</caption>
+				<castAllowRange>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</castAllowRange>
+				<castLimitations />
+				<commonDescription textref="" />
+				<compiledDescriptionA textref="" />
+				<compiledDescriptionB textref="" />
+				<conditionFormulas />
+				<constants href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="547A86D0-7450-4C1F-8758-586D1AB8147B">
+					<UnitConstantsContainer>
+						<vars>
+							<Item href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="689F911D-C88C-4F38-887F-5CB25ABA51B9">
+								<UnitConstant>
+									<name>Range</name>
+									<var>
+										<compiledString>FQ0AAAABAAAAGQAAAFJhbmdlX0V4TG9uZwBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+										<returnType>float</returnType>
+										<sString>cRange_ExLong</sString>
+									</var>
+								</UnitConstant>
+							</Item>
+							<Item href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="515081AC-A605-4187-973C-86F25D6C8BAF">
+								<UnitConstant>
+									<name>Damage</name>
+									<var>
+										<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABIQg==</compiledString>
+										<returnType>float</returnType>
+										<sString>50</sString>
+									</var>
+								</UnitConstant>
+							</Item>
+							<Item href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="2A3D7953-B57C-41F9-BCE1-8AC2B62B5DB4">
+								<UnitConstant>
+									<name>PeriodBase</name>
+									<var>
+										<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPg==</compiledString>
+										<returnType>float</returnType>
+										<sString>0.2f</sString>
+									</var>
+								</UnitConstant>
+							</Item>
+							<Item href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="A0819CF4-D26F-4221-907F-925F696B6D91">
+								<UnitConstant>
+									<name>TreeDropRange</name>
+									<var>
+										<compiledString>FQwAAAABAAAAGAAAAFJhbmdlX1Nob3J0AFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+										<returnType>float</returnType>
+										<sString>cRange_Short</sString>
+									</var>
+								</UnitConstant>
+							</Item>
+						</vars>
+					</UnitConstantsContainer>
+				</constants>
+				<cooldownTime>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</cooldownTime>
+				<cooldownTimeSecondState>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</cooldownTimeSecondState>
+				<description textref="" />
+				<dispatch href="" />
+				<flags>1</flags>
+				<image href="" />
+				<imageSecondState href="" />
+				<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+				<manaCost>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</manaCost>
+				<marker></marker>
+				<microAI href="" />
+				<minUseRangeCorrection>0</minUseRangeCorrection>
+				<name textref="" />
+				<node></node>
+				<passiveApplicators>
+					<Item href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="8F4DF41F-72C4-4C6F-8D38-170C9786939C">
+						<SpellPeriodicallyApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption>Сжигать крипов</caption>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<period>
+								<compiledString>FQsAAAABAAAAFwAAAFBlcmlvZEJhc2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+								<returnType>float</returnType>
+								<sString>cPeriodBase</sString>
+							</period>
+							<providerName></providerName>
+							<scaleMode>ScaleIsCount</scaleMode>
+							<spell href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="DC70D4DF-F7FB-4E82-938D-E003B79B4D14">
+								<Spell>
+									<applicators>
+										<Item href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="F773D222-F211-4685-A9FA-52791A6285FB">
+											<DamageApplicator>
+												<applyTarget>ApplicatorTarget</applyTarget>
+												<cancelInvisibility>false</cancelInvisibility>
+												<caption></caption>
+												<damage>
+													<compiledString>FQcAAAABAAAAEwAAAERhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+													<returnType>float</returnType>
+													<sString>cDamage</sString>
+												</damage>
+												<damageMode>4</damageMode>
+												<damageType>Native</damageType>
+												<enabled>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</enabled>
+												<formulaName></formulaName>
+												<LoggingEvent>-1</LoggingEvent>
+												<providerName></providerName>
+												<timeLimiter>-1</timeLimiter>
+												<uiEvent href="" />
+											</DamageApplicator>
+										</Item>
+									</applicators>
+									<dispatch href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="641ACAD3-5929-4F51-B09F-3A21F22C1451">
+										<DispatchImmediate>
+											<alwaysApply>false</alwaysApply>
+											<applyEffect>
+												<Item href="" />
+												<Item href="" />
+											</applyEffect>
+											<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+											<applyEffectOrientation>Default</applyEffectOrientation>
+											<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+											<dieAfterApply>true</dieAfterApply>
+											<dispatchEffect>
+												<Item href="" />
+												<Item href="" />
+											</dispatchEffect>
+											<flags>0</flags>
+											<instantApply>false</instantApply>
+										</DispatchImmediate>
+									</dispatch>
+								</Spell>
+							</spell>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<startOffset>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>0.0f</sString>
+							</startOffset>
+							<targetSelector href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="610A0A64-E49C-40D9-B739-5EBFD6AD5BF2">
+								<ConditionTargetSelector>
+									<condition>
+										<compiledString>FRUAAAACAAAAIAAAAEAAAABOZXV0cmFsU3RhdHVzAAAAV2FyZABVi+xRagCLRRBQaAAAAACLTQyLEYtNDIuCnAEAAP/QO0UQdSlqAItNEFFoEAAAAItVDIsCi00Mi5CcAQAA/9I7RRB1CcdF/AEAAADrB8dF/AAAAACKRfyL5V3D</compiledString>
+										<returnType>bool</returnType>
+										<sString>receiver.FindApplicator("NeutralStatus", pMisc, GLOBAL) == pMisc &amp;&amp;  receiver.applWard(GLOBAL) == pMisc</sString>
+									</condition>
+									<flags>0</flags>
+									<mode>Normal</mode>
+									<targetSelector href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="255A41CA-265A-4B8A-A2ED-DBFF634917CA">
+										<AreaTargetSelector>
+											<absolutePosition>
+												<x>0</x>
+												<y>0</y>
+											</absolutePosition>
+											<flags>0</flags>
+											<mode>Normal</mode>
+											<range>
+												<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+												<returnType>float</returnType>
+												<sString>cRange</sString>
+											</range>
+											<targetFilter>536870968</targetFilter>
+											<targetSelector href="" />
+										</AreaTargetSelector>
+									</targetSelector>
+								</ConditionTargetSelector>
+							</targetSelector>
+						</SpellPeriodicallyApplicator>
+					</Item>
+					<Item href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="8848E20E-9F20-47AC-BA29-8C6DB133C53F">
+						<SpellPeriodicallyApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption>Топчем деревья</caption>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString>FQAAAAAAAAAAVYvsaAAAABCLRQiLEItNCItCaP/QD7bA99gbwIPAAV3D</compiledString>
+								<returnType>bool</returnType>
+								<sString>!sFlag(268435456)</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACAvw==</compiledString>
+								<returnType>float</returnType>
+								<sString>-1</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<period>
+								<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DzcxMPg==</compiledString>
+								<returnType>float</returnType>
+								<sString>0.2</sString>
+							</period>
+							<providerName></providerName>
+							<scaleMode>ScaleIsCount</scaleMode>
+							<spell href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="F65DEBB2-5813-4F26-8DA2-66E398F01FD8">
+								<Spell>
+									<applicators>
+										<Item href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="29139530-8A12-4FE5-8C72-2230BFB09DD7">
+											<DropTreeApplicator>
+												<applyTarget>ApplicatorTarget</applyTarget>
+												<caption>Роняем деревья</caption>
+												<enabled>
+													<compiledString></compiledString>
+													<returnType>bool</returnType>
+													<sString>true</sString>
+												</enabled>
+												<formulaName></formulaName>
+												<LoggingEvent>-1</LoggingEvent>
+												<providerName></providerName>
+											</DropTreeApplicator>
+										</Item>
+									</applicators>
+									<dispatch href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="5DDFF8AF-AE17-423F-82AA-EFEFC3C47C77">
+										<DispatchImmediate>
+											<alwaysApply>false</alwaysApply>
+											<applyEffect>
+												<Item href="" />
+												<Item href="" />
+											</applyEffect>
+											<applyEffectIgnoreVisibility>false</applyEffectIgnoreVisibility>
+											<applyEffectOrientation>Default</applyEffectOrientation>
+											<applyEffectRandomAnglePoints>0</applyEffectRandomAnglePoints>
+											<dieAfterApply>true</dieAfterApply>
+											<dispatchEffect>
+												<Item href="" />
+												<Item href="" />
+											</dispatchEffect>
+											<flags>0</flags>
+											<instantApply>false</instantApply>
+										</DispatchImmediate>
+									</dispatch>
+								</Spell>
+							</spell>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<startOffset>
+								<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+								<returnType>float</returnType>
+								<sString>0</sString>
+							</startOffset>
+							<targetSelector href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="2C3AECF2-B883-4EDF-83B1-A297376302C3">
+								<AreaTargetSelector>
+									<absolutePosition>
+										<x>0</x>
+										<y>0</y>
+									</absolutePosition>
+									<flags>0</flags>
+									<mode>Normal</mode>
+									<range>
+										<compiledString>FQ4AAAABAAAAGgAAAFRyZWVEcm9wUmFuZ2UAVYvsi0UMUItNCFFoAAAAAItVEIsCi00Qi1BQ/9Jdww==</compiledString>
+										<returnType>float</returnType>
+										<sString>cTreeDropRange</sString>
+									</range>
+									<targetFilter>536871936</targetFilter>
+									<targetSelector href="" />
+								</AreaTargetSelector>
+							</targetSelector>
+						</SpellPeriodicallyApplicator>
+					</Item>
+				</passiveApplicators>
+				<requireLineOfSight>true</requireLineOfSight>
+				<shortDescription textref="" />
+				<targetType>545259544</targetType>
+				<type>Passive</type>
+				<useRange>
+					<compiledString>FQYAAAABAAAAEgAAAFJhbmdlAFWL7ItFDFCLTQhRaAAAAACLVRCLAotNEItQUP/SXcM=</compiledString>
+					<returnType>float</returnType>
+					<sString>cRange</sString>
+				</useRange>
+				<useRangeMaterial href="" />
+				<warFogRemoveRadius>0</warFogRemoveRadius>
+				<warFogRemoveTime>0</warFogRemoveTime>
+			</Ability>
+		</Item>
+		<Item href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="52F27D52-3FC2-4040-8EE6-D54F43FDF450">
+			<Ability>
+				<activeCustomTrigger>true</activeCustomTrigger>
+				<allowChase>
+					<compiledString></compiledString>
+					<returnType>bool</returnType>
+					<sString>true</sString>
+				</allowChase>
+				<alternativeTargets />
+				<aoeDisplayOnMinimap>false</aoeDisplayOnMinimap>
+				<aoeHeight>0</aoeHeight>
+				<aoeMaterial href="" />
+				<aoePassabilityCheckMode>0</aoePassabilityCheckMode>
+				<aoeSize>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</aoeSize>
+				<aoeType>None</aoeType>
+				<applicators />
+				<autoTargetSelector href="" />
+				<caption>Вижен и гостмув</caption>
+				<castAllowRange>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</castAllowRange>
+				<castLimitations />
+				<commonDescription textref="" />
+				<compiledDescriptionA textref="" />
+				<compiledDescriptionB textref="" />
+				<conditionFormulas />
+				<constants href="" />
+				<cooldownTime>
+					<compiledString>FQAAAAAAAAAAVYvs2e5dwwAAAAA=</compiledString>
+					<returnType>float</returnType>
+					<sString>0</sString>
+				</cooldownTime>
+				<cooldownTimeSecondState>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</cooldownTimeSecondState>
+				<description textref="" />
+				<dispatch href="" />
+				<flags>0</flags>
+				<image href="" />
+				<imageSecondState href="" />
+				<isUnitFreeAfterCast>true</isUnitFreeAfterCast>
+				<manaCost>
+					<compiledString></compiledString>
+					<returnType>float</returnType>
+					<sString>0.0f</sString>
+				</manaCost>
+				<marker></marker>
+				<microAI href="" />
+				<minUseRangeCorrection>0</minUseRangeCorrection>
+				<name textref="" />
+				<node></node>
+				<passiveApplicators>
+					<Item href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="74044E46-75E6-4451-B419-A6AB63222868">
+						<GhostMoveApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<caption>Гостмув через юнитов</caption>
+							<collisionFlags>1</collisionFlags>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<providerName></providerName>
+							<pushUnits>true</pushUnits>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+						</GhostMoveApplicator>
+					</Item>
+					<Item href="/Creeps/Bosses/Boss1/PVP_Walked.CREEP" id="A28A9328-BD9A-4E72-AC5E-4849E6D26294">
+						<EyeApplicator>
+							<applyTarget>ApplicatorTarget</applyTarget>
+							<behaviorFlags>0</behaviorFlags>
+							<cancelObstacles>true</cancelObstacles>
+							<caption>Вижен сквозь террейн</caption>
+							<effect>
+								<Item href="" />
+								<Item href="" />
+							</effect>
+							<enabled>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</enabled>
+							<eyeTarget>ApplicatorTarget</eyeTarget>
+							<flags>8</flags>
+							<formulaName></formulaName>
+							<lifeTime>
+								<compiledString></compiledString>
+								<returnType>float</returnType>
+								<sString>-1.0</sString>
+							</lifeTime>
+							<LoggingEvent>-1</LoggingEvent>
+							<providerName></providerName>
+							<startCondition>
+								<compiledString></compiledString>
+								<returnType>bool</returnType>
+								<sString>true</sString>
+							</startCondition>
+							<visRange>
+								<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQQ==</compiledString>
+								<returnType>float</returnType>
+								<sString>25</sString>
+							</visRange>
+						</EyeApplicator>
+					</Item>
+				</passiveApplicators>
+				<requireLineOfSight>false</requireLineOfSight>
+				<shortDescription textref="" />
+				<targetType>1073741824</targetType>
+				<type>Passive</type>
+				<useRange>
+					<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAABgQQ==</compiledString>
+					<returnType>float</returnType>
+					<sString>14</sString>
+				</useRange>
+				<useRangeMaterial href="" />
+				<warFogRemoveRadius>0</warFogRemoveRadius>
+				<warFogRemoveTime>0</warFogRemoveTime>
+			</Ability>
+		</Item>
 		<Item skip="1" />
 	</abilities>
 	<attackAbility href="/Creeps/Bosses/Boss1/AttackAbility_Walked.ATCK" />
@@ -23,6 +497,6 @@
 	<sceneObject href="/Creeps/Bosses/Boss1/_Walked.SOBJ" />
 	<size>5</size>
 	<sizeDynamic>3</sizeDynamic>
-	<stats href="/Creeps/Bosses/Boss1/Neutral_Boss_Walked.STCN" />
+	<stats href="/Creeps/Bosses/Boss1/PVP_Walked.STCN" />
 	<targetingParams href="/Creeps/Bosses/Boss1/trgtParams_PVP_Walked.UNTP" />
 </AdvMapCreep>

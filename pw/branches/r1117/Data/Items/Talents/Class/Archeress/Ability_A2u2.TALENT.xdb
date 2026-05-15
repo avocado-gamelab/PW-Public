@@ -2,9 +2,9 @@
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
 	<BackLink DBID="/SocialTest.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Archeress.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/Archeress_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Archeress_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Archeress.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Archeress_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Archeress_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Archeress/Duel.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Archeress/Duel_Vamp.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/Archeress/Elite_NoAsp.TALENTSET" Count="1" />
@@ -44,8 +44,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Archeress/Ability_A2u2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Archeress/Ability_A2u2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Archeress/Ability_A2u2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Archeress/Ability_A2u2.TALENT" id="52CAC622-F964-4AA2-AF73-EF2977F515D4">
 			<ConditionFormula>
@@ -74,6 +74,7 @@
 						</var>
 					</UnitConstant>
 				</Item>
+				<Item href="/Items/Talents/Class/Archeress/const_A2_SUP_Shield" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -95,7 +96,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>9</forceBonus>
+	<forceBonus>9.78</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Archeress/A2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/PlagueDoctor.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/PlagueDoctor.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/PlagueDoctor_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/PlagueDoctor/Ability_A4_2.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/PlagueDoctor/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/PlagueDoctor/Ability_A4u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/PlagueDoctor_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -225,8 +225,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/PlagueDoctor/Ability_A4.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/PlagueDoctor/Ability_A4.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/PlagueDoctor/Ability_A4.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/PlagueDoctor/Ability_A4.TALENT" id="277213EC-09B6-4EC0-93D8-5E9D6F7E2460">
 			<ConditionFormula>
@@ -352,9 +352,9 @@
 					<UnitConstant>
 						<name>Blind_MissChance</name>
 						<var>
-							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAADIQQ==</compiledString>
+							<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAAAgQg==</compiledString>
 							<returnType>float</returnType>
-							<sString>25.0f</sString>
+							<sString>40.0f</sString>
 						</var>
 					</UnitConstant>
 				</Item>
@@ -417,7 +417,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>2</flags>
-	<forceBonus>6</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/PlagueDoctor/A4.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

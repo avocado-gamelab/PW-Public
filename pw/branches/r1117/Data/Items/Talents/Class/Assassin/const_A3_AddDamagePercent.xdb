@@ -5,8 +5,8 @@
 	<BackLink DBID="/Items/Talents/Class/Assassin/Ability_A4.TALENT" Count="1" />
 	<name>A3_AddDamagePercent</name>
 	<var>
-		<compiledString>FQAAAAABAAAABQAAAFWL7NkFCwAAAF3DAACgQQ==</compiledString>
+		<compiledString>FTwAAAAEAAAAQwAAAFwAAACcAAAAuQAAAEFzc2Fzc2luX0EzX1NVUABBc3Nhc3Npbl9BM19TVVAAQTNfU1VQX0RhbWFnZV9JbmNyZWFzZV9SYXRlAFWL7IPsGGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4lN9NtF9ItVDFKLRQhQaCAAAACLTRCLEYtNEItCUN1d7P/Q3E3s2ejewdwNxwAAANld6NlF6IvlXcMAAAAAAAA+QAAAAAAAAPA/</compiledString>
 		<returnType>float</returnType>
-		<sString>20</sString>
+		<sString>30 * (1 + tal("Assassin_A3_SUP") * cA3_SUP_Damage_Increase_Rate)</sString>
 	</var>
 </UnitConstant>

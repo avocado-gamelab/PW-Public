@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DamageApplicator>
+	<BackLink DBID="/Items/Talents/Common/G552_PhantomBase.TALENT" Count="1" />
+	<applyTarget>ApplicatorTarget</applyTarget>
+	<cancelInvisibility>false</cancelInvisibility>
+	<caption>Магический урон</caption>
+	<damage>
+		<compiledString>FSsAAAAEAAAAMgAAAEgAAABUAAAAewAAAEV4cGxvc2lvbkRhbWFnZQBHNTc4X0FjdGl2ZQBHNTc4X0FkZERhbWFnZQBVi+yD7AhoEAAAAItFCIsQi00Ii4KIAQAA/9DcHasAAADf4PbEQXUaaBwAAACLTQiLEYtNCIuCiAEAAP/Q2V386wXZ7tld/ItNDFGLVQhSaAAAAACLRRCLEItNEItCUP/Q2UX82ejewd7J2V342UX4i+VdwwAAAAAAAPA/AAAAAAAAAAAAAAAA</compiledString>
+		<returnType>float</returnType>
+		<sString>cExplosionDamage * ( 1 + (sender.vG578_Active &gt; 0 ? sender.vG578_AddDamage : 0))</sString>
+	</damage>
+	<damageMode>0</damageMode>
+	<damageType>Energy</damageType>
+	<enabled>
+		<compiledString>FQwAAAACAAAAEQAAACcAAABHNTU2X0FjdGl2ZQBVi+xRaAAAAACLRQiLEItNCIuCiAEAAP/Q3B1JAAAA3+D2xER6CcdF/AEAAADrB8dF/AAAAACKRfyL5V3DAAAAAAAAAAA=</compiledString>
+		<returnType>bool</returnType>
+		<sString>sender.vG556_Active == 0</sString>
+	</enabled>
+	<formulaName></formulaName>
+	<LoggingEvent>-1</LoggingEvent>
+	<providerName></providerName>
+	<timeLimiter>-1</timeLimiter>
+	<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Energy.UIEV" />
+</DamageApplicator>

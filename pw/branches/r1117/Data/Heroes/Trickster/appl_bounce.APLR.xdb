@@ -59,6 +59,30 @@
 					</DamageApplicator>
 				</Item>
 				<Item href="/Heroes/Trickster/spell_StacksSwitch.APLR" />
+				<Item href="/Heroes/Trickster/appl_bounce.APLR" id="3051FEEE-913C-472D-A029-2708A4F5E627">
+					<DamageApplicator>
+						<applyTarget>ApplicatorTarget</applyTarget>
+						<cancelInvisibility>false</cancelInvisibility>
+						<caption>A3 bonus damage</caption>
+						<damage>
+							<compiledString>FRYAAAABAAAAIgAAAEEzX1RvdGFsX0JvbnVzX0RhbWFnZQBVi+yLRQxQi00IUWgAAAAAi1UQiwKLTRCLUFD/0l3D</compiledString>
+							<returnType>float</returnType>
+							<sString>cA3_Total_Bonus_Damage</sString>
+						</damage>
+						<damageMode>0</damageMode>
+						<damageType>Material</damageType>
+						<enabled>
+							<compiledString>FU0AAAAFAAAAVAAAAG0AAACnAAAAwAAAADIBAABUcmlja3N0ZXJfQTMAAAAAVHJpY2tzdGVyX0EzAAAAAFRyaWNrc3Rlcl9BM19TVVAAAAAAVHJpY2tzdGVyX0EzX1NVUAAAAABXYXJkAFWL7IPsFGgAAAAAi0UIixCLTQiLgqgBAAD/0IXAdCpoEAAAAItNCIsRi00Ii4KoAQAA/9CJRfyLTfyLEYtN/ItCBP/QiEX76wTGRfsAD7ZN+4XJD4SuAAAAaCAAAACLVQiLAotNCIuQqAEAAP/ShcB0Kmg0AAAAi0UIixCLTQiLgqgBAAD/0IlF9ItN9IsRi030i0IE/9CIRfPrBMZF8wAPtk3zhcl0X1HZ6NkcJFHZ7tkcJGoBi1UMiwKLTQyLUFj/0g+2wFDoUQAAAIPECNkcJOhnAAAAg8QEhcB0KWoAi00QUWhIAAAAi1UMiwKLTQyLkJwBAAD/0jtFEHUJx0XsAQAAAOsHx0XsAAAAAIpF7IvlXcMAAAAAAACAP1WL7FEPtkUIhcB0CNlFDNld/OsG2UUQ2V382UX8i+Vdw7gBAAAAD6L3wgAAAAR0B/MPLEQkBMPpAAAAAFWL7IPsDNlFCNl9/A+3RfwNAAwAAIlF+Nlt+Ntd9Nlt/ItF9IvlXcM=</compiledString>
+							<returnType>bool</returnType>
+							<sString>tal("Trickster_A3") &amp;&amp; tal("Trickster_A3_SUP") &amp;&amp; f2l(ut_bldg(0,1)) &amp;&amp; receiver.applWard(GLOBAL) == pMisc</sString>
+						</enabled>
+						<formulaName></formulaName>
+						<LoggingEvent>-1</LoggingEvent>
+						<providerName></providerName>
+						<timeLimiter>-1</timeLimiter>
+						<uiEvent href="/UI/Events/CommonEvents/EventDamageDealed_Material.UIEV" />
+					</DamageApplicator>
+				</Item>
 			</applicators>
 			<dispatch href="/Heroes/Trickster/appl_bounce.APLR" id="6731C497-2E51-453F-9F36-837918D809F9">
 				<DispatchLinear>

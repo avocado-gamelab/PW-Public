@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/Invisible_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/Invisible_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/Invisible_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A4.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A4_2u.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/Class/Invisible/Ability_A4u.TALENT" Count="1" />
-	<BackLink DBID="/Items/Talents/Level2/G567_CasterBase.TALENT" Count="1" />
+	<BackLink DBID="/Items/Talents/Common/G567_CasterBase.TALENT" Count="1" />
 	<BackLink DBID="/Items/Talents/TalentKits/Redset5_7_Ultimate/Status_Redset5_7_Cooldown.APLR" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/Invisible_Mighty.TALENTSET" Count="1" />
 	<activationConditions />
 	<activeCustomTrigger>true</activeCustomTrigger>
 	<allowChase>
@@ -168,6 +168,26 @@
 																							<useListAs>ListAsRule</useListAs>
 																						</FlagsApplicator>
 																					</applicator>
+																					<continueCondition>
+																						<compiledString></compiledString>
+																						<returnType>bool</returnType>
+																						<sString>0</sString>
+																					</continueCondition>
+																					<continueEvents>1</continueEvents>
+																					<delay>
+																						<compiledString></compiledString>
+																						<returnType>float</returnType>
+																						<sString>-1.0</sString>
+																					</delay>
+																					<stopCondition>
+																						<compiledString></compiledString>
+																						<returnType>bool</returnType>
+																						<sString>0</sString>
+																					</stopCondition>
+																					<stopEvents>0</stopEvents>
+																				</Item>
+																				<Item>
+																					<applicator href="/Heroes/DefaultStatus/FakeDamage.APLR" />
 																					<continueCondition>
 																						<compiledString></compiledString>
 																						<returnType>bool</returnType>
@@ -855,8 +875,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="/Items/Talents/Class/Invisible/Ability_A4_2.TALENT_commonDescription.txt" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/Invisible/Ability_A4_2.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/Invisible/Ability_A4_2.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/Invisible/Ability_A4_2.TALENT" id="88AC4959-5CAB-4B5A-A3D6-6644E311CE17">
 			<ConditionFormula>
@@ -986,7 +1006,7 @@
 		</DispatchImmediate>
 	</dispatch>
 	<flags>73</flags>
-	<forceBonus>13</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/Invisible/A4_2.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>

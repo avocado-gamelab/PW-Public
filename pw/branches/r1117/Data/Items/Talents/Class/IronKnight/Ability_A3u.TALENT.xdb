@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talent>
 	<BackLink DBID="/Social.ROOT" Count="1" />
-	<BackLink DBID="/Items/Talents/IronKnight.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/IronKnight_Alternative.TALENTSET" Count="1" />
-	<BackLink DBID="/Items/Talents/TalentList_Mighty/IronKnight_Mighty.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/IronKnight.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Default/IronKnight_Alternative.TALENTSET" Count="1" />
+	<BackLink DBID="/Items/Talents/Builds/Mighty/IronKnight_Mighty.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/IronKnight/Elite_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/IronKnight/Epic_Str.TALENTSET" Count="1" />
 	<BackLink DBID="/Test/Talents/IronKnight/Epic_StrLife.TALENTSET" Count="1" />
@@ -37,8 +37,8 @@
 	</castAllowRange>
 	<castLimitations />
 	<commonDescription textref="" />
-	<compiledDescriptionA textref="" />
-	<compiledDescriptionB textref="" />
+	<compiledDescriptionA textref="/Items/Talents/Class/IronKnight/Ability_A3u.TALENT_compiledDescriptionA.txt" />
+	<compiledDescriptionB textref="/Items/Talents/Class/IronKnight/Ability_A3u.TALENT_compiledDescriptionB.txt" />
 	<conditionFormulas>
 		<Item href="/Items/Talents/Class/IronKnight/Ability_A3u.TALENT" id="78D833AD-A0CE-4D80-A042-9406CEF3F4D4">
 			<ConditionFormula>
@@ -67,6 +67,7 @@
 				</Item>
 				<Item href="/Items/Talents/Class/IronKnight/const_A3_Damage" />
 				<Item href="/Items/Talents/Class/IronKnight/const_A3u_Damage" />
+				<Item href="/Items/Talents/Class/IronKnight/const_A3u_TT_Damage" />
 			</vars>
 		</UnitConstantsContainer>
 	</constants>
@@ -88,7 +89,7 @@
 	<devPoints>1</devPoints>
 	<dispatch href="" />
 	<flags>1</flags>
-	<forceBonus>0</forceBonus>
+	<forceBonus>13.21</forceBonus>
 	<image href="/UI/Styles/Icons/Heroes/IronKnight/A3.ITEX" />
 	<imageSecondState href="" />
 	<isGenderTalent>false</isGenderTalent>
